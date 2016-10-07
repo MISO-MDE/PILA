@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentsApp:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
+  <intermediary>
+    <providers name="Provedor de pensiones"/>
+    <superentity name="01 Empleador">
+      <participants participantprofile="//@intermediary/@participantprofiles.2" name="">
+        <businessattributecollection/>
+      </participants>
+      <participants participantprofile="//@intermediary/@participantprofiles.3">
+        <businessattributecollection/>
+      </participants>
+    </superentity>
+    <superentity name="02 Administrador de pensiones">
+      <participants participantprofile="//@intermediary/@participantprofiles.0" name=""/>
+    </superentity>
+    <superentity name="03 Pagador de pensiones">
+      <participants participantprofile="//@intermediary/@participantprofiles.4"/>
+    </superentity>
+    <superentity name="04 Regimen especial y de excepcion">
+      <participants participantprofile="//@intermediary/@participantprofiles.4"/>
+    </superentity>
+    <templates name="Novedad"/>
+    <participantprofiles name="Pensionado tipo 01">
+      <participantAttributes>
+        <businessAttributes name="Cedula">
+          <businessValue xsi:type="PaymentsApp:BusinessNumber" value="4588855"/>
+        </businessAttributes>
+        <businessAttributes name="Ingreso mensual">
+          <businessRules>
+            <businessConditions/>
+            <businessConditions/>
+          </businessRules>
+        </businessAttributes>
+      </participantAttributes>
+    </participantprofiles>
+    <participantprofiles name="Pensionado tipo 02"/>
+    <participantprofiles name="Pensionado tipo 03"/>
+    <participantprofiles name="Pensionado tipo 04"/>
+    <participantprofiles name="Pensionado tipo 05"/>
+    <participantprofiles name="Pensionado tipo 06"/>
+    <participantprofiles name="Pensionado tipo 07"/>
+  </intermediary>
+</PaymentsApp:Application>
