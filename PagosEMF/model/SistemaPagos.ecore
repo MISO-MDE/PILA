@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PaymentsApp" nsURI="PaymentsApp" nsPrefix="PaymentsApp">
+  <eClassifiers xsi:type="ecore:EClass" name="Intermediary">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providers" lowerBound="1"
+        upperBound="-1" eType="#//Provider" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superentity" lowerBound="1"
+        upperBound="-1" eType="#//SuperEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templates" lowerBound="1"
+        upperBound="-1" eType="#//InformationTemplate" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantprofiles" lowerBound="1"
+        upperBound="-1" eType="#//ParticipantProfile" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParticipantProfile">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAttributes"
+        lowerBound="1" eType="#//BusinessAttributeCollection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Provider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providerAttributes" lowerBound="1"
+        eType="#//BusinessAttributeCollection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessCategory" eType="#//BusinessCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessRules" upperBound="-1"
+        eType="#//BusinessRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessValue" lowerBound="1"
+        eType="#//BusinessValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessValue" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessConditions" upperBound="-1"
+        eType="#//BusinessCondition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessString" eSuperTypes="#//BusinessValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessNumber" eSuperTypes="#//BusinessValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessCalculations" upperBound="-1"
+        eType="#//BusinessCalculation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessCondition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalBusinessConditions"
+        upperBound="-1" eType="#//BusinessCondition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparison" eType="#//Comparisons"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionValues" lowerBound="1"
+        upperBound="2" eType="#//BusinessAttributeCollection">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="conditionValues"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessAttributeCollection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessAttributes" lowerBound="1"
+        upperBound="-1" eType="#//BusinessAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantsFields" lowerBound="1"
+        upperBound="-1" eType="#//ParticipantProfile"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providersFields" lowerBound="1"
+        upperBound="-1" eType="#//Provider"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessFields" upperBound="-1"
+        eType="#//BusinessAttributeCollection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessCalculation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//Operations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculationValues" lowerBound="1"
+        upperBound="2" eType="#//BusinessAttributeCollection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalCalculations"
+        upperBound="-1" eType="#//BusinessCalculation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BusinessCategory">
+    <eLiterals name="CATEGORY_1"/>
+    <eLiterals name="CATEGORY_2" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Operations">
+    <eLiterals name="NO_OPERAND" literal="NO_OPERAND"/>
+    <eLiterals name="PLUS" value="1"/>
+    <eLiterals name="MINUS" value="2"/>
+    <eLiterals name="MULTIPLY" value="3"/>
+    <eLiterals name="DIVIDE" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Comparisons">
+    <eLiterals name="LESS_THAN"/>
+    <eLiterals name="LESS_THAN_OR_EQUAL_TO" value="1"/>
+    <eLiterals name="EQUAL_TO" value="2" literal="EQUAL_TO"/>
+    <eLiterals name="GREATER_THAN" value="3"/>
+    <eLiterals name="GREATER_OR_EQUAL_TO" value="4"/>
+    <eLiterals name="OTHER_THAN" value="5"/>
+    <eLiterals name="NO_COMPARISON" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superEntityAttributes"
+        lowerBound="1" eType="#//BusinessAttributeCollection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="templates" lowerBound="1"
+        upperBound="-1" eType="#//InformationTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participants" lowerBound="1"
+        upperBound="-1" eType="#//Participant" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Participant">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantprofile" lowerBound="1"
+        eType="#//ParticipantProfile"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessattributecollection"
+        upperBound="-1" eType="#//BusinessAttributeCollection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intermediary" lowerBound="1"
+        eType="#//Intermediary" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

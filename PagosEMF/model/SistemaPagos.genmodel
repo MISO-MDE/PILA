@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PagosEMF/src" modelPluginID="PagosEMF" modelName="SistemaPagos"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>../../MetaModeloPagos/SistemaPagos.ecore</foreignModel>
+  <genPackages prefix="PaymentsApp" resource="XML" disposableProviderFactory="true"
+      ecorePackage="SistemaPagos.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SistemaPagos.ecore#//BusinessCategory">
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//BusinessCategory/CATEGORY_1"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//BusinessCategory/CATEGORY_2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SistemaPagos.ecore#//Operations">
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Operations/NO_OPERAND"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Operations/PLUS"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Operations/MINUS"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Operations/MULTIPLY"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Operations/DIVIDE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SistemaPagos.ecore#//Comparisons">
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/LESS_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/LESS_THAN_OR_EQUAL_TO"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/EQUAL_TO"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/GREATER_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/GREATER_OR_EQUAL_TO"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/OTHER_THAN"/>
+      <genEnumLiterals ecoreEnumLiteral="SistemaPagos.ecore#//Comparisons/NO_COMPARISON"/>
+    </genEnums>
+    <genClasses ecoreClass="SistemaPagos.ecore#//Intermediary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Intermediary/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Intermediary/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/providers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/superentity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/participantprofiles"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//ParticipantProfile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//ParticipantProfile/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//ParticipantProfile/participantAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//Provider">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Provider/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Provider/providerAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessAttribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessAttribute/businessCategory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttribute/businessRules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttribute/businessValue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SistemaPagos.ecore#//BusinessValue"/>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessRule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessRule/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessRule/businessConditions"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessString/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessNumber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessNumber/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessNumber/businessCalculations"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessCondition/additionalBusinessConditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessCondition/comparison"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessCondition/conditionValues"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessAttributeCollection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttributeCollection/businessAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//InformationTemplate">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//InformationTemplate/participantsFields"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//InformationTemplate/providersFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//InformationTemplate/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//InformationTemplate/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//InformationTemplate/businessFields"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessCalculation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessCalculation/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessCalculation/calculationValues"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessCalculation/additionalCalculations"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//SuperEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/superEntityAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//SuperEntity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/participants"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//Participant">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Participant/participantprofile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Participant/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Participant/businessattributecollection"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Application/intermediary"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
