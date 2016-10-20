@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_jlUQ0JWpEeac7bGQ2iL9Rw" version="11.0.0.201604141600">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description" xmi:id="_jlUQ0JWpEeac7bGQ2iL9Rw" selectedViews="_va8Z8JZ4EeaM38IECnvDEw" version="11.0.0.201604141600">
   <semanticResources>PILA.paymentsapp</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" xmi:id="_va8Z8JZ4EeaM38IECnvDEw">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']"/>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_7vcRcJZ4EeaM38IECnvDEw" name="new Tabla 8" headerColumnWidth="353">
+      <target xmi:type="PaymentsApp:Application" href="PILA.paymentsapp#/"/>
+      <lines xmi:type="table:DLine" xmi:id="_c5RjoJZ6EeawPs7vr8HRiw" label="Business Attribute Tipo de pension">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_jkcbIJZ6EeawPs7vr8HRiw" label="Business Attribute Tipo de pensionado" width="246">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']"/>
+    </ownedRepresentations>
+  </ownedViews>
 </viewpoint:DAnalysis>

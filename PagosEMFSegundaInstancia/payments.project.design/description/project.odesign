@@ -5,7 +5,11 @@
       <defaultLayer name="Default"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 5" domainClass="payments.BusinessAttributeCollection">
-      <ownedLineMappings name="Tipo Pensionado"/>
+      <ownedLineMappings name="Tipo Pensionado" domainClass="payments.BusinessAttribute" semanticCandidatesExpression="feature:"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 8" domainClass="Application">
+      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo de pension')/]"/>
+      <ownedColumnMappings name="Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo de pensionado')/]"/>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
