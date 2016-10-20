@@ -6,12 +6,12 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 8" domainClass="Application">
       <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
-      <ownedColumnMappings name="Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
+      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="aql:self.businessValue.value" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
       <intersection name="Pension Pensionado" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 8 Edicion" domainClass="Application">
       <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
-      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="Tipo Pensionado" featureName="relations" labelExpression="[self.relations.businessValue.value/]"/>
+      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="Tipo Pensionado" featureName="relations" labelExpression="aql:self.relations->collect(r | r.businessValue.value)"/>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
