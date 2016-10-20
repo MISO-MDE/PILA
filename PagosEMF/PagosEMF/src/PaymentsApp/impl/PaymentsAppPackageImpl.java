@@ -392,6 +392,15 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBusinessAttribute_Relations() {
+		return (EReference)businessAttributeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBusinessValue() {
 		return businessValueEClass;
 	}
@@ -529,6 +538,15 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 */
 	public EReference getBusinessAttributeCollection_BusinessAttributes() {
 		return (EReference)businessAttributeCollectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusinessAttributeCollection_Name() {
+		return (EAttribute)businessAttributeCollectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -796,6 +814,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		createEAttribute(businessAttributeEClass, BUSINESS_ATTRIBUTE__BUSINESS_CATEGORY);
 		createEReference(businessAttributeEClass, BUSINESS_ATTRIBUTE__BUSINESS_RULES);
 		createEReference(businessAttributeEClass, BUSINESS_ATTRIBUTE__BUSINESS_VALUE);
+		createEReference(businessAttributeEClass, BUSINESS_ATTRIBUTE__RELATIONS);
 
 		businessValueEClass = createEClass(BUSINESS_VALUE);
 
@@ -818,6 +837,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 
 		businessAttributeCollectionEClass = createEClass(BUSINESS_ATTRIBUTE_COLLECTION);
 		createEReference(businessAttributeCollectionEClass, BUSINESS_ATTRIBUTE_COLLECTION__BUSINESS_ATTRIBUTES);
+		createEAttribute(businessAttributeCollectionEClass, BUSINESS_ATTRIBUTE_COLLECTION__NAME);
 
 		informationTemplateEClass = createEClass(INFORMATION_TEMPLATE);
 		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS);
@@ -904,6 +924,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		initEAttribute(getBusinessAttribute_BusinessCategory(), this.getBusinessCategory(), "businessCategory", null, 0, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusinessAttribute_BusinessRules(), this.getBusinessRule(), null, "businessRules", null, 0, -1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusinessAttribute_BusinessValue(), this.getBusinessValue(), null, "businessValue", null, 1, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusinessAttribute_Relations(), this.getBusinessAttribute(), null, "relations", null, 0, -1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(businessValueEClass, BusinessValue.class, "BusinessValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -926,6 +947,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 
 		initEClass(businessAttributeCollectionEClass, BusinessAttributeCollection.class, "BusinessAttributeCollection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusinessAttributeCollection_BusinessAttributes(), this.getBusinessAttribute(), null, "businessAttributes", null, 1, -1, BusinessAttributeCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusinessAttributeCollection_Name(), ecorePackage.getEString(), "name", null, 0, 1, BusinessAttributeCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(informationTemplateEClass, InformationTemplate.class, "InformationTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInformationTemplate_ParticipantsFields(), this.getParticipantProfile(), null, "participantsFields", null, 1, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

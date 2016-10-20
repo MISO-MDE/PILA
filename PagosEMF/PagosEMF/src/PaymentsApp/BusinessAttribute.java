@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link PaymentsApp.BusinessAttribute#getBusinessCategory <em>Business Category</em>}</li>
  *   <li>{@link PaymentsApp.BusinessAttribute#getBusinessRules <em>Business Rules</em>}</li>
  *   <li>{@link PaymentsApp.BusinessAttribute#getBusinessValue <em>Business Value</em>}</li>
+ *   <li>{@link PaymentsApp.BusinessAttribute#getRelations <em>Relations</em>}</li>
  * </ul>
  *
  * @see PaymentsApp.PaymentsAppPackage#getBusinessAttribute()
@@ -122,5 +123,21 @@ public interface BusinessAttribute extends EObject {
 	 * @generated
 	 */
 	void setBusinessValue(BusinessValue value);
+
+	/**
+	 * Returns the value of the '<em><b>Relations</b></em>' reference list.
+	 * The list contents are of type {@link PaymentsApp.BusinessAttribute}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Relations</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Relations</em>' reference list.
+	 * @see PaymentsApp.PaymentsAppPackage#getBusinessAttribute_Relations()
+	 * @model
+	 * @generated
+	 */
+	EList<BusinessAttribute> getRelations();
 
 } // BusinessAttribute

@@ -65,6 +65,7 @@ public class BusinessAttributeItemProvider
 
 			addNamePropertyDescriptor(object);
 			addBusinessCategoryPropertyDescriptor(object);
+			addRelationsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,6 +110,28 @@ public class BusinessAttributeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Relations feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRelationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BusinessAttribute_relations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BusinessAttribute_relations_feature", "_UI_BusinessAttribute_type"),
+				 PaymentsAppPackage.Literals.BUSINESS_ATTRIBUTE__RELATIONS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

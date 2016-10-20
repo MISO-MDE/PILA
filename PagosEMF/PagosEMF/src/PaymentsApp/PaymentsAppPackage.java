@@ -278,13 +278,22 @@ public interface PaymentsAppPackage extends EPackage {
 	int BUSINESS_ATTRIBUTE__BUSINESS_VALUE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Relations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_ATTRIBUTE__RELATIONS = 4;
+
+	/**
 	 * The number of structural features of the '<em>Business Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_ATTRIBUTE_FEATURE_COUNT = 4;
+	int BUSINESS_ATTRIBUTE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Business Attribute</em>' class.
@@ -536,13 +545,22 @@ public interface PaymentsAppPackage extends EPackage {
 	int BUSINESS_ATTRIBUTE_COLLECTION__BUSINESS_ATTRIBUTES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_ATTRIBUTE_COLLECTION__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Business Attribute Collection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_ATTRIBUTE_COLLECTION_FEATURE_COUNT = 1;
+	int BUSINESS_ATTRIBUTE_COLLECTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Business Attribute Collection</em>' class.
@@ -1063,6 +1081,17 @@ public interface PaymentsAppPackage extends EPackage {
 	EReference getBusinessAttribute_BusinessValue();
 
 	/**
+	 * Returns the meta object for the reference list '{@link PaymentsApp.BusinessAttribute#getRelations <em>Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Relations</em>'.
+	 * @see PaymentsApp.BusinessAttribute#getRelations()
+	 * @see #getBusinessAttribute()
+	 * @generated
+	 */
+	EReference getBusinessAttribute_Relations();
+
+	/**
 	 * Returns the meta object for class '{@link PaymentsApp.BusinessValue <em>Business Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1231,6 +1260,17 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBusinessAttributeCollection_BusinessAttributes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PaymentsApp.BusinessAttributeCollection#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PaymentsApp.BusinessAttributeCollection#getName()
+	 * @see #getBusinessAttributeCollection()
+	 * @generated
+	 */
+	EAttribute getBusinessAttributeCollection_Name();
 
 	/**
 	 * Returns the meta object for class '{@link PaymentsApp.InformationTemplate <em>Information Template</em>}'.
@@ -1664,6 +1704,14 @@ public interface PaymentsAppPackage extends EPackage {
 		EReference BUSINESS_ATTRIBUTE__BUSINESS_VALUE = eINSTANCE.getBusinessAttribute_BusinessValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Relations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUSINESS_ATTRIBUTE__RELATIONS = eINSTANCE.getBusinessAttribute_Relations();
+
+		/**
 		 * The meta object literal for the '{@link PaymentsApp.impl.BusinessValueImpl <em>Business Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1802,6 +1850,14 @@ public interface PaymentsAppPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BUSINESS_ATTRIBUTE_COLLECTION__BUSINESS_ATTRIBUTES = eINSTANCE.getBusinessAttributeCollection_BusinessAttributes();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUSINESS_ATTRIBUTE_COLLECTION__NAME = eINSTANCE.getBusinessAttributeCollection_Name();
 
 		/**
 		 * The meta object literal for the '{@link PaymentsApp.impl.InformationTemplateImpl <em>Information Template</em>}' class.

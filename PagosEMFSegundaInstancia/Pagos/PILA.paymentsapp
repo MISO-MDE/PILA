@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PaymentsApp:Application xmlns:PaymentsApp="PaymentsApp">
+<PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
-    <templates>
-      <businessFields/>
+    <templates name="Tabla 8">
+      <businessFields name="Tipo Pensionado">
+        <businessAttributes name="1">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de prima media. tope 25 smlmv"/>
+        </businessAttributes>
+        <businessAttributes name="2">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de prima media. sin tope"/>
+        </businessAttributes>
+        <businessAttributes name="3">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de ahorro individual"/>
+        </businessAttributes>
+        <businessAttributes name="4">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de riesgos laborales"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Tipo Pension">
+        <businessAttributes name="1" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.3 #//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Vejez"/>
+        </businessAttributes>
+        <businessAttributes name="2" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2 #//@intermediary/@templates.0/@businessFields.1/@businessAttributes.1">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Sobrevivencia vitalicia riesgo comun"/>
+        </businessAttributes>
+      </businessFields>
     </templates>
   </intermediary>
 </PaymentsApp:Application>

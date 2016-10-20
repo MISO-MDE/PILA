@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link PaymentsApp.impl.BusinessAttributeImpl#getBusinessCategory <em>Business Category</em>}</li>
  *   <li>{@link PaymentsApp.impl.BusinessAttributeImpl#getBusinessRules <em>Business Rules</em>}</li>
  *   <li>{@link PaymentsApp.impl.BusinessAttributeImpl#getBusinessValue <em>Business Value</em>}</li>
+ *   <li>{@link PaymentsApp.impl.BusinessAttributeImpl#getRelations <em>Relations</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,6 +102,16 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected BusinessValue businessValue;
+
+	/**
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRelations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessAttribute> relations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,6 +234,18 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BusinessAttribute> getRelations() {
+		if (relations == null) {
+			relations = new EObjectResolvingEList<BusinessAttribute>(BusinessAttribute.class, this, PaymentsAppPackage.BUSINESS_ATTRIBUTE__RELATIONS);
+		}
+		return relations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -249,6 +273,8 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return getBusinessRules();
 			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__BUSINESS_VALUE:
 				return getBusinessValue();
+			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__RELATIONS:
+				return getRelations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -275,6 +301,10 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__BUSINESS_VALUE:
 				setBusinessValue((BusinessValue)newValue);
 				return;
+			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__RELATIONS:
+				getRelations().clear();
+				getRelations().addAll((Collection<? extends BusinessAttribute>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -299,6 +329,9 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__BUSINESS_VALUE:
 				setBusinessValue((BusinessValue)null);
 				return;
+			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__RELATIONS:
+				getRelations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -319,6 +352,8 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return businessRules != null && !businessRules.isEmpty();
 			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__BUSINESS_VALUE:
 				return businessValue != null;
+			case PaymentsAppPackage.BUSINESS_ATTRIBUTE__RELATIONS:
+				return relations != null && !relations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

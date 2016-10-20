@@ -4,12 +4,14 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Payments App" domainClass="Application">
       <defaultLayer name="Default"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 5" domainClass="payments.BusinessAttributeCollection">
-      <ownedLineMappings name="Tipo Pensionado" domainClass="payments.BusinessAttribute" semanticCandidatesExpression="feature:"/>
-    </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 8" domainClass="Application">
-      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo de pension')/]"/>
-      <ownedColumnMappings name="Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo de pensionado')/]"/>
+      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
+      <ownedColumnMappings name="Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
+      <intersection name="Pension Pensionado" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 8 Edicion" domainClass="Application">
+      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.templates->select(t|t.name = 'Tabla 8').businessFields->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
+      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="Tipo Pensionado" featureName="relations" labelExpression="[self.relations.businessValue.value/]"/>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
