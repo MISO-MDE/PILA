@@ -3,26 +3,42 @@
   <intermediary>
     <templates name="Tabla 8">
       <businessFields name="Tipo Pensionado">
-        <businessAttributes name="1">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de prima media. tope 25 smlmv"/>
+        <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
         </businessAttributes>
-        <businessAttributes name="2">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de prima media. sin tope"/>
+        <businessAttributes name="Pensionado de regimen de prima media. sin tope">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
         </businessAttributes>
-        <businessAttributes name="3">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de regimen de ahorro individual"/>
+        <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope máximo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
         </businessAttributes>
-        <businessAttributes name="4">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Pensionado de riesgos laborales"/>
+        <businessAttributes name="Pensionado de riesgos laborales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
         </businessAttributes>
       </businessFields>
       <businessFields name="Tipo Pension">
-        <businessAttributes name="1" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.3 #//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Vejez"/>
+        <businessAttributes name="Vejez" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.3 #//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
         </businessAttributes>
-        <businessAttributes name="2" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2 #//@intermediary/@templates.0/@businessFields.1/@businessAttributes.1">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Sobrevivencia vitalicia riesgo comun"/>
+        <businessAttributes name="Sobrevivencia vitalicia riesgo comun" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2 #//@intermediary/@templates.0/@businessFields.1/@businessAttributes.1">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
         </businessAttributes>
+        <businessAttributes name="Sobrevivencia temporal riesgo comun"/>
+        <businessAttributes name="Sobrevivencia temporal riesgo común. Cónyuge o compañera menos de 30 años sin hijos"/>
+        <businessAttributes name="Sobrevivencia temporal riesgo laboral"/>
+        <businessAttributes name="Sobrevivencia vitalicia riesgo laboral"/>
+        <businessAttributes name="Sobrevivencia temporal riesgo laboral. Cónyuge o compañera menos de 30 años sin hijos"/>
+        <businessAttributes name="Invalidez riesgo común"/>
+        <businessAttributes name="Invalidez riesgo laboral"/>
+        <businessAttributes name="Jubilación"/>
+        <businessAttributes name="Jubiilación para compartir"/>
+        <businessAttributes name="Sanción"/>
+        <businessAttributes name="Convencional"/>
+        <businessAttributes name="Convencional para compartir"/>
+        <businessAttributes name="Gracia"/>
+        <businessAttributes name="Por convenio internacional"/>
+        <businessAttributes name="Sentencia judicial"/>
+        <businessAttributes name="Conciliaciones"/>
       </businessFields>
     </templates>
   </intermediary>

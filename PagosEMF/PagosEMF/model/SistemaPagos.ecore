@@ -9,9 +9,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="superentity" lowerBound="1"
         upperBound="-1" eType="#//SuperEntity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" lowerBound="1"
-        upperBound="-1" eType="#//InformationTemplate" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="participantprofiles" lowerBound="1"
+        upperBound="-1" eType="#//DataForm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantProfiles" lowerBound="1"
         upperBound="-1" eType="#//ParticipantProfile" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intermediaryAttributes"
+        upperBound="-1" eType="#//BusinessAttributeCollection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParticipantProfile">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -64,7 +66,7 @@
         upperBound="-1" eType="#//BusinessAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InformationTemplate">
+  <eClassifiers xsi:type="ecore:EClass" name="DataForm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="participantsFields" lowerBound="1"
         upperBound="-1" eType="#//ParticipantProfile"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="providersFields" lowerBound="1"
@@ -106,13 +108,13 @@
         lowerBound="1" eType="#//BusinessAttributeCollection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" lowerBound="1"
-        upperBound="-1" eType="#//InformationTemplate"/>
+        upperBound="-1" eType="#//DataForm"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participants" lowerBound="1"
         upperBound="-1" eType="#//Participant" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Participant">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="participantprofile" lowerBound="1"
-        eType="#//ParticipantProfile"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantProfiles" lowerBound="1"
+        upperBound="-1" eType="#//ParticipantProfile"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="businessattributecollection"
         upperBound="-1" eType="#//BusinessAttributeCollection" containment="true"/>
