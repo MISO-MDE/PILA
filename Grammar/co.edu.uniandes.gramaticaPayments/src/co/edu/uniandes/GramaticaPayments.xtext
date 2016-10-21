@@ -1,0 +1,220 @@
+grammar co.edu.uniandes.Pagos with org.eclipse.xtext.common.Terminals
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate pagos "http://www.edu.co/uniandes/Pagos"
+
+Application:
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'intermediary' COLON intermediary = Intermediary
+	RBRACE
+	;
+	
+Intermediary:
+	{Intermediary}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'superentities' COLON LBRACKET superentitie += SuperEntity (COMMA superentitie += SuperEntity)* RBRACKET
+	RBRACE
+	;
+
+SuperEntity:
+	{SuperEntity}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'description' COLON description = STRING
+		COMMA
+		'attributes' COLON 
+			LBRACKET attLists += SuperEntityAttribute (COMMA attLists += SuperEntityAttribute)* RBRACKET
+		COMMA
+		'entities' COLON LBRACKET participante += Participant (COMMA participante += Participant)* RBRACKET		
+	RBRACE
+;
+
+Participant:
+	{Participant}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'description' COLON description = STRING
+		COMMA
+		'attributes' COLON 
+			LBRACKET attLists += EntityAttribute (COMMA attLists += EntityAttribute)* RBRACKET
+	RBRACE
+	(COMMA
+	'InformationTemplate' COLON LBRACKET templatesForm += InformationTemplate (COMMA templatesForm += InformationTemplate)*)? RBRACKET
+	;
+
+Provider:
+	{Provider}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'description' COLON description = STRING
+		COMMA
+		'attributes' COLON 
+			LBRACKET attLists += SuperEntityAttribute (COMMA attLists += SuperEntityAttribute)* RBRACKET
+	RBRACE
+	;
+
+InformationTemplate:
+	{InformationTemplate}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'description' COLON description = STRING
+		COMMA
+		'FormAttributes' COLON 
+			LBRACKET formLists += FormAttribute (COMMA formLists += FormAttribute)* RBRACKET
+	RBRACE
+	(COMMA
+	'calculationtemplates' COLON LBRACKET templates += CalculationTemplate (COMMA templates += CalculationTemplate)* RBRACKET)?	
+	(COMMA 'providers' COLON LBRACKET providers += Provider (COMMA providers += Provider)* RBRACKET)?
+;
+
+CalculationTemplate:
+	{CalculationTemplate}
+	LBRACE
+		'name' COLON name = ID
+		COMMA
+		'description' COLON description = STRING
+		COMMA
+		'calculationattributes' COLON 
+			LBRACKET attLists += VariableAttribute (COMMA attLists += VariableAttribute)* RBRACKET
+		COMMA
+		'calculationrules' COLON formula += Formula
+	RBRACE
+	;
+
+Formula returns Formula:
+	{Formula}
+	'Si' LBRACKET
+		logExp += ExpresionLogica
+		RBRACKET
+	'Entonces'
+	LBRACE
+		'Retornar:' expression += Adicion
+	RBRACE
+	(('Sino')? 
+		
+		('Si' 
+			LBRACKET
+			logExp += ExpresionLogica
+			RBRACKET
+		'Entonces')?
+		LBRACE
+			'Retornar:' expression += Adicion
+		RBRACE
+	)*
+;
+
+
+ExpresionLogica returns ExpresionLogica:
+	variable += TerminalValue (logOper += OPERADORLOGICO (variable2 += TerminalValue | literal += STRING))+
+			(LOGICALCONN exp += ExpresionLogica)?
+;
+
+
+Adicion returns Expression:
+	Multiplicacion ({Adicion.left = current} operator = mathADD rexp = Multiplicacion)*
+;
+
+Multiplicacion returns Expression:
+		SigleExp ({Multiplicacion.left = current} operator = mathMULT rexp = SigleExp)*
+		;
+
+SigleExp returns Expression:
+	TerminalValue | '(' Adicion ')'
+;
+
+SuperEntityAttribute:
+	{SuperEntityAttribute}
+	LBRACE
+		name = ID COLON type = TYPE (':=' Number)?
+	RBRACE 
+	;
+	
+EntityAttribute:
+	{EntityAttribute}
+	LBRACE
+		name = ID COLON type = TYPE (':=' Number)?
+	RBRACE 
+	;
+	
+FormAttribute returns FormAttribute:
+	{FormAttribute}
+	LBRACE
+		name = ID COLON type = TYPE (':=' exp = Adicion)?
+	RBRACE 
+	;
+	
+VariableAttribute:
+	{VariableAttribute}
+	LBRACE
+		name = ID COLON type = TYPE (':=' exp = Adicion)?
+	RBRACE 
+	;
+ 
+CalculationAttribute:
+	VariableAttribute | EntityAttribute | FormAttribute | SuperEntityAttribute
+;
+
+
+TerminalValue returns TerminalValue:
+	{TerminalValue}
+	variable = [CalculationAttribute] | valor = Number 
+;
+
+mathADD returns mathADD:
+	{mathADD}
+	operador = ADDOP
+;
+
+mathMULT returns mathMULT:
+	{mathMULT}
+	operador = MULTOP
+;
+
+
+Number:
+	EDouble | Integer
+;
+
+EDouble returns ecore::EDouble:
+	INT? '.' INT (('E'|'e') INT)?;
+
+Integer returns ecore::EInt:
+	INT
+;
+
+EString returns ecore::EString:
+	STRING | ID;
+	
+/* Terminals */
+terminal TYPE: 'String' | 'Integer' | 'Date' | 'Double';
+
+terminal MULTOP: '*' | '/';
+terminal ADDOP: '+' | '-';
+
+terminal LOGICALCONN: '&&' | '||';
+
+terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*(('.')('Ultima' | 'Primera' | 'Tamano'))*;
+terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>');
+
+terminal LBRACE: "{";
+terminal RBRACE: "}";
+terminal LBRACKET:"[";
+terminal RBRACKET: "]";
+terminal COMMA: ",";
+terminal COLON: ':';
+terminal DASH: "#";
+
+terminal STRING:
+	'"' (STR_ESC | !('"'|'\r'|'\n'|'\\'))* '"'
+	;
+	
+terminal STR_ESC:
+	'\\'('b'|'t'|'n'|'f'|'r'|'"'|'\\'|'$')
+	;
