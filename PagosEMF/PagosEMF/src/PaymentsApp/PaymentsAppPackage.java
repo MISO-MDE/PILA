@@ -113,13 +113,22 @@ public interface PaymentsAppPackage extends EPackage {
 	int INTERMEDIARY__TEMPLATES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Participantprofiles</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Participant Profiles</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMEDIARY__PARTICIPANTPROFILES = 5;
+	int INTERMEDIARY__PARTICIPANT_PROFILES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Intermediary Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMEDIARY__INTERMEDIARY_ATTRIBUTES = 6;
 
 	/**
 	 * The number of structural features of the '<em>Intermediary</em>' class.
@@ -128,7 +137,7 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMEDIARY_FEATURE_COUNT = 6;
+	int INTERMEDIARY_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Intermediary</em>' class.
@@ -572,14 +581,14 @@ public interface PaymentsAppPackage extends EPackage {
 	int BUSINESS_ATTRIBUTE_COLLECTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link PaymentsApp.impl.InformationTemplateImpl <em>Information Template</em>}' class.
+	 * The meta object id for the '{@link PaymentsApp.impl.DataFormImpl <em>Data Form</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PaymentsApp.impl.InformationTemplateImpl
-	 * @see PaymentsApp.impl.PaymentsAppPackageImpl#getInformationTemplate()
+	 * @see PaymentsApp.impl.DataFormImpl
+	 * @see PaymentsApp.impl.PaymentsAppPackageImpl#getDataForm()
 	 * @generated
 	 */
-	int INFORMATION_TEMPLATE = 10;
+	int DATA_FORM = 10;
 
 	/**
 	 * The feature id for the '<em><b>Participants Fields</b></em>' reference list.
@@ -588,7 +597,7 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS = 0;
+	int DATA_FORM__PARTICIPANTS_FIELDS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Providers Fields</b></em>' reference list.
@@ -597,7 +606,7 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE__PROVIDERS_FIELDS = 1;
+	int DATA_FORM__PROVIDERS_FIELDS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -606,7 +615,7 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE__NAME = 2;
+	int DATA_FORM__NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -615,7 +624,7 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE__DESCRIPTION = 3;
+	int DATA_FORM__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Business Fields</b></em>' containment reference list.
@@ -624,25 +633,25 @@ public interface PaymentsAppPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE__BUSINESS_FIELDS = 4;
+	int DATA_FORM__BUSINESS_FIELDS = 4;
 
 	/**
-	 * The number of structural features of the '<em>Information Template</em>' class.
+	 * The number of structural features of the '<em>Data Form</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE_FEATURE_COUNT = 5;
+	int DATA_FORM_FEATURE_COUNT = 5;
 
 	/**
-	 * The number of operations of the '<em>Information Template</em>' class.
+	 * The number of operations of the '<em>Data Form</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_TEMPLATE_OPERATION_COUNT = 0;
+	int DATA_FORM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link PaymentsApp.impl.BusinessCalculationImpl <em>Business Calculation</em>}' class.
@@ -774,13 +783,13 @@ public interface PaymentsAppPackage extends EPackage {
 	int PARTICIPANT = 13;
 
 	/**
-	 * The feature id for the '<em><b>Participantprofile</b></em>' reference.
+	 * The feature id for the '<em><b>Participant Profiles</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARTICIPANT__PARTICIPANTPROFILE = 0;
+	int PARTICIPANT__PARTICIPANT_PROFILES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -952,15 +961,26 @@ public interface PaymentsAppPackage extends EPackage {
 	EReference getIntermediary_Templates();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PaymentsApp.Intermediary#getParticipantprofiles <em>Participantprofiles</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PaymentsApp.Intermediary#getParticipantProfiles <em>Participant Profiles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Participantprofiles</em>'.
-	 * @see PaymentsApp.Intermediary#getParticipantprofiles()
+	 * @return the meta object for the containment reference list '<em>Participant Profiles</em>'.
+	 * @see PaymentsApp.Intermediary#getParticipantProfiles()
 	 * @see #getIntermediary()
 	 * @generated
 	 */
-	EReference getIntermediary_Participantprofiles();
+	EReference getIntermediary_ParticipantProfiles();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PaymentsApp.Intermediary#getIntermediaryAttributes <em>Intermediary Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Intermediary Attributes</em>'.
+	 * @see PaymentsApp.Intermediary#getIntermediaryAttributes()
+	 * @see #getIntermediary()
+	 * @generated
+	 */
+	EReference getIntermediary_IntermediaryAttributes();
 
 	/**
 	 * Returns the meta object for class '{@link PaymentsApp.ParticipantProfile <em>Participant Profile</em>}'.
@@ -1273,69 +1293,69 @@ public interface PaymentsAppPackage extends EPackage {
 	EAttribute getBusinessAttributeCollection_Name();
 
 	/**
-	 * Returns the meta object for class '{@link PaymentsApp.InformationTemplate <em>Information Template</em>}'.
+	 * Returns the meta object for class '{@link PaymentsApp.DataForm <em>Data Form</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Information Template</em>'.
-	 * @see PaymentsApp.InformationTemplate
+	 * @return the meta object for class '<em>Data Form</em>'.
+	 * @see PaymentsApp.DataForm
 	 * @generated
 	 */
-	EClass getInformationTemplate();
+	EClass getDataForm();
 
 	/**
-	 * Returns the meta object for the reference list '{@link PaymentsApp.InformationTemplate#getParticipantsFields <em>Participants Fields</em>}'.
+	 * Returns the meta object for the reference list '{@link PaymentsApp.DataForm#getParticipantsFields <em>Participants Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Participants Fields</em>'.
-	 * @see PaymentsApp.InformationTemplate#getParticipantsFields()
-	 * @see #getInformationTemplate()
+	 * @see PaymentsApp.DataForm#getParticipantsFields()
+	 * @see #getDataForm()
 	 * @generated
 	 */
-	EReference getInformationTemplate_ParticipantsFields();
+	EReference getDataForm_ParticipantsFields();
 
 	/**
-	 * Returns the meta object for the reference list '{@link PaymentsApp.InformationTemplate#getProvidersFields <em>Providers Fields</em>}'.
+	 * Returns the meta object for the reference list '{@link PaymentsApp.DataForm#getProvidersFields <em>Providers Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Providers Fields</em>'.
-	 * @see PaymentsApp.InformationTemplate#getProvidersFields()
-	 * @see #getInformationTemplate()
+	 * @see PaymentsApp.DataForm#getProvidersFields()
+	 * @see #getDataForm()
 	 * @generated
 	 */
-	EReference getInformationTemplate_ProvidersFields();
+	EReference getDataForm_ProvidersFields();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PaymentsApp.InformationTemplate#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link PaymentsApp.DataForm#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see PaymentsApp.InformationTemplate#getName()
-	 * @see #getInformationTemplate()
+	 * @see PaymentsApp.DataForm#getName()
+	 * @see #getDataForm()
 	 * @generated
 	 */
-	EAttribute getInformationTemplate_Name();
+	EAttribute getDataForm_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link PaymentsApp.InformationTemplate#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link PaymentsApp.DataForm#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see PaymentsApp.InformationTemplate#getDescription()
-	 * @see #getInformationTemplate()
+	 * @see PaymentsApp.DataForm#getDescription()
+	 * @see #getDataForm()
 	 * @generated
 	 */
-	EAttribute getInformationTemplate_Description();
+	EAttribute getDataForm_Description();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PaymentsApp.InformationTemplate#getBusinessFields <em>Business Fields</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PaymentsApp.DataForm#getBusinessFields <em>Business Fields</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Business Fields</em>'.
-	 * @see PaymentsApp.InformationTemplate#getBusinessFields()
-	 * @see #getInformationTemplate()
+	 * @see PaymentsApp.DataForm#getBusinessFields()
+	 * @see #getDataForm()
 	 * @generated
 	 */
-	EReference getInformationTemplate_BusinessFields();
+	EReference getDataForm_BusinessFields();
 
 	/**
 	 * Returns the meta object for class '{@link PaymentsApp.BusinessCalculation <em>Business Calculation</em>}'.
@@ -1445,15 +1465,15 @@ public interface PaymentsAppPackage extends EPackage {
 	EClass getParticipant();
 
 	/**
-	 * Returns the meta object for the reference '{@link PaymentsApp.Participant#getParticipantprofile <em>Participantprofile</em>}'.
+	 * Returns the meta object for the reference list '{@link PaymentsApp.Participant#getParticipantProfiles <em>Participant Profiles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Participantprofile</em>'.
-	 * @see PaymentsApp.Participant#getParticipantprofile()
+	 * @return the meta object for the reference list '<em>Participant Profiles</em>'.
+	 * @see PaymentsApp.Participant#getParticipantProfiles()
 	 * @see #getParticipant()
 	 * @generated
 	 */
-	EReference getParticipant_Participantprofile();
+	EReference getParticipant_ParticipantProfiles();
 
 	/**
 	 * Returns the meta object for the attribute '{@link PaymentsApp.Participant#getName <em>Name</em>}'.
@@ -1602,12 +1622,20 @@ public interface PaymentsAppPackage extends EPackage {
 		EReference INTERMEDIARY__TEMPLATES = eINSTANCE.getIntermediary_Templates();
 
 		/**
-		 * The meta object literal for the '<em><b>Participantprofiles</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Participant Profiles</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTERMEDIARY__PARTICIPANTPROFILES = eINSTANCE.getIntermediary_Participantprofiles();
+		EReference INTERMEDIARY__PARTICIPANT_PROFILES = eINSTANCE.getIntermediary_ParticipantProfiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Intermediary Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERMEDIARY__INTERMEDIARY_ATTRIBUTES = eINSTANCE.getIntermediary_IntermediaryAttributes();
 
 		/**
 		 * The meta object literal for the '{@link PaymentsApp.impl.ParticipantProfileImpl <em>Participant Profile</em>}' class.
@@ -1860,14 +1888,14 @@ public interface PaymentsAppPackage extends EPackage {
 		EAttribute BUSINESS_ATTRIBUTE_COLLECTION__NAME = eINSTANCE.getBusinessAttributeCollection_Name();
 
 		/**
-		 * The meta object literal for the '{@link PaymentsApp.impl.InformationTemplateImpl <em>Information Template</em>}' class.
+		 * The meta object literal for the '{@link PaymentsApp.impl.DataFormImpl <em>Data Form</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PaymentsApp.impl.InformationTemplateImpl
-		 * @see PaymentsApp.impl.PaymentsAppPackageImpl#getInformationTemplate()
+		 * @see PaymentsApp.impl.DataFormImpl
+		 * @see PaymentsApp.impl.PaymentsAppPackageImpl#getDataForm()
 		 * @generated
 		 */
-		EClass INFORMATION_TEMPLATE = eINSTANCE.getInformationTemplate();
+		EClass DATA_FORM = eINSTANCE.getDataForm();
 
 		/**
 		 * The meta object literal for the '<em><b>Participants Fields</b></em>' reference list feature.
@@ -1875,7 +1903,7 @@ public interface PaymentsAppPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS = eINSTANCE.getInformationTemplate_ParticipantsFields();
+		EReference DATA_FORM__PARTICIPANTS_FIELDS = eINSTANCE.getDataForm_ParticipantsFields();
 
 		/**
 		 * The meta object literal for the '<em><b>Providers Fields</b></em>' reference list feature.
@@ -1883,7 +1911,7 @@ public interface PaymentsAppPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INFORMATION_TEMPLATE__PROVIDERS_FIELDS = eINSTANCE.getInformationTemplate_ProvidersFields();
+		EReference DATA_FORM__PROVIDERS_FIELDS = eINSTANCE.getDataForm_ProvidersFields();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1891,7 +1919,7 @@ public interface PaymentsAppPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INFORMATION_TEMPLATE__NAME = eINSTANCE.getInformationTemplate_Name();
+		EAttribute DATA_FORM__NAME = eINSTANCE.getDataForm_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -1899,7 +1927,7 @@ public interface PaymentsAppPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INFORMATION_TEMPLATE__DESCRIPTION = eINSTANCE.getInformationTemplate_Description();
+		EAttribute DATA_FORM__DESCRIPTION = eINSTANCE.getDataForm_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Business Fields</b></em>' containment reference list feature.
@@ -1907,7 +1935,7 @@ public interface PaymentsAppPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INFORMATION_TEMPLATE__BUSINESS_FIELDS = eINSTANCE.getInformationTemplate_BusinessFields();
+		EReference DATA_FORM__BUSINESS_FIELDS = eINSTANCE.getDataForm_BusinessFields();
 
 		/**
 		 * The meta object literal for the '{@link PaymentsApp.impl.BusinessCalculationImpl <em>Business Calculation</em>}' class.
@@ -1996,12 +2024,12 @@ public interface PaymentsAppPackage extends EPackage {
 		EClass PARTICIPANT = eINSTANCE.getParticipant();
 
 		/**
-		 * The meta object literal for the '<em><b>Participantprofile</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Participant Profiles</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARTICIPANT__PARTICIPANTPROFILE = eINSTANCE.getParticipant_Participantprofile();
+		EReference PARTICIPANT__PARTICIPANT_PROFILES = eINSTANCE.getParticipant_ParticipantProfiles();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

@@ -2,7 +2,8 @@
  */
 package PaymentsApp.impl;
 
-import PaymentsApp.InformationTemplate;
+import PaymentsApp.BusinessAttributeCollection;
+import PaymentsApp.DataForm;
 import PaymentsApp.Intermediary;
 import PaymentsApp.ParticipantProfile;
 import PaymentsApp.PaymentsAppPackage;
@@ -38,7 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getProviders <em>Providers</em>}</li>
  *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getSuperentity <em>Superentity</em>}</li>
  *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getTemplates <em>Templates</em>}</li>
- *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getParticipantprofiles <em>Participantprofiles</em>}</li>
+ *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getParticipantProfiles <em>Participant Profiles</em>}</li>
+ *   <li>{@link PaymentsApp.impl.IntermediaryImpl#getIntermediaryAttributes <em>Intermediary Attributes</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,17 +114,27 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InformationTemplate> templates;
+	protected EList<DataForm> templates;
 
 	/**
-	 * The cached value of the '{@link #getParticipantprofiles() <em>Participantprofiles</em>}' containment reference list.
+	 * The cached value of the '{@link #getParticipantProfiles() <em>Participant Profiles</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParticipantprofiles()
+	 * @see #getParticipantProfiles()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ParticipantProfile> participantprofiles;
+	protected EList<ParticipantProfile> participantProfiles;
+
+	/**
+	 * The cached value of the '{@link #getIntermediaryAttributes() <em>Intermediary Attributes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIntermediaryAttributes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusinessAttributeCollection> intermediaryAttributes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,9 +226,9 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InformationTemplate> getTemplates() {
+	public EList<DataForm> getTemplates() {
 		if (templates == null) {
-			templates = new EObjectContainmentEList<InformationTemplate>(InformationTemplate.class, this, PaymentsAppPackage.INTERMEDIARY__TEMPLATES);
+			templates = new EObjectContainmentEList<DataForm>(DataForm.class, this, PaymentsAppPackage.INTERMEDIARY__TEMPLATES);
 		}
 		return templates;
 	}
@@ -226,11 +238,23 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ParticipantProfile> getParticipantprofiles() {
-		if (participantprofiles == null) {
-			participantprofiles = new EObjectContainmentEList<ParticipantProfile>(ParticipantProfile.class, this, PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES);
+	public EList<ParticipantProfile> getParticipantProfiles() {
+		if (participantProfiles == null) {
+			participantProfiles = new EObjectContainmentEList<ParticipantProfile>(ParticipantProfile.class, this, PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES);
 		}
-		return participantprofiles;
+		return participantProfiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BusinessAttributeCollection> getIntermediaryAttributes() {
+		if (intermediaryAttributes == null) {
+			intermediaryAttributes = new EObjectContainmentEList<BusinessAttributeCollection>(BusinessAttributeCollection.class, this, PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES);
+		}
+		return intermediaryAttributes;
 	}
 
 	/**
@@ -247,8 +271,10 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 				return ((InternalEList<?>)getSuperentity()).basicRemove(otherEnd, msgs);
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
 				return ((InternalEList<?>)getTemplates()).basicRemove(otherEnd, msgs);
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
-				return ((InternalEList<?>)getParticipantprofiles()).basicRemove(otherEnd, msgs);
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+				return ((InternalEList<?>)getParticipantProfiles()).basicRemove(otherEnd, msgs);
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
+				return ((InternalEList<?>)getIntermediaryAttributes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -271,8 +297,10 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 				return getSuperentity();
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
 				return getTemplates();
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
-				return getParticipantprofiles();
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+				return getParticipantProfiles();
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
+				return getIntermediaryAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,11 +330,15 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 				return;
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
 				getTemplates().clear();
-				getTemplates().addAll((Collection<? extends InformationTemplate>)newValue);
+				getTemplates().addAll((Collection<? extends DataForm>)newValue);
 				return;
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
-				getParticipantprofiles().clear();
-				getParticipantprofiles().addAll((Collection<? extends ParticipantProfile>)newValue);
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+				getParticipantProfiles().clear();
+				getParticipantProfiles().addAll((Collection<? extends ParticipantProfile>)newValue);
+				return;
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
+				getIntermediaryAttributes().clear();
+				getIntermediaryAttributes().addAll((Collection<? extends BusinessAttributeCollection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -335,8 +367,11 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
 				getTemplates().clear();
 				return;
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
-				getParticipantprofiles().clear();
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+				getParticipantProfiles().clear();
+				return;
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
+				getIntermediaryAttributes().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -360,8 +395,10 @@ public class IntermediaryImpl extends MinimalEObjectImpl.Container implements In
 				return superentity != null && !superentity.isEmpty();
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
 				return templates != null && !templates.isEmpty();
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
-				return participantprofiles != null && !participantprofiles.isEmpty();
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+				return participantProfiles != null && !participantProfiles.isEmpty();
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
+				return intermediaryAttributes != null && !intermediaryAttributes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

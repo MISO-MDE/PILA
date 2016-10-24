@@ -66,7 +66,7 @@ public class PaymentsAppFactoryImpl extends EFactoryImpl implements PaymentsAppF
 			case PaymentsAppPackage.BUSINESS_NUMBER: return createBusinessNumber();
 			case PaymentsAppPackage.BUSINESS_CONDITION: return createBusinessCondition();
 			case PaymentsAppPackage.BUSINESS_ATTRIBUTE_COLLECTION: return createBusinessAttributeCollection();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE: return createInformationTemplate();
+			case PaymentsAppPackage.DATA_FORM: return createDataForm();
 			case PaymentsAppPackage.BUSINESS_CALCULATION: return createBusinessCalculation();
 			case PaymentsAppPackage.SUPER_ENTITY: return createSuperEntity();
 			case PaymentsAppPackage.PARTICIPANT: return createParticipant();
@@ -209,9 +209,9 @@ public class PaymentsAppFactoryImpl extends EFactoryImpl implements PaymentsAppF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InformationTemplate createInformationTemplate() {
-		InformationTemplateImpl informationTemplate = new InformationTemplateImpl();
-		return informationTemplate;
+	public DataForm createDataForm() {
+		DataFormImpl dataForm = new DataFormImpl();
+		return dataForm;
 	}
 
 	/**

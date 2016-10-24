@@ -3,7 +3,7 @@
 package PaymentsApp.impl;
 
 import PaymentsApp.BusinessAttributeCollection;
-import PaymentsApp.InformationTemplate;
+import PaymentsApp.DataForm;
 import PaymentsApp.ParticipantProfile;
 import PaymentsApp.PaymentsAppPackage;
 import PaymentsApp.Provider;
@@ -27,22 +27,22 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Information Template</b></em>'.
+ * An implementation of the model object '<em><b>Data Form</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PaymentsApp.impl.InformationTemplateImpl#getParticipantsFields <em>Participants Fields</em>}</li>
- *   <li>{@link PaymentsApp.impl.InformationTemplateImpl#getProvidersFields <em>Providers Fields</em>}</li>
- *   <li>{@link PaymentsApp.impl.InformationTemplateImpl#getName <em>Name</em>}</li>
- *   <li>{@link PaymentsApp.impl.InformationTemplateImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link PaymentsApp.impl.InformationTemplateImpl#getBusinessFields <em>Business Fields</em>}</li>
+ *   <li>{@link PaymentsApp.impl.DataFormImpl#getParticipantsFields <em>Participants Fields</em>}</li>
+ *   <li>{@link PaymentsApp.impl.DataFormImpl#getProvidersFields <em>Providers Fields</em>}</li>
+ *   <li>{@link PaymentsApp.impl.DataFormImpl#getName <em>Name</em>}</li>
+ *   <li>{@link PaymentsApp.impl.DataFormImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link PaymentsApp.impl.DataFormImpl#getBusinessFields <em>Business Fields</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InformationTemplateImpl extends MinimalEObjectImpl.Container implements InformationTemplate {
+public class DataFormImpl extends MinimalEObjectImpl.Container implements DataForm {
 	/**
 	 * The cached value of the '{@link #getParticipantsFields() <em>Participants Fields</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InformationTemplateImpl() {
+	protected DataFormImpl() {
 		super();
 	}
 
@@ -129,7 +129,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PaymentsAppPackage.Literals.INFORMATION_TEMPLATE;
+		return PaymentsAppPackage.Literals.DATA_FORM;
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<ParticipantProfile> getParticipantsFields() {
 		if (participantsFields == null) {
-			participantsFields = new EObjectResolvingEList<ParticipantProfile>(ParticipantProfile.class, this, PaymentsAppPackage.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS);
+			participantsFields = new EObjectResolvingEList<ParticipantProfile>(ParticipantProfile.class, this, PaymentsAppPackage.DATA_FORM__PARTICIPANTS_FIELDS);
 		}
 		return participantsFields;
 	}
@@ -151,7 +151,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<Provider> getProvidersFields() {
 		if (providersFields == null) {
-			providersFields = new EObjectResolvingEList<Provider>(Provider.class, this, PaymentsAppPackage.INFORMATION_TEMPLATE__PROVIDERS_FIELDS);
+			providersFields = new EObjectResolvingEList<Provider>(Provider.class, this, PaymentsAppPackage.DATA_FORM__PROVIDERS_FIELDS);
 		}
 		return providersFields;
 	}
@@ -174,7 +174,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PaymentsAppPackage.INFORMATION_TEMPLATE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, PaymentsAppPackage.DATA_FORM__NAME, oldName, name));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, PaymentsAppPackage.DATA_FORM__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -205,7 +205,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<BusinessAttributeCollection> getBusinessFields() {
 		if (businessFields == null) {
-			businessFields = new EObjectContainmentEList<BusinessAttributeCollection>(BusinessAttributeCollection.class, this, PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS);
+			businessFields = new EObjectContainmentEList<BusinessAttributeCollection>(BusinessAttributeCollection.class, this, PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS);
 		}
 		return businessFields;
 	}
@@ -218,7 +218,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				return ((InternalEList<?>)getBusinessFields()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -232,15 +232,15 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PARTICIPANTS_FIELDS:
 				return getParticipantsFields();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PROVIDERS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PROVIDERS_FIELDS:
 				return getProvidersFields();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__NAME:
+			case PaymentsAppPackage.DATA_FORM__NAME:
 				return getName();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+			case PaymentsAppPackage.DATA_FORM__DESCRIPTION:
 				return getDescription();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				return getBusinessFields();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -255,21 +255,21 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PARTICIPANTS_FIELDS:
 				getParticipantsFields().clear();
 				getParticipantsFields().addAll((Collection<? extends ParticipantProfile>)newValue);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PROVIDERS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PROVIDERS_FIELDS:
 				getProvidersFields().clear();
 				getProvidersFields().addAll((Collection<? extends Provider>)newValue);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__NAME:
+			case PaymentsAppPackage.DATA_FORM__NAME:
 				setName((String)newValue);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+			case PaymentsAppPackage.DATA_FORM__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				getBusinessFields().clear();
 				getBusinessFields().addAll((Collection<? extends BusinessAttributeCollection>)newValue);
 				return;
@@ -285,19 +285,19 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PARTICIPANTS_FIELDS:
 				getParticipantsFields().clear();
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PROVIDERS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PROVIDERS_FIELDS:
 				getProvidersFields().clear();
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__NAME:
+			case PaymentsAppPackage.DATA_FORM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+			case PaymentsAppPackage.DATA_FORM__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				getBusinessFields().clear();
 				return;
 		}
@@ -312,15 +312,15 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PARTICIPANTS_FIELDS:
 				return participantsFields != null && !participantsFields.isEmpty();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__PROVIDERS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__PROVIDERS_FIELDS:
 				return providersFields != null && !providersFields.isEmpty();
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__NAME:
+			case PaymentsAppPackage.DATA_FORM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+			case PaymentsAppPackage.DATA_FORM__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				return businessFields != null && !businessFields.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -344,4 +344,4 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 		return result.toString();
 	}
 
-} //InformationTemplateImpl
+} //DataFormImpl

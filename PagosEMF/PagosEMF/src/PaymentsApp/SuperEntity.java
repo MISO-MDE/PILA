@@ -80,7 +80,7 @@ public interface SuperEntity extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Templates</b></em>' reference list.
-	 * The list contents are of type {@link PaymentsApp.InformationTemplate}.
+	 * The list contents are of type {@link PaymentsApp.DataForm}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Templates</em>' reference list isn't clear,
@@ -92,7 +92,7 @@ public interface SuperEntity extends EObject {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<InformationTemplate> getTemplates();
+	EList<DataForm> getTemplates();
 
 	/**
 	 * Returns the value of the '<em><b>Participants</b></em>' containment reference list.

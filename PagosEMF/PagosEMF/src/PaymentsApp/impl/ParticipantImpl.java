@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PaymentsApp.impl.ParticipantImpl#getParticipantprofile <em>Participantprofile</em>}</li>
+ *   <li>{@link PaymentsApp.impl.ParticipantImpl#getParticipantProfiles <em>Participant Profiles</em>}</li>
  *   <li>{@link PaymentsApp.impl.ParticipantImpl#getName <em>Name</em>}</li>
  *   <li>{@link PaymentsApp.impl.ParticipantImpl#getBusinessattributecollection <em>Businessattributecollection</em>}</li>
  * </ul>
@@ -40,14 +41,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ParticipantImpl extends MinimalEObjectImpl.Container implements Participant {
 	/**
-	 * The cached value of the '{@link #getParticipantprofile() <em>Participantprofile</em>}' reference.
+	 * The cached value of the '{@link #getParticipantProfiles() <em>Participant Profiles</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParticipantprofile()
+	 * @see #getParticipantProfiles()
 	 * @generated
 	 * @ordered
 	 */
-	protected ParticipantProfile participantprofile;
+	protected EList<ParticipantProfile> participantProfiles;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -103,37 +104,11 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParticipantProfile getParticipantprofile() {
-		if (participantprofile != null && participantprofile.eIsProxy()) {
-			InternalEObject oldParticipantprofile = (InternalEObject)participantprofile;
-			participantprofile = (ParticipantProfile)eResolveProxy(oldParticipantprofile);
-			if (participantprofile != oldParticipantprofile) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE, oldParticipantprofile, participantprofile));
-			}
+	public EList<ParticipantProfile> getParticipantProfiles() {
+		if (participantProfiles == null) {
+			participantProfiles = new EObjectResolvingEList<ParticipantProfile>(ParticipantProfile.class, this, PaymentsAppPackage.PARTICIPANT__PARTICIPANT_PROFILES);
 		}
-		return participantprofile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ParticipantProfile basicGetParticipantprofile() {
-		return participantprofile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParticipantprofile(ParticipantProfile newParticipantprofile) {
-		ParticipantProfile oldParticipantprofile = participantprofile;
-		participantprofile = newParticipantprofile;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE, oldParticipantprofile, participantprofile));
+		return participantProfiles;
 	}
 
 	/**
@@ -191,9 +166,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE:
-				if (resolve) return getParticipantprofile();
-				return basicGetParticipantprofile();
+			case PaymentsAppPackage.PARTICIPANT__PARTICIPANT_PROFILES:
+				return getParticipantProfiles();
 			case PaymentsAppPackage.PARTICIPANT__NAME:
 				return getName();
 			case PaymentsAppPackage.PARTICIPANT__BUSINESSATTRIBUTECOLLECTION:
@@ -211,8 +185,9 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE:
-				setParticipantprofile((ParticipantProfile)newValue);
+			case PaymentsAppPackage.PARTICIPANT__PARTICIPANT_PROFILES:
+				getParticipantProfiles().clear();
+				getParticipantProfiles().addAll((Collection<? extends ParticipantProfile>)newValue);
 				return;
 			case PaymentsAppPackage.PARTICIPANT__NAME:
 				setName((String)newValue);
@@ -233,8 +208,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE:
-				setParticipantprofile((ParticipantProfile)null);
+			case PaymentsAppPackage.PARTICIPANT__PARTICIPANT_PROFILES:
+				getParticipantProfiles().clear();
 				return;
 			case PaymentsAppPackage.PARTICIPANT__NAME:
 				setName(NAME_EDEFAULT);
@@ -254,8 +229,8 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PaymentsAppPackage.PARTICIPANT__PARTICIPANTPROFILE:
-				return participantprofile != null;
+			case PaymentsAppPackage.PARTICIPANT__PARTICIPANT_PROFILES:
+				return participantProfiles != null && !participantProfiles.isEmpty();
 			case PaymentsAppPackage.PARTICIPANT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PaymentsAppPackage.PARTICIPANT__BUSINESSATTRIBUTECOLLECTION:

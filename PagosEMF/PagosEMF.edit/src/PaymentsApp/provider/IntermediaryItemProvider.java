@@ -128,7 +128,8 @@ public class IntermediaryItemProvider
 			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__PROVIDERS);
 			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__SUPERENTITY);
 			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__TEMPLATES);
-			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__PARTICIPANTPROFILES);
+			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__PARTICIPANT_PROFILES);
+			childrenFeatures.add(PaymentsAppPackage.Literals.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES);
 		}
 		return childrenFeatures;
 	}
@@ -191,7 +192,8 @@ public class IntermediaryItemProvider
 			case PaymentsAppPackage.INTERMEDIARY__PROVIDERS:
 			case PaymentsAppPackage.INTERMEDIARY__SUPERENTITY:
 			case PaymentsAppPackage.INTERMEDIARY__TEMPLATES:
-			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANTPROFILES:
+			case PaymentsAppPackage.INTERMEDIARY__PARTICIPANT_PROFILES:
+			case PaymentsAppPackage.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -222,12 +224,17 @@ public class IntermediaryItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(PaymentsAppPackage.Literals.INTERMEDIARY__TEMPLATES,
-				 PaymentsAppFactory.eINSTANCE.createInformationTemplate()));
+				 PaymentsAppFactory.eINSTANCE.createDataForm()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PaymentsAppPackage.Literals.INTERMEDIARY__PARTICIPANTPROFILES,
+				(PaymentsAppPackage.Literals.INTERMEDIARY__PARTICIPANT_PROFILES,
 				 PaymentsAppFactory.eINSTANCE.createParticipantProfile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PaymentsAppPackage.Literals.INTERMEDIARY__INTERMEDIARY_ATTRIBUTES,
+				 PaymentsAppFactory.eINSTANCE.createBusinessAttributeCollection()));
 	}
 
 	/**

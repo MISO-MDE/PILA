@@ -3,7 +3,7 @@
 package PaymentsApp.provider;
 
 
-import PaymentsApp.InformationTemplate;
+import PaymentsApp.DataForm;
 import PaymentsApp.PaymentsAppFactory;
 import PaymentsApp.PaymentsAppPackage;
 
@@ -29,12 +29,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link PaymentsApp.InformationTemplate} object.
+ * This is the item provider adapter for a {@link PaymentsApp.DataForm} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InformationTemplateItemProvider 
+public class DataFormItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -48,7 +48,7 @@ public class InformationTemplateItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InformationTemplateItemProvider(AdapterFactory adapterFactory) {
+	public DataFormItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -82,9 +82,9 @@ public class InformationTemplateItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InformationTemplate_participantsFields_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_participantsFields_feature", "_UI_InformationTemplate_type"),
-				 PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS,
+				 getString("_UI_DataForm_participantsFields_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataForm_participantsFields_feature", "_UI_DataForm_type"),
+				 PaymentsAppPackage.Literals.DATA_FORM__PARTICIPANTS_FIELDS,
 				 true,
 				 false,
 				 true,
@@ -104,9 +104,9 @@ public class InformationTemplateItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InformationTemplate_providersFields_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_providersFields_feature", "_UI_InformationTemplate_type"),
-				 PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__PROVIDERS_FIELDS,
+				 getString("_UI_DataForm_providersFields_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataForm_providersFields_feature", "_UI_DataForm_type"),
+				 PaymentsAppPackage.Literals.DATA_FORM__PROVIDERS_FIELDS,
 				 true,
 				 false,
 				 true,
@@ -126,9 +126,9 @@ public class InformationTemplateItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InformationTemplate_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_name_feature", "_UI_InformationTemplate_type"),
-				 PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__NAME,
+				 getString("_UI_DataForm_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataForm_name_feature", "_UI_DataForm_type"),
+				 PaymentsAppPackage.Literals.DATA_FORM__NAME,
 				 true,
 				 false,
 				 false,
@@ -148,9 +148,9 @@ public class InformationTemplateItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InformationTemplate_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_description_feature", "_UI_InformationTemplate_type"),
-				 PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__DESCRIPTION,
+				 getString("_UI_DataForm_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataForm_description_feature", "_UI_DataForm_type"),
+				 PaymentsAppPackage.Literals.DATA_FORM__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -171,7 +171,7 @@ public class InformationTemplateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__BUSINESS_FIELDS);
+			childrenFeatures.add(PaymentsAppPackage.Literals.DATA_FORM__BUSINESS_FIELDS);
 		}
 		return childrenFeatures;
 	}
@@ -190,14 +190,14 @@ public class InformationTemplateItemProvider
 	}
 
 	/**
-	 * This returns InformationTemplate.gif.
+	 * This returns DataForm.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/InformationTemplate"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/DataForm"));
 	}
 
 	/**
@@ -208,10 +208,10 @@ public class InformationTemplateItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InformationTemplate)object).getName();
+		String label = ((DataForm)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_InformationTemplate_type") :
-			getString("_UI_InformationTemplate_type") + " " + label;
+			getString("_UI_DataForm_type") :
+			getString("_UI_DataForm_type") + " " + label;
 	}
 	
 
@@ -226,12 +226,12 @@ public class InformationTemplateItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(InformationTemplate.class)) {
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__NAME:
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+		switch (notification.getFeatureID(DataForm.class)) {
+			case PaymentsAppPackage.DATA_FORM__NAME:
+			case PaymentsAppPackage.DATA_FORM__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PaymentsAppPackage.INFORMATION_TEMPLATE__BUSINESS_FIELDS:
+			case PaymentsAppPackage.DATA_FORM__BUSINESS_FIELDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,7 +251,7 @@ public class InformationTemplateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PaymentsAppPackage.Literals.INFORMATION_TEMPLATE__BUSINESS_FIELDS,
+				(PaymentsAppPackage.Literals.DATA_FORM__BUSINESS_FIELDS,
 				 PaymentsAppFactory.eINSTANCE.createBusinessAttributeCollection()));
 	}
 

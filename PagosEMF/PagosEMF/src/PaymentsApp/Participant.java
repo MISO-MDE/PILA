@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link PaymentsApp.Participant#getParticipantprofile <em>Participantprofile</em>}</li>
+ *   <li>{@link PaymentsApp.Participant#getParticipantProfiles <em>Participant Profiles</em>}</li>
  *   <li>{@link PaymentsApp.Participant#getName <em>Name</em>}</li>
  *   <li>{@link PaymentsApp.Participant#getBusinessattributecollection <em>Businessattributecollection</em>}</li>
  * </ul>
@@ -26,30 +26,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Participant extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Participantprofile</b></em>' reference.
+	 * Returns the value of the '<em><b>Participant Profiles</b></em>' reference list.
+	 * The list contents are of type {@link PaymentsApp.ParticipantProfile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Participantprofile</em>' reference isn't clear,
+	 * If the meaning of the '<em>Participant Profiles</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Participantprofile</em>' reference.
-	 * @see #setParticipantprofile(ParticipantProfile)
-	 * @see PaymentsApp.PaymentsAppPackage#getParticipant_Participantprofile()
+	 * @return the value of the '<em>Participant Profiles</em>' reference list.
+	 * @see PaymentsApp.PaymentsAppPackage#getParticipant_ParticipantProfiles()
 	 * @model required="true"
 	 * @generated
 	 */
-	ParticipantProfile getParticipantprofile();
-
-	/**
-	 * Sets the value of the '{@link PaymentsApp.Participant#getParticipantprofile <em>Participantprofile</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Participantprofile</em>' reference.
-	 * @see #getParticipantprofile()
-	 * @generated
-	 */
-	void setParticipantprofile(ParticipantProfile value);
+	EList<ParticipantProfile> getParticipantProfiles();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

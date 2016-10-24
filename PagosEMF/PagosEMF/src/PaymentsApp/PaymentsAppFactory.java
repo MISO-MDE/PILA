@@ -103,13 +103,13 @@ public interface PaymentsAppFactory extends EFactory {
 	BusinessAttributeCollection createBusinessAttributeCollection();
 
 	/**
-	 * Returns a new object of class '<em>Information Template</em>'.
+	 * Returns a new object of class '<em>Data Form</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Information Template</em>'.
+	 * @return a new object of class '<em>Data Form</em>'.
 	 * @generated
 	 */
-	InformationTemplate createInformationTemplate();
+	DataForm createDataForm();
 
 	/**
 	 * Returns a new object of class '<em>Business Calculation</em>'.

@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link PaymentsApp.Intermediary#getProviders <em>Providers</em>}</li>
  *   <li>{@link PaymentsApp.Intermediary#getSuperentity <em>Superentity</em>}</li>
  *   <li>{@link PaymentsApp.Intermediary#getTemplates <em>Templates</em>}</li>
- *   <li>{@link PaymentsApp.Intermediary#getParticipantprofiles <em>Participantprofiles</em>}</li>
+ *   <li>{@link PaymentsApp.Intermediary#getParticipantProfiles <em>Participant Profiles</em>}</li>
+ *   <li>{@link PaymentsApp.Intermediary#getIntermediaryAttributes <em>Intermediary Attributes</em>}</li>
  * </ul>
  *
  * @see PaymentsApp.PaymentsAppPackage#getIntermediary()
@@ -114,7 +115,7 @@ public interface Intermediary extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Templates</b></em>' containment reference list.
-	 * The list contents are of type {@link PaymentsApp.InformationTemplate}.
+	 * The list contents are of type {@link PaymentsApp.DataForm}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Templates</em>' containment reference list isn't clear,
@@ -126,22 +127,38 @@ public interface Intermediary extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<InformationTemplate> getTemplates();
+	EList<DataForm> getTemplates();
 
 	/**
-	 * Returns the value of the '<em><b>Participantprofiles</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Participant Profiles</b></em>' containment reference list.
 	 * The list contents are of type {@link PaymentsApp.ParticipantProfile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Participantprofiles</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Participant Profiles</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Participantprofiles</em>' containment reference list.
-	 * @see PaymentsApp.PaymentsAppPackage#getIntermediary_Participantprofiles()
+	 * @return the value of the '<em>Participant Profiles</em>' containment reference list.
+	 * @see PaymentsApp.PaymentsAppPackage#getIntermediary_ParticipantProfiles()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ParticipantProfile> getParticipantprofiles();
+	EList<ParticipantProfile> getParticipantProfiles();
+
+	/**
+	 * Returns the value of the '<em><b>Intermediary Attributes</b></em>' containment reference list.
+	 * The list contents are of type {@link PaymentsApp.BusinessAttributeCollection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Intermediary Attributes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Intermediary Attributes</em>' containment reference list.
+	 * @see PaymentsApp.PaymentsAppPackage#getIntermediary_IntermediaryAttributes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BusinessAttributeCollection> getIntermediaryAttributes();
 
 } // Intermediary

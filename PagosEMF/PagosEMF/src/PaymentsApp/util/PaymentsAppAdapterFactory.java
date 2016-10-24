@@ -108,8 +108,8 @@ public class PaymentsAppAdapterFactory extends AdapterFactoryImpl {
 				return createBusinessAttributeCollectionAdapter();
 			}
 			@Override
-			public Adapter caseInformationTemplate(InformationTemplate object) {
-				return createInformationTemplateAdapter();
+			public Adapter caseDataForm(DataForm object) {
+				return createDataFormAdapter();
 			}
 			@Override
 			public Adapter caseBusinessCalculation(BusinessCalculation object) {
@@ -288,16 +288,16 @@ public class PaymentsAppAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PaymentsApp.InformationTemplate <em>Information Template</em>}'.
+	 * Creates a new adapter for an object of class '{@link PaymentsApp.DataForm <em>Data Form</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PaymentsApp.InformationTemplate
+	 * @see PaymentsApp.DataForm
 	 * @generated
 	 */
-	public Adapter createInformationTemplateAdapter() {
+	public Adapter createDataFormAdapter() {
 		return null;
 	}
 

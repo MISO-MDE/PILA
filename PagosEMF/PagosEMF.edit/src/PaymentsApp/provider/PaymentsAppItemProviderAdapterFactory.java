@@ -279,26 +279,26 @@ public class PaymentsAppItemProviderAdapterFactory extends PaymentsAppAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link PaymentsApp.InformationTemplate} instances.
+	 * This keeps track of the one adapter used for all {@link PaymentsApp.DataForm} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InformationTemplateItemProvider informationTemplateItemProvider;
+	protected DataFormItemProvider dataFormItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link PaymentsApp.InformationTemplate}.
+	 * This creates an adapter for a {@link PaymentsApp.DataForm}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInformationTemplateAdapter() {
-		if (informationTemplateItemProvider == null) {
-			informationTemplateItemProvider = new InformationTemplateItemProvider(this);
+	public Adapter createDataFormAdapter() {
+		if (dataFormItemProvider == null) {
+			dataFormItemProvider = new DataFormItemProvider(this);
 		}
 
-		return informationTemplateItemProvider;
+		return dataFormItemProvider;
 	}
 
 	/**
@@ -501,7 +501,7 @@ public class PaymentsAppItemProviderAdapterFactory extends PaymentsAppAdapterFac
 		if (businessNumberItemProvider != null) businessNumberItemProvider.dispose();
 		if (businessConditionItemProvider != null) businessConditionItemProvider.dispose();
 		if (businessAttributeCollectionItemProvider != null) businessAttributeCollectionItemProvider.dispose();
-		if (informationTemplateItemProvider != null) informationTemplateItemProvider.dispose();
+		if (dataFormItemProvider != null) dataFormItemProvider.dispose();
 		if (businessCalculationItemProvider != null) businessCalculationItemProvider.dispose();
 		if (superEntityItemProvider != null) superEntityItemProvider.dispose();
 		if (participantItemProvider != null) participantItemProvider.dispose();

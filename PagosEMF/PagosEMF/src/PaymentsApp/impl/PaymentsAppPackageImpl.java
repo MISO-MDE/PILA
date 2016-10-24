@@ -13,7 +13,7 @@ import PaymentsApp.BusinessRule;
 import PaymentsApp.BusinessString;
 import PaymentsApp.BusinessValue;
 import PaymentsApp.Comparisons;
-import PaymentsApp.InformationTemplate;
+import PaymentsApp.DataForm;
 import PaymentsApp.Intermediary;
 import PaymentsApp.Operations;
 import PaymentsApp.Participant;
@@ -113,7 +113,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass informationTemplateEClass = null;
+	private EClass dataFormEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -284,8 +284,17 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIntermediary_Participantprofiles() {
+	public EReference getIntermediary_ParticipantProfiles() {
 		return (EReference)intermediaryEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIntermediary_IntermediaryAttributes() {
+		return (EReference)intermediaryEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -554,8 +563,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInformationTemplate() {
-		return informationTemplateEClass;
+	public EClass getDataForm() {
+		return dataFormEClass;
 	}
 
 	/**
@@ -563,8 +572,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInformationTemplate_ParticipantsFields() {
-		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(0);
+	public EReference getDataForm_ParticipantsFields() {
+		return (EReference)dataFormEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -572,8 +581,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInformationTemplate_ProvidersFields() {
-		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(1);
+	public EReference getDataForm_ProvidersFields() {
+		return (EReference)dataFormEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -581,8 +590,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInformationTemplate_Name() {
-		return (EAttribute)informationTemplateEClass.getEStructuralFeatures().get(2);
+	public EAttribute getDataForm_Name() {
+		return (EAttribute)dataFormEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -590,8 +599,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInformationTemplate_Description() {
-		return (EAttribute)informationTemplateEClass.getEStructuralFeatures().get(3);
+	public EAttribute getDataForm_Description() {
+		return (EAttribute)dataFormEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -599,8 +608,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInformationTemplate_BusinessFields() {
-		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(4);
+	public EReference getDataForm_BusinessFields() {
+		return (EReference)dataFormEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -698,7 +707,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParticipant_Participantprofile() {
+	public EReference getParticipant_ParticipantProfiles() {
 		return (EReference)participantEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -799,7 +808,8 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		createEReference(intermediaryEClass, INTERMEDIARY__PROVIDERS);
 		createEReference(intermediaryEClass, INTERMEDIARY__SUPERENTITY);
 		createEReference(intermediaryEClass, INTERMEDIARY__TEMPLATES);
-		createEReference(intermediaryEClass, INTERMEDIARY__PARTICIPANTPROFILES);
+		createEReference(intermediaryEClass, INTERMEDIARY__PARTICIPANT_PROFILES);
+		createEReference(intermediaryEClass, INTERMEDIARY__INTERMEDIARY_ATTRIBUTES);
 
 		participantProfileEClass = createEClass(PARTICIPANT_PROFILE);
 		createEAttribute(participantProfileEClass, PARTICIPANT_PROFILE__NAME);
@@ -839,12 +849,12 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		createEReference(businessAttributeCollectionEClass, BUSINESS_ATTRIBUTE_COLLECTION__BUSINESS_ATTRIBUTES);
 		createEAttribute(businessAttributeCollectionEClass, BUSINESS_ATTRIBUTE_COLLECTION__NAME);
 
-		informationTemplateEClass = createEClass(INFORMATION_TEMPLATE);
-		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__PARTICIPANTS_FIELDS);
-		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__PROVIDERS_FIELDS);
-		createEAttribute(informationTemplateEClass, INFORMATION_TEMPLATE__NAME);
-		createEAttribute(informationTemplateEClass, INFORMATION_TEMPLATE__DESCRIPTION);
-		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__BUSINESS_FIELDS);
+		dataFormEClass = createEClass(DATA_FORM);
+		createEReference(dataFormEClass, DATA_FORM__PARTICIPANTS_FIELDS);
+		createEReference(dataFormEClass, DATA_FORM__PROVIDERS_FIELDS);
+		createEAttribute(dataFormEClass, DATA_FORM__NAME);
+		createEAttribute(dataFormEClass, DATA_FORM__DESCRIPTION);
+		createEReference(dataFormEClass, DATA_FORM__BUSINESS_FIELDS);
 
 		businessCalculationEClass = createEClass(BUSINESS_CALCULATION);
 		createEAttribute(businessCalculationEClass, BUSINESS_CALCULATION__OPERATION);
@@ -858,7 +868,7 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		createEReference(superEntityEClass, SUPER_ENTITY__PARTICIPANTS);
 
 		participantEClass = createEClass(PARTICIPANT);
-		createEReference(participantEClass, PARTICIPANT__PARTICIPANTPROFILE);
+		createEReference(participantEClass, PARTICIPANT__PARTICIPANT_PROFILES);
 		createEAttribute(participantEClass, PARTICIPANT__NAME);
 		createEReference(participantEClass, PARTICIPANT__BUSINESSATTRIBUTECOLLECTION);
 
@@ -908,8 +918,9 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		initEAttribute(getIntermediary_Description(), ecorePackage.getEString(), "description", null, 0, 1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIntermediary_Providers(), this.getProvider(), null, "providers", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIntermediary_Superentity(), this.getSuperEntity(), null, "superentity", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIntermediary_Templates(), this.getInformationTemplate(), null, "templates", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIntermediary_Participantprofiles(), this.getParticipantProfile(), null, "participantprofiles", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermediary_Templates(), this.getDataForm(), null, "templates", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermediary_ParticipantProfiles(), this.getParticipantProfile(), null, "participantProfiles", null, 1, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermediary_IntermediaryAttributes(), this.getBusinessAttributeCollection(), null, "intermediaryAttributes", null, 0, -1, Intermediary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(participantProfileEClass, ParticipantProfile.class, "ParticipantProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParticipantProfile_Name(), ecorePackage.getEString(), "name", null, 0, 1, ParticipantProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -949,12 +960,12 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		initEReference(getBusinessAttributeCollection_BusinessAttributes(), this.getBusinessAttribute(), null, "businessAttributes", null, 1, -1, BusinessAttributeCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessAttributeCollection_Name(), ecorePackage.getEString(), "name", null, 0, 1, BusinessAttributeCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(informationTemplateEClass, InformationTemplate.class, "InformationTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInformationTemplate_ParticipantsFields(), this.getParticipantProfile(), null, "participantsFields", null, 1, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInformationTemplate_ProvidersFields(), this.getProvider(), null, "providersFields", null, 1, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformationTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformationTemplate_Description(), ecorePackage.getEString(), "description", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInformationTemplate_BusinessFields(), this.getBusinessAttributeCollection(), null, "businessFields", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dataFormEClass, DataForm.class, "DataForm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDataForm_ParticipantsFields(), this.getParticipantProfile(), null, "participantsFields", null, 1, -1, DataForm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataForm_ProvidersFields(), this.getProvider(), null, "providersFields", null, 1, -1, DataForm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataForm_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataForm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataForm_Description(), ecorePackage.getEString(), "description", null, 0, 1, DataForm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataForm_BusinessFields(), this.getBusinessAttributeCollection(), null, "businessFields", null, 0, -1, DataForm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(businessCalculationEClass, BusinessCalculation.class, "BusinessCalculation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBusinessCalculation_Operation(), this.getOperations(), "operation", null, 0, 1, BusinessCalculation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -964,11 +975,11 @@ public class PaymentsAppPackageImpl extends EPackageImpl implements PaymentsAppP
 		initEClass(superEntityEClass, SuperEntity.class, "SuperEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSuperEntity_SuperEntityAttributes(), this.getBusinessAttributeCollection(), null, "superEntityAttributes", null, 1, 1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSuperEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSuperEntity_Templates(), this.getInformationTemplate(), null, "templates", null, 1, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSuperEntity_Templates(), this.getDataForm(), null, "templates", null, 1, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSuperEntity_Participants(), this.getParticipant(), null, "participants", null, 1, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(participantEClass, Participant.class, "Participant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getParticipant_Participantprofile(), this.getParticipantProfile(), null, "participantprofile", null, 1, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParticipant_ParticipantProfiles(), this.getParticipantProfile(), null, "participantProfiles", null, 1, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParticipant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getParticipant_Businessattributecollection(), this.getBusinessAttributeCollection(), null, "businessattributecollection", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

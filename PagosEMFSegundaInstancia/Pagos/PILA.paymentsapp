@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
+<PaymentsApp:Application xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
-    <templates name="Tabla 8">
-      <businessFields name="Tipo Pensionado">
-        <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
+    <intermediaryAttributes name="Tipo Pensionado">
+     <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
+      </businessAttributes>
+            <businessAttributes name="Pensionado de regimen de prima media. sin tope">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
+        </businessAttributes>
+         <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
+      </businessAttributes>
+      <businessAttributes name="Pensionado de riesgos laborales. Tope maximo 25 smlmv">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
+      </businessAttributes>
+       <businessAttributes name="Pensionado por el empleador, con tope maximo de pension de 25 smlmv">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="5"/>
+      </businessAttributes>
+       <businessAttributes name="Pensionado por el empleador sin tope maximo de pension">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="6"/>
+      </businessAttributes>
+       <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion, con tope maximo de pension de 25 smlmv">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="7"/>
+      </businessAttributes>
+       <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion sin tope maximo en pension">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="8"/>
+      </businessAttributes>
+       <businessAttributes name="Beneficiario UPC adicional">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="9"/>
+      </businessAttributes>    
+    </intermediaryAttributes>
+     <intermediaryAttributes name="Tipo Pension"> 
+        <businessAttributes name="Vejez" >
           <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
         </businessAttributes>
-        <businessAttributes name="Pensionado de regimen de prima media. sin tope">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
-        </businessAttributes>
-        <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope máximo">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
-        </businessAttributes>
-        <businessAttributes name="Pensionado de riesgos laborales">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
-        </businessAttributes>
-      </businessFields>
-      <businessFields name="Tipo Pension">
-        <businessAttributes name="Vejez" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.3 #//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
-        </businessAttributes>
-        <businessAttributes name="Sobrevivencia vitalicia riesgo comun" relations="#//@intermediary/@templates.0/@businessFields.0/@businessAttributes.2 #//@intermediary/@templates.0/@businessFields.1/@businessAttributes.1">
+        <businessAttributes name="Sobrevivencia vitalicia riesgo comun" >
           <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
         </businessAttributes>
         <businessAttributes name="Sobrevivencia temporal riesgo comun"/>
@@ -38,8 +52,7 @@
         <businessAttributes name="Gracia"/>
         <businessAttributes name="Por convenio internacional"/>
         <businessAttributes name="Sentencia judicial"/>
-        <businessAttributes name="Conciliaciones"/>
-      </businessFields>
-    </templates>
+        <businessAttributes name="Conciliaciones"/>		
+       </intermediaryAttributes> 
   </intermediary>
 </PaymentsApp:Application>

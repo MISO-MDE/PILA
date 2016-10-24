@@ -3,7 +3,7 @@
 package PaymentsApp.impl;
 
 import PaymentsApp.BusinessAttributeCollection;
-import PaymentsApp.InformationTemplate;
+import PaymentsApp.DataForm;
 import PaymentsApp.Participant;
 import PaymentsApp.PaymentsAppPackage;
 import PaymentsApp.SuperEntity;
@@ -80,7 +80,7 @@ public class SuperEntityImpl extends MinimalEObjectImpl.Container implements Sup
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InformationTemplate> templates;
+	protected EList<DataForm> templates;
 
 	/**
 	 * The cached value of the '{@link #getParticipants() <em>Participants</em>}' containment reference list.
@@ -180,9 +180,9 @@ public class SuperEntityImpl extends MinimalEObjectImpl.Container implements Sup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InformationTemplate> getTemplates() {
+	public EList<DataForm> getTemplates() {
 		if (templates == null) {
-			templates = new EObjectResolvingEList<InformationTemplate>(InformationTemplate.class, this, PaymentsAppPackage.SUPER_ENTITY__TEMPLATES);
+			templates = new EObjectResolvingEList<DataForm>(DataForm.class, this, PaymentsAppPackage.SUPER_ENTITY__TEMPLATES);
 		}
 		return templates;
 	}
@@ -252,7 +252,7 @@ public class SuperEntityImpl extends MinimalEObjectImpl.Container implements Sup
 				return;
 			case PaymentsAppPackage.SUPER_ENTITY__TEMPLATES:
 				getTemplates().clear();
-				getTemplates().addAll((Collection<? extends InformationTemplate>)newValue);
+				getTemplates().addAll((Collection<? extends DataForm>)newValue);
 				return;
 			case PaymentsAppPackage.SUPER_ENTITY__PARTICIPANTS:
 				getParticipants().clear();

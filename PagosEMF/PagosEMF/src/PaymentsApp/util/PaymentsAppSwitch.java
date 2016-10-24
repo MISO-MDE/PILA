@@ -128,9 +128,9 @@ public class PaymentsAppSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PaymentsAppPackage.INFORMATION_TEMPLATE: {
-				InformationTemplate informationTemplate = (InformationTemplate)theEObject;
-				T result = caseInformationTemplate(informationTemplate);
+			case PaymentsAppPackage.DATA_FORM: {
+				DataForm dataForm = (DataForm)theEObject;
+				T result = caseDataForm(dataForm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -313,17 +313,17 @@ public class PaymentsAppSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Information Template</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Data Form</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Information Template</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Data Form</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInformationTemplate(InformationTemplate object) {
+	public T caseDataForm(DataForm object) {
 		return null;
 	}
 
