@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PaymentsApp:Application xmlns:PaymentsApp="PaymentsApp">
+<PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
     <intermediaryAttributes name="Tipo Pensionado">
-     <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
+      <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
       </businessAttributes>
-            <businessAttributes name="Pensionado de regimen de prima media. sin tope">
+      <businessAttributes name="Pensionado de regimen de prima media. sin tope">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
-        </businessAttributes>
-         <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo">
+      </businessAttributes>
+      <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
       </businessAttributes>
       <businessAttributes name="Pensionado de riesgos laborales. Tope maximo 25 smlmv">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
       </businessAttributes>
-       <businessAttributes name="Pensionado por el empleador, con tope maximo de pension de 25 smlmv">
+      <businessAttributes name="Pensionado por el empleador, con tope maximo de pension de 25 smlmv">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="5"/>
       </businessAttributes>
-       <businessAttributes name="Pensionado por el empleador sin tope maximo de pension">
+      <businessAttributes name="Pensionado por el empleador sin tope maximo de pension">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="6"/>
       </businessAttributes>
-       <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion, con tope maximo de pension de 25 smlmv">
+      <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion, con tope maximo de pension de 25 smlmv">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="7"/>
       </businessAttributes>
-       <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion sin tope maximo en pension">
+      <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepcion sin tope maximo en pension">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="8"/>
       </businessAttributes>
-       <businessAttributes name="Beneficiario UPC adicional">
+      <businessAttributes name="Beneficiario UPC adicional">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="9"/>
-      </businessAttributes>    
+      </businessAttributes>
     </intermediaryAttributes>
-     <intermediaryAttributes name="Tipo Pension"> 
-        <businessAttributes name="Vejez" >
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
-        </businessAttributes>
-        <businessAttributes name="Sobrevivencia vitalicia riesgo comun" >
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
-        </businessAttributes>
-        <businessAttributes name="Sobrevivencia temporal riesgo comun"/>
-        <businessAttributes name="Sobrevivencia temporal riesgo común. Cónyuge o compañera menos de 30 años sin hijos"/>
-        <businessAttributes name="Sobrevivencia temporal riesgo laboral"/>
-        <businessAttributes name="Sobrevivencia vitalicia riesgo laboral"/>
-        <businessAttributes name="Sobrevivencia temporal riesgo laboral. Cónyuge o compañera menos de 30 años sin hijos"/>
-        <businessAttributes name="Invalidez riesgo común"/>
-        <businessAttributes name="Invalidez riesgo laboral"/>
-        <businessAttributes name="Jubilación"/>
-        <businessAttributes name="Jubiilación para compartir"/>
-        <businessAttributes name="Sanción"/>
-        <businessAttributes name="Convencional"/>
-        <businessAttributes name="Convencional para compartir"/>
-        <businessAttributes name="Gracia"/>
-        <businessAttributes name="Por convenio internacional"/>
-        <businessAttributes name="Sentencia judicial"/>
-        <businessAttributes name="Conciliaciones"/>		
-       </intermediaryAttributes> 
+    <intermediaryAttributes name="Tipo Pension">
+      <businessAttributes name="Vejez" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
+      </businessAttributes>
+      <businessAttributes name="Sobrevivencia vitalicia riesgo comun">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
+      </businessAttributes>
+      <businessAttributes name="Sobrevivencia temporal riesgo comun"/>
+      <businessAttributes name="Sobrevivencia temporal riesgo común. Cónyuge o compañera menos de 30 años sin hijos" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.3 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+      <businessAttributes name="Sobrevivencia temporal riesgo laboral" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+      <businessAttributes name="Sobrevivencia vitalicia riesgo laboral"/>
+      <businessAttributes name="Sobrevivencia temporal riesgo laboral. Cónyuge o compañera menos de 30 años sin hijos"/>
+      <businessAttributes name="Invalidez riesgo común"/>
+      <businessAttributes name="Invalidez riesgo laboral"/>
+      <businessAttributes name="Jubilación"/>
+      <businessAttributes name="Jubiilación para compartir"/>
+      <businessAttributes name="Sanción"/>
+      <businessAttributes name="Convencional"/>
+      <businessAttributes name="Convencional para compartir"/>
+      <businessAttributes name="Gracia" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+      <businessAttributes name="Por convenio internacional"/>
+      <businessAttributes name="Sentencia judicial"/>
+      <businessAttributes name="Conciliaciones"/>
+    </intermediaryAttributes>
   </intermediary>
 </PaymentsApp:Application>
