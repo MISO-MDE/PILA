@@ -42,16 +42,16 @@
       <businessAttributes name="Sobrevivencia temporal riesgo laboral" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Sobrevivencia vitalicia riesgo laboral"/>
       <businessAttributes name="Sobrevivencia temporal riesgo laboral. Cónyuge o compañera menos de 30 años sin hijos"/>
-      <businessAttributes name="Invalidez riesgo común"/>
+      <businessAttributes name="Invalidez riesgo común" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Invalidez riesgo laboral"/>
       <businessAttributes name="Jubilación"/>
-      <businessAttributes name="Jubiilación para compartir"/>
-      <businessAttributes name="Sanción"/>
+      <businessAttributes name="Jubiilación para compartir" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+      <businessAttributes name="Sanción" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
       <businessAttributes name="Convencional"/>
-      <businessAttributes name="Convencional para compartir"/>
+      <businessAttributes name="Convencional para compartir" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Gracia" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Por convenio internacional"/>
-      <businessAttributes name="Sentencia judicial"/>
+      <businessAttributes name="Sentencia judicial" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
       <businessAttributes name="Conciliaciones"/>
     </intermediaryAttributes>
   </intermediary>
