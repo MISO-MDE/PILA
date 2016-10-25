@@ -31,7 +31,7 @@
       </businessAttributes>
     </intermediaryAttributes>
     <intermediaryAttributes name="Tipo Pension">
-      <businessAttributes name="Vejez" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0">
+      <businessAttributes name="Vejez" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.0">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
       </businessAttributes>
       <businessAttributes name="Sobrevivencia vitalicia riesgo comun">
