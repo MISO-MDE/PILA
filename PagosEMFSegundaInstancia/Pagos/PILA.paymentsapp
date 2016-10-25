@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
+    <templates name="Clases de Riesgos">
+      <businessFields name="Fila 1">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="8022"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Establecimientos de educacion media"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 2">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="8513"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="Empresas dedicadas a actividades de la practica odontologica"/>
+        </businessAttributes>
+      </businessFields>
+    </templates>
     <intermediaryAttributes name="Tipo Pensionado">
       <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.2">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
