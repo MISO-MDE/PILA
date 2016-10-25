@@ -31,5 +31,9 @@
       <ownedLineMappings name="T6E Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
       <ownedColumnMappings name="T6E Tipo de Pagador" featureName="relations"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 2" domainClass="Application">
+      <ownedLineMappings name="Clase de Riesgo" domainClass="BusinessAttributeCollection" semanticCandidatesExpression="[self.intermediary.templates->select(f|f.name = 'Clases de Riesgos').businessFields/]" headerLabelExpression="aql:self.name"/>
+      <ownedColumnMappings name="Codigo CIU" featureName="businessAttributes"/>
+    </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
