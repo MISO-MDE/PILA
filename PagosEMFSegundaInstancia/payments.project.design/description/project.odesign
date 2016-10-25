@@ -18,5 +18,9 @@
       <ownedColumnMappings name="T3 Tipo de Pagador" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pagador').businessAttributes/]"/>
       <intersection name="Pensionado pagador" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 3 Edition" domainClass="Application">
+      <ownedLineMappings name="T3E Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
+      <ownedColumnMappings name="T3E Tipo de Pagador" featureName="relations"/>
+    </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>

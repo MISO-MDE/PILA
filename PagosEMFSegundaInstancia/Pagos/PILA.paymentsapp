@@ -2,19 +2,19 @@
 <PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
     <intermediaryAttributes name="Tipo Pensionado">
-      <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv">
+      <businessAttributes name="Pensionado de regimen de prima media. tope 25 smlmv" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.2">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
       </businessAttributes>
-      <businessAttributes name="Pensionado de regimen de prima media. sin tope">
+      <businessAttributes name="Pensionado de regimen de prima media. sin tope" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.2">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
       </businessAttributes>
-      <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0">
+      <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
       </businessAttributes>
       <businessAttributes name="Pensionado de riesgos laborales. Tope maximo 25 smlmv">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
       </businessAttributes>
-      <businessAttributes name="Pensionado por el empleador, con tope maximo de pension de 25 smlmv">
+      <businessAttributes name="Pensionado por el empleador, con tope maximo de pension de 25 smlmv" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="5"/>
       </businessAttributes>
       <businessAttributes name="Pensionado por el empleador sin tope maximo de pension">
