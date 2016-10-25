@@ -8,7 +8,7 @@
       <businessAttributes name="Pensionado de regimen de prima media. sin tope">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
       </businessAttributes>
-      <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo">
+      <businessAttributes name="Pensionado de regimen de ahorro individual, No aplica tope maximo" relations="#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
       </businessAttributes>
       <businessAttributes name="Pensionado de riesgos laborales. Tope maximo 25 smlmv">
@@ -53,6 +53,20 @@
       <businessAttributes name="Por convenio internacional"/>
       <businessAttributes name="Sentencia judicial" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
       <businessAttributes name="Conciliaciones"/>
+    </intermediaryAttributes>
+    <intermediaryAttributes name="Tipo Pagador">
+      <businessAttributes name="Empleador">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+      </businessAttributes>
+      <businessAttributes name="Administrador de pensiones">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="02"/>
+      </businessAttributes>
+      <businessAttributes name="Pagador de pensiones">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="03"/>
+      </businessAttributes>
+      <businessAttributes name="Pensiones de entidades de los regimenes especial y de excepcion">
+        <businessValue xsi:type="PaymentsApp:BusinessString" value="04"/>
+      </businessAttributes>
     </intermediaryAttributes>
   </intermediary>
 </PaymentsApp:Application>
