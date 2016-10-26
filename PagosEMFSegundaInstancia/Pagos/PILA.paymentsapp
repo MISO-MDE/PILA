@@ -2,7 +2,7 @@
 <PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
   <intermediary>
     <templates name="Clases de Riesgos">
-      <businessFields name="Fila 1">
+   <businessFields name="Fila 1">
         <businessAttributes name="Clase de Riesgo">
           <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
         </businessAttributes>
@@ -13,7 +13,7 @@
           <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
         </businessAttributes>
         <businessAttributes name="Actividad Economica">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Establecimientos de educacion media"/>
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="ESTABLECIMIENTOS DE EDUCACION MEDIA"/>
         </businessAttributes>
       </businessFields>
       <businessFields name="Fila 2">
@@ -27,7 +27,119 @@
           <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
         </businessAttributes>
         <businessAttributes name="Actividad Economica">
-          <businessValue xsi:type="PaymentsApp:BusinessString" value="Empresas dedicadas a actividades de la practica odontologica"/>
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A ACTIVIDADES DE LA PRACTICA ODONTOLOGICA"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 3">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="0117"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA PRODUCCION ESPECIALIZADA DE FRUTAS, NUECES, PLANTAS BEBESTIBLES Y ESPECIAS, INCLUYE EL TOSTADO Y-BENEFICIO DEL CACAO"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 4">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1592"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA ELABORACION DE PRODUCTOS DE MOLINERIA, DE ALMIDONES, PRODUCTOS DERIVADOS DEL ALMIDON Y ALIMENTOS PREPARADOS PARA ANIMALES, INCLUYE EL TOSTADO DE SEMILLAS Y/O GRANOS"/>
+        </businessAttributes>
+      </businessFields>
+       <businessFields name="Fila 5">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1592"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA ELABORACION DE BEBIDAS FERMENTADAS NO DESTILADAS"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 6">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="3"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1743"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA FABRICACION DE CUERDAS, CORDELES, CABLES, BRAMANTES Y REDES"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 7">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2101"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA FABRICACION DE PAPEL, CARTON Y PRODUCTOS DE PAPEL Y CARTON"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 8">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="4"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2322"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EMPRESAS DEDICADAS A LA ELABORACION DE PRODUCTOS DERIVADOS DEL PETROLEO, FUERA DE REFINERIA COMO ASFALTO"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 9">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="5"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="1431"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="EXTRACCION DE ESMERALDAS"/>
+        </businessAttributes>
+      </businessFields>
+      <businessFields name="Fila 10">
+        <businessAttributes name="Clase de Riesgo">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="5"/>
+        </businessAttributes>
+        <businessAttributes name="Codigo CIU">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="2321"/>
+        </businessAttributes>
+        <businessAttributes name="Digitos Adicionales">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="01"/>
+        </businessAttributes>
+        <businessAttributes name="Actividad Economica">
+          <businessValue xsi:type="PaymentsApp:BusinessString" value="FABRICACION DE PRODUCTOS DE LA REFINACION DEL PETROLEO, ELABORADOS EN REFINERIA."/>
         </businessAttributes>
       </businessFields>
     </templates>
