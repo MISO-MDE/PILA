@@ -874,7 +874,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_J6cYcppnEea1kOQYIwWUqQ" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_Dax5MZseEeaL9tDHKu9mFw" label="[8022]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_Vh-dMZsgEeaL9tDHKu9mFw" label="[1]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2m04ZsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_9107gZsgEeaL9tDHKu9mFw" label="[ESTABLECIMIENTOS DE EDUCACION MEDIA]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.0"/>
         </cells>
@@ -883,7 +895,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_J6cYdJpnEea1kOQYIwWUqQ" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DaygQJseEeaL9tDHKu9mFw" label="[8513]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_Vh_EQJsgEeaL9tDHKu9mFw" label="[1]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2nb8JsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_911ikJsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A ACTIVIDADES DE LA PRACTICA ODONTOLOGICA]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.1"/>
         </cells>
@@ -892,7 +916,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_tkSyQJsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DaygQZseEeaL9tDHKu9mFw" label="[0117]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_Vh_EQZsgEeaL9tDHKu9mFw" label="[2]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2nb8ZsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_911ikZsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA PRODUCCION ESPECIALIZADA DE FRUTAS, NUECES, PLANTAS BEBESTIBLES Y ESPECIAS, INCLUYE EL TOSTADO Y-BENEFICIO DEL CACAO]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.2"/>
         </cells>
@@ -901,7 +937,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_tkTZUJsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DaygQpseEeaL9tDHKu9mFw" label="[1592]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_Vh_rUJsgEeaL9tDHKu9mFw" label="[3]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oDAJsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912JoJsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA ELABORACION DE PRODUCTOS DE MOLINERIA, DE ALMIDONES, PRODUCTOS DERIVADOS DEL ALMIDON Y ALIMENTOS PREPARADOS PARA ANIMALES, INCLUYE EL TOSTADO DE SEMILLAS Y/O GRANOS]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.3"/>
         </cells>
@@ -910,7 +958,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_0PLV4JsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DaygQ5seEeaL9tDHKu9mFw" label="[1592]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_Vh_rUZsgEeaL9tDHKu9mFw" label="[3]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oDAZsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912JoZsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA ELABORACION DE BEBIDAS FERMENTADAS NO DESTILADAS]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.4"/>
         </cells>
@@ -919,7 +979,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_0PLV4ZsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DazHUJseEeaL9tDHKu9mFw" label="[1743]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_ViASYJsgEeaL9tDHKu9mFw" label="[3]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oDApsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912JopsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA FABRICACION DE CUERDAS, CORDELES, CABLES, BRAMANTES Y REDES]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.5"/>
         </cells>
@@ -928,7 +1000,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_8BliQJsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_DazuYJseEeaL9tDHKu9mFw" label="[2101]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_ViASYZsgEeaL9tDHKu9mFw" label="[4]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oqEJsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912wsJsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA FABRICACION DE PAPEL, CARTON Y PRODUCTOS DE PAPEL Y CARTON]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.6"/>
         </cells>
@@ -937,7 +1021,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_8BmJUJsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_Da0VcJseEeaL9tDHKu9mFw" label="[2322]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_ViA5cJsgEeaL9tDHKu9mFw" label="[4]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oqEZsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912wsZsgEeaL9tDHKu9mFw" label="[EMPRESAS DEDICADAS A LA ELABORACION DE PRODUCTOS DERIVADOS DEL PETROLEO, FUERA DE REFINERIA COMO ASFALTO]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.7"/>
         </cells>
@@ -946,7 +1042,19 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_8BmJUZsWEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_Da0VcZseEeaL9tDHKu9mFw" label="[1431]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_ViA5cZsgEeaL9tDHKu9mFw" label="[5]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oqEpsgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912wspsgEeaL9tDHKu9mFw" label="[EXTRACCION DE ESMERALDAS]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.8"/>
         </cells>
@@ -955,13 +1063,34 @@
         <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedLineMappings[name='Clase%20de%20Riesgo']"/>
-        <cells xmi:type="table:DCell" xmi:id="_5OTF0JsXEeaL9tDHKu9mFw" label="[Business Attribute Clase de Riesgo, Business Attribute Codigo CIU, Business Attribute Digitos Adicionales, Business Attribute Actividad Economica]" column="_J6cYdZpnEea1kOQYIwWUqQ">
+        <cells xmi:type="table:DCell" xmi:id="_Da08gJseEeaL9tDHKu9mFw" label="[2321]" column="_Dax5MJseEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_ViA5cpsgEeaL9tDHKu9mFw" label="[5]" column="_Vh-dMJsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_y2oqE5sgEeaL9tDHKu9mFw" label="[01]" column="_y2m04JsgEeaL9tDHKu9mFw">
+          <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_912ws5sgEeaL9tDHKu9mFw" label="[FABRICACION DE PRODUCTOS DE LA REFINACION DEL PETROLEO, ELABORADOS EN REFINERIA.]" column="_9107gJsgEeaL9tDHKu9mFw">
           <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttributeCollection" href="PILA.paymentsapp#//@intermediary/@templates.0/@businessFields.9"/>
         </cells>
       </lines>
-      <columns xmi:type="table:DFeatureColumn" xmi:id="_J6cYdZpnEea1kOQYIwWUqQ" cells="_J6cYcppnEea1kOQYIwWUqQ _J6cYdJpnEea1kOQYIwWUqQ _tkSyQJsWEeaL9tDHKu9mFw _tkTZUJsWEeaL9tDHKu9mFw _0PLV4JsWEeaL9tDHKu9mFw _0PLV4ZsWEeaL9tDHKu9mFw _8BliQJsWEeaL9tDHKu9mFw _8BmJUJsWEeaL9tDHKu9mFw _8BmJUZsWEeaL9tDHKu9mFw _5OTF0JsXEeaL9tDHKu9mFw" width="783" featureName="businessAttributes">
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_Vh-dMJsgEeaL9tDHKu9mFw" label="Clase de Riesgo" cells="_Vh-dMZsgEeaL9tDHKu9mFw _Vh_EQJsgEeaL9tDHKu9mFw _Vh_EQZsgEeaL9tDHKu9mFw _Vh_rUJsgEeaL9tDHKu9mFw _Vh_rUZsgEeaL9tDHKu9mFw _ViASYJsgEeaL9tDHKu9mFw _ViASYZsgEeaL9tDHKu9mFw _ViA5cJsgEeaL9tDHKu9mFw _ViA5cZsgEeaL9tDHKu9mFw _ViA5cpsgEeaL9tDHKu9mFw" width="90" featureName="businessAttributes">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedColumnMappings[name='Clase%20%20Riesgo']"/>
+      </columns>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_Dax5MJseEeaL9tDHKu9mFw" label="Codigo CIU" cells="_Dax5MZseEeaL9tDHKu9mFw _DaygQJseEeaL9tDHKu9mFw _DaygQZseEeaL9tDHKu9mFw _DaygQpseEeaL9tDHKu9mFw _DaygQ5seEeaL9tDHKu9mFw _DazHUJseEeaL9tDHKu9mFw _DazuYJseEeaL9tDHKu9mFw _Da0VcJseEeaL9tDHKu9mFw _Da0VcZseEeaL9tDHKu9mFw _Da08gJseEeaL9tDHKu9mFw" width="120" featureName="businessAttributes">
         <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedColumnMappings[name='Codigo%20CIU']"/>
+      </columns>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_y2m04JsgEeaL9tDHKu9mFw" label="Digitos Adicionales" cells="_y2m04ZsgEeaL9tDHKu9mFw _y2nb8JsgEeaL9tDHKu9mFw _y2nb8ZsgEeaL9tDHKu9mFw _y2oDAJsgEeaL9tDHKu9mFw _y2oDAZsgEeaL9tDHKu9mFw _y2oDApsgEeaL9tDHKu9mFw _y2oqEJsgEeaL9tDHKu9mFw _y2oqEZsgEeaL9tDHKu9mFw _y2oqEpsgEeaL9tDHKu9mFw _y2oqE5sgEeaL9tDHKu9mFw" width="116" featureName="businessAttributes">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedColumnMappings[name='Digitos%20Adicionales']"/>
+      </columns>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_9107gJsgEeaL9tDHKu9mFw" label="Actividad Economica" cells="_9107gZsgEeaL9tDHKu9mFw _911ikJsgEeaL9tDHKu9mFw _911ikZsgEeaL9tDHKu9mFw _912JoJsgEeaL9tDHKu9mFw _912JoZsgEeaL9tDHKu9mFw _912JopsgEeaL9tDHKu9mFw _912wsJsgEeaL9tDHKu9mFw _912wsZsgEeaL9tDHKu9mFw _912wspsgEeaL9tDHKu9mFw _912ws5sgEeaL9tDHKu9mFw" width="523" featureName="businessAttributes">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']/@ownedColumnMappings[name='Actividad%20Economica']"/>
       </columns>
       <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%202']"/>
     </ownedRepresentations>

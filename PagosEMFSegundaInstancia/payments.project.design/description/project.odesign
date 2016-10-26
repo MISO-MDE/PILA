@@ -33,7 +33,10 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 2" domainClass="Application">
       <ownedLineMappings name="Clase de Riesgo" domainClass="BusinessAttributeCollection" semanticCandidatesExpression="[self.intermediary.templates->select(f|f.name = 'Clases de Riesgos').businessFields/]" headerLabelExpression="aql:self.name"/>
-      <ownedColumnMappings name="Codigo CIU" featureName="businessAttributes"/>
+      <ownedColumnMappings name="Clase  Riesgo" headerLabelExpression="Clase de Riesgo" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Clase de Riesgo').businessValue.value"/>
+      <ownedColumnMappings name="Codigo CIU" headerLabelExpression="Codigo CIU" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Codigo CIU').businessValue.value"/>
+      <ownedColumnMappings name="Digitos Adicionales" headerLabelExpression="Digitos Adicionales" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Digitos Adicionales').businessValue.value"/>
+      <ownedColumnMappings name="Actividad Economica" headerLabelExpression="Actividad Economica" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Actividad Economica').businessValue.value"/>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
