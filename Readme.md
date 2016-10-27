@@ -8,3 +8,4 @@ git config credential.helper store
 git pull
 ```
 
+entrega v1
