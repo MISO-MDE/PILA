@@ -1,31 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" name="project" version="11.0.0.201601261200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="11.0.0.201601261200">
   <ownedViewpoints name="payments" modelFileExtension="paymentsapp">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Payments App" domainClass="Application">
       <defaultLayer name="Default"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 8" domainClass="Application">
-      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pension').businessAttributes/]" headerLabelExpression="aql:self.name"/>
-      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 8" domainClass="BusinessAttributeCollection">
+      <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="feature:businessAttributes" headerLabelExpression="aql:self.name"/>
+      <ownedCreateLine name="Crear Tipo de Pension" forceRefresh="true" mapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:container">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessAttribute" referenceName="businessAttributes"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="Tipo de Pensionado" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="aql:self.siblings()->select(f|f.name='Tipo Pensionado').businessAttributes"/>
       <intersection name="Pension Pensionado" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 8 Edition" domainClass="Application">
       <ownedLineMappings name="Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
       <ownedColumnMappings name="Tipo de Pensionado" featureName="relations"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 3" domainClass="Application">
-      <ownedLineMappings name="T3 Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pensionado').businessAttributes/]" headerLabelExpression="aql:self.name"/>
-      <ownedColumnMappings name="T3 Tipo de Pagador" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pagador').businessAttributes/]"/>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 3" domainClass="BusinessAttributeCollection">
+      <ownedLineMappings name="T3 Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="feature:businessAttributes" headerLabelExpression="aql:self.name"/>
+      <ownedCreateLine name="Crear Tipo Pensionado" forceRefresh="true" mapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:container">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessAttribute" referenceName="businessAttributes"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="T3 Tipo de Pagador" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="aql:self.siblings()->select(f|f.name='Tipo Pagador').businessAttributes"/>
       <intersection name="Pensionado pagador" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 3 Edition" domainClass="Application">
       <ownedLineMappings name="T3E Tipo de Pensionado" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pensionado').businessAttributes/]"/>
       <ownedColumnMappings name="T3E Tipo de Pagador" featureName="relations"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 6" domainClass="Application">
-      <ownedLineMappings name="T6 Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pension').businessAttributes/]" headerLabelExpression="aql:self.name"/>
-      <ownedColumnMappings name="T6 Tipo de Pagador" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pagador').businessAttributes/]"/>
-      <intersection name="Pension Pagador" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Tabla 6" domainClass="BusinessAttributeCollection">
+      <ownedLineMappings name="T6 Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="feature:businessAttributes" headerLabelExpression="aql:self.name"/>
+      <ownedCreateLine name="Crear Tipo Pension" mapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:container">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessAttribute" referenceName="businessAttributes"/>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="T6 Tipo de Pagador" headerLabelExpression="aql:self.name" domainClass="BusinessAttribute" semanticCandidatesExpression="aql:self.siblings()->select(f|f.name='Tipo Pagador').businessAttributes"/>
+      <intersection name="Pension Pagador" canEdit="true" lineMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']" columnMapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="[self.relations/]"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Tabla 6 Edition" domainClass="Application">
       <ownedLineMappings name="T6E Tipo de Pension" domainClass="BusinessAttribute" semanticCandidatesExpression="[self.intermediary.intermediaryAttributes->select(f|f.name = 'Tipo Pension').businessAttributes/]"/>
@@ -37,6 +61,17 @@
       <ownedColumnMappings name="Codigo CIU" headerLabelExpression="Codigo CIU" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Codigo CIU').businessValue.value"/>
       <ownedColumnMappings name="Digitos Adicionales" headerLabelExpression="Digitos Adicionales" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Digitos Adicionales').businessValue.value"/>
       <ownedColumnMappings name="Actividad Economica" headerLabelExpression="Actividad Economica" featureName="businessAttributes" labelExpression="aql:self.businessAttributes->select(b| b.name='Actividad Economica').businessValue.value"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Crear valores Tipo Pension LOV" initialisation="true" domainClass="BusinessAttributeCollection">
+      <ownedLineMappings name="t6atipopension" domainClass="BusinessAttribute" semanticCandidatesExpression="feature:businessAttributes"/>
+      <ownedCreateLine name="Crear Tipo Pension" forceRefresh="true" mapping="//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']">
+        <variables name="root" documentation="The semantic root element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:container">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessAttribute" referenceName="businessAttributes"/>
+        </firstModelOperation>
+      </ownedCreateLine>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PaymentsApp:Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="PaymentsApp">
-  <intermediary>
+  <intermediary name="Inter1">
     <templates name="Clases de Riesgos">
    <businessFields name="Fila 1">
         <businessAttributes name="Clase de Riesgo">
@@ -171,9 +171,10 @@
       <businessAttributes name="Beneficiario UPC adicional">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="9"/>
       </businessAttributes>
+      <businessAttributes name="Beneficiario Departamento del Choco"/>
     </intermediaryAttributes>
     <intermediaryAttributes name="Tipo Pension">
-      <businessAttributes name="Vejez" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.0">
+      <businessAttributes name="Vejez" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3 #//@intermediary/@intermediaryAttributes.1/@businessAttributes.16 #//@intermediary/@intermediaryAttributes.2/@businessAttributes.2">
         <businessValue xsi:type="PaymentsApp:BusinessString" value="1"/>
       </businessAttributes>
       <businessAttributes name="Sobrevivencia vitalicia riesgo comun">
@@ -182,7 +183,7 @@
       <businessAttributes name="Sobrevivencia temporal riesgo comun"/>
       <businessAttributes name="Sobrevivencia temporal riesgo común. Cónyuge o compañera menos de 30 años sin hijos" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.3 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
       <businessAttributes name="Sobrevivencia temporal riesgo laboral" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
-      <businessAttributes name="Sobrevivencia vitalicia riesgo laboral"/>
+      <businessAttributes name="Sobrevivencia vitalicia riesgo laboral "/>
       <businessAttributes name="Sobrevivencia temporal riesgo laboral. Cónyuge o compañera menos de 30 años sin hijos"/>
       <businessAttributes name="Invalidez riesgo común" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Invalidez riesgo laboral"/>
@@ -194,7 +195,8 @@
       <businessAttributes name="Gracia" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2 #//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
       <businessAttributes name="Por convenio internacional"/>
       <businessAttributes name="Sentencia judicial" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
-      <businessAttributes name="Conciliaciones"/>
+      <businessAttributes name="Conciliaciones" relations="#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+      <businessAttributes name="Prueba de Insercion"/>
     </intermediaryAttributes>
     <intermediaryAttributes name="Tipo Pagador">
       <businessAttributes name="Empleador">
@@ -210,5 +212,6 @@
         <businessValue xsi:type="PaymentsApp:BusinessString" value="04"/>
       </businessAttributes>
     </intermediaryAttributes>
+    <intermediaryAttributes name="Inter2"/>
   </intermediary>
 </PaymentsApp:Application>

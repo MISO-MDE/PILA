@@ -1,6 +1,6 @@
 {
 name:PilaProcessor,
-
+/*NOTA LOS ATRIBUTOS DE LAS ENTIDADES SE PUEDEN REFERENCIAR POR MEDIO DE REFERENCIA CRUZADA CON LAS TECLAS:Control + Espacio */
 intermediary:
 	{
 		name:Planillator, //Entidad que maneja los pagos EJ Pagos Simples
@@ -18,7 +18,17 @@ intermediary:
 				[	//Entidad Pensionado
 					{	name:Pensionado,
 						description: "Persona receptora de los servicios EPS, Pension, Riesgos",
-						attributes: [{Id: Integer}, {cedula:String}, {salario:Double}, {vivienda:String}, {grupofamiliar:String}, {NovedadesMes:Integer := 0}, {DiasNovedad:Integer}, {AltoRiesgo:String}, {Profesion:String}]
+						attributes: [{Id: Integer}, 
+									{cedula:String}, 
+									{salario:Double}, 
+									{vivienda:String}, 
+									{grupofamiliar:String}, 
+									{NovedadesMes:Integer := 0}, //Valor calculado con las novedades del mes
+									{DiasNovedad:Integer}, 
+									{AltoRiesgo:String},
+									{RiesgoLaboral:Integer}, //Viene de las tablas de validaciones TABLA 2 
+									{Profesion:String}
+						]
 					},
 					/*Templates para CRUD de informacion en este caso Novedades, Pagos etc*/
 					InformationTemplate: 
@@ -49,7 +59,7 @@ intermediary:
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									Si [ vivienda  <> "Colombia" && grupofamiliar <> "Colombia" && vivienda =1] Entonces
+									Si [salario = 1 || vivienda  <> "Colombia" && grupofamiliar <> "Colombia" && vivienda =1] Entonces
 									{
 										Retornar: 0
 									}	
@@ -93,7 +103,42 @@ intermediary:
 									Sino {
 										Retornar: 0
 									}	
-							}
+							},
+							{	name:RiesgosLaborales, /*Calculo PAGO Sistema General de Riesgos Laborales*/
+								description: "Riesgos Laborale",
+								/*Variables y Constantes Auxiliares del calculo*/
+								calculationattributes:
+								[	// Porcentajes de riesgo. 
+									{RiesgoI:Double := 0.522/100}, 
+									{RiesgoII:Double := 1.044/100},
+									{RiesgoIII:Double := 2.436/100},
+									{RiesgoIV:Double := 4.350/100},
+									{RiesgoV:Double := 6.960/100}
+								],
+					
+								/*Condicion y Formula de Pago */
+								calculationrules:
+									Si [RiesgoLaboral = 1] Entonces
+									{
+										Retornar: salario * RiesgoI
+									}	
+									Si [RiesgoLaboral = 2] Entonces
+									{
+										Retornar: salario * RiesgoII
+									}	
+									Si [RiesgoLaboral = 3] Entonces
+									{
+										Retornar: salario * RiesgoIII
+									}	
+									Si [RiesgoLaboral = 4] Entonces
+									{
+										Retornar: salario * RiesgoIV
+									}
+									Si [RiesgoLaboral = 5] Entonces
+									{
+										Retornar: salario * RiesgoV
+									}		
+							} // FIN FORMULA DE CALCULO SISTEMA GENERAL DE RIESGOS
 						], //FIN DE LOS CALCULOS
 						{	name:Pagos,
 							description: "Formulario para Registro de Pagos",
