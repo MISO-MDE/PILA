@@ -23,7 +23,7 @@ El directorio Backend es en si mismo un work space
 8) Ya en GIT como parte de este repositorio hay unos archivos de configuracion del web server: Solo se modifico el archivo para adicionar banderas de CORS (Manejo de peticiones cross dominio) Usar el archivo del respositorio GIT o asegurarse que ene el archivo web.xml esten las instrucciones de Filter (Ver mas abajo)
 9) En la raiz del proyecto click derecho maven --> update project
 10) En la raiz del proyecto click derecho --> Run As Maven Build al aparecer la ventana escribir en goals:
-clean instal
+clean install
 11) Ejecutar Run y seleccionar el servidor tomcat
 *Posibles Errores: Si al hacer esto maven coloca un error es necesario volver a repetir el paso 9 y volver a correr
 12) Una vez sube el servidor probar con este URL para asegurar que todo esta corriendo: 
