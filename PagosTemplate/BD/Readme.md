@@ -1,0 +1,1 @@
+En esta carpeta  estan los scripts de la base de datos
