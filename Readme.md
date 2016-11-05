@@ -29,3 +29,35 @@ npm  start    ó   ng  serve
 ```
 npm  start 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+PILA/
+ ├──Documents/                    * our documentation
+ |   ├──PILA project mockups.bmpr             * mockups
+ |   ├──PILA project mockups.pdf       * mockups
+ │
+ ├──PagosTemplate/                       * plantilla  para los pagos
+ │   │
+ │   ├──Backend/                   * Backend : folder
+ │   │   ├──src        * 
+ │   │
+ │   └──Frontend/                *  Frontend : folder
+ │       ├──src             * 
+ │
+ │
+ ├──Readme.md               * documentation
+ 
+
+```
