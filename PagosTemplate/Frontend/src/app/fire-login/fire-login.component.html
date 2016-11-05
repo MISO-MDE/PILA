@@ -1,14 +1,22 @@
-<div class="loginSection form-group">
-  <br>
-  <label>Login:</label>
-  <input [(ngModel)]="login" type="text" class="form-control"/>
-  <label>Pwd:</label>
-  <input [(ngModel)]="password" type="password" class="form-control"/>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-4">
+    <div class="loginSection form-group">
+      <br>
+      <label>Login:</label>
+      <input [(ngModel)]="login" type="text" class="form-control"/>
+      <label>Pwd:</label>
+      <input [(ngModel)]="password" type="password" class="form-control"/>
+    </div>
+    <button (click)="logInUser()" class="btn btn-primary">
+      <span>login</span>
+    </button>
+    <button (click)="saveUser()" class="btn btn-info">
+      <span>Llamar Rest</span>
+    </button>
+  </div>
+  <div class="col-md-7">
+  </div>
 </div>
-<button (click)="logInUser()" class="btn btn-primary">
-  <span>login</span>
-</button>
-<button (click)="saveUser()" class="btn btn-info">
-  <span>Llamar Rest</span>
-</button>
 
