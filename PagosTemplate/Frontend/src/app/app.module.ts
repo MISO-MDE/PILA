@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
@@ -27,12 +27,14 @@ const myFirebaseAuthConfig = {
 import { AppComponent } from './app.component';
 import { FireLoginComponent } from './fire-login/fire-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { IntermediaryComponent } from './intermediary/intermediary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FireLoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    IntermediaryComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,10 @@ import { HomepageComponent } from './homepage/homepage.component';
       {
         path: 'homepage',
         component: HomepageComponent
+      },
+      {
+        path: 'intermediary/homepage',
+        component: IntermediaryComponent
       }
     ]),
     HttpModule,

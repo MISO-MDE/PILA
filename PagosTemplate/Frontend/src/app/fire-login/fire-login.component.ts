@@ -5,7 +5,9 @@ import { Modal } from 'angular2-modal/plugins/bootstrap';
 import { Router } from '@angular/router';
 
 import { AngularFire, FirebaseRef } from 'angularfire2';
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
+
+import { IUser } from '../sharedresources/interfaces'
 
 
 
@@ -27,15 +29,27 @@ export class FireLoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  /* Login de usuario: valida el role que tenga el usuario SuperEntidad, o Intermediario y lo lleva a la pagina
+  adecuada 
+  */
   logInUser(): void {
     var res: any;
     console.log ("**Login User " + this.login + ' PWD ' + this.password);  
      
     this.userService.loginFirebaseAuth(this.login, this.password).then((res: any) => {
+            var link: any;
             if(res.uid) {
-              let link = ['/homepage']; // Link con los detalles
-              this.router.navigate(link); // Permite navegar a los detalles con la variable link
+              this.userService.getUserData(res.uid).subscribe((user:IUser) => {
+                console.log("Navega a homepage " + user.roleName);
+                if (user.roleName === 'SuperEntity') {
+                  link = ['/homepage']; // landingpage de la super entidad
+                }
+                else {
+                  link = ['/intermediary/homepage']; // landingpage del intermediario
+                }
+                this.router.navigate(link); // Permite navegar a los detalles con la variable link
+              });
             }
     }, (error: any) => {
             console.log ("Error Login ");  

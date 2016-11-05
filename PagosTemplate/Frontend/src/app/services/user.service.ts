@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
+import { IUser } from '../sharedresources/interfaces'
+
 @Injectable()
 export class UserService {
 
@@ -15,7 +17,7 @@ export class UserService {
     }
 
     loginFirebaseAuth(email: string, password: string) {
-        console.log ("EN lloginFirebaseAuth " + email + ' PWD ' + password);  
+        console.log ("EN loginFirebaseAuth " + email + ' PWD ' + password);  
         var creds: any = { email: email, password: password };
         
         var res: Promise<boolean> = new Promise((resolve, reject) => {
@@ -30,45 +32,32 @@ export class UserService {
         return res;
     }
 
-    saveUser() {
-      var body = ''; //'userId=998&name=GBCON&isSuperEntity=Entity';
-      var headers = new Headers();
-      
-      
-      //headers.append('Access-Control-Allow-Headers', "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
-      //headers.append('Access-Control-Allow-Methods', 'GET, PUT, POST');
-      //headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      //headers.append('Access-Control-Allow-Origin', "*");
-      
+    getUserData(userId: String): Observable<IUser> {
+        let urlGet = this.url + "?" + userId;
+        console.log("User Data Exec: " + urlGet);
+        return this.http.get(urlGet).map(this.extractData);
+    }
 
+    saveUser() {
+      var body = '{"userId":"998","roleName":"SuperEntidad"}'
+      
+      var headers = new Headers();
+      headers.append('Content-Type', 'application/json');
       
       return this.http.post(this.url, body, {
             headers: headers
-            }).map(this.extractData);
-
-           
-        /*return this.http.post(this.url, body, {
-            headers: headers
             })
-            .map(res => res.text())
-            .catch(this.handleError);*/
-
-/*
-            return this.http.post(this.url, body, {
-            headers: headers
-            })
-            .map(res => res.text() this.extractData)
+            .map(this.extractData)
             .catch(this.handleError);
-*/
+
     }
 
     private extractData(res: Response) {
         let body;
-         console.log("RETORNO SERVICIO");
         // check if empty, before call json
         if (res.text()) {
-            console.log("RETORNO SERVICIO" + res.text());
-            //body = res.json();
+            console.log("RETORNO SERVICIO" + JSON.stringify(res));
+            body = res.json();
         }
 
         return body || {};
