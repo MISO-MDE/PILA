@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-payment-form',
   templateUrl: './payment-form.component.html',
-  styleUrls: ['./payment-form.component.css']
+  styleUrls: ['./payment-form.component.less']
 })
 export class PaymentFormComponent implements OnInit {
 

@@ -12,14 +12,17 @@ export class HomepageComponent implements OnInit {
     {
       name:"Pensionados",
       icon:"glyphicon-user",
+      route:"pensioners"
     },
     {
       name:"Novedades",
-      icon:"glyphicon-fire"
+      icon:"glyphicon-fire",
+      route:"news"
     },
     {
       name:"Pagos",
-      icon:"glyphicon-usd"
+      icon:"glyphicon-usd",
+      route:"payments"
     }
   ];
   constructor(private asideService: PAsideService) {

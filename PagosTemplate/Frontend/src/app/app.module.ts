@@ -78,7 +78,20 @@ import { PensionerFormComponent } from './pensioner-form/pensioner-form.componen
       {
         path: 'intermediary/homepage',
         component: IntermediaryComponent
+      },
+      {
+        path: 'payments',
+        component: PaymentsComponent
+      },
+      {
+        path: 'news',
+        component: NewsComponent
+      },
+      {
+        path: 'pensioners',
+        component: PensionersComponent
       }
+
     ]),
     HttpModule,
     ModalModule.forRoot(),
