@@ -8,12 +8,15 @@ import {
   ComponentFactoryResolver
 } from '@angular/core';
 import {IntermediaryFormComponent} from "../intermediary-form/intermediary-form.component";
+import {PaymentFormComponent} from "../payment-form/payment-form.component";
+import {PensionerFormComponent} from "../pensioner-form/pensioner-form.component";
+import {NewFormComponent} from "../new-form/new-form.component";
 
 @Component({
   selector: 'app-p-dynamic',
   templateUrl: './p-dynamic.component.html',
   styleUrls: ['./p-dynamic.component.css'],
-  entryComponents:[ IntermediaryFormComponent ]
+  entryComponents:[ IntermediaryFormComponent,PaymentFormComponent, PensionerFormComponent, NewFormComponent ]
 })
 export class PDynamicComponent implements OnInit {
   currentComponent = null;
