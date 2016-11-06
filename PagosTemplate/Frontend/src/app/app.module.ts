@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
-import { UserService } from './services/user.service';
-import { IntermediaryService } from './services/intermediary.service';
+import { UserApiService } from './services/user.api.service';
+import { IntermediaryApiService } from './services/intermediary.api.service';
 
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
@@ -76,9 +76,9 @@ import { IntermediaryFormComponent } from './intermediary-form/intermediary-form
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [
-    UserService,
+    UserApiService,
     PAsideService,
-    IntermediaryService
+    IntermediaryApiService
   ],
   bootstrap: [AppComponent]
 })

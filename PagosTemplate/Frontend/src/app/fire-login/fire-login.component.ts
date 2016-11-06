@@ -3,7 +3,7 @@ import {Component, OnInit, ViewContainerRef, ViewEncapsulation} from '@angular/c
 import {Overlay} from 'angular2-modal';
 import {Modal} from 'angular2-modal/plugins/bootstrap';
 import {Router} from '@angular/router';
-import {UserService} from '../services/user.service';
+import {UserApiService} from '../services/user.api.service';
 import {IUser} from '../sharedresources/interfaces'
 import {PAsideService} from "../p-aside/p-aside.service";
 
@@ -17,7 +17,7 @@ export class FireLoginComponent implements OnInit {
   public login: string;
   public password: string;
 
-  constructor(private userService: UserService,
+  constructor(private userApiService: UserApiService,
               overlay: Overlay,
               vcRef: ViewContainerRef,
               public modal: Modal,
@@ -37,10 +37,10 @@ export class FireLoginComponent implements OnInit {
     var res: any;
     console.log("**Login User " + this.login + ' PWD ' + this.password);
 
-    this.userService.loginFirebaseAuth(this.login, this.password).then((res: any) => {
+    this.userApiService.loginFirebaseAuth(this.login, this.password).then((res: any) => {
       var link: any;
       if (res.uid) {
-        this.userService.getUserData(res.uid).subscribe((user: IUser) => {
+        this.userApiService.getUserData(res.uid).subscribe((user: IUser) => {
           console.log("Navega a homepage " + user.roleName);
           if (user.roleName === 'SuperEntity') {
             link = ['/homepage']; // landingpage de la super entidad

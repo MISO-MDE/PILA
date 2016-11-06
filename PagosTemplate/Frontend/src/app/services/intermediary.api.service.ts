@@ -8,12 +8,12 @@ import { Observable } from 'rxjs/Rx';
 import { ISuperEntity } from '../sharedresources/interfaces'
 
 @Injectable()
-export class IntermediaryService {
+export class IntermediaryApiService {
     private url: string = 'http://localhost:8080/PilaPayments/intermediary/superentities';
 
     constructor(private http: Http) {
     }
-    
+
     saveSuperEntity(superEntity: ISuperEntity) {
       return this.http.post(this.url, superEntity)
             .map(this.extractData)
@@ -35,5 +35,5 @@ export class IntermediaryService {
     handleError(error: any): any {
         console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
-    }    
+    }
 }
