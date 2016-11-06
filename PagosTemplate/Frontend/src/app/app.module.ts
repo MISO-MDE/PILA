@@ -28,13 +28,18 @@ import { AppComponent } from './app.component';
 import { FireLoginComponent } from './fire-login/fire-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { IntermediaryComponent } from './intermediary/intermediary.component';
+import { PAsideComponent } from './p-aside/p-aside.component';
+import { PHeaderComponent } from './p-header/p-header.component';
+import {PAsideService} from "./p-aside/p-aside.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     FireLoginComponent,
     HomepageComponent,
-    IntermediaryComponent
+    IntermediaryComponent,
+    PAsideComponent,
+    PHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,10 @@ import { IntermediaryComponent } from './intermediary/intermediary.component';
     BootstrapModalModule,
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    PAsideService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

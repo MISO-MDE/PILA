@@ -1,0 +1,19 @@
+.app-p-aside {
+  height: ~"calc(100vh - 50px)";
+  background-color: #dadada;
+  width: 0px;
+  .aside-header {
+    background-color: #e7e7e7;
+    height: 20px;
+    i {
+      color: #666666;
+    }
+  }
+  &.in {
+    width: 400px;
+  }
+  &:not(.in) .modal-dialog {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+  }
+}

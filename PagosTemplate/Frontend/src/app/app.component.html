@@ -1,11 +1,8 @@
-<nav>
-  <a routerLink="/login"></a>
-</nav>
-<div class="row">
-  <div class="col-md-12">
-    <h1>
-      {{title}}
-    </h1>
+<app-p-header></app-p-header>
+<div class="flex-container">
+  <app-p-aside></app-p-aside>
+  <div class="main-content">
+    <router-outlet></router-outlet>
   </div>
+
 </div>
-<router-outlet></router-outlet>
