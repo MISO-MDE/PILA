@@ -6755,3 +6755,18 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+
+/**
+  Custom css
+**/
+.form-group label {
+  margin-bottom: 2px;
+  font-weight: 200;
+  color: #3a3939;
+  margin-top: 8px;
+}
+.form-group .form-control{
+  border-radius: 2px;
+}

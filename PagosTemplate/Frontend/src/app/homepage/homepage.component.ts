@@ -13,7 +13,7 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.asideService.setCollapsed(false);
+    this.asideService.showAside(HomepageComponent);
   }
 
 }

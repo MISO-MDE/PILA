@@ -32,6 +32,8 @@ import { IntermediaryComponent } from './intermediary/intermediary.component';
 import { PAsideComponent } from './p-aside/p-aside.component';
 import { PHeaderComponent } from './p-header/p-header.component';
 import {PAsideService} from "./p-aside/p-aside.service";
+import { PDynamicComponent } from './p-dynamic/p-dynamic.component';
+import { IntermediaryFormComponent } from './intermediary-form/intermediary-form.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {PAsideService} from "./p-aside/p-aside.service";
     HomepageComponent,
     IntermediaryComponent,
     PAsideComponent,
-    PHeaderComponent
+    PHeaderComponent,
+    PDynamicComponent,
+    IntermediaryFormComponent
   ],
   imports: [
     BrowserModule,

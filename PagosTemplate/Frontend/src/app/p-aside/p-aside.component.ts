@@ -9,7 +9,7 @@ import {PAsideService} from "./p-aside.service";
 })
 export class PAsideComponent implements OnInit {
 
-  constructor(private asideService :PAsideService) {
+  constructor(public asideService: PAsideService) {
   }
 
   ngOnInit() {
