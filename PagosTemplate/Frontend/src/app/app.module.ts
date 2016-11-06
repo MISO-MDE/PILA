@@ -12,6 +12,7 @@ import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 
 import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 
+import {Ng2TableModule} from 'ng2-table/ng2-table';
 export const firebaseConfig = {
     apiKey: "AIzaSyBum3m_3TdfiQnWHchNdd2mrWK4ql2A7lc",
     authDomain: "angularcli-firebase.firebaseapp.com",
@@ -49,6 +50,7 @@ import { IntermediaryFormComponent } from './intermediary-form/intermediary-form
   imports: [
     BrowserModule,
     FormsModule,
+    Ng2TableModule,
     RouterModule.forRoot([
       {
         path: '',
