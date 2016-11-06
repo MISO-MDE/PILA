@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
 import { UserService } from './services/user.service';
+import { IntermediaryService } from './services/intermediary.service';
 
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
@@ -70,7 +71,8 @@ import {PAsideService} from "./p-aside/p-aside.service";
   ],
   providers: [
     UserService,
-    PAsideService
+    PAsideService,
+    IntermediaryService
   ],
   bootstrap: [AppComponent]
 })

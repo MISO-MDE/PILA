@@ -23,8 +23,7 @@ public class SuperEntityManager {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getSuperEntity(@QueryParam("superEntityId") String id,
-			 @DefaultValue("1") @QueryParam("version") int version) {
+	public String getSuperEntity(@QueryParam("id") String id) {
 
 		logger.debug("Start getSuperEntity");
 		logger.debug("data: '" + id + "'");
@@ -34,7 +33,7 @@ public class SuperEntityManager {
 		response = "{" + "\"" + "id\":" + "1," + "\"" + "name\":" + "Colpatria," + "\"" + "nit\":" + "\"123456\"," + "\"ciiuCode\":" + "\"8080\"," + "\"econActivity\":" + "\"8080\" }";
         
 		logger.debug("result: '"+response+"'");
-        logger.debug("End getSomething");
+        logger.debug("End getSuperEntity");
 
         return response;	
 	}
@@ -51,10 +50,10 @@ public class SuperEntityManager {
 		
 		
 
-		String response = "Ok";
+		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la superentidad
 
 		logger.debug("result: '"+response+"'");
-        logger.debug("End postSomething");
+        logger.debug("End postSuperEntity");
 
         return Response.status(200).entity(response).build();
 	}
@@ -62,14 +61,14 @@ public class SuperEntityManager {
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
 	public String putSuperEntity(Object theSuperEntity) {
-		logger.debug("Start postSuperEntity");
+		logger.debug("Start putSuperEntity");
 		
 		
 
 		String response = null;
 
 		logger.debug("result: '"+response+"'");
-        logger.debug("End postSomething");
+        logger.debug("End putSuperEntity");
 
         return response;	
 	}
@@ -77,6 +76,6 @@ public class SuperEntityManager {
 	@DELETE
 	public void deleteSuperEntity(Object theSuperEntity) {
 		
-		logger.debug("Start postSuperEntity");
+		logger.debug("Start deleteSuperEntity");
 	}
 }

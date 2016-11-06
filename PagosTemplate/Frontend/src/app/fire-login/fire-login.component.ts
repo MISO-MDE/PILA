@@ -55,14 +55,4 @@ export class FireLoginComponent implements OnInit {
       console.log("Error Login ");
     });
   }
-
-  saveUser(): void {
-    this.userService.saveUser().subscribe((status: boolean) => {
-      if (status) {
-        console.log("REST OK");
-      } else {
-        console.log("Problema");
-      }
-    });
-  }
 }

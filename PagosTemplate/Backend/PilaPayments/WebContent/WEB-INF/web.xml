@@ -27,6 +27,15 @@
     </init-param>
   	<load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+  	<servlet-name>EventAdaptor</servlet-name>
+  	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+  	<init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>co.edu.uniandes.rest.forms</param-value>
+    </init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
   <servlet-mapping>
     <servlet-name>RestTest</servlet-name>
     <url-pattern>/test/*</url-pattern>
@@ -37,6 +46,18 @@
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>ServletAdaptor</servlet-name>
+  	<url-pattern>/intermediary/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletAdaptor</servlet-name>
   	<url-pattern>/superentity/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EventAdaptor</servlet-name>
+  	<url-pattern>/superentity/event/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EventAdaptor</servlet-name>
+  	<url-pattern>/superentity/form/*</url-pattern>
   </servlet-mapping>
 </web-app>

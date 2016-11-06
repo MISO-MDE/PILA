@@ -38,18 +38,16 @@ export class UserService {
         return this.http.get(urlGet).map(this.extractData);
     }
 
-    saveUser() {
-      var body = '{"userId":"998","roleName":"SuperEntidad"}'
-      
-      var headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      
-      return this.http.post(this.url, body, {
-            headers: headers
-            })
-            .map(this.extractData)
-            .catch(this.handleError);
+    saveUser(user: IUser) {
+        return this.http.post(this.url, user)
+                        .map(this.extractData)
+                        .catch(this.handleError);
+            
+    }
 
+    saveUserFirebase(email: string, password: string) {
+        var creds: any = { email: email, password: password };
+        return this.angularFire.auth.createUser(creds);
     }
 
     private extractData(res: Response) {
@@ -58,6 +56,8 @@ export class UserService {
         if (res.text()) {
             console.log("RETORNO SERVICIO" + JSON.stringify(res));
             body = res.json();
+            console.log("JSON" + JSON.stringify(body));
+            console.log("JSON1" + body.roleName);
         }
 
         return body || {};
