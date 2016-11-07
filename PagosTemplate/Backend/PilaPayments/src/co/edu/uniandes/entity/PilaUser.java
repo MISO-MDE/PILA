@@ -1,17 +1,22 @@
-package co.edu.uniandes.logic.entity;
+package co.edu.uniandes.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 /**
  * Entidad que representa un ususario que utiliza la aplicacion
  * @author Jorge Perea
  */
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorValue("RolType")
 public class PilaUser implements Serializable{
 	
 	/**
@@ -22,9 +27,9 @@ public class PilaUser implements Serializable{
 	private Long id;
 	
 	/**
-	 * Nombre del usuario
+	 * email del usuario 
 	 */
-	private String nombre;
+	private String email;
 	
 	/**
 	 * Username del usuario
@@ -35,12 +40,7 @@ public class PilaUser implements Serializable{
 	 * Password del usuario
 	 */
 	private String password;
-	
-	/**
-	 * Rol que tiene el usuario y le permite realizar ciertas acciones
-	 */
-	private RolUser rolUser;
-	
+
 	/**
 	 * Constructor
 	 */
@@ -49,17 +49,31 @@ public class PilaUser implements Serializable{
 	}
 
 	/**
-	 * @return the nombre
+	 * @return the id
 	 */
-	public String getNombre() {
-		return nombre;
+	public Long getId() {
+		return id;
 	}
 
 	/**
-	 * @param nombre the nombre to set
+	 * @param id the id to set
 	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	/**
@@ -90,17 +104,4 @@ public class PilaUser implements Serializable{
 		this.password = password;
 	}
 
-	/**
-	 * @return the rolUser
-	 */
-	public RolUser getRolUser() {
-		return rolUser;
-	}
-
-	/**
-	 * @param rolUser the rolUser to set
-	 */
-	public void setRolUser(RolUser rolUser) {
-		this.rolUser = rolUser;
-	}	
 }

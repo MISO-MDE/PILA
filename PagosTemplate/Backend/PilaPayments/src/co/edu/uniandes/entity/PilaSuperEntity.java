@@ -1,12 +1,22 @@
-package co.edu.uniandes.logic.entity;
+package co.edu.uniandes.entity;
 
 import java.util.List;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 /**
  * Super entidad que desea realizar pagos a empleados
  * @author jorge perea
  */
 public class PilaSuperEntity {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long Id;
 	
 	/**
 	 * Nit de la super entidad
@@ -80,6 +90,7 @@ public class PilaSuperEntity {
 	/**
 	 * @return the entities
 	 */
+	@OneToMany(mappedBy="pilaSuperEntity")
 	public List<PilaEntity> getEntities() {
 		return entities;
 	}
