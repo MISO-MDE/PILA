@@ -9,7 +9,7 @@ import { ISuperEntity } from '../sharedresources/interfaces'
 
 @Injectable()
 export class PensionerApiService {
-    private url: string = 'PilaPayments/pensioner';
+    private url: string = 'PilaPayments/api/pensioner';
 
     constructor(private http: Http) {
     }

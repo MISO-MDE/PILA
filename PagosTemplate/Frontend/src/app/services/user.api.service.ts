@@ -11,7 +11,7 @@ import { IUser } from '../sharedresources/interfaces'
 @Injectable()
 export class UserApiService {
 
-    private url: string = 'PilaPayments/user/users';
+    private url: string = 'PilaPayments/api/users';
 
   constructor(private http: Http, public angularFire: AngularFire) {
     }

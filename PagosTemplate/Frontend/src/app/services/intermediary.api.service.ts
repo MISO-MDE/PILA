@@ -9,7 +9,7 @@ import { ISuperEntity } from '../sharedresources/interfaces'
 
 @Injectable()
 export class IntermediaryApiService {
-    private url: string = 'PilaPayments/intermediary/superentities';
+    private url: string = 'PilaPayments/api/superentities';
 
     constructor(private http: Http) {
     }
