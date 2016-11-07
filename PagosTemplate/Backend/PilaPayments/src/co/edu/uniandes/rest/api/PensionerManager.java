@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.payments;
+package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -16,17 +16,15 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import co.edu.uniandes.rest.forms.EventManager;
-
-@Path("/payments")
-public class PaymentsManager {
+@Path("/pensioner")
+public class PensionerManager {
 
 private static final Logger logger = LogManager.getLogger(EventManager.class);
 	
 	//Consulta pagos de la base de datos
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getPayments(@QueryParam("id") String id) {
+	public String getPensioners(@QueryParam("id") String id) {
 		
 		logger.debug("Start getPayment");
 		logger.debug("data: '" + id + "'");
@@ -63,13 +61,12 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
         logger.debug("End getPayments");
 
         return response;	
-	}
+	}	
 	
-	//Envia pago para guardar en la base de datos
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postPayment(Object thePayment) {
+	public Response createPensioner(Object thePayment) {
 
 		logger.debug("Start postEvent");
 		

@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.forms;
+package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Path("/events")
+@Path("/event")
 public class EventManager {
 
 	private static final Logger logger = LogManager.getLogger(EventManager.class);
@@ -24,27 +24,12 @@ public class EventManager {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getEvent(@QueryParam("id") String id) {
-
 		logger.debug("Start getEvent");
-		logger.debug("data: '" + id + "'");
-		
+		logger.debug("data: '" + id + "'");		
 		String response = null;
-
-		response = "{" +
-					"\"" + "results\":[" + 
-					"{" +   
-					"\"" + "id\":" + "1," +
-					"\"" + "type\":" + "\"SLN\"," +
-					"\"" + "fromDate\":" + "\"10/10/16\"," +
-					"\"" + "toDate\":" + "\"22/10/16\"," +
-					"\"" + "workingDays\":" + "10," +
-					"\"" + "status\":" + "\"Procesado\"," +
-					"\"" + "salary\":" + "27000000" +
-					"}]}";
-        
+		response = "{results:[{id:155,type:'SLN',fromDate:'10/10/16',toDate:'22/10/16',workingDays:10,status:'Procesado',salary:27000000}]}";        
 		logger.debug("result: '"+response+"'");
         logger.debug("End getEvent");
-
         return response;	
 	}
 

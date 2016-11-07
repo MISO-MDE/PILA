@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.payments;
+package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -16,10 +16,8 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import co.edu.uniandes.rest.forms.EventManager;
-
 @Path("/calculation")
-public class PaymentsCalculatorManager {
+public class PaymentCalculatorManager {
 
 private static final Logger logger = LogManager.getLogger(EventManager.class);
 //Devuelve el calculo de los pagos
