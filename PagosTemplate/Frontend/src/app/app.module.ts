@@ -40,6 +40,7 @@ import { NewsComponent } from './news/news.component';
 import { NewFormComponent } from './new-form/new-form.component';
 import { PensionersComponent } from './pensioners/pensioners.component';
 import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
+import {PensionerApiService} from "./services/pensioner.api.service";
 
 @NgModule({
   declarations: [
@@ -101,7 +102,8 @@ import { PensionerFormComponent } from './pensioner-form/pensioner-form.componen
   providers: [
     UserApiService,
     PAsideService,
-    IntermediaryApiService
+    IntermediaryApiService,
+    PensionerApiService
   ],
   bootstrap: [AppComponent]
 })
