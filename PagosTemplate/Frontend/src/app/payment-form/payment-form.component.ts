@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment-form.component.less']
 })
 export class PaymentFormComponent implements OnInit {
+  public legalIdCard: string;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  getEntity() {
+    console.log("Evento llamando datos de la entidad:" + this.legalIdCard);
+  }
 }
