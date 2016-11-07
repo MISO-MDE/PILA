@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-p-header',
   templateUrl: './p-header.component.html',
-  styleUrls: ['./p-header.component.css']
+  styleUrls: ['./p-header.component.less']
 })
 export class PHeaderComponent implements OnInit {
 
