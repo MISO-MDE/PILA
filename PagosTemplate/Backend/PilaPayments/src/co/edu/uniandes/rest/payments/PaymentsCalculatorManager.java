@@ -25,7 +25,9 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 //Devuelve el calculo de los pagos
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getCalculationPayment(@QueryParam("id") String id) {
+	public Response getCalculationPayment(@QueryParam("id") String id) {
+		
+		Response restResponse;
 		
 		logger.debug("Start getPayment");
 		logger.debug("data: '" + id + "'");
@@ -43,8 +45,10 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 					"}";
 					;
       
-	logger.debug("result: '"+response+"'");
-    logger.debug("End getPayments");
+		logger.debug("result: '"+response+"'");
+		logger.debug("End getPayments");
+		
+		restResponse = Response.status(200).entity(response).build(); //puede realizar el pago retorno 200
       
       //Sino devuelve
       /*
@@ -62,8 +66,9 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 					"}" +
 					"]}";
 					;
+		restResponse = Response.status(422).entity(response).build(); //No paso validaciones retorno 422 (Entidad Inprocesable)
        */
       
-      return response;	
+    	return restResponse; 
 	}
 }
