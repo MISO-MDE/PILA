@@ -24,7 +24,7 @@ esto instalará las dependencias de front,   tardará un poco.
 
 Despues de esto  se puede finalmente ejecutar el servidor de desarrollo de front  end
 
-npm  start    ó   ng  serve
+npm  start   
 
 ```
 npm  start 
