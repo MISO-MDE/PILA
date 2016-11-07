@@ -12,8 +12,9 @@ export class PensionersComponent implements OnInit {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
-    {title: 'Nombre empresa', className: 'text-warning', name: 'name'},
-    {title: 'NIT', name: 'nit'}
+    {title: 'Nombre', className: 'text-warning', name: 'firstName'},
+    {title: 'Apellido', className: 'text-warning', name: 'lastName'},
+    {title: 'Identificación', name: 'cedula'}
   ];
 
   constructor(private asideService: PAsideService,
@@ -25,6 +26,17 @@ export class PensionersComponent implements OnInit {
     this.getPensioners();
   }
 
+  public editRow(row: any) {
+    console.log(row);
+  }
+
+  public deleteRow(row: any) {
+    console.log(row);
+  }
+
+  public getRowData(row, data) {
+    return row [data];
+  }
 
   public getPensioners() {
     this.pensionerApiService.getPensioners('*')

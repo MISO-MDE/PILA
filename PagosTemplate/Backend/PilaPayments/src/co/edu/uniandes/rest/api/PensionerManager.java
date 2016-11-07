@@ -24,42 +24,37 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 	//Consulta pagos de la base de datos
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getPensioners(@QueryParam("id") String id) {
-		
-		logger.debug("Start getPayment");
-		logger.debug("data: '" + id + "'");
-		
+	public String getPensioners(@QueryParam("id") String id) {		
+		logger.debug("Start getPensioners");
+		logger.debug("data: '" + id + "'");		
 		String response = null;
-
-		response = 	"{" +
-					"\"" + "results\":[" + 
-					"{" +  
-					"\"" + "id\":" + "1234," +
-					"\"" + "supetrEntityId\":" + "1," +
-					"\"" + "entityId\":" + "1," +
-					"\"" + "paymentDate\":" + "\"10/10/16\"," +
-					"\"" + "subTotal1\":" + "2000000," +
-					"\"" + "subTotal2\":" + "20000000," +
-					"\"" + "subTotal3\":" + "5000000," +
-					"\"" + "status\":" + "\"Pagado\"," +
-					"\"" + "amount\":" + "27000000" +
-					"}," +
-					"{" +  
-					"\"" + "id\":" + "7392," +
-					"\"" + "supetrEntityId\":" + "1," +
-					"\"" + "entityId\":" + "2," +
-					"\"" + "paymentDate\":" + "\"10/10/16\"," +
-					"\"" + "subTotal1\":" + "150000," +
-					"\"" + "subTotal2\":" + "150000," +
-					"\"" + "subTotal3\":" + "450000," +
-					"\"" + "status\":" + "\"Pagado\"," +
-					"\"" + "amount\":" + "345000" +
-					"}]}";
-					;
-        
+		response = "{"
+				   +"\"results\": [{"
+				   +"\"id\": 1,"
+				   +"\"cedula\": 79120111,"
+				   +"\"firstName\": \"Carlos\","
+				   +"\"lastName\": \"Valderrama\","
+				   +"\"pensionType\": \"Vejez\","
+				   +"\"pensionerType\": \"Prima Media\","
+				   +"\"residence\": \"Colombia\","
+				   +"\"familyResidence\": \"Colombia\","
+				   +"\"proffesion\": \"Congreista\","
+				   +"\"salary\": 90000000"
+				  +"},{"
+				   +"\"id\": 1,"
+				   +"\"cedula\": 79120111,"
+				   +"\"firstName\": \"Pedro\","
+				   +"\"lastName\": \"Perez\","
+				   +"\"pensionType\": \"Vejez\","
+				   +"\"pensionerType\": \"Prima Media\","
+				   +"\"residence\": \"Colombia\","
+				   +"\"familyResidence\": \"Colombia\","
+				   +"\"proffesion\": \"Congreista\","
+				   +"\"salary\": 27000000"
+				   +"}]"
+				   +"}";        
 		logger.debug("result: '"+response+"'");
-        logger.debug("End getPayments");
-
+        logger.debug("End getPensioners");
         return response;	
 	}	
 	
