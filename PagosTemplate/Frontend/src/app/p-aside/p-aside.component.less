@@ -1,7 +1,9 @@
 .app-p-aside {
   height: ~"calc(100vh - 50px)";
   background-color: #dadada;
-  width: 0px;
+  margin-left: -400px;
+  width: 400px;
+  transition: margin-left 0.5s;
   .aside-header {
     background-color: #e7e7e7;
     height: 20px;
@@ -15,10 +17,10 @@
     display: block;
   }
   &.in {
-    width: 400px;
+    margin-left: 0px;
   }
   &:not(.in) .modal-dialog {
-    -webkit-transform: translate3d(-25%, 0, 0);
-    transform: translate3d(-25%, 0, 0);
+    -webkit-transform: translate3d(-60%, 0, 0);
+    transform: translate3d(-60%, 0, 0);
   }
 }
