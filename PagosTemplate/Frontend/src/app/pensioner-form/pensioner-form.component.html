@@ -1,0 +1,46 @@
+<div class="pensioner-form">
+  <div class="form-group">
+    <h4>Pensionado</h4>
+    <label>Cédula</label>
+    <input [(ngModel)]="identification" type="text" class="form-control"/>
+    <label>Nombres</label>
+    <input [(ngModel)]="name" type="text" class="form-control"/>
+    <label>Apellidos</label>
+    <input [(ngModel)]="lastName" type="text" class="form-control"/>
+    <label>Tipo de pension</label>
+    <select class="form-control"
+            [(ngModel)]="pensionType">
+      <option *ngFor="let option of  pensionTypeOptions" [value]="option.id">{{option.name}}</option>
+    </select>
+    <label>Tipo de pensionado</label>
+    <select class="form-control"
+            [(ngModel)]="pensionerType">
+      <option *ngFor="let option of  pensionerTypeOptions" [value]="option.id">{{option.name}}</option>
+    </select>
+    <label>Pais de residencia</label>
+    <select class="form-control"
+            [(ngModel)]="residenceCountry">
+      <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
+    </select>
+  </div>
+  <!--Informacion del Administrador del la superentidad-->
+  <div class="form-group">
+    <h4></h4>
+    <label>Residencia grupo familiar</label>
+    <select class="form-control"
+            [(ngModel)]="familyResidenceCountry">
+      <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
+    </select>
+    <label>Profesión</label>
+    <input [(ngModel)]="profession" class="form-control"/>
+    <label>Salario</label>
+    <input [(ngModel)]="salary" type="number" class="form-control text-right"/>
+    <br>
+  </div>
+
+  <div class="text-right">
+    <button (click)="savePensioner()" class="btn btn-primary">
+      <span>Crear</span>
+    </button>
+  </div>
+</div>

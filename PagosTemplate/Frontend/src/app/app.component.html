@@ -1,7 +1,10 @@
-<h1>
-  {{title}}
-</h1>
-<nav>
-  <a routerLink="/login"></a>
-</nav>
-<router-outlet></router-outlet>
+<div class="payments-project">
+  <app-p-header></app-p-header>
+  <div class="flex-container">
+    <app-p-aside></app-p-aside>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

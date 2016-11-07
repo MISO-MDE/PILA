@@ -1,4 +1,4 @@
-package co.edu.uniandes.logic.user;
+package co.edu.uniandes.logic.entities;
 
 public class User {
 	

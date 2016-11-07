@@ -5,15 +5,14 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import co.edu.uniandes.logic.user.User;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import co.edu.uniandes.logic.entities.User;
 
 @Path("/users")
 public class UserManager {
@@ -34,7 +33,15 @@ public class UserManager {
 		//Aqui debemos llamar la capa capa de negocio que esta a su vez llama a la capa de persistencia
 		
 		
-        response = "{" + "\"" + "idDb\":" + "1," + "\"" + "userId\":" + "2121212," + "\"" + "roleName\":" + "\"SuperEntity\"}"; 
+		//response = "{" + "\"" + "idDb\":" + "1," + "\"" + "superEntityId\":" + "123443," + "\"" + "userId\":" + "w5iXPZexNQa0Ry91HLPwzHiLO8S2," + "\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + "password\":" + "123456," + "\"" + "roleName\":" + "\"Intermediary\"}";
+        
+        response = "{" + 
+        			"\"" + "idDb\":" + "1," + 
+        			"\"" + "superEntityId\":" + "123443," + 
+        			"\"" + "userId\":" + "\"w5iXPZexNQa0Ry91HLPwzHiLO8S2\"," + 
+        			"\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + 
+        			"password\":" + "123456," + 
+        			"\"" + "roleName\":" + "\"Intermediary\"}";
         
        logger.debug("resultado: '"+response+"'");
        logger.debug("End Get");
@@ -45,12 +52,10 @@ public class UserManager {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)	
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response createUser(User loggedUser) {
+	public Response createUser(Object loggedUser) {
 	
 		logger.debug("Ingreso Parametros de usuario");
 		logger.debug("loggedUser: '" + loggedUser.toString() + "'");
-		logger.debug("userId: '" + loggedUser.getUserId() + "'");
-		logger.debug("roleName: '" + loggedUser.getRoleName() + "'");
 		
 		String response = null;
 		

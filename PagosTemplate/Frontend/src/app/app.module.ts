@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
-import { UserService } from './services/user.service';
+import { UserApiService } from './services/user.api.service';
+import { IntermediaryApiService } from './services/intermediary.api.service';
 
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
@@ -28,13 +29,34 @@ import { AppComponent } from './app.component';
 import { FireLoginComponent } from './fire-login/fire-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { IntermediaryComponent } from './intermediary/intermediary.component';
+import { PAsideComponent } from './p-aside/p-aside.component';
+import { PHeaderComponent } from './p-header/p-header.component';
+import {PAsideService} from "./p-aside/p-aside.service";
+import { PDynamicComponent } from './p-dynamic/p-dynamic.component';
+import { IntermediaryFormComponent } from './intermediary-form/intermediary-form.component';
+import { PaymentFormComponent } from './payment-form/payment-form.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { NewsComponent } from './news/news.component';
+import { NewFormComponent } from './new-form/new-form.component';
+import { PensionersComponent } from './pensioners/pensioners.component';
+import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FireLoginComponent,
     HomepageComponent,
-    IntermediaryComponent
+    IntermediaryComponent,
+    PAsideComponent,
+    PHeaderComponent,
+    PDynamicComponent,
+    IntermediaryFormComponent,
+    PaymentFormComponent,
+    PaymentsComponent,
+    NewsComponent,
+    NewFormComponent,
+    PensionersComponent,
+    PensionerFormComponent
   ],
   imports: [
     BrowserModule,
@@ -56,14 +78,31 @@ import { IntermediaryComponent } from './intermediary/intermediary.component';
       {
         path: 'intermediary/homepage',
         component: IntermediaryComponent
+      },
+      {
+        path: 'payments',
+        component: PaymentsComponent
+      },
+      {
+        path: 'news',
+        component: NewsComponent
+      },
+      {
+        path: 'pensioners',
+        component: PensionersComponent
       }
+
     ]),
     HttpModule,
     ModalModule.forRoot(),
     BootstrapModalModule,
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
-  providers: [UserService],
+  providers: [
+    UserApiService,
+    PAsideService,
+    IntermediaryApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
