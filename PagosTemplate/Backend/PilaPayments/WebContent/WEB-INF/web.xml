@@ -36,6 +36,15 @@
     </init-param>
   	<load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+  	<servlet-name>PaymentAdaptor</servlet-name>
+  	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+  	<init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>co.edu.uniandes.rest.payments</param-value>
+    </init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
   <servlet-mapping>
     <servlet-name>RestTest</servlet-name>
     <url-pattern>/test/*</url-pattern>
@@ -59,5 +68,9 @@
   <servlet-mapping>
   	<servlet-name>EventAdaptor</servlet-name>
   	<url-pattern>/superentity/form/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PaymentAdaptor</servlet-name>
+  	<url-pattern>/superentity/payment/*</url-pattern>
   </servlet-mapping>
 </web-app>

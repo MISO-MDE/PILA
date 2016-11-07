@@ -30,14 +30,17 @@ public class EventManager {
 		
 		String response = null;
 
-		response = "{" + "\"" + "id\":" + "1," +
+		response = "{" +
+					"\"" + "results\":[" + 
+					"{" +   
+					"\"" + "id\":" + "1," +
 					"\"" + "type\":" + "\"SLN\"," +
 					"\"" + "fromDate\":" + "\"10/10/16\"," +
 					"\"" + "toDate\":" + "\"22/10/16\"," +
 					"\"" + "workingDays\":" + "10," +
 					"\"" + "status\":" + "\"Procesado\"," +
 					"\"" + "salary\":" + "27000000" +
-					"}";
+					"}]}";
         
 		logger.debug("result: '"+response+"'");
         logger.debug("End getEvent");
