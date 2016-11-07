@@ -30,8 +30,23 @@ public class SuperEntityManager {
 		
 		String response = null;
 
-		response = "{" + "\"" + "id\":" + "1," + "\"" + "name\":" + "Colpatria," + "\"" + "nit\":" + "\"123456\"," + "\"ciiuCode\":" + "\"8080\"," + "\"econActivity\":" + "\"8080\" }";
-        
+		response = 	"{" +
+					"\"" + "results\":[" + 
+					"{" + 
+					"\"" + "id\":" + "1234567," + 
+					"\"" + "name\":" + "\"Oracle\"," + 
+					"\"" + "nit\":" + "\"800741345\"," + 
+					"\"ciiuCode\":" + "\"8080\"," + 
+					"\"econActivity\":" + "\"Software\"" + 
+					"}," + 
+					"{" + 
+					"\"" + "id\":" + "90890998," + 
+					"\"" + "name\":" + "\"Universidad de los Andes\"," + 
+					"\"" + "nit\":" + "\"800741345\"," + 
+					"\"ciiuCode\":" + "\"8080\"," + 
+					"\"econActivity\":" + "\"Educacion\"" + 
+					"}]}";
+		
 		logger.debug("result: '"+response+"'");
         logger.debug("End getSuperEntity");
 

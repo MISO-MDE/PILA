@@ -35,7 +35,13 @@ public class UserManager {
 		
 		//response = "{" + "\"" + "idDb\":" + "1," + "\"" + "superEntityId\":" + "123443," + "\"" + "userId\":" + "w5iXPZexNQa0Ry91HLPwzHiLO8S2," + "\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + "password\":" + "123456," + "\"" + "roleName\":" + "\"Intermediary\"}";
         
-        response = "{" + "\"" + "idDb\":" + "1," + "\"" + "superEntityId\":" + "123443," + "\"" + "userId\":" + "\"w5iXPZexNQa0Ry91HLPwzHiLO8S2\"," + "\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + "password\":" + "123456," + "\"" + "roleName\":" + "\"SuperEntity\"}";
+        response = "{" + 
+        			"\"" + "idDb\":" + "1," + 
+        			"\"" + "superEntityId\":" + "123443," + 
+        			"\"" + "userId\":" + "\"w5iXPZexNQa0Ry91HLPwzHiLO8S2\"," + 
+        			"\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + 
+        			"password\":" + "123456," + 
+        			"\"" + "roleName\":" + "\"Intermediary\"}";
         
        logger.debug("resultado: '"+response+"'");
        logger.debug("End Get");

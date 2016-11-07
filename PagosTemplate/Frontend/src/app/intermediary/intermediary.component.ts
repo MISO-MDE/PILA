@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PAsideService} from "../p-aside/p-aside.service";
+import {IntermediaryApiService} from "../services/intermediary.api.service";
 import {IntermediaryFormComponent} from "../intermediary-form/intermediary-form.component";
+import {ISuperEntity} from '../sharedresources/interfaces'
 
 
 @Component({
@@ -10,21 +12,15 @@ import {IntermediaryFormComponent} from "../intermediary-form/intermediary-form.
 })
 export class IntermediaryComponent implements OnInit {
 
-  public rows: Array<any> = [
-    {
-      'companyName': 'Oracle',
-      'nit': '5454454454545454'
-    }, {
-      'companyName': 'Universidad de los Andes',
-      'nit': '8778787878877777'
-    }
-  ];
+  public rows: Array<any>; //Toma los datos en el On Init de esta clase
+  
   public columns: Array<any> = [
-    {title: 'Nombre empresa', className: 'text-warning', name: 'companyName'},
+    {title: 'Nombre empresa', className: 'text-warning', name: 'name'},
     {title: 'NIT', name: 'nit'}
   ];
 
-  constructor(private asideService: PAsideService) {
+  constructor(private asideService: PAsideService,
+              private intermediaryApiService: IntermediaryApiService) {
   }
 
   public editRow(row: any) {
@@ -41,5 +37,14 @@ export class IntermediaryComponent implements OnInit {
 
   ngOnInit() {
     this.asideService.showAside(IntermediaryFormComponent);
+    this.getSuperEntity();
   }
+
+  getSuperEntity(): any {
+    this.intermediaryApiService.getSuperEntityData('*').subscribe((superEntity:any) => {
+      console.log("Retorno:" + JSON.stringify(superEntity));
+      this.rows =  superEntity.results;
+    });
+  }
+
 }

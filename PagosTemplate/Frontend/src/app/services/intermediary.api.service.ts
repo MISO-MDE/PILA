@@ -14,6 +14,20 @@ export class IntermediaryApiService {
     constructor(private http: Http) {
     }
 
+     getSuperEntityData(userId: String ): Observable<ISuperEntity> {
+        var urlGet;
+        if (userId === '*') {
+            urlGet = this.url;
+        }
+        else {
+            urlGet = this.url + "?" + userId;
+        } 
+
+        
+        console.log("getSuperEntityData: " + urlGet);
+        return this.http.get(urlGet).map(this.extractData);
+    }
+
     saveSuperEntity(superEntity: ISuperEntity) {
       return this.http.post(this.url, superEntity)
             .map(this.extractData)
@@ -26,7 +40,7 @@ export class IntermediaryApiService {
         if (res.text()) {
             console.log("RETORNO SERVICIO" + JSON.stringify(res));
             body = res.json();
-            console.log("Entity Id:" + body.id);
+            console.log("Entity Return:" + JSON.stringify(body));
         }
 
         return body || {};
