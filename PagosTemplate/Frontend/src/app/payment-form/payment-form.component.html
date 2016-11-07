@@ -1,3 +1,17 @@
-<p>
-  payment-form works!
-</p>
+<div class="payment-form">
+  <div class="form-group">
+    <h4>Pagos</h4>
+    <label>Cédula</label>
+    <input [(ngModel)]="identification" type="text" class="form-control"/>
+    <label>Nombres</label>
+    <input [(ngModel)]="name" type="text" class="form-control"/>
+    <label>Apellidos</label>
+    <input [(ngModel)]="lastName" type="text" class="form-control"/>
+  </div>
+
+  <div class="text-right">
+    <button (click)="savePayment()" class="btn btn-primary">
+      <span>Crear</span>
+    </button>
+  </div>
+</div>
