@@ -56,12 +56,12 @@ public class PilaEntity {
 	/**
 	 * actividad economica
 	 */
-	public ActividadEconomica actividad;
+	private ActividadEconomica actividad;
 	
 	/**
 	 * super entidad a la que pertenece
 	 */
-	public PilaSuperEntity superEntidad;
+	private PilaSuperEntity superEntidad;
 	
 	/**
 	 * Constructor

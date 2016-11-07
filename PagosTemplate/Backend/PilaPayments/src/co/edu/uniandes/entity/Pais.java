@@ -3,6 +3,9 @@ package co.edu.uniandes.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Entityq ue representa un pais
@@ -10,6 +13,10 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Pais {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	
 	/**
 	 * Nombre del pais
