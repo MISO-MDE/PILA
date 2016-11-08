@@ -40,9 +40,9 @@ export class NewsComponent implements OnInit {
   }
 
   public getEvents(): any {
-    this.eventApiService.getEvents('*').subscribe((superEntity: any) => {
-      console.log("Retorno:" + JSON.stringify(superEntity));
-      this.rows = superEntity.results;
-    });
+    this.eventApiService.getEvents('*')
+      .subscribe((response: any) => {
+        this.rows = response.results;
+      });
   }
 }

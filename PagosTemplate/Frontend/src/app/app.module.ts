@@ -42,6 +42,7 @@ import { PensionersComponent } from './pensioners/pensioners.component';
 import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
 import {PensionerApiService} from "./services/pensioner.api.service";
 import {EventApiService} from "./services/event.api.service";
+import {PaymentApiService} from "./services/payment.api.service";
 
 @NgModule({
   declarations: [
@@ -105,7 +106,8 @@ import {EventApiService} from "./services/event.api.service";
     PAsideService,
     IntermediaryApiService,
     PensionerApiService,
-    EventApiService
+    EventApiService,
+    PaymentApiService
   ],
   bootstrap: [AppComponent]
 })
