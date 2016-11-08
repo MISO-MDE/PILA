@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.user;
+package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,12 +21,14 @@ public class EntityManager {
 
 	private static final Logger logger = LogManager.getLogger(EntityManager.class);
 
+	//Consulta por Cedula o por Id de entidad
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getEntity(@QueryParam("id") String id) {
+	public String getEntity(@QueryParam("id") String id, @QueryParam("legalId") String legalId) {
 
 		logger.debug("Start getEntity");
-		logger.debug("data: '" + id + "'");
+		logger.debug("id: '" + id + "'");
+		logger.debug("cedula: '" + legalId + "'");
 		
 		String response = null;
 

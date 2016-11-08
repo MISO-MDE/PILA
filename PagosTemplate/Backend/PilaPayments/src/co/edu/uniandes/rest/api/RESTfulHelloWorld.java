@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.test;
+package co.edu.uniandes.rest.api;
 
 import java.util.Date;
 

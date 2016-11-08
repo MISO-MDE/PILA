@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { AngularFire, FirebaseRef, AuthMethods, AuthProviders } from 'angularfire2';
+import { Http, Response} from '@angular/http';
+import { AngularFire } from 'angularfire2';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -11,7 +11,7 @@ import { IUser } from '../sharedresources/interfaces'
 @Injectable()
 export class UserApiService {
 
-    private url: string = 'http://localhost:8080/PilaPayments/user/users';
+    private url: string = 'PilaPayments/api/users';
 
   constructor(private http: Http, public angularFire: AngularFire) {
     }

@@ -1,4 +1,4 @@
-package co.edu.uniandes.rest.user;
+package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
