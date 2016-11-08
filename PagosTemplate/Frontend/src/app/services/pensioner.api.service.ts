@@ -9,7 +9,7 @@ import { ISuperEntity } from '../sharedresources/interfaces'
 
 @Injectable()
 export class PensionerApiService {
-    private url: string = 'PilaPayments/api/pensioner';
+    private url: string = 'PilaPayments/api/pensioners';
 
     constructor(private http: Http) {
     }
@@ -22,6 +22,12 @@ export class PensionerApiService {
         else {
             urlGet = this.url + "?" + userId;
         }
+        return this.http.get(urlGet).map(this.extractData);
+    }
+
+    getPensionersByLegalId(legalIdCard: String ): Observable<ISuperEntity> {
+        var urlGet;
+        urlGet = this.url + "?legalIdCard=" + legalIdCard;
         return this.http.get(urlGet).map(this.extractData);
     }
 

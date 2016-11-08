@@ -4,14 +4,45 @@
     <label>Cédula</label>
     <input [(ngModel)]="legalIdCard" type="text" class="form-control" (blur)="getEntity()"/>
     <label>Nombres</label>
-    <input [(ngModel)]="name" type="text" class="form-control"/>
+    <br>
+    <label>{{firstName}}</label>
+    <br>
     <label>Apellidos</label>
-    <input [(ngModel)]="lastName" type="text" class="form-control"/>
+    <br>
+    <label>{{lastName}}</label>
+    <br>
+    <label>Subtotal     EPS:</label>
+    <label>{{subTotal1}}</label>
+    <br>
+    <label>Subtotal Pension:</label>
+    <label>{{subTotal2}}</label>
+    <br>
+    <label>Subtotal Riesgos:</label>
+    <label>{{subTotal3}}</label>
+    <br>
+    <label>Total:</label>
+    <label>{{total}}</label>
+    <br>
   </div>
-
   <div class="text-right">
-    <button (click)="savePayment()" class="btn btn-primary">
-      <span>Crear</span>
+    <button (click)="calculatePayment()" class="btn btn-primary">
+      <span>Calcular Pago</span>
     </button>
+    <br>
+    <br>
+    <table class="table dataTable table-striped table-bordered" border="1px">
+    <thead>
+    <tr>
+      <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
+      <td><h5></h5></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
+    </tr>
+    </tbody>
+  </table>
   </div>
+  
 </div>

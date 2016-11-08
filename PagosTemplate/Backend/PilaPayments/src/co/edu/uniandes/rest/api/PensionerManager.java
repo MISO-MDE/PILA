@@ -16,56 +16,52 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Path("/pensioner")
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Path("/pensioners")
 public class PensionerManager {
 
-private static final Logger logger = LogManager.getLogger(EventManager.class);
-	
-	//Consulta pagos de la base de datos
+	private static final Logger logger = LogManager.getLogger(PensionerManager.class);
+		
+	//Consulta por Cedula o por Id de entidad
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getPensioners(@QueryParam("id") String id) {		
-		logger.debug("Start getPensioners");
-		logger.debug("data: '" + id + "'");		
+	public String getPensioner(@QueryParam("id") String id, @QueryParam("legalIdCard") String legalIdCard) {
+
+		logger.debug("Start getPensioner");
+		logger.debug("id: '" + id + "'");
+		logger.debug("cedula: '" + legalIdCard + "'");
+		
+		ObjectMapper mapper = new ObjectMapper();
+		
 		String response = null;
-		response = "{"
-				   +"\"results\": [{"
-				   +"\"id\": 1,"
-				   +"\"cedula\": 79120111,"
-				   +"\"firstName\": \"Carlos\","
-				   +"\"lastName\": \"Valderrama\","
-				   +"\"pensionType\": \"Vejez\","
-				   +"\"pensionerType\": \"Prima Media\","
-				   +"\"residence\": \"Colombia\","
-				   +"\"familyResidence\": \"Colombia\","
-				   +"\"proffesion\": \"Congreista\","
-				   +"\"salary\": 90000000"
-				  +"},{"
-				   +"\"id\": 1,"
-				   +"\"cedula\": 79120111,"
-				   +"\"firstName\": \"Pedro\","
-				   +"\"lastName\": \"Perez\","
-				   +"\"pensionType\": \"Vejez\","
-				   +"\"pensionerType\": \"Prima Media\","
-				   +"\"residence\": \"Colombia\","
-				   +"\"familyResidence\": \"Colombia\","
-				   +"\"proffesion\": \"Congreista\","
-				   +"\"salary\": 27000000"
-				   +"}]"
-				   +"}";        
+
+		response = "{" + "\"" + "id\":" + "1," +
+					"\"" + "legalIdCard\":" + "79120111," +
+					"\"" + "firstName\":" + "\"Pedro\"," +
+					"\"" + "lastName\":" + "\"Perez\"," +
+					"\"" + "pensionType\":" + "\"Vejez\"," +
+					"\"" + "pensionerType\":" + "\"Prima Media\"," +
+					"\"" + "residence\":" + "\"Colombia\"," +
+					"\"" + "familyResidence\":" + "\"Colombia\"," +
+					"\"" + "proffesion\":" + "\"Congreista\"," +
+					"\"" + "salary\":" + "27000000" +
+					"}";
+        
 		logger.debug("result: '"+response+"'");
-        logger.debug("End getPensioners");
+        logger.debug("End getPensioner");
+
         return response;	
-	}	
-	
+	}
+
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response createPensioner(Object thePayment) {
+	public Response postPensioner(Object thePensioner) {
 
-		logger.debug("Start postEvent");
+		logger.debug("Start postEntity");
 		
-		logger.debug("Object " + thePayment.toString());
+		logger.debug("Object " + thePensioner.toString());
 		
 		
 		
@@ -73,8 +69,29 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
 
 		logger.debug("result: '"+response+"'");
-        logger.debug("End postPayment");
+        logger.debug("End postEntity");
 
         return Response.status(200).entity(response).build();
+	}
+
+	@PUT
+	@Produces(MediaType.TEXT_PLAIN)
+	public String putPensioner(Object thePensioner) {
+		logger.debug("Start putPensioner");
+		
+		
+
+		String response = null;
+
+		logger.debug("result: '"+response+"'");
+        logger.debug("End putPensioner");
+
+        return response;	
+	}
+
+	@DELETE
+	public void deletePensioner(Object theSuperEntity) {
+		
+		logger.debug("Start deletePensioner");
 	}
 }

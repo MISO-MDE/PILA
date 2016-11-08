@@ -10,7 +10,8 @@ export class PaymentsService {
 
   public columns: Array<any> = [
     {title: 'Nombre', name: 'firstName'},
-    {title: 'Cantidad', name: 'amount'},
+    {title: 'Apellido', name: 'lastName'},
+    {title: 'Monto', name: 'amount'},
     {title: 'Fecha', name: 'paymentDate'},
     {title: 'Estado', name: 'status'}
   ];

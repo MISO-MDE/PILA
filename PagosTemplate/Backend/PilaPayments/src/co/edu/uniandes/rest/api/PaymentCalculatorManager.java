@@ -32,6 +32,7 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 		
 		String response = null;
 		// Si pasa todas las validaciones devuelve 
+		
 		response = 	"{" +  
 					"\"" + "id\":" + "7392," +
 					"\"" + "supetrEntityId\":" + "1," +
@@ -39,34 +40,27 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 					"\"" + "subTotal1\":" + "150000," +
 					"\"" + "subTotal2\":" + "150000," +
 					"\"" + "subTotal3\":" + "450000," +
-					"\"" + "amount\":" + "345000" +
+					"\"" + "amount\":" + "345000," +
+					"\"" + "errorCondition\":" + //Si las validacines no pasan entonces se crea esta seccion
+						"[" + 
+								"{" +    
+									"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pensionado inconsistente\"," +
+									"\"" + "valor1\":" + "\"Vejez\"," +
+									"\"" + "valor2\":" + "\"Pension Voluntaria\"" +
+								"}," + 
+								"{" + 
+									"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pagador inconsistente\"," +
+									"\"" + "valor1\":" + "\"Vejez\"," +
+									"\"" + "valor2\":" + "\"Empleador\"" +
+								"}" +
+						"]" +
 					"}";
 					;
       
 		logger.debug("result: '"+response+"'");
 		logger.debug("End getPayments");
-		
+
 		restResponse = Response.status(200).entity(response).build(); //puede realizar el pago retorno 200
-      
-      //Sino devuelve
-      /*
-       response = "{" +
-					"\"" + "results\":[" + 
-					"{" +    
-					"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pensionado inconsistente\"," +
-					"\"" + "valor1\":" + "\"Vejez\"," +
-					"\"" + "valor2\":" + "\"Pension Voluntaria\"" +
-					"}," + 
-					"{" + 
-					"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pagador inconsistente\"," +
-					"\"" + "valor1\":" + "\"Vejez\"," +
-					"\"" + "valor2\":" + "\"Empleador\"" +
-					"}" +
-					"]}";
-					;
-		restResponse = Response.status(422).entity(response).build(); //No paso validaciones retorno 422 (Entidad Inprocesable)
-       */
-      
-    	return restResponse; 
+		return restResponse; 
 	}
 }

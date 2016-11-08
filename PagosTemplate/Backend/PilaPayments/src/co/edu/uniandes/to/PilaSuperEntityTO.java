@@ -36,6 +36,13 @@ public class PilaSuperEntityTO {
 	 */
 	private String password;
 	
+	
+	/**
+	 * firebaseId del usuario
+	 */
+	private String userId;
+	
+	
 	/**
 	 * username del usuario
 	 */
@@ -116,6 +123,20 @@ public class PilaSuperEntityTO {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	/**
+	 * @return firebaseid
+	 */
+	public String getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param firebaseid to set
+	 */
+	public void setUserId(String userId) {
+		this.password = userId;
 	}
 
 	/**

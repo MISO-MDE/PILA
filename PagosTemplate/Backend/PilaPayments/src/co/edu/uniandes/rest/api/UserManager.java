@@ -1,5 +1,7 @@
 package co.edu.uniandes.rest.api;
 
+import java.io.IOException;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -13,9 +15,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
+import co.edu.uniandes.entity.PilaSuperEntity;
 import co.edu.uniandes.to.PilaSuperEntityTO;
 
 @Path("/users")
@@ -64,20 +72,28 @@ public class UserManager {
 	 * @return
 	 */
 	@POST
-	@Path("/superEntity")
+	@Path("/superentity")
 	@Produces(MediaType.APPLICATION_JSON)	
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response createUser(Object loggedUser) {
-	
+	public Response createUser(String  loggedUser)  throws JsonParseException, JsonMappingException, IOException {
+		
 		logger.debug("Ingreso Parametros de usuario");
 		logger.debug("loggedUser: '" + loggedUser.toString() + "'");
 		
-		JSONObject jsonObject = new JSONObject(loggedUser);
+		final ObjectNode node = new ObjectMapper().readValue(loggedUser.toString(), ObjectNode.class);
+		
+		logger.debug("Mail: '" +node.get("email").asText() + "'"); //Login Usuario
+		logger.debug("Name: '" +node.get("name").asText() + "'"); // Nombre del usuario
+		logger.debug("FirebaseId: '" +node.get("userId").asText() + "'"); //Codigo FirebaseId del Usuario
+		logger.debug("superEntityId: '" +node.get("superEntityId").asText() + "'"); //Super entidad que administra
+		
 		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
 			
-		superTO.setEmail(jsonObject.getString("email"));
-		superTO.setUsername(jsonObject.getString("name"));
-		superTO.setIdSuperEntity(Long.parseLong((jsonObject.getString("superEntityId"))));
+		superTO.setEmail(node.get("email").asText());
+		superTO.setUsername(node.get("name").asText());
+		superTO.setUserId(node.get("userId").asText()); //Guarda el Firebase Id para consultar luego al hacer login
+		superTO.setIdSuperEntity(node.get("superEntityId").asLong());
+		
 		
 		String resultado = getSuperEntityLogic().createSuperEntityUser(superTO);
 		

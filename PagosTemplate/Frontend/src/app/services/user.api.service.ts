@@ -39,7 +39,8 @@ export class UserApiService {
     }
 
     saveUser(user: IUser) {
-        return this.http.post(this.url, user)
+        let urlPost = this.url + "/superentity";
+        return this.http.post(urlPost, user)
                         .map(this.extractData)
                         .catch(this.handleError);
 

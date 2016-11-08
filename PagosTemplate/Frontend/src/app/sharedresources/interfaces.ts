@@ -18,3 +18,36 @@ export interface ISuperEntity {
     ciiuCode: string;
     econActivity: string;
 }
+
+export interface IEntity {
+    id: number;
+    legalIdCard: string;
+    firstName: string;
+    lastName: string;
+    pensionType: string;
+	pensionerType: string;
+	residence: string;
+	familyResidence: string;
+	proffesion: string;
+	salary: number;
+}
+
+export interface IPayment {
+    id: number;
+	supetrEntityId: number;
+	entityId: number;
+	paymentDate: Date;
+    subTotal1: number;
+	subTotal2: number;
+	subTotal3: number;
+	status: string;
+	amount: number;
+    errorCondition: IValidation[];
+
+}
+
+export interface IValidation {
+    validation: string;
+    value1: string;
+    value2: string;
+}

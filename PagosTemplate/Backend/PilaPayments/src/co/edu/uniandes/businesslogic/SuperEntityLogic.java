@@ -67,7 +67,7 @@ public class SuperEntityLogic {
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
-		user.setPassword(superTO.getPassword());
+		user.setUserId(superTO.getUserId()); // Guarda el id de firebase
 		user.setSuperEntity(superEntity);
 		
 		user = userDAO.create(user);
@@ -99,4 +99,13 @@ public class SuperEntityLogic {
 	public List<PilaSuperEntity> getSuperEntities() {
 		return superDAO.findAllSuperEntity();
 	}
+	
+	/**
+	 * retorna las super entidad por id
+	 * @return
+	 */
+	public PilaSuperEntity getSuperEntitiesById(long id) {
+		return superDAO.findSuperEntityById(id);
+	}
+	
 }
