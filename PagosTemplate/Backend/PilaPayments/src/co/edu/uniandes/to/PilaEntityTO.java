@@ -1,5 +1,9 @@
 package co.edu.uniandes.to;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import co.edu.uniandes.entity.Pais;
 import co.edu.uniandes.entity.PilaSuperEntity;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
@@ -12,6 +16,11 @@ import co.edu.uniandes.staticmodel.TipoPensionado;
  */
 public class PilaEntityTO {
 
+	/**
+	 * id de la entidad
+	 */
+	private Long id;
+	
 	/**
 	 * cedula del entity
 	 */
@@ -67,6 +76,20 @@ public class PilaEntityTO {
 	 */
 	public PilaEntityTO() {	}
 
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	/**
 	 * @return the cedula
 	 */
