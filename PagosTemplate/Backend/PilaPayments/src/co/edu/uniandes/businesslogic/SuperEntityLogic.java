@@ -20,6 +20,9 @@ public class SuperEntityLogic {
 	 */
 	private SuperEntityDAO superDAO;
 	
+	/**
+	 * dao usuario de super entidad
+	 */
 	private SuperEntityUserDAO userDAO;
 	
 	/**
@@ -41,7 +44,7 @@ public class SuperEntityLogic {
 		PilaSuperEntity superEntity= new PilaSuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
-		superEntity.setActividad(ActividadEconomica.valueOf(superTO.getCIU()));
+		superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
 		
 		superEntity = superDAO.create(superEntity);	
 		
@@ -76,6 +79,17 @@ public class SuperEntityLogic {
 		}
 		
 		return respuesta;
+	}
+	
+	/**
+	 * Actualiza la superEntidad
+	 * @return super entidad actualizada
+	 */
+	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
+		
+		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		
+		return "";
 	}
 	
 	/**

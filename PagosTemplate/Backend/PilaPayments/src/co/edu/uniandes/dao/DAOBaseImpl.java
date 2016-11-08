@@ -20,7 +20,6 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	    em.persist(entidad);
 	    em.getTransaction().commit();
 	    em.close();
-	    PersistenceManager.INSTANCE.close();
 	    return entidad;
 	}
 
@@ -34,7 +33,6 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	    em.merge(entity);
 	    em.getTransaction().commit();
 	    em.close();
-	    PersistenceManager.INSTANCE.close();
 	    return entity;
 	}
 
@@ -48,6 +46,5 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	    em.remove(entity);
 	    em.getTransaction().commit();
 	    em.close();
-	    PersistenceManager.INSTANCE.close();
 	}
 }

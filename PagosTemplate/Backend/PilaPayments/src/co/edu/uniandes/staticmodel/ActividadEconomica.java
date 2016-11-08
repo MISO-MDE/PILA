@@ -37,7 +37,39 @@ public enum ActividadEconomica {
         this.ciu = ciu;
         this.descripcion= descripcion;
     }
-
+    
+    /**
+     * Retorna la actividad económica que tiene el codigo ciiu correspondiente
+     * @param ciiu codigo ciiiu
+     * @return actividad economica
+     */
+    static public ActividadEconomica getActividadByCIIU(String ciiu)
+    {
+        for(ActividadEconomica act : ActividadEconomica.values())
+        {
+            if(act.getCiu().equals(ciiu)) {
+            	return act;
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Retorna el ciu
+     * @return
+     */
+    public String getCiu() {
+    	return ciu;
+    }
+    
+    /**
+     * Retorna el ciu
+     * @return
+     */
+    public String getDescripcion() {
+    	return descripcion;
+    }
+    
     /**
      * @see java.lang.Enum#toString()
      */
