@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import co.edu.uniandes.staticmodel.ActividadEconomica;
+import co.edu.uniandes.staticmodel.TipoPension;
+import co.edu.uniandes.staticmodel.TipoPensionado;
 
 /**
  * representa una entidad asociada a una super entidad de PILA
@@ -43,6 +45,16 @@ public class PilaEntity {
 	 * salario
 	 */
 	private double salario;
+	
+	/**
+	 * tipo pension
+	 */
+	private TipoPension tipoPension;
+	
+	/**
+	 * tipo pensionado
+	 */
+	private TipoPensionado tipoPensionado;
 	
 	/**
 	 * Pais en el que reside
@@ -143,6 +155,36 @@ public class PilaEntity {
 		this.salario = salario;
 	}
 
+	/**
+	 * @return el tipo de pension
+	 */
+	@Enumerated(EnumType.STRING)
+	public TipoPension getTipoPension(){
+		return tipoPension;
+	}
+	
+	/**
+	 * @param tipoPension the tipoPension to set
+	 */
+	public void setTipoPension(TipoPension tipoPension){
+		this.tipoPension = tipoPension;
+	}
+	
+	/**
+	 * @return el tipo de pensionado
+	 */
+	@Enumerated(EnumType.STRING)
+	public TipoPensionado getTipoPensionado(){
+		return tipoPensionado;
+	}
+	
+	/**
+	 * @param tipoPensionado the tipoPensionado to set
+	 */
+	public void setTipoPensionado(TipoPensionado tipoPensionado){
+		this.tipoPensionado = tipoPensionado;
+	}
+	
 	/**
 	 * @return the actividad
 	 */
