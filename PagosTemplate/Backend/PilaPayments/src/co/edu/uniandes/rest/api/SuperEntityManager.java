@@ -131,7 +131,22 @@ public class SuperEntityManager {
 	public String putSuperEntity(Object theSuperEntity) {
 		logger.debug("Start putSuperEntity");
 	
-		String response = null;
+		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
+		
+		if(!jsonObject.getString("nit").isEmpty()) {
+			superTO.setNIT(jsonObject.getString("nit"));
+		}
+		
+		if(!jsonObject.getString("name").isEmpty()) {
+			superTO.setNombre(jsonObject.getString("name"));
+		}
+		
+		if(!jsonObject.getString("ciiuCode").isEmpty()) {
+			superTO.setCIU(jsonObject.getString("ciiuCode"));
+		}
+		
+		String response = getSuperEntityLogic().createSuperEntity(superTO);
 
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");
