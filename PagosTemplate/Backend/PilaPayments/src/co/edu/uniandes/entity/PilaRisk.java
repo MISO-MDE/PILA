@@ -19,8 +19,9 @@ import co.edu.uniandes.staticmodel.ActividadEconomica;
 @Entity
 public class PilaRisk {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * id del riesgo
+	 */
 	private Long id;
 	
 	/**
@@ -48,6 +49,8 @@ public class PilaRisk {
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}

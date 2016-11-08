@@ -21,8 +21,9 @@ import co.edu.uniandes.staticmodel.EstadoPago;
 @Entity
 public class PilaPago {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * id del pago
+	 */
 	private Long id;
 	
 	/**
@@ -43,7 +44,7 @@ public class PilaPago {
 	/**
 	 * Entidad a la cual se le realizo el pago
 	 */
-	private PilaEntity entity;
+	private PilaEntity pilaEntity;
 	
 	/**
 	 * Super entidad que ha realizado el pago
@@ -60,6 +61,38 @@ public class PilaPago {
 	 */
 	public PilaPago() {
 		
+	}
+	
+	/**
+	 * @return the id
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the pilaEntity
+	 */
+	@ManyToOne
+	@JoinColumn(name="pilaEntity_id")
+	public PilaEntity getPilaEntity() {
+		return pilaEntity;
+	}
+
+	/**
+	 * @param pilaEntity the pilaEntity to set
+	 */
+	public void setPilaEntity(PilaEntity pilaEntity) {
+		this.pilaEntity = pilaEntity;
 	}
 
 	/**
@@ -106,22 +139,6 @@ public class PilaPago {
 	}
 
 	/**
-	 * @return the entidad
-	 */
-	@ManyToOne
-	@JoinColumn(name="entity_id")
-	public PilaEntity getEntidad() {
-		return entity;
-	}
-
-	/**
-	 * @param entidad the entidad to set
-	 */
-	public void setEntidad(PilaEntity entidad) {
-		this.entity = entidad;
-	}
-
-	/**
 	 * @return the estado
 	 */
 	@Enumerated(EnumType.STRING)
@@ -134,22 +151,6 @@ public class PilaPago {
 	 */
 	public void setEstado(EstadoPago estado) {
 		this.estado = estado;
-	}
-
-	/**
-	 * @return the entity
-	 */
-	@ManyToOne
-	@JoinColumn(name="entity_id")
-	public PilaEntity getEntity() {
-		return entity;
-	}
-
-	/**
-	 * @param entity the entity to set
-	 */
-	public void setEntity(PilaEntity entity) {
-		this.entity = entity;
 	}
 
 	/**

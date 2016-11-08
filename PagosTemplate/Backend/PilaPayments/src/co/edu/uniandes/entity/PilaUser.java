@@ -22,8 +22,6 @@ public class PilaUser implements Serializable{
 	/**
 	 * id del usuario
 	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	/**
@@ -51,6 +49,8 @@ public class PilaUser implements Serializable{
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}

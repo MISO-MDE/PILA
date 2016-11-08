@@ -15,8 +15,9 @@ import javax.persistence.OneToMany;
 @Entity
 public class PilaSuperEntity {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * id de la super entidad
+	 */
 	private Long Id;
 	
 	/**
@@ -45,6 +46,24 @@ public class PilaSuperEntity {
 	public PilaSuperEntity() {
 		
 	}
+		
+	/**
+	 * @return the id
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Long getId() {
+		return Id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		Id = id;
+	}
+
+
 
 	/**
 	 * @return the nIT

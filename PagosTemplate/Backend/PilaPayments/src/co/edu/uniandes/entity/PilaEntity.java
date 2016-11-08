@@ -19,8 +19,9 @@ import co.edu.uniandes.staticmodel.ActividadEconomica;
 @Entity
 public class PilaEntity {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * id de la entidad
+	 */
 	private Long id;
 	
 	/**
@@ -73,6 +74,8 @@ public class PilaEntity {
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}

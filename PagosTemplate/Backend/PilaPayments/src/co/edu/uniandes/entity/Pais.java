@@ -14,8 +14,6 @@ import javax.persistence.Id;
 @Entity
 public class Pais {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	/**
@@ -24,15 +22,26 @@ public class Pais {
 	private String nombre;
 	
 	/**
-	 * ciudades que lo conforman
-	 */
-	private List<String> ciudades;
-	
-	/**
 	 * Constructor
 	 */
 	public Pais() {
 		
+	}
+	
+	/**
+	 * @return the id
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	/**
@@ -48,19 +57,4 @@ public class Pais {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	/**
-	 * @return the ciudades
-	 */
-	public List<String> getCiudades() {
-		return ciudades;
-	}
-
-	/**
-	 * @param ciudades the ciudades to set
-	 */
-	public void setCiudades(List<String> ciudades) {
-		this.ciudades = ciudades;
-	}
-	
 }

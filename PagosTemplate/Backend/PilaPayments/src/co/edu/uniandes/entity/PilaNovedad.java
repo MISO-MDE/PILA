@@ -21,8 +21,9 @@ import co.edu.uniandes.staticmodel.TipoNovedad;
 @Entity
 public class PilaNovedad {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	/**
+	 * id de la novedad
+	 */
 	private Long id;
 	
 	/**
@@ -75,6 +76,8 @@ public class PilaNovedad {
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
