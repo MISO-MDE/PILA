@@ -3,7 +3,7 @@
   <display-name>PilaPayments</display-name>
   <listener>
         <description>HibernateListener</description>
-        <listener-class>co.edu.unaindes.dao.PersistenceListener</listener-class>
+        <listener-class>co.edu.uniandes.dao.PersistenceListener</listener-class>
 	</listener>
   
   <resource-ref>

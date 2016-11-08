@@ -63,6 +63,7 @@ public class SuperEntityManager {
 	 * @return
 	 */
 	@GET
+	@Path("/entity")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getSuperEntity(@QueryParam("id") String id) {
 
