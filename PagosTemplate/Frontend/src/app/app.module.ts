@@ -41,6 +41,7 @@ import { NewFormComponent } from './new-form/new-form.component';
 import { PensionersComponent } from './pensioners/pensioners.component';
 import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
 import {PensionerApiService} from "./services/pensioner.api.service";
+import {EventApiService} from "./services/event.api.service";
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import {PensionerApiService} from "./services/pensioner.api.service";
     UserApiService,
     PAsideService,
     IntermediaryApiService,
-    PensionerApiService
+    PensionerApiService,
+    EventApiService
   ],
   bootstrap: [AppComponent]
 })
