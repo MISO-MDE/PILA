@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import javax.persistence.EntityManager;
 
@@ -11,7 +11,7 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 		return  PersistenceManager.INSTANCE.getEntityManager();
 	}
 	/**
-	 * @see co.edu.unaindes.dao.DAOBase#create(java.lang.Object)
+	 * @see co.edu.uniandes.dao.DAOBase#create(java.lang.Object)
 	 */
 	@Override
 	public T create(T entidad) {
@@ -25,7 +25,7 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	}
 
 	/**
-	 * @see co.edu.unaindes.dao.DAOBase#update(java.lang.Object)
+	 * @see co.edu.uniandes.dao.DAOBase#update(java.lang.Object)
 	 */
 	@Override
 	public T update(T entity) {
@@ -39,7 +39,7 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	}
 
 	/**
-	 * @see co.edu.unaindes.dao.DAOBase#deleteEntity(java.lang.Object)
+	 * @see co.edu.uniandes.dao.DAOBase#deleteEntity(java.lang.Object)
 	 */
 	@Override
 	public void deleteEntity(T entity) {

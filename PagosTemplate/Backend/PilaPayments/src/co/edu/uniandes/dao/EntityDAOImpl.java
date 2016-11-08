@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	private static final EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
 	/**
-	 * @see co.edu.unaindes.dao.EntityDAO#findEntity(int)
+	 * @see co.edu.uniandes.dao.EntityDAO#findEntity(int)
 	 */
 	@Override
 	public PilaEntity findEntity(int cedula) {
@@ -31,7 +31,7 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	}
 
 	/**
-	 * @see co.edu.unaindes.dao.EntityDAO#findAllEntityBySuperEntity(co.edu.uniandes.entity.PilaSuperEntity)
+	 * @see co.edu.uniandes.dao.EntityDAO#findAllEntityBySuperEntity(co.edu.uniandes.entity.PilaSuperEntity)
 	 */
 	@Override
 	public List<PilaEntity> findAllEntityBySuperEntity(PilaSuperEntity superEntity) {

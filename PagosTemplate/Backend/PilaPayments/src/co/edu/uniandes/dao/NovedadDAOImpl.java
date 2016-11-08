@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import co.edu.uniandes.entity.PilaNovedad;
 public class NovedadDAOImpl extends DAOBaseImpl<PilaNovedad> implements NovedadDAO {
 
 	/**
-	 * @see co.edu.unaindes.dao.NovedadDAO#findNovedadesEntity(java.lang.Long)
+	 * @see co.edu.uniandes.dao.NovedadDAO#findNovedadesEntity(java.lang.Long)
 	 */
 	@Override
 	public List<PilaNovedad> findNovedadesEntity(Long idEntity) {
@@ -24,7 +24,7 @@ public class NovedadDAOImpl extends DAOBaseImpl<PilaNovedad> implements NovedadD
 	}
 
 	/**
-	 * @see co.edu.unaindes.dao.NovedadDAO#findNovedadesSuperEntity(java.lang.Long)
+	 * @see co.edu.uniandes.dao.NovedadDAO#findNovedadesSuperEntity(java.lang.Long)
 	 */
 	@Override
 	public List<PilaNovedad> findNovedadesSuperEntity(Long idSuperEntity) {

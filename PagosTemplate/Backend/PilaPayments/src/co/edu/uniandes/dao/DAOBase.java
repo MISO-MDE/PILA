@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 /**
  * Interfaz para operaciones comunes

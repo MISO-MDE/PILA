@@ -5,7 +5,12 @@ package co.edu.uniandes.to;
  * @author jorge perea
  */
 public class PilaSuperEntityTO {
-
+	
+	/**
+	 * id del super entity
+	 */
+	private Long idSuperEntity;
+	
 	/**
 	 * Nit de la super entidad
 	 */
@@ -125,5 +130,19 @@ public class PilaSuperEntityTO {
 	 */
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	/**
+	 * @return the idSuperEntity
+	 */
+	public Long getIdSuperEntity() {
+		return idSuperEntity;
+	}
+
+	/**
+	 * @param idSuperEntity the idSuperEntity to set
+	 */
+	public void setIdSuperEntity(Long idSuperEntity) {
+		this.idSuperEntity = idSuperEntity;
 	}
 }

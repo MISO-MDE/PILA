@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import co.edu.uniandes.entity.PilaSuperEntity;
 public class PagoDAOImpl extends DAOBaseImpl<PilaPago> implements PagoDAO{
 
 	/**
-	 * @see co.edu.unaindes.dao.PagoDAO#findPagosEntity(co.edu.uniandes.entity.PilaEntity)
+	 * @see co.edu.uniandes.dao.PagoDAO#findPagosEntity(co.edu.uniandes.entity.PilaEntity)
 	 */
 	@Override
 	public List<PilaPago> findPagosEntity(PilaEntity entity) {
@@ -26,7 +26,7 @@ public class PagoDAOImpl extends DAOBaseImpl<PilaPago> implements PagoDAO{
 	}
 
 	/**
-	 * @see co.edu.unaindes.dao.PagoDAO#findPagosSuperEntity(co.edu.uniandes.entity.PilaEntity)
+	 * @see co.edu.uniandes.dao.PagoDAO#findPagosSuperEntity(co.edu.uniandes.entity.PilaEntity)
 	 */
 	@Override
 	public List<PilaPago> findPagosSuperEntity(PilaSuperEntity superEntity) {

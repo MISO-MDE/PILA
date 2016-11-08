@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import co.edu.uniandes.entity.PilaSuperEntity;
  * Interfaz del dao de super entidad
  * @author jorge perea
  */
-public interface SuperEntityDAO {
+public interface SuperEntityDAO extends DAOBase<PilaSuperEntity>{
 	
 	/**
 	 * Retorna un super
@@ -23,5 +23,11 @@ public interface SuperEntityDAO {
 	 */
 	public List<PilaSuperEntity> findAllSuperEntity();
 	
+	/**
+	 * Retorna la super entidad con el id especificado
+	 * @param id de la super entidad
+	 * @return super entidad
+	 */
+	public PilaSuperEntity findSuperEntityById(Long id);
 	
 }

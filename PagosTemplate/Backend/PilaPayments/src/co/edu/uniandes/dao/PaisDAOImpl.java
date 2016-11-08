@@ -1,4 +1,4 @@
-package co.edu.unaindes.dao;
+package co.edu.uniandes.dao;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import co.edu.uniandes.entity.Pais;
 public class PaisDAOImpl extends DAOBaseImpl<Pais> implements PaisDAO{
 
 	/**
-	 * @see co.edu.unaindes.dao.PaisDAO#findAll()
+	 * @see co.edu.uniandes.dao.PaisDAO#findAll()
 	 */
 	@Override
 	public List<Pais> findAll() {

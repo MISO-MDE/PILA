@@ -16,11 +16,13 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Path("/entities")
 public class EntityManager {
 
 	private static final Logger logger = LogManager.getLogger(EntityManager.class);
-
+		
 	//Consulta por Cedula o por Id de entidad
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -29,6 +31,8 @@ public class EntityManager {
 		logger.debug("Start getEntity");
 		logger.debug("id: '" + id + "'");
 		logger.debug("cedula: '" + legalId + "'");
+		
+		ObjectMapper mapper = new ObjectMapper();
 		
 		String response = null;
 
