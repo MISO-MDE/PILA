@@ -3,10 +3,14 @@ package co.edu.uniandes.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import co.edu.uniandes.staticmodel.ActividadEconomica;
 
 /**
  * Super entidad que desea realizar pagos a empleados
@@ -33,7 +37,7 @@ public class PilaSuperEntity {
 	/**
 	 * codigo que representa la actividad economica
 	 */
-	private String CIU;
+	private ActividadEconomica actividad;
 	
 	/**
 	 * entities asociados a la super entidad
@@ -62,8 +66,6 @@ public class PilaSuperEntity {
 	public void setId(Long id) {
 		Id = id;
 	}
-
-
 
 	/**
 	 * @return the nIT
@@ -94,20 +96,6 @@ public class PilaSuperEntity {
 	}
 
 	/**
-	 * @return the cIU
-	 */
-	public String getCIU() {
-		return CIU;
-	}
-
-	/**
-	 * @param cIU the cIU to set
-	 */
-	public void setCIU(String cIU) {
-		CIU = cIU;
-	}
-
-	/**
 	 * @return the entities
 	 */
 	@OneToMany(mappedBy="superEntidad")
@@ -120,5 +108,20 @@ public class PilaSuperEntity {
 	 */
 	public void setEntities(List<PilaEntity> entities) {
 		this.entities = entities;
+	}
+
+	/**
+	 * @return the actividad
+	 */
+	@Enumerated(EnumType.STRING)
+	public ActividadEconomica getActividad() {
+		return actividad;
+	}
+
+	/**
+	 * @param actividad the actividad to set
+	 */
+	public void setActividad(ActividadEconomica actividad) {
+		this.actividad = actividad;
 	}
 }
