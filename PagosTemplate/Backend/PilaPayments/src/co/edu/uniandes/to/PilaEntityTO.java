@@ -13,6 +13,11 @@ import co.edu.uniandes.staticmodel.TipoPensionado;
 public class PilaEntityTO {
 
 	/**
+	 * id de la entidad
+	 */
+	private Long id;
+	
+	/**
 	 * cedula del entity
 	 */
 	private int cedula;
@@ -66,6 +71,20 @@ public class PilaEntityTO {
 	 * Constructor
 	 */
 	public PilaEntityTO() {	}
+	
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	/**
 	 * @return the cedula
@@ -207,3 +226,4 @@ public class PilaEntityTO {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
 	}
 }
+
