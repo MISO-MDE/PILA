@@ -6,13 +6,13 @@
   <table class="table dataTable table-striped table-bordered" border="1px">
     <thead>
     <tr>
-      <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
+      <td *ngFor="let column of pensionersService.columns"><h5>{{column.title}}</h5></td>
       <td><h5></h5></td>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
+    <tr *ngFor="let row of pensionersService.rows">
+      <td *ngFor="let column of pensionersService.columns">{{getRowData(row,column.name)}}</td>
       <td>
         <button (click)="editRow(row)" class="btn btn-primary">
           <i class="glyphicon glyphicon-pencil"></i>

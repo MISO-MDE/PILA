@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {PensionersService} from "../pensioners/pensioners.service";
 
 @Component({
   selector: 'app-pensioner-form',
@@ -38,7 +39,7 @@ export class PensionerFormComponent implements OnInit {
       'name':"Argentina"
     }
   ];
-  constructor() {
+  constructor(public pensionersService: PensionersService) {
   }
 
   ngOnInit() {

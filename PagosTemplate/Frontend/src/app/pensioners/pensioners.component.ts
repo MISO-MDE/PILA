@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PAsideService} from "../p-aside/p-aside.service";
 import {PensionerFormComponent} from "../pensioner-form/pensioner-form.component";
 import {PensionerApiService} from "../services/pensioner.api.service";
+import {PensionersService} from "./pensioners.service";
 
 @Component({
   selector: 'app-pensioners',
@@ -18,16 +19,16 @@ export class PensionersComponent implements OnInit {
   ];
 
   constructor(private asideService: PAsideService,
-              private pensionerApiService: PensionerApiService) {
+              public pensionersService: PensionersService) {
   }
 
   ngOnInit() {
     this.asideService.showAside(PensionerFormComponent);
-    this.getPensioners();
+    this.pensionersService.loadPensioners();
   }
 
   public editRow(row: any) {
-    console.log(row);
+    this.pensionersService.selectRow(row);
   }
 
   public deleteRow(row: any) {
@@ -37,12 +38,4 @@ export class PensionersComponent implements OnInit {
   public getRowData(row, data) {
     return row [data];
   }
-
-  public getPensioners() {
-    this.pensionerApiService.getPensioners('*')
-      .subscribe((response: any) => {
-        this.rows = response.results;
-      });
-  }
-
 }

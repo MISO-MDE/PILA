@@ -1,8 +1,4 @@
 <div class="intermediary">
-  <!--<ng-table [config]="config"
-            [rows]="rows"
-            [columns]="columns">
-  </ng-table>-->
   <h4 class="section-title">
     <i class="glyphicon glyphicon-briefcase"></i>
     <span>Lista de aportantes</span>
@@ -10,13 +6,13 @@
   <table class="table dataTable table-striped table-bordered" border="1px">
     <thead>
     <tr>
-      <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
+      <td *ngFor="let column of intermediaryService.columns"><h5>{{column.title}}</h5></td>
       <td><h5></h5></td>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
+    <tr *ngFor="let row of intermediaryService.rows">
+      <td *ngFor="let column of intermediaryService.columns">{{getRowData(row,column.name)}}</td>
       <td>
         <button (click)="editRow(row)" class="btn btn-primary">
           <i class="glyphicon glyphicon-pencil"></i>

@@ -2,22 +2,22 @@
   <div class="form-group">
     <h4>Empresa aportante</h4>
     <label>NIT</label>
-    <input [(ngModel)]="nit" type="text" class="form-control"/>
+    <input [(ngModel)]="intermediaryService.selectedRow.nit" type="text" class="form-control"/>
     <label>Nombre</label>
-    <input [(ngModel)]="name" type="text" class="form-control"/>
+    <input [(ngModel)]="intermediaryService.selectedRow.name" type="text" class="form-control"/>
     <label>Codigo CIIU</label>
-    <input [(ngModel)]="ciiuCode" type="text" class="form-control"/>
+    <input [(ngModel)]="intermediaryService.selectedRow.ciiuCode" type="text" class="form-control"/>
     <label>Actividad Económica</label>
-    <input [(ngModel)]="econActivity" type="text" class="form-control"/>
+    <input [(ngModel)]="intermediaryService.selectedRow.econActivity" type="text" class="form-control"/>
     <br>
     <!--Informacion del Administrador del la superentidad-->
     <h4>Administrador</h4>
     <label>Email</label>
-    <input [(ngModel)]="email" type="email" class="form-control"/>
+    <input [(ngModel)]="userAdmin.email" type="email" class="form-control"/>
     <label>Contraseña</label>
-    <input [(ngModel)]="password" type="password" class="form-control"/>
+    <input [(ngModel)]="userAdmin.password" type="password" class="form-control"/>
     <label>Nombre</label>
-    <input [(ngModel)]="adminName" type="text" class="form-control"/>
+    <input [(ngModel)]="userAdmin.adminName" type="text" class="form-control"/>
     <br>
   </div>
   <div class="text-right">
