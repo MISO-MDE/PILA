@@ -43,6 +43,7 @@ import { PensionerFormComponent } from './pensioner-form/pensioner-form.componen
 import {PensionerApiService} from "./services/pensioner.api.service";
 import {EventApiService} from "./services/event.api.service";
 import {PaymentApiService} from "./services/payment.api.service";
+import {Ripple} from "./commons/directives/ripple/ripple";
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {PaymentApiService} from "./services/payment.api.service";
     NewsComponent,
     NewFormComponent,
     PensionersComponent,
-    PensionerFormComponent
+    PensionerFormComponent,
+    Ripple
   ],
   imports: [
     BrowserModule,
