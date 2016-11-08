@@ -8,10 +8,11 @@ import {UserApiService} from "../services/user.api.service";
 export class IntermediaryService {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
   public columns: Array<any> = [
-    {title: 'Nombre empresa', className: 'text-warning', name: 'name'},
-    {title: 'NIT', name: 'nit'}
+    {title: 'Nombre empresa', className: 'text-warning', name: 'nombre'},
+    {title: 'NIT', name: 'nit'},
+    {title: 'Actividad económica', name: 'actividad'}
   ];
-  public selectedRow = { nit:'234234324', id:234, name:"sdjdjd"};
+  public selectedRow = {};
 
   constructor(private intermediaryApiService: IntermediaryApiService,
               private userApiService: UserApiService) {
@@ -22,10 +23,10 @@ export class IntermediaryService {
   }
 
   public loadSuperEntity(): any {
-    this.intermediaryApiService.getSuperEntityData('*').subscribe((superEntity: any) => {
-      console.log("Retorno:" + JSON.stringify(superEntity));
-      this.rows = superEntity.results;
-    });
+    this.intermediaryApiService.getSuperEntityData('*')
+      .subscribe((response: any) => {
+        this.rows = response;
+      });
   }
 
   //Crea la superentidad y crea el administrador quien podra entrar a como admin de superentidad
