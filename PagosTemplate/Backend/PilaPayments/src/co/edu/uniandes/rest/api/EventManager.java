@@ -27,7 +27,28 @@ public class EventManager {
 		logger.debug("Start getEvent");
 		logger.debug("data: '" + id + "'");		
 		String response = null;
-		response = "{results:[{id:155,type:'SLN',fromDate:'10/10/16',toDate:'22/10/16',workingDays:10,status:'Procesado',salary:27000000}]}";        
+		response = "{"
+					 +" \"results\": ["
+					 +"   {"
+					 +"     \"id\": 155,"
+					 +"     \"type\": \"SLN\","
+					 +"     \"fromDate\": \"10/10/16\","
+					 +"     \"toDate\": \"22/10/16\","
+					 +"     \"workingDays\": 10,"
+					 +"     \"status\": \"Procesado\","
+					 +"     \"salary\": 27000000"
+					 +"   },"
+					 +"   {"
+					 +"     \"id\": 152,"
+					 +"     \"type\": \"Otra\","
+					 +"     \"fromDate\": \"11/10/16\","
+					 +"     \"toDate\": \"22/10/16\","
+					 +"     \"workingDays\": 10,"
+					 +"     \"status\": \"Procesado\","
+					 +"     \"salary\": 27000000"
+					 +"   }"
+					 +"]"
+					 +"}";      
 		logger.debug("result: '"+response+"'");
         logger.debug("End getEvent");
         return response;	

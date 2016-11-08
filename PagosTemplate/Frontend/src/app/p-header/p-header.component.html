@@ -12,14 +12,26 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/homepage">Home</a></li>
-        <li><a routerLink="/pensioners">Pensionados</a></li>
-        <li><a routerLink="/news">Novedades</a></li>
-        <li><a routerLink="/payments">Pagos</a></li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="/homepage">Home</a>
+        </li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="/pensioners">Pensionados</a>
+        </li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="/news">Novedades</a>
+        </li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="/payments">Pagos</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="../navbar/">Default</a></li>
-        <li><a routerLink="/">Salir</a></li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="../navbar/">Default</a>
+        </li>
+        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+          <a routerLink="/">Salir</a>
+        </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

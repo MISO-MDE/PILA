@@ -41,6 +41,9 @@ import { NewFormComponent } from './new-form/new-form.component';
 import { PensionersComponent } from './pensioners/pensioners.component';
 import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
 import {PensionerApiService} from "./services/pensioner.api.service";
+import {EventApiService} from "./services/event.api.service";
+import {PaymentApiService} from "./services/payment.api.service";
+import {Ripple} from "./commons/directives/ripple/ripple";
 
 @NgModule({
   declarations: [
@@ -57,7 +60,8 @@ import {PensionerApiService} from "./services/pensioner.api.service";
     NewsComponent,
     NewFormComponent,
     PensionersComponent,
-    PensionerFormComponent
+    PensionerFormComponent,
+    Ripple
   ],
   imports: [
     BrowserModule,
@@ -103,7 +107,9 @@ import {PensionerApiService} from "./services/pensioner.api.service";
     UserApiService,
     PAsideService,
     IntermediaryApiService,
-    PensionerApiService
+    PensionerApiService,
+    EventApiService,
+    PaymentApiService
   ],
   bootstrap: [AppComponent]
 })
