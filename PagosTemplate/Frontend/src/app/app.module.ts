@@ -44,6 +44,10 @@ import {PensionerApiService} from "./services/pensioner.api.service";
 import {EventApiService} from "./services/event.api.service";
 import {PaymentApiService} from "./services/payment.api.service";
 import {Ripple} from "./commons/directives/ripple/ripple";
+import {IntermediaryService} from "./intermediary/intermediary.service";
+import {NewsService} from "./news/news.service";
+import {PaymentsService} from "./payments/payments.service";
+import {PensionersService} from "./pensioners/pensioners.service";
 
 @NgModule({
   declarations: [
@@ -104,12 +108,18 @@ import {Ripple} from "./commons/directives/ripple/ripple";
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [
-    UserApiService,
+    //Providers
     PAsideService,
+    IntermediaryService,
+    NewsService,
+    PaymentsService,
+    PensionersService,
+    //REST API services
     IntermediaryApiService,
     PensionerApiService,
     EventApiService,
-    PaymentApiService
+    PaymentApiService,
+    UserApiService,
   ],
   bootstrap: [AppComponent]
 })

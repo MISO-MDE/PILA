@@ -2,24 +2,24 @@
   <div class="form-group">
     <h4>Pensionado</h4>
     <label>Cédula</label>
-    <input [(ngModel)]="identification" type="text" class="form-control"/>
+    <input [(ngModel)]="pensionersService.selectedRow.cedula" type="text" class="form-control"/>
     <label>Nombres</label>
-    <input [(ngModel)]="name" type="text" class="form-control"/>
+    <input [(ngModel)]="pensionersService.selectedRow.firstName" type="text" class="form-control"/>
     <label>Apellidos</label>
-    <input [(ngModel)]="lastName" type="text" class="form-control"/>
+    <input [(ngModel)]="pensionersService.selectedRow.lastName" type="text" class="form-control"/>
     <label>Tipo de pension</label>
     <select class="form-control"
-            [(ngModel)]="pensionType">
+            [(ngModel)]="pensionersService.selectedRow.pensionType">
       <option *ngFor="let option of  pensionTypeOptions" [value]="option.id">{{option.name}}</option>
     </select>
     <label>Tipo de pensionado</label>
     <select class="form-control"
-            [(ngModel)]="pensionerType">
+            [(ngModel)]="pensionersService.selectedRow.pensionerType">
       <option *ngFor="let option of  pensionerTypeOptions" [value]="option.id">{{option.name}}</option>
     </select>
     <label>Pais de residencia</label>
     <select class="form-control"
-            [(ngModel)]="residenceCountry">
+            [(ngModel)]="pensionersService.selectedRow.residenceCountry">
       <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
     </select>
   </div>
@@ -28,13 +28,13 @@
     <h4></h4>
     <label>Residencia grupo familiar</label>
     <select class="form-control"
-            [(ngModel)]="familyResidenceCountry">
+            [(ngModel)]="pensionersService.selectedRow.familyResidenceCountry">
       <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
     </select>
     <label>Profesión</label>
-    <input [(ngModel)]="profession" class="form-control"/>
+    <input [(ngModel)]="pensionersService.selectedRow.profession" class="form-control"/>
     <label>Salario</label>
-    <input [(ngModel)]="salary" type="number" class="form-control text-right"/>
+    <input [(ngModel)]="pensionersService.selectedRow.salary" type="number" class="form-control text-right"/>
     <br>
   </div>
 
