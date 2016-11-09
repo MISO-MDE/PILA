@@ -19,6 +19,12 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	public PilaEntity findEntity(int cedula);
 	
 	/**
+	 * Retorna todas las entidades
+	 * @return lista con las entidades
+	 */
+	public List<PilaEntity> findAllEntity();
+	
+	/**
 	 * devuelve todos lo entities relacionados con una super entidad
 	 * @param superEntity
 	 * @return

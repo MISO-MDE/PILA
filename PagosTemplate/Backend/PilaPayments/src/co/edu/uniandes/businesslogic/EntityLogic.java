@@ -1,7 +1,10 @@
 package co.edu.uniandes.businesslogic;
 
+import java.util.List;
+
 import co.edu.uniandes.dao.EntityDAO;
 import co.edu.uniandes.entity.PilaEntity;
+import co.edu.uniandes.entity.PilaSuperEntity;
 import co.edu.uniandes.to.PilaEntityTO;
 
 
@@ -48,5 +51,13 @@ public class EntityLogic {
 		response = entity.getId().toString();
 		
 		return response;
+	}
+	
+	/**
+	 * retorna las entidades del sistema
+	 * @return
+	 */
+	public List<PilaEntity> getEntities() {
+		return entityDAO.findAllEntity();
 	}
 }
