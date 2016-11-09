@@ -22,6 +22,7 @@ export class PensionerApiService {
         else {
             urlGet = this.url + "?" + userId;
         }
+        console.log("Entidad URL:" + urlGet); 
         return this.http.get(urlGet).map(this.extractData);
     }
 
