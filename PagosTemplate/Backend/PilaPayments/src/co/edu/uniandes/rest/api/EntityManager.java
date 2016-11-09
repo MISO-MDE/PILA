@@ -15,6 +15,7 @@ import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.json.JSONObject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,6 +25,9 @@ import co.edu.uniandes.to.PilaEntityTO;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 @Path("/entities")
 public class EntityManager {
@@ -37,8 +41,7 @@ public class EntityManager {
 
 		logger.debug("Start getEntity");
 		logger.debug("id: '" + id + "'");
-		logger.debug("cedula: '" + legalId + "'");
-		
+
 		ObjectMapper mapper = new ObjectMapper();
 		
 		String response = null;
@@ -56,7 +59,7 @@ public class EntityManager {
 					"}";
         
 		logger.debug("result: '"+response+"'");
-        logger.debug("End getSomething");
+        logger.debug("End getEntityManager");
 
         return response;	
 	}
@@ -92,9 +95,8 @@ public class EntityManager {
 
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
-	public String putSuperEntity(Object theEntity) {
+	public String putEntity(Object theEntity) {
 		logger.debug("Start putEntity");
-		
 		
 
 		String response = null;
@@ -106,7 +108,7 @@ public class EntityManager {
 	}
 
 	@DELETE
-	public void deleteSuperEntity(Object theSuperEntity) {
+	public void deleteEntity(Object theSuperEntity) {
 		
 		logger.debug("Start deleteEntity");
 	}
