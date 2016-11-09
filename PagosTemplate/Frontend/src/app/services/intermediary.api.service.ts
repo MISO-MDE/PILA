@@ -34,6 +34,12 @@ export class IntermediaryApiService {
             .catch(this.handleError);
     }
 
+    updateSuperEntity(superEntity: ISuperEntity) {
+      return this.http.put(this.url, superEntity)
+        .map(this.extractData)
+        .catch(this.handleError);
+    }
+
     deleteSuperEntity(id: string) {
       let options = {id: id};
       return this.http.delete(this.url+"/"+id)
