@@ -14,11 +14,11 @@
     <!--Informacion del Administrador del la superentidad-->
     <h4>Administrador</h4>
     <label>Email</label>
-    <input [(ngModel)]="userAdmin.email" type="email" class="form-control"/>
+    <input [disabled]="intermediaryService.isEditingRow()" [(ngModel)]="userAdmin.email" type="email" class="form-control"/>
     <label>Contraseña</label>
-    <input [(ngModel)]="userAdmin.password" type="password" class="form-control"/>
+    <input [disabled]="intermediaryService.isEditingRow()" [(ngModel)]="userAdmin.password" type="password" class="form-control"/>
     <label>Nombre</label>
-    <input [(ngModel)]="userAdmin.name" type="text" class="form-control"/>
+    <input [disabled]="intermediaryService.isEditingRow()" [(ngModel)]="userAdmin.name" type="text" class="form-control"/>
     <br>
   </div>
   <div class="text-right">
