@@ -1,10 +1,14 @@
 package co.edu.uniandes.businesslogic;
 
+import java.util.Arrays;
 import java.util.List;
 
 import co.edu.uniandes.dao.EntityDAO;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.staticmodel.ActividadEconomica;
+import co.edu.uniandes.staticmodel.TipoPension;
+import co.edu.uniandes.staticmodel.TipoPensionado;
 import co.edu.uniandes.to.PilaEntityTO;
 
 
@@ -92,5 +96,29 @@ public class EntityLogic {
 	 */
 	public PilaEntity getEntitiesById(long id) {
 		return entityDAO.findEntity(id);
+	}
+	
+	/**
+	 * Retorna las actividades economicas definidas en el sistema
+	 * @return actividades economicas
+	 */
+	public List<ActividadEconomica> getEconActivities() {
+		return Arrays.asList(ActividadEconomica.values());
+	}
+	
+	/**
+	 * Retorna los tipos de pension definidos en el sistema
+	 * @return actividades economicas
+	 */
+	public List<TipoPension> getTiposPension() {
+		return Arrays.asList(TipoPension.values());
+	}
+	
+	/**
+	 * Retorna los tipos de pensionado definidos en el sistema
+	 * @return actividades economicas
+	 */
+	public List<TipoPensionado> getTiposPensionado() {
+		return Arrays.asList(TipoPensionado.values());
 	}
 }
