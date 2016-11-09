@@ -21,7 +21,7 @@ export class IntermediaryComponent implements OnInit {
   }
 
   public deleteRow(row: any) {
-    console.log(row);
+    this.intermediaryService.deleteSuperEntity(row.id);
   }
 
   public getRowData(row, data) {

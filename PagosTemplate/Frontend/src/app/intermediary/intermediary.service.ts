@@ -8,11 +8,12 @@ import {UserApiService} from "../services/user.api.service";
 export class IntermediaryService {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
   public columns: Array<any> = [
-    {title: 'Nombre empresa', className: 'text-warning', name: 'nombre'},
+    {title: 'Nombre empresa', className: 'text-warning', name: 'name'},
     {title: 'NIT', name: 'nit'},
-    {title: 'Actividad económica', name: 'actividad'}
+    {title: 'Actividad económica', name: 'econActivity'}
   ];
   public selectedRow = {};
+  public econActivities =[];
 
   constructor(private intermediaryApiService: IntermediaryApiService,
               private userApiService: UserApiService) {
@@ -20,6 +21,14 @@ export class IntermediaryService {
 
   public selectRow(row) {
     this.selectedRow = row;
+  }
+
+  public addNewRow(row) {
+    this.rows.push(row);
+  }
+
+  public resetSelectedRow() {
+    this.selectedRow = {};
   }
 
   public loadSuperEntity(): any {
@@ -34,6 +43,8 @@ export class IntermediaryService {
     console.log("**Intermediary:Save Superentity " + superEntity.name + ' NIT ' + superEntity.nit);
     this.intermediaryApiService.saveSuperEntity(superEntity).subscribe((response: any) => {
       if (response) {
+        this.addNewRow(superEntity);
+        this.resetSelectedRow();
         //Salva ahora el administrador luego de que la superentidad quedo guardada
         console.log("**SUCCESS: Se guardo la superentidad" + JSON.stringify(response));
         //Crea objeto tipo usuario para salvar
@@ -55,5 +66,24 @@ export class IntermediaryService {
         console.log("**ERORR: No se guardo la superentidad revisar Logs");
       }
     });
+  }
+
+  public deleteSuperEntity(id: string) {
+    this.intermediaryApiService.deleteSuperEntity(id)
+      .subscribe((response: any) => {
+        var index = this.rows.indexOf(this.selectedRow, 0);
+        if (index > -1) {
+          this.rows.splice(index, 1);
+          this.selectedRow = {};
+        }
+      });
+  }
+
+
+  public loadEconnActivities (){
+    this.intermediaryApiService.getEconnActivities()
+      .subscribe((response: any) => {
+        this.econActivities = response;
+      });
   }
 }

@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {UserApiService} from "../services/user.api.service";
-import {IntermediaryApiService} from "../services/intermediary.api.service";
-import {SuperEntity, User} from "../sharedresources/classes";
 import {IntermediaryService} from "../intermediary/intermediary.service";
 import {ISuperEntity, IUser} from "../sharedresources/interfaces";
 
@@ -17,6 +14,7 @@ export class IntermediaryFormComponent implements OnInit {
 
   ngOnInit() {
     //this.superEntity = () => this.intermediaryService.selectedRow;
+    this.intermediaryService.loadEconnActivities();
   }
 
   public saveSuperEntity() {
