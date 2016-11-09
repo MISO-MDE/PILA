@@ -90,7 +90,19 @@ public class SuperEntityLogic {
 		
 		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
 		
-		return "";
+		if(!superTO.getNombre().isEmpty()) {
+			superEntity.setNombre(superTO.getNombre());
+		} 
+		
+		if(!superTO.getNIT().isEmpty()) {
+			superEntity.setNIT(superTO.getNIT());
+		}
+		
+		if(!superTO.getCIU().isEmpty()) {
+			superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+		}
+		
+		return "" + superDAO.update(superEntity).getId();
 	}
 	
 	/**
