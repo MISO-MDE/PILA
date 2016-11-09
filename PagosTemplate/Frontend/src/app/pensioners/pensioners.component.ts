@@ -3,6 +3,7 @@ import {PAsideService} from "../p-aside/p-aside.service";
 import {PensionerFormComponent} from "../pensioner-form/pensioner-form.component";
 import {PensionerApiService} from "../services/pensioner.api.service";
 import {PensionersService} from "./pensioners.service";
+import {IEntity} from "../sharedresources/interfaces";
 
 @Component({
   selector: 'app-pensioners',
@@ -15,7 +16,7 @@ export class PensionersComponent implements OnInit {
   public columns: Array<any> = [
     {title: 'Nombre', className: 'text-warning', name: 'firstName'},
     {title: 'Apellido', className: 'text-warning', name: 'lastName'},
-    {title: 'Identificación', name: 'cedula'}
+    {title: 'Identificación', name: 'legalIdCard'}
   ];
 
   constructor(private asideService: PAsideService,
@@ -38,4 +39,9 @@ export class PensionersComponent implements OnInit {
   public getRowData(row, data) {
     return row [data];
   }
+
+  public saveSuperEntity() {
+    this.pensionersService.saveEntity(<IEntity>this.pensionersService.selectedRow);
+  }
+
 }

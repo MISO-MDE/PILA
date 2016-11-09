@@ -21,14 +21,14 @@ export interface ISuperEntity {
 
 export interface IEntity {
     id: number;
-    legalIdCard: string;
+    cedula: string;
     firstName: string;
     lastName: string;
     pensionType: string;
 	pensionerType: string;
 	residence: string;
 	familyResidence: string;
-	proffesion: string;
+	profession: string;
 	salary: number;
 }
 

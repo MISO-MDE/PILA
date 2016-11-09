@@ -3,4 +3,4 @@
 
 PagosTemplate/Frontend/node_modules
 PagosTemplate/Backend/PilaPayments/bin
-.recommenders/
+PagosTemplate/Backend/.recommenders
