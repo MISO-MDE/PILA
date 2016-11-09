@@ -95,31 +95,6 @@ public class EntityManager {
         return response;	
 	}
 	
-	@GET
-	@Path("/legalId")
-	@Produces(MediaType.APPLICATION_JSON)
-	public String getEntityByCedula(@QueryParam("cedula") String cedula) {
-
-		logger.debug("Start getEntityByCedula");
-		logger.debug("id: '" + cedula + "'");
-		
-		ObjectMapper mapper = new ObjectMapper();
-		String response = "";
-	
-		try{
-		//response = mapper.writerWithDefaultPrettyPrinter()
-			//	.writeValueAsString(getEntityLogic().getEntitiesByCedula(Long.valueOf(cedula)));
-		}
-		catch(Exception ex){
-			response = "No se pudo encontrar el registro. \n" + ex.getMessage();
-		}
-		
-		logger.debug("result: '"+ response +"'");
-        logger.debug("End getEntityManager");
-
-        return response;	
-	}
-
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)

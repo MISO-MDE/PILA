@@ -42,13 +42,9 @@ export class PaymentFormComponent implements OnInit {
     console.log("Evento llamando datos de la entidad:" + this.cedula);
     this.pensionerService.getPensionersByLegalId(this.cedula).subscribe((entityObj:any) => {
       console.log("Evento llamando datos de la entidad:" + JSON.stringify(entityObj));
-      let firstRow = entityObj[0];
-      
-      this.cedula = firstRow.cedula;
-      this.firstName = firstRow.firstName;
-      this.lastName = firstRow.lastName;  
-
-      //this.firstName = 'Hola Mundo';
+      this.cedula = entityObj.cedula;
+      this.firstName = entityObj.firstName;
+      this.lastName = entityObj.lastName;     
     });
   }
 
