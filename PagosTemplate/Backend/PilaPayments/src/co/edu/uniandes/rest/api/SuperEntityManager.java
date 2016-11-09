@@ -159,11 +159,24 @@ public class SuperEntityManager {
 
         return response;	
 	}
-
+	
+	/**
+	 * Eliminar una superentity
+	 * @param theSuperEntity
+	 * @return
+	 */
 	@DELETE
-	public void deleteSuperEntity(Object theSuperEntity) {
+	public Response deleteSuperEntity(Object theSuperEntity) {
 		
-		logger.debug("Start deleteSuperEntity");
+		String response = "";
+		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		
+		if(!jsonObject.getString("id").isEmpty()) {
+			getSuperEntityLogic().removeSuperEntity(Long.parseLong(jsonObject.getString("id")));
+			response = "ok";
+		}
+			
+		return Response.status(200).entity(response).build();
 	}
 	
 	/**
