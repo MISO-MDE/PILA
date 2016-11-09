@@ -176,4 +176,23 @@ public class SuperEntityManager {
 		}
 		return logic;
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	@GET
+	@Path("/eactivities")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getEconomicActivities() {
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+		try {
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getSuperEntityLogic().getEconActivities());
+		} catch (JsonProcessingException e) {
+			response = "No se pudo obtener la lista " + e.getMessage();
+		}
+		return response;
+	}
 }
