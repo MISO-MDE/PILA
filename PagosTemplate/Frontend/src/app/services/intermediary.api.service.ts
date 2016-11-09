@@ -34,6 +34,19 @@ export class IntermediaryApiService {
             .catch(this.handleError);
     }
 
+    deleteSuperEntity(id: string) {
+      let options = {id: id};
+      return this.http.delete(this.url+"/"+id)
+        .map(this.extractData)
+        .catch(this.handleError);
+    }
+
+
+    getEconnActivities (){
+      let url ="PilaPayments/api/superentities/eactivities";
+      return this.http.get(url).map(this.extractData);
+    }
+
     private extractData(res: Response) {
         let body;
         // check if empty, before call json

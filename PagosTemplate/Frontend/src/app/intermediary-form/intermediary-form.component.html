@@ -5,10 +5,11 @@
     <input [(ngModel)]="intermediaryService.selectedRow.nit" type="text" class="form-control"/>
     <label>Nombre</label>
     <input [(ngModel)]="intermediaryService.selectedRow.name" type="text" class="form-control"/>
-    <label>Codigo CIIU</label>
-    <input [(ngModel)]="intermediaryService.selectedRow.ciiuCode" type="text" class="form-control"/>
     <label>Actividad Económica</label>
-    <input [(ngModel)]="intermediaryService.selectedRow.econActivity" type="text" class="form-control"/>
+    <select class="form-control"
+            [(ngModel)]="intermediaryService.selectedRow.ciiuCode">
+      <option *ngFor="let option of  intermediaryService.econActivities" [value]="option.id">{{option.name}}</option>
+    </select>
     <br>
     <!--Informacion del Administrador del la superentidad-->
     <h4>Administrador</h4>
