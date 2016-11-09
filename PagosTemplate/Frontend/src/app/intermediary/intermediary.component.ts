@@ -25,7 +25,11 @@ export class IntermediaryComponent implements OnInit {
   }
 
   public getRowData(row, data) {
-    return row [data];
+    let value = row [data];
+    if (typeof value === 'object') {
+      return value.name;
+    }
+    return value;
   }
 
   ngOnInit() {
