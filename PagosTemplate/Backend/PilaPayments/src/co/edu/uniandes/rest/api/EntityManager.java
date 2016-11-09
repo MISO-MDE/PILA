@@ -15,8 +15,15 @@ import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+
+import co.edu.uniandes.to.PilaEntityTO;
+import co.edu.uniandes.staticmodel.ActividadEconomica;
+import co.edu.uniandes.staticmodel.TipoPension;
+import co.edu.uniandes.staticmodel.TipoPensionado;
 
 @Path("/entities")
 public class EntityManager {
@@ -63,7 +70,16 @@ public class EntityManager {
 		
 		logger.debug("Object " + theEntity.toString());
 		
+		JSONObject jsonObject = new JSONObject(theEntity);
+		PilaEntityTO entityTO = new PilaEntityTO();
 		
+		entityTO.setCedula(Integer.parseInt(jsonObject.getString("cedula")));
+		entityTO.setNombre(jsonObject.getString("nombre"));
+		entityTO.setApellido(jsonObject.getString("apellido"));
+		entityTO.setSalario(Double.parseDouble(jsonObject.getString("salario")));
+		entityTO.setTipoPension(TipoPension.valueOf(jsonObject.getString("tipoPension")));
+		entityTO.setTipoPensionado(TipoPensionado.valueOf(jsonObject.getString("tipoPensionado")));
+		entityTO.setActividad(ActividadEconomica.valueOf(jsonObject.getString("actividad")));
 		
 
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad

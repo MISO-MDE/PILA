@@ -36,7 +36,16 @@ public class EntityLogic {
 		entity.setNombre(entity.getNombre());
 		entity.setApellido(entityTO.getApellido());
 		entity.setSalario(entityTO.getSalario());
-		entity.setTipoPension(entity.getTipoPension());
+		entity.setTipoPension(entityTO.getTipoPension());
+		entity.setTipoPensionado(entityTO.getTipoPensionado());
+		entity.setActividad(entityTO.getActividad());
+		entity.setSuperEntidad(entityTO.getSuperEntidad());
+		entity.setPais(entityTO.getPais());
+		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
+		
+		entity = entityDAO.create(entity);
+		
+		response = entity.getId().toString();
 		
 		return response;
 	}
