@@ -16,7 +16,7 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	 * @param cedula
 	 * @return
 	 */
-	public PilaEntity findEntity(int cedula);
+	public PilaEntity findEntity(long cedula);
 	
 	/**
 	 * Retorna todas las entidades
