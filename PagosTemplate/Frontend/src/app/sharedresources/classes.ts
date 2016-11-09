@@ -36,14 +36,14 @@ export class SuperEntity implements ISuperEntity {
 
 export class Entity implements IEntity {
     public id: number;
-    public legalIdCard: string;
+    public cedula: string;
     public firstName: string;
     public lastName: string;
     public pensionType: string;
 	public pensionerType: string;
 	public residence: string;
 	public familyResidence: string;
-	public proffesion: string;
+	public profession: string;
 	public salary: number;
 }
 

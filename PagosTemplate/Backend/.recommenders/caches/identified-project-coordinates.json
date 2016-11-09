@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [[{"location":"/home/lubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.8/jackson-databind-2.7.8.jar","type":"JAR","hints":{}},"com.fasterxml.jackson.core:jackson-databind:2.7.8"],[{"location":"/home/lubuntu/Documents/Eclipse Workspace/PILA-MASTER/PILA/PagosTemplate/Backend/PilaPayments","type":"PROJECT","hints":{"PROJECT_NAME":"PilaPayments"}},"PilaPayments:PilaPayments:0.0.1"],[{"location":"/etc/java/jdk1.8.0_112","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"]]
+=======
+{}
+>>>>>>> Stashed changes

@@ -5,16 +5,16 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
-import { ISuperEntity } from '../sharedresources/interfaces'
+import { IEntity } from '../sharedresources/interfaces'
 
 @Injectable()
 export class PensionerApiService {
-    private url: string = 'PilaPayments/api/pensioners';
+    private url: string = 'PilaPayments/api/entities';
 
     constructor(private http: Http) {
     }
 
-     getPensioners(userId: String ): Observable<ISuperEntity> {
+     getPensioners(userId: String ): Observable<IEntity> {
         var urlGet;
         if (userId === '*') {
             urlGet = this.url;
@@ -25,12 +25,18 @@ export class PensionerApiService {
         return this.http.get(urlGet).map(this.extractData);
     }
 
-    getPensionersByLegalId(legalIdCard: String ): Observable<ISuperEntity> {
+    getPensionersByLegalId(legalIdCard: String ): Observable<IEntity> {
         var urlGet;
         urlGet = this.url + "?legalIdCard=" + legalIdCard;
         return this.http.get(urlGet).map(this.extractData);
     }
-
+    
+    saveEntity(entity: IEntity) {
+      console.log("Salvando Entidad:" +  JSON.stringify(entity));  
+      return this.http.post(this.url, entity)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
 
     private extractData(res: Response) {
         let body;
