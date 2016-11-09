@@ -4,6 +4,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+
+import java.io.IOException;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.Produces;
@@ -18,10 +21,19 @@ import org.apache.logging.log4j.Logger;
 
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 
 import co.edu.uniandes.to.PilaEntityTO;
+import co.edu.uniandes.businesslogic.EntityLogic;
+import co.edu.uniandes.businesslogic.SuperEntityLogic;
+import co.edu.uniandes.dao.EntityDAOImpl;
+import co.edu.uniandes.dao.SuperEntityDAOImpl;
+import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
@@ -33,7 +45,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class EntityManager {
 
 	private static final Logger logger = LogManager.getLogger(EntityManager.class);
-		
+	
+	private EntityLogic logic;
+	
+	public String getEntities(){
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+		try {
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getEntities());
+		} catch (JsonProcessingException e) {
+			response = "No se pudo obtener la lista " + e.getMessage();
+		}
+		return response;
+	}
+	
 	//Consulta por Cedula o por Id de entidad
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -54,7 +79,7 @@ public class EntityManager {
 					"\"" + "pensionerType\":" + "\"Prima Media\"," +
 					"\"" + "residence\":" + "\"Colombia\"," +
 					"\"" + "familyResidence\":" + "\"Colombia\"," +
-					"\"" + "proffesion\":" + "\"Congreista\"," +
+					"\"" + "profession\":" + "\"Congreista\"," +
 					"\"" + "salary\":" + "27000000" +
 					"}";
         
@@ -67,22 +92,23 @@ public class EntityManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postEntity(Object theEntity) {
+	public Response postEntity(Object theEntity) throws JsonParseException, JsonMappingException, IOException  {
 
 		logger.debug("Start postEntity");
 		
 		logger.debug("Object " + theEntity.toString());
 		
-		JSONObject jsonObject = new JSONObject(theEntity);
+		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
+		
 		PilaEntityTO entityTO = new PilaEntityTO();
 		
-		entityTO.setCedula(Integer.parseInt(jsonObject.getString("cedula")));
-		entityTO.setNombre(jsonObject.getString("nombre"));
-		entityTO.setApellido(jsonObject.getString("apellido"));
-		entityTO.setSalario(Double.parseDouble(jsonObject.getString("salario")));
-		entityTO.setTipoPension(TipoPension.valueOf(jsonObject.getString("tipoPension")));
-		entityTO.setTipoPensionado(TipoPensionado.valueOf(jsonObject.getString("tipoPensionado")));
-		entityTO.setActividad(ActividadEconomica.valueOf(jsonObject.getString("actividad")));
+		entityTO.setCedula(node.get("cedula").asInt());
+		entityTO.setNombre(node.get("firstName").asText());
+		entityTO.setApellido(node.get("lastName").asText());
+		entityTO.setSalario(node.get("salary").asDouble());
+		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
+		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
+		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
 		
 
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
@@ -111,5 +137,16 @@ public class EntityManager {
 	public void deleteEntity(Object theSuperEntity) {
 		
 		logger.debug("Start deleteEntity");
+	}
+	
+	/**
+	 * metodo auxiliar para obtener la logica del entity
+	 * @return
+	 */
+	public EntityLogic getEntityLogic() {
+		if(logic == null){
+			logic = new EntityLogic(new EntityDAOImpl());					
+		}
+		return logic;
 	}
 }

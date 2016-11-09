@@ -20,6 +20,16 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	private static final EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
 	/**
+	 * @see co.edu.uniandes.dao.EntityDAO#findAllEntity()
+	 */
+	@Override
+	public List<PilaEntity> findAllEntity() {
+		Query query = getEntityManager().createQuery("from PilaEntity");
+			
+		return query.getResultList();
+	}
+	
+	/**
 	 * @see co.edu.uniandes.dao.EntityDAO#findEntity(int)
 	 */
 	@Override
