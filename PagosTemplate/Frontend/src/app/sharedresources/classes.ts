@@ -36,6 +36,7 @@ export class SuperEntity implements ISuperEntity {
 
 export class Entity implements IEntity {
     public id: number;
+    public superEntityId: number;
     public cedula: string;
     public firstName: string;
     public lastName: string;
@@ -44,12 +45,12 @@ export class Entity implements IEntity {
 	public residence: string;
 	public familyResidence: string;
 	public profession: string;
-	public salary: number;
+	public salary: number; 
 }
 
 export class Payment implements IPayment {
     public id: number;
-	public supetrEntityId: number;
+	public superEntityId: number;
 	public entityId: number;
 	public paymentDate: Date;
     public subTotal1: number;

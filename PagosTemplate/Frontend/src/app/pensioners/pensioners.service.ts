@@ -28,7 +28,8 @@ export class PensionersService {
   public loadPensioners(): any {
     this.pensionerApiService.getPensioners('*')
       .subscribe((response: any) => {
-        this.rows = response.results;
+        console.log("PENSIONERS:" + JSON.stringify(response));
+        this.rows = response;
       });
   }
 

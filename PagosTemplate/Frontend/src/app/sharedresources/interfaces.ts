@@ -21,6 +21,7 @@ export interface ISuperEntity {
 
 export interface IEntity {
     id: number;
+    superEntityId: number;
     cedula: string;
     firstName: string;
     lastName: string;
@@ -34,7 +35,7 @@ export interface IEntity {
 
 export interface IPayment {
     id: number;
-	supetrEntityId: number;
+	superEntityId: number;
 	entityId: number;
 	paymentDate: Date;
     subTotal1: number;
