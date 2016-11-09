@@ -7,15 +7,18 @@
     <input [(ngModel)]="pensionersService.selectedRow.firstName" type="text" class="form-control"/>
     <label>Apellidos</label>
     <input [(ngModel)]="pensionersService.selectedRow.lastName" type="text" class="form-control"/>
+    <label>SuperEntidad</label>
+    <input [(ngModel)]="pensionersService.selectedRow.superEntityId" type="text" class="form-control"/>
     <label>Tipo de pension</label>
     <select class="form-control"
             [(ngModel)]="pensionersService.selectedRow.pensionType">
-      <option *ngFor="let option of  pensionTypeOptions" [value]="option.id">{{option.name}}</option>
+      <option *ngFor="let option of  pensionTypeOptions" [value]="option.name">{{option.name}}</option>
     </select>
+    
     <label>Tipo de pensionado</label>
     <select class="form-control"
             [(ngModel)]="pensionersService.selectedRow.pensionerType">
-      <option *ngFor="let option of  pensionerTypeOptions" [value]="option.id">{{option.name}}</option>
+      <option *ngFor="let option of  pensionerTypeOptions" [value]="option.name">{{option.name}}</option>
     </select>
     <label>Pais de residencia</label>
     <select class="form-control"
@@ -32,7 +35,14 @@
       <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
     </select>
     <label>Profesión</label>
-    <input [(ngModel)]="pensionersService.selectedRow.profession" class="form-control"/>
+    <select class="form-control"
+            [(ngModel)]="pensionersService.selectedRow.profession">
+      <option *ngFor="let option of  profession" [value]="option.id">{{option.name}}</option>
+    </select>  
+
+
+    <!--input [(ngModel)]="pensionersService.selectedRow.profession" class="form-control"/-->
+    
     <label>Salario</label>
     <input [(ngModel)]="pensionersService.selectedRow.salary" type="number" class="form-control text-right"/>
     <br>
@@ -44,3 +54,5 @@
     </button>
   </div>
 </div>
+
+

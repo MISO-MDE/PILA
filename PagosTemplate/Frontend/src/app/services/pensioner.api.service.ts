@@ -54,4 +54,12 @@ export class PensionerApiService {
         console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
     }
+    
+    getMultiLov(lovAddr: string) {
+        console.log("getMultiLov:" + lovAddr);
+        let url = this.url + lovAddr;
+        console.log("MultiLov Addr:" + url);
+        return this.http.get(url).map(this.extractData);
+    }
+
 }

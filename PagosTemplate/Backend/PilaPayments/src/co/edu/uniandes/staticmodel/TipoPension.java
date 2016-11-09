@@ -35,8 +35,13 @@ public enum TipoPension {
     /**
      * @param text
      */
-    TipoPension(final String text) {
+    TipoPension(String text) {
         this.text = text;
+    }
+   
+    //devuelve el texto del enum
+    public String getName() {
+    	return this.text;
     }
 
     /**

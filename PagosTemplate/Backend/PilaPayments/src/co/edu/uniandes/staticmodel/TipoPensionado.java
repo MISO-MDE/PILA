@@ -27,6 +27,11 @@ public enum TipoPensionado {
     TipoPensionado(final String text) {
         this.text = text;
     }
+    
+    //devuelve el texto del enum
+    public String getName() {
+    	return this.text;
+    }
 
     /**
      * @see java.lang.Enum#toString()

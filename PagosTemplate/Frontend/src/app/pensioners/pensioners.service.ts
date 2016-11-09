@@ -9,6 +9,7 @@ import {PensionerApiService} from "../services/pensioner.api.service";
 
 @Injectable()
 export class PensionersService {
+
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
@@ -22,7 +23,7 @@ export class PensionersService {
   }
 
   public selectRow(row) {
-    this.selectedRow = row;
+      this.selectedRow = row;
   }
 
   public loadPensioners(): any {
@@ -44,5 +45,18 @@ export class PensionersService {
       }
     });
   }
+  
+  public loadMultiLov(lovAddr:string) {
+    console.log("Respuesta LOV loadMultiLov:" + lovAddr);
+    return this.pensionerApiService.getMultiLov(lovAddr);
+  }
 
+/*
+  public loadMultiLov(lovAddr:string) {
+    this.pensionerApiService.getMultiLov(lovAddr)
+      .subscribe((response: any) => {
+        this.pensionTypeOptions = response;
+      });
+  }
+*/
 }

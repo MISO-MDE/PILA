@@ -122,6 +122,18 @@ public class EntityManager {
 		
 		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
 		
+		logger.debug("Object1 " + node.get("cedula").asInt());
+		logger.debug("Object2 " + node.get("firstName").asText());
+		logger.debug("Object3 " + node.get("lastName").asText());
+		logger.debug("Object4 " + node.get("salary").asDouble());
+		logger.debug("Object5 " + TipoPension.valueOf(node.get("pensionType").asText()));
+		
+		logger.debug("Object6 " + node.get("pensionerType").asText());
+		logger.debug("Object7 " + ActividadEconomica.valueOf(node.get("profession").asText()));
+		logger.debug("Object8 " + Long.valueOf(node.get("residenceCountry").asText()));
+		logger.debug("Object9 " + Long.valueOf(node.get("familyResidenceCountry").asText()));
+		logger.debug("Object10 " + Long.valueOf(node.get("superEntityId").asText()));
+		
 		PilaEntityTO entityTO = new PilaEntityTO();
 		
 		Pais pais = new Pais();
@@ -133,9 +145,11 @@ public class EntityManager {
 		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
 		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
 		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
-		entityTO.setPais(Long.valueOf(node.get("residense").asText()));
-		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familiyResidence").asText()));
+		entityTO.setPais(Long.valueOf(node.get("residenceCountry").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familyResidenceCountry").asText()));
 		entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText()));
+		
+		
 		
 
 		String id = getEntityLogic().crearEntity(entityTO); // Debe retornar el id creado la entidad
@@ -208,7 +222,7 @@ public class EntityManager {
 	@Path("/epensions")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getPensionTypes() {
-		
+		logger.debug("Entrando REST GET /epensions");
 		ObjectMapper mapper = new ObjectMapper();
 		String response = "";
 		try {
@@ -216,6 +230,7 @@ public class EntityManager {
 		} catch (JsonProcessingException e) {
 			response = "No se pudo obtener la lista.\n" + e.getMessage();
 		}
+		logger.debug("resultLOV Tipo Pension: '" + response + "'");
 		return response;
 	}
 	

@@ -8,11 +8,15 @@ import co.edu.uniandes.dao.PaisDAO;
 import co.edu.uniandes.dao.SuperEntityDAO;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.rest.api.EntityManager;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
 import co.edu.uniandes.to.PilaEntityTO;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Logica del super entity
@@ -23,6 +27,8 @@ public class EntityLogic {
 	private EntityDAO entityDAO;
 	private SuperEntityDAO superEntityDAO;
 	private PaisDAO paisDAO;
+	
+	private static final Logger logger = LogManager.getLogger(EntityLogic.class);
 	
 	/**
 	 * Constructor
