@@ -12,7 +12,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let row of intermediaryService.rows">
-      <td *ngFor="let column of intermediaryService.columns">{{getRowData(row,column.name)}}</td>
+      <td class="{{column.className}}" *ngFor="let column of intermediaryService.columns">{{getRowData(row,column.name)}}</td>
       <td>
         <button (click)="editRow(row)" class="btn btn-primary">
           <i class="glyphicon glyphicon-pencil"></i>

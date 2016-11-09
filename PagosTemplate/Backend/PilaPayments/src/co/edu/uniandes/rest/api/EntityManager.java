@@ -175,6 +175,63 @@ public class EntityManager {
 	}
 	
 	/**
+	 * 
+	 * @return
+	 */
+	@GET
+	@Path("/eactivities")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getEconomicActivities() {
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+		try {
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getEconActivities());
+		} catch (JsonProcessingException e) {
+			response = "No se pudo obtener la lista.\n" + e.getMessage();
+		}
+		return response;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	@GET
+	@Path("/epensions")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getPensionTypes() {
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+		try {
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getTiposPension());
+		} catch (JsonProcessingException e) {
+			response = "No se pudo obtener la lista.\n" + e.getMessage();
+		}
+		return response;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	@GET
+	@Path("/epensioners")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getPensionerTypes() {
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+		try {
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getTiposPensionado());
+		} catch (JsonProcessingException e) {
+			response = "No se pudo obtener la lista " + e.getMessage();
+		}
+		return response;
+	}
+	
+	/**
 	 * metodo auxiliar para obtener la logica del entity
 	 * @return
 	 */
