@@ -8200,6 +8200,12 @@ button.close {
 /**
   Custom css
 **/
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #eee;
+}
 .payments-project .form-group label {
   margin-bottom: 2px;
   font-weight: 200;
