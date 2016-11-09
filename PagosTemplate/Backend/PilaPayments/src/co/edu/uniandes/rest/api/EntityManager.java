@@ -32,8 +32,10 @@ import co.edu.uniandes.to.PilaEntityTO;
 import co.edu.uniandes.businesslogic.EntityLogic;
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
+import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
+import co.edu.uniandes.entity.Pais;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
@@ -122,6 +124,8 @@ public class EntityManager {
 		
 		PilaEntityTO entityTO = new PilaEntityTO();
 		
+		Pais pais = new Pais();
+		
 		entityTO.setCedula(node.get("cedula").asInt());
 		entityTO.setNombre(node.get("firstName").asText());
 		entityTO.setApellido(node.get("lastName").asText());
@@ -129,6 +133,9 @@ public class EntityManager {
 		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
 		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
 		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		entityTO.setPais(Long.valueOf(node.get("residense").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familiyResidence").asText()));
+		entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText()));
 		
 
 		String id = getEntityLogic().crearEntity(entityTO); // Debe retornar el id creado la entidad
@@ -237,7 +244,7 @@ public class EntityManager {
 	 */
 	public EntityLogic getEntityLogic() {
 		if(logic == null){
-			logic = new EntityLogic(new EntityDAOImpl());					
+			logic = new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new PaisDAOImpl());					
 		}
 		return logic;
 	}
@@ -255,6 +262,9 @@ public class EntityManager {
 		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
 		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
 		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		entityTO.setPais(Long.valueOf(node.get("residense").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familiyResidence").asText()));
+		entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText()));
 		
 		return entityTO;
 	}

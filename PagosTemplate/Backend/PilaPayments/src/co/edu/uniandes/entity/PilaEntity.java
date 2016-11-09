@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
@@ -59,12 +61,12 @@ public class PilaEntity {
 	/**
 	 * Pais en el que reside
 	 */
-	private Pais pais;
+	private Long pais;
 	
 	/**
 	 * pais del grup familiar
 	 */
-	private Pais paisGrupoFamiliar;
+	private Long paisGrupoFamiliar;
 	
 	/**
 	 * actividad economica
@@ -116,6 +118,7 @@ public class PilaEntity {
 	/**
 	 * @return the nombre
 	 */
+	@JsonProperty("firstName")
 	public String getNombre() {
 		return nombre;
 	}
@@ -130,6 +133,7 @@ public class PilaEntity {
 	/**
 	 * @return the apellido
 	 */
+	@JsonProperty("lastName")
 	public String getApellido() {
 		return apellido;
 	}
@@ -144,6 +148,7 @@ public class PilaEntity {
 	/**
 	 * @return the salario
 	 */
+	@JsonProperty("salary")
 	public double getSalario() {
 		return salario;
 	}
@@ -158,6 +163,7 @@ public class PilaEntity {
 	/**
 	 * @return el tipo de pension
 	 */
+	@JsonProperty("pensionType")
 	@Enumerated(EnumType.STRING)
 	public TipoPension getTipoPension(){
 		return tipoPension;
@@ -173,6 +179,7 @@ public class PilaEntity {
 	/**
 	 * @return el tipo de pensionado
 	 */
+	@JsonProperty("pensionerType")
 	@Enumerated(EnumType.STRING)
 	public TipoPensionado getTipoPensionado(){
 		return tipoPensionado;
@@ -188,6 +195,7 @@ public class PilaEntity {
 	/**
 	 * @return the actividad
 	 */
+	@JsonProperty("profession")
 	@Enumerated(EnumType.STRING)
 	public ActividadEconomica getActividad() {
 		return actividad;
@@ -203,6 +211,7 @@ public class PilaEntity {
 	/**
 	 * @return the superEntidad
 	 */
+	@JsonProperty("superEntityId")
 	@ManyToOne
 	@JoinColumn(name="pilaSuperEntity_id")
 	public PilaSuperEntity getSuperEntidad() {
@@ -219,32 +228,34 @@ public class PilaEntity {
 	/**
 	 * @return the pais
 	 */
-	@OneToOne
-	@JoinColumn(name="pais_id")
-	public Pais getPais() {
+	@JsonProperty("residence")
+	//@OneToOne
+	//@JoinColumn(name="pais_id")
+	public Long getPais() {
 		return pais;
 	}
 
 	/**
 	 * @param pais the pais to set
 	 */
-	public void setPais(Pais pais) {
+	public void setPais(Long pais) {
 		this.pais = pais;
 	}
 
 	/**
 	 * @return the paisGrupoFamiliar
 	 */
-	@OneToOne
-	@JoinColumn(name="pais_idGrupo")
-	public Pais getPaisGrupoFamiliar() {
+	@JsonProperty("familyResidence")
+	//@OneToOne
+	//@JoinColumn(name="pais_idGrupo")
+	public Long getPaisGrupoFamiliar() {
 		return paisGrupoFamiliar;
 	}
 
 	/**
 	 * @param paisGrupoFamiliar the paisGrupoFamiliar to set
 	 */
-	public void setPaisGrupoFamiliar(Pais paisGrupoFamiliar) {
+	public void setPaisGrupoFamiliar(Long paisGrupoFamiliar) {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
 	}
 }
