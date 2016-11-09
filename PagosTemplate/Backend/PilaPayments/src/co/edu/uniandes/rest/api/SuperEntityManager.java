@@ -8,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -166,9 +167,10 @@ public class SuperEntityManager {
 	 * @return
 	 */
 	@DELETE
+	@Path("{id}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response deleteSuperEntity(@QueryParam("id") String id) {
-		
+	public Response deleteSuperEntity(@PathParam("id") String id) {
+		logger.debug("Start deleteSuperEntity"+id);
 		getSuperEntityLogic().removeSuperEntity(Long.parseLong(id));
 		
 		return Response.status(200).entity("ok").build();
