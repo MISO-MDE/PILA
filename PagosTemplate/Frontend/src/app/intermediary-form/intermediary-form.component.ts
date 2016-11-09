@@ -24,4 +24,7 @@ export class IntermediaryFormComponent implements OnInit {
   public updateSuperEntity(){
     this.intermediaryService.updateSuperEntity(<ISuperEntity>this.intermediaryService.selectedRow);
   }
+  public cancel(){
+    this.intermediaryService.resetSelectedRow();
+  }
 }

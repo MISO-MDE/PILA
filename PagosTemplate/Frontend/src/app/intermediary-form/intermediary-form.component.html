@@ -28,5 +28,8 @@
     <button  *ngIf="intermediaryService.isEditingRow()" (click)="updateSuperEntity()" class="btn btn-warning">
       <span>Actualizar</span>
     </button>
+    <button  *ngIf="intermediaryService.isEditingRow()" (click)="cancel()" class="btn btn-default">
+      <span>Cancelar</span>
+    </button>
   </div>
 </div>
