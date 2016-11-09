@@ -94,6 +94,15 @@ public class SuperEntityLogic {
 	}
 	
 	/**
+	 * elimina un super entity
+	 * @param id
+	 */
+	public void removeSuperEntity(Long id) {
+		PilaSuperEntity superEntity = superDAO.findSuperEntityById(id);
+		superDAO.deleteEntity(superEntity);
+	}
+	
+	/**
 	 * retorna las super entidades del sistema
 	 * @return
 	 */

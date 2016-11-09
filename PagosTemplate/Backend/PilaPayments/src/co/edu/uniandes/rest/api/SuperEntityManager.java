@@ -159,11 +159,19 @@ public class SuperEntityManager {
 
         return response;	
 	}
-
+	
+	/**
+	 * Eliminar una superentity
+	 * @param theSuperEntity
+	 * @return
+	 */
 	@DELETE
-	public void deleteSuperEntity(Object theSuperEntity) {
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response deleteSuperEntity(@QueryParam("id") String id) {
 		
-		logger.debug("Start deleteSuperEntity");
+		getSuperEntityLogic().removeSuperEntity(Long.parseLong(id));
+		
+		return Response.status(200).entity("ok").build();
 	}
 	
 	/**

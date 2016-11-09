@@ -19,6 +19,13 @@ export class IntermediaryService {
               private userApiService: UserApiService) {
   }
 
+  public isEditingRow(){
+    if(this.selectedRow && this.selectedRow.id){
+      return true
+    }
+    return false;
+  }
+
   public selectRow(row) {
     this.selectedRow = row;
   }

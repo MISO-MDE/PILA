@@ -20,5 +20,4 @@ export class IntermediaryFormComponent implements OnInit {
   public saveSuperEntity() {
     this.intermediaryService.saveSuperEntity(<ISuperEntity>this.intermediaryService.selectedRow, this.userAdmin);
   }
-
 }
