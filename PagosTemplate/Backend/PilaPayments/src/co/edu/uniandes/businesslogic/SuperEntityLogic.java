@@ -20,6 +20,9 @@ public class SuperEntityLogic {
 	 */
 	private SuperEntityDAO superDAO;
 	
+	/**
+	 * dao usuario de super entidad
+	 */
 	private SuperEntityUserDAO userDAO;
 	
 	/**
@@ -41,7 +44,7 @@ public class SuperEntityLogic {
 		PilaSuperEntity superEntity= new PilaSuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
-		superEntity.setActividad(ActividadEconomica.valueOf(superTO.getCIU()));
+		superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
 		
 		superEntity = superDAO.create(superEntity);	
 		
@@ -64,7 +67,7 @@ public class SuperEntityLogic {
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
-		user.setPassword(superTO.getPassword());
+		user.setUserId(superTO.getUserId()); // Guarda el id de firebase
 		user.setSuperEntity(superEntity);
 		
 		user = userDAO.create(user);
@@ -79,10 +82,30 @@ public class SuperEntityLogic {
 	}
 	
 	/**
+	 * Actualiza la superEntidad
+	 * @return super entidad actualizada
+	 */
+	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
+		
+		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		
+		return "";
+	}
+	
+	/**
 	 * retorna las super entidades del sistema
 	 * @return
 	 */
 	public List<PilaSuperEntity> getSuperEntities() {
 		return superDAO.findAllSuperEntity();
 	}
+	
+	/**
+	 * retorna las super entidad por id
+	 * @return
+	 */
+	public PilaSuperEntity getSuperEntitiesById(long id) {
+		return superDAO.findSuperEntityById(id);
+	}
+	
 }

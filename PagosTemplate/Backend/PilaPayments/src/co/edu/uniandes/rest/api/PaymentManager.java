@@ -37,6 +37,8 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 					"\"" + "id\":" + "1234," +
 					"\"" + "supetrEntityId\":" + "1," +
 					"\"" + "entityId\":" + "1," +
+					"\"" + "firstName\":" + "\"Pedro\"," +
+					"\"" + "lastName\":" + "\"Perez\"," + 
 					"\"" + "paymentDate\":" + "\"10/10/16\"," +
 					"\"" + "subTotal1\":" + "2000000," +
 					"\"" + "subTotal2\":" + "20000000," +
@@ -48,6 +50,8 @@ private static final Logger logger = LogManager.getLogger(EventManager.class);
 					"\"" + "id\":" + "7392," +
 					"\"" + "supetrEntityId\":" + "1," +
 					"\"" + "entityId\":" + "2," +
+					"\"" + "firstName\":" + "\"Ramon\"," +
+					"\"" + "lastName\":" + "\"Diaz\"," + 
 					"\"" + "paymentDate\":" + "\"10/10/16\"," +
 					"\"" + "subTotal1\":" + "150000," +
 					"\"" + "subTotal2\":" + "150000," +

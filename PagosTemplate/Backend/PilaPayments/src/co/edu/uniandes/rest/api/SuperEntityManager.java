@@ -1,5 +1,7 @@
 package co.edu.uniandes.rest.api;
 
+import java.io.IOException;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -15,15 +17,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
-import co.edu.uniandes.dao.IntermediaryUserDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
-import co.edu.uniandes.dao.SuperEntityUserDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
-import co.edu.uniandes.entity.PilaUserSuperEntity;
 import co.edu.uniandes.to.PilaSuperEntityTO;
 
 /**
@@ -99,22 +101,26 @@ public class SuperEntityManager {
 	 * WS para la creacion de un super entity
 	 * @param theSuperEntity super entity a crear
 	 * @return retorna el id de la entidad
+	 * @throws IOException 
+	 * @throws JsonMappingException 
+	 * @throws JsonParseException 
 	 */
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postSuperEntity(Object theSuperEntity) {
+	public Response postSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
 
 		logger.debug("Start postSuperEntity");
 		
 		logger.debug("Object " + theSuperEntity.toString());
 		
-		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		final ObjectNode node = new ObjectMapper().readValue(theSuperEntity.toString(), ObjectNode.class);
+
 		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
 		
-		superTO.setNIT(jsonObject.getString("nit"));
-		superTO.setNombre(jsonObject.getString("name"));
-		superTO.setCIU(jsonObject.getString("ciiuCode"));
+		superTO.setNIT(node.get("nit").asText());
+		superTO.setNombre(node.get("name").asText());
+		superTO.setCIU(node.get("ciiuCode").asText());
 		
 		String id = getSuperEntityLogic().createSuperEntity(superTO);
 		
@@ -131,7 +137,22 @@ public class SuperEntityManager {
 	public String putSuperEntity(Object theSuperEntity) {
 		logger.debug("Start putSuperEntity");
 	
-		String response = null;
+		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
+		
+		if(!jsonObject.getString("nit").isEmpty()) {
+			superTO.setNIT(jsonObject.getString("nit"));
+		}
+		
+		if(!jsonObject.getString("name").isEmpty()) {
+			superTO.setNombre(jsonObject.getString("name"));
+		}
+		
+		if(!jsonObject.getString("ciiuCode").isEmpty()) {
+			superTO.setCIU(jsonObject.getString("ciiuCode"));
+		}
+		
+		String response = getSuperEntityLogic().createSuperEntity(superTO);
 
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");

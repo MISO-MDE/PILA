@@ -38,6 +38,13 @@ public class PilaUser implements Serializable{
 	 * Password del usuario
 	 */
 	private String password;
+	
+	
+	/**
+	 * FireBase id
+	 */
+	private String userId;
+	
 
 	/**
 	 * Constructor
@@ -102,6 +109,20 @@ public class PilaUser implements Serializable{
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	/**
+	 * @return the UserId
+	 */
+	public String getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setUserId(String userId) {
+		this.password = userId;
 	}
 
 }
