@@ -13,14 +13,14 @@ export class IntermediaryService {
     {title: 'Actividad económica', name: 'econActivity'}
   ];
   public selectedRow = {};
-  public econActivities =[];
+  public econActivities = [];
 
   constructor(private intermediaryApiService: IntermediaryApiService,
               private userApiService: UserApiService) {
   }
 
-  public isEditingRow(){
-    if(this.selectedRow && this.selectedRow.id){
+  public isEditingRow() {
+    if (this.selectedRow && this.selectedRow.id) {
       return true
     }
     return false;
@@ -28,6 +28,7 @@ export class IntermediaryService {
 
   public selectRow(row) {
     this.selectedRow = row;
+    this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
   }
 
   public addNewRow(row) {
@@ -75,6 +76,13 @@ export class IntermediaryService {
     });
   }
 
+  public updateSuperEntity(superEntity: SuperEntity): void {
+    this.intermediaryApiService.updateSuperEntity(superEntity)
+      .subscribe((response: any) => {
+        this.loadSuperEntity();
+      });
+  }
+
   public deleteSuperEntity(id: string) {
     this.intermediaryApiService.deleteSuperEntity(id)
       .subscribe((response: any) => {
@@ -87,7 +95,7 @@ export class IntermediaryService {
   }
 
 
-  public loadEconnActivities (){
+  public loadEconnActivities() {
     this.intermediaryApiService.getEconnActivities()
       .subscribe((response: any) => {
         this.econActivities = response;

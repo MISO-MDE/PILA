@@ -33,7 +33,7 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	 * @see co.edu.uniandes.dao.EntityDAO#findEntity(int)
 	 */
 	@Override
-	public PilaEntity findEntity(int cedula) {
+	public PilaEntity findEntity(long cedula) {
 		Query query = em.createQuery("select en from PilaEntity en where en.cedula = :cedula");
 		query.setParameter("cedula", cedula);
 	    

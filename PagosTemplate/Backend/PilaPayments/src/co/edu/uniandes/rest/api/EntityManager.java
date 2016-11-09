@@ -65,14 +65,27 @@ public class EntityManager {
 		return response;
 	}
 	
-	//Consulta por Cedula o por Id de entidad
+	//Consulta por Id de entidad
 	@GET
+	@Path("/entity")
 	@Produces(MediaType.APPLICATION_JSON)
-	public String getEntity(@QueryParam("id") String id, @QueryParam("legalId") String legalId) {
+	public String getEntity(@QueryParam("id") String id) {
 
 		logger.debug("Start getEntity");
 		logger.debug("id: '" + id + "'");
-
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+	
+		try{
+		response = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(getEntityLogic().getEntitiesById(Long.valueOf(id)));
+		}
+		catch(Exception ex){
+			response = "No se pudo encontrar el registro. \n" + ex.getMessage();
+		}
+		
+		/*
 		ObjectMapper mapper = new ObjectMapper();
 		
 		String response = null;
@@ -88,8 +101,9 @@ public class EntityManager {
 					"\"" + "profession\":" + "\"Congreista\"," +
 					"\"" + "salary\":" + "27000000" +
 					"}";
-        
-		logger.debug("result: '"+response+"'");
+        */
+		
+		logger.debug("result: '"+ response +"'");
         logger.debug("End getEntityManager");
 
         return response;	

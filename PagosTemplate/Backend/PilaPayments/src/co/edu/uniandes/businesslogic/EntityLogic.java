@@ -85,4 +85,12 @@ public class EntityLogic {
 	public List<PilaEntity> getEntities() {
 		return entityDAO.findAllEntity();
 	}
+	
+	/**
+	 * retorna la entidad por id
+	 * @return
+	 */
+	public PilaEntity getEntitiesById(long id) {
+		return entityDAO.findEntity(id);
+	}
 }
