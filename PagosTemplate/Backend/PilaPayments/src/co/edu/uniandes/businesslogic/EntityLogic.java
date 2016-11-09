@@ -53,6 +53,31 @@ public class EntityLogic {
 		return response;
 	}
 	
+	public String borrarEntity(PilaEntityTO entityTO){
+		
+		String response = "";
+		
+		PilaEntity entity = new PilaEntity();
+		entity.setCedula(entityTO.getCedula());
+		entity.setNombre(entity.getNombre());
+		entity.setApellido(entityTO.getApellido());
+		entity.setSalario(entityTO.getSalario());
+		entity.setTipoPension(entityTO.getTipoPension());
+		entity.setTipoPensionado(entityTO.getTipoPensionado());
+		entity.setActividad(entityTO.getActividad());
+		entity.setSuperEntidad(entityTO.getSuperEntidad());
+		entity.setPais(entityTO.getPais());
+		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
+		
+		String id = entity.getId().toString();
+		
+		entityDAO.deleteEntity(entity);
+		
+		response = id;
+		
+		return response;
+	}
+	
 	/**
 	 * retorna las entidades del sistema
 	 * @return

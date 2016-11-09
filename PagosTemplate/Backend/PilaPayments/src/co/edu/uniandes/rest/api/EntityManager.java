@@ -48,6 +48,12 @@ public class EntityManager {
 	
 	private EntityLogic logic;
 	
+	/**
+	 * Retorna los entities definidos en el
+	 * @return entidades
+	 */
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 	public String getEntities(){
 		ObjectMapper mapper = new ObjectMapper();
 		String response = "";
@@ -136,9 +142,22 @@ public class EntityManager {
 	}
 
 	@DELETE
-	public void deleteEntity(Object theSuperEntity) {
+	public Response deleteEntity(Object theEntity) throws JsonParseException, JsonMappingException, IOException {
 		
 		logger.debug("Start deleteEntity");
+		
+		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
+		
+		PilaEntityTO entityTO = mapObjectEntity2PilaEntityTO(theEntity);
+
+		String id = getEntityLogic().borrarEntity(entityTO); // Debe retornar el id creado la entidad
+
+		String response = "{\"id\":\""+ id +"\"}";
+		
+		logger.debug("result: '" + response + "'");
+        logger.debug("End deleteEntity");
+
+        return Response.status(200).entity(response).build();
 	}
 	
 	/**
@@ -150,5 +169,22 @@ public class EntityManager {
 			logic = new EntityLogic(new EntityDAOImpl());					
 		}
 		return logic;
+	}
+	
+	private PilaEntityTO mapObjectEntity2PilaEntityTO(Object theEntity) throws JsonParseException, JsonMappingException, IOException {
+		
+		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
+		
+		PilaEntityTO entityTO = new PilaEntityTO();
+		
+		entityTO.setCedula(node.get("cedula").asInt());
+		entityTO.setNombre(node.get("firstName").asText());
+		entityTO.setApellido(node.get("lastName").asText());
+		entityTO.setSalario(node.get("salary").asDouble());
+		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
+		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
+		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		
+		return entityTO;
 	}
 }
