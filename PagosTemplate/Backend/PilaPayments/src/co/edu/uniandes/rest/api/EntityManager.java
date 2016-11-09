@@ -112,7 +112,7 @@ public class EntityManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postEntity(Object theEntity) throws JsonParseException, JsonMappingException, IOException  {
+	public Response postEntity(String theEntity) throws JsonParseException, JsonMappingException, IOException  {
 
 		logger.debug("Start postEntity");
 		
