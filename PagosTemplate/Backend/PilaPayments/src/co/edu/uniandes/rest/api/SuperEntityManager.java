@@ -166,17 +166,12 @@ public class SuperEntityManager {
 	 * @return
 	 */
 	@DELETE
-	public Response deleteSuperEntity(Object theSuperEntity) {
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response deleteSuperEntity(@QueryParam("id") String id) {
 		
-		String response = "";
-		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		getSuperEntityLogic().removeSuperEntity(Long.parseLong(id));
 		
-		if(!jsonObject.getString("id").isEmpty()) {
-			getSuperEntityLogic().removeSuperEntity(Long.parseLong(jsonObject.getString("id")));
-			response = "ok";
-		}
-			
-		return Response.status(200).entity(response).build();
+		return Response.status(200).entity("ok").build();
 	}
 	
 	/**
