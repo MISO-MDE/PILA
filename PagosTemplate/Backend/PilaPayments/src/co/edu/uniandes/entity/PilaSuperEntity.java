@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 
 /**
@@ -84,6 +86,7 @@ public class PilaSuperEntity {
 	/**
 	 * @return the nombre
 	 */
+	@JsonProperty("name")
 	public String getNombre() {
 		return nombre;
 	}
@@ -113,6 +116,7 @@ public class PilaSuperEntity {
 	/**
 	 * @return the actividad
 	 */
+	@JsonProperty("econActivity")
 	@Enumerated(EnumType.STRING)
 	public ActividadEconomica getActividad() {
 		return actividad;
