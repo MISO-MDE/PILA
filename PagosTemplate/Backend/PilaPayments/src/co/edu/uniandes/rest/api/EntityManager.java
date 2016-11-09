@@ -111,9 +111,11 @@ public class EntityManager {
 		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
 		
 
-		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
+		String id = getEntityLogic().crearEntity(entityTO); // Debe retornar el id creado la entidad
 
-		logger.debug("result: '"+response+"'");
+		String response = "{\"id\":\""+ id +"\"}";
+		
+		logger.debug("result: '" + response + "'");
         logger.debug("End postEntity");
 
         return Response.status(200).entity(response).build();
