@@ -16,9 +16,9 @@ import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -135,25 +135,29 @@ public class SuperEntityManager {
 
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
-	public String putSuperEntity(Object theSuperEntity) {
+	@Consumes(MediaType.APPLICATION_JSON)
+	public String putSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
 		logger.debug("Start putSuperEntity");
-	
-		JSONObject jsonObject = new JSONObject(theSuperEntity);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+		
+		final ObjectNode node = mapper.readValue(theSuperEntity.toString(), ObjectNode.class);
 		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
 		
-		if(!jsonObject.getString("nit").isEmpty()) {
-			superTO.setNIT(jsonObject.getString("nit"));
+		if(!node.get("nit").asText().isEmpty()) {
+			superTO.setNIT(node.get("nit").asText());
 		}
 		
-		if(!jsonObject.getString("name").isEmpty()) {
-			superTO.setNombre(jsonObject.getString("name"));
+		if(!node.get("name").asText().isEmpty()) {
+			superTO.setNombre(node.get("name").asText());
 		}
 		
-		if(!jsonObject.getString("ciiuCode").isEmpty()) {
-			superTO.setCIU(jsonObject.getString("ciiuCode"));
+		if(!node.get("ciiuCode").asText().isEmpty()) {
+			superTO.setCIU(node.get("ciiuCode").asText());
 		}
 		
-		String response = getSuperEntityLogic().createSuperEntity(superTO);
+		String response = getSuperEntityLogic().updateSuperEntityUser(superTO);
 
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");

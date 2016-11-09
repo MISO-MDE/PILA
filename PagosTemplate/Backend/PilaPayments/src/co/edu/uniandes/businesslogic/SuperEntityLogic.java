@@ -89,20 +89,26 @@ public class SuperEntityLogic {
 	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
 		
 		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		String response = "SuperEntity not updated";
+		if(superEntity != null) {
 		
-		if(!superTO.getNombre().isEmpty()) {
-			superEntity.setNombre(superTO.getNombre());
-		} 
-		
-		if(!superTO.getNIT().isEmpty()) {
-			superEntity.setNIT(superTO.getNIT());
+			if(!superTO.getNombre().isEmpty()) {
+				superEntity.setNombre(superTO.getNombre());
+			} 
+			
+			if(!superTO.getNIT().isEmpty()) {
+				superEntity.setNIT(superTO.getNIT());
+			}
+			
+			if(!superTO.getCIU().isEmpty()) {
+				superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+			}
+			
+			superDAO.update(superEntity).getId();
+			response = "SuperEntity updated";
 		}
 		
-		if(!superTO.getCIU().isEmpty()) {
-			superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
-		}
-		
-		return "" + superDAO.update(superEntity).getId();
+		return response;
 	}
 	
 	/**
