@@ -24,6 +24,7 @@ export class PensionersService {
 
   public selectRow(row) {
       this.selectedRow = row;
+      //this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
   }
 
   public loadPensioners(): any {

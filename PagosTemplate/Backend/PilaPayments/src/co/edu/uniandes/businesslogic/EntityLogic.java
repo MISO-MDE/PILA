@@ -51,7 +51,7 @@ public class EntityLogic {
 		
 		PilaEntity entity = new PilaEntity();
 		entity.setCedula(entityTO.getCedula());
-		entity.setNombre(entity.getNombre());
+		entity.setNombre(entityTO.getNombre());
 		entity.setApellido(entityTO.getApellido());
 		entity.setSalario(entityTO.getSalario());
 		entity.setTipoPension(entityTO.getTipoPension());
@@ -108,6 +108,10 @@ public class EntityLogic {
 	public PilaEntity getEntitiesById(long id) {
 		return entityDAO.findEntity(id);
 	}
+	
+	
+	
+	
 	
 	/**
 	 * Retorna las actividades economicas definidas en el sistema

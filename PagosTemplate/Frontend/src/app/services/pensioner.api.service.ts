@@ -28,7 +28,8 @@ export class PensionerApiService {
 
     getPensionersByLegalId(legalIdCard: String ): Observable<IEntity> {
         var urlGet;
-        urlGet = this.url + "?legalIdCard=" + legalIdCard;
+        urlGet = this.url + "?id=" + legalIdCard;
+        console.log("Entidad URL:" + urlGet); 
         return this.http.get(urlGet).map(this.extractData);
     }
     

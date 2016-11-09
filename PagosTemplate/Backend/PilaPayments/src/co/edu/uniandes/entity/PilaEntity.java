@@ -31,7 +31,7 @@ public class PilaEntity {
 	/**
 	 * cedula del entity
 	 */
-	private int cedula;
+	private long cedula;
 	
 	/**
 	 * nombre
@@ -104,14 +104,14 @@ public class PilaEntity {
 	/**
 	 * @return the cedula
 	 */
-	public int getCedula() {
+	public long getCedula() {
 		return cedula;
 	}
 
 	/**
 	 * @param cedula the cedula to set
 	 */
-	public void setCedula(int cedula) {
+	public void setCedula(long cedula) {
 		this.cedula = cedula;
 	}
 

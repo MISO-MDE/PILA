@@ -123,6 +123,8 @@ public class SuperEntityManager {
 		superTO.setNombre(node.get("name").asText());
 		superTO.setCIU(node.get("ciiuCode").asText());
 		
+		logger.debug("Start postSuperEntity Revisando Ciucode:" + node.get("ciiuCode").asText());
+		
 		String id = getSuperEntityLogic().createSuperEntity(superTO);
 		
 		String response = "{\"id\":\""+ id +"\"}"; 

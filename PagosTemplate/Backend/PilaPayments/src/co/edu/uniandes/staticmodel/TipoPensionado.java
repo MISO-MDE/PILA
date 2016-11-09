@@ -39,5 +39,16 @@ public enum TipoPensionado {
     @Override
     public String toString() {
         return text;
-    }	
+    }
+    
+    static public TipoPensionado getEnumbyDesc(String desc)
+    {
+        for(TipoPensionado act : TipoPensionado.values())
+        {
+            if(act.getName().equals(desc)) {
+            	return act;
+            }
+        }
+        return null;
+    }
 }

@@ -51,4 +51,15 @@ public enum TipoPension {
     public String toString() {
         return text;
     }
+    
+    static public TipoPension getEnumbyDesc(String desc)
+    {
+        for(TipoPension act : TipoPension.values())
+        {
+            if(act.getName().equals(desc)) {
+            	return act;
+            }
+        }
+        return null;
+    }
 }

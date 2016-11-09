@@ -58,12 +58,14 @@ public class EntityManager {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getEntities(){
 		ObjectMapper mapper = new ObjectMapper();
+		logger.debug("Start getEntities");
 		String response = "";
 		try {
 			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getEntities());
 		} catch (JsonProcessingException e) {
 			response = "No se pudo obtener la lista " + e.getMessage();
 		}
+		logger.	debug("end getEntities:" + response);
 		return response;
 	}
 	
@@ -87,23 +89,30 @@ public class EntityManager {
 			response = "No se pudo encontrar el registro. \n" + ex.getMessage();
 		}
 		
-		/*
-		ObjectMapper mapper = new ObjectMapper();
-		
-		String response = null;
+		logger.debug("result: '"+ response +"'");
+        logger.debug("End getEntityManager");
 
-		response = "{" + "\"" + "id\":" + "1," +
-					"\"" + "cedula\":" + "79120111," +
-					"\"" + "firstName\":" + "\"Pedro\"," +
-					"\"" + "lastName\":" + "\"Perez\"," +
-					"\"" + "pensionType\":" + "\"Vejez\"," +
-					"\"" + "pensionerType\":" + "\"Prima Media\"," +
-					"\"" + "residence\":" + "\"Colombia\"," +
-					"\"" + "familyResidence\":" + "\"Colombia\"," +
-					"\"" + "profession\":" + "\"Congreista\"," +
-					"\"" + "salary\":" + "27000000" +
-					"}";
-        */
+        return response;	
+	}
+	
+	@GET
+	@Path("/legalId")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getEntityByCedula(@QueryParam("cedula") String cedula) {
+
+		logger.debug("Start getEntityByCedula");
+		logger.debug("id: '" + cedula + "'");
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String response = "";
+	
+		try{
+		//response = mapper.writerWithDefaultPrettyPrinter()
+			//	.writeValueAsString(getEntityLogic().getEntitiesByCedula(Long.valueOf(cedula)));
+		}
+		catch(Exception ex){
+			response = "No se pudo encontrar el registro. \n" + ex.getMessage();
+		}
 		
 		logger.debug("result: '"+ response +"'");
         logger.debug("End getEntityManager");
@@ -126,13 +135,13 @@ public class EntityManager {
 		logger.debug("Object2 " + node.get("firstName").asText());
 		logger.debug("Object3 " + node.get("lastName").asText());
 		logger.debug("Object4 " + node.get("salary").asDouble());
-		logger.debug("Object5 " + TipoPension.valueOf(node.get("pensionType").asText()));
+		logger.debug("Object5 " + node.get("pensionType").asText());
 		
 		logger.debug("Object6 " + node.get("pensionerType").asText());
-		logger.debug("Object7 " + ActividadEconomica.valueOf(node.get("profession").asText()));
+		//logger.debug("Object7 " + ActividadEconomica.valueOf(node.get("profession").asText()));
 		logger.debug("Object8 " + Long.valueOf(node.get("residenceCountry").asText()));
 		logger.debug("Object9 " + Long.valueOf(node.get("familyResidenceCountry").asText()));
-		logger.debug("Object10 " + Long.valueOf(node.get("superEntityId").asText()));
+		//logger.debug("Object10 " + Long.valueOf(node.get("superEntityId").asText()));
 		
 		PilaEntityTO entityTO = new PilaEntityTO();
 		
@@ -142,12 +151,12 @@ public class EntityManager {
 		entityTO.setNombre(node.get("firstName").asText());
 		entityTO.setApellido(node.get("lastName").asText());
 		entityTO.setSalario(node.get("salary").asDouble());
-		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
-		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
-		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		entityTO.setTipoPension(TipoPension.getEnumbyDesc(node.get("pensionType").asText()));
+		entityTO.setTipoPensionado(TipoPensionado.getEnumbyDesc(node.get("pensionerType").asText()));
+		entityTO.setActividad(ActividadEconomica.getActividadByCIIU(node.get("profession").asText()));
 		entityTO.setPais(Long.valueOf(node.get("residenceCountry").asText()));
 		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familyResidenceCountry").asText()));
-		entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText()));
+		//entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText())); //Error super entity id referecia circular
 		
 		
 		
