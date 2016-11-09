@@ -19,6 +19,13 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	public PilaEntity findEntity(long cedula);
 	
 	/**
+	 * Encuentra el enity por id
+	 * @param id
+	 * @return
+	 */
+	public PilaEntity findEntityById(Long id);
+	
+	/**
 	 * Retorna todas las entidades
 	 * @return lista con las entidades
 	 */
@@ -30,4 +37,6 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	 * @return
 	 */
 	public List<PilaEntity>findAllEntityBySuperEntity(PilaSuperEntity superEntity);
+	
+	
 }

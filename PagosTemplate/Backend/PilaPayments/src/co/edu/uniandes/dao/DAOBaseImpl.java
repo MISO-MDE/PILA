@@ -43,7 +43,7 @@ public class DAOBaseImpl<T> implements DAOBase<T>{
 	public void deleteEntity(T entity) {
 		EntityManager em =  getEntityManager();
 		em.getTransaction().begin();
-	    em.remove(entity);
+	    em.remove((em.contains(entity) ? entity : em.merge(entity)));
 	    em.getTransaction().commit();
 	    em.close();
 	}

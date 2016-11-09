@@ -8,9 +8,9 @@ import {UserApiService} from "../services/user.api.service";
 export class IntermediaryService {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
   public columns: Array<any> = [
-    {title: 'Nombre empresa', className: 'text-warning', name: 'name'},
-    {title: 'NIT', name: 'nit'},
-    {title: 'Actividad económica', name: 'econActivity'}
+    {title: 'Nombre empresa', className: 'col-md-1', name: 'name'},
+    {title: 'NIT', className: 'col-md-1', name: 'nit'},
+    {title: 'Actividad económica', className: 'col-md-4', name: 'econActivity'}
   ];
   public selectedRow = {};
   public econActivities = [];
@@ -51,7 +51,7 @@ export class IntermediaryService {
     console.log("**Intermediary:Save Superentity " + superEntity.name + ' NIT ' + superEntity.nit);
     this.intermediaryApiService.saveSuperEntity(superEntity).subscribe((response: any) => {
       if (response) {
-        this.addNewRow(superEntity);
+        this.loadSuperEntity();
         this.resetSelectedRow();
         //Salva ahora el administrador luego de que la superentidad quedo guardada
         console.log("**SUCCESS: Se guardo la superentidad" + JSON.stringify(response));
