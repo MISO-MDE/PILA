@@ -34,4 +34,15 @@ public class NovedadDAOImpl extends DAOBaseImpl<PilaNovedad> implements NovedadD
 		return query.getResultList();
 	}
 
+	/**
+	 * @see co.edu.uniandes.dao.NovedadDAO#findNovedadesEntityByCedula(java.lang.String)
+	 */
+	@Override
+	public List<PilaNovedad> findNovedadesEntityByCedula(String cedulaEntity) {
+		Query query = getEntityManager().createQuery("select no from Novedad no where no.entity.cedula = :cedulaEntity");
+		query.setParameter("cedulaEntity", cedulaEntity);
+		
+		return query.getResultList();
+	}
+
 }

@@ -49,5 +49,11 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 		query.setParameter("superEntidad", superEntity);
 		
 		return query.getResultList();
+	}
+
+	@Override
+	public PilaEntity findEntityById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
