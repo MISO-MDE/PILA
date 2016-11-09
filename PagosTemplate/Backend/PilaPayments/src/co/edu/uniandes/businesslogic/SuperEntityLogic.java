@@ -1,5 +1,6 @@
 package co.edu.uniandes.businesslogic;
 
+import java.util.Arrays;
 import java.util.List;
 
 import co.edu.uniandes.dao.SuperEntityDAO;
@@ -108,4 +109,11 @@ public class SuperEntityLogic {
 		return superDAO.findSuperEntityById(id);
 	}
 	
+	/**
+	 * Retorna las actividades economicas definidas en el sistema
+	 * @return actividades economicas
+	 */
+	public List<ActividadEconomica> getEconActivities() {
+		return Arrays.asList(ActividadEconomica.values());
+	}
 }

@@ -1,9 +1,12 @@
 package co.edu.uniandes.staticmodel;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Enum con los valores para el tipo de pensionado
  * @author jorge perea
  */
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum TipoPensionado {
 	REGIMEN_PRIMA_MEDIA("Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv"),
 	REGIMEN_PRIMA_MEDIA_SIN_TOPE("Pensionado de régimen de prima media. Sin tope máximo de pensión"),

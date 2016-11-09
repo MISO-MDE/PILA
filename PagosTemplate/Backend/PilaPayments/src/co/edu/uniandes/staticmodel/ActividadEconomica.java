@@ -1,9 +1,12 @@
 package co.edu.uniandes.staticmodel;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Actividad economica
  * @author jorge perea
  */
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ActividadEconomica {
 	
 	ESTABLECIMIENTO_EDUCACION_MEDIA("8022","Establecimientos de educación media"),
@@ -23,19 +26,19 @@ public enum ActividadEconomica {
 	/**
 	 * codigo ciu de la actividad economica
 	 */
-	private final String ciu;
+	private final String id;
 	
 	/**
 	 * descripcion de la actividad
 	 */
-	private final String descripcion;
+	private final String name;
     
 	/**
      * @param text
      */
     ActividadEconomica(String ciu, String descripcion) {
-        this.ciu = ciu;
-        this.descripcion= descripcion;
+        this.id = ciu;
+        this.name= descripcion;
     }
     
     /**
@@ -47,7 +50,7 @@ public enum ActividadEconomica {
     {
         for(ActividadEconomica act : ActividadEconomica.values())
         {
-            if(act.getCiu().equals(ciiu)) {
+            if(act.getId().equals(ciiu)) {
             	return act;
             }
         }
@@ -58,16 +61,16 @@ public enum ActividadEconomica {
      * Retorna el ciu
      * @return
      */
-    public String getCiu() {
-    	return ciu;
+    public String getId() {
+    	return id;
     }
     
     /**
      * Retorna el ciu
      * @return
      */
-    public String getDescripcion() {
-    	return descripcion;
+    public String getName() {
+    	return name;
     }
     
     /**
@@ -75,7 +78,7 @@ public enum ActividadEconomica {
      */
     @Override
     public String toString() {
-        return ciu + " - " + descripcion;
+        return id + " - " + name;
     }
     
 }

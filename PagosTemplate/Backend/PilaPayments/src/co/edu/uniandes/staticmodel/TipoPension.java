@@ -1,9 +1,12 @@
 package co.edu.uniandes.staticmodel;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Tipo de pension
  * @author jorge perea
  */
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum TipoPension {
 
 	VEJEZ("Vejez"), 
