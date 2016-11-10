@@ -3,13 +3,16 @@
     <h4>Pagos</h4>
     <label>Cédula</label>
     <input [(ngModel)]="cedula" type="text" class="form-control" (blur)="getEntity()"/>
-    <label>Nombres</label>
+    <br><br>
+    <div class="currency-group">
+      <label>Nombres:</label>
+      <label class="currency-field">{{firstName}}</label>
+    </div>
     <br>
-    <label>{{firstName}}</label>
-    <br>
-    <label>Apellidos</label>
-    <br>
-    <label>{{lastName}}</label>
+    <div class="currency-group">
+      <label>Apellidos:</label>
+      <label class="currency-field">{{lastName}}</label>
+    </div>
     <br>
     <div class="currency-group">
       <label>Subtotal EPS:</label>
@@ -38,19 +41,19 @@
     </button>
     <br>
     <br>
-    <table class="table dataTable table-striped table-bordered" border="1px">
-    <thead>
-    <tr>
-      <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
-      <td><h5></h5></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
-    </tr>
-    </tbody>
-  </table>
+    <table *ngIf="showValidations" class="table dataTable table-striped table-bordered" border="1px">
+      <thead>
+      <tr>
+        <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
+        <td><h5></h5></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of rows">
+        <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 
 </div>
