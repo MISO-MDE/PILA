@@ -23,8 +23,10 @@ export class PensionersService {
   }
 
   public selectRow(row) {
-      this.selectedRow = row;
-      //this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
+    this.selectedRow = JSON.parse(JSON.stringify(row)); //clona el objeto
+    this.selectedRow.pensionType = row.pensionType.name;
+    this.selectedRow.pensionerType = row.pensionerType.name;
+    this.selectedRow.profession = parseInt(row.profession.id);
   }
 
   public loadPensioners(): any {
