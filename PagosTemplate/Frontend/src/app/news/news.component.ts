@@ -22,7 +22,7 @@ export class NewsComponent implements OnInit {
   }
 
   public editRow(row: any) {
-    console.log(row);
+     this.newsService.selectRow(row);
   }
 
   public deleteRow(row: any) {

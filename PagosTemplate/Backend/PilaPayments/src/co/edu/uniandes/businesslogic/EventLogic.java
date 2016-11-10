@@ -5,6 +5,7 @@ import java.util.List;
 import co.edu.uniandes.dao.EntityDAO;
 import co.edu.uniandes.dao.NovedadDAO;
 import co.edu.uniandes.entity.PilaNovedad;
+import co.edu.uniandes.entity.PilaSuperEntity;
 import co.edu.uniandes.to.PilaNovedadTO;
 
 public class EventLogic {
@@ -34,6 +35,8 @@ public class EventLogic {
 	 * @return retorna valor de novedad
 	 */
 	public String createEvent(PilaNovedadTO novedadTO) {
+		
+		
 		
 		return "";
 	}

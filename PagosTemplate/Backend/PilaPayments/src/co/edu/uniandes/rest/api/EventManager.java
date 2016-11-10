@@ -21,6 +21,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import co.edu.uniandes.businesslogic.EventLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAOImpl;
+import co.edu.uniandes.entity.PilaNovedad;
+
 
 @Path("/event")
 public class EventManager {
@@ -78,13 +80,15 @@ public class EventManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postEntity(Object theEvent) {
+	public Response postEntity(String theEvent) {
 
 		logger.debug("Start postEvent");
 		
 		logger.debug("Object " + theEvent.toString());
 		
-		
+		PilaNovedad news = new PilaNovedad();
+		//news.setTipoNovedad(theEvent.newType);
+		//news.
 		
 
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad

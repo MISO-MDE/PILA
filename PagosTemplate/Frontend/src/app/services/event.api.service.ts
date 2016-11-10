@@ -14,7 +14,7 @@ export class EventApiService {
     constructor(private http: Http) {
     }
 
-     getEvents(userId: String ): Observable<any> {
+     getEvents(userId: String ): Observable<INews> {
         var urlGet;
         if (userId === '*') {
             urlGet = this.url;

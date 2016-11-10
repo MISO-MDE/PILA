@@ -42,9 +42,11 @@ export class NewFormComponent implements OnInit {
       this.entityid = entityObj.id;
     });
   }
-
+  
   public saveNews() {
-    console.log(JSON.stringify("Novedades A Salvar:" + <INews>this.newsService.selectedRow));
+    this.newsService.selectedRow.entityId = this.entityid;
+    this.newsService.selectedRow.entityId = this.entityid;
+    this.newsService.selectedRow.fechaCreacion = new Date();
     this.newsService.saveNews(<INews>this.newsService.selectedRow);
   }
 

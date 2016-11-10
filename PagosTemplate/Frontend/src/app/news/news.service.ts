@@ -4,10 +4,11 @@ import 'rxjs/add/operator/catch';
 import {IntermediaryApiService} from "../services/intermediary.api.service";
 import {EventApiService} from "../services/event.api.service";
 import {News} from "../sharedresources/classes";
+import {INews} from "../sharedresources/interfaces";
 
 @Injectable()
 export class NewsService {
-  public rows: Array<any>; //Toma los datos en el On Init de esta clase
+  public rows: Array<INews>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
     {title: 'Tipo', className: 'text-warning', name: 'type'},
@@ -15,21 +16,22 @@ export class NewsService {
     {title: 'Fecha final', className: 'text-warning', name: 'toDate'},
     {title: 'Estado', name: 'status'}
   ];
-  public selectedRow = {};
+  public selectedRow:any = {};
 
   constructor(private eventApiService: EventApiService) {
   }
   
   public selectRow(row) {
-    this.selectedRow = row;
-  
+    this.selectedRow = JSON.parse(JSON.stringify(row));
+    console.log("SelectedRow:" + JSON.stringify(this.selectedRow))
+    this.selectedRow.entityId = row.entityId;
   }
 
 
   public loadEvents(): any {
     this.eventApiService.getEvents('*')
       .subscribe((response: any) => {
-        this.rows = response.results;
+        this.rows = response;
       });
   }
 
