@@ -39,6 +39,7 @@ export class PensionersService {
     console.log("**Saving:Save Entity " + JSON.stringify(entity));
     this.pensionerApiService.saveEntity(entity).subscribe((response: any) => {
       if (response) {
+        this.loadPensioners();
         //Salva ahora el administrador luego de que la superentidad quedo guardada
         console.log("**SUCCESS: Se guardo la entidad" + JSON.stringify(response));
       } else {
@@ -46,7 +47,7 @@ export class PensionersService {
       }
     });
   }
-  
+
   public loadMultiLov(lovAddr:string) {
     console.log("Respuesta LOV loadMultiLov:" + lovAddr);
     return this.pensionerApiService.getMultiLov(lovAddr);
