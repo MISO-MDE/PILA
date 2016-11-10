@@ -6,6 +6,7 @@ import {Router} from '@angular/router';
 import {UserApiService} from '../services/user.api.service';
 import {IUser} from '../sharedresources/interfaces'
 import {PAsideService} from "../p-aside/p-aside.service";
+import {FireLoginService} from "./fire-login.service";
 
 @Component({
   selector: 'app-fire-login',
@@ -22,7 +23,8 @@ export class FireLoginComponent implements OnInit {
               vcRef: ViewContainerRef,
               public modal: Modal,
               private router: Router, // Variable para que angular sepa donde navegar
-              private asideService: PAsideService) {
+              private asideService: PAsideService,
+              private fireLoginService :FireLoginService) {
     overlay.defaultViewContainer = vcRef;
   }
 
@@ -41,6 +43,8 @@ export class FireLoginComponent implements OnInit {
       var link: any;
       if (res.uid) {
         this.userApiService.getUserData(res.uid).subscribe((user: IUser) => {
+          //guarda la data en un singleton
+          this.fireLoginService.setUserData(user);
           console.log("Navega a homepage " + user.roleName);
           if (user.roleName === 'SuperEntity') {
             link = ['/homepage']; // landingpage de la super entidad

@@ -48,6 +48,7 @@ import {IntermediaryService} from "./intermediary/intermediary.service";
 import {NewsService} from "./news/news.service";
 import {PaymentsService} from "./payments/payments.service";
 import {PensionersService} from "./pensioners/pensioners.service";
+import {FireLoginService} from "./fire-login/fire-login.service";
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import {PensionersService} from "./pensioners/pensioners.service";
   ],
   providers: [
     //Providers
+    FireLoginService,
     PAsideService,
     IntermediaryService,
     NewsService,

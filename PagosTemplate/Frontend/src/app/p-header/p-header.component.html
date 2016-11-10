@@ -11,7 +11,7 @@
       <a class="navbar-brand" routerLink="/homepage">Pagos PILA</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul *ngIf="fireLoginService.getUserData().roleName === 'SuperEntity'" class="nav navbar-nav">
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
           <a routerLink="/homepage">Home</a>
         </li>
@@ -27,7 +27,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
-          <a routerLink="../navbar/">Default</a>
+          <a>{{fireLoginService.getUserData().email}}</a>
         </li>
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
           <a routerLink="/">Salir</a>
