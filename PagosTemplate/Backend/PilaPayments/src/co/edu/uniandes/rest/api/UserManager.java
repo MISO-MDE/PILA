@@ -101,6 +101,9 @@ public class UserManager {
 		superTO.setIdSuperEntity(node.get("superEntityId").asLong());
 		
 		
+		logger.debug("FirebaseId: SuperTo:" + superTO.getUserId());
+		logger.debug("SuperIdToSave: SuperTo:" + superTO.getIdSuperEntity());
+		
 		String resultado = getSuperEntityLogic().createSuperEntityUser(superTO);
 		
 		String response = "{\"resp\":\""+ resultado +"\"}";

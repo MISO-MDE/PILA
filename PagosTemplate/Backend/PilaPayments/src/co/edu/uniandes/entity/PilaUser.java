@@ -126,10 +126,10 @@ public class PilaUser implements Serializable{
 	}
 
 	/**
-	 * @param password the password to set
+	 * @param Firebase user Id token
 	 */
 	public void setUserId(String userId) {
-		this.password = userId;
+		this.userId = userId;
 	}
 
 	/**

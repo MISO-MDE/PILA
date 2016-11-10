@@ -1,10 +1,41 @@
+/* Inserta Usuario principal Intermediario */
+insert into pilauser
+(user_id, email, password, userid, username, rol)
+values (1, 'pagos@deuna.com', null, 'eynJG8oxVqbMg3pYZjH8eneXzrI2', 'PagosAdmin', 'Intermediary');
+
+/* Inserta Interseccion */
+insert into pilauserintermediary 
+values (1);
+
+commit;
+
+insert into pilasuperentity
+values(1, 900539845, 'ESTABLECIMIENTO_EDUCACION_MEDIA', 'Oracle');
+
+insert into pilauser
+(user_id, email, password, userid, username, rol)
+values (2, 'a@a.com', null, 'gZb2YS9yafhbPDKzTrW5MkGl92b2', 'Ivan', 'Intermediary');
+
+insert into pilausersuperentity
+values (1, 1);
+
+insert into pilausersuperentity
+values (1, 2);
+
+delete from pilausersuperentity
+
+delete from pilauserintermediary
+
+
+insert into pilauserintermediary values (2);
+
+
 insert into pilasuperentity
 values(1, 900539845, 'ESTABLECIMIENTO_EDUCACION_MEDIA', 'Oracle');
 
 
-insert into pilauser
-(user_id, email, password, userid, username, rol)
-values (1, 'ir.taimal@gmail.com', null, '4rCh8ZxUV4T88RJriKGnNG9PhCG2', 'Ivan', 'SuperEntity');
+
+
 
 insert into pilausersuperentity
 values (1, 1);
@@ -16,7 +47,11 @@ insert into pilaentity
 values (2, 'ESTABLECIMIENTO_EDUCACION_MEDIA', 'Gomez',72000000, 'Jorge', 12, 12, 17000000, 'VEJEZ', 'BENEFICIARIO_UPC_ADICIONAL', null );
 
 
+select * from PilaUserIntermediary pilauserin0_ inner join PilaUser pilauserin0_1_ on 
+pilauserin0_.intermediary_id=pilauserin0_1_.user_id where pilauserin0_1_.userId='1'
 
+select pilauserin0_.intermediary_id as user_id1_7_, pilauserin0_1_.email as email2_7_, pilauserin0_1_.password as password3_7_, pilauserin0_1_.rol as rol4_7_, pilauserin0_1_.userId as userId5_7_, pilauserin0_1_.username as username6_7_ from PilaUserIntermediary pilauserin0_ inner join PilaUser pilauserin0_1_ on pilauserin0_.intermediary_id=pilauserin0_1_.user_id 
+where pilauserin0_1_.userId='1'
 
 
 commit;

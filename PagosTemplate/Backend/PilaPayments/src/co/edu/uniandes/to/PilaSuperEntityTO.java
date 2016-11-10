@@ -136,7 +136,7 @@ public class PilaSuperEntityTO {
 	 * @param firebaseid to set
 	 */
 	public void setUserId(String userId) {
-		this.password = userId;
+		this.userId = userId;
 	}
 
 	/**
