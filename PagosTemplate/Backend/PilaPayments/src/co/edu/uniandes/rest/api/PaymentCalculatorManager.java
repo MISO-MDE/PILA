@@ -22,6 +22,7 @@ import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.to.PilaEntityTO;
+import co.edu.uniandes.businesslogic.BusinessValidations;
 import co.edu.uniandes.businesslogic.CalculationFormula1;
 
 @Path("/calculation")
@@ -44,18 +45,27 @@ public class PaymentCalculatorManager {
 		Response restResponse;
 		logger.debug("Start getPayment");
 		logger.debug("data: '" + id + "'");
+		String errorCondition = "";
 		
 		PilaEntity theEntity = getEntityLogic().getEntitiesById(Long.valueOf(id));
 		
 		logger.debug("data:theEntity '" + theEntity.getCedula() + "'");
 		
 		
-		CalculationFormula1 formulaCalculation = new CalculationFormula1(theEntity);
+		BusinessValidations busVal = new BusinessValidations(theEntity);
 		
-		calculo1 = formulaCalculation.getFormula1();
-		calculo2 = formulaCalculation.getFormula2();
-		calculo3 = formulaCalculation.getFormula3();
-		total = calculo1 + calculo2 + calculo3; 
+		if (busVal.validations().isEmpty()) {
+ 		
+			CalculationFormula1 formulaCalculation = new CalculationFormula1(theEntity);
+			
+			calculo1 = formulaCalculation.getFormula1();
+			calculo2 = formulaCalculation.getFormula2();
+			calculo3 = formulaCalculation.getFormula3();
+			total = calculo1 + calculo2 + calculo3;
+		}
+		else {
+			errorCondition = busVal.validations();
+		}
 		
 		
 		
@@ -74,22 +84,7 @@ public class PaymentCalculatorManager {
 					"\"" + "subTotal2\":" + calculo2 + "," +
 					"\"" + "subTotal3\":" + calculo3 + "," +
 					"\"" + "amount\":" + total + "" +
-					
-					/*"," +
-					"\"" + "errorCondition\":" + //Si las validacines no pasan entonces se crea esta seccion
-						"[" + 
-								"{" +    
-									"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pensionado inconsistente\"," +
-									"\"" + "valor1\":" + "\"Vejez\"," +
-									"\"" + "valor2\":" + "\"Pension Voluntaria\"" +
-								"}," + 
-								"{" + 
-									"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pagador inconsistente\"," +
-									"\"" + "valor1\":" + "\"Vejez\"," +
-									"\"" + "valor2\":" + "\"Empleador\"" +
-								"}" +
-						"]" +
-						*/
+					errorCondition +
 					"}";
 					
 	
