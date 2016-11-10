@@ -17,9 +17,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import co.edu.uniandes.businesslogic.EntityLogic;
+import co.edu.uniandes.businesslogic.ValidacionLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
+import co.edu.uniandes.dao.ValidacionDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.to.PilaEntityTO;
 import co.edu.uniandes.businesslogic.BusinessValidations;
@@ -52,9 +54,11 @@ public class PaymentCalculatorManager {
 		logger.debug("data:theEntity '" + theEntity.getCedula() + "'");
 		
 		
-		BusinessValidations busVal = new BusinessValidations(theEntity);
+		BusinessValidations busVal = new BusinessValidations(theEntity, new ValidacionLogic(new ValidacionDAOImpl()));
 		
-		if (busVal.validations().isEmpty()) {
+		String validations = busVal.validations();
+		
+		if (validations.isEmpty()) {
  		
 			CalculationFormula1 formulaCalculation = new CalculationFormula1(theEntity);
 			
@@ -64,7 +68,7 @@ public class PaymentCalculatorManager {
 			total = calculo1 + calculo2 + calculo3;
 		}
 		else {
-			errorCondition = busVal.validations();
+			errorCondition = validations;
 		}
 		
 		
