@@ -12,7 +12,7 @@ export class IntermediaryService {
     {title: 'NIT', className: 'col-md-1', name: 'nit'},
     {title: 'Actividad económica', className: 'col-md-4', name: 'econActivity'}
   ];
-  public selectedRow = {};
+  public selectedRow:any = {};
   public econActivities = [];
 
   constructor(private intermediaryApiService: IntermediaryApiService,
