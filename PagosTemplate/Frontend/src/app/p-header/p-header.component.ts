@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FireLoginService} from "../fire-login/fire-login.service";
 
 @Component({
   selector: 'app-p-header',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public fireLoginService :FireLoginService) { }
 
   ngOnInit() {
   }

@@ -27,7 +27,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
-          <a routerLink="../navbar/">Default</a>
+          <a>{{fireLoginService.getUserData().email}}</a>
         </li>
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
           <a routerLink="/">Salir</a>
