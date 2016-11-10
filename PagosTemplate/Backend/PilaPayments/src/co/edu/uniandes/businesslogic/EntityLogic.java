@@ -107,11 +107,7 @@ public class EntityLogic {
 	 */
 	public PilaEntity getEntitiesById(long id) {
 		return entityDAO.findEntity(id);
-	}
-	
-	
-	
-	
+	}	
 	
 	/**
 	 * Retorna las actividades economicas definidas en el sistema
