@@ -1,11 +1,12 @@
 package co.edu.uniandes.entity;
 
+import java.beans.Transient;
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -45,6 +46,11 @@ public class PilaUser implements Serializable{
 	 */
 	private String userId;
 	
+	/**
+	 * Rol del usuario
+	 */
+	private String rol;
+	
 
 	/**
 	 * Constructor
@@ -57,7 +63,8 @@ public class PilaUser implements Serializable{
 	 * @return the id
 	 */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
+	@Column(name="user_id")
 	public Long getId() {
 		return id;
 	}
@@ -125,4 +132,18 @@ public class PilaUser implements Serializable{
 		this.password = userId;
 	}
 
+	/**
+	 * @return the rol
+	 */
+	@Transient
+	public String getRol() {
+		return rol;
+	}
+
+	/**
+	 * @param rol the rol to set
+	 */
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
 }

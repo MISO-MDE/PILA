@@ -6,25 +6,27 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
+import co.edu.uniandes.businesslogic.UserLogic;
+import co.edu.uniandes.dao.IntermediaryUserDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
-import co.edu.uniandes.entity.PilaSuperEntity;
 import co.edu.uniandes.to.PilaSuperEntityTO;
+import co.edu.uniandes.to.PilaUserTO;
 
 @Path("/users")
 public class UserManager {
@@ -36,10 +38,16 @@ public class UserManager {
 	 */
 	private SuperEntityLogic logic;
 	
+	/**
+	 * logica del usuario
+	 */
+	private UserLogic userLogic;
+	
 	/* Servicio Rest que recibe el id de usuario y devuelve el role del usuario */
 	@GET
+	@Path("{userId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getUserInfo(@QueryParam("userId") String userId) {
+	public String getUserInfo(@PathParam("userId") String userId) throws JsonProcessingException {
 
 		logger.debug("Obteniendo Usuario");
 		logger.debug("userId: '" + userId + "'");
@@ -49,21 +57,20 @@ public class UserManager {
 		//Consulta con id del usuario userId y devuelve el role de la base de datos Llave primaria=userId
 		//Aqui debemos llamar la capa capa de negocio que esta a su vez llama a la capa de persistencia
 		
+		PilaUserTO user = getUserLogic().getPilaUser(userId);
+		ObjectMapper mapper = new ObjectMapper();
 		
-		//response = "{" + "\"" + "idDb\":" + "1," + "\"" + "superEntityId\":" + "123443," + "\"" + "userId\":" + "w5iXPZexNQa0Ry91HLPwzHiLO8S2," + "\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + "password\":" + "123456," + "\"" + "roleName\":" + "\"Intermediary\"}";
-        
-        response = "{" + 
-        			"\"" + "idDb\":" + "1," + 
-        			"\"" + "superEntityId\":" + "123443," + 
-        			"\"" + "userId\":" + "\"w5iXPZexNQa0Ry91HLPwzHiLO8S2\"," + 
-        			"\"" + "email\":" + "\"" + "b@b.com\"," + "\"" + 
-        			"password\":" + "123456," + 
-        			"\"" + "roleName\":" + "\"Intermediary\"}";
+		if(user != null && user.getIdDb() != null) {
+			
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getSuperEntityLogic().getEconActivities());
+		} else {
+			response = "No se encontro el usuario";
+		}
         
        logger.debug("resultado: '"+response+"'");
        logger.debug("End Get");
         
-        return Response.status(200).entity(response).build();
+        return response;
 	}
 	
 	/**
@@ -114,5 +121,16 @@ public class UserManager {
 			logic = new SuperEntityLogic(new SuperEntityDAOImpl(), new SuperEntityUserDAOImpl());
 		}
 		return logic;
+	}
+	
+	/**
+	 * Metodo que retorna la logica del user
+	 * @return
+	 */
+	public UserLogic getUserLogic() {
+		if(userLogic == null){
+			userLogic = new UserLogic( new IntermediaryUserDAOImpl(), new SuperEntityUserDAOImpl());
+		}
+		return userLogic;
 	}
 }

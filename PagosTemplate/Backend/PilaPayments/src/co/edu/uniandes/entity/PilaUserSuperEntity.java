@@ -3,12 +3,14 @@ package co.edu.uniandes.entity;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 /**
  * Usuario administrador de super entity
  * @author jorge perea
  */
 @Entity
+@PrimaryKeyJoinColumn(name = "super_id", referencedColumnName = "user_id")
 public class PilaUserSuperEntity extends PilaUser{
 	
 	/**

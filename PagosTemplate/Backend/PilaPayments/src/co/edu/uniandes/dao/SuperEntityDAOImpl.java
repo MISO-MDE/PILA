@@ -17,7 +17,7 @@ public class SuperEntityDAOImpl extends DAOBaseImpl<PilaSuperEntity> implements 
 	 */
 	@Override
 	public PilaSuperEntity findSuperEntity(String nit) {
-		Query query = getEntityManager().createQuery("select se from PilaSuperEntity se where se.nit = :nit");
+		Query query = getEntityManager().createQuery("select se from PilaUserSuperEntity se where se.nit = :nit");
 		query.setParameter("nit", nit);
 	    
 	    return query.getResultList().isEmpty() ? null : (PilaSuperEntity)query.getResultList().get(0);
