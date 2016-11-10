@@ -52,3 +52,14 @@ export interface IValidation {
     value1: string;
     value2: string;
 }
+
+export interface INews {
+    id: number;
+    entityId:number;
+    superEntityId:number;
+    fechaCreacion:Date;
+    fechaFin:Date;
+	variacionSalario:number;
+	tipoNovedad:string;
+	estado:string;
+}

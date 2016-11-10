@@ -3,6 +3,7 @@ import { ISuperEntity } from './interfaces'
 import { IEntity } from './interfaces';
 import { IPayment } from './interfaces';
 import { IValidation } from './interfaces';
+import { INews } from './interfaces';
 
 export class User implements IUser {
     constructor(public idDb: number, public superEntityId: number, public userId: string, public name: string, public email: string,
@@ -61,9 +62,21 @@ export class Payment implements IPayment {
     public errorCondition: Validation[];
 }
 
-class Validation implements IValidation {
+export class Validation implements IValidation {
     public validation: string;
     public value1: string;
     public value2: string;
 
+}
+
+export class News implements INews {
+    
+    public id: number;
+    public entityId:number;
+    public superEntityId:number;
+    public fechaCreacion:Date;
+    public fechaFin:Date;
+	public variacionSalario:number;
+	public tipoNovedad:string;
+	public estado:string;
 }

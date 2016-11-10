@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
+import { INews } from '../sharedresources/interfaces'
+
 @Injectable()
 export class EventApiService {
     private url: string = 'PilaPayments/api/event';
@@ -22,7 +24,13 @@ export class EventApiService {
         }
         return this.http.get(urlGet).map(this.extractData);
     }
-
+    
+    saveNews(news: INews) {
+      console.log("Salvando Novedad:" +  JSON.stringify(news));  
+      return this.http.post(this.url, news)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
 
     private extractData(res: Response) {
         let body;

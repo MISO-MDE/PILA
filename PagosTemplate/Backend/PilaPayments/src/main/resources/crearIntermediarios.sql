@@ -16,27 +16,11 @@ insert into pilauser
 (user_id, email, password, userid, username, rol)
 values (2, 'a@a.com', null, 'gZb2YS9yafhbPDKzTrW5MkGl92b2', 'Ivan', 'Intermediary');
 
-insert into pilausersuperentity
-values (1, 1);
 
 insert into pilausersuperentity
 values (1, 2);
 
-delete from pilausersuperentity
-
-delete from pilauserintermediary
-
-
-insert into pilauserintermediary values (2);
-
-
-insert into pilasuperentity
-values(1, 900539845, 'ESTABLECIMIENTO_EDUCACION_MEDIA', 'Oracle');
-
-
-
-
-
+/*
 insert into pilausersuperentity
 values (1, 1);
 
@@ -55,7 +39,7 @@ where pilauserin0_1_.userId='1'
 
 
 commit;
-
+*/
 
 
 select * from pilasuperentity;
@@ -69,19 +53,7 @@ select * from pilaentity;
 
 
 
-select pilaentity0_.id as 
-id1_1_, pilaentity0_.actividad as 
-activida2_1_, pilaentity0_.apellido as 
-apellido3_1_, pilaentity0_.cedula as 
-cedula4_1_, pilaentity0_.nombre as nombre5_1_, pilaentity0_.pais as pais6_1_, pilaentity0_.paisGrupoFamiliar as 
-paisGrup7_1_, pilaentity0_.salario as salario8_1_, pilaentity0_.pilaSuperEntity_id as pilaSup11_1_, pilaentity0_.tipoPension as 
-tipoPens9_1_, pilaentity0_.tipoPensionado as tipoPen10_1_ from PilaEntity pilaentity0_ 
-where pilaentity0_.cedula=79132132
 
-
-select *
-from PilaEntity pilaentity0_ where pilaentity0_.cedula=?
-2016-11-09 18:24:09 [http-nio-8080-exec-5]
 
 
 Tabla Tipo Pension
