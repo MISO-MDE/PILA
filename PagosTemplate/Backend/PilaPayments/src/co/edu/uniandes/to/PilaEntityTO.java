@@ -50,12 +50,12 @@ public class PilaEntityTO {
 	/**
 	 * Pais en el que reside
 	 */
-	private Pais pais;
+	private Long pais;
 	
 	/**
 	 * pais del grup familiar
 	 */
-	private Pais paisGrupoFamiliar;
+	private Long paisGrupoFamiliar;
 	
 	/**
 	 * actividad economica
@@ -65,7 +65,7 @@ public class PilaEntityTO {
 	/**
 	 * super entidad a la que pertenece
 	 */
-	private PilaSuperEntity superEntidad;
+	private Long superEntidad;
 	
 	/**
 	 * Constructor
@@ -187,42 +187,42 @@ public class PilaEntityTO {
 	/**
 	 * @return the superEntidad
 	 */
-	public PilaSuperEntity getSuperEntidad() {
+	public Long getSuperEntidad() {
 		return superEntidad;
 	}
 
 	/**
 	 * @param superEntidad the superEntidad to set
 	 */
-	public void setSuperEntidad(PilaSuperEntity superEntidad) {
+	public void setSuperEntidad(Long superEntidad) {
 		this.superEntidad = superEntidad;
 	}
 
 	/**
 	 * @return the pais
 	 */
-	public Pais getPais() {
+	public Long getPais() {
 		return pais;
 	}
 
 	/**
 	 * @param pais the pais to set
 	 */
-	public void setPais(Pais pais) {
+	public void setPais(Long pais) {
 		this.pais = pais;
 	}
 
 	/**
 	 * @return the paisGrupoFamiliar
 	 */
-	public Pais getPaisGrupoFamiliar() {
+	public Long getPaisGrupoFamiliar() {
 		return paisGrupoFamiliar;
 	}
 
 	/**
 	 * @param paisGrupoFamiliar the paisGrupoFamiliar to set
 	 */
-	public void setPaisGrupoFamiliar(Pais paisGrupoFamiliar) {
+	public void setPaisGrupoFamiliar(Long paisGrupoFamiliar) {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
 	}
 }

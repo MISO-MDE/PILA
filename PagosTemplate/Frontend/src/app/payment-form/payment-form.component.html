@@ -2,26 +2,37 @@
   <div class="form-group">
     <h4>Pagos</h4>
     <label>Cédula</label>
-    <input [(ngModel)]="legalIdCard" type="text" class="form-control" (blur)="getEntity()"/>
-    <label>Nombres</label>
+    <input [(ngModel)]="cedula" type="text" class="form-control" (blur)="getEntity()"/>
+    <br><br>
+    <div class="currency-group">
+      <label>Nombres:</label>
+      <label class="currency-field">{{firstName}}</label>
+    </div>
     <br>
-    <label>{{firstName}}</label>
+    <div class="currency-group">
+      <label>Apellidos:</label>
+      <label class="currency-field">{{lastName}}</label>
+    </div>
     <br>
-    <label>Apellidos</label>
+    <div class="currency-group">
+      <label>Subtotal EPS:</label>
+      <label class="pull-right currency-field">{{subTotal1 | currency:'USD':true}}</label>
+    </div>
     <br>
-    <label>{{lastName}}</label>
+    <div class="currency-group">
+      <label>Subtotal Pension:</label>
+      <label class="pull-right currency-field">{{subTotal2 | currency:'USD':true}}</label>
+    </div>
     <br>
-    <label>Subtotal     EPS:</label>
-    <label>{{subTotal1}}</label>
+    <div class="currency-group">
+      <label>Subtotal Riesgos:</label>
+      <label class="pull-right currency-field">{{subTotal3 | currency:'USD':true}}</label>
+    </div>
     <br>
-    <label>Subtotal Pension:</label>
-    <label>{{subTotal2}}</label>
-    <br>
-    <label>Subtotal Riesgos:</label>
-    <label>{{subTotal3}}</label>
-    <br>
-    <label>Total:</label>
-    <label>{{total}}</label>
+    <div class="currency-group">
+      <label>Total:</label>
+      <label class="pull-right currency-field">{{total | currency:'USD':true}}</label>
+    </div>
     <br>
   </div>
   <div class="text-right">
@@ -30,19 +41,19 @@
     </button>
     <br>
     <br>
-    <table class="table dataTable table-striped table-bordered" border="1px">
-    <thead>
-    <tr>
-      <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
-      <td><h5></h5></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let row of rows">
-      <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
-    </tr>
-    </tbody>
-  </table>
+    <table *ngIf="showValidations" class="table dataTable table-striped table-bordered" border="1px">
+      <thead>
+      <tr>
+        <td *ngFor="let column of columns"><h5>{{column.title}}</h5></td>
+        <td><h5></h5></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of rows">
+        <td *ngFor="let column of columns">{{getRowData(row,column.name)}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
-  
+
 </div>

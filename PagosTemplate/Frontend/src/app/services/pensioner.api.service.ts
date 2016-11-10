@@ -28,7 +28,8 @@ export class PensionerApiService {
 
     getPensionersByLegalId(legalIdCard: String ): Observable<IEntity> {
         var urlGet;
-        urlGet = this.url + "?legalIdCard=" + legalIdCard;
+        urlGet = this.url + "/entity?id=" + legalIdCard;
+        console.log("Entidad URL:" + urlGet); 
         return this.http.get(urlGet).map(this.extractData);
     }
     
@@ -54,4 +55,12 @@ export class PensionerApiService {
         console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
     }
+    
+    getMultiLov(lovAddr: string) {
+        console.log("getMultiLov:" + lovAddr);
+        let url = this.url + lovAddr;
+        console.log("MultiLov Addr:" + url);
+        return this.http.get(url).map(this.extractData);
+    }
+
 }

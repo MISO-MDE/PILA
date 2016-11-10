@@ -27,6 +27,11 @@ public enum TipoPensionado {
     TipoPensionado(final String text) {
         this.text = text;
     }
+    
+    //devuelve el texto del enum
+    public String getName() {
+    	return this.text;
+    }
 
     /**
      * @see java.lang.Enum#toString()
@@ -34,5 +39,16 @@ public enum TipoPensionado {
     @Override
     public String toString() {
         return text;
-    }	
+    }
+    
+    static public TipoPensionado getEnumbyDesc(String desc)
+    {
+        for(TipoPensionado act : TipoPensionado.values())
+        {
+            if(act.getName().equals(desc)) {
+            	return act;
+            }
+        }
+        return null;
+    }
 }

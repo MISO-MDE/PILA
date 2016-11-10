@@ -10,16 +10,17 @@ import {Entity} from '../sharedresources/classes';
   styleUrls: ['./payment-form.component.less']
 })
 export class PaymentFormComponent implements OnInit {
-  
-  public legalIdCard: string;
+
+  public cedula: string;
   public firstName: string;
   public lastName: string;
-  public subTotal1: number; 
+  public subTotal1: number;
   public subTotal2: number;
   public subTotal3: number;
   public total: number;
+  public showValidations:boolean = false;
 
-  public rows: Array<any>; 
+  public rows: Array<any>;
 
   public columns: Array<any> = [
     {title: 'Validacion', name: 'Validacion'},
@@ -27,31 +28,34 @@ export class PaymentFormComponent implements OnInit {
     {title: 'Valor2', name: 'valor2'}
   ];
 
-  
+
   constructor(private pensionerService: PensionerApiService,
-              private paymentService: PaymentApiService) { }
+              private paymentApiService: PaymentApiService) { }
 
   ngOnInit() {
   }
-  
+
   public getRowData(row, data) {
     return row [data];
   }
 
   getEntity() {
-    console.log("Evento llamando datos de la entidad:" + this.legalIdCard);
-    this.pensionerService.getPensionersByLegalId(this.legalIdCard).subscribe((entityObj:any) => {
+    console.log("Evento llamando datos de la entidad:" + this.cedula);
+    this.pensionerService.getPensionersByLegalId(this.cedula).subscribe((entityObj:any) => {
+      console.log("Evento llamando datos de la entidad:" + JSON.stringify(entityObj));
+      this.cedula = entityObj.cedula;
       this.firstName = entityObj.firstName;
-      this.lastName = entityObj.lastName;  
+      this.lastName = entityObj.lastName;
     });
   }
 
   calculatePayment() {
       console.log("Calculando total de pago:");
-      this.paymentService.getPaymentCalculation().subscribe((paymentObj:any) => {
+      this.paymentApiService.getPaymentCalculation(this.cedula).subscribe((paymentObj:any) => {
         console.log("Retorno de pago:" + JSON.stringify(paymentObj));
         if (paymentObj.errorCondition != null) {
           this.rows = paymentObj.errorCondition;
+          this.showValidations = true;
         }
         else {
           this.subTotal1 = paymentObj.subTotal1;

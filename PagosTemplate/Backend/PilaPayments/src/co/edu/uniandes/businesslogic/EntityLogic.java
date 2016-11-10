@@ -4,13 +4,19 @@ import java.util.Arrays;
 import java.util.List;
 
 import co.edu.uniandes.dao.EntityDAO;
+import co.edu.uniandes.dao.PaisDAO;
+import co.edu.uniandes.dao.SuperEntityDAO;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.rest.api.EntityManager;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
 import co.edu.uniandes.to.PilaEntityTO;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Logica del super entity
@@ -19,15 +25,20 @@ import co.edu.uniandes.to.PilaEntityTO;
 public class EntityLogic {
 
 	private EntityDAO entityDAO;
+	private SuperEntityDAO superEntityDAO;
+	private PaisDAO paisDAO;
+	
+	private static final Logger logger = LogManager.getLogger(EntityLogic.class);
 	
 	/**
 	 * Constructor
 	 * @param dao
 	 */
 	
-	public EntityLogic(EntityDAO entityDAO){
-	
+	public EntityLogic(EntityDAO entityDAO, SuperEntityDAO superEntityDAO, PaisDAO paisDAO){
 		this.entityDAO = entityDAO;
+		this.superEntityDAO = superEntityDAO;
+		this.paisDAO = paisDAO;
 	}
 	
 	/**
@@ -40,13 +51,13 @@ public class EntityLogic {
 		
 		PilaEntity entity = new PilaEntity();
 		entity.setCedula(entityTO.getCedula());
-		entity.setNombre(entity.getNombre());
+		entity.setNombre(entityTO.getNombre());
 		entity.setApellido(entityTO.getApellido());
 		entity.setSalario(entityTO.getSalario());
 		entity.setTipoPension(entityTO.getTipoPension());
 		entity.setTipoPensionado(entityTO.getTipoPensionado());
 		entity.setActividad(entityTO.getActividad());
-		entity.setSuperEntidad(entityTO.getSuperEntidad());
+		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
 		entity.setPais(entityTO.getPais());
 		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
 		
@@ -69,7 +80,7 @@ public class EntityLogic {
 		entity.setTipoPension(entityTO.getTipoPension());
 		entity.setTipoPensionado(entityTO.getTipoPensionado());
 		entity.setActividad(entityTO.getActividad());
-		entity.setSuperEntidad(entityTO.getSuperEntidad());
+		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
 		entity.setPais(entityTO.getPais());
 		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
 		
@@ -97,6 +108,10 @@ public class EntityLogic {
 	public PilaEntity getEntitiesById(long id) {
 		return entityDAO.findEntity(id);
 	}
+	
+	
+	
+	
 	
 	/**
 	 * Retorna las actividades economicas definidas en el sistema

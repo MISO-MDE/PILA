@@ -32,8 +32,10 @@ import co.edu.uniandes.to.PilaEntityTO;
 import co.edu.uniandes.businesslogic.EntityLogic;
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
+import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
+import co.edu.uniandes.entity.Pais;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.staticmodel.TipoPension;
 import co.edu.uniandes.staticmodel.TipoPensionado;
@@ -56,12 +58,14 @@ public class EntityManager {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getEntities(){
 		ObjectMapper mapper = new ObjectMapper();
+		logger.debug("Start getEntities");
 		String response = "";
 		try {
 			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().getEntities());
 		} catch (JsonProcessingException e) {
 			response = "No se pudo obtener la lista " + e.getMessage();
 		}
+		logger.	debug("end getEntities:" + response);
 		return response;
 	}
 	
@@ -85,30 +89,12 @@ public class EntityManager {
 			response = "No se pudo encontrar el registro. \n" + ex.getMessage();
 		}
 		
-		/*
-		ObjectMapper mapper = new ObjectMapper();
-		
-		String response = null;
-
-		response = "{" + "\"" + "id\":" + "1," +
-					"\"" + "cedula\":" + "79120111," +
-					"\"" + "firstName\":" + "\"Pedro\"," +
-					"\"" + "lastName\":" + "\"Perez\"," +
-					"\"" + "pensionType\":" + "\"Vejez\"," +
-					"\"" + "pensionerType\":" + "\"Prima Media\"," +
-					"\"" + "residence\":" + "\"Colombia\"," +
-					"\"" + "familyResidence\":" + "\"Colombia\"," +
-					"\"" + "profession\":" + "\"Congreista\"," +
-					"\"" + "salary\":" + "27000000" +
-					"}";
-        */
-		
 		logger.debug("result: '"+ response +"'");
         logger.debug("End getEntityManager");
 
         return response;	
 	}
-
+	
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -120,15 +106,34 @@ public class EntityManager {
 		
 		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
 		
+		logger.debug("Object1 " + node.get("cedula").asInt());
+		logger.debug("Object2 " + node.get("firstName").asText());
+		logger.debug("Object3 " + node.get("lastName").asText());
+		logger.debug("Object4 " + node.get("salary").asDouble());
+		logger.debug("Object5 " + node.get("pensionType").asText());
+		
+		logger.debug("Object6 " + node.get("pensionerType").asText());
+		//logger.debug("Object7 " + ActividadEconomica.valueOf(node.get("profession").asText()));
+		logger.debug("Object8 " + Long.valueOf(node.get("residenceCountry").asText()));
+		logger.debug("Object9 " + Long.valueOf(node.get("familyResidenceCountry").asText()));
+		//logger.debug("Object10 " + Long.valueOf(node.get("superEntityId").asText()));
+		
 		PilaEntityTO entityTO = new PilaEntityTO();
+		
+		Pais pais = new Pais();
 		
 		entityTO.setCedula(node.get("cedula").asInt());
 		entityTO.setNombre(node.get("firstName").asText());
 		entityTO.setApellido(node.get("lastName").asText());
 		entityTO.setSalario(node.get("salary").asDouble());
-		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
-		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
-		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		entityTO.setTipoPension(TipoPension.getEnumbyDesc(node.get("pensionType").asText()));
+		entityTO.setTipoPensionado(TipoPensionado.getEnumbyDesc(node.get("pensionerType").asText()));
+		entityTO.setActividad(ActividadEconomica.getActividadByCIIU(node.get("profession").asText()));
+		entityTO.setPais(Long.valueOf(node.get("residenceCountry").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familyResidenceCountry").asText()));
+		//entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText())); //Error super entity id referecia circular
+		
+		
 		
 
 		String id = getEntityLogic().crearEntity(entityTO); // Debe retornar el id creado la entidad
@@ -201,7 +206,7 @@ public class EntityManager {
 	@Path("/epensions")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getPensionTypes() {
-		
+		logger.debug("Entrando REST GET /epensions");
 		ObjectMapper mapper = new ObjectMapper();
 		String response = "";
 		try {
@@ -209,6 +214,7 @@ public class EntityManager {
 		} catch (JsonProcessingException e) {
 			response = "No se pudo obtener la lista.\n" + e.getMessage();
 		}
+		logger.debug("resultLOV Tipo Pension: '" + response + "'");
 		return response;
 	}
 	
@@ -237,7 +243,7 @@ public class EntityManager {
 	 */
 	public EntityLogic getEntityLogic() {
 		if(logic == null){
-			logic = new EntityLogic(new EntityDAOImpl());					
+			logic = new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new PaisDAOImpl());					
 		}
 		return logic;
 	}
@@ -255,6 +261,9 @@ public class EntityManager {
 		entityTO.setTipoPension(TipoPension.valueOf(node.get("pensionType").asText()));
 		entityTO.setTipoPensionado(TipoPensionado.valueOf(node.get("pensionerType").asText()));
 		entityTO.setActividad(ActividadEconomica.valueOf(node.get("profession").asText()));
+		entityTO.setPais(Long.valueOf(node.get("residense").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familiyResidence").asText()));
+		entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText()));
 		
 		return entityTO;
 	}

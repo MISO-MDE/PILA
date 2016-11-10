@@ -35,8 +35,13 @@ public enum TipoPension {
     /**
      * @param text
      */
-    TipoPension(final String text) {
+    TipoPension(String text) {
         this.text = text;
+    }
+   
+    //devuelve el texto del enum
+    public String getName() {
+    	return this.text;
     }
 
     /**
@@ -45,5 +50,16 @@ public enum TipoPension {
     @Override
     public String toString() {
         return text;
+    }
+    
+    static public TipoPension getEnumbyDesc(String desc)
+    {
+        for(TipoPension act : TipoPension.values())
+        {
+            if(act.getName().equals(desc)) {
+            	return act;
+            }
+        }
+        return null;
     }
 }

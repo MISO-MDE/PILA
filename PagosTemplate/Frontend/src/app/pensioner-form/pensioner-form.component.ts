@@ -8,28 +8,12 @@ import {IEntity} from "../sharedresources/interfaces";
   styleUrls: ['./pensioner-form.component.less']
 })
 export class PensionerFormComponent implements OnInit {
-  public pensionTypeOptions: Array<any> = [
-    {
-      'id':"12",
-      'name':"Pension tipo 1"
-    },
-    {
-      'id':"VEJEZ",
-      'name':"Vejez"
-    }
-  ];
-
-  public pensionerTypeOptions : Array<any> = [
-    {
-      'id':"REGIMEN_PRIMA_MEDIA",
-      'name':"Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv"
-    },
-    {
-      'id':"13",
-      'name':"Pensionado tipo 2"
-    }
-  ];
-
+  
+  public pensionTypeOptions = [];
+  public pensionerTypeOptions = [];
+  public profession = [];
+  //public countryOptions = [];
+  
   public countryOptions : Array<any> = [
     {
       'id':"12",
@@ -37,13 +21,28 @@ export class PensionerFormComponent implements OnInit {
     },
     {
       'id':"13",
-      'name':"Argentina"
+      'name':"Extetior"
     }
   ];
+  
   constructor(public pensionersService: PensionersService) {
   }
 
   ngOnInit() {
+      this.pensionersService.loadMultiLov('/epensions').subscribe((response: any) => {
+        this.pensionTypeOptions = response;
+      });
+      this.pensionersService.loadMultiLov('/epensioners').subscribe((response: any) => {
+        this.pensionerTypeOptions = response;
+      });
+      this.pensionersService.loadMultiLov('/eactivities').subscribe((response: any) => {
+        this.profession = response;
+      });
+      /*
+      this.pensionersService.loadMultiLov('/epensions').subscribe((response: any) => {
+        this.countryOptions = response;
+      });
+      */
   }
 
   public saveEntity() {

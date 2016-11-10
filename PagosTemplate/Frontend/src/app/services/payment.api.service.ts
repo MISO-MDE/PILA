@@ -26,9 +26,9 @@ export class PaymentApiService {
         return this.http.get(urlGet).map(this.extractData);
     }
 
-    getPaymentCalculation(): Observable<IPayment> {
+    getPaymentCalculation(cedula:string): Observable<IPayment> {
         var urlGet;
-        urlGet = this.url + "calculation";
+        urlGet = this.url + "calculation" + "?id=" + cedula;
         console.log("getCalculatinData: " + urlGet);
         return this.http.get(urlGet).map(this.extractData);
     }

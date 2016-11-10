@@ -35,4 +35,21 @@ public enum TipoNovedad {
     public String toString() {
         return text;
     }
+    
+  //devuelve el texto del enum
+    public String getName() {
+    	return this.text;
+    }
+    
+    static public TipoNovedad getEnumbyDesc(String desc)
+    {
+        for(TipoNovedad act : TipoNovedad.values())
+        {
+            if(act.getName().equals(desc)) {
+            	return act;
+            }
+        }
+        return null;
+    }
+    
 }

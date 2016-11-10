@@ -8,11 +8,18 @@ import javax.persistence.Query;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.entity.PilaSuperEntity;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Implementacion del dao de entidad
  * @author jorge perea
  */
 public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
+	
+	
+	private static final Logger logger = LogManager.getLogger(EntityDAOImpl.class);
 	
 	/**
 	 * entity manager
@@ -34,10 +41,11 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	 */
 	@Override
 	public PilaEntity findEntity(long cedula) {
+		logger.debug("Busqueda por Cedula:" + cedula);
 		Query query = em.createQuery("select en from PilaEntity en where en.cedula = :cedula");
 		query.setParameter("cedula", cedula);
 	    
-	    return query.getResultList().isEmpty() ? null : (PilaEntity)query.getResultList().get(0);
+	    return query.getResultList().isEmpty() ? null : (PilaEntity)query.getSingleResult();
 	}
 
 	/**

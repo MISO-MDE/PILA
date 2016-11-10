@@ -9,6 +9,7 @@ import {PensionerApiService} from "../services/pensioner.api.service";
 
 @Injectable()
 export class PensionersService {
+
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
@@ -22,13 +23,15 @@ export class PensionersService {
   }
 
   public selectRow(row) {
-    this.selectedRow = row;
+      this.selectedRow = row;
+      //this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
   }
 
   public loadPensioners(): any {
     this.pensionerApiService.getPensioners('*')
       .subscribe((response: any) => {
-        this.rows = response.results;
+        console.log("PENSIONERS:" + JSON.stringify(response));
+        this.rows = response;
       });
   }
 
@@ -36,6 +39,7 @@ export class PensionersService {
     console.log("**Saving:Save Entity " + JSON.stringify(entity));
     this.pensionerApiService.saveEntity(entity).subscribe((response: any) => {
       if (response) {
+        this.loadPensioners();
         //Salva ahora el administrador luego de que la superentidad quedo guardada
         console.log("**SUCCESS: Se guardo la entidad" + JSON.stringify(response));
       } else {
@@ -44,4 +48,17 @@ export class PensionersService {
     });
   }
 
+  public loadMultiLov(lovAddr:string) {
+    console.log("Respuesta LOV loadMultiLov:" + lovAddr);
+    return this.pensionerApiService.getMultiLov(lovAddr);
+  }
+
+/*
+  public loadMultiLov(lovAddr:string) {
+    this.pensionerApiService.getMultiLov(lovAddr)
+      .subscribe((response: any) => {
+        this.pensionTypeOptions = response;
+      });
+  }
+*/
 }
