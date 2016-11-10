@@ -61,8 +61,7 @@ public class UserManager {
 		ObjectMapper mapper = new ObjectMapper();
 		
 		if(user != null && user.getIdDb() != null) {
-			
-			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getSuperEntityLogic().getEconActivities());
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(user);
 		} else {
 			response = "No se encontro el usuario";
 		}
