@@ -3,7 +3,8 @@ values(1, 900539845, 'ESTABLECIMIENTO_EDUCACION_MEDIA', 'Oracle');
 
 
 insert into pilauser
-values (1, 'peter@oracle.com', null, 1123, 'Peter');
+(user_id, email, password, userid, username, rol)
+values (1, 'ir.taimal@gmail.com', null, '4rCh8ZxUV4T88RJriKGnNG9PhCG2', 'Ivan', 'SuperEntity');
 
 insert into pilausersuperentity
 values (1, 1);

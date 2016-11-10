@@ -34,7 +34,7 @@ public class PilaUserTO {
 	/**
 	 * 
 	 */
-	private String rolename;
+	private String roleName;
 	
 	/**
 	 * constructor
@@ -116,14 +116,14 @@ public class PilaUserTO {
 	/**
 	 * @return the rolename
 	 */
-	public String getRolename() {
-		return rolename;
+	public String getRoleName() {
+		return roleName;
 	}
 
 	/**
 	 * @param rolename the rolename to set
 	 */
-	public void setRolename(String rolename) {
-		this.rolename = rolename;
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
 }

@@ -33,7 +33,7 @@ export class UserApiService {
     }
 
     getUserData(userId: String): Observable<IUser> {
-        let urlGet = this.url + "?" + userId;
+        let urlGet = this.url + "/" + userId;
         console.log("User Data Exec: " + urlGet);
         return this.http.get(urlGet).map(this.extractData);
     }

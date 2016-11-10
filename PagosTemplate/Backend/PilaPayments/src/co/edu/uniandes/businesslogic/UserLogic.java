@@ -46,7 +46,7 @@ public class UserLogic {
 
 			resultado.setIdDb(user.getId().toString());
 			resultado.setEmail(user.getEmail());
-			resultado.setRolename("SuperEntity");
+			resultado.setRoleName("SuperEntity");
 			resultado.setUserId(userId);
 			resultado.setSuperEntityId(user.getSuperEntity().getId().toString());
 			resultado.setPassword(user.getPassword());
@@ -55,7 +55,7 @@ public class UserLogic {
 			
 			resultado.setIdDb(user2.getId().toString());
 			resultado.setEmail(user2.getEmail());
-			resultado.setRolename("Intermediary");
+			resultado.setRoleName("Intermediary");
 			resultado.setUserId(userId);
 			resultado.setSuperEntityId("");
 			resultado.setPassword(user2.getPassword());
