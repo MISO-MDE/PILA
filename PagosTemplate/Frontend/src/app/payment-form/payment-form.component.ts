@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PensionerApiService} from '../services/pensioner.api.service';
+import {PensionerApiService} from '../pensioner/rest.api.service';
 import {PaymentApiService} from '../services/payment.api.service';
 
 import {Entity} from '../sharedresources/classes';
@@ -41,7 +41,7 @@ export class PaymentFormComponent implements OnInit {
 
   getEntity() {
     console.log("Evento llamando datos de la entidad:" + this.cedula);
-    this.pensionerService.getPensionersByLegalId(this.cedula).subscribe((entityObj:any) => {
+    this.pensionerService.loadById(this.cedula).subscribe((entityObj:any) => {
       console.log("Evento llamando datos de la entidad:" + JSON.stringify(entityObj));
       this.cedula = entityObj.cedula;
       this.firstName = entityObj.firstName;

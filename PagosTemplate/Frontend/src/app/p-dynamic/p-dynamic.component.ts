@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 import {IntermediaryFormComponent} from "../intermediary-form/intermediary-form.component";
 import {PaymentFormComponent} from "../payment-form/payment-form.component";
-import {PensionerFormComponent} from "../pensioner-form/pensioner-form.component";
 import {NewFormComponent} from "../new-form/new-form.component";
+import {PensionerFormComponent} from "../pensioner/form/form.component";
 
 @Component({
   selector: 'app-p-dynamic',

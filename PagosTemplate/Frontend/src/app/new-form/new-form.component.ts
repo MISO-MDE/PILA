@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {PensionerApiService} from '../services/pensioner.api.service';
-import {PensionersService} from "../pensioners/pensioners.service";
+import {PensionerApiService} from '../pensioner/rest.api.service';
 import {NewsService} from "../news/news.service";
 import { INews } from "../sharedresources/interfaces"
 
@@ -18,7 +17,7 @@ export class NewFormComponent implements OnInit {
                           {'id':"SLN",'name':"SLN-Suspension Temporal"},
                           {'id':"SLN",'name':"SLN-Licencia No Remunerada"},
                           {'id':"SLN",'name':"SLN-Comision de Servicios"}
-    
+
 
   ];
 
@@ -35,14 +34,14 @@ export class NewFormComponent implements OnInit {
 
   getEntity() {
     console.log("Evento llamando datos de la entidad:" + this.cedula);
-    this.pensionerService.getPensionersByLegalId(this.cedula).subscribe((entityObj:any) => {
+    this.pensionerService.loadById(this.cedula).subscribe((entityObj:any) => {
       console.log("Evento llamando datos de la entidad:" + JSON.stringify(entityObj));
       this.firstName = entityObj.firstName;
       this.lastName = entityObj.lastName;
       this.entityid = entityObj.id;
     });
   }
-  
+
   public saveNews() {
     this.newsService.selectedRow.entityId = this.entityid;
     this.newsService.selectedRow.entityId = this.entityid;

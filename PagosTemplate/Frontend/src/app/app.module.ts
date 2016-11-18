@@ -38,17 +38,19 @@ import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { NewsComponent } from './news/news.component';
 import { NewFormComponent } from './new-form/new-form.component';
-import { PensionersComponent } from './pensioners/pensioners.component';
-import { PensionerFormComponent } from './pensioner-form/pensioner-form.component';
-import {PensionerApiService} from "./services/pensioner.api.service";
 import {EventApiService} from "./services/event.api.service";
 import {PaymentApiService} from "./services/payment.api.service";
 import {Ripple} from "./commons/directives/ripple/ripple";
 import {IntermediaryService} from "./intermediary/intermediary.service";
 import {NewsService} from "./news/news.service";
 import {PaymentsService} from "./payments/payments.service";
-import {PensionersService} from "./pensioners/pensioners.service";
 import {FireLoginService} from "./fire-login/fire-login.service";
+
+/*pensioners*/
+import { PensionersGridComponent } from './pensioner/grid/grid.component';
+import { PensionerFormComponent } from './pensioner/form/form.component';
+import {PensionerApiService} from "./pensioner/rest.api.service";
+import {PensionerBusinessService} from "./pensioner/business.service";
 
 @NgModule({
   declarations: [
@@ -64,7 +66,7 @@ import {FireLoginService} from "./fire-login/fire-login.service";
     PaymentsComponent,
     NewsComponent,
     NewFormComponent,
-    PensionersComponent,
+    PensionersGridComponent,
     PensionerFormComponent,
     Ripple
   ],
@@ -99,7 +101,7 @@ import {FireLoginService} from "./fire-login/fire-login.service";
       },
       {
         path: 'pensioners',
-        component: PensionersComponent
+        component: PensionersGridComponent
       }
 
     ]),
@@ -115,7 +117,7 @@ import {FireLoginService} from "./fire-login/fire-login.service";
     IntermediaryService,
     NewsService,
     PaymentsService,
-    PensionersService,
+    PensionerBusinessService,
     //REST API services
     IntermediaryApiService,
     PensionerApiService,
