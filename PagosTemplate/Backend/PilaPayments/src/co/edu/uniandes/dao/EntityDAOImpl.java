@@ -62,6 +62,9 @@ public class EntityDAOImpl extends DAOBaseImpl<PilaEntity> implements EntityDAO{
 	@Override
 	public PilaEntity findEntityById(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		Query query = em.createQuery("select en from PilaEntity en where en.id = :id");
+		query.setParameter("id", id);
+	    
+	    return query.getResultList().isEmpty() ? null : (PilaEntity)query.getSingleResult();
 	}	
 }
