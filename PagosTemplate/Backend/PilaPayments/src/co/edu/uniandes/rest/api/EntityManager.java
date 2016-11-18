@@ -107,15 +107,15 @@ public class EntityManager {
 		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
 		
 		logger.debug("Object1 " + node.get("cedula").asInt());
-		logger.debug("Object2 " + node.get("firstName").asText());
-		logger.debug("Object3 " + node.get("lastName").asText());
-		logger.debug("Object4 " + node.get("salary").asDouble());
-		logger.debug("Object5 " + node.get("pensionType").asText());
+		logger.debug("Object2 " + node.get("nombre").asText());
+		logger.debug("Object3 " + node.get("apellido").asText());
+		logger.debug("Object4 " + node.get("salario").asDouble());
+		logger.debug("Object5 " + node.get("tipoPension").asText());
 		
-		logger.debug("Object6 " + node.get("pensionerType").asText());
+		logger.debug("Object6 " + node.get("tipoPensionado").asText());
 		//logger.debug("Object7 " + ActividadEconomica.valueOf(node.get("profession").asText()));
-		logger.debug("Object8 " + Long.valueOf(node.get("residenceCountry").asText()));
-		logger.debug("Object9 " + Long.valueOf(node.get("familyResidenceCountry").asText()));
+		logger.debug("Object8 " + Long.valueOf(node.get("pais").asText()));
+		logger.debug("Object9 " + Long.valueOf(node.get("paisGrupoFamiliar").asText()));
 		//logger.debug("Object10 " + Long.valueOf(node.get("superEntityId").asText()));
 		
 		PilaEntityTO entityTO = new PilaEntityTO();
@@ -123,14 +123,14 @@ public class EntityManager {
 		Pais pais = new Pais();
 		
 		entityTO.setCedula(node.get("cedula").asInt());
-		entityTO.setNombre(node.get("firstName").asText());
-		entityTO.setApellido(node.get("lastName").asText());
-		entityTO.setSalario(node.get("salary").asDouble());
-		entityTO.setTipoPension(TipoPension.getEnumbyDesc(node.get("pensionType").asText()));
-		entityTO.setTipoPensionado(TipoPensionado.getEnumbyDesc(node.get("pensionerType").asText()));
-		entityTO.setActividad(ActividadEconomica.getActividadByCIIU(node.get("profession").asText()));
-		entityTO.setPais(Long.valueOf(node.get("residenceCountry").asText()));
-		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("familyResidenceCountry").asText()));
+		entityTO.setNombre(node.get("nombre").asText());
+		entityTO.setApellido(node.get("apellido").asText());
+		entityTO.setSalario(node.get("salario").asDouble());
+		entityTO.setTipoPension(TipoPension.getEnumbyDesc(node.get("tipoPension").asText()));
+		entityTO.setTipoPensionado(TipoPensionado.getEnumbyDesc(node.get("tipoPensionado").asText()));
+		entityTO.setActividad(ActividadEconomica.getActividadByCIIU(node.get("actividad").asText()));
+		entityTO.setPais(Long.valueOf(node.get("pais").asText()));
+		entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("paisGrupoFamiliar").asText()));
 		//entityTO.setSuperEntidad(Long.valueOf(node.get("superEntityId").asText())); //Error super entity id referecia circular
 		
 		

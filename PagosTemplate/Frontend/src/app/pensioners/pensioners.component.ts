@@ -14,8 +14,8 @@ export class PensionersComponent implements OnInit {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
-    {title: 'Nombre', className: 'text-warning', name: 'firstName'},
-    {title: 'Apellido', className: 'text-warning', name: 'lastName'},
+    {title: 'Nombre', className: 'text-warning', name: 'nombre'},
+    {title: 'Apellido', className: 'text-warning', name: 'apellido'},
     {title: 'Identificación', name: 'legalIdCard'}
   ];
 

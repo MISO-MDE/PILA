@@ -117,8 +117,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the nombre
-	 */
-	@JsonProperty("firstName")
+	 */	
 	public String getNombre() {
 		return nombre;
 	}
@@ -132,8 +131,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the apellido
-	 */
-	@JsonProperty("lastName")
+	 */	
 	public String getApellido() {
 		return apellido;
 	}
@@ -147,8 +145,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the salario
-	 */
-	@JsonProperty("salary")
+	 */	
 	public double getSalario() {
 		return salario;
 	}
@@ -162,8 +159,7 @@ public class PilaEntity {
 
 	/**
 	 * @return el tipo de pension
-	 */
-	@JsonProperty("pensionType")
+	 */	
 	@Enumerated(EnumType.STRING)
 	public TipoPension getTipoPension(){
 		return tipoPension;
@@ -178,8 +174,7 @@ public class PilaEntity {
 	
 	/**
 	 * @return el tipo de pensionado
-	 */
-	@JsonProperty("pensionerType")
+	 */	
 	@Enumerated(EnumType.STRING)
 	public TipoPensionado getTipoPensionado(){
 		return tipoPensionado;
@@ -194,8 +189,7 @@ public class PilaEntity {
 	
 	/**
 	 * @return the actividad
-	 */
-	@JsonProperty("profession")
+	 */	
 	@Enumerated(EnumType.STRING)
 	public ActividadEconomica getActividad() {
 		return actividad;
@@ -210,8 +204,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the superEntidad
-	 */
-	@JsonProperty("superEntityId")
+	 */	
 	@ManyToOne
 	@JoinColumn(name="pilaSuperEntity_id")
 	public PilaSuperEntity getSuperEntidad() {
@@ -227,8 +220,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the pais
-	 */
-	@JsonProperty("residence")
+	 */	
 	//@OneToOne
 	//@JoinColumn(name="pais_id")
 	public Long getPais() {
@@ -244,8 +236,7 @@ public class PilaEntity {
 
 	/**
 	 * @return the paisGrupoFamiliar
-	 */
-	@JsonProperty("familyResidence")
+	 */	
 	//@OneToOne
 	//@JoinColumn(name="pais_idGrupo")
 	public Long getPaisGrupoFamiliar() {
