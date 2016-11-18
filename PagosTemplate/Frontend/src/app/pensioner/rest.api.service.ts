@@ -38,7 +38,7 @@ export class PensionerApiService {
 
   delete(data: any) {
     console.log("Delete:" + JSON.stringify(data));
-    return this.http.delete(this.url, data)
+    return this.http.delete(this.url +"/"+data.id, data)
       .map(this.extractData)
       .catch(this.handleError);
   }

@@ -36,6 +36,7 @@ export class PensionersGridComponent implements OnInit {
   }
 
   public deleteRow(row: any) {
+    this.businessService.delete(row);
     console.log(row);
   }
 
