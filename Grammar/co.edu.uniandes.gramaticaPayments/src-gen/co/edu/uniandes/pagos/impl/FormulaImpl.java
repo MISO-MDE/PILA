@@ -3,13 +3,14 @@
  */
 package co.edu.uniandes.pagos.impl;
 
-import co.edu.uniandes.pagos.ExpresionLogica;
-import co.edu.uniandes.pagos.Expression;
 import co.edu.uniandes.pagos.Formula;
+import co.edu.uniandes.pagos.IfBlock;
 import co.edu.uniandes.pagos.PagosPackage;
+import co.edu.uniandes.pagos.ReturnBlock;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -30,8 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link co.edu.uniandes.pagos.impl.FormulaImpl#getLogExp <em>Log Exp</em>}</li>
- *   <li>{@link co.edu.uniandes.pagos.impl.FormulaImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.impl.FormulaImpl#getFormulaBody <em>Formula Body</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.impl.FormulaImpl#getFormulaReturn <em>Formula Return</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,24 +41,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
 {
   /**
-   * The cached value of the '{@link #getLogExp() <em>Log Exp</em>}' containment reference list.
+   * The cached value of the '{@link #getFormulaBody() <em>Formula Body</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLogExp()
+   * @see #getFormulaBody()
    * @generated
    * @ordered
    */
-  protected EList<ExpresionLogica> logExp;
+  protected EList<IfBlock> formulaBody;
 
   /**
-   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
+   * The cached value of the '{@link #getFormulaReturn() <em>Formula Return</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpression()
+   * @see #getFormulaReturn()
    * @generated
    * @ordered
    */
-  protected EList<Expression> expression;
+  protected ReturnBlock formulaReturn;
 
   /**
    * <!-- begin-user-doc -->
@@ -84,13 +86,13 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ExpresionLogica> getLogExp()
+  public EList<IfBlock> getFormulaBody()
   {
-    if (logExp == null)
+    if (formulaBody == null)
     {
-      logExp = new EObjectContainmentEList<ExpresionLogica>(ExpresionLogica.class, this, PagosPackage.FORMULA__LOG_EXP);
+      formulaBody = new EObjectContainmentEList<IfBlock>(IfBlock.class, this, PagosPackage.FORMULA__FORMULA_BODY);
     }
-    return logExp;
+    return formulaBody;
   }
 
   /**
@@ -98,13 +100,47 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Expression> getExpression()
+  public ReturnBlock getFormulaReturn()
   {
-    if (expression == null)
+    return formulaReturn;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFormulaReturn(ReturnBlock newFormulaReturn, NotificationChain msgs)
+  {
+    ReturnBlock oldFormulaReturn = formulaReturn;
+    formulaReturn = newFormulaReturn;
+    if (eNotificationRequired())
     {
-      expression = new EObjectContainmentEList<Expression>(Expression.class, this, PagosPackage.FORMULA__EXPRESSION);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, oldFormulaReturn, newFormulaReturn);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return expression;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFormulaReturn(ReturnBlock newFormulaReturn)
+  {
+    if (newFormulaReturn != formulaReturn)
+    {
+      NotificationChain msgs = null;
+      if (formulaReturn != null)
+        msgs = ((InternalEObject)formulaReturn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
+      if (newFormulaReturn != null)
+        msgs = ((InternalEObject)newFormulaReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
+      msgs = basicSetFormulaReturn(newFormulaReturn, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, newFormulaReturn, newFormulaReturn));
   }
 
   /**
@@ -117,10 +153,10 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
   {
     switch (featureID)
     {
-      case PagosPackage.FORMULA__LOG_EXP:
-        return ((InternalEList<?>)getLogExp()).basicRemove(otherEnd, msgs);
-      case PagosPackage.FORMULA__EXPRESSION:
-        return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
+      case PagosPackage.FORMULA__FORMULA_BODY:
+        return ((InternalEList<?>)getFormulaBody()).basicRemove(otherEnd, msgs);
+      case PagosPackage.FORMULA__FORMULA_RETURN:
+        return basicSetFormulaReturn(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,10 +171,10 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
   {
     switch (featureID)
     {
-      case PagosPackage.FORMULA__LOG_EXP:
-        return getLogExp();
-      case PagosPackage.FORMULA__EXPRESSION:
-        return getExpression();
+      case PagosPackage.FORMULA__FORMULA_BODY:
+        return getFormulaBody();
+      case PagosPackage.FORMULA__FORMULA_RETURN:
+        return getFormulaReturn();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -154,13 +190,12 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
   {
     switch (featureID)
     {
-      case PagosPackage.FORMULA__LOG_EXP:
-        getLogExp().clear();
-        getLogExp().addAll((Collection<? extends ExpresionLogica>)newValue);
+      case PagosPackage.FORMULA__FORMULA_BODY:
+        getFormulaBody().clear();
+        getFormulaBody().addAll((Collection<? extends IfBlock>)newValue);
         return;
-      case PagosPackage.FORMULA__EXPRESSION:
-        getExpression().clear();
-        getExpression().addAll((Collection<? extends Expression>)newValue);
+      case PagosPackage.FORMULA__FORMULA_RETURN:
+        setFormulaReturn((ReturnBlock)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -176,11 +211,11 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
   {
     switch (featureID)
     {
-      case PagosPackage.FORMULA__LOG_EXP:
-        getLogExp().clear();
+      case PagosPackage.FORMULA__FORMULA_BODY:
+        getFormulaBody().clear();
         return;
-      case PagosPackage.FORMULA__EXPRESSION:
-        getExpression().clear();
+      case PagosPackage.FORMULA__FORMULA_RETURN:
+        setFormulaReturn((ReturnBlock)null);
         return;
     }
     super.eUnset(featureID);
@@ -196,10 +231,10 @@ public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
   {
     switch (featureID)
     {
-      case PagosPackage.FORMULA__LOG_EXP:
-        return logExp != null && !logExp.isEmpty();
-      case PagosPackage.FORMULA__EXPRESSION:
-        return expression != null && !expression.isEmpty();
+      case PagosPackage.FORMULA__FORMULA_BODY:
+        return formulaBody != null && !formulaBody.isEmpty();
+      case PagosPackage.FORMULA__FORMULA_RETURN:
+        return formulaReturn != null;
     }
     return super.eIsSet(featureID);
   }

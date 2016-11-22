@@ -3,7 +3,7 @@
  */
 package co.edu.uniandes.pagos.impl;
 
-import co.edu.uniandes.pagos.CalculationAttribute;
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.TerminalValue;
 
@@ -38,7 +38,7 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
    * @generated
    * @ordered
    */
-  protected CalculationAttribute variable;
+  protected Attribute variable;
 
   /**
    * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
@@ -86,12 +86,12 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public CalculationAttribute getVariable()
+  public Attribute getVariable()
   {
     if (variable != null && variable.eIsProxy())
     {
       InternalEObject oldVariable = (InternalEObject)variable;
-      variable = (CalculationAttribute)eResolveProxy(oldVariable);
+      variable = (Attribute)eResolveProxy(oldVariable);
       if (variable != oldVariable)
       {
         if (eNotificationRequired())
@@ -106,7 +106,7 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public CalculationAttribute basicGetVariable()
+  public Attribute basicGetVariable()
   {
     return variable;
   }
@@ -116,9 +116,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVariable(CalculationAttribute newVariable)
+  public void setVariable(Attribute newVariable)
   {
-    CalculationAttribute oldVariable = variable;
+    Attribute oldVariable = variable;
     variable = newVariable;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__VARIABLE, oldVariable, variable));
@@ -177,7 +177,7 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
     switch (featureID)
     {
       case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        setVariable((CalculationAttribute)newValue);
+        setVariable((Attribute)newValue);
         return;
       case PagosPackage.TERMINAL_VALUE__VALOR:
         setValor((String)newValue);
@@ -197,7 +197,7 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
     switch (featureID)
     {
       case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        setVariable((CalculationAttribute)null);
+        setVariable((Attribute)null);
         return;
       case PagosPackage.TERMINAL_VALUE__VALOR:
         setValor(VALOR_EDEFAULT);

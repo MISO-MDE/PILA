@@ -1,0 +1,176 @@
+{
+name:PilaProcessor,
+/*NOTA LOS ATRIBUTOS DE LAS ENTIDADES SE PUEDEN REFERENCIAR POR MEDIO DE REFERENCIA CRUZADA CON LAS TECLAS:Control + Espacio */
+intermediary:
+	{
+		name:Planillator, //Entidad que maneja los pagos EJ Pagos Simples
+	
+		/*Lista de superentidades o pagadoras de los servicios */
+		superentities:
+		[
+			{
+				name:Pagadora,
+				description: "Empresa Pagadora de los Servicios",
+				attributes: [{superEntityId:Integer}, {Nombre:String}, {NIT:String}],
+				
+				/*Entidades o beneficiario del servicio por los que se paga el servicio*/
+				entities:
+				[	//Entidad Pensionado
+					{	name:Pensionado,
+						description: "Persona receptora de los servicios EPS, Pension, Riesgos",
+						attributes: [{Id: Integer}, 
+									{cedula:String}, 
+									{salario:Double}, 
+									{vivienda:String}, 
+									{grupofamiliar:String}, 
+									{NovedadesMes:Integer := 0}, //Valor calculado con las novedades del mes
+									{DiasNovedad:Integer}, 
+									{AltoRiesgo:String},
+									{RiesgoLaboral:Integer}, //Viene de las tablas de validaciones TABLA 2 
+									{Profesion:String}
+						]
+					},
+					/*Templates para CRUD de informacion en este caso Novedades, Pagos etc*/
+					InformationTemplate: 
+					[	
+						{	name:Novedades,
+							description: "Formulario para Registro de Novedades",
+							FormAttributes:
+							[	{FechaInicial:Date}, 
+								{FechaFinal:Date}, 
+								{TipoNovedad:String}, 
+								{DiasNovedad:Integer},
+								{idEntidad:Integer := Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
+								{superEntityId:Integer := superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion	
+							]
+						},
+										/*Formulas de Calculo del Formulario de Pagos */
+						calculationtemplates:
+						[	
+							{	name:EPS, /*Calculo PAGO EPS*/
+								description: "Calculo Salud",
+								/*Variables y Constantes Auxiliares del calculo*/
+								calculationattributes:
+								[
+									{impuesto:Double := 0.12}, 
+									{diasMes:Double := 30}, 
+									{salarioHora:Double := (salario / diasMes) / 8}
+								],
+					
+								/*Condicion y Formula de Pago */
+								calculationrules:
+									SI [salario = 1 || vivienda  <> "Colombia" && grupofamiliar <> "Colombia" && vivienda =1] ENTONCES
+									{
+										RETORNAR: 0
+									}	
+									SINO
+									{
+										RETORNAR: salario * impuesto
+									}
+							}, // FIN FORMULA DE CALCULO 1 SALUD  
+							{
+								name:Pension,
+								description: "Calculo Pension", /*Calculo PAGO Pension*/
+								calculationattributes:
+								[	{pensionNormal:Double := 0.16}, 
+									{riesgoLaboral:Integer := 0.20}, 
+									{diasLaborables:Integer := 20 - DiasNovedad} // Usado para el calculo de % segun novedades del mes
+								], 
+								calculationrules:
+									SI [AltoRiesgo = 4 || AltoRiesgo = 5] ENTONCES
+									{	
+										RETORNAR: salario * 0.26
+									}
+									SINO {
+											SI [Profesion = "Congresista"] ENTONCES
+											{
+												RETORNAR: salario * 0.255 * riesgoLaboral
+											}
+											SINO {
+												SI [Profesion = "CTI"] ENTONCES
+												{
+													RETORNAR: salario * 0.35
+												}
+												SINO {
+													SI [Profesion = "Aviador"] ENTONCES
+													{
+														RETORNAR: salario * 0.21
+													}
+													
+												}
+											
+											}
+									}
+									SI [ NovedadesMes = 0] ENTONCES
+									{
+										RETORNAR: salario * pensionNormal
+									}
+									SINO {  
+										SI [diasLaborables >=3 && diasLaborables < 20 && TipoNovedad = "SLN"] ENTONCES
+										{
+											RETORNAR: salario * 0.12
+										}
+										SINO {
+											RETORNAR: 0
+										}
+									}
+							},
+							{	name:RiesgosLaborales, /*Calculo PAGO Sistema General de Riesgos Laborales*/
+								description: "Riesgos Laborale",
+								/*Variables y Constantes Auxiliares del calculo*/
+								calculationattributes:
+								[	// Porcentajes de riesgo. 
+									{RiesgoI:Double := 0.522/100}, 
+									{RiesgoII:Double := 1.044/100},
+									{RiesgoIII:Double := 2.436/100},
+									{RiesgoIV:Double := 4.350/100},
+									{RiesgoV:Double := 6.960/100}
+								],
+					
+								/*Condicion y Formula de Pago */
+								calculationrules:
+									SI [RiesgoLaboral = 1] ENTONCES
+									{
+										RETORNAR: salario * RiesgoI
+									}	
+									SI [RiesgoLaboral = 2] ENTONCES
+									{
+										RETORNAR: salario * RiesgoII
+									}	
+									SI [RiesgoLaboral = 3] ENTONCES
+									{
+										RETORNAR: salario * RiesgoIII
+									}	
+									SI [RiesgoLaboral = 4] ENTONCES
+									{
+										RETORNAR: salario * RiesgoIV
+									}
+									SI [RiesgoLaboral = 5] ENTONCES
+									{
+										RETORNAR: salario * RiesgoV
+									}		
+							} // FIN FORMULA DE CALCULO SISTEMA GENERAL DE RIESGOS
+						], //FIN DE LOS CALCULOS
+						{	name:Pagos,
+							description: "Formulario para Registro de Pagos",
+							FormAttributes:[
+											{FechaPago:Date}, 
+											{Monto:Double}, 
+											{Status:String}, 
+											{MesPago:Integer},
+											{idEntidad:Integer := Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
+											{superEntityId:Integer := superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion
+							]
+						},
+						providers:[
+							{	name:PrestadoraServicios,
+								description: "Empresas Prestadora de los servicios",
+								attributes: [{Nombre:String}, {NIT:String}, {CodigoCIIU:String}]
+							}
+						] //FIN PROVIDERS O RECEPTORES DEL PAGO	
+					] //FIN FORMULARIOS TEMPLATES
+				] //FIN ENTITIES
+			} //FIN PAGADOR
+		] // FIN SUPER ENTITIES
+	} //FIN INTERMEDIAROS
+}	// FIN ARCHIVO

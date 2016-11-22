@@ -116,6 +116,26 @@ public class PagosAdapterFactory extends AdapterFactoryImpl
         return createFormulaAdapter();
       }
       @Override
+      public Adapter caseIfBlock(IfBlock object)
+      {
+        return createIfBlockAdapter();
+      }
+      @Override
+      public Adapter caseIfCondition(IfCondition object)
+      {
+        return createIfConditionAdapter();
+      }
+      @Override
+      public Adapter caseElseSegment(ElseSegment object)
+      {
+        return createElseSegmentAdapter();
+      }
+      @Override
+      public Adapter caseReturnBlock(ReturnBlock object)
+      {
+        return createReturnBlockAdapter();
+      }
+      @Override
       public Adapter caseExpresionLogica(ExpresionLogica object)
       {
         return createExpresionLogicaAdapter();
@@ -126,29 +146,9 @@ public class PagosAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
-      public Adapter caseSuperEntityAttribute(SuperEntityAttribute object)
+      public Adapter caseAttribute(Attribute object)
       {
-        return createSuperEntityAttributeAdapter();
-      }
-      @Override
-      public Adapter caseEntityAttribute(EntityAttribute object)
-      {
-        return createEntityAttributeAdapter();
-      }
-      @Override
-      public Adapter caseFormAttribute(FormAttribute object)
-      {
-        return createFormAttributeAdapter();
-      }
-      @Override
-      public Adapter caseVariableAttribute(VariableAttribute object)
-      {
-        return createVariableAttributeAdapter();
-      }
-      @Override
-      public Adapter caseCalculationAttribute(CalculationAttribute object)
-      {
-        return createCalculationAttributeAdapter();
+        return createAttributeAdapter();
       }
       @Override
       public Adapter caseTerminalValue(TerminalValue object)
@@ -318,6 +318,66 @@ public class PagosAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.IfBlock <em>If Block</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.pagos.IfBlock
+   * @generated
+   */
+  public Adapter createIfBlockAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.IfCondition <em>If Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.pagos.IfCondition
+   * @generated
+   */
+  public Adapter createIfConditionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.ElseSegment <em>Else Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.pagos.ElseSegment
+   * @generated
+   */
+  public Adapter createElseSegmentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.ReturnBlock <em>Return Block</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see co.edu.uniandes.pagos.ReturnBlock
+   * @generated
+   */
+  public Adapter createReturnBlockAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.ExpresionLogica <em>Expresion Logica</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -348,76 +408,16 @@ public class PagosAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.SuperEntityAttribute <em>Super Entity Attribute</em>}'.
+   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.Attribute <em>Attribute</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see co.edu.uniandes.pagos.SuperEntityAttribute
+   * @see co.edu.uniandes.pagos.Attribute
    * @generated
    */
-  public Adapter createSuperEntityAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.EntityAttribute <em>Entity Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.pagos.EntityAttribute
-   * @generated
-   */
-  public Adapter createEntityAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.FormAttribute <em>Form Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.pagos.FormAttribute
-   * @generated
-   */
-  public Adapter createFormAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.VariableAttribute <em>Variable Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.pagos.VariableAttribute
-   * @generated
-   */
-  public Adapter createVariableAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link co.edu.uniandes.pagos.CalculationAttribute <em>Calculation Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see co.edu.uniandes.pagos.CalculationAttribute
-   * @generated
-   */
-  public Adapter createCalculationAttributeAdapter()
+  public Adapter createAttributeAdapter()
   {
     return null;
   }

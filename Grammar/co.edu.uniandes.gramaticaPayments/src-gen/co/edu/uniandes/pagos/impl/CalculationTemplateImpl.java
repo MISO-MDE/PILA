@@ -3,10 +3,10 @@
  */
 package co.edu.uniandes.pagos.impl;
 
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.CalculationTemplate;
 import co.edu.uniandes.pagos.Formula;
 import co.edu.uniandes.pagos.PagosPackage;
-import co.edu.uniandes.pagos.VariableAttribute;
 
 import java.util.Collection;
 
@@ -90,7 +90,7 @@ public class CalculationTemplateImpl extends MinimalEObjectImpl.Container implem
    * @generated
    * @ordered
    */
-  protected EList<VariableAttribute> attLists;
+  protected EList<Attribute> attLists;
 
   /**
    * The cached value of the '{@link #getFormula() <em>Formula</em>}' containment reference list.
@@ -174,11 +174,11 @@ public class CalculationTemplateImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<VariableAttribute> getAttLists()
+  public EList<Attribute> getAttLists()
   {
     if (attLists == null)
     {
-      attLists = new EObjectContainmentEList<VariableAttribute>(VariableAttribute.class, this, PagosPackage.CALCULATION_TEMPLATE__ATT_LISTS);
+      attLists = new EObjectContainmentEList<Attribute>(Attribute.class, this, PagosPackage.CALCULATION_TEMPLATE__ATT_LISTS);
     }
     return attLists;
   }
@@ -256,7 +256,7 @@ public class CalculationTemplateImpl extends MinimalEObjectImpl.Container implem
         return;
       case PagosPackage.CALCULATION_TEMPLATE__ATT_LISTS:
         getAttLists().clear();
-        getAttLists().addAll((Collection<? extends VariableAttribute>)newValue);
+        getAttLists().addAll((Collection<? extends Attribute>)newValue);
         return;
       case PagosPackage.CALCULATION_TEMPLATE__FORMULA:
         getFormula().clear();

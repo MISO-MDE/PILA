@@ -3,9 +3,9 @@
  */
 package co.edu.uniandes.pagos.impl;
 
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.Provider;
-import co.edu.uniandes.pagos.SuperEntityAttribute;
 
 import java.util.Collection;
 
@@ -88,7 +88,7 @@ public class ProviderImpl extends MinimalEObjectImpl.Container implements Provid
    * @generated
    * @ordered
    */
-  protected EList<SuperEntityAttribute> attLists;
+  protected EList<Attribute> attLists;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,11 +162,11 @@ public class ProviderImpl extends MinimalEObjectImpl.Container implements Provid
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SuperEntityAttribute> getAttLists()
+  public EList<Attribute> getAttLists()
   {
     if (attLists == null)
     {
-      attLists = new EObjectContainmentEList<SuperEntityAttribute>(SuperEntityAttribute.class, this, PagosPackage.PROVIDER__ATT_LISTS);
+      attLists = new EObjectContainmentEList<Attribute>(Attribute.class, this, PagosPackage.PROVIDER__ATT_LISTS);
     }
     return attLists;
   }
@@ -226,7 +226,7 @@ public class ProviderImpl extends MinimalEObjectImpl.Container implements Provid
         return;
       case PagosPackage.PROVIDER__ATT_LISTS:
         getAttLists().clear();
-        getAttLists().addAll((Collection<? extends SuperEntityAttribute>)newValue);
+        getAttLists().addAll((Collection<? extends Attribute>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

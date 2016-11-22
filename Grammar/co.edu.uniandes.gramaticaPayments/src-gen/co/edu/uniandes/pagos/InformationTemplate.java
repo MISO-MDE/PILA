@@ -83,7 +83,7 @@ public interface InformationTemplate extends EObject
 
   /**
    * Returns the value of the '<em><b>Form Lists</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.pagos.FormAttribute}.
+   * The list contents are of type {@link co.edu.uniandes.pagos.Attribute}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Form Lists</em>' containment reference list isn't clear,
@@ -95,7 +95,7 @@ public interface InformationTemplate extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<FormAttribute> getFormLists();
+  EList<Attribute> getFormLists();
 
   /**
    * Returns the value of the '<em><b>Templates</b></em>' containment reference list.

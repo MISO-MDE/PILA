@@ -73,13 +73,13 @@ public class PagosFactoryImpl extends EFactoryImpl implements PagosFactory
       case PagosPackage.INFORMATION_TEMPLATE: return createInformationTemplate();
       case PagosPackage.CALCULATION_TEMPLATE: return createCalculationTemplate();
       case PagosPackage.FORMULA: return createFormula();
+      case PagosPackage.IF_BLOCK: return createIfBlock();
+      case PagosPackage.IF_CONDITION: return createIfCondition();
+      case PagosPackage.ELSE_SEGMENT: return createElseSegment();
+      case PagosPackage.RETURN_BLOCK: return createReturnBlock();
       case PagosPackage.EXPRESION_LOGICA: return createExpresionLogica();
       case PagosPackage.EXPRESSION: return createExpression();
-      case PagosPackage.SUPER_ENTITY_ATTRIBUTE: return createSuperEntityAttribute();
-      case PagosPackage.ENTITY_ATTRIBUTE: return createEntityAttribute();
-      case PagosPackage.FORM_ATTRIBUTE: return createFormAttribute();
-      case PagosPackage.VARIABLE_ATTRIBUTE: return createVariableAttribute();
-      case PagosPackage.CALCULATION_ATTRIBUTE: return createCalculationAttribute();
+      case PagosPackage.ATTRIBUTE: return createAttribute();
       case PagosPackage.TERMINAL_VALUE: return createTerminalValue();
       case PagosPackage.MATH_ADD: return createmathADD();
       case PagosPackage.MATH_MULT: return createmathMULT();
@@ -183,6 +183,50 @@ public class PagosFactoryImpl extends EFactoryImpl implements PagosFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public IfBlock createIfBlock()
+  {
+    IfBlockImpl ifBlock = new IfBlockImpl();
+    return ifBlock;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IfCondition createIfCondition()
+  {
+    IfConditionImpl ifCondition = new IfConditionImpl();
+    return ifCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseSegment createElseSegment()
+  {
+    ElseSegmentImpl elseSegment = new ElseSegmentImpl();
+    return elseSegment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ReturnBlock createReturnBlock()
+  {
+    ReturnBlockImpl returnBlock = new ReturnBlockImpl();
+    return returnBlock;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ExpresionLogica createExpresionLogica()
   {
     ExpresionLogicaImpl expresionLogica = new ExpresionLogicaImpl();
@@ -205,54 +249,10 @@ public class PagosFactoryImpl extends EFactoryImpl implements PagosFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SuperEntityAttribute createSuperEntityAttribute()
+  public Attribute createAttribute()
   {
-    SuperEntityAttributeImpl superEntityAttribute = new SuperEntityAttributeImpl();
-    return superEntityAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EntityAttribute createEntityAttribute()
-  {
-    EntityAttributeImpl entityAttribute = new EntityAttributeImpl();
-    return entityAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FormAttribute createFormAttribute()
-  {
-    FormAttributeImpl formAttribute = new FormAttributeImpl();
-    return formAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableAttribute createVariableAttribute()
-  {
-    VariableAttributeImpl variableAttribute = new VariableAttributeImpl();
-    return variableAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CalculationAttribute createCalculationAttribute()
-  {
-    CalculationAttributeImpl calculationAttribute = new CalculationAttributeImpl();
-    return calculationAttribute;
+    AttributeImpl attribute = new AttributeImpl();
+    return attribute;
   }
 
   /**

@@ -3,7 +3,7 @@
  */
 package co.edu.uniandes.pagos.impl;
 
-import co.edu.uniandes.pagos.EntityAttribute;
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.InformationTemplate;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.Participant;
@@ -90,7 +90,7 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
    * @generated
    * @ordered
    */
-  protected EList<EntityAttribute> attLists;
+  protected EList<Attribute> attLists;
 
   /**
    * The cached value of the '{@link #getTemplatesForm() <em>Templates Form</em>}' containment reference list.
@@ -174,11 +174,11 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<EntityAttribute> getAttLists()
+  public EList<Attribute> getAttLists()
   {
     if (attLists == null)
     {
-      attLists = new EObjectContainmentEList<EntityAttribute>(EntityAttribute.class, this, PagosPackage.PARTICIPANT__ATT_LISTS);
+      attLists = new EObjectContainmentEList<Attribute>(Attribute.class, this, PagosPackage.PARTICIPANT__ATT_LISTS);
     }
     return attLists;
   }
@@ -256,7 +256,7 @@ public class ParticipantImpl extends MinimalEObjectImpl.Container implements Par
         return;
       case PagosPackage.PARTICIPANT__ATT_LISTS:
         getAttLists().clear();
-        getAttLists().addAll((Collection<? extends EntityAttribute>)newValue);
+        getAttLists().addAll((Collection<? extends Attribute>)newValue);
         return;
       case PagosPackage.PARTICIPANT__TEMPLATES_FORM:
         getTemplatesForm().clear();

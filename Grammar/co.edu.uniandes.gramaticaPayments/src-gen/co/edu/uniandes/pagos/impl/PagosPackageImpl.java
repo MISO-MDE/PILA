@@ -5,13 +5,14 @@ package co.edu.uniandes.pagos.impl;
 
 import co.edu.uniandes.pagos.Adicion;
 import co.edu.uniandes.pagos.Application;
-import co.edu.uniandes.pagos.CalculationAttribute;
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.CalculationTemplate;
-import co.edu.uniandes.pagos.EntityAttribute;
+import co.edu.uniandes.pagos.ElseSegment;
 import co.edu.uniandes.pagos.ExpresionLogica;
 import co.edu.uniandes.pagos.Expression;
-import co.edu.uniandes.pagos.FormAttribute;
 import co.edu.uniandes.pagos.Formula;
+import co.edu.uniandes.pagos.IfBlock;
+import co.edu.uniandes.pagos.IfCondition;
 import co.edu.uniandes.pagos.InformationTemplate;
 import co.edu.uniandes.pagos.Intermediary;
 import co.edu.uniandes.pagos.Multiplicacion;
@@ -19,10 +20,9 @@ import co.edu.uniandes.pagos.PagosFactory;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.Participant;
 import co.edu.uniandes.pagos.Provider;
+import co.edu.uniandes.pagos.ReturnBlock;
 import co.edu.uniandes.pagos.SuperEntity;
-import co.edu.uniandes.pagos.SuperEntityAttribute;
 import co.edu.uniandes.pagos.TerminalValue;
-import co.edu.uniandes.pagos.VariableAttribute;
 import co.edu.uniandes.pagos.mathADD;
 import co.edu.uniandes.pagos.mathMULT;
 
@@ -102,6 +102,34 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass ifBlockEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ifConditionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass elseSegmentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass returnBlockEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass expresionLogicaEClass = null;
 
   /**
@@ -116,35 +144,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass superEntityAttributeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass entityAttributeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass formAttributeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass variableAttributeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass calculationAttributeEClass = null;
+  private EClass attributeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -569,7 +569,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFormula_LogExp()
+  public EReference getFormula_FormulaBody()
   {
     return (EReference)formulaEClass.getEStructuralFeatures().get(0);
   }
@@ -579,9 +579,109 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFormula_Expression()
+  public EReference getFormula_FormulaReturn()
   {
     return (EReference)formulaEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIfBlock()
+  {
+    return ifBlockEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIfBlock_IfSentence()
+  {
+    return (EReference)ifBlockEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIfBlock_ElseSentence()
+  {
+    return (EReference)ifBlockEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIfCondition()
+  {
+    return ifConditionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIfCondition_LogExp()
+  {
+    return (EReference)ifConditionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIfCondition_Expression()
+  {
+    return (EReference)ifConditionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getElseSegment()
+  {
+    return elseSegmentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getElseSegment_IfSentence()
+  {
+    return (EReference)elseSegmentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReturnBlock()
+  {
+    return returnBlockEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getReturnBlock_Expression()
+  {
+    return (EReference)returnBlockEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -659,9 +759,9 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSuperEntityAttribute()
+  public EClass getAttribute()
   {
-    return superEntityAttributeEClass;
+    return attributeEClass;
   }
 
   /**
@@ -669,9 +769,9 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEntityAttribute()
+  public EAttribute getAttribute_Name()
   {
-    return entityAttributeEClass;
+    return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -679,9 +779,9 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFormAttribute()
+  public EAttribute getAttribute_Type()
   {
-    return formAttributeEClass;
+    return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -689,59 +789,9 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFormAttribute_Exp()
+  public EReference getAttribute_Exp()
   {
-    return (EReference)formAttributeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVariableAttribute()
-  {
-    return variableAttributeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getVariableAttribute_Exp()
-  {
-    return (EReference)variableAttributeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCalculationAttribute()
-  {
-    return calculationAttributeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCalculationAttribute_Name()
-  {
-    return (EAttribute)calculationAttributeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCalculationAttribute_Type()
-  {
-    return (EAttribute)calculationAttributeEClass.getEStructuralFeatures().get(1);
+    return (EReference)attributeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -963,8 +1013,22 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
     createEReference(calculationTemplateEClass, CALCULATION_TEMPLATE__FORMULA);
 
     formulaEClass = createEClass(FORMULA);
-    createEReference(formulaEClass, FORMULA__LOG_EXP);
-    createEReference(formulaEClass, FORMULA__EXPRESSION);
+    createEReference(formulaEClass, FORMULA__FORMULA_BODY);
+    createEReference(formulaEClass, FORMULA__FORMULA_RETURN);
+
+    ifBlockEClass = createEClass(IF_BLOCK);
+    createEReference(ifBlockEClass, IF_BLOCK__IF_SENTENCE);
+    createEReference(ifBlockEClass, IF_BLOCK__ELSE_SENTENCE);
+
+    ifConditionEClass = createEClass(IF_CONDITION);
+    createEReference(ifConditionEClass, IF_CONDITION__LOG_EXP);
+    createEReference(ifConditionEClass, IF_CONDITION__EXPRESSION);
+
+    elseSegmentEClass = createEClass(ELSE_SEGMENT);
+    createEReference(elseSegmentEClass, ELSE_SEGMENT__IF_SENTENCE);
+
+    returnBlockEClass = createEClass(RETURN_BLOCK);
+    createEReference(returnBlockEClass, RETURN_BLOCK__EXPRESSION);
 
     expresionLogicaEClass = createEClass(EXPRESION_LOGICA);
     createEReference(expresionLogicaEClass, EXPRESION_LOGICA__VARIABLE);
@@ -975,19 +1039,10 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 
     expressionEClass = createEClass(EXPRESSION);
 
-    superEntityAttributeEClass = createEClass(SUPER_ENTITY_ATTRIBUTE);
-
-    entityAttributeEClass = createEClass(ENTITY_ATTRIBUTE);
-
-    formAttributeEClass = createEClass(FORM_ATTRIBUTE);
-    createEReference(formAttributeEClass, FORM_ATTRIBUTE__EXP);
-
-    variableAttributeEClass = createEClass(VARIABLE_ATTRIBUTE);
-    createEReference(variableAttributeEClass, VARIABLE_ATTRIBUTE__EXP);
-
-    calculationAttributeEClass = createEClass(CALCULATION_ATTRIBUTE);
-    createEAttribute(calculationAttributeEClass, CALCULATION_ATTRIBUTE__NAME);
-    createEAttribute(calculationAttributeEClass, CALCULATION_ATTRIBUTE__TYPE);
+    attributeEClass = createEClass(ATTRIBUTE);
+    createEAttribute(attributeEClass, ATTRIBUTE__NAME);
+    createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
+    createEReference(attributeEClass, ATTRIBUTE__EXP);
 
     terminalValueEClass = createEClass(TERMINAL_VALUE);
     createEReference(terminalValueEClass, TERMINAL_VALUE__VARIABLE);
@@ -1039,10 +1094,6 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    superEntityAttributeEClass.getESuperTypes().add(this.getCalculationAttribute());
-    entityAttributeEClass.getESuperTypes().add(this.getCalculationAttribute());
-    formAttributeEClass.getESuperTypes().add(this.getCalculationAttribute());
-    variableAttributeEClass.getESuperTypes().add(this.getCalculationAttribute());
     terminalValueEClass.getESuperTypes().add(this.getExpression());
     adicionEClass.getESuperTypes().add(this.getExpression());
     multiplicacionEClass.getESuperTypes().add(this.getExpression());
@@ -1059,36 +1110,50 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
     initEClass(superEntityEClass, SuperEntity.class, "SuperEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSuperEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSuperEntity_Description(), ecorePackage.getEString(), "description", null, 0, 1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSuperEntity_AttLists(), this.getSuperEntityAttribute(), null, "attLists", null, 0, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSuperEntity_AttLists(), this.getAttribute(), null, "attLists", null, 0, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSuperEntity_Participante(), this.getParticipant(), null, "participante", null, 0, -1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(participantEClass, Participant.class, "Participant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getParticipant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParticipant_Description(), ecorePackage.getEString(), "description", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParticipant_AttLists(), this.getEntityAttribute(), null, "attLists", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParticipant_AttLists(), this.getAttribute(), null, "attLists", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParticipant_TemplatesForm(), this.getInformationTemplate(), null, "templatesForm", null, 0, -1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(providerEClass, Provider.class, "Provider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProvider_Name(), ecorePackage.getEString(), "name", null, 0, 1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProvider_Description(), ecorePackage.getEString(), "description", null, 0, 1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProvider_AttLists(), this.getSuperEntityAttribute(), null, "attLists", null, 0, -1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProvider_AttLists(), this.getAttribute(), null, "attLists", null, 0, -1, Provider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(informationTemplateEClass, InformationTemplate.class, "InformationTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInformationTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInformationTemplate_Description(), ecorePackage.getEString(), "description", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInformationTemplate_FormLists(), this.getFormAttribute(), null, "formLists", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInformationTemplate_FormLists(), this.getAttribute(), null, "formLists", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInformationTemplate_Templates(), this.getCalculationTemplate(), null, "templates", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInformationTemplate_Providers(), this.getProvider(), null, "providers", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calculationTemplateEClass, CalculationTemplate.class, "CalculationTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalculationTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, CalculationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCalculationTemplate_Description(), ecorePackage.getEString(), "description", null, 0, 1, CalculationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCalculationTemplate_AttLists(), this.getVariableAttribute(), null, "attLists", null, 0, -1, CalculationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCalculationTemplate_AttLists(), this.getAttribute(), null, "attLists", null, 0, -1, CalculationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCalculationTemplate_Formula(), this.getFormula(), null, "formula", null, 0, -1, CalculationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(formulaEClass, Formula.class, "Formula", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFormula_LogExp(), this.getExpresionLogica(), null, "logExp", null, 0, -1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFormula_Expression(), this.getExpression(), null, "expression", null, 0, -1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFormula_FormulaBody(), this.getIfBlock(), null, "formulaBody", null, 0, -1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFormula_FormulaReturn(), this.getReturnBlock(), null, "formulaReturn", null, 0, 1, Formula.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ifBlockEClass, IfBlock.class, "IfBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIfBlock_IfSentence(), this.getIfCondition(), null, "ifSentence", null, 0, 1, IfBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIfBlock_ElseSentence(), this.getElseSegment(), null, "elseSentence", null, 0, 1, IfBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ifConditionEClass, IfCondition.class, "IfCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIfCondition_LogExp(), this.getExpresionLogica(), null, "logExp", null, 0, -1, IfCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIfCondition_Expression(), this.getExpression(), null, "expression", null, 0, -1, IfCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(elseSegmentEClass, ElseSegment.class, "ElseSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getElseSegment_IfSentence(), this.getFormula(), null, "ifSentence", null, 0, 1, ElseSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(returnBlockEClass, ReturnBlock.class, "ReturnBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReturnBlock_Expression(), this.getExpression(), null, "expression", null, 0, -1, ReturnBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expresionLogicaEClass, ExpresionLogica.class, "ExpresionLogica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpresionLogica_Variable(), this.getTerminalValue(), null, "variable", null, 0, -1, ExpresionLogica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1099,22 +1164,13 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(superEntityAttributeEClass, SuperEntityAttribute.class, "SuperEntityAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(entityAttributeEClass, EntityAttribute.class, "EntityAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(formAttributeEClass, FormAttribute.class, "FormAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFormAttribute_Exp(), this.getExpression(), null, "exp", null, 0, 1, FormAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(variableAttributeEClass, VariableAttribute.class, "VariableAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVariableAttribute_Exp(), this.getExpression(), null, "exp", null, 0, 1, VariableAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(calculationAttributeEClass, CalculationAttribute.class, "CalculationAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCalculationAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, CalculationAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalculationAttribute_Type(), ecorePackage.getEString(), "type", null, 0, 1, CalculationAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAttribute_Type(), ecorePackage.getEString(), "type", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAttribute_Exp(), this.getExpression(), null, "exp", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(terminalValueEClass, TerminalValue.class, "TerminalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerminalValue_Variable(), this.getCalculationAttribute(), null, "variable", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerminalValue_Variable(), this.getAttribute(), null, "variable", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTerminalValue_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mathADDEClass, mathADD.class, "mathADD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

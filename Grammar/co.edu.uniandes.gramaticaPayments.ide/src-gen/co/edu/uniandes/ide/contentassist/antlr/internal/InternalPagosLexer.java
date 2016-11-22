@@ -12,43 +12,43 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalPagosLexer extends Lexer {
-    public static final int RULE_ID=12;
+    public static final int RULE_RETURN=14;
+    public static final int RULE_ID=16;
     public static final int RULE_COMMA=7;
+    public static final int RULE_THEN=13;
     public static final int RULE_COLON=6;
-    public static final int RULE_LOGICALCONN=11;
-    public static final int T__26=26;
-    public static final int RULE_TYPE=15;
-    public static final int T__27=27;
-    public static final int RULE_STR_ESC=19;
+    public static final int RULE_LOGICALCONN=15;
+    public static final int RULE_TYPE=19;
+    public static final int RULE_STR_ESC=23;
     public static final int T__28=28;
     public static final int RULE_INT=4;
     public static final int T__29=29;
-    public static final int RULE_ML_COMMENT=20;
-    public static final int T__24=24;
-    public static final int T__25=25;
+    public static final int RULE_ML_COMMENT=24;
+    public static final int RULE_ELSE=11;
     public static final int RULE_LBRACKET=9;
-    public static final int RULE_STRING=13;
-    public static final int RULE_SL_COMMENT=21;
+    public static final int RULE_STRING=17;
+    public static final int RULE_SL_COMMENT=25;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int RULE_DASH=18;
+    public static final int RULE_DASH=22;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
+    public static final int RULE_IF=12;
     public static final int T__36=36;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
     public static final int RULE_LBRACE=5;
-    public static final int RULE_WS=22;
-    public static final int RULE_OPERADORLOGICO=14;
-    public static final int RULE_ADDOP=16;
-    public static final int RULE_ANY_OTHER=23;
+    public static final int RULE_WS=26;
+    public static final int RULE_OPERADORLOGICO=18;
+    public static final int RULE_ADDOP=20;
+    public static final int RULE_ANY_OTHER=27;
     public static final int RULE_RBRACE=8;
     public static final int T__44=44;
-    public static final int RULE_MULTOP=17;
+    public static final int RULE_MULTOP=21;
     public static final int T__45=45;
     public static final int T__40=40;
     public static final int T__41=41;
@@ -69,98 +69,15 @@ public class InternalPagosLexer extends Lexer {
     }
     public String getGrammarFileName() { return "InternalPagos.g"; }
 
-    // $ANTLR start "T__24"
-    public final void mT__24() throws RecognitionException {
-        try {
-            int _type = T__24;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:11:7: ( 'E' )
-            // InternalPagos.g:11:9: 'E'
-            {
-            match('E'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__24"
-
-    // $ANTLR start "T__25"
-    public final void mT__25() throws RecognitionException {
-        try {
-            int _type = T__25;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:12:7: ( 'e' )
-            // InternalPagos.g:12:9: 'e'
-            {
-            match('e'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__25"
-
-    // $ANTLR start "T__26"
-    public final void mT__26() throws RecognitionException {
-        try {
-            int _type = T__26;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:13:7: ( 'name' )
-            // InternalPagos.g:13:9: 'name'
-            {
-            match("name"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__26"
-
-    // $ANTLR start "T__27"
-    public final void mT__27() throws RecognitionException {
-        try {
-            int _type = T__27;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:14:7: ( 'intermediary' )
-            // InternalPagos.g:14:9: 'intermediary'
-            {
-            match("intermediary"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__27"
-
     // $ANTLR start "T__28"
     public final void mT__28() throws RecognitionException {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:15:7: ( 'superentities' )
-            // InternalPagos.g:15:9: 'superentities'
+            // InternalPagos.g:11:7: ( 'E' )
+            // InternalPagos.g:11:9: 'E'
             {
-            match("superentities"); 
-
+            match('E'); 
 
             }
 
@@ -177,11 +94,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:16:7: ( 'description' )
-            // InternalPagos.g:16:9: 'description'
+            // InternalPagos.g:12:7: ( 'e' )
+            // InternalPagos.g:12:9: 'e'
             {
-            match("description"); 
-
+            match('e'); 
 
             }
 
@@ -198,10 +114,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:17:7: ( 'attributes' )
-            // InternalPagos.g:17:9: 'attributes'
+            // InternalPagos.g:13:7: ( 'name' )
+            // InternalPagos.g:13:9: 'name'
             {
-            match("attributes"); 
+            match("name"); 
 
 
             }
@@ -219,10 +135,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:18:7: ( 'entities' )
-            // InternalPagos.g:18:9: 'entities'
+            // InternalPagos.g:14:7: ( 'intermediary' )
+            // InternalPagos.g:14:9: 'intermediary'
             {
-            match("entities"); 
+            match("intermediary"); 
 
 
             }
@@ -240,10 +156,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:19:7: ( 'InformationTemplate' )
-            // InternalPagos.g:19:9: 'InformationTemplate'
+            // InternalPagos.g:15:7: ( 'superentities' )
+            // InternalPagos.g:15:9: 'superentities'
             {
-            match("InformationTemplate"); 
+            match("superentities"); 
 
 
             }
@@ -261,10 +177,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:20:7: ( 'FormAttributes' )
-            // InternalPagos.g:20:9: 'FormAttributes'
+            // InternalPagos.g:16:7: ( 'description' )
+            // InternalPagos.g:16:9: 'description'
             {
-            match("FormAttributes"); 
+            match("description"); 
 
 
             }
@@ -282,10 +198,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:21:7: ( 'calculationtemplates' )
-            // InternalPagos.g:21:9: 'calculationtemplates'
+            // InternalPagos.g:17:7: ( 'attributes' )
+            // InternalPagos.g:17:9: 'attributes'
             {
-            match("calculationtemplates"); 
+            match("attributes"); 
 
 
             }
@@ -303,10 +219,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:22:7: ( 'providers' )
-            // InternalPagos.g:22:9: 'providers'
+            // InternalPagos.g:18:7: ( 'entities' )
+            // InternalPagos.g:18:9: 'entities'
             {
-            match("providers"); 
+            match("entities"); 
 
 
             }
@@ -324,10 +240,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:23:7: ( 'calculationattributes' )
-            // InternalPagos.g:23:9: 'calculationattributes'
+            // InternalPagos.g:19:7: ( 'InformationTemplate' )
+            // InternalPagos.g:19:9: 'InformationTemplate'
             {
-            match("calculationattributes"); 
+            match("InformationTemplate"); 
 
 
             }
@@ -345,10 +261,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:24:7: ( 'calculationrules' )
-            // InternalPagos.g:24:9: 'calculationrules'
+            // InternalPagos.g:20:7: ( 'FormAttributes' )
+            // InternalPagos.g:20:9: 'FormAttributes'
             {
-            match("calculationrules"); 
+            match("FormAttributes"); 
 
 
             }
@@ -366,10 +282,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:25:7: ( 'Si' )
-            // InternalPagos.g:25:9: 'Si'
+            // InternalPagos.g:21:7: ( 'calculationtemplates' )
+            // InternalPagos.g:21:9: 'calculationtemplates'
             {
-            match("Si"); 
+            match("calculationtemplates"); 
 
 
             }
@@ -387,10 +303,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:26:7: ( 'Entonces' )
-            // InternalPagos.g:26:9: 'Entonces'
+            // InternalPagos.g:22:7: ( 'providers' )
+            // InternalPagos.g:22:9: 'providers'
             {
-            match("Entonces"); 
+            match("providers"); 
 
 
             }
@@ -408,10 +324,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:27:7: ( 'Retornar:' )
-            // InternalPagos.g:27:9: 'Retornar:'
+            // InternalPagos.g:23:7: ( 'calculationattributes' )
+            // InternalPagos.g:23:9: 'calculationattributes'
             {
-            match("Retornar:"); 
+            match("calculationattributes"); 
 
 
             }
@@ -429,10 +345,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:28:7: ( 'Sino' )
-            // InternalPagos.g:28:9: 'Sino'
+            // InternalPagos.g:24:7: ( 'calculationrules' )
+            // InternalPagos.g:24:9: 'calculationrules'
             {
-            match("Sino"); 
+            match("calculationrules"); 
 
 
             }
@@ -450,8 +366,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:29:7: ( '(' )
-            // InternalPagos.g:29:9: '('
+            // InternalPagos.g:25:7: ( '(' )
+            // InternalPagos.g:25:9: '('
             {
             match('('); 
 
@@ -470,8 +386,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:30:7: ( ')' )
-            // InternalPagos.g:30:9: ')'
+            // InternalPagos.g:26:7: ( ')' )
+            // InternalPagos.g:26:9: ')'
             {
             match(')'); 
 
@@ -490,8 +406,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:31:7: ( ':=' )
-            // InternalPagos.g:31:9: ':='
+            // InternalPagos.g:27:7: ( ':=' )
+            // InternalPagos.g:27:9: ':='
             {
             match(":="); 
 
@@ -511,8 +427,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:32:7: ( '.' )
-            // InternalPagos.g:32:9: '.'
+            // InternalPagos.g:28:7: ( '.' )
+            // InternalPagos.g:28:9: '.'
             {
             match('.'); 
 
@@ -526,15 +442,99 @@ public class InternalPagosLexer extends Lexer {
     }
     // $ANTLR end "T__45"
 
+    // $ANTLR start "RULE_IF"
+    public final void mRULE_IF() throws RecognitionException {
+        try {
+            int _type = RULE_IF;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalPagos.g:7817:9: ( 'SI' )
+            // InternalPagos.g:7817:11: 'SI'
+            {
+            match("SI"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_IF"
+
+    // $ANTLR start "RULE_THEN"
+    public final void mRULE_THEN() throws RecognitionException {
+        try {
+            int _type = RULE_THEN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalPagos.g:7819:11: ( 'ENTONCES' )
+            // InternalPagos.g:7819:13: 'ENTONCES'
+            {
+            match("ENTONCES"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_THEN"
+
+    // $ANTLR start "RULE_ELSE"
+    public final void mRULE_ELSE() throws RecognitionException {
+        try {
+            int _type = RULE_ELSE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalPagos.g:7821:11: ( 'SINO' )
+            // InternalPagos.g:7821:13: 'SINO'
+            {
+            match("SINO"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ELSE"
+
+    // $ANTLR start "RULE_RETURN"
+    public final void mRULE_RETURN() throws RecognitionException {
+        try {
+            int _type = RULE_RETURN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalPagos.g:7823:13: ( 'RETORNAR' )
+            // InternalPagos.g:7823:15: 'RETORNAR'
+            {
+            match("RETORNAR"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_RETURN"
+
     // $ANTLR start "RULE_TYPE"
     public final void mRULE_TYPE() throws RecognitionException {
         try {
             int _type = RULE_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8437:11: ( ( 'String' | 'Integer' | 'Date' | 'Double' ) )
-            // InternalPagos.g:8437:13: ( 'String' | 'Integer' | 'Date' | 'Double' )
+            // InternalPagos.g:7825:11: ( ( 'String' | 'Integer' | 'Date' | 'Double' ) )
+            // InternalPagos.g:7825:13: ( 'String' | 'Integer' | 'Date' | 'Double' )
             {
-            // InternalPagos.g:8437:13: ( 'String' | 'Integer' | 'Date' | 'Double' )
+            // InternalPagos.g:7825:13: ( 'String' | 'Integer' | 'Date' | 'Double' )
             int alt1=4;
             switch ( input.LA(1) ) {
             case 'S':
@@ -574,7 +574,7 @@ public class InternalPagosLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // InternalPagos.g:8437:14: 'String'
+                    // InternalPagos.g:7825:14: 'String'
                     {
                     match("String"); 
 
@@ -582,7 +582,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:8437:23: 'Integer'
+                    // InternalPagos.g:7825:23: 'Integer'
                     {
                     match("Integer"); 
 
@@ -590,7 +590,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalPagos.g:8437:33: 'Date'
+                    // InternalPagos.g:7825:33: 'Date'
                     {
                     match("Date"); 
 
@@ -598,7 +598,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // InternalPagos.g:8437:40: 'Double'
+                    // InternalPagos.g:7825:40: 'Double'
                     {
                     match("Double"); 
 
@@ -624,8 +624,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_MULTOP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8439:13: ( ( '*' | '/' ) )
-            // InternalPagos.g:8439:15: ( '*' | '/' )
+            // InternalPagos.g:7827:13: ( ( '*' | '/' ) )
+            // InternalPagos.g:7827:15: ( '*' | '/' )
             {
             if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
                 input.consume();
@@ -652,8 +652,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_ADDOP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8441:12: ( ( '+' | '-' ) )
-            // InternalPagos.g:8441:14: ( '+' | '-' )
+            // InternalPagos.g:7829:12: ( ( '+' | '-' ) )
+            // InternalPagos.g:7829:14: ( '+' | '-' )
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -680,10 +680,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_LOGICALCONN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8443:18: ( ( '&&' | '||' ) )
-            // InternalPagos.g:8443:20: ( '&&' | '||' )
+            // InternalPagos.g:7831:18: ( ( '&&' | '||' ) )
+            // InternalPagos.g:7831:20: ( '&&' | '||' )
             {
-            // InternalPagos.g:8443:20: ( '&&' | '||' )
+            // InternalPagos.g:7831:20: ( '&&' | '||' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -701,7 +701,7 @@ public class InternalPagosLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalPagos.g:8443:21: '&&'
+                    // InternalPagos.g:7831:21: '&&'
                     {
                     match("&&"); 
 
@@ -709,7 +709,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:8443:26: '||'
+                    // InternalPagos.g:7831:26: '||'
                     {
                     match("||"); 
 
@@ -735,8 +735,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8445:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )* )
-            // InternalPagos.g:8445:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )*
+            // InternalPagos.g:7833:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )* )
+            // InternalPagos.g:7833:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -747,7 +747,7 @@ public class InternalPagosLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalPagos.g:8445:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPagos.g:7833:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -780,7 +780,7 @@ public class InternalPagosLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalPagos.g:8445:69: ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )*
+            // InternalPagos.g:7833:69: ( '.' ( 'Ultima' | 'Primera' | 'Tamano' ) )*
             loop5:
             do {
                 int alt5=2;
@@ -793,10 +793,10 @@ public class InternalPagosLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalPagos.g:8445:70: '.' ( 'Ultima' | 'Primera' | 'Tamano' )
+            	    // InternalPagos.g:7833:70: '.' ( 'Ultima' | 'Primera' | 'Tamano' )
             	    {
             	    match('.'); 
-            	    // InternalPagos.g:8445:74: ( 'Ultima' | 'Primera' | 'Tamano' )
+            	    // InternalPagos.g:7833:74: ( 'Ultima' | 'Primera' | 'Tamano' )
             	    int alt4=3;
             	    switch ( input.LA(1) ) {
             	    case 'U':
@@ -823,7 +823,7 @@ public class InternalPagosLexer extends Lexer {
 
             	    switch (alt4) {
             	        case 1 :
-            	            // InternalPagos.g:8445:75: 'Ultima'
+            	            // InternalPagos.g:7833:75: 'Ultima'
             	            {
             	            match("Ultima"); 
 
@@ -831,7 +831,7 @@ public class InternalPagosLexer extends Lexer {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalPagos.g:8445:84: 'Primera'
+            	            // InternalPagos.g:7833:84: 'Primera'
             	            {
             	            match("Primera"); 
 
@@ -839,7 +839,7 @@ public class InternalPagosLexer extends Lexer {
             	            }
             	            break;
             	        case 3 :
-            	            // InternalPagos.g:8445:94: 'Tamano'
+            	            // InternalPagos.g:7833:94: 'Tamano'
             	            {
             	            match("Tamano"); 
 
@@ -874,10 +874,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_OPERADORLOGICO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8447:21: ( ( '<' | '>' | '<=' | '>=' | '=' | '<>' ) )
-            // InternalPagos.g:8447:23: ( '<' | '>' | '<=' | '>=' | '=' | '<>' )
+            // InternalPagos.g:7835:21: ( ( '<' | '>' | '<=' | '>=' | '=' | '<>' ) )
+            // InternalPagos.g:7835:23: ( '<' | '>' | '<=' | '>=' | '=' | '<>' )
             {
-            // InternalPagos.g:8447:23: ( '<' | '>' | '<=' | '>=' | '=' | '<>' )
+            // InternalPagos.g:7835:23: ( '<' | '>' | '<=' | '>=' | '=' | '<>' )
             int alt6=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -923,21 +923,21 @@ public class InternalPagosLexer extends Lexer {
 
             switch (alt6) {
                 case 1 :
-                    // InternalPagos.g:8447:24: '<'
+                    // InternalPagos.g:7835:24: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:8447:28: '>'
+                    // InternalPagos.g:7835:28: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 3 :
-                    // InternalPagos.g:8447:32: '<='
+                    // InternalPagos.g:7835:32: '<='
                     {
                     match("<="); 
 
@@ -945,7 +945,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // InternalPagos.g:8447:37: '>='
+                    // InternalPagos.g:7835:37: '>='
                     {
                     match(">="); 
 
@@ -953,14 +953,14 @@ public class InternalPagosLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // InternalPagos.g:8447:42: '='
+                    // InternalPagos.g:7835:42: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 6 :
-                    // InternalPagos.g:8447:46: '<>'
+                    // InternalPagos.g:7835:46: '<>'
                     {
                     match("<>"); 
 
@@ -986,8 +986,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_LBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8449:13: ( '{' )
-            // InternalPagos.g:8449:15: '{'
+            // InternalPagos.g:7837:13: ( '{' )
+            // InternalPagos.g:7837:15: '{'
             {
             match('{'); 
 
@@ -1006,8 +1006,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_RBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8451:13: ( '}' )
-            // InternalPagos.g:8451:15: '}'
+            // InternalPagos.g:7839:13: ( '}' )
+            // InternalPagos.g:7839:15: '}'
             {
             match('}'); 
 
@@ -1026,8 +1026,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_LBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8453:15: ( '[' )
-            // InternalPagos.g:8453:17: '['
+            // InternalPagos.g:7841:15: ( '[' )
+            // InternalPagos.g:7841:17: '['
             {
             match('['); 
 
@@ -1046,8 +1046,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_RBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8455:15: ( ']' )
-            // InternalPagos.g:8455:17: ']'
+            // InternalPagos.g:7843:15: ( ']' )
+            // InternalPagos.g:7843:17: ']'
             {
             match(']'); 
 
@@ -1066,8 +1066,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8457:12: ( ',' )
-            // InternalPagos.g:8457:14: ','
+            // InternalPagos.g:7845:12: ( ',' )
+            // InternalPagos.g:7845:14: ','
             {
             match(','); 
 
@@ -1086,8 +1086,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8459:12: ( ':' )
-            // InternalPagos.g:8459:14: ':'
+            // InternalPagos.g:7847:12: ( ':' )
+            // InternalPagos.g:7847:14: ':'
             {
             match(':'); 
 
@@ -1106,8 +1106,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_DASH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8461:11: ( '#' )
-            // InternalPagos.g:8461:13: '#'
+            // InternalPagos.g:7849:11: ( '#' )
+            // InternalPagos.g:7849:13: '#'
             {
             match('#'); 
 
@@ -1126,11 +1126,11 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8463:13: ( '\"' ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )* '\"' )
-            // InternalPagos.g:8463:15: '\"' ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )* '\"'
+            // InternalPagos.g:7851:13: ( '\"' ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )* '\"' )
+            // InternalPagos.g:7851:15: '\"' ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )* '\"'
             {
             match('\"'); 
-            // InternalPagos.g:8463:19: ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )*
+            // InternalPagos.g:7851:19: ( RULE_STR_ESC | ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) ) )*
             loop7:
             do {
                 int alt7=3;
@@ -1146,14 +1146,14 @@ public class InternalPagosLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalPagos.g:8463:20: RULE_STR_ESC
+            	    // InternalPagos.g:7851:20: RULE_STR_ESC
             	    {
             	    mRULE_STR_ESC(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // InternalPagos.g:8463:33: ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) )
+            	    // InternalPagos.g:7851:33: ~ ( ( '\"' | '\\r' | '\\n' | '\\\\' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1188,8 +1188,8 @@ public class InternalPagosLexer extends Lexer {
     // $ANTLR start "RULE_STR_ESC"
     public final void mRULE_STR_ESC() throws RecognitionException {
         try {
-            // InternalPagos.g:8465:23: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\\\' | '$' ) )
-            // InternalPagos.g:8465:25: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\\\' | '$' )
+            // InternalPagos.g:7853:23: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\\\' | '$' ) )
+            // InternalPagos.g:7853:25: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\\\' | '$' )
             {
             match('\\'); 
             if ( input.LA(1)=='\"'||input.LA(1)=='$'||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1215,10 +1215,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8467:10: ( ( '0' .. '9' )+ )
-            // InternalPagos.g:8467:12: ( '0' .. '9' )+
+            // InternalPagos.g:7855:10: ( ( '0' .. '9' )+ )
+            // InternalPagos.g:7855:12: ( '0' .. '9' )+
             {
-            // InternalPagos.g:8467:12: ( '0' .. '9' )+
+            // InternalPagos.g:7855:12: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -1232,7 +1232,7 @@ public class InternalPagosLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPagos.g:8467:13: '0' .. '9'
+            	    // InternalPagos.g:7855:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1264,12 +1264,12 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8469:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalPagos.g:8469:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalPagos.g:7857:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalPagos.g:7857:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalPagos.g:8469:24: ( options {greedy=false; } : . )*
+            // InternalPagos.g:7857:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1294,7 +1294,7 @@ public class InternalPagosLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalPagos.g:8469:52: .
+            	    // InternalPagos.g:7857:52: .
             	    {
             	    matchAny(); 
 
@@ -1324,12 +1324,12 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8471:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalPagos.g:8471:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalPagos.g:7859:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalPagos.g:7859:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalPagos.g:8471:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalPagos.g:7859:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1342,7 +1342,7 @@ public class InternalPagosLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalPagos.g:8471:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalPagos.g:7859:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1362,7 +1362,7 @@ public class InternalPagosLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalPagos.g:8471:40: ( ( '\\r' )? '\\n' )?
+            // InternalPagos.g:7859:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1371,9 +1371,9 @@ public class InternalPagosLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalPagos.g:8471:41: ( '\\r' )? '\\n'
+                    // InternalPagos.g:7859:41: ( '\\r' )? '\\n'
                     {
-                    // InternalPagos.g:8471:41: ( '\\r' )?
+                    // InternalPagos.g:7859:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1382,7 +1382,7 @@ public class InternalPagosLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // InternalPagos.g:8471:41: '\\r'
+                            // InternalPagos.g:7859:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1414,10 +1414,10 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8473:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalPagos.g:8473:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPagos.g:7861:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalPagos.g:7861:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalPagos.g:8473:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPagos.g:7861:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1471,8 +1471,8 @@ public class InternalPagosLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPagos.g:8475:16: ( . )
-            // InternalPagos.g:8475:18: .
+            // InternalPagos.g:7863:16: ( . )
+            // InternalPagos.g:7863:18: .
             {
             matchAny(); 
 
@@ -1487,292 +1487,292 @@ public class InternalPagosLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalPagos.g:1:8: ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_TYPE | RULE_MULTOP | RULE_ADDOP | RULE_LOGICALCONN | RULE_ID | RULE_OPERADORLOGICO | RULE_LBRACE | RULE_RBRACE | RULE_LBRACKET | RULE_RBRACKET | RULE_COMMA | RULE_COLON | RULE_DASH | RULE_STRING | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalPagos.g:1:8: ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_IF | RULE_THEN | RULE_ELSE | RULE_RETURN | RULE_TYPE | RULE_MULTOP | RULE_ADDOP | RULE_LOGICALCONN | RULE_ID | RULE_OPERADORLOGICO | RULE_LBRACE | RULE_RBRACE | RULE_LBRACKET | RULE_RBRACKET | RULE_COMMA | RULE_COLON | RULE_DASH | RULE_STRING | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt14=41;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
-                // InternalPagos.g:1:10: T__24
-                {
-                mT__24(); 
-
-                }
-                break;
-            case 2 :
-                // InternalPagos.g:1:16: T__25
-                {
-                mT__25(); 
-
-                }
-                break;
-            case 3 :
-                // InternalPagos.g:1:22: T__26
-                {
-                mT__26(); 
-
-                }
-                break;
-            case 4 :
-                // InternalPagos.g:1:28: T__27
-                {
-                mT__27(); 
-
-                }
-                break;
-            case 5 :
-                // InternalPagos.g:1:34: T__28
+                // InternalPagos.g:1:10: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 6 :
-                // InternalPagos.g:1:40: T__29
+            case 2 :
+                // InternalPagos.g:1:16: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 7 :
-                // InternalPagos.g:1:46: T__30
+            case 3 :
+                // InternalPagos.g:1:22: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 8 :
-                // InternalPagos.g:1:52: T__31
+            case 4 :
+                // InternalPagos.g:1:28: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 9 :
-                // InternalPagos.g:1:58: T__32
+            case 5 :
+                // InternalPagos.g:1:34: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 10 :
-                // InternalPagos.g:1:64: T__33
+            case 6 :
+                // InternalPagos.g:1:40: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 11 :
-                // InternalPagos.g:1:70: T__34
+            case 7 :
+                // InternalPagos.g:1:46: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 12 :
-                // InternalPagos.g:1:76: T__35
+            case 8 :
+                // InternalPagos.g:1:52: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 13 :
-                // InternalPagos.g:1:82: T__36
+            case 9 :
+                // InternalPagos.g:1:58: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 14 :
-                // InternalPagos.g:1:88: T__37
+            case 10 :
+                // InternalPagos.g:1:64: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 15 :
-                // InternalPagos.g:1:94: T__38
+            case 11 :
+                // InternalPagos.g:1:70: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 16 :
-                // InternalPagos.g:1:100: T__39
+            case 12 :
+                // InternalPagos.g:1:76: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 17 :
-                // InternalPagos.g:1:106: T__40
+            case 13 :
+                // InternalPagos.g:1:82: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 18 :
-                // InternalPagos.g:1:112: T__41
+            case 14 :
+                // InternalPagos.g:1:88: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 19 :
-                // InternalPagos.g:1:118: T__42
+            case 15 :
+                // InternalPagos.g:1:94: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 20 :
-                // InternalPagos.g:1:124: T__43
+            case 16 :
+                // InternalPagos.g:1:100: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 21 :
-                // InternalPagos.g:1:130: T__44
+            case 17 :
+                // InternalPagos.g:1:106: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 22 :
-                // InternalPagos.g:1:136: T__45
+            case 18 :
+                // InternalPagos.g:1:112: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
+            case 19 :
+                // InternalPagos.g:1:118: RULE_IF
+                {
+                mRULE_IF(); 
+
+                }
+                break;
+            case 20 :
+                // InternalPagos.g:1:126: RULE_THEN
+                {
+                mRULE_THEN(); 
+
+                }
+                break;
+            case 21 :
+                // InternalPagos.g:1:136: RULE_ELSE
+                {
+                mRULE_ELSE(); 
+
+                }
+                break;
+            case 22 :
+                // InternalPagos.g:1:146: RULE_RETURN
+                {
+                mRULE_RETURN(); 
+
+                }
+                break;
             case 23 :
-                // InternalPagos.g:1:142: RULE_TYPE
+                // InternalPagos.g:1:158: RULE_TYPE
                 {
                 mRULE_TYPE(); 
 
                 }
                 break;
             case 24 :
-                // InternalPagos.g:1:152: RULE_MULTOP
+                // InternalPagos.g:1:168: RULE_MULTOP
                 {
                 mRULE_MULTOP(); 
 
                 }
                 break;
             case 25 :
-                // InternalPagos.g:1:164: RULE_ADDOP
+                // InternalPagos.g:1:180: RULE_ADDOP
                 {
                 mRULE_ADDOP(); 
 
                 }
                 break;
             case 26 :
-                // InternalPagos.g:1:175: RULE_LOGICALCONN
+                // InternalPagos.g:1:191: RULE_LOGICALCONN
                 {
                 mRULE_LOGICALCONN(); 
 
                 }
                 break;
             case 27 :
-                // InternalPagos.g:1:192: RULE_ID
+                // InternalPagos.g:1:208: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 28 :
-                // InternalPagos.g:1:200: RULE_OPERADORLOGICO
+                // InternalPagos.g:1:216: RULE_OPERADORLOGICO
                 {
                 mRULE_OPERADORLOGICO(); 
 
                 }
                 break;
             case 29 :
-                // InternalPagos.g:1:220: RULE_LBRACE
+                // InternalPagos.g:1:236: RULE_LBRACE
                 {
                 mRULE_LBRACE(); 
 
                 }
                 break;
             case 30 :
-                // InternalPagos.g:1:232: RULE_RBRACE
+                // InternalPagos.g:1:248: RULE_RBRACE
                 {
                 mRULE_RBRACE(); 
 
                 }
                 break;
             case 31 :
-                // InternalPagos.g:1:244: RULE_LBRACKET
+                // InternalPagos.g:1:260: RULE_LBRACKET
                 {
                 mRULE_LBRACKET(); 
 
                 }
                 break;
             case 32 :
-                // InternalPagos.g:1:258: RULE_RBRACKET
+                // InternalPagos.g:1:274: RULE_RBRACKET
                 {
                 mRULE_RBRACKET(); 
 
                 }
                 break;
             case 33 :
-                // InternalPagos.g:1:272: RULE_COMMA
+                // InternalPagos.g:1:288: RULE_COMMA
                 {
                 mRULE_COMMA(); 
 
                 }
                 break;
             case 34 :
-                // InternalPagos.g:1:283: RULE_COLON
+                // InternalPagos.g:1:299: RULE_COLON
                 {
                 mRULE_COLON(); 
 
                 }
                 break;
             case 35 :
-                // InternalPagos.g:1:294: RULE_DASH
+                // InternalPagos.g:1:310: RULE_DASH
                 {
                 mRULE_DASH(); 
 
                 }
                 break;
             case 36 :
-                // InternalPagos.g:1:304: RULE_STRING
+                // InternalPagos.g:1:320: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 37 :
-                // InternalPagos.g:1:316: RULE_INT
+                // InternalPagos.g:1:332: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 38 :
-                // InternalPagos.g:1:325: RULE_ML_COMMENT
+                // InternalPagos.g:1:341: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 39 :
-                // InternalPagos.g:1:341: RULE_SL_COMMENT
+                // InternalPagos.g:1:357: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 40 :
-                // InternalPagos.g:1:357: RULE_WS
+                // InternalPagos.g:1:373: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 41 :
-                // InternalPagos.g:1:365: RULE_ANY_OTHER
+                // InternalPagos.g:1:381: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1786,20 +1786,20 @@ public class InternalPagosLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\uffff\1\47\1\52\13\50\2\uffff\1\72\1\uffff\1\50\1\100\1\uffff\2\45\12\uffff\1\45\4\uffff\1\50\2\uffff\1\50\1\uffff\11\50\1\132\2\50\5\uffff\2\50\17\uffff\15\50\1\uffff\6\50\1\162\11\50\1\174\2\50\1\177\3\50\1\uffff\11\50\1\uffff\2\50\1\uffff\14\50\1\177\1\50\1\177\7\50\1\177\4\50\1\u00a6\1\u00a7\11\50\2\uffff\7\50\1\u00b8\1\uffff\3\50\1\u00bc\3\50\1\uffff\2\50\1\u00c2\1\uffff\3\50\1\u00c8\1\50\1\uffff\5\50\1\uffff\1\u00cf\5\50\1\uffff\1\50\1\u00d6\4\50\1\uffff\6\50\1\u00e1\3\50\1\uffff\3\50\1\u00e8\2\50\1\uffff\1\u00eb\1\50\1\uffff\1\u00ed\1\uffff";
+        "\1\uffff\1\47\1\52\11\50\2\uffff\1\67\1\uffff\3\50\1\100\1\uffff\2\45\12\uffff\1\45\4\uffff\1\50\2\uffff\1\50\1\uffff\11\50\5\uffff\1\132\4\50\17\uffff\15\50\1\uffff\6\50\1\162\11\50\1\174\2\50\1\177\3\50\1\uffff\11\50\1\uffff\2\50\1\uffff\14\50\1\177\1\50\1\177\7\50\1\177\4\50\1\u00a6\1\u00a7\10\50\1\u00b0\2\uffff\7\50\1\u00b8\1\uffff\3\50\1\u00bc\3\50\1\uffff\2\50\1\u00c2\1\uffff\3\50\1\u00c8\1\50\1\uffff\5\50\1\uffff\1\u00cf\5\50\1\uffff\1\50\1\u00d6\4\50\1\uffff\6\50\1\u00e1\3\50\1\uffff\3\50\1\u00e8\2\50\1\uffff\1\u00eb\1\50\1\uffff\1\u00ed\1\uffff";
     static final String DFA14_eofS =
         "\u00ee\uffff";
     static final String DFA14_minS =
-        "\1\0\2\56\1\141\1\156\1\165\1\145\1\164\1\156\1\157\1\141\1\162\1\151\1\145\2\uffff\1\75\1\uffff\1\141\1\52\1\uffff\1\46\1\174\12\uffff\1\0\4\uffff\1\164\2\uffff\1\164\1\uffff\1\155\1\164\1\160\1\163\1\164\1\146\1\162\1\154\1\157\1\56\1\162\1\164\5\uffff\1\164\1\165\17\uffff\1\157\1\151\3\145\1\143\1\162\1\157\1\145\1\155\1\143\1\166\1\157\1\uffff\1\151\1\157\1\145\1\142\1\156\1\164\1\56\3\162\1\151\1\162\1\147\1\101\1\165\1\151\1\56\1\156\1\162\1\56\1\154\1\143\1\151\1\uffff\1\155\1\145\1\151\1\142\1\155\1\145\1\164\1\154\1\144\1\uffff\1\147\1\156\1\uffff\4\145\1\156\1\160\1\165\1\141\1\162\1\164\1\141\1\145\1\56\1\141\1\56\2\163\1\144\4\164\1\56\1\162\1\164\2\162\2\56\3\151\1\145\3\151\1\163\1\72\2\uffff\1\141\1\164\1\157\1\163\1\157\1\142\1\157\1\56\1\uffff\1\162\1\151\1\156\1\56\1\156\1\165\1\156\1\uffff\1\171\1\145\1\56\1\uffff\1\124\1\164\1\141\1\56\1\163\1\uffff\3\145\1\164\1\165\1\uffff\1\56\1\155\1\163\1\155\1\164\1\154\1\uffff\1\160\1\56\1\160\1\162\1\145\1\154\1\uffff\1\154\1\151\1\163\2\141\1\142\1\56\2\164\1\165\1\uffff\2\145\1\164\1\56\1\163\1\145\1\uffff\1\56\1\163\1\uffff\1\56\1\uffff";
+        "\1\0\2\56\1\141\1\156\1\165\1\145\1\164\1\156\1\157\1\141\1\162\2\uffff\1\75\1\uffff\1\111\1\105\1\141\1\52\1\uffff\1\46\1\174\12\uffff\1\0\4\uffff\1\124\2\uffff\1\164\1\uffff\1\155\1\164\1\160\1\163\1\164\1\146\1\162\1\154\1\157\5\uffff\1\56\1\162\1\124\1\164\1\165\17\uffff\1\117\1\151\3\145\1\143\1\162\1\157\1\145\1\155\1\143\1\166\1\117\1\uffff\1\151\1\117\1\145\1\142\1\116\1\164\1\56\3\162\1\151\1\162\1\147\1\101\1\165\1\151\1\56\1\156\1\122\1\56\1\154\1\103\1\151\1\uffff\1\155\1\145\1\151\1\142\1\155\1\145\1\164\1\154\1\144\1\uffff\1\147\1\116\1\uffff\1\145\1\105\2\145\1\156\1\160\1\165\1\141\1\162\1\164\1\141\1\145\1\56\1\101\1\56\1\123\1\163\1\144\4\164\1\56\1\162\1\164\1\162\1\122\2\56\3\151\1\145\3\151\1\163\1\56\2\uffff\1\141\1\164\1\157\1\163\1\157\1\142\1\157\1\56\1\uffff\1\162\1\151\1\156\1\56\1\156\1\165\1\156\1\uffff\1\171\1\145\1\56\1\uffff\1\124\1\164\1\141\1\56\1\163\1\uffff\3\145\1\164\1\165\1\uffff\1\56\1\155\1\163\1\155\1\164\1\154\1\uffff\1\160\1\56\1\160\1\162\1\145\1\154\1\uffff\1\154\1\151\1\163\2\141\1\142\1\56\2\164\1\165\1\uffff\2\145\1\164\1\56\1\163\1\145\1\uffff\1\56\1\163\1\uffff\1\56\1\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\2\172\1\141\1\156\1\165\1\145\1\164\1\156\1\157\1\141\1\162\1\164\1\145\2\uffff\1\75\1\uffff\1\157\1\57\1\uffff\1\46\1\174\12\uffff\1\uffff\4\uffff\1\164\2\uffff\1\164\1\uffff\1\155\1\164\1\160\1\163\2\164\1\162\1\154\1\157\1\172\1\162\1\164\5\uffff\1\164\1\165\17\uffff\1\157\1\151\3\145\1\143\1\162\1\157\1\145\1\155\1\143\1\166\1\157\1\uffff\1\151\1\157\1\145\1\142\1\156\1\164\1\172\3\162\1\151\1\162\1\147\1\101\1\165\1\151\1\172\1\156\1\162\1\172\1\154\1\143\1\151\1\uffff\1\155\1\145\1\151\1\142\1\155\1\145\1\164\1\154\1\144\1\uffff\1\147\1\156\1\uffff\4\145\1\156\1\160\1\165\1\141\1\162\1\164\1\141\1\145\1\172\1\141\1\172\2\163\1\144\4\164\1\172\1\162\1\164\2\162\2\172\3\151\1\145\3\151\1\163\1\72\2\uffff\1\141\1\164\1\157\1\163\1\157\1\142\1\157\1\172\1\uffff\1\162\1\151\1\156\1\172\1\156\1\165\1\156\1\uffff\1\171\1\145\1\172\1\uffff\1\124\2\164\1\172\1\163\1\uffff\3\145\1\164\1\165\1\uffff\1\172\1\155\1\163\1\155\1\164\1\154\1\uffff\1\160\1\172\1\160\1\162\1\145\1\154\1\uffff\1\154\1\151\1\163\2\141\1\142\1\172\2\164\1\165\1\uffff\2\145\1\164\1\172\1\163\1\145\1\uffff\1\172\1\163\1\uffff\1\172\1\uffff";
+        "\1\uffff\2\172\1\141\1\156\1\165\1\145\1\164\1\156\1\157\1\141\1\162\2\uffff\1\75\1\uffff\1\164\1\105\1\157\1\57\1\uffff\1\46\1\174\12\uffff\1\uffff\4\uffff\1\124\2\uffff\1\164\1\uffff\1\155\1\164\1\160\1\163\2\164\1\162\1\154\1\157\5\uffff\1\172\1\162\1\124\1\164\1\165\17\uffff\1\117\1\151\3\145\1\143\1\162\1\157\1\145\1\155\1\143\1\166\1\117\1\uffff\1\151\1\117\1\145\1\142\1\116\1\164\1\172\3\162\1\151\1\162\1\147\1\101\1\165\1\151\1\172\1\156\1\122\1\172\1\154\1\103\1\151\1\uffff\1\155\1\145\1\151\1\142\1\155\1\145\1\164\1\154\1\144\1\uffff\1\147\1\116\1\uffff\1\145\1\105\2\145\1\156\1\160\1\165\1\141\1\162\1\164\1\141\1\145\1\172\1\101\1\172\1\123\1\163\1\144\4\164\1\172\1\162\1\164\1\162\1\122\2\172\3\151\1\145\3\151\1\163\1\172\2\uffff\1\141\1\164\1\157\1\163\1\157\1\142\1\157\1\172\1\uffff\1\162\1\151\1\156\1\172\1\156\1\165\1\156\1\uffff\1\171\1\145\1\172\1\uffff\1\124\2\164\1\172\1\163\1\uffff\3\145\1\164\1\165\1\uffff\1\172\1\155\1\163\1\155\1\164\1\154\1\uffff\1\160\1\172\1\160\1\162\1\145\1\154\1\uffff\1\154\1\151\1\163\2\141\1\142\1\172\2\164\1\165\1\uffff\2\145\1\164\1\172\1\163\1\145\1\uffff\1\172\1\163\1\uffff\1\172\1\uffff";
     static final String DFA14_acceptS =
-        "\16\uffff\1\23\1\24\1\uffff\1\26\2\uffff\1\31\2\uffff\1\33\3\34\1\35\1\36\1\37\1\40\1\41\1\43\1\uffff\1\45\1\30\1\50\1\51\1\uffff\1\1\1\33\1\uffff\1\2\14\uffff\1\23\1\24\1\25\1\42\1\26\2\uffff\1\46\1\47\1\30\1\31\1\32\1\34\1\35\1\36\1\37\1\40\1\41\1\43\1\44\1\45\1\50\15\uffff\1\17\27\uffff\1\3\11\uffff\1\22\2\uffff\1\27\46\uffff\1\20\1\10\10\uffff\1\21\7\uffff\1\14\3\uffff\1\7\5\uffff\1\6\5\uffff\1\4\6\uffff\1\5\6\uffff\1\12\12\uffff\1\16\6\uffff\1\11\2\uffff\1\13\1\uffff\1\15";
+        "\14\uffff\1\17\1\20\1\uffff\1\22\4\uffff\1\31\2\uffff\1\33\3\34\1\35\1\36\1\37\1\40\1\41\1\43\1\uffff\1\45\1\30\1\50\1\51\1\uffff\1\1\1\33\1\uffff\1\2\11\uffff\1\17\1\20\1\21\1\42\1\22\5\uffff\1\46\1\47\1\30\1\31\1\32\1\34\1\35\1\36\1\37\1\40\1\41\1\43\1\44\1\45\1\50\15\uffff\1\23\27\uffff\1\3\11\uffff\1\25\2\uffff\1\27\46\uffff\1\24\1\10\10\uffff\1\26\7\uffff\1\14\3\uffff\1\7\5\uffff\1\6\5\uffff\1\4\6\uffff\1\5\6\uffff\1\12\12\uffff\1\16\6\uffff\1\11\2\uffff\1\13\1\uffff\1\15";
     static final String DFA14_specialS =
         "\1\1\40\uffff\1\0\u00cc\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\11\45\2\44\2\45\1\44\22\45\1\44\1\45\1\41\1\40\2\45\1\25\1\45\1\16\1\17\1\43\1\24\1\37\1\24\1\21\1\23\12\42\1\20\1\45\1\30\1\32\1\31\2\45\3\27\1\22\1\1\1\11\2\27\1\10\10\27\1\15\1\14\7\27\1\35\1\45\1\36\1\45\1\27\1\45\1\7\1\27\1\12\1\6\1\2\3\27\1\4\4\27\1\3\1\27\1\13\2\27\1\5\7\27\1\33\1\26\1\34\uff82\45",
-            "\1\50\1\uffff\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\15\50\1\46\14\50",
+            "\11\45\2\44\2\45\1\44\22\45\1\44\1\45\1\41\1\40\2\45\1\25\1\45\1\14\1\15\1\43\1\24\1\37\1\24\1\17\1\23\12\42\1\16\1\45\1\30\1\32\1\31\2\45\3\27\1\22\1\1\1\11\2\27\1\10\10\27\1\21\1\20\7\27\1\35\1\45\1\36\1\45\1\27\1\45\1\7\1\27\1\12\1\6\1\2\3\27\1\4\4\27\1\3\1\27\1\13\2\27\1\5\7\27\1\33\1\26\1\34\uff82\45",
+            "\1\50\1\uffff\12\50\7\uffff\15\50\1\46\14\50\4\uffff\1\50\1\uffff\32\50",
             "\1\50\1\uffff\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\15\50\1\51\14\50",
             "\1\53",
             "\1\54",
@@ -1810,12 +1810,12 @@ public class InternalPagosLexer extends Lexer {
             "\1\61",
             "\1\62",
             "\1\63",
-            "\1\64\12\uffff\1\65",
+            "",
+            "",
             "\1\66",
             "",
-            "",
-            "\1\71",
-            "",
+            "\1\71\52\uffff\1\72",
+            "\1\73",
             "\1\74\15\uffff\1\75",
             "\1\76\4\uffff\1\77",
             "",
@@ -1850,14 +1850,14 @@ public class InternalPagosLexer extends Lexer {
             "\1\126",
             "\1\127",
             "\1\130",
-            "\1\50\1\uffff\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\15\50\1\131\14\50",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\50\1\uffff\12\50\7\uffff\15\50\1\131\14\50\4\uffff\1\50\1\uffff\32\50",
             "\1\133",
             "\1\134",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\135",
             "\1\136",
             "",
@@ -1963,7 +1963,7 @@ public class InternalPagosLexer extends Lexer {
             "\1\u00ad",
             "\1\u00ae",
             "\1\u00af",
-            "\1\u00b0",
+            "\1\50\1\uffff\12\50\7\uffff\32\50\4\uffff\1\50\1\uffff\32\50",
             "",
             "",
             "\1\u00b1",
@@ -2068,7 +2068,7 @@ public class InternalPagosLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_TYPE | RULE_MULTOP | RULE_ADDOP | RULE_LOGICALCONN | RULE_ID | RULE_OPERADORLOGICO | RULE_LBRACE | RULE_RBRACE | RULE_LBRACKET | RULE_RBRACKET | RULE_COMMA | RULE_COLON | RULE_DASH | RULE_STRING | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_IF | RULE_THEN | RULE_ELSE | RULE_RETURN | RULE_TYPE | RULE_MULTOP | RULE_ADDOP | RULE_LOGICALCONN | RULE_ID | RULE_OPERADORLOGICO | RULE_LBRACE | RULE_RBRACE | RULE_LBRACKET | RULE_RBRACKET | RULE_COMMA | RULE_COLON | RULE_DASH | RULE_STRING | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -2110,17 +2110,17 @@ public class InternalPagosLexer extends Lexer {
 
                         else if ( (LA14_0=='p') ) {s = 11;}
 
-                        else if ( (LA14_0=='S') ) {s = 12;}
+                        else if ( (LA14_0=='(') ) {s = 12;}
 
-                        else if ( (LA14_0=='R') ) {s = 13;}
+                        else if ( (LA14_0==')') ) {s = 13;}
 
-                        else if ( (LA14_0=='(') ) {s = 14;}
+                        else if ( (LA14_0==':') ) {s = 14;}
 
-                        else if ( (LA14_0==')') ) {s = 15;}
+                        else if ( (LA14_0=='.') ) {s = 15;}
 
-                        else if ( (LA14_0==':') ) {s = 16;}
+                        else if ( (LA14_0=='S') ) {s = 16;}
 
-                        else if ( (LA14_0=='.') ) {s = 17;}
+                        else if ( (LA14_0=='R') ) {s = 17;}
 
                         else if ( (LA14_0=='D') ) {s = 18;}
 

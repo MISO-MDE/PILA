@@ -45,8 +45,22 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//CalculationTemplate/formula"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//Formula">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//Formula/logExp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//Formula/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//Formula/formulaBody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//Formula/formulaReturn"/>
+    </genClasses>
+    <genClasses ecoreClass="Pagos.ecore#//IfBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//IfBlock/ifSentence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//IfBlock/elseSentence"/>
+    </genClasses>
+    <genClasses ecoreClass="Pagos.ecore#//IfCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//IfCondition/logExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//IfCondition/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Pagos.ecore#//ElseSegment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//ElseSegment/ifSentence"/>
+    </genClasses>
+    <genClasses ecoreClass="Pagos.ecore#//ReturnBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//ReturnBlock/expression"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//ExpresionLogica">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//ExpresionLogica/variable"/>
@@ -56,17 +70,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//ExpresionLogica/exp"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//Expression"/>
-    <genClasses ecoreClass="Pagos.ecore#//SuperEntityAttribute"/>
-    <genClasses ecoreClass="Pagos.ecore#//EntityAttribute"/>
-    <genClasses ecoreClass="Pagos.ecore#//FormAttribute">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//FormAttribute/exp"/>
-    </genClasses>
-    <genClasses ecoreClass="Pagos.ecore#//VariableAttribute">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//VariableAttribute/exp"/>
-    </genClasses>
-    <genClasses ecoreClass="Pagos.ecore#//CalculationAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//CalculationAttribute/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//CalculationAttribute/type"/>
+    <genClasses ecoreClass="Pagos.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//Attribute/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//Attribute/exp"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//TerminalValue">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pagos.ecore#//TerminalValue/variable"/>

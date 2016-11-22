@@ -11,7 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -21,20 +20,14 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected PagosGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_EntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q;
-	protected AbstractElementAlias match_Formula_SinoKeyword_10_0_q;
 	protected AbstractElementAlias match_SigleExp_LeftParenthesisKeyword_1_0_a;
 	protected AbstractElementAlias match_SigleExp_LeftParenthesisKeyword_1_0_p;
-	protected AbstractElementAlias match_SuperEntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (PagosGrammarAccess) access;
-		match_EntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getEntityAttributeAccess().getColonEqualsSignKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getEntityAttributeAccess().getNumberParserRuleCall_5_1()));
-		match_Formula_SinoKeyword_10_0_q = new TokenAlias(false, true, grammarAccess.getFormulaAccess().getSinoKeyword_10_0());
 		match_SigleExp_LeftParenthesisKeyword_1_0_a = new TokenAlias(true, true, grammarAccess.getSigleExpAccess().getLeftParenthesisKeyword_1_0());
 		match_SigleExp_LeftParenthesisKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getSigleExpAccess().getLeftParenthesisKeyword_1_0());
-		match_SuperEntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSuperEntityAttributeAccess().getColonEqualsSignKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getSuperEntityAttributeAccess().getNumberParserRuleCall_5_1()));
 	}
 	
 	@Override
@@ -43,18 +36,24 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getCOLONToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
 			return getCOMMAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getELSERule())
+			return getELSEToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getIFRule())
+			return getIFToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLBRACERule())
 			return getLBRACEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLBRACKETRule())
 			return getLBRACKETToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLOGICALCONNRule())
 			return getLOGICALCONNToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getNumberRule())
-			return getNumberToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getRBRACERule())
 			return getRBRACEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getRBRACKETRule())
 			return getRBRACKETToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getRETURNRule())
+			return getRETURNToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getTHENRule())
+			return getTHENToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -74,6 +73,24 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return ",";
+	}
+	
+	/**
+	 * terminal ELSE: 'SINO';
+	 */
+	protected String getELSEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "SINO";
+	}
+	
+	/**
+	 * terminal IF:'SI';
+	 */
+	protected String getIFToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "SI";
 	}
 	
 	/**
@@ -104,17 +121,6 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * Number:
-	 * 	EDouble | Integer
-	 * ;
-	 */
-	protected String getNumberToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return ".";
-	}
-	
-	/**
 	 * terminal RBRACE: "}";
 	 */
 	protected String getRBRACEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
@@ -132,56 +138,45 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "]";
 	}
 	
+	/**
+	 * terminal RETURN: 'RETORNAR';
+	 */
+	protected String getRETURNToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "RETORNAR";
+	}
+	
+	/**
+	 * terminal THEN:'ENTONCES';
+	 */
+	protected String getTHENToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "ENTONCES";
+	}
+	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_EntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q.equals(syntax))
-				emit_EntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Formula_SinoKeyword_10_0_q.equals(syntax))
-				emit_Formula_SinoKeyword_10_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_SigleExp_LeftParenthesisKeyword_1_0_a.equals(syntax))
+			if (match_SigleExp_LeftParenthesisKeyword_1_0_a.equals(syntax))
 				emit_SigleExp_LeftParenthesisKeyword_1_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_SigleExp_LeftParenthesisKeyword_1_0_p.equals(syntax))
 				emit_SigleExp_LeftParenthesisKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_SuperEntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q.equals(syntax))
-				emit_SuperEntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     (':=' Number)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     type=TYPE (ambiguity) RBRACE (rule end)
-	 */
-	protected void emit_EntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'Sino'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     expression+=Adicion RBRACE (ambiguity) 'Si' LBRACKET logExp+=ExpresionLogica
-	 *     expression+=Adicion RBRACE (ambiguity) LBRACE 'Retornar:' expression+=Adicion
-	 */
-	protected void emit_Formula_SinoKeyword_10_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) valor=Number
-	 *     (rule start) (ambiguity) variable=[CalculationAttribute|ID]
+	 *     (rule start) (ambiguity) variable=[Attribute|ID]
 	 *     (rule start) (ambiguity) {Adicion.left=}
 	 *     (rule start) (ambiguity) {Multiplicacion.left=}
 	 */
@@ -198,17 +193,6 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) {Multiplicacion.left=}
 	 */
 	protected void emit_SigleExp_LeftParenthesisKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (':=' Number)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     type=TYPE (ambiguity) RBRACE (rule end)
-	 */
-	protected void emit_SuperEntityAttribute___ColonEqualsSignKeyword_5_0_NumberParserRuleCall_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

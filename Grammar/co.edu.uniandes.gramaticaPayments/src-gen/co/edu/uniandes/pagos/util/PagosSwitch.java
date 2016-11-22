@@ -129,6 +129,34 @@ public class PagosSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PagosPackage.IF_BLOCK:
+      {
+        IfBlock ifBlock = (IfBlock)theEObject;
+        T result = caseIfBlock(ifBlock);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PagosPackage.IF_CONDITION:
+      {
+        IfCondition ifCondition = (IfCondition)theEObject;
+        T result = caseIfCondition(ifCondition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PagosPackage.ELSE_SEGMENT:
+      {
+        ElseSegment elseSegment = (ElseSegment)theEObject;
+        T result = caseElseSegment(elseSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PagosPackage.RETURN_BLOCK:
+      {
+        ReturnBlock returnBlock = (ReturnBlock)theEObject;
+        T result = caseReturnBlock(returnBlock);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PagosPackage.EXPRESION_LOGICA:
       {
         ExpresionLogica expresionLogica = (ExpresionLogica)theEObject;
@@ -143,42 +171,10 @@ public class PagosSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PagosPackage.SUPER_ENTITY_ATTRIBUTE:
+      case PagosPackage.ATTRIBUTE:
       {
-        SuperEntityAttribute superEntityAttribute = (SuperEntityAttribute)theEObject;
-        T result = caseSuperEntityAttribute(superEntityAttribute);
-        if (result == null) result = caseCalculationAttribute(superEntityAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PagosPackage.ENTITY_ATTRIBUTE:
-      {
-        EntityAttribute entityAttribute = (EntityAttribute)theEObject;
-        T result = caseEntityAttribute(entityAttribute);
-        if (result == null) result = caseCalculationAttribute(entityAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PagosPackage.FORM_ATTRIBUTE:
-      {
-        FormAttribute formAttribute = (FormAttribute)theEObject;
-        T result = caseFormAttribute(formAttribute);
-        if (result == null) result = caseCalculationAttribute(formAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PagosPackage.VARIABLE_ATTRIBUTE:
-      {
-        VariableAttribute variableAttribute = (VariableAttribute)theEObject;
-        T result = caseVariableAttribute(variableAttribute);
-        if (result == null) result = caseCalculationAttribute(variableAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PagosPackage.CALCULATION_ATTRIBUTE:
-      {
-        CalculationAttribute calculationAttribute = (CalculationAttribute)theEObject;
-        T result = caseCalculationAttribute(calculationAttribute);
+        Attribute attribute = (Attribute)theEObject;
+        T result = caseAttribute(attribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -353,6 +349,70 @@ public class PagosSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>If Block</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>If Block</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIfBlock(IfBlock object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>If Condition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>If Condition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIfCondition(IfCondition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Else Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Else Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseElseSegment(ElseSegment object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Return Block</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Return Block</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReturnBlock(ReturnBlock object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Expresion Logica</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -385,81 +445,17 @@ public class PagosSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Super Entity Attribute</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Super Entity Attribute</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSuperEntityAttribute(SuperEntityAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEntityAttribute(EntityAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Form Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Form Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFormAttribute(FormAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Variable Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Variable Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVariableAttribute(VariableAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Calculation Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Calculation Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCalculationAttribute(CalculationAttribute object)
+  public T caseAttribute(Attribute object)
   {
     return null;
   }

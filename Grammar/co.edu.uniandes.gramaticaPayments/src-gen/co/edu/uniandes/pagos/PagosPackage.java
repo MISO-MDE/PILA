@@ -417,22 +417,22 @@ public interface PagosPackage extends EPackage
   int FORMULA = 7;
 
   /**
-   * The feature id for the '<em><b>Log Exp</b></em>' containment reference list.
+   * The feature id for the '<em><b>Formula Body</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FORMULA__LOG_EXP = 0;
+  int FORMULA__FORMULA_BODY = 0;
 
   /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference list.
+   * The feature id for the '<em><b>Formula Return</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FORMULA__EXPRESSION = 1;
+  int FORMULA__FORMULA_RETURN = 1;
 
   /**
    * The number of structural features of the '<em>Formula</em>' class.
@@ -444,6 +444,136 @@ public interface PagosPackage extends EPackage
   int FORMULA_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.IfBlockImpl <em>If Block</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.edu.uniandes.pagos.impl.IfBlockImpl
+   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getIfBlock()
+   * @generated
+   */
+  int IF_BLOCK = 8;
+
+  /**
+   * The feature id for the '<em><b>If Sentence</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_BLOCK__IF_SENTENCE = 0;
+
+  /**
+   * The feature id for the '<em><b>Else Sentence</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_BLOCK__ELSE_SENTENCE = 1;
+
+  /**
+   * The number of structural features of the '<em>If Block</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_BLOCK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.IfConditionImpl <em>If Condition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.edu.uniandes.pagos.impl.IfConditionImpl
+   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getIfCondition()
+   * @generated
+   */
+  int IF_CONDITION = 9;
+
+  /**
+   * The feature id for the '<em><b>Log Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_CONDITION__LOG_EXP = 0;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_CONDITION__EXPRESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>If Condition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IF_CONDITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.ElseSegmentImpl <em>Else Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.edu.uniandes.pagos.impl.ElseSegmentImpl
+   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getElseSegment()
+   * @generated
+   */
+  int ELSE_SEGMENT = 10;
+
+  /**
+   * The feature id for the '<em><b>If Sentence</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_SEGMENT__IF_SENTENCE = 0;
+
+  /**
+   * The number of structural features of the '<em>Else Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELSE_SEGMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.ReturnBlockImpl <em>Return Block</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see co.edu.uniandes.pagos.impl.ReturnBlockImpl
+   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getReturnBlock()
+   * @generated
+   */
+  int RETURN_BLOCK = 11;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_BLOCK__EXPRESSION = 0;
+
+  /**
+   * The number of structural features of the '<em>Return Block</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_BLOCK_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link co.edu.uniandes.pagos.impl.ExpresionLogicaImpl <em>Expresion Logica</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -451,7 +581,7 @@ public interface PagosPackage extends EPackage
    * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getExpresionLogica()
    * @generated
    */
-  int EXPRESION_LOGICA = 8;
+  int EXPRESION_LOGICA = 12;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference list.
@@ -515,7 +645,7 @@ public interface PagosPackage extends EPackage
    * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 9;
+  int EXPRESSION = 13;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -527,14 +657,14 @@ public interface PagosPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.CalculationAttributeImpl <em>Calculation Attribute</em>}' class.
+   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.AttributeImpl <em>Attribute</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see co.edu.uniandes.pagos.impl.CalculationAttributeImpl
-   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getCalculationAttribute()
+   * @see co.edu.uniandes.pagos.impl.AttributeImpl
+   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getAttribute()
    * @generated
    */
-  int CALCULATION_ATTRIBUTE = 14;
+  int ATTRIBUTE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -543,7 +673,7 @@ public interface PagosPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALCULATION_ATTRIBUTE__NAME = 0;
+  int ATTRIBUTE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -552,118 +682,7 @@ public interface PagosPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALCULATION_ATTRIBUTE__TYPE = 1;
-
-  /**
-   * The number of structural features of the '<em>Calculation Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALCULATION_ATTRIBUTE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.SuperEntityAttributeImpl <em>Super Entity Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.pagos.impl.SuperEntityAttributeImpl
-   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getSuperEntityAttribute()
-   * @generated
-   */
-  int SUPER_ENTITY_ATTRIBUTE = 10;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUPER_ENTITY_ATTRIBUTE__NAME = CALCULATION_ATTRIBUTE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUPER_ENTITY_ATTRIBUTE__TYPE = CALCULATION_ATTRIBUTE__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Super Entity Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUPER_ENTITY_ATTRIBUTE_FEATURE_COUNT = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.EntityAttributeImpl <em>Entity Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.pagos.impl.EntityAttributeImpl
-   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getEntityAttribute()
-   * @generated
-   */
-  int ENTITY_ATTRIBUTE = 11;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY_ATTRIBUTE__NAME = CALCULATION_ATTRIBUTE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY_ATTRIBUTE__TYPE = CALCULATION_ATTRIBUTE__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Entity Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY_ATTRIBUTE_FEATURE_COUNT = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.FormAttributeImpl <em>Form Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.pagos.impl.FormAttributeImpl
-   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getFormAttribute()
-   * @generated
-   */
-  int FORM_ATTRIBUTE = 12;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FORM_ATTRIBUTE__NAME = CALCULATION_ATTRIBUTE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FORM_ATTRIBUTE__TYPE = CALCULATION_ATTRIBUTE__TYPE;
+  int ATTRIBUTE__TYPE = 1;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -672,62 +691,16 @@ public interface PagosPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FORM_ATTRIBUTE__EXP = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 0;
+  int ATTRIBUTE__EXP = 2;
 
   /**
-   * The number of structural features of the '<em>Form Attribute</em>' class.
+   * The number of structural features of the '<em>Attribute</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FORM_ATTRIBUTE_FEATURE_COUNT = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link co.edu.uniandes.pagos.impl.VariableAttributeImpl <em>Variable Attribute</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see co.edu.uniandes.pagos.impl.VariableAttributeImpl
-   * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getVariableAttribute()
-   * @generated
-   */
-  int VARIABLE_ATTRIBUTE = 13;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_ATTRIBUTE__NAME = CALCULATION_ATTRIBUTE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_ATTRIBUTE__TYPE = CALCULATION_ATTRIBUTE__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_ATTRIBUTE__EXP = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Variable Attribute</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_ATTRIBUTE_FEATURE_COUNT = CALCULATION_ATTRIBUTE_FEATURE_COUNT + 1;
+  int ATTRIBUTE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link co.edu.uniandes.pagos.impl.TerminalValueImpl <em>Terminal Value</em>}' class.
@@ -1260,26 +1233,132 @@ public interface PagosPackage extends EPackage
   EClass getFormula();
 
   /**
-   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.Formula#getLogExp <em>Log Exp</em>}'.
+   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.Formula#getFormulaBody <em>Formula Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Formula Body</em>'.
+   * @see co.edu.uniandes.pagos.Formula#getFormulaBody()
+   * @see #getFormula()
+   * @generated
+   */
+  EReference getFormula_FormulaBody();
+
+  /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.Formula#getFormulaReturn <em>Formula Return</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Formula Return</em>'.
+   * @see co.edu.uniandes.pagos.Formula#getFormulaReturn()
+   * @see #getFormula()
+   * @generated
+   */
+  EReference getFormula_FormulaReturn();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.pagos.IfBlock <em>If Block</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>If Block</em>'.
+   * @see co.edu.uniandes.pagos.IfBlock
+   * @generated
+   */
+  EClass getIfBlock();
+
+  /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.IfBlock#getIfSentence <em>If Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sentence</em>'.
+   * @see co.edu.uniandes.pagos.IfBlock#getIfSentence()
+   * @see #getIfBlock()
+   * @generated
+   */
+  EReference getIfBlock_IfSentence();
+
+  /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.IfBlock#getElseSentence <em>Else Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Else Sentence</em>'.
+   * @see co.edu.uniandes.pagos.IfBlock#getElseSentence()
+   * @see #getIfBlock()
+   * @generated
+   */
+  EReference getIfBlock_ElseSentence();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.pagos.IfCondition <em>If Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>If Condition</em>'.
+   * @see co.edu.uniandes.pagos.IfCondition
+   * @generated
+   */
+  EClass getIfCondition();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.IfCondition#getLogExp <em>Log Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Log Exp</em>'.
-   * @see co.edu.uniandes.pagos.Formula#getLogExp()
-   * @see #getFormula()
+   * @see co.edu.uniandes.pagos.IfCondition#getLogExp()
+   * @see #getIfCondition()
    * @generated
    */
-  EReference getFormula_LogExp();
+  EReference getIfCondition_LogExp();
 
   /**
-   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.Formula#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.IfCondition#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Expression</em>'.
-   * @see co.edu.uniandes.pagos.Formula#getExpression()
-   * @see #getFormula()
+   * @see co.edu.uniandes.pagos.IfCondition#getExpression()
+   * @see #getIfCondition()
    * @generated
    */
-  EReference getFormula_Expression();
+  EReference getIfCondition_Expression();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.pagos.ElseSegment <em>Else Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Else Segment</em>'.
+   * @see co.edu.uniandes.pagos.ElseSegment
+   * @generated
+   */
+  EClass getElseSegment();
+
+  /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.ElseSegment#getIfSentence <em>If Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>If Sentence</em>'.
+   * @see co.edu.uniandes.pagos.ElseSegment#getIfSentence()
+   * @see #getElseSegment()
+   * @generated
+   */
+  EReference getElseSegment_IfSentence();
+
+  /**
+   * Returns the meta object for class '{@link co.edu.uniandes.pagos.ReturnBlock <em>Return Block</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Return Block</em>'.
+   * @see co.edu.uniandes.pagos.ReturnBlock
+   * @generated
+   */
+  EClass getReturnBlock();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.ReturnBlock#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Expression</em>'.
+   * @see co.edu.uniandes.pagos.ReturnBlock#getExpression()
+   * @see #getReturnBlock()
+   * @generated
+   */
+  EReference getReturnBlock_Expression();
 
   /**
    * Returns the meta object for class '{@link co.edu.uniandes.pagos.ExpresionLogica <em>Expresion Logica</em>}'.
@@ -1357,98 +1436,47 @@ public interface PagosPackage extends EPackage
   EClass getExpression();
 
   /**
-   * Returns the meta object for class '{@link co.edu.uniandes.pagos.SuperEntityAttribute <em>Super Entity Attribute</em>}'.
+   * Returns the meta object for class '{@link co.edu.uniandes.pagos.Attribute <em>Attribute</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Super Entity Attribute</em>'.
-   * @see co.edu.uniandes.pagos.SuperEntityAttribute
+   * @return the meta object for class '<em>Attribute</em>'.
+   * @see co.edu.uniandes.pagos.Attribute
    * @generated
    */
-  EClass getSuperEntityAttribute();
+  EClass getAttribute();
 
   /**
-   * Returns the meta object for class '{@link co.edu.uniandes.pagos.EntityAttribute <em>Entity Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Entity Attribute</em>'.
-   * @see co.edu.uniandes.pagos.EntityAttribute
-   * @generated
-   */
-  EClass getEntityAttribute();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.pagos.FormAttribute <em>Form Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Form Attribute</em>'.
-   * @see co.edu.uniandes.pagos.FormAttribute
-   * @generated
-   */
-  EClass getFormAttribute();
-
-  /**
-   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.FormAttribute#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see co.edu.uniandes.pagos.FormAttribute#getExp()
-   * @see #getFormAttribute()
-   * @generated
-   */
-  EReference getFormAttribute_Exp();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.pagos.VariableAttribute <em>Variable Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Variable Attribute</em>'.
-   * @see co.edu.uniandes.pagos.VariableAttribute
-   * @generated
-   */
-  EClass getVariableAttribute();
-
-  /**
-   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.VariableAttribute#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see co.edu.uniandes.pagos.VariableAttribute#getExp()
-   * @see #getVariableAttribute()
-   * @generated
-   */
-  EReference getVariableAttribute_Exp();
-
-  /**
-   * Returns the meta object for class '{@link co.edu.uniandes.pagos.CalculationAttribute <em>Calculation Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Calculation Attribute</em>'.
-   * @see co.edu.uniandes.pagos.CalculationAttribute
-   * @generated
-   */
-  EClass getCalculationAttribute();
-
-  /**
-   * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.CalculationAttribute#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.Attribute#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see co.edu.uniandes.pagos.CalculationAttribute#getName()
-   * @see #getCalculationAttribute()
+   * @see co.edu.uniandes.pagos.Attribute#getName()
+   * @see #getAttribute()
    * @generated
    */
-  EAttribute getCalculationAttribute_Name();
+  EAttribute getAttribute_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.CalculationAttribute#getType <em>Type</em>}'.
+   * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.Attribute#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Type</em>'.
-   * @see co.edu.uniandes.pagos.CalculationAttribute#getType()
-   * @see #getCalculationAttribute()
+   * @see co.edu.uniandes.pagos.Attribute#getType()
+   * @see #getAttribute()
    * @generated
    */
-  EAttribute getCalculationAttribute_Type();
+  EAttribute getAttribute_Type();
+
+  /**
+   * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.Attribute#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see co.edu.uniandes.pagos.Attribute#getExp()
+   * @see #getAttribute()
+   * @generated
+   */
+  EReference getAttribute_Exp();
 
   /**
    * Returns the meta object for class '{@link co.edu.uniandes.pagos.TerminalValue <em>Terminal Value</em>}'.
@@ -1906,12 +1934,64 @@ public interface PagosPackage extends EPackage
     EClass FORMULA = eINSTANCE.getFormula();
 
     /**
+     * The meta object literal for the '<em><b>Formula Body</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FORMULA__FORMULA_BODY = eINSTANCE.getFormula_FormulaBody();
+
+    /**
+     * The meta object literal for the '<em><b>Formula Return</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FORMULA__FORMULA_RETURN = eINSTANCE.getFormula_FormulaReturn();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.IfBlockImpl <em>If Block</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.pagos.impl.IfBlockImpl
+     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getIfBlock()
+     * @generated
+     */
+    EClass IF_BLOCK = eINSTANCE.getIfBlock();
+
+    /**
+     * The meta object literal for the '<em><b>If Sentence</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IF_BLOCK__IF_SENTENCE = eINSTANCE.getIfBlock_IfSentence();
+
+    /**
+     * The meta object literal for the '<em><b>Else Sentence</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IF_BLOCK__ELSE_SENTENCE = eINSTANCE.getIfBlock_ElseSentence();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.IfConditionImpl <em>If Condition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.pagos.impl.IfConditionImpl
+     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getIfCondition()
+     * @generated
+     */
+    EClass IF_CONDITION = eINSTANCE.getIfCondition();
+
+    /**
      * The meta object literal for the '<em><b>Log Exp</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FORMULA__LOG_EXP = eINSTANCE.getFormula_LogExp();
+    EReference IF_CONDITION__LOG_EXP = eINSTANCE.getIfCondition_LogExp();
 
     /**
      * The meta object literal for the '<em><b>Expression</b></em>' containment reference list feature.
@@ -1919,7 +1999,43 @@ public interface PagosPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FORMULA__EXPRESSION = eINSTANCE.getFormula_Expression();
+    EReference IF_CONDITION__EXPRESSION = eINSTANCE.getIfCondition_Expression();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.ElseSegmentImpl <em>Else Segment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.pagos.impl.ElseSegmentImpl
+     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getElseSegment()
+     * @generated
+     */
+    EClass ELSE_SEGMENT = eINSTANCE.getElseSegment();
+
+    /**
+     * The meta object literal for the '<em><b>If Sentence</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ELSE_SEGMENT__IF_SENTENCE = eINSTANCE.getElseSegment_IfSentence();
+
+    /**
+     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.ReturnBlockImpl <em>Return Block</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see co.edu.uniandes.pagos.impl.ReturnBlockImpl
+     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getReturnBlock()
+     * @generated
+     */
+    EClass RETURN_BLOCK = eINSTANCE.getReturnBlock();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETURN_BLOCK__EXPRESSION = eINSTANCE.getReturnBlock_Expression();
 
     /**
      * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.ExpresionLogicaImpl <em>Expresion Logica</em>}' class.
@@ -1982,70 +2098,14 @@ public interface PagosPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
-     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.SuperEntityAttributeImpl <em>Super Entity Attribute</em>}' class.
+     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.AttributeImpl <em>Attribute</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see co.edu.uniandes.pagos.impl.SuperEntityAttributeImpl
-     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getSuperEntityAttribute()
+     * @see co.edu.uniandes.pagos.impl.AttributeImpl
+     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getAttribute()
      * @generated
      */
-    EClass SUPER_ENTITY_ATTRIBUTE = eINSTANCE.getSuperEntityAttribute();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.EntityAttributeImpl <em>Entity Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.pagos.impl.EntityAttributeImpl
-     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getEntityAttribute()
-     * @generated
-     */
-    EClass ENTITY_ATTRIBUTE = eINSTANCE.getEntityAttribute();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.FormAttributeImpl <em>Form Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.pagos.impl.FormAttributeImpl
-     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getFormAttribute()
-     * @generated
-     */
-    EClass FORM_ATTRIBUTE = eINSTANCE.getFormAttribute();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FORM_ATTRIBUTE__EXP = eINSTANCE.getFormAttribute_Exp();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.VariableAttributeImpl <em>Variable Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.pagos.impl.VariableAttributeImpl
-     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getVariableAttribute()
-     * @generated
-     */
-    EClass VARIABLE_ATTRIBUTE = eINSTANCE.getVariableAttribute();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VARIABLE_ATTRIBUTE__EXP = eINSTANCE.getVariableAttribute_Exp();
-
-    /**
-     * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.CalculationAttributeImpl <em>Calculation Attribute</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see co.edu.uniandes.pagos.impl.CalculationAttributeImpl
-     * @see co.edu.uniandes.pagos.impl.PagosPackageImpl#getCalculationAttribute()
-     * @generated
-     */
-    EClass CALCULATION_ATTRIBUTE = eINSTANCE.getCalculationAttribute();
+    EClass ATTRIBUTE = eINSTANCE.getAttribute();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2053,7 +2113,7 @@ public interface PagosPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALCULATION_ATTRIBUTE__NAME = eINSTANCE.getCalculationAttribute_Name();
+    EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2061,7 +2121,15 @@ public interface PagosPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALCULATION_ATTRIBUTE__TYPE = eINSTANCE.getCalculationAttribute_Type();
+    EAttribute ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ATTRIBUTE__EXP = eINSTANCE.getAttribute_Exp();
 
     /**
      * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.TerminalValueImpl <em>Terminal Value</em>}' class.

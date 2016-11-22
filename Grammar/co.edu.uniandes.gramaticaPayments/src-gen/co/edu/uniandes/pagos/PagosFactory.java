@@ -96,6 +96,42 @@ public interface PagosFactory extends EFactory
   Formula createFormula();
 
   /**
+   * Returns a new object of class '<em>If Block</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>If Block</em>'.
+   * @generated
+   */
+  IfBlock createIfBlock();
+
+  /**
+   * Returns a new object of class '<em>If Condition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>If Condition</em>'.
+   * @generated
+   */
+  IfCondition createIfCondition();
+
+  /**
+   * Returns a new object of class '<em>Else Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Else Segment</em>'.
+   * @generated
+   */
+  ElseSegment createElseSegment();
+
+  /**
+   * Returns a new object of class '<em>Return Block</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Return Block</em>'.
+   * @generated
+   */
+  ReturnBlock createReturnBlock();
+
+  /**
    * Returns a new object of class '<em>Expresion Logica</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -114,49 +150,13 @@ public interface PagosFactory extends EFactory
   Expression createExpression();
 
   /**
-   * Returns a new object of class '<em>Super Entity Attribute</em>'.
+   * Returns a new object of class '<em>Attribute</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Super Entity Attribute</em>'.
+   * @return a new object of class '<em>Attribute</em>'.
    * @generated
    */
-  SuperEntityAttribute createSuperEntityAttribute();
-
-  /**
-   * Returns a new object of class '<em>Entity Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity Attribute</em>'.
-   * @generated
-   */
-  EntityAttribute createEntityAttribute();
-
-  /**
-   * Returns a new object of class '<em>Form Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Form Attribute</em>'.
-   * @generated
-   */
-  FormAttribute createFormAttribute();
-
-  /**
-   * Returns a new object of class '<em>Variable Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Variable Attribute</em>'.
-   * @generated
-   */
-  VariableAttribute createVariableAttribute();
-
-  /**
-   * Returns a new object of class '<em>Calculation Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Calculation Attribute</em>'.
-   * @generated
-   */
-  CalculationAttribute createCalculationAttribute();
+  Attribute createAttribute();
 
   /**
    * Returns a new object of class '<em>Terminal Value</em>'.

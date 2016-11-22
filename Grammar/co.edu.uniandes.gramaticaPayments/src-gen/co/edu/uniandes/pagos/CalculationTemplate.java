@@ -82,7 +82,7 @@ public interface CalculationTemplate extends EObject
 
   /**
    * Returns the value of the '<em><b>Att Lists</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.pagos.VariableAttribute}.
+   * The list contents are of type {@link co.edu.uniandes.pagos.Attribute}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Att Lists</em>' containment reference list isn't clear,
@@ -94,7 +94,7 @@ public interface CalculationTemplate extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<VariableAttribute> getAttLists();
+  EList<Attribute> getAttLists();
 
   /**
    * Returns the value of the '<em><b>Formula</b></em>' containment reference list.

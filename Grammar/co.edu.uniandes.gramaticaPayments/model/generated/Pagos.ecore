@@ -15,7 +15,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
-        eType="#//SuperEntityAttribute" containment="true"/>
+        eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="participante" upperBound="-1"
         eType="#//Participant" containment="true"/>
   </eClassifiers>
@@ -23,7 +23,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
-        eType="#//EntityAttribute" containment="true"/>
+        eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templatesForm" upperBound="-1"
         eType="#//InformationTemplate" containment="true"/>
   </eClassifiers>
@@ -31,13 +31,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
-        eType="#//SuperEntityAttribute" containment="true"/>
+        eType="#//Attribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InformationTemplate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formLists" upperBound="-1"
-        eType="#//FormAttribute" containment="true"/>
+        eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" upperBound="-1"
         eType="#//CalculationTemplate" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="providers" upperBound="-1"
@@ -47,13 +47,33 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
-        eType="#//VariableAttribute" containment="true"/>
+        eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formula" upperBound="-1"
         eType="#//Formula" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Formula">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formulaBody" upperBound="-1"
+        eType="#//IfBlock" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formulaReturn" eType="#//ReturnBlock"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IfBlock">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifSentence" eType="#//IfCondition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseSentence" eType="#//ElseSegment"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IfCondition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="logExp" upperBound="-1"
         eType="#//ExpresionLogica" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElseSegment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ifSentence" eType="#//Formula"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReturnBlock">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
@@ -70,22 +90,14 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SuperEntityAttribute" eSuperTypes="#//CalculationAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EntityAttribute" eSuperTypes="#//CalculationAttribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FormAttribute" eSuperTypes="#//CalculationAttribute">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableAttribute" eSuperTypes="#//CalculationAttribute">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalculationAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TerminalValue" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//CalculationAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="mathADD">

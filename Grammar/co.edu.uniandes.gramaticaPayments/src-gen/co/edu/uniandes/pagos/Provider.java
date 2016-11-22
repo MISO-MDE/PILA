@@ -81,7 +81,7 @@ public interface Provider extends EObject
 
   /**
    * Returns the value of the '<em><b>Att Lists</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.pagos.SuperEntityAttribute}.
+   * The list contents are of type {@link co.edu.uniandes.pagos.Attribute}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Att Lists</em>' containment reference list isn't clear,
@@ -93,6 +93,6 @@ public interface Provider extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<SuperEntityAttribute> getAttLists();
+  EList<Attribute> getAttLists();
 
 } // Provider

@@ -32,12 +32,12 @@ public interface TerminalValue extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Variable</em>' reference.
-   * @see #setVariable(CalculationAttribute)
+   * @see #setVariable(Attribute)
    * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Variable()
    * @model
    * @generated
    */
-  CalculationAttribute getVariable();
+  Attribute getVariable();
 
   /**
    * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getVariable <em>Variable</em>}' reference.
@@ -47,7 +47,7 @@ public interface TerminalValue extends Expression
    * @see #getVariable()
    * @generated
    */
-  void setVariable(CalculationAttribute value);
+  void setVariable(Attribute value);
 
   /**
    * Returns the value of the '<em><b>Valor</b></em>' attribute.

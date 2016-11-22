@@ -5,21 +5,22 @@ package co.edu.uniandes.serializer;
 
 import co.edu.uniandes.pagos.Adicion;
 import co.edu.uniandes.pagos.Application;
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.CalculationTemplate;
-import co.edu.uniandes.pagos.EntityAttribute;
+import co.edu.uniandes.pagos.ElseSegment;
 import co.edu.uniandes.pagos.ExpresionLogica;
-import co.edu.uniandes.pagos.FormAttribute;
 import co.edu.uniandes.pagos.Formula;
+import co.edu.uniandes.pagos.IfBlock;
+import co.edu.uniandes.pagos.IfCondition;
 import co.edu.uniandes.pagos.InformationTemplate;
 import co.edu.uniandes.pagos.Intermediary;
 import co.edu.uniandes.pagos.Multiplicacion;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.Participant;
 import co.edu.uniandes.pagos.Provider;
+import co.edu.uniandes.pagos.ReturnBlock;
 import co.edu.uniandes.pagos.SuperEntity;
-import co.edu.uniandes.pagos.SuperEntityAttribute;
 import co.edu.uniandes.pagos.TerminalValue;
-import co.edu.uniandes.pagos.VariableAttribute;
 import co.edu.uniandes.pagos.mathADD;
 import co.edu.uniandes.pagos.mathMULT;
 import co.edu.uniandes.services.PagosGrammarAccess;
@@ -55,20 +56,26 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PagosPackage.APPLICATION:
 				sequence_Application(context, (Application) semanticObject); 
 				return; 
+			case PagosPackage.ATTRIBUTE:
+				sequence_Attribute(context, (Attribute) semanticObject); 
+				return; 
 			case PagosPackage.CALCULATION_TEMPLATE:
 				sequence_CalculationTemplate(context, (CalculationTemplate) semanticObject); 
 				return; 
-			case PagosPackage.ENTITY_ATTRIBUTE:
-				sequence_EntityAttribute(context, (EntityAttribute) semanticObject); 
+			case PagosPackage.ELSE_SEGMENT:
+				sequence_ElseSegment(context, (ElseSegment) semanticObject); 
 				return; 
 			case PagosPackage.EXPRESION_LOGICA:
 				sequence_ExpresionLogica(context, (ExpresionLogica) semanticObject); 
 				return; 
-			case PagosPackage.FORM_ATTRIBUTE:
-				sequence_FormAttribute(context, (FormAttribute) semanticObject); 
-				return; 
 			case PagosPackage.FORMULA:
 				sequence_Formula(context, (Formula) semanticObject); 
+				return; 
+			case PagosPackage.IF_BLOCK:
+				sequence_IfBlock(context, (IfBlock) semanticObject); 
+				return; 
+			case PagosPackage.IF_CONDITION:
+				sequence_IfCondition(context, (IfCondition) semanticObject); 
 				return; 
 			case PagosPackage.INFORMATION_TEMPLATE:
 				sequence_InformationTemplate(context, (InformationTemplate) semanticObject); 
@@ -85,17 +92,14 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PagosPackage.PROVIDER:
 				sequence_Provider(context, (Provider) semanticObject); 
 				return; 
+			case PagosPackage.RETURN_BLOCK:
+				sequence_ReturnBlock(context, (ReturnBlock) semanticObject); 
+				return; 
 			case PagosPackage.SUPER_ENTITY:
 				sequence_SuperEntity(context, (SuperEntity) semanticObject); 
 				return; 
-			case PagosPackage.SUPER_ENTITY_ATTRIBUTE:
-				sequence_SuperEntityAttribute(context, (SuperEntityAttribute) semanticObject); 
-				return; 
 			case PagosPackage.TERMINAL_VALUE:
 				sequence_TerminalValue(context, (TerminalValue) semanticObject); 
-				return; 
-			case PagosPackage.VARIABLE_ATTRIBUTE:
-				sequence_VariableAttribute(context, (VariableAttribute) semanticObject); 
 				return; 
 			case PagosPackage.MATH_ADD:
 				sequence_mathADD(context, (mathADD) semanticObject); 
@@ -159,10 +163,22 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     Attribute returns Attribute
+	 *
+	 * Constraint:
+	 *     (name=ID type=TYPE exp=Adicion?)
+	 */
+	protected void sequence_Attribute(ISerializationContext context, Attribute semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     CalculationTemplate returns CalculationTemplate
 	 *
 	 * Constraint:
-	 *     (name=ID description=STRING attLists+=VariableAttribute attLists+=VariableAttribute* formula+=Formula)
+	 *     (name=ID description=STRING attLists+=Attribute attLists+=Attribute* formula+=Formula)
 	 */
 	protected void sequence_CalculationTemplate(ISerializationContext context, CalculationTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -171,22 +187,18 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     EntityAttribute returns EntityAttribute
-	 *     CalculationAttribute returns EntityAttribute
+	 *     ElseSegment returns ElseSegment
 	 *
 	 * Constraint:
-	 *     (name=ID type=TYPE)
+	 *     ifSentence=Formula
 	 */
-	protected void sequence_EntityAttribute(ISerializationContext context, EntityAttribute semanticObject) {
+	protected void sequence_ElseSegment(ISerializationContext context, ElseSegment semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__NAME));
-			if (transientValues.isValueTransient(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, PagosPackage.Literals.ELSE_SEGMENT__IF_SENTENCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PagosPackage.Literals.ELSE_SEGMENT__IF_SENTENCE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEntityAttributeAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getEntityAttributeAccess().getTypeTYPETerminalRuleCall_4_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getElseSegmentAccess().getIfSentenceFormulaParserRuleCall_2_0(), semanticObject.getIfSentence());
 		feeder.finish();
 	}
 	
@@ -205,25 +217,36 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     FormAttribute returns FormAttribute
-	 *     CalculationAttribute returns FormAttribute
+	 *     Formula returns Formula
 	 *
 	 * Constraint:
-	 *     (name=ID type=TYPE exp=Adicion?)
+	 *     (formulaBody+=IfBlock+ | formulaReturn=ReturnBlock)?
 	 */
-	protected void sequence_FormAttribute(ISerializationContext context, FormAttribute semanticObject) {
+	protected void sequence_Formula(ISerializationContext context, Formula semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Formula returns Formula
+	 *     IfBlock returns IfBlock
 	 *
 	 * Constraint:
-	 *     (logExp+=ExpresionLogica expression+=Adicion (logExp+=ExpresionLogica? expression+=Adicion)*)
+	 *     (ifSentence=IfCondition elseSentence=ElseSegment?)
 	 */
-	protected void sequence_Formula(ISerializationContext context, Formula semanticObject) {
+	protected void sequence_IfBlock(ISerializationContext context, IfBlock semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     IfCondition returns IfCondition
+	 *
+	 * Constraint:
+	 *     (logExp+=ExpresionLogica expression+=Adicion)
+	 */
+	protected void sequence_IfCondition(ISerializationContext context, IfCondition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -236,8 +259,8 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (
 	 *         name=ID 
 	 *         description=STRING 
-	 *         formLists+=FormAttribute 
-	 *         formLists+=FormAttribute* 
+	 *         formLists+=Attribute 
+	 *         formLists+=Attribute* 
 	 *         (templates+=CalculationTemplate templates+=CalculationTemplate*)? 
 	 *         (providers+=Provider providers+=Provider*)?
 	 *     )
@@ -292,13 +315,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Participant returns Participant
 	 *
 	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         description=STRING 
-	 *         attLists+=EntityAttribute 
-	 *         attLists+=EntityAttribute* 
-	 *         (templatesForm+=InformationTemplate templatesForm+=InformationTemplate*)?
-	 *     )
+	 *     (name=ID description=STRING attLists+=Attribute attLists+=Attribute* (templatesForm+=InformationTemplate templatesForm+=InformationTemplate*)?)
 	 */
 	protected void sequence_Participant(ISerializationContext context, Participant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -310,7 +327,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Provider returns Provider
 	 *
 	 * Constraint:
-	 *     (name=ID description=STRING attLists+=SuperEntityAttribute attLists+=SuperEntityAttribute*)
+	 *     (name=ID description=STRING attLists+=Attribute attLists+=Attribute*)
 	 */
 	protected void sequence_Provider(ISerializationContext context, Provider semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -319,23 +336,13 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     SuperEntityAttribute returns SuperEntityAttribute
-	 *     CalculationAttribute returns SuperEntityAttribute
+	 *     ReturnBlock returns ReturnBlock
 	 *
 	 * Constraint:
-	 *     (name=ID type=TYPE)
+	 *     expression+=Adicion
 	 */
-	protected void sequence_SuperEntityAttribute(ISerializationContext context, SuperEntityAttribute semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__NAME));
-			if (transientValues.isValueTransient(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PagosPackage.Literals.CALCULATION_ATTRIBUTE__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSuperEntityAttributeAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getSuperEntityAttributeAccess().getTypeTYPETerminalRuleCall_4_0(), semanticObject.getType());
-		feeder.finish();
+	protected void sequence_ReturnBlock(ISerializationContext context, ReturnBlock semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -347,8 +354,8 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (
 	 *         name=ID 
 	 *         description=STRING 
-	 *         attLists+=SuperEntityAttribute 
-	 *         attLists+=SuperEntityAttribute* 
+	 *         attLists+=Attribute 
+	 *         attLists+=Attribute* 
 	 *         participante+=Participant 
 	 *         participante+=Participant*
 	 *     )
@@ -368,22 +375,9 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     TerminalValue returns TerminalValue
 	 *
 	 * Constraint:
-	 *     (variable=[CalculationAttribute|ID] | valor=Number)
+	 *     (variable=[Attribute|ID] | valor=Number)
 	 */
 	protected void sequence_TerminalValue(ISerializationContext context, TerminalValue semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VariableAttribute returns VariableAttribute
-	 *     CalculationAttribute returns VariableAttribute
-	 *
-	 * Constraint:
-	 *     (name=ID type=TYPE exp=Adicion?)
-	 */
-	protected void sequence_VariableAttribute(ISerializationContext context, VariableAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

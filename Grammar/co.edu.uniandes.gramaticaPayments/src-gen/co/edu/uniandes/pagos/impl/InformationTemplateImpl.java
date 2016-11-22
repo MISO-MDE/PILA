@@ -3,8 +3,8 @@
  */
 package co.edu.uniandes.pagos.impl;
 
+import co.edu.uniandes.pagos.Attribute;
 import co.edu.uniandes.pagos.CalculationTemplate;
-import co.edu.uniandes.pagos.FormAttribute;
 import co.edu.uniandes.pagos.InformationTemplate;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.Provider;
@@ -92,7 +92,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
    * @generated
    * @ordered
    */
-  protected EList<FormAttribute> formLists;
+  protected EList<Attribute> formLists;
 
   /**
    * The cached value of the '{@link #getTemplates() <em>Templates</em>}' containment reference list.
@@ -186,11 +186,11 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<FormAttribute> getFormLists()
+  public EList<Attribute> getFormLists()
   {
     if (formLists == null)
     {
-      formLists = new EObjectContainmentEList<FormAttribute>(FormAttribute.class, this, PagosPackage.INFORMATION_TEMPLATE__FORM_LISTS);
+      formLists = new EObjectContainmentEList<Attribute>(Attribute.class, this, PagosPackage.INFORMATION_TEMPLATE__FORM_LISTS);
     }
     return formLists;
   }
@@ -286,7 +286,7 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
         return;
       case PagosPackage.INFORMATION_TEMPLATE__FORM_LISTS:
         getFormLists().clear();
-        getFormLists().addAll((Collection<? extends FormAttribute>)newValue);
+        getFormLists().addAll((Collection<? extends Attribute>)newValue);
         return;
       case PagosPackage.INFORMATION_TEMPLATE__TEMPLATES:
         getTemplates().clear();
