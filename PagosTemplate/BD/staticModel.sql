@@ -10,5 +10,23 @@
 	insert into ActividadEconomica (codigo, descripcion) values('1431', 'Extraccion de esmeraldas');
 	insert into ActividadEconomica (codigo, descripcion) values('2321','Fabricacion de productos de la refinaci�n del petroleo, elaborados en refineria');
 
-
+    --TipoPension
+	insert into TipoPension (description) values('Vejez');
+	insert into TipoPension (description) values('Sobrevivencia vitalicia riesgo comun');
+	insert into TipoPension (description) values('Sobrevivencia temporal riesgo comun');
+	insert into TipoPension (description) values('Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos');
+	insert into TipoPension (description) values('Sobrevivencia vitalicia por riesgo laboral');
+	insert into TipoPension (description) values('Sobrevivencia temporal por riesgo laboral');
+	insert into TipoPension (description) values('Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos');
+	insert into TipoPension (description) values('Invalidez riesgo común');
+	insert into TipoPension (description) values('Invalidez resgo laboral');
+	insert into TipoPension (description) values('Jubilacion');
+	insert into TipoPension (description) values('Jubilacion para compartir');
+	insert into TipoPension (description) values('Sanción');
+	insert into TipoPension (description) values('Convencional');
+	insert into TipoPension (description) values('Convencional para compartir');
+	insert into TipoPension (description) values('Gracia');
+	insert into TipoPension (description) values('Por convenio internacional');
+	insert into TipoPension (description) values('Sentencia Judicial');
+	insert into TipoPension (description) values('Conciliaciones');
 
