@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/PaymentStaticModel/src" modelPluginID="PaymentStaticModel"
+    modelName="PagosPim" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>PilaPIM.ecore</foreignModel>
+  <genPackages prefix="PagosPim" disposableProviderFactory="true" ecorePackage="PilaPIM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//DataTypes">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//DataTypes/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//DataTypes/INTEGER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//Cardinality">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//Cardinality/CEROTOMANY"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//Cardinality/CEROTOONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//LogicalCononnector">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//LogicalCononnector/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//LogicalCononnector/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//AddOper">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//AddOper/ADD"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//MultOper">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//MultOper/MULT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//RelationType">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//RelationType/COMPOSITION"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//RelationType/REFERENCE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//LogicalOperator">
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//LogicalOperator/LESSTHAN"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//LogicalOperator/EQUALTO"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//LogicalOperator/DIFFERENT"/>
+    </genEnums>
+    <genClasses ecoreClass="PilaPIM.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Application/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/views"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/logicalComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/serverservice"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/datalayercomponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/daocomponent"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Component/control"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Component/services"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/title"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Control">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Control/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Control/label"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Input">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Input/service"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Input/dataType"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Action/service"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Output"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//FrontService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//FrontService/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//FrontService/serviceCalls"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//FrontService/serves"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//View">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//View/components"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//GenericComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//GenericComponent/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//GenericComponent/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//GenericComponent/relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//GenericComponent/operations"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Attribute">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Attribute/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//AttributeDefinition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Operation/parameterList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Operation/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Operation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//ParameterList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ParameterList/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Relation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Relation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Relation/targetComponent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Relation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Relation/cardinality"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//AttributeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//AttributeDefinition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//AttributeDefinition/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//AttributeDefinition/complexType"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Return">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Return/type"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Return/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Body/ifblock"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Body/returnExp"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//IfBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfBlock/ifcondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfBlock/elsesegment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfBlock/ifexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//IfCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/logicalexpressions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/return"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/innerIf"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//NewEClass21"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//ElseSegment">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ElseSegment/innerIfBlocks"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ElseSegment/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfBlock/ifexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Expression"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//LogicalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//LogicalExpression/leftTerm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//LogicalExpression/rightTerm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//LogicalExpression/logicalOperator"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//LogicalExpression/moreExpressions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//LogicalExpression/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//LogicalExpression/conOper"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//ProgramIfExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ProgramIfExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//TerminalValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//TerminalValue/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//TerminalValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Add">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Add/leftExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Add/rigthExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Add/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Mult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Mult/rigthtExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Mult/leftExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Mult/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//Parameter"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//ServerService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ServerService/relatesTo"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//LogicComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//LogicComponent/mapsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//DataLayerComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//DataLayerComponent/extendsData"/>
+    </genClasses>
+    <genClasses ecoreClass="PilaPIM.ecore#//DaoComponent"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -48,24 +48,14 @@
             <formulas>
               <formulaBody>
                 <ifSentence>
-                  <logExp>
-                    <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.2"/>
-                    <logOper>=</logOper>
-                    <variable2 valor="1"/>
+                  <logExp conOper="&amp;&amp;">
+                    <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.3"/>
+                    <logOper>&lt;></logOper>
+                    <literal>Colombia</literal>
                     <exp>
-                      <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.3"/>
+                      <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.4"/>
                       <logOper>&lt;></logOper>
                       <literal>Colombia</literal>
-                      <exp>
-                        <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.4"/>
-                        <logOper>&lt;></logOper>
-                        <literal>Colombia</literal>
-                        <exp>
-                          <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.3"/>
-                          <logOper>=</logOper>
-                          <variable2 valor="1"/>
-                        </exp>
-                      </exp>
                     </exp>
                   </logExp>
                   <expression xsi:type="pagos:TerminalValue" valor="0"/>
@@ -99,7 +89,7 @@
             <formulas>
               <formulaBody>
                 <ifSentence>
-                  <logExp>
+                  <logExp conOper="||">
                     <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.7"/>
                     <logOper>=</logOper>
                     <variable2 valor="4"/>
@@ -185,11 +175,11 @@
                   <ifSentence>
                     <formulaBody>
                       <ifSentence>
-                        <logExp>
+                        <logExp conOper="&amp;&amp;">
                           <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.0/@templates.1/@attLists.2"/>
                           <logOper>>=</logOper>
                           <variable2 valor="3"/>
-                          <exp>
+                          <exp conOper="&amp;&amp;">
                             <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.0/@templates.1/@attLists.2"/>
                             <logOper>&lt;</logOper>
                             <variable2 valor="20"/>

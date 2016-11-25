@@ -44,8 +44,6 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getLBRACEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getLBRACKETRule())
 			return getLBRACKETToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getLOGICALCONNRule())
-			return getLOGICALCONNToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getRBRACERule())
 			return getRBRACEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getRBRACKETRule())
@@ -109,15 +107,6 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "[";
-	}
-	
-	/**
-	 * terminal LOGICALCONN: '&&' | '||';
-	 */
-	protected String getLOGICALCONNToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "&&";
 	}
 	
 	/**

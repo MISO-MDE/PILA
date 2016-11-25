@@ -1766,10 +1766,24 @@ ruleExpresionLogica returns [EObject current=null]
 			)
 		)+
 		(
-			this_LOGICALCONN_4=RULE_LOGICALCONN
-			{
-				newLeafNode(this_LOGICALCONN_4, grammarAccess.getExpresionLogicaAccess().getLOGICALCONNTerminalRuleCall_2_0());
-			}
+			(
+				(
+					lv_conOper_4_0=RULE_LOGICALCONN
+					{
+						newLeafNode(lv_conOper_4_0, grammarAccess.getExpresionLogicaAccess().getConOperLOGICALCONNTerminalRuleCall_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getExpresionLogicaRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"conOper",
+							lv_conOper_4_0,
+							"co.edu.uniandes.Pagos.LOGICALCONN");
+					}
+				)
+			)
 			(
 				(
 					{
