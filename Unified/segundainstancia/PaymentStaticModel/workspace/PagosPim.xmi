@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
-<PagosPim:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim" name="PilaProcessor">
-  <logicalComponents name="Planillator"/>
-</PagosPim:Application>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim">
+  <PagosPim:Application name="PilaProcessor">
+    <logicalComponents name="Planillator"/>
+  </PagosPim:Application>
+  <PagosPim:LogicComponent name="Pagadora"/>
+</xmi:XMI>

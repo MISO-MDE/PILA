@@ -10,14 +10,36 @@ rule Pagos2PimApp
 	{
 		t.name = s.name;
 		t.logicalComponents.add(s.intermediary.equivalent());
+		t.logicalComponents.addAll(s.intermediary.superentities.equivalent());
+		t.logicalComponents.addAll(s.intermediary->superentities->participants.equivalent());
 	}
 	
-	
-rule Intermediary2LogicalAntity
+rule Intermediary2LogicalEntity
 	transform
 		s:PagosM!Intermediary
 	to
 		t:PagosPim!LogicComponent
 	{
 		t.name = s.name;
+	}
+
+rule SuperEntity2LogicalEntity
+	transform
+		s:PagosM!SuperEntity
+	to
+		t:PagosPim!LogicComponent
+	{
+		t.name = s.name;
+		
+	}
+
+	
+rule Participants2LogicalEntity
+	transform
+		s:PagosM!Participant
+	to
+		t:PagosPim!LogicComponent
+	{
+		t.name = s.name;
+		
 	}
