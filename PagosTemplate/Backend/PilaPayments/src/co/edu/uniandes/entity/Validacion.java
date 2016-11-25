@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class Validacion {
     private String name;
 	private ArrayList<String> values;
+	public  Validacion(){
+		values  = new ArrayList<String>();
+	}
 	public String getName() {
 		return name;
 	}
