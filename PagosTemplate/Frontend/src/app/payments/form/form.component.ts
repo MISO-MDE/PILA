@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {PensionerApiService} from '../pensioner/rest.api.service';
-import {PaymentApiService} from '../services/payment.api.service';
+import {PensionerApiService} from '../../pensioner/rest.api.service';
+import {PaymentApiService} from '../rest.api.service';
 
-import {Entity} from '../sharedresources/classes';
+import {Entity} from '../../sharedresources/classes';
 
 @Component({
   selector: 'app-payment-form',
-  templateUrl: './payment-form.component.html',
-  styleUrls: ['./payment-form.component.less']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.less']
 })
 export class PaymentFormComponent implements OnInit {
 
