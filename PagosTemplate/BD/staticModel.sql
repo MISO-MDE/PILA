@@ -30,3 +30,25 @@
 	insert into TipoPension (description) values('Sentencia Judicial');
 	insert into TipoPension (description) values('Conciliaciones');
 
+
+    --TipoPensionado
+    insert into TipoPensionado (description) values('Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv');
+	insert into TipoPensionado (description) values('Pensionado de régimen de prima media. Sin tope máximo de pensión');
+	insert into TipoPensionado (description) values('Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión');
+	insert into TipoPensionado (description) values('Pensionado de riesgos laborales. Tope máximo de 25 smlmv');
+	insert into TipoPensionado (description) values('Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión');
+	insert into TipoPensionado (description) values('Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv');
+	insert into TipoPensionado (description) values('Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión');
+	insert into TipoPensionado (description) values('Beneficiario UPC adicional');
+
+    --TipoNovedad
+	insert into TipoNovedad (description) values('Traslado');
+	insert into TipoNovedad (description) values('Variación transitoria del salario');
+	insert into TipoNovedad (description) values('Suspension temporal, licencia no remunerada o comosión de servicios');
+	insert into TipoNovedad (description) values('Incapacidad temporal por enfermedad');
+	insert into TipoNovedad (description) values('Licencia de maternidad o paternidad');
+	insert into TipoNovedad (description) values('Vacaciones');
+	insert into TipoNovedad (description) values('Licencia remunerada');
+	insert into TipoNovedad (description) values('Aporte voluntario a pensiones');
+	insert into TipoNovedad (description) values('Suspension');
+
