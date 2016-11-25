@@ -9,12 +9,12 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(name = "intermediary_id", referencedColumnName = "user_id")
-public class PilaUserIntermediary extends PilaUser{
+public class UserIntermediary extends User{
 
 	/**
 	 * Constructor
 	 */
-	public PilaUserIntermediary() {
+	public UserIntermediary() {
 		super();
 	}
 	

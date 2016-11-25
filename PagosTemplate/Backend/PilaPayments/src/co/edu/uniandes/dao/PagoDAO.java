@@ -3,8 +3,8 @@ package co.edu.uniandes.dao;
 import java.util.List;
 
 import co.edu.uniandes.entity.PilaEntity;
-import co.edu.uniandes.entity.PilaPago;
-import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.entity.Pago;
+import co.edu.uniandes.entity.SuperEntity;
 
 /**
  * dao para pagos
@@ -17,12 +17,12 @@ public interface PagoDAO {
 	 * @param entity entidad a la que se le buscan los pagos
 	 * @return lista de pagos
 	 */
-	public List<PilaPago> findPagosEntity(PilaEntity entity);
+	public List<Pago> findPagosEntity(PilaEntity entity);
 	
 	/**
 	 * retorna una lista de pagos realizadas por una super entity
 	 * @param superEntity entidad que realizo los pagos
 	 * @return lista de pagos d epagos realizados
 	 */
-	public List<PilaPago> findPagosSuperEntity(PilaSuperEntity entity);
+	public List<Pago> findPagosSuperEntity(SuperEntity entity);
 }

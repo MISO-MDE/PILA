@@ -23,7 +23,7 @@ import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.ValidacionDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
-import co.edu.uniandes.to.PilaEntityTO;
+import co.edu.uniandes.to.EntityTO;
 import co.edu.uniandes.businesslogic.BusinessValidations;
 import co.edu.uniandes.businesslogic.CalculationFormula1;
 
@@ -49,7 +49,7 @@ public class PaymentCalculatorManager {
 		logger.debug("data: '" + id + "'");
 		String errorCondition = "";
 		
-		PilaEntity theEntity = getEntityLogic().getEntitiesById(Long.valueOf(id));
+		PilaEntity theEntity = getEntityLogic().find(Long.valueOf(id));
 		
 		logger.debug("data:theEntity '" + theEntity.getCedula() + "'");
 		

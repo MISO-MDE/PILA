@@ -3,7 +3,7 @@ package co.edu.uniandes.to;
 import java.util.Date;
 
 import co.edu.uniandes.entity.PilaEntity;
-import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.entity.SuperEntity;
 import co.edu.uniandes.staticmodel.EstadoNovedad;
 import co.edu.uniandes.staticmodel.TipoNovedad;
 
@@ -57,7 +57,7 @@ public class PilaNovedadTO {
 	/**
 	 * Super entity que crea la novedad
 	 */
-	private PilaSuperEntity superEntity;
+	private SuperEntity superEntity;
 	
 	/**
 	 * Constructor
@@ -167,14 +167,14 @@ public class PilaNovedadTO {
 	/**
 	 * @return the superEntity
 	 */
-	public PilaSuperEntity getSuperEntity() {
+	public SuperEntity getSuperEntity() {
 		return superEntity;
 	}
 
 	/**
 	 * @param superEntity the superEntity to set
 	 */
-	public void setSuperEntity(PilaSuperEntity superEntity) {
+	public void setSuperEntity(SuperEntity superEntity) {
 		this.superEntity = superEntity;
 	}
 

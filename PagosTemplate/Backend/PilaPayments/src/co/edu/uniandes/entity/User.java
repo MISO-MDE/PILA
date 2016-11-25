@@ -18,7 +18,7 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorValue("RolType")
-public class PilaUser implements Serializable{
+public class User implements Serializable{
 	
 	/**
 	 * id del usuario
@@ -55,7 +55,7 @@ public class PilaUser implements Serializable{
 	/**
 	 * Constructor
 	 */
-	public PilaUser() {
+	public User() {
 		
 	}
 

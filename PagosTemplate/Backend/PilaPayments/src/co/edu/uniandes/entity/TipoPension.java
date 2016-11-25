@@ -11,7 +11,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class PilaTipoPension {
+public class TipoPension {
 	
 
 	private Long id;
@@ -23,7 +23,7 @@ public class PilaTipoPension {
 	/**
 	 * Constructor
 	 */
-	public PilaTipoPension() {
+	public TipoPension() {
 		
 	}
 

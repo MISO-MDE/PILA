@@ -5,8 +5,8 @@ import java.util.List;
 
 import co.edu.uniandes.dao.SuperEntityDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
-import co.edu.uniandes.entity.PilaSuperEntity;
-import co.edu.uniandes.entity.PilaUserSuperEntity;
+import co.edu.uniandes.entity.SuperEntity;
+import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
 import co.edu.uniandes.to.PilaSuperEntityTO;
 
@@ -42,7 +42,7 @@ public class SuperEntityLogic {
 	public String createSuperEntity(PilaSuperEntityTO superTO) {
 		
 		// se crea la super entidad
-		PilaSuperEntity superEntity= new PilaSuperEntity();
+		SuperEntity superEntity= new SuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
 		superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
@@ -62,9 +62,9 @@ public class SuperEntityLogic {
 		String respuesta = "";
 		
 		//se crea el usuario
-		PilaUserSuperEntity user = new PilaUserSuperEntity();
+		UserSuperEntity user = new UserSuperEntity();
 		
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
@@ -88,7 +88,7 @@ public class SuperEntityLogic {
 	 */
 	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
 		
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
 		String response = "SuperEntity not updated";
 		if(superEntity != null) {
 		
@@ -116,7 +116,7 @@ public class SuperEntityLogic {
 	 * @param id
 	 */
 	public void removeSuperEntity(Long id) {
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(id);
+		SuperEntity superEntity = superDAO.findSuperEntityById(id);
 		superDAO.deleteEntity(superEntity);
 	}
 	
@@ -124,7 +124,7 @@ public class SuperEntityLogic {
 	 * retorna las super entidades del sistema
 	 * @return
 	 */
-	public List<PilaSuperEntity> getSuperEntities() {
+	public List<SuperEntity> getSuperEntities() {
 		return superDAO.findAllSuperEntity();
 	}
 	
@@ -132,7 +132,7 @@ public class SuperEntityLogic {
 	 * retorna las super entidad por id
 	 * @return
 	 */
-	public PilaSuperEntity getSuperEntitiesById(long id) {
+	public SuperEntity getSuperEntitiesById(long id) {
 		return superDAO.findSuperEntityById(id);
 	}
 	

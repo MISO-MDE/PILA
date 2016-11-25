@@ -8,13 +8,13 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 		<non-jta-data-source>java:comp/env/jdbc/DSPila</non-jta-data-source>
 		<class>co.edu.uniandes.entity.Pais</class>
 		<class>co.edu.uniandes.entity.PilaEntity</class>
-		<class>co.edu.uniandes.entity.PilaNovedad</class>
-		<class>co.edu.uniandes.entity.PilaPago</class>
-		<class>co.edu.uniandes.entity.PilaRisk</class>
-		<class>co.edu.uniandes.entity.PilaSuperEntity</class>
-		<class>co.edu.uniandes.entity.PilaUser</class>
-		<class>co.edu.uniandes.entity.PilaUserIntermediary</class>
-		<class>co.edu.uniandes.entity.PilaUserSuperEntity</class>
+		<class>co.edu.uniandes.entity.Novedad</class>
+		<class>co.edu.uniandes.entity.Pago</class>
+		<class>co.edu.uniandes.entity.Riesgo</class>
+		<class>co.edu.uniandes.entity.SuperEntity</class>
+		<class>co.edu.uniandes.entity.User</class>
+		<class>co.edu.uniandes.entity.UserIntermediary</class>
+		<class>co.edu.uniandes.entity.UserSuperEntity</class>
 
 		<properties>
 			<property name="hibernate.connection.datasource" value="java:comp/env/jdbc/DSPila"/>		

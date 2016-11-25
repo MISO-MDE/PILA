@@ -1,17 +1,17 @@
 package co.edu.uniandes.dao;
 
-import co.edu.uniandes.entity.PilaUserSuperEntity;
+import co.edu.uniandes.entity.UserSuperEntity;
 
 /**
  * Interfaz de superEntity
  * @author jorge perea
  */
-public interface SuperEntityUserDAO extends DAOBase<PilaUserSuperEntity>{
+public interface SuperEntityUserDAO extends DAOBase<UserSuperEntity>{
 	
 	/**
 	 * retorna el usuario del super entity
 	 * @param id id del super entity
 	 * @return
 	 */
-	public PilaUserSuperEntity getUser(String id);
+	public UserSuperEntity getUser(String id);
 }

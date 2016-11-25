@@ -1,16 +1,10 @@
 package co.edu.uniandes.to;
 
-import co.edu.uniandes.entity.Pais;
-import co.edu.uniandes.entity.PilaSuperEntity;
-import co.edu.uniandes.staticmodel.ActividadEconomica;
-import co.edu.uniandes.staticmodel.TipoPension;
-import co.edu.uniandes.staticmodel.TipoPensionado;
-
 /**
  * To para la entidad
  * @author Rafa
  */
-public class PilaEntityTO {
+public class EntityTO {
 
 	/**
 	 * id de la entidad
@@ -40,12 +34,12 @@ public class PilaEntityTO {
 	/**
 	 * tipo pension
 	 */
-	private TipoPension tipoPension;
+	private Long tipoPension;
 	
 	/**
 	 * tipo pensionado
 	 */
-	private TipoPensionado tipoPensionado;
+	private Long tipoPensionado;
 	
 	/**
 	 * Pais en el que reside
@@ -60,7 +54,7 @@ public class PilaEntityTO {
 	/**
 	 * actividad economica
 	 */
-	private ActividadEconomica actividad;
+	private Long actividad;
 	
 	/**
 	 * super entidad a la que pertenece
@@ -70,7 +64,7 @@ public class PilaEntityTO {
 	/**
 	 * Constructor
 	 */
-	public PilaEntityTO() {	}
+	public EntityTO() {	}
 	
 	/**
 	 * @return the id
@@ -145,42 +139,42 @@ public class PilaEntityTO {
 	/**
 	 * @return el tipo de pension
 	 */
-	public TipoPension getTipoPension(){
+	public Long getTipoPension(){
 		return tipoPension;
 	}
 	
 	/**
 	 * @param tipoPension the tipoPension to set
 	 */
-	public void setTipoPension(TipoPension tipoPension){
+	public void setTipoPension(Long tipoPension){
 		this.tipoPension = tipoPension;
 	}
 	
 	/**
 	 * @return el tipo de pensionado
 	 */
-	public TipoPensionado getTipoPensionado(){
+	public Long getTipoPensionado(){
 		return tipoPensionado;
 	}
 	
 	/**
 	 * @param tipoPensionado the tipoPensionado to set
 	 */
-	public void setTipoPensionado(TipoPensionado tipoPensionado){
+	public void setTipoPensionado(Long tipoPensionado){
 		this.tipoPensionado = tipoPensionado;
 	}
 	
 	/**
 	 * @return the actividad
 	 */
-	public ActividadEconomica getActividad() {
+	public Long getActividad() {
 		return actividad;
 	}
 
 	/**
 	 * @param actividad the actividad to set
 	 */
-	public void setActividad(ActividadEconomica actividad) {
+	public void setActividad(Long actividad) {
 		this.actividad = actividad;
 	}
 

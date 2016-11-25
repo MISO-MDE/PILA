@@ -4,30 +4,30 @@ import java.util.List;
 
 import javax.persistence.Query;
 
-import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.entity.SuperEntity;
 
 /**
  * implementacion del dao para super entidad
  * @author jorge perea
  */
-public class SuperEntityDAOImpl extends DAOBaseImpl<PilaSuperEntity> implements SuperEntityDAO {
+public class SuperEntityDAOImpl extends DAOBaseImpl<SuperEntity> implements SuperEntityDAO {
 
 	/**
 	 * @see co.edu.uniandes.dao.SuperEntityDAO#findSuperEntity(java.lang.String)
 	 */
 	@Override
-	public PilaSuperEntity findSuperEntity(String nit) {
+	public SuperEntity findSuperEntity(String nit) {
 		Query query = getEntityManager().createQuery("select se from PilaUserSuperEntity se where se.nit = :nit");
 		query.setParameter("nit", nit);
 	    
-	    return query.getResultList().isEmpty() ? null : (PilaSuperEntity)query.getResultList().get(0);
+	    return query.getResultList().isEmpty() ? null : (SuperEntity)query.getResultList().get(0);
 	}
 
 	/**
 	 * @see co.edu.uniandes.dao.SuperEntityDAO#findAllSuperEntity()
 	 */
 	@Override
-	public List<PilaSuperEntity> findAllSuperEntity() {
+	public List<SuperEntity> findAllSuperEntity() {
 		Query query = getEntityManager().createQuery("from PilaSuperEntity");
 			
 		return query.getResultList();
@@ -37,10 +37,10 @@ public class SuperEntityDAOImpl extends DAOBaseImpl<PilaSuperEntity> implements 
 	 * @see co.edu.uniandes.dao.SuperEntityDAO#findSuperEntityById(java.lang.Long)
 	 */
 	@Override
-	public PilaSuperEntity findSuperEntityById(Long id) {
+	public SuperEntity findSuperEntityById(Long id) {
 		Query query = getEntityManager().createQuery("select se from PilaSuperEntity se where se.id = :id");
 		query.setParameter("id", id);
 	    
-	    return query.getResultList().isEmpty() ? null : (PilaSuperEntity)query.getResultList().get(0);
+	    return query.getResultList().isEmpty() ? null : (SuperEntity)query.getResultList().get(0);
 	}
 }

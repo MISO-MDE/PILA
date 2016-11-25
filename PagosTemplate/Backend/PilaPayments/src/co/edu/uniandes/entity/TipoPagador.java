@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class PilaTipoPagador {
+public class TipoPagador {
 
 	/**
 	 * 
@@ -27,7 +27,7 @@ public class PilaTipoPagador {
 	/**
 	 * 
 	 */
-	public PilaTipoPagador() {
+	public TipoPagador() {
 		
 	}
 

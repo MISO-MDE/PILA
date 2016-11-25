@@ -2,22 +2,20 @@ package co.edu.uniandes.entity;
 
 import java.util.Set;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
-import co.edu.uniandes.staticmodel.ActividadEconomica;
 
 /**
  * Clasificacion del riesgo para una entidad
  * @author jorge perea
  */
 @Entity
-public class PilaRisk {
+public class Riesgo {
 	
 	/**
 	 * id del riesgo
@@ -42,7 +40,7 @@ public class PilaRisk {
 	/**
 	 * Constructor
 	 */
-	public PilaRisk() {
+	public Riesgo() {
 		
 	}
 	
@@ -93,8 +91,8 @@ public class PilaRisk {
 	/**
 	 * @return the actividadesEconomicas
 	 */
-	@ElementCollection
-	@Enumerated(EnumType.STRING)
+	@OneToMany
+	@JoinColumn(name="actividad_economica_id")
 	public Set<ActividadEconomica> getActividadesEconomicas() {
 		return actividadesEconomicas;
 	}

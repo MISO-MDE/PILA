@@ -19,7 +19,7 @@ import co.edu.uniandes.staticmodel.TipoNovedad;
  * @author jorge perea
  */
 @Entity
-public class PilaNovedad {
+public class Novedad {
 	
 	/**
 	 * id de la novedad
@@ -64,12 +64,12 @@ public class PilaNovedad {
 	/**
 	 * Super entity que crea la novedad
 	 */
-	private PilaSuperEntity superEntity;
+	private SuperEntity superEntity;
 	
 	/**
 	 * Constructor
 	 */
-	public PilaNovedad() {
+	public Novedad() {
 		
 	}
 
@@ -196,14 +196,14 @@ public class PilaNovedad {
 	 */
 	@ManyToOne
 	@JoinColumn(name="pilaSuperEntity_id")
-	public PilaSuperEntity getSuperEntity() {
+	public SuperEntity getSuperEntity() {
 		return superEntity;
 	}
 
 	/**
 	 * @param superEntity the superEntity to set
 	 */
-	public void setSuperEntity(PilaSuperEntity superEntity) {
+	public void setSuperEntity(SuperEntity superEntity) {
 		this.superEntity = superEntity;
 	}
 }

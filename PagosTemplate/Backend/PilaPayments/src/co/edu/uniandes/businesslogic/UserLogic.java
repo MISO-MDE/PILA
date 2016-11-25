@@ -2,9 +2,9 @@ package co.edu.uniandes.businesslogic;
 
 import co.edu.uniandes.dao.IntermediaryUserDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
-import co.edu.uniandes.entity.PilaUser;
-import co.edu.uniandes.entity.PilaUserIntermediary;
-import co.edu.uniandes.entity.PilaUserSuperEntity;
+import co.edu.uniandes.entity.User;
+import co.edu.uniandes.entity.UserIntermediary;
+import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.to.PilaUserTO;
 
 /**
@@ -39,8 +39,8 @@ public class UserLogic {
 		
 		PilaUserTO resultado = new PilaUserTO();
 		
-		PilaUserSuperEntity user = superDAO.getUser(userId);
-		PilaUserIntermediary user2 = intermediaryDAO.getUser(userId);
+		UserSuperEntity user = superDAO.getUser(userId);
+		UserIntermediary user2 = intermediaryDAO.getUser(userId);
 		
 		if(user != null) {	
 

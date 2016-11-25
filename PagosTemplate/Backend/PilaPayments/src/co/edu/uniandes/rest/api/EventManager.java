@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import co.edu.uniandes.businesslogic.EventLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAOImpl;
-import co.edu.uniandes.entity.PilaNovedad;
+import co.edu.uniandes.entity.Novedad;
 
 
 @Path("/event")
@@ -86,7 +86,7 @@ public class EventManager {
 		
 		logger.debug("Object " + theEvent.toString());
 		
-		PilaNovedad news = new PilaNovedad();
+		Novedad news = new Novedad();
 		//news.setTipoNovedad(theEvent.newType);
 		//news.
 		

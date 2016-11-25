@@ -4,8 +4,8 @@ import java.util.List;
 
 import co.edu.uniandes.dao.EntityDAO;
 import co.edu.uniandes.dao.NovedadDAO;
-import co.edu.uniandes.entity.PilaNovedad;
-import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.entity.SuperEntity;
 import co.edu.uniandes.to.PilaNovedadTO;
 
 public class EventLogic {
@@ -45,7 +45,7 @@ public class EventLogic {
 	 * @param cedulaEntity
 	 * @return
 	 */
-	public List<PilaNovedad> getEventsByCedula(String cedulaEntity) {
+	public List<Novedad> getEventsByCedula(String cedulaEntity) {
 		return novedadDAO.findNovedadesEntityByCedula(cedulaEntity);
 	}
 }

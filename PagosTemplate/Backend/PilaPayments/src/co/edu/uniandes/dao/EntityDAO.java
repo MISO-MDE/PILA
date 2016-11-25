@@ -3,7 +3,7 @@ package co.edu.uniandes.dao;
 import java.util.List;
 
 import co.edu.uniandes.entity.PilaEntity;
-import co.edu.uniandes.entity.PilaSuperEntity;
+import co.edu.uniandes.entity.SuperEntity;
 
 /**
  * Dao para la entidad
@@ -16,7 +16,7 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	 * @param cedula
 	 * @return
 	 */
-	public PilaEntity findEntity(long cedula);
+	public PilaEntity find(long cedula);
 	
 	/**
 	 * Encuentra el enity por id
@@ -29,14 +29,14 @@ public interface EntityDAO extends DAOBase<PilaEntity>{
 	 * Retorna todas las entidades
 	 * @return lista con las entidades
 	 */
-	public List<PilaEntity> findAllEntity();
+	public List<PilaEntity> findAll();
 	
 	/**
 	 * devuelve todos lo entities relacionados con una super entidad
 	 * @param superEntity
 	 * @return
 	 */
-	public List<PilaEntity>findAllEntityBySuperEntity(PilaSuperEntity superEntity);
+	public List<PilaEntity>findAllEntityBySuperEntity(SuperEntity superEntity);
 	
 	
 }

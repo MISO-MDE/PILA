@@ -19,7 +19,7 @@ import co.edu.uniandes.staticmodel.ActividadEconomica;
  * @author jorge perea
  */
 @Entity
-public class PilaSuperEntity {
+public class SuperEntity {
 	
 	/**
 	 * id de la super entidad
@@ -49,7 +49,7 @@ public class PilaSuperEntity {
 	/**
 	 * constructor
 	 */
-	public PilaSuperEntity() {
+	public SuperEntity() {
 		
 	}
 		

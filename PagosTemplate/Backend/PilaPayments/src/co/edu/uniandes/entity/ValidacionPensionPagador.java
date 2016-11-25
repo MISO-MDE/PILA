@@ -18,12 +18,12 @@ public class ValidacionPensionPagador {
 	/**
 	 * tipo de pension
 	 */
-	private PilaTipoPension tipoPension;
+	private TipoPension tipoPension;
 	
 	/**
 	 * tipo pensionado
 	 */
-	private PilaTipoPagador tipoPagador;
+	private TipoPagador tipoPagador;
 	
 	/**
 	 * Constructor
@@ -53,14 +53,14 @@ public class ValidacionPensionPagador {
 	 */
 	@OneToOne
 	@JoinColumn(name="pension_id")
-	public PilaTipoPension getTipoPension() {
+	public TipoPension getTipoPension() {
 		return tipoPension;
 	}
 
 	/**
 	 * @param tipoPension the tipoPension to set
 	 */
-	public void setTipoPension(PilaTipoPension tipoPension) {
+	public void setTipoPension(TipoPension tipoPension) {
 		this.tipoPension = tipoPension;
 	}
 
@@ -69,14 +69,14 @@ public class ValidacionPensionPagador {
 	 */
 	@OneToOne
 	@JoinColumn(name="pagador_id")
-	public PilaTipoPagador getTipoPagador() {
+	public TipoPagador getTipoPagador() {
 		return tipoPagador;
 	}
 
 	/**
 	 * @param tipoPagador the tipoPagador to set
 	 */
-	public void setTipoPagador(PilaTipoPagador tipoPagador) {
+	public void setTipoPagador(TipoPagador tipoPagador) {
 		this.tipoPagador = tipoPagador;
 	}
 }

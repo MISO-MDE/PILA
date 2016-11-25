@@ -11,17 +11,17 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(name = "super_id", referencedColumnName = "user_id")
-public class PilaUserSuperEntity extends PilaUser{
+public class UserSuperEntity extends User{
 	
 	/**
 	 * super entidad a la cual esta asociada 
 	 */
-	private PilaSuperEntity superEntity;
+	private SuperEntity superEntity;
 	
 	/**
 	 *constructor
 	 */
-	public PilaUserSuperEntity() {
+	public UserSuperEntity() {
 		super();
 	}
 
@@ -30,14 +30,14 @@ public class PilaUserSuperEntity extends PilaUser{
 	 */
 	@OneToOne
 	@JoinColumn(name="superEntity_id")
-	public PilaSuperEntity getSuperEntity() {
+	public SuperEntity getSuperEntity() {
 		return superEntity;
 	}
 
 	/**
 	 * @param superEntity the superEntity to set
 	 */
-	public void setSuperEntity(PilaSuperEntity superEntity) {
+	public void setSuperEntity(SuperEntity superEntity) {
 		this.superEntity = superEntity;
 	}
 }

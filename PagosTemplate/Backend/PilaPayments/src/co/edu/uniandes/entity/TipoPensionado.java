@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class PilaTipoPensionado {
+public class TipoPensionado {
 	
 
 	private Long id;
@@ -15,7 +15,7 @@ public class PilaTipoPensionado {
 	
 	private String descripcion;
 	
-	public PilaTipoPensionado() {
+	public TipoPensionado() {
 		
 	}
 
