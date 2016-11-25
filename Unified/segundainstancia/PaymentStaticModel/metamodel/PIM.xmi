@@ -51,7 +51,9 @@
     <attributes
         name="fecha"/>
     <operations
-        name=""/>
+        name="">
+      <parameterList/>
+    </operations>
   </logicalComponents>
   <logicalComponents
       name="CalculoPago">

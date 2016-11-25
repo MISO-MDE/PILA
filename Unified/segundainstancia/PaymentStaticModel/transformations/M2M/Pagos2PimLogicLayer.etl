@@ -1,0 +1,23 @@
+pre {
+	"Iniciando Transformacion CIM2PIM-BackEndLogic".println();
+}
+
+rule Pagos2PimApp
+	transform 
+		s:PagosM!Application
+	to	
+		t:PagosPim!Application
+	{
+		t.name = s.name;
+		t.logicalComponents.add(s.intermediary.equivalent());
+	}
+	
+	
+rule Intermediary2LogicalAntity
+	transform
+		s:PagosM!Intermediary
+	to
+		t:PagosPim!LogicComponent
+	{
+		t.name = s.name;
+	}

@@ -143,7 +143,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_n26kILKNEeaa3LZQdVMMgA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_pe8R4LKNEeaa3LZQdVMMgA" name="PagosPim class diagram" representation="_pe8R4bKNEeaa3LZQdVMMgA">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_pe8R4LKNEeaa3LZQdVMMgA" name="PagosPim BackEnd diagram" representation="_pe8R4bKNEeaa3LZQdVMMgA">
         <description xmi:type="description_2:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="metamodel/PilaPIM.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -155,7 +155,7 @@
         <description xmi:type="description_2:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="metamodel/PilaPIM.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_hsRgYLNJEea3brJAGAOTMA" name="PagosPim Back class diagram" representation="_hssXILNJEea3brJAGAOTMA">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_hsRgYLNJEea3brJAGAOTMA" name="PagosPim WorkSpace diagram" representation="_hssXILNJEea3brJAGAOTMA">
         <description xmi:type="description_2:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="metamodel/PilaPIM.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -788,7 +788,7 @@
     </columns>
     <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']"/>
   </table:DTable>
-  <diagram:DSemanticDiagram xmi:id="_pe8R4bKNEeaa3LZQdVMMgA" name="PagosPim class diagram">
+  <diagram:DSemanticDiagram xmi:id="_pe8R4bKNEeaa3LZQdVMMgA" name="PagosPim BackEnd diagram">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_pe8R4rKNEeaa3LZQdVMMgA" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_pe8R47KNEeaa3LZQdVMMgA">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_BuEIULKOEeaa3LZQdVMMgA" sourceArrow="FillDiamond" routingStyle="manhattan">
@@ -2685,7 +2685,7 @@
     <activatedLayers xmi:type="description_2:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
     <target xmi:type="ecore:EPackage" href="metamodel/PilaPIM.ecore#/"/>
   </diagram:DSemanticDiagram>
-  <diagram:DSemanticDiagram xmi:id="_hssXILNJEea3brJAGAOTMA" name="PagosPim Back class diagram">
+  <diagram:DSemanticDiagram xmi:id="_hssXILNJEea3brJAGAOTMA" name="PagosPim WorkSpace diagram">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_hssXIbNJEea3brJAGAOTMA" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_hssXIrNJEea3brJAGAOTMA">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_hssXI7NJEea3brJAGAOTMA" sourceArrow="FillDiamond" routingStyle="manhattan">
