@@ -4,7 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Parametro {
+public class Parametro implements Cloneable{
 
 	/**
 	 * 
@@ -23,6 +23,16 @@ public class Parametro {
 	private String descripcion;
 	
 	
+	
+	private boolean habilitado;
+	
+	public boolean isHabilitado() {
+		return habilitado;
+	}
+
+	public void setHabilitado(boolean habilitado) {
+		this.habilitado = habilitado;
+	}
 
 	/**
 	 * @return the id
@@ -71,4 +81,9 @@ public class Parametro {
 	public String toString() {
 		return "" + id;
 	}
+	
+	
+	   public Object clone() throws CloneNotSupportedException {
+	        return super.clone();
+	    }
 }

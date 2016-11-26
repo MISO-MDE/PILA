@@ -1,5 +1,6 @@
 package co.edu.uniandes.rest.api;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -63,11 +64,12 @@ public class ParameterManager {
      * Retorna los TipoPensionado para un TipoPagador
      *
      * @return entidades
+	 * @throws CloneNotSupportedException 
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/opciones/{idPagador}")
-    public String listTPensionadoByTPagador(@PathParam("idPagador") Long idPagador) {
+    @Path("/tipopagador/{idPagador}/opciones")
+    public String listTPensionadoByTPagador(@PathParam("idPagador") Long idPagador) throws CloneNotSupportedException {
         ObjectMapper mapper = new ObjectMapper();
         logger.debug("Start getEntities");
         String response = "";
@@ -81,15 +83,28 @@ public class ParameterManager {
         	for(int i=0; i<listPensionado.size();i++){
         		TipoPensionado pensionado = listPensionado.get(i);
         		List<?> itemsPension = getParameterLogic().listTPensionByTPensionado(pensionado.getId());
-        		mapPensionadoPension.put(pensionado.getCodigo(), itemsPension);
+        		List<TipoPension> listTPension = new ArrayList<TipoPension>();
+        		for(int j=0; j<listPension.size();j++){
+        			TipoPension pension = listPension.get(j);
+        			TipoPension tPension =(TipoPension) pension.clone();
+        			tPension.setHabilitado(itemsPension.contains(pension));
+        			listTPension.add(tPension);
+        		}
+        		mapPensionadoPension.put(pensionado.getCodigo(), listTPension);        	
         	}
-        	
-        	
+        	      	
         	HashMap<String, List<?>> mapPensionPensionado = new HashMap<String, List<?>>();
         	for(int i=0; i<listPension.size();i++){
         		TipoPension pension = listPension.get(i);
         		List<?> itemsPensionado =  getParameterLogic().listTPensionadoByTPension(pension.getId());
-        		mapPensionPensionado.put(pension.getCodigo(), itemsPensionado);
+        		List<TipoPensionado> listTPensionado = new ArrayList<TipoPensionado>();
+        		for(int j=0; j<listPensionado.size();j++){
+        			TipoPensionado pensionado = listPensionado.get(j);
+        			TipoPensionado tPensionado =(TipoPensionado) pensionado.clone();
+        			tPensionado.setHabilitado(itemsPensionado.contains(pensionado));
+        			listTPensionado.add(tPensionado);
+        		}
+        		mapPensionPensionado.put(pension.getCodigo(), listTPensionado);
         	}
         	
         	validaciones.getValues().put("pensionPensionado", mapPensionPensionado);
