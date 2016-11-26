@@ -51,4 +51,5 @@
 	insert into TipoNovedad (description) values('Licencia remunerada');
 	insert into TipoNovedad (description) values('Aporte voluntario a pensiones');
 	insert into TipoNovedad (description) values('Suspension');
+	--refactoring
 
