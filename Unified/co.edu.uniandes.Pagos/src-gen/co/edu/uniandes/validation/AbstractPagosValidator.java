@@ -13,7 +13,7 @@ public abstract class AbstractPagosValidator extends AbstractDeclarativeValidato
 	@Override
 	protected List<EPackage> getEPackages() {
 		List<EPackage> result = new ArrayList<EPackage>();
-		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.edu.co/uniandes/Pagos"));
+		result.add(co.edu.uniandes.pagos.PagosPackage.eINSTANCE);
 		return result;
 	}
 	

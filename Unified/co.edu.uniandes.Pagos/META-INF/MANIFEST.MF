@@ -12,7 +12,9 @@ Require-Bundle: Pagos,
  org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
  org.eclipse.xtext.util,
- org.eclipse.xtend.lib
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: co.edu.uniandes.parser.antlr,
  co.edu.uniandes.generator,
@@ -22,5 +24,8 @@ Export-Package: co.edu.uniandes.parser.antlr,
  co.edu.uniandes,
  co.edu.uniandes.serializer,
  co.edu.uniandes.validation,
- co.edu.uniandes.formatting
+ co.edu.uniandes.formatting,
+ co.edu.uniandes.pagos.impl,
+ co.edu.uniandes.pagos,
+ co.edu.uniandes.pagos.util
 Import-Package: org.apache.log4j

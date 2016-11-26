@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {PensionerApiService} from "./rest.api.service";
+import {ToasterService, Toast} from 'angular2-toaster/angular2-toaster';
 
 @Injectable()
 export class PensionerBusinessService {
@@ -15,7 +16,8 @@ export class PensionerBusinessService {
   ];
   public selectedRow: any = {};
 
-  constructor(private restApiService: PensionerApiService) {
+  constructor(private restApiService: PensionerApiService,
+              private toasterService: ToasterService) {
   }
 
   /********************************* Crud operations  *************************************/
@@ -27,6 +29,16 @@ export class PensionerBusinessService {
   }
 
   public save(entity: any): void {
+
+    this.toasterService.pop('success', 'Args Title', 'Args Body');
+    var toast : Toast = {
+      type: 'error',
+      title: 'Title text',
+      body: 'Body text',
+      showCloseButton: true
+    };
+
+    this.toasterService.pop(toast);
     this.restApiService.save(entity).subscribe((response: any) => {
       if (response) {
         this.loadList();

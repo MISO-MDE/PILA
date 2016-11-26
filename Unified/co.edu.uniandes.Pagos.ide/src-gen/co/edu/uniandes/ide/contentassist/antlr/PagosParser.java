@@ -127,6 +127,7 @@ public class PagosParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpresionLogicaAccess().getLogOperAssignment_1_0(), "rule__ExpresionLogica__LogOperAssignment_1_0");
 					put(grammarAccess.getExpresionLogicaAccess().getVariable2Assignment_1_1_0(), "rule__ExpresionLogica__Variable2Assignment_1_1_0");
 					put(grammarAccess.getExpresionLogicaAccess().getLiteralAssignment_1_1_1(), "rule__ExpresionLogica__LiteralAssignment_1_1_1");
+					put(grammarAccess.getExpresionLogicaAccess().getConOperAssignment_2_0(), "rule__ExpresionLogica__ConOperAssignment_2_0");
 					put(grammarAccess.getExpresionLogicaAccess().getExpAssignment_2_1(), "rule__ExpresionLogica__ExpAssignment_2_1");
 					put(grammarAccess.getAdicionAccess().getOperatorAssignment_1_1(), "rule__Adicion__OperatorAssignment_1_1");
 					put(grammarAccess.getAdicionAccess().getRexpAssignment_1_2(), "rule__Adicion__RexpAssignment_1_2");

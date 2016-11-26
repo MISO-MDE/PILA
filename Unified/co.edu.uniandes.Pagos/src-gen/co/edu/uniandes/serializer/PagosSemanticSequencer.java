@@ -3,6 +3,24 @@
  */
 package co.edu.uniandes.serializer;
 
+import co.edu.uniandes.pagos.Adicion;
+import co.edu.uniandes.pagos.Application;
+import co.edu.uniandes.pagos.BusinessAttribute;
+import co.edu.uniandes.pagos.CalculationTemplate;
+import co.edu.uniandes.pagos.ElseSegment;
+import co.edu.uniandes.pagos.ExpresionLogica;
+import co.edu.uniandes.pagos.Formula;
+import co.edu.uniandes.pagos.IfBlock;
+import co.edu.uniandes.pagos.IfCondition;
+import co.edu.uniandes.pagos.InformationTemplate;
+import co.edu.uniandes.pagos.Intermediary;
+import co.edu.uniandes.pagos.Multiplicacion;
+import co.edu.uniandes.pagos.PagosPackage;
+import co.edu.uniandes.pagos.Participant;
+import co.edu.uniandes.pagos.Provider;
+import co.edu.uniandes.pagos.ReturnBlock;
+import co.edu.uniandes.pagos.SuperEntity;
+import co.edu.uniandes.pagos.TerminalValue;
 import co.edu.uniandes.services.PagosGrammarAccess;
 import com.google.inject.Inject;
 import java.util.Set;
@@ -15,24 +33,6 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import pagos.Adicion;
-import pagos.Application;
-import pagos.BusinessAttribute;
-import pagos.CalculationTemplate;
-import pagos.ElseSegment;
-import pagos.ExpresionLogica;
-import pagos.Formula;
-import pagos.IfBlock;
-import pagos.IfCondition;
-import pagos.InformationTemplate;
-import pagos.Intermediary;
-import pagos.Multiplicacion;
-import pagos.PagosPackage;
-import pagos.Participant;
-import pagos.Provider;
-import pagos.ReturnBlock;
-import pagos.SuperEntity;
-import pagos.TerminalValue;
 
 @SuppressWarnings("all")
 public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -200,7 +200,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ExpresionLogica returns ExpresionLogica
 	 *
 	 * Constraint:
-	 *     (variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ exp+=ExpresionLogica?)
+	 *     (variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN exp+=ExpresionLogica)?)
 	 */
 	protected void sequence_ExpresionLogica(ISerializationContext context, ExpresionLogica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

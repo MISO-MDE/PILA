@@ -90,14 +90,14 @@ public class EntityManager {
 
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
-    public String update(Object theEntity) {
-        logger.debug("Start putEntity");
-
-        //String id = getEntityLogic().crearEntity(entityTO);
+    public String update(Object theEntity) throws JsonParseException, JsonMappingException, IOException {
+        logger.debug("Start update");
+        PilaEntityTO entityTO = this.mapObjectEntity2PilaEntityTO(theEntity);
+        String id = getEntityLogic().update(entityTO);
 
         String response = null;
         logger.debug("result: '" + response + "'");
-        logger.debug("End putEntity");
+        logger.debug("End update");
         return response;
     }
 

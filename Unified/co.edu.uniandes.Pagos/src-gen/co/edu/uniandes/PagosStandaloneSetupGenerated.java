@@ -3,6 +3,7 @@
  */
 package co.edu.uniandes;
 
+import co.edu.uniandes.pagos.PagosPackage;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.eclipse.emf.ecore.EPackage;
@@ -29,6 +30,9 @@ public class PagosStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public void register(Injector injector) {
+		if (!EPackage.Registry.INSTANCE.containsKey("http://www.edu.co/uniandes/Pagos")) {
+			EPackage.Registry.INSTANCE.put("http://www.edu.co/uniandes/Pagos", PagosPackage.eINSTANCE);
+		}
 		IResourceFactory resourceFactory = injector.getInstance(IResourceFactory.class);
 		IResourceServiceProvider serviceProvider = injector.getInstance(IResourceServiceProvider.class);
 		
