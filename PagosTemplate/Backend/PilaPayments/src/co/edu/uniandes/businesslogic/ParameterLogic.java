@@ -41,4 +41,22 @@ public class ParameterLogic {
 	public List<TipoPagador> findAllTipoPagador() {
 		return pagadorDAO.findAll();
 	}
+
+	public List<TipoPensionado>  listTPensionadoByTPagador(Long id) {
+		// TODO Auto-generated method stub
+		return pensionadoDAO.findByTPagador(id);
+		}
+	public List<TipoPension>  listTPensionByTPagador(Long id) {
+		// TODO Auto-generated method stub
+		return pensionDAO.findByTPagador(id);
+		}
+	public List<TipoPensionado>  listTPensionadoByTPension(Long id) {
+		// TODO Auto-generated method stub
+		return pensionadoDAO.findByTPension(id);
+		}
+	public List<TipoPension>  listTPensionByTPensionado(Long id) {
+		// TODO Auto-generated method stub
+		return pensionDAO.findByTPensionado(id);
+		}
+	
 }

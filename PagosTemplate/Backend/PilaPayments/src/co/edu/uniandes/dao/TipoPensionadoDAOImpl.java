@@ -29,5 +29,22 @@ public class TipoPensionadoDAOImpl extends DAOBaseImpl<TipoPensionado> implement
 		return query.getResultList();
 	}
 
+	@Override
+	public List<TipoPensionado> findByTPagador(Long id) {
+		Query query = em.createQuery("select tp from TipoPensionado tp, ValidacionPensionadoPagador pp where tp.id=pp.tipoPensionado.id and pp.tipoPagador.id = :id");
+		System.out.println(query.toString());
+		query.setParameter("id", id);
+	    
+	    return (List<TipoPensionado>) query.getResultList();
+	}
+
+	@Override
+	public List<TipoPensionado> findByTPension(Long id) {
+		Query query = em.createQuery("select tp from TipoPensionado tp, ValidacionPensionPensionado pp where tp.id=pp.tipoPensionado.id and pp.tipoPension.id = :id");
+		query.setParameter("id", id);
+	    
+	    return (List<TipoPensionado>)query.getResultList();
+	}
+
 	
 }

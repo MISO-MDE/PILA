@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import co.edu.uniandes.entity.TipoPension;
+import co.edu.uniandes.entity.TipoPensionado;
 
 public class TipoPensionDAOImpl extends DAOBaseImpl<TipoPension> implements TipoPensionDAO {
 	
@@ -28,6 +29,22 @@ public class TipoPensionDAOImpl extends DAOBaseImpl<TipoPension> implements Tipo
 		
 		return query.getResultList();
 	}
+
+	@Override
+	public List<TipoPension> findByTPagador(Long id) {
+		Query query = em.createQuery("select tp from TipoPension tp, ValidacionPensionPagador pp where tp.id=pp.tipoPension.id and pp.tipoPagador.id = :id");
+		query.setParameter("id", id);
+	    
+	    return  (List<TipoPension>)query.getResultList();
+	}
+
+	@Override
+	public List<TipoPension> findByTPensionado(Long id) {
+		Query query = em.createQuery("select tp from TipoPension tp, ValidacionPensionPensionado pp where tp.id=pp.tipoPension.id and pp.tipoPensionado.id = :id");
+		query.setParameter("id", id);
+	    
+	    return  (List<TipoPension>)query.getResultList();
+	}
 	
-	
+
 }

@@ -3,6 +3,7 @@ package co.edu.uniandes.dao;
 import java.util.List;
 
 import co.edu.uniandes.entity.TipoPension;
+import co.edu.uniandes.entity.TipoPensionado;
 
 /**
  * interfaz del dao de tipo pension
@@ -21,5 +22,9 @@ public interface TipoPensionDAO extends DAOBase<TipoPension>{
 	 * @return
 	 */
 	public List<TipoPension> findAll();
+
+	public List<TipoPension> findByTPagador(Long id);
+
+	public List<TipoPension> findByTPensionado(Long id);
 
 }

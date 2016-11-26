@@ -20,5 +20,7 @@
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="RollingFile" />
 		</Root>
+		<Logger name="org.hibernate" level="debug"/>
+        <Logger name="org.hibernate.SQL" level="debug"/>
 	</Loggers>
 </Configuration>

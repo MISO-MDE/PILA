@@ -13,4 +13,9 @@ public interface TipoPensionadoDAO {
 	public TipoPensionado find(Long id);
 	
 	public List<TipoPensionado> findAll();
+
+	public List<TipoPensionado> findByTPagador(Long id);
+
+	public List<TipoPensionado> findByTPension(Long id);
+
 }

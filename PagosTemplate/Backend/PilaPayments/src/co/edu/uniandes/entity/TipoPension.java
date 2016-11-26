@@ -11,7 +11,7 @@ import javax.persistence.Id;
  *
  */
 @Entity
-public class TipoPension {
+public class TipoPension extends Parametro{
 	
 
 	private Long id;

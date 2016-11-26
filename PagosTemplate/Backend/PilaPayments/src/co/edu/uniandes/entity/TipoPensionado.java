@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class TipoPensionado {
+public class TipoPensionado extends Parametro {
 	
 
 	private Long id;
