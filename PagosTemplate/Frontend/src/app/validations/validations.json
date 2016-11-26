@@ -14,20 +14,19 @@
     }
   },
 
-
-
   "pensionadoPension":{
-    "1":[2,3],
-    "2":[1,6]
-  },
-
-  "tabla6": {
-    "1": [1,2,6],
-    "2": [8,12]
-  },
-  "tabla8": {
-    "1": [1,2,6],
-    "2": [8,12]
+    "1": {
+      "options":[
+        {"id":1,"value":"Vejez"},
+        {"id":2,"value":"Sobrevivencia vitalicia riesgo comun"}
+      ]
+    },
+    "2": {
+      "options":[
+        {"id":1,"value":"Sobrevivencia temporal riesgo comun"},
+        {"id":3,"value":"Sobrevivencia temporal por riesgo laboral"}
+      ]
+    }
   }
 }
 
