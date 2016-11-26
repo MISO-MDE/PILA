@@ -13,6 +13,7 @@
         type="COMPOSITION"
         targetComponent="//@logicalComponents.1"
         name="pagadoras"/>
+    <relations/>
   </logicalComponents>
   <logicalComponents
       name="Pagadora">
