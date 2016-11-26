@@ -7,7 +7,7 @@ import {
   ReflectiveInjector,
   ComponentFactoryResolver
 } from '@angular/core';
-import {IntermediaryFormComponent} from "../intermediary-form/intermediary-form.component";
+import {IntermediaryFormComponent} from "../intermediary/form/form.component";
 import {PaymentFormComponent} from "../payments/form/form.component";
 import {NewFormComponent} from "../new-form/new-form.component";
 import {PensionerFormComponent} from "../pensioner/form/form.component";

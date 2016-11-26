@@ -5,7 +5,7 @@ import {IntermediaryApiService} from "../services/intermediary.api.service";
 import {SuperEntity, User} from "../sharedresources/classes";
 import {UserApiService} from "../services/user.api.service";
 @Injectable()
-export class IntermediaryService {
+export class IntermediaryBusinessService {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
   public columns: Array<any> = [
     {title: 'Nombre empresa', className: 'col-md-1', name: 'name'},
