@@ -1,0 +1,33 @@
+{
+  "pensionPensionado": {
+    "1": {
+      "options":[
+        {"id":1,"value":"Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv"},
+        {"id":2,"value":"Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión"}
+      ]
+    },
+    "2": {
+      "options":[
+        {"id":1,"value":"Pensionado de riesgos laborales. Tope máximo de 25 smlmv"},
+        {"id":3,"value":"Beneficiario UPC adicional"}
+      ]
+    }
+  },
+
+
+
+  "pensionadoPension":{
+    "1":[2,3],
+    "2":[1,6]
+  },
+
+  "tabla6": {
+    "1": [1,2,6],
+    "2": [8,12]
+  },
+  "tabla8": {
+    "1": [1,2,6],
+    "2": [8,12]
+  }
+}
+

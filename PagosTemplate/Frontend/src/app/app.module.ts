@@ -24,6 +24,8 @@ import {Ripple} from "./commons/directives/ripple/ripple";
 import {IntermediaryService} from "./intermediary/intermediary.service";
 import {NewsService} from "./news/news.service";
 import {FireLoginService} from "./fire-login/fire-login.service";
+import {ToasterModule} from 'angular2-toaster/angular2-toaster';
+
 
 /***
  * Payments
@@ -77,6 +79,7 @@ const myFirebaseAuthConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    ToasterModule,
     RouterModule.forRoot([
       {
         path: '',
