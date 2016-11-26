@@ -55,6 +55,8 @@ public class SuperEntityTO {
 	
 	private Long actividadEconomica;
 	
+	private String profesion;
+	
 	/**
 	 * Constructor
 	 */
@@ -200,5 +202,19 @@ public class SuperEntityTO {
 	 */
 	public void setActividadEconomica(Long actividadEconomica) {
 		this.actividadEconomica = actividadEconomica;
+	}
+
+	/**
+	 * @return the profesion
+	 */
+	public String getProfesion() {
+		return profesion;
+	}
+
+	/**
+	 * @param profesion the profesion to set
+	 */
+	public void setProfesion(String profesion) {
+		this.profesion = profesion;
 	}
 }

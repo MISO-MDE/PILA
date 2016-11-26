@@ -136,6 +136,7 @@ public class EntityManager {
         entityTO.setActividad(node.get("actividad").asLong());
         entityTO.setPais(Long.valueOf(node.get("pais").asText()));
         entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("paisGrupoFamiliar").asText()));
+        entityTO.setProfesion(node.get("profesion").asText());
         return entityTO;
     }
 }

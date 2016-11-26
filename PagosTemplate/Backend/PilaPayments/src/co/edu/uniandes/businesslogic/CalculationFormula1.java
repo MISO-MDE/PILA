@@ -1,6 +1,7 @@
 package co.edu.uniandes.businesslogic;
 
 import co.edu.uniandes.dao.EntityDAO;
+import co.edu.uniandes.dao.RiesgoDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
 
 public class CalculationFormula1 {
@@ -35,9 +36,9 @@ public class CalculationFormula1 {
 	
 	public double getFormula2() {
 		double pensionNormal = 0.16;
-		short riesgoLaboral = 0; 
+		int riesgoLaboral = 0; 
 		
-		riesgoLaboral = getRiegoTabla2(entity.getActividad().getId());
+		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
 		//Calculo por labor
 		if (riesgoLaboral == 4 && riesgoLaboral == 5) 
 			return this.entity.getSalario() * 0.26;
@@ -61,8 +62,8 @@ public class CalculationFormula1 {
 	}
 	
 	public double getFormula3() {
-		short riesgoLaboral = 0;
-		riesgoLaboral = getRiegoTabla2(entity.getActividad().getId());
+		int riesgoLaboral = 0;
+		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
 		
 		double calculo = 0;
 		
@@ -96,10 +97,10 @@ public class CalculationFormula1 {
 	}
 	
 	//DesarrollarRiesgo tabla 2
-	private short getRiegoTabla2(String activity) {
-		short riesgo = 2;
+	private int getRiegoTabla2(Long activity) {
 		
-		return riesgo;
+		return RiesgoLogic.getRiesgoLogic().findByActividadEconomica(activity).getClaseRiesgo();
+
 	}
 	
 	void processNovedadesSinProcesar() {
@@ -108,9 +109,6 @@ public class CalculationFormula1 {
 		this.diasLaborables = 0; //La suma de los dias habiles de las novedades sin procesar tipo SLN
 		this.novedadesMes = 0; // Numero de novedades SLN sin procesar
 		
-		
 	}
 	
-	
-
 }

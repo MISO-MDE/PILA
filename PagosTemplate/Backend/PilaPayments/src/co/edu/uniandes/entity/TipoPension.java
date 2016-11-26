@@ -71,4 +71,7 @@ public class TipoPension {
 		this.descripcion = descripcion;
 	}
 	
+	public String toString() {
+		return ""+id;
+	}
 }

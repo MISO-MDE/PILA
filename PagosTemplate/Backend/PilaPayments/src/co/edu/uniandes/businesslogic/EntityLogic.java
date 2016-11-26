@@ -52,6 +52,7 @@ public class EntityLogic {
 		entity.setTipoPension(pensionDAO.find(entityTO.getTipoPension()));
 		entity.setTipoPensionado(pensionadoDAO.find(entityTO.getTipoPensionado()));
 		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
+		entity.setProfesion(entityTO.getProfesion());
 		entity.setPais(entityTO.getPais());
 		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());		
 		entity = entityDAO.update(entity);		
@@ -78,6 +79,7 @@ public class EntityLogic {
 		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
 		entity.setPais(entityTO.getPais());
 		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
+		entity.setProfesion(entityTO.getProfesion());
 		
 		entity = entityDAO.create(entity);
 		

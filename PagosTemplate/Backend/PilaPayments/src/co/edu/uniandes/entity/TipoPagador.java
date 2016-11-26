@@ -74,4 +74,8 @@ public class TipoPagador {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	public String toString() {
+		return "" + id;
+	}
 }

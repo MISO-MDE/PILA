@@ -61,6 +61,7 @@ public class EntityTO {
 	 */
 	private Long superEntidad;
 	
+	private String profesion;
 	/**
 	 * Constructor
 	 */
@@ -218,6 +219,20 @@ public class EntityTO {
 	 */
 	public void setPaisGrupoFamiliar(Long paisGrupoFamiliar) {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
+	}
+
+	/**
+	 * @return the profesion
+	 */
+	public String getProfesion() {
+		return profesion;
+	}
+
+	/**
+	 * @param profesion the profesion to set
+	 */
+	public void setProfesion(String profesion) {
+		this.profesion = profesion;
 	}
 }
 

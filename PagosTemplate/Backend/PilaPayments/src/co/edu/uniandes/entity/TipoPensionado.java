@@ -62,4 +62,8 @@ public class TipoPensionado {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	public String toString() {
+		return "" + id;
+	}
 }

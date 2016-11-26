@@ -19,10 +19,11 @@ public class BusinessValidations {
 
 		String tipoPension = entity.getTipoPension().toString();
 		String tipoPensionado = entity.getTipoPensionado().toString();
-		String tipoPagador = "";
+		String tipoPagador = entity.getSuperEntidad().getTipoPagador().toString();
 		
 		String error1 = "";
 		String error2 = "";
+		String error3 = "";
 		
 		String header =  "," +
 				"\"" + "errorCondition\":" + //Si las validacines no pasan entonces se crea esta seccion
@@ -30,43 +31,38 @@ public class BusinessValidations {
 		
 		String footer = "]";
 		
-		String retorno = "";
+		String retorno = header;
 		if(logic.validarPensionPensionado(tipoPension, tipoPensionado) == null) {
 			error1 =	"{" +    
 								"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pensionado inconsistente\"," +
 								"\"" + "valor1\":" + "\""+ tipoPension +"\"," +
 								"\"" + "valor2\":" + "\""+ tipoPensionado +"\"" +
 							"}";
+			retorno += "," + error1;
 		}
 		
 		if(logic.validarPensionadoPagador(tipoPensionado, tipoPagador) == null) {
 			error2 = "{" + 
 					"\"" + "Validacion\":" + "\"Tipo Pensionado vs Tipo Pagador inconsistente\"," +
-					"\"" + "valor1\":" + "\"Vejez\"," +
-					"\"" + "valor2\":" + "\"Empleador\"" +
+					"\"" + "valor1\":" + "\"" + tipoPensionado + "\"," +
+					"\"" + "valor2\":" + "\"" + tipoPagador + "\"" +
 				"}";
+			retorno += "," + error2;
 		}
 		
-//		if(!error1.isEmpty() || !error2.isEmpty()) {
-//			
-//			retorno = header + (error1.isEmpty()) ? + ","
-//		}
+		if(logic.validarPensionPagador(tipoPension, tipoPagador) == null) {
+			error3 = "{" + 
+					"\"" + "Validacion\":" + "\"Tipo Pensionado vs Tipo Pagador inconsistente\"," +
+					"\"" + "valor1\":" + "\"" + tipoPensionado + "\"," +
+					"\"" + "valor2\":" + "\"" + tipoPagador + "\"" +
+				"}";
+			retorno += "," + error3;
+		}
+		
+		if(retorno.startsWith(",")) {
+			retorno = retorno.substring(1);
+		}
 
-		/*"," +
-		"\"" + "errorCondition\":" + //Si las validacines no pasan entonces se crea esta seccion
-			"[" + 
-					"{" +    
-						"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pensionado inconsistente\"," +
-						"\"" + "valor1\":" + "\"Vejez\"," +
-						"\"" + "valor2\":" + "\"Pension Voluntaria\"" +
-					"}," + 
-					"{" + 
-						"\"" + "Validacion\":" + "\"Tipo Pension vs Tipo Pagador inconsistente\"," +
-						"\"" + "valor1\":" + "\"Vejez\"," +
-						"\"" + "valor2\":" + "\"Empleador\"" +
-					"}" +
-			"]" +
-		 */
 		return errorCondition;
 	}
 }

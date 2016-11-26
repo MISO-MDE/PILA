@@ -81,4 +81,8 @@ public class ActividadEconomica {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	public String toString() {
+		return ""+id;
+	}
 }

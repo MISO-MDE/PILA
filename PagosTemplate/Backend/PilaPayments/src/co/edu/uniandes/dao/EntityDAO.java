@@ -9,7 +9,7 @@ import co.edu.uniandes.entity.SuperEntity;
  * Dao para la entidad
  * @author jorge perea
  */
-public interface EntityDAO extends DAOBase<PilaEntity>{
+public interface EntityDAO extends DAOBase<PilaEntity> {
 
 	/**
 	 * encuentra el entity por cedula
