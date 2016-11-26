@@ -51,5 +51,11 @@
 	insert into TipoNovedad (id, codigo, descripcion) values(7,'07','Licencia remunerada');
 	insert into TipoNovedad (id, codigo, descripcion) values(8,'08','Aporte voluntario a pensiones');
 	insert into TipoNovedad (id, codigo, descripcion) values(9,'09','Suspension');
-	--refactoring
+
+
+	--TipoPagador
+	insert into TipoPagador (id, codigo, descripcion) values(1,'01','Empleador');
+	insert into TipoPagador (id, codigo, descripcion) values(2,'02','Administración de pensiones');
+	insert into TipoPagador (id, codigo, descripcion) values(3,'03','Pagador de pensiones');
+	insert into TipoPagador (id, codigo, descripcion) values(4,'04','Pensiones de entidades de los regimenes especial y de excepción');
 
