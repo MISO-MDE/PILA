@@ -17,14 +17,16 @@
     <label>Tipo de pension</label>
     <select class="form-control"
             [(ngModel)]="businessService.selectedRow.tipoPension">
-      <option *ngFor="let option of  pensionTypeOptions" [value]="option.name">{{option.name}}</option>
+      <option  value="0" ></option>
+      <option *ngFor="let option of  getPensionOptions()" [value]="option.id" [disabled]="!option.status">{{option.descripcion}}</option>
     </select>
 
     <!-- Field type: select -->
     <label>Tipo de pensionado</label>
     <select class="form-control"
             [(ngModel)]="businessService.selectedRow.tipoPensionado">
-      <option *ngFor="let option of  pensionerTypeOptions" [value]="option.name">{{option.name}}</option>
+      <option  value="0" ></option>
+      <option *ngFor="let option of  getPensionerOptions()" [value]="option.id" [disabled]="!option.status">{{option.descripcion}}</option>
     </select>
 
     <!-- Field type: select -->

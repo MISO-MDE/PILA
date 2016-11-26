@@ -22,17 +22,14 @@ public class Parametro implements Cloneable{
 	 */
 	private String descripcion;
 	
+	private boolean status;
 	
 	
-	private boolean habilitado;
-	
-	public boolean isHabilitado() {
-		return habilitado;
-	}
+	public Parametro() {
+		super();
+		this.status= true;
+	}	
 
-	public void setHabilitado(boolean habilitado) {
-		this.habilitado = habilitado;
-	}
 
 	/**
 	 * @return the id
@@ -86,4 +83,16 @@ public class Parametro implements Cloneable{
 	   public Object clone() throws CloneNotSupportedException {
 	        return super.clone();
 	    }
+
+
+	public boolean isStatus() {
+		return status;
+	}
+
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	   
+	   
 }

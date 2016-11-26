@@ -62,9 +62,9 @@ export class PensionerBusinessService {
 
   /***************************************--************************************************/
 
-  public loadMultiLov(lovAddr: string) {
+  public getParameters(lovAddr: string) {
     console.log("Respuesta LOV loadMultiLov:" + lovAddr);
-    return this.restApiService.getMultiLov(lovAddr);
+    return this.restApiService.getParameters(lovAddr);
   }
 
   public isEditingRow() {

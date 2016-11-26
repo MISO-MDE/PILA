@@ -80,6 +80,7 @@ public class ParameterManager {
         	
         	Validacion validaciones= new Validacion();
         	HashMap<String, List<?>> mapPensionadoPension = new HashMap<String, List<?>>();
+        	mapPensionadoPension.put("0", listPension);
         	for(int i=0; i<listPensionado.size();i++){
         		TipoPensionado pensionado = listPensionado.get(i);
         		List<?> itemsPension = getParameterLogic().listTPensionByTPensionado(pensionado.getId());
@@ -87,13 +88,14 @@ public class ParameterManager {
         		for(int j=0; j<listPension.size();j++){
         			TipoPension pension = listPension.get(j);
         			TipoPension tPension =(TipoPension) pension.clone();
-        			tPension.setHabilitado(itemsPension.contains(pension));
+        			tPension.setStatus(itemsPension.contains(pension));
         			listTPension.add(tPension);
         		}
-        		mapPensionadoPension.put(pensionado.getCodigo(), listTPension);        	
+        		mapPensionadoPension.put(pensionado.getId()+"", listTPension);        	
         	}
         	      	
         	HashMap<String, List<?>> mapPensionPensionado = new HashMap<String, List<?>>();
+        	mapPensionPensionado.put("0", listPensionado);
         	for(int i=0; i<listPension.size();i++){
         		TipoPension pension = listPension.get(i);
         		List<?> itemsPensionado =  getParameterLogic().listTPensionadoByTPension(pension.getId());
@@ -101,10 +103,10 @@ public class ParameterManager {
         		for(int j=0; j<listPensionado.size();j++){
         			TipoPensionado pensionado = listPensionado.get(j);
         			TipoPensionado tPensionado =(TipoPensionado) pensionado.clone();
-        			tPensionado.setHabilitado(itemsPensionado.contains(pensionado));
+        			tPensionado.setStatus(itemsPensionado.contains(pensionado));
         			listTPensionado.add(tPensionado);
         		}
-        		mapPensionPensionado.put(pension.getCodigo(), listTPensionado);
+        		mapPensionPensionado.put(pension.getId()+"", listTPensionado);
         	}
         	
         	validaciones.getValues().put("pensionPensionado", mapPensionPensionado);

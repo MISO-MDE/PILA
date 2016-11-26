@@ -8,18 +8,17 @@ import {PensionerBusinessService} from "../business.service";
 })
 export class PensionerFormComponent implements OnInit {
 
-  public pensionTypeOptions = [];
-  public pensionerTypeOptions = [];
+  public parameters: any = {};
   public profession = [];
 
-  public countryOptions : Array<any> = [
+  public countryOptions: Array<any> = [
     {
-      'id':"12",
-      'name':"Colombia"
+      'id': "12",
+      'name': "Colombia"
     },
     {
-      'id':"13",
-      'name':"Extetior"
+      'id': "13",
+      'name': "Extetior"
     }
   ];
 
@@ -27,24 +26,36 @@ export class PensionerFormComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.businessService.loadMultiLov('/epensions').subscribe((response: any) => {
-        this.pensionTypeOptions = response;
-      });
-      this.businessService.loadMultiLov('/epensioners').subscribe((response: any) => {
-        this.pensionerTypeOptions = response;
-      });
-      this.businessService.loadMultiLov('/eactivities').subscribe((response: any) => {
-        this.profession = response;
-      });
+    this.businessService.getParameters('/parameters/tipopagador/2/opciones').subscribe((response: any) => {
+      this.parameters = response;
+    });
+  }
+
+  public getPensionerOptions() {
+    var key = this.businessService.selectedRow.tipoPension || "0";
+    if (this.parameters.values) {
+      return this.parameters.values.pensionPensionado[key];
+    }
+    return [];
+  }
+
+  public getPensionOptions() {
+    var key = this.businessService.selectedRow.tipoPensionado || "0";
+    if (this.parameters.values) {
+      return this.parameters.values.pensionadoPension[key];
+    }
+    return [];
   }
 
   public save() {
     this.businessService.save(this.businessService.selectedRow);
   }
-  public update(){
+
+  public update() {
     this.businessService.update(this.businessService.selectedRow);
   }
-  public delete(){
+
+  public delete() {
     this.businessService.delete(this.businessService.selectedRow);
   }
 
