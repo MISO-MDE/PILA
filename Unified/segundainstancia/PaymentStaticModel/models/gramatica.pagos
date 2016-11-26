@@ -41,7 +41,7 @@ intermediary:
 								{TipoNovedad:String}, 
 								{DiasNovedad:Integer},
 								{idEntidad:Integer := Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
-								{superEntityId:Integer := superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion	
+								{superEntityId:Integer :=  superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion	
 							]
 						},
 										/*Formulas de Calculo del Formulario de Pagos */
@@ -59,7 +59,7 @@ intermediary:
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									SI [salario = 1 || vivienda  <> "Colombia" && grupofamiliar <> "Colombia" && vivienda =1] ENTONCES
+									SI [vivienda  <> "Colombia" && grupofamiliar <> "Colombia"] ENTONCES
 									{
 										RETORNAR: 0
 									}	
@@ -108,6 +108,7 @@ intermediary:
 									SINO {  
 										SI [diasLaborables >=3 && diasLaborables < 20 && TipoNovedad = "SLN"] ENTONCES
 										{
+											
 											RETORNAR: salario * 0.12
 										}
 										SINO {

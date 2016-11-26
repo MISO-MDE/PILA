@@ -3,9 +3,9 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {IntermediaryApiService} from "../services/intermediary.api.service";
 import {EventApiService} from "../services/event.api.service";
-import {PaymentApiService} from "../services/payment.api.service";
+import {PaymentApiService} from "./rest.api.service";
 @Injectable()
-export class PaymentsService {
+export class PaymentsBusinessService {
   public rows: Array<any>; //Toma los datos en el On Init de esta clase
 
   public columns: Array<any> = [
