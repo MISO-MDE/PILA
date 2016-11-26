@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import {PensionerApiService} from '../pensioner/rest.api.service';
-import {NewsService} from "../news/news.service";
-import { INews } from "../sharedresources/interfaces"
+import {PensionerApiService} from '../../pensioner/rest.api.service';
+import {NewsBusinessService} from "../business.service";
+import { INews } from "../../sharedresources/interfaces"
 
 @Component({
   selector: 'app-new-form',
-  templateUrl: './new-form.component.html',
-  styleUrls: ['./new-form.component.less']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.less']
 })
 export class NewFormComponent implements OnInit {
 
@@ -27,7 +26,7 @@ export class NewFormComponent implements OnInit {
   public entityid:number;
 
   constructor(private pensionerService: PensionerApiService,
-              private newsService: NewsService) { }
+              private businessService: NewsBusinessService) { }
 
   ngOnInit() {
   }
@@ -43,10 +42,10 @@ export class NewFormComponent implements OnInit {
   }
 
   public saveNews() {
-    this.newsService.selectedRow.entityId = this.entityid;
-    this.newsService.selectedRow.entityId = this.entityid;
-    this.newsService.selectedRow.fechaCreacion = new Date();
-    this.newsService.saveNews(<INews>this.newsService.selectedRow);
+    this.businessService.selectedRow.entityId = this.entityid;
+    this.businessService.selectedRow.entityId = this.entityid;
+    this.businessService.selectedRow.fechaCreacion = new Date();
+    this.businessService.saveNews(<INews>this.businessService.selectedRow);
   }
 
 }

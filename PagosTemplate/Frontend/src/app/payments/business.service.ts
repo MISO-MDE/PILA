@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import {IntermediaryApiService} from "../services/intermediary.api.service";
-import {EventApiService} from "../services/event.api.service";
 import {PaymentApiService} from "./rest.api.service";
 @Injectable()
 export class PaymentsBusinessService {

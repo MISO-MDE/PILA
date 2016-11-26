@@ -1,14 +1,13 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import {IntermediaryApiService} from "../services/intermediary.api.service";
-import {EventApiService} from "../services/event.api.service";
+import {EventApiService} from "./rest.api.service";
 import {News} from "../sharedresources/classes";
 import {INews} from "../sharedresources/interfaces";
 
 @Injectable()
-export class NewsService {
-  public rows: Array<INews>; //Toma los datos en el On Init de esta clase
+export class NewsBusinessService {
+  public rows: Array<INews>;
 
   public columns: Array<any> = [
     {title: 'Tipo', className: 'text-warning', name: 'type'},
@@ -20,7 +19,7 @@ export class NewsService {
 
   constructor(private eventApiService: EventApiService) {
   }
-  
+
   public selectRow(row) {
     this.selectedRow = JSON.parse(JSON.stringify(row));
     console.log("SelectedRow:" + JSON.stringify(this.selectedRow))

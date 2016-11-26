@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import {IntermediaryFormComponent} from "../intermediary/form/form.component";
 import {PaymentFormComponent} from "../payments/form/form.component";
-import {NewFormComponent} from "../new-form/new-form.component";
+import {NewFormComponent} from "../news/form/form.component";
 import {PensionerFormComponent} from "../pensioner/form/form.component";
 
 @Component({

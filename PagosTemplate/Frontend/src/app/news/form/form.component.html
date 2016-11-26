@@ -17,19 +17,19 @@
     <h4>Novedad</h4>
     <label>Tipo de novedad</label>
     <select class="form-control"
-            [(ngModel)]="newsService.selectedRow.newType">
+            [(ngModel)]="businessService.selectedRow.newType">
       <option *ngFor="let option of  newTypeOptions" [value]="option.name">{{option.name}}</option>
     </select>
     <label>Fecha inicial</label>
-    <input [(ngModel)]="newsService.selectedRow.startDate" type="date" class="form-control"/>
+    <input [(ngModel)]="businessService.selectedRow.startDate" type="date" class="form-control"/>
     <label>Fecha final</label>
-    <input [(ngModel)]="newsService.selectedRow.endDate" type="date" class="form-control"/>
+    <input [(ngModel)]="businessService.selectedRow.endDate" type="date" class="form-control"/>
   </div>
 
   <div class="form-group">
     <h4></h4>
     <label>Variación temporal del salario</label>
-    <input [(ngModel)]="newsService.selectedRow.salaryVariation" type="text" class="form-control"/>
+    <input [(ngModel)]="businessService.selectedRow.salaryVariation" type="text" class="form-control"/>
   </div>
 
   <div class="text-right">

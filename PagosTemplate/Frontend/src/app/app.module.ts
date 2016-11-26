@@ -4,29 +4,19 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule}   from '@angular/router';
 import {UserApiService} from './services/user.api.service';
-
 import {ModalModule} from 'angular2-modal';
 import {BootstrapModalModule} from 'angular2-modal/plugins/bootstrap';
 import {AngularFireModule, AuthMethods, AuthProviders} from 'angularfire2';
 import {AppComponent} from './app.component';
 import {FireLoginComponent} from './fire-login/fire-login.component';
 import {HomepageComponent} from './homepage/homepage.component';
-
 import {PAsideComponent} from './p-aside/p-aside.component';
 import {PHeaderComponent} from './p-header/p-header.component';
 import {PAsideService} from "./p-aside/p-aside.service";
 import {PDynamicComponent} from './p-dynamic/p-dynamic.component';
-
-import {NewsComponent} from './news/news.component';
-import {NewFormComponent} from './new-form/new-form.component';
-import {EventApiService} from "./services/event.api.service";
 import {Ripple} from "./commons/directives/ripple/ripple";
-
-import {NewsService} from "./news/news.service";
 import {FireLoginService} from "./fire-login/fire-login.service";
 import {ToasterModule} from 'angular2-toaster/angular2-toaster';
-
-
 
 /***
  * Intermediary
@@ -44,6 +34,13 @@ import {PensionerFormComponent} from './pensioner/form/form.component';
 import {PensionerApiService} from "./pensioner/rest.api.service";
 import {PensionerBusinessService} from "./pensioner/business.service";
 
+/***
+ * News
+ ***/
+import {NewsComponent} from './news/grid/grid.component';
+import {NewFormComponent} from './news/form/form.component';
+import {EventApiService} from "./news/rest.api.service";
+import {NewsBusinessService} from "./news/business.service";
 /***
  * Payments
  ***/
@@ -131,7 +128,7 @@ const myFirebaseAuthConfig = {
     FireLoginService,
     PAsideService,
     IntermediaryBusinessService,
-    NewsService,
+    NewsBusinessService,
     PaymentsBusinessService,
     PensionerBusinessService,
     //REST API services
