@@ -4,7 +4,7 @@ package co.edu.uniandes.to;
  * To para la super entidad
  * @author jorge perea
  */
-public class PilaSuperEntityTO {
+public class SuperEntityTO {
 	
 	/**
 	 * id del super entity
@@ -49,9 +49,16 @@ public class PilaSuperEntityTO {
 	private String username;
 	
 	/**
+	 * id dle tipopagador
+	 */
+	private Long tipoPagador;
+	
+	private Long actividadEconomica;
+	
+	/**
 	 * Constructor
 	 */
-	public PilaSuperEntityTO() {
+	public SuperEntityTO() {
 		
 	}
 
@@ -165,5 +172,33 @@ public class PilaSuperEntityTO {
 	 */
 	public void setIdSuperEntity(Long idSuperEntity) {
 		this.idSuperEntity = idSuperEntity;
+	}
+
+	/**
+	 * @return the tipoPagador
+	 */
+	public Long getTipoPagador() {
+		return tipoPagador;
+	}
+
+	/**
+	 * @param tipoPagador the tipoPagador to set
+	 */
+	public void setTipoPagador(Long tipoPagador) {
+		this.tipoPagador = tipoPagador;
+	}
+
+	/**
+	 * @return the actividadEconomica
+	 */
+	public Long getActividadEconomica() {
+		return actividadEconomica;
+	}
+
+	/**
+	 * @param actividadEconomica the actividadEconomica to set
+	 */
+	public void setActividadEconomica(Long actividadEconomica) {
+		this.actividadEconomica = actividadEconomica;
 	}
 }

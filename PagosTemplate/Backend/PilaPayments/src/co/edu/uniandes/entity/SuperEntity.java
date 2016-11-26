@@ -3,16 +3,15 @@ package co.edu.uniandes.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import co.edu.uniandes.staticmodel.ActividadEconomica;
 
 /**
  * Super entidad que desea realizar pagos a empleados
@@ -45,6 +44,11 @@ public class SuperEntity {
 	 * entities asociados a la super entidad
 	 */
 	private List<PilaEntity> entities;
+	
+	/**
+	 * tipo de pagador
+	 */
+	private TipoPagador tipoPagador;
 	
 	/**
 	 * constructor
@@ -116,8 +120,8 @@ public class SuperEntity {
 	/**
 	 * @return the actividad
 	 */
-	@JsonProperty("econActivity")
-	@Enumerated(EnumType.STRING)
+	@OneToOne
+	@JoinColumn(name = "actividad_economica_id")
 	public ActividadEconomica getActividad() {
 		return actividad;
 	}
@@ -127,5 +131,21 @@ public class SuperEntity {
 	 */
 	public void setActividad(ActividadEconomica actividad) {
 		this.actividad = actividad;
+	}
+
+	/**
+	 * @return the tipoPagador
+	 */
+	@OneToOne
+	@JoinColumn(name = "tipo_pagador_id")
+	public TipoPagador getTipoPagador() {
+		return tipoPagador;
+	}
+
+	/**
+	 * @param tipoPagador the tipoPagador to set
+	 */
+	public void setTipoPagador(TipoPagador tipoPagador) {
+		this.tipoPagador = tipoPagador;
 	}
 }

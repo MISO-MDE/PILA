@@ -1,31 +1,26 @@
 package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.Produces;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.DefaultValue;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import co.edu.uniandes.businesslogic.BusinessValidations;
+import co.edu.uniandes.businesslogic.CalculationFormula1;
 import co.edu.uniandes.businesslogic.EntityLogic;
 import co.edu.uniandes.businesslogic.ValidacionLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
-import co.edu.uniandes.dao.PaisDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
+import co.edu.uniandes.dao.TipoPensionDAOImpl;
+import co.edu.uniandes.dao.TipoPensionadoDAO;
+import co.edu.uniandes.dao.TipoPensionadoDAOImpl;
 import co.edu.uniandes.dao.ValidacionDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
-import co.edu.uniandes.to.EntityTO;
-import co.edu.uniandes.businesslogic.BusinessValidations;
-import co.edu.uniandes.businesslogic.CalculationFormula1;
 
 @Path("/calculation")
 public class PaymentCalculatorManager {
@@ -106,7 +101,8 @@ public class PaymentCalculatorManager {
 	 */
 	public EntityLogic getEntityLogic() {
 		if(logic == null){
-			logic = new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new PaisDAOImpl());					
+			logic = new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new TipoPensionDAOImpl(), 
+					new TipoPensionadoDAOImpl());	 	
 		}
 		return logic;
 	}

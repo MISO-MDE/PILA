@@ -154,8 +154,8 @@ public class PilaEntity {
 	 * @return el tipo de pension
 	 */	
 	@OneToOne
-	@JoinColumn(name="pila_tipo_pensionado_id")
-	public TipoPension getPilaTipoPension(){
+	@JoinColumn(name="tipo_pension_id")
+	public TipoPension getTipoPension(){
 		return tipoPension;
 	}
 	
@@ -169,6 +169,8 @@ public class PilaEntity {
 	/**
 	 * @return el tipo de pensionado
 	 */	
+	@OneToOne
+	@JoinColumn(name="tipo_pensionado_id")
 	public TipoPensionado getTipoPensionado(){
 		return tipoPensionado;
 	}
@@ -185,7 +187,7 @@ public class PilaEntity {
 	 * @return the superEntidad
 	 */	
 	@ManyToOne
-	@JoinColumn(name="pilaSuperEntity_id")
+	@JoinColumn(name="superEntity_id")
 	public SuperEntity getSuperEntidad() {
 		return superEntidad;
 	}

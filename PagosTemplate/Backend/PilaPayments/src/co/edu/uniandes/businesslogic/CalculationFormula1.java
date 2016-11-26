@@ -42,13 +42,13 @@ public class CalculationFormula1 {
 		if (riesgoLaboral == 4 && riesgoLaboral == 5) 
 			return this.entity.getSalario() * 0.26;
 		else
-		if (entity.getActividad().getName().equals("Congresista")) 	
+		if (entity.getProfesion().equals("Congresista")) 	
 			return this.entity.getSalario() * 0.255;
 		else
-			if (entity.getActividad().getName().equals("CTI")) 	
+			if (entity.getProfesion().equals("CTI")) 	
 				return this.entity.getSalario() * 0.35;
 			else
-				if (entity.getActividad().getName().equals("Aviador")) 	
+				if (entity.getProfesion().equals("Aviador")) 	
 					return this.entity.getSalario() * 0.21;
 		//Novedades
 		if (novedadesMes == 0)

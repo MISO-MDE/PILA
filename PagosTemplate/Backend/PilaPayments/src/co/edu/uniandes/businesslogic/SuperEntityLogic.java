@@ -3,12 +3,14 @@ package co.edu.uniandes.businesslogic;
 import java.util.Arrays;
 import java.util.List;
 
+import co.edu.uniandes.dao.ActividadEconomicaDAO;
 import co.edu.uniandes.dao.SuperEntityDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
+import co.edu.uniandes.dao.TipoPagadorDAO;
 import co.edu.uniandes.entity.SuperEntity;
 import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
-import co.edu.uniandes.to.PilaSuperEntityTO;
+import co.edu.uniandes.to.SuperEntityTO;
 
 /**
  * Logica del super entity
@@ -27,25 +29,39 @@ public class SuperEntityLogic {
 	private SuperEntityUserDAO userDAO;
 	
 	/**
+	 * dao de tipo pagador
+	 */
+	private TipoPagadorDAO pagadorDAO;
+	
+	/**
+	 * dao de actividad economica
+	 */
+	private ActividadEconomicaDAO actividadDAO;
+	
+	/**
 	 * Constructor
 	 * @param dao
 	 */
-	public SuperEntityLogic(SuperEntityDAO superDAO, SuperEntityUserDAO userDAO) {
+	public SuperEntityLogic(SuperEntityDAO superDAO, SuperEntityUserDAO userDAO, TipoPagadorDAO pagadorDAO, 
+			ActividadEconomicaDAO actividadDAO) {
 		this.superDAO = superDAO;
 		this.userDAO = userDAO;
+		this.pagadorDAO = pagadorDAO;
+		this.actividadDAO = actividadDAO;
 	}
 	
 	/**
 	 * crea una super entidad
 	 * @param superTO
 	 */
-	public String createSuperEntity(PilaSuperEntityTO superTO) {
+	public String createSuperEntity(SuperEntityTO superTO) {
 		
 		// se crea la super entidad
 		SuperEntity superEntity= new SuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
-		superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+		superEntity.setActividad(actividadDAO.find(superTO.getActividadEconomica()));
+		superEntity.setTipoPagador(pagadorDAO.find(superTO.getTipoPagador()));
 		
 		superEntity = superDAO.create(superEntity);	
 		
@@ -57,7 +73,7 @@ public class SuperEntityLogic {
 	 * @param superTO
 	 * @return
 	 */
-	public String createSuperEntityUser(PilaSuperEntityTO superTO) {
+	public String createSuperEntityUser(SuperEntityTO superTO) {
 		
 		String respuesta = "";
 		
@@ -86,7 +102,7 @@ public class SuperEntityLogic {
 	 * Actualiza la superEntidad
 	 * @return super entidad actualizada
 	 */
-	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
+	public String updateSuperEntityUser(SuperEntityTO superTO) {
 		
 		SuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
 		String response = "SuperEntity not updated";
@@ -101,8 +117,13 @@ public class SuperEntityLogic {
 			}
 			
 			if(!superTO.getCIU().isEmpty()) {
-				superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+				superEntity.setActividad(actividadDAO.find(superTO.getActividadEconomica()));
 			}
+			
+			if(superTO.getTipoPagador() != null) {
+				superEntity.setTipoPagador(pagadorDAO.find(superTO.getTipoPagador()));
+			}
+			
 			
 			superDAO.update(superEntity).getId();
 			response = "SuperEntity updated";
