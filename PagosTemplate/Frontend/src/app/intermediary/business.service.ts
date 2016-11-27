@@ -10,7 +10,7 @@ export class IntermediaryBusinessService {
   public columns: Array<any> = [
     {title: 'Nombre empresa', className: 'col-md-1', name: 'name'},
     {title: 'NIT', className: 'col-md-1', name: 'nit'},
-    {title: 'Actividad económica', className: 'col-md-4', name: 'econActivity'}
+    {title: 'Actividad económica', className: 'col-md-4', name: 'actividad'}
   ];
   public selectedRow:any = {};
   public econActivities = [];
@@ -28,7 +28,8 @@ export class IntermediaryBusinessService {
 
   public selectRow(row) {
     this.selectedRow = row;
-    this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
+    this.selectedRow.actividadeconomica = parseInt(row.actividad.id);
+    this.selectedRow.tipoPagador = parseInt(row.tipoPagador.id);
   }
 
   public addNewRow(row) {
