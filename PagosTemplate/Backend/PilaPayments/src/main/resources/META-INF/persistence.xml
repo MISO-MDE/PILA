@@ -20,7 +20,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 			<property name="hibernate.connection.datasource" value="java:comp/env/jdbc/DSPila"/>		
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.id.new_generator_mappings" value ="true"/>
-<!-- 			<property name="hibernate.hbm2ddl.auto" value="validate" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 		</properties>
 	</persistence-unit>
 </persistence>

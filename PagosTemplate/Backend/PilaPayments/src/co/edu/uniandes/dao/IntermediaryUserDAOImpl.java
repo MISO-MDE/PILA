@@ -15,7 +15,7 @@ public class IntermediaryUserDAOImpl extends DAOBaseImpl<UserIntermediary> imple
 	 */
 	@Override
 	public UserIntermediary getUser(String userId) {
-		Query query = getEntityManager().createQuery("select us from PilaUserIntermediary us where us.userId = :userId");
+		Query query = getEntityManager().createQuery("select us from UserIntermediary us where us.userId = :userId");
 		query.setParameter("userId", userId);
 	    
 	    return query.getResultList().isEmpty() ? null : (UserIntermediary)query.getResultList().get(0);
