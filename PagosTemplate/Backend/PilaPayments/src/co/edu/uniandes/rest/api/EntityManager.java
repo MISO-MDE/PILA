@@ -127,14 +127,17 @@ public class EntityManager {
         final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
         logger.debug("Object " + node.asText());
         EntityTO entityTO = new EntityTO();
-        entityTO.setCedula(node.get("cedula").asInt());
+        if(!node.get("id").asText().isEmpty()) {
+        	 entityTO.setId(node.get("id").asText());
+        }
+        entityTO.setCedula(node.get("cedula").asText());
         entityTO.setNombre(node.get("nombre").asText());
         entityTO.setApellido(node.get("apellido").asText());
-        entityTO.setSalario(node.get("salario").asDouble());
-        entityTO.setTipoPension(node.get("tipoPension").asLong());
-        entityTO.setTipoPensionado(node.get("tipoPensionado").asLong());
-        entityTO.setPais(Long.valueOf(node.get("pais").asText()));
-        entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("paisGrupoFamiliar").asText()));
+        entityTO.setSalario(node.get("salario").asText());
+        entityTO.setTipoPension(node.get("tipoPension").asText());
+        entityTO.setTipoPensionado(node.get("tipoPensionado").asText());
+        entityTO.setPais(node.get("pais").asText());
+        entityTO.setPaisGrupoFamiliar(node.get("paisGrupoFamiliar").asText());
         entityTO.setProfesion(node.get("profesion").asText());
         return entityTO;
     }

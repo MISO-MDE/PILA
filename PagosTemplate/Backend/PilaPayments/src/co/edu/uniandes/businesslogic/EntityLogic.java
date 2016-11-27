@@ -44,18 +44,47 @@ public class EntityLogic {
 	 */
 	public String update(EntityTO entityTO){		
 		String response = "";		
-		PilaEntity entity = new PilaEntity();
-		entity.setCedula(entityTO.getCedula());
-		entity.setNombre(entityTO.getNombre());
-		entity.setApellido(entityTO.getApellido());
-		entity.setSalario(entityTO.getSalario());
-		entity.setTipoPension(pensionDAO.find(entityTO.getTipoPension()));
-		entity.setTipoPensionado(pensionadoDAO.find(entityTO.getTipoPensionado()));
-		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
-		entity.setProfesion(entityTO.getProfesion());
-		entity.setPais(entityTO.getPais());
-		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());		
-		entity = entityDAO.update(entity);		
+		PilaEntity entity = entityDAO.findEntityById(Long.parseLong(entityTO.getId()));
+		if(entity != null) {
+			if(!entityTO.getCedula().isEmpty() ) {
+				entity.setCedula(Long.parseLong(entityTO.getCedula()));
+			}
+			
+			if(!entityTO.getNombre().isEmpty()) {
+				entity.setNombre(entityTO.getNombre());
+			}
+			
+			if(!entityTO.getApellido().isEmpty()) {
+				entity.setApellido(entityTO.getApellido());
+			}
+			
+			if(!entityTO.getSalario().isEmpty()) {
+				entity.setSalario(Double.parseDouble(entityTO.getSalario()));
+			}
+			
+			if(!entityTO.getTipoPension().isEmpty()) {
+				entity.setTipoPension(pensionDAO.find(Long.parseLong(entityTO.getTipoPension())));
+			}
+			
+			if(!entityTO.getTipoPensionado().isEmpty()) {
+				entity.setTipoPensionado(pensionadoDAO.find(Long.parseLong(entityTO.getTipoPensionado())));
+			}
+			
+			if(!entityTO.getProfesion().isEmpty()) {
+				entity.setProfesion(toTitle(entityTO.getProfesion()));
+			}			
+			
+			if(!entityTO.getPais().isEmpty()) {
+				entity.setPais(Long.parseLong(entityTO.getPais()));
+			}
+			
+			if(!entityTO.getPaisGrupoFamiliar().isEmpty()) {
+				entity.setPaisGrupoFamiliar(Long.parseLong(entityTO.getProfesion()));
+			}
+				
+			entity = entityDAO.update(entity);
+		}	
+		
 		response = entity.getId().toString();		
 		return response;
 	}
@@ -70,15 +99,15 @@ public class EntityLogic {
 		String response = "";
 		
 		PilaEntity entity = new PilaEntity();
-		entity.setCedula(entityTO.getCedula());
+		entity.setCedula(Long.parseLong(entityTO.getCedula()));
 		entity.setNombre(entityTO.getNombre());
 		entity.setApellido(entityTO.getApellido());
-		entity.setSalario(entityTO.getSalario());
-		entity.setTipoPension(pensionDAO.find(entityTO.getTipoPension()));
-		entity.setTipoPensionado(pensionadoDAO.find(entityTO.getTipoPensionado()));
-		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(entityTO.getSuperEntidad()));
-		entity.setPais(entityTO.getPais());
-		entity.setPaisGrupoFamiliar(entityTO.getPaisGrupoFamiliar());
+		entity.setSalario(Double.parseDouble(entityTO.getSalario()));
+		entity.setTipoPension(pensionDAO.find(Long.parseLong(entityTO.getTipoPension())));
+		entity.setTipoPensionado(pensionadoDAO.find(Long.parseLong(entityTO.getTipoPensionado())));
+		entity.setSuperEntidad(superEntityDAO.findSuperEntityById(Long.parseLong(entityTO.getSuperEntidad())));
+		entity.setPais(Long.parseLong(entityTO.getPais()));
+		entity.setPaisGrupoFamiliar(Long.parseLong(entityTO.getPaisGrupoFamiliar()));
 		entity.setProfesion(entityTO.getProfesion());
 		
 		entity = entityDAO.create(entity);
@@ -113,4 +142,15 @@ public class EntityLogic {
 	public PilaEntity find(long id) {
 		return entityDAO.find(id);
 	}	
+	
+	/**
+	 * Metodo auxiliar para convertir un string en titulo
+	 * @param s string a convertir
+	 * @return string convertido
+	 */
+	public String toTitle (String s) {
+	      String s1 = s.substring(0,1).toUpperCase();
+	      String sTitle = s1 + s.substring(1);
+	      return sTitle;
+	}
 }

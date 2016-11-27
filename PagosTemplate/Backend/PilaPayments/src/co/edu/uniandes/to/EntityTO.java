@@ -9,12 +9,12 @@ public class EntityTO {
 	/**
 	 * id de la entidad
 	 */
-	private Long id;
+	private String id;
 	
 	/**
 	 * cedula del entity
 	 */
-	private int cedula;
+	private String cedula;
 	
 	/**
 	 * nombre
@@ -29,205 +29,186 @@ public class EntityTO {
 	/**
 	 * salario
 	 */
-	private double salario;
+	private String salario;
 	
 	/**
 	 * tipo pension
 	 */
-	private Long tipoPension;
+	private String tipoPension;
 	
 	/**
 	 * tipo pensionado
 	 */
-	private Long tipoPensionado;
+	private String tipoPensionado;
 	
 	/**
 	 * Pais en el que reside
 	 */
-	private Long pais;
+	private String pais;
 	
 	/**
 	 * pais del grup familiar
 	 */
-	private Long paisGrupoFamiliar;
+	private String paisGrupoFamiliar;
 	
 	/**
 	 * actividad economica
 	 */
-	private Long actividad;
+	private String actividad;
 	
 	/**
 	 * super entidad a la que pertenece
 	 */
-	private Long superEntidad;
+	private String superEntidad;
 	
+	/**
+	 * Profesion
+	 */
 	private String profesion;
 	/**
 	 * Constructor
 	 */
-	public EntityTO() {	}
-	
+	public EntityTO() {	
+		
+	}
 	/**
 	 * @return the id
 	 */
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-
 	/**
 	 * @return the cedula
 	 */
-	public int getCedula() {
+	public String getCedula() {
 		return cedula;
 	}
-
 	/**
 	 * @param cedula the cedula to set
 	 */
-	public void setCedula(int cedula) {
+	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
-
 	/**
 	 * @return the nombre
 	 */
 	public String getNombre() {
 		return nombre;
 	}
-
 	/**
 	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 	/**
 	 * @return the apellido
 	 */
 	public String getApellido() {
 		return apellido;
 	}
-
 	/**
 	 * @param apellido the apellido to set
 	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 	/**
 	 * @return the salario
 	 */
-	public double getSalario() {
+	public String getSalario() {
 		return salario;
 	}
-
 	/**
 	 * @param salario the salario to set
 	 */
-	public void setSalario(double salario) {
+	public void setSalario(String salario) {
 		this.salario = salario;
 	}
-
 	/**
-	 * @return el tipo de pension
+	 * @return the tipoPension
 	 */
-	public Long getTipoPension(){
+	public String getTipoPension() {
 		return tipoPension;
 	}
-	
 	/**
 	 * @param tipoPension the tipoPension to set
 	 */
-	public void setTipoPension(Long tipoPension){
+	public void setTipoPension(String tipoPension) {
 		this.tipoPension = tipoPension;
 	}
-	
 	/**
-	 * @return el tipo de pensionado
+	 * @return the tipoPensionado
 	 */
-	public Long getTipoPensionado(){
+	public String getTipoPensionado() {
 		return tipoPensionado;
 	}
-	
 	/**
 	 * @param tipoPensionado the tipoPensionado to set
 	 */
-	public void setTipoPensionado(Long tipoPensionado){
+	public void setTipoPensionado(String tipoPensionado) {
 		this.tipoPensionado = tipoPensionado;
 	}
-	
-	/**
-	 * @return the actividad
-	 */
-	public Long getActividad() {
-		return actividad;
-	}
-
-	/**
-	 * @param actividad the actividad to set
-	 */
-	public void setActividad(Long actividad) {
-		this.actividad = actividad;
-	}
-
-	/**
-	 * @return the superEntidad
-	 */
-	public Long getSuperEntidad() {
-		return superEntidad;
-	}
-
-	/**
-	 * @param superEntidad the superEntidad to set
-	 */
-	public void setSuperEntidad(Long superEntidad) {
-		this.superEntidad = superEntidad;
-	}
-
 	/**
 	 * @return the pais
 	 */
-	public Long getPais() {
+	public String getPais() {
 		return pais;
 	}
-
 	/**
 	 * @param pais the pais to set
 	 */
-	public void setPais(Long pais) {
+	public void setPais(String pais) {
 		this.pais = pais;
 	}
-
 	/**
 	 * @return the paisGrupoFamiliar
 	 */
-	public Long getPaisGrupoFamiliar() {
+	public String getPaisGrupoFamiliar() {
 		return paisGrupoFamiliar;
 	}
-
 	/**
 	 * @param paisGrupoFamiliar the paisGrupoFamiliar to set
 	 */
-	public void setPaisGrupoFamiliar(Long paisGrupoFamiliar) {
+	public void setPaisGrupoFamiliar(String paisGrupoFamiliar) {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
 	}
-
+	/**
+	 * @return the actividad
+	 */
+	public String getActividad() {
+		return actividad;
+	}
+	/**
+	 * @param actividad the actividad to set
+	 */
+	public void setActividad(String actividad) {
+		this.actividad = actividad;
+	}
+	/**
+	 * @return the superEntidad
+	 */
+	public String getSuperEntidad() {
+		return superEntidad;
+	}
+	/**
+	 * @param superEntidad the superEntidad to set
+	 */
+	public void setSuperEntidad(String superEntidad) {
+		this.superEntidad = superEntidad;
+	}
 	/**
 	 * @return the profesion
 	 */
 	public String getProfesion() {
 		return profesion;
 	}
-
 	/**
 	 * @param profesion the profesion to set
 	 */
