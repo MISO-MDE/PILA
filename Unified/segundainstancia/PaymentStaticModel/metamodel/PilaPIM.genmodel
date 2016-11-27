@@ -36,39 +36,30 @@
     </genEnums>
     <genClasses ecoreClass="PilaPIM.ecore#//Application">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Application/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/views"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/logicalComponents"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/serverservice"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/datalayercomponent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/daocomponent"/>
-    </genClasses>
-    <genClasses ecoreClass="PilaPIM.ecore#//Component">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Component/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Component/control"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Component/services"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Application/views"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//Control">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Control/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Control/label"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//Input">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Input/service"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Input/dataType"/>
     </genClasses>
-    <genClasses ecoreClass="PilaPIM.ecore#//Action">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Action/service"/>
-    </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//Output"/>
     <genClasses ecoreClass="PilaPIM.ecore#//FrontService">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//FrontService/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//FrontService/serviceCalls"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//FrontService/serves"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//FrontService/fullName"/>
     </genClasses>
-    <genClasses ecoreClass="PilaPIM.ecore#//View">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/title"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//View/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//View/components"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//ViewComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//ViewComponent/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ViewComponent/subcomponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ViewComponent/controls"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ViewComponent/frontservices"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//GenericComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//GenericComponent/name"/>
@@ -161,5 +152,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//DataLayerComponent/extendsData"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//DaoComponent"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//SubComponent"/>
+    <genClasses ecoreClass="PilaPIM.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Action/service"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

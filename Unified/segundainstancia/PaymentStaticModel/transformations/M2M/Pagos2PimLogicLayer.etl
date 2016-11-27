@@ -8,15 +8,15 @@ rule Pagos2PimApp
 	to	
 		t:PagosPim!Application
 	{
-		//Iniciamdo capa logica de negocio
+	
 		t.name = s.name;
+		//Iniciamdo capa logica de negocio
 		t.logicalComponents.add(s.intermediary.equivalent()); //Intermediary a Objeto de Negocio
 		t.logicalComponents.addAll(s.intermediary.superentities.equivalent()); //Super Entidad a Objeto de Negocio
 		for (se:PagosM!SuperEntity in s.intermediary->superentities){ 
 			t.logicalComponents.addAll(se->participants.equivalent()); //Entidad a Objeto de Negocio
 			for (pa:PagosM!Participant in se->participants) {
 				t.logicalComponents.addAll(pa->templatesForms.equivalent()); //Templates de Informacion
-				
 				for (it:PagosM!InformationTemplate in pa->templatesForms) {//REVISAR PARA CONVERTIR EN OPERACION
 					t.logicalComponents.addAll(it->providers.equivalent());// Adiciona los providers 
 					t.logicalComponents.last().operations.addAll(it->templates.equivalent()); // Adiciona operaciones de calculo
@@ -24,7 +24,87 @@ rule Pagos2PimApp
 			}
 		}
 		setRelations(s, t);
+		
+		//Iniciando logica UI Creando Vistas Iniciales
+		t.views = t.logicalComponents.equivalent("LogicComp2ViewCom");
+		
 	}
+	
+//Capa Front
+@lazy
+rule LogicComp2ViewCom
+	transform 
+		s:PagosPim!LogicComponent
+	to	
+		t:PagosPim!ViewComponent
+	{
+		t.name = s.name;
+		t.title = "Administrador " + s.name;
+		t.attributes = s.attributes.equivalent();
+		t.controls = s.operations.equivalent();
+		t.frontservices = s.operations.equivalent();
+		t.subcomponents = s.relations.equivalent(); 
+		
+	}
+	
+	rule Operation2FrontService
+	transform 
+		s:PagosPim!Operation
+	to	
+		t:PagosPim!FrontService
+	{
+		if (s.name.startsWith("create")) 
+			t.name = 'post';
+		else if (s.name.startsWith("update"))
+			t.name = 'put';
+		else if (s.name.startsWith("delete"))
+			t.name = 'delete';	
+		else if (s.name.startsWith("read"))
+			t.name = 'get';
+		t.fullName = s.name;
+		
+	}
+	
+	rule Operation2Action
+	transform 
+		s:PagosPim!Operation
+	to	
+		t:PagosPim!Action
+	{
+		if (s.name.startsWith("create"))
+			t.label = 'Add';
+		else if (s.name.startsWith("update"))
+			t.label = 'Modify';
+		else if (s.name.startsWith("delete"))
+			t.label = 'Delete';	
+		else if (s.name.startsWith("read"))
+			t.label = 'Query';	
+		t.name = s.name;
+		t.service = PagosPim!FrontService.AllInstances->select(e | e.fullName = s.name).first(); //getSetvice(s, t);
+	}
+
+rule Attrib2Input
+	transform 
+		s:PagosPim!Attribute
+	to	
+		t:PagosPim!Input
+	{
+		guard: (not s.name.endsWith("Id"))
+		t.name = s.name;
+		t.label = s.name.firstToUpperCase();
+	}
+
+rule Relation2SubComponent
+	transform 
+		s:PagosPim!Relation
+	to	
+		t:PagosPim!SubComponent
+	{
+		t.name = s.name;
+		t.cardinality = s.cardinality;
+		t.type = s.type;
+	}
+	
 
 //Capa Logica de negocio
 rule Intermediary2LogicalEntity
@@ -217,6 +297,7 @@ rule BusinessAttribute2Attribute
 		t.expression = s.exp.equivalent();
 		
 	}
+		
 
 //OPERATIONS ***************************************************************************************//
 
@@ -250,7 +331,8 @@ operation getSign(operator: String) {
 
 
 operation setRelations(s, t) {
-	
+	"RELACION".println();
+	t.type.println();
 	for (it:PagosM!Intermediary in s.intermediary) { //Padre
 		var parent = t.logicalComponents->selectOne(e|e.name = it.name);
 		for (se:PagosM!SuperEntity in it->superentities) {	 //Hijos	 Intermediario

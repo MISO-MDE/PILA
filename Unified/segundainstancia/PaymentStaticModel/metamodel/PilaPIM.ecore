@@ -3,8 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PagosPim" nsURI="http://www.uniandes.edu.co/PagosPim" nsPrefix="PagosPim">
   <eClassifiers xsi:type="ecore:EClass" name="Application">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
-        eType="#//View" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="logicalComponents" upperBound="-1"
         eType="#//LogicComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="serverservice" upperBound="-1"
@@ -13,42 +11,35 @@
         eType="#//DataLayerComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="daocomponent" upperBound="-1"
         eType="#//DaoComponent" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="control" upperBound="-1"
-        eType="#//Control" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
-        eType="#//FrontService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
+        eType="#//ViewComponent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Control">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Control">
+  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Control #//Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//FrontService"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Control">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
-        eType="#//FrontService"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Control"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DataTypes">
     <eLiterals name="STRING"/>
     <eLiterals name="INTEGER" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FrontService">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FrontService" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serviceCalls" upperBound="-1"
         eType="#//FrontService"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="serves" eType="#//ServerService"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="View">
+  <eClassifiers xsi:type="ecore:EClass" name="ViewComponent" eSuperTypes="#//GenericComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subcomponents" upperBound="-1"
+        eType="#//SubComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controls" upperBound="-1"
+        eType="#//Control" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="frontservices" upperBound="-1"
+        eType="#//FrontService" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenericComponent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -191,4 +182,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendsData" eType="#//DaoComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DaoComponent" eSuperTypes="#//GenericComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubComponent" eSuperTypes="#//Relation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Control #//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//FrontService"/>
+  </eClassifiers>
 </ecore:EPackage>

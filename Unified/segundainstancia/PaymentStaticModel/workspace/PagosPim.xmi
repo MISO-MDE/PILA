@@ -420,8 +420,105 @@
         <body/>
       </operations>
     </logicalComponents>
+    <views name="Planillator" title="Administrador Planillator">
+      <subcomponents name="Pagadora"/>
+    </views>
+    <views name="Pagadora" title="Administrador Pagadora">
+      <attributes xsi:type="PagosPim:Input" label="Nombre" name="Nombre"/>
+      <attributes xsi:type="PagosPim:Input" label="NIT" name="NIT"/>
+      <subcomponents name="Pensionado"/>
+      <frontservices name="post" fullName="createPagadora"/>
+      <frontservices xsi:type="PagosPim:Action" label="Add" name="createPagadora" service="/0/@views.1/@frontservices.0"/>
+      <frontservices name="put" fullName="updatePagadora"/>
+      <frontservices xsi:type="PagosPim:Action" label="Modify" name="updatePagadora" service="/0/@views.1/@frontservices.2"/>
+      <frontservices name="delete" fullName="deletePagadora"/>
+      <frontservices xsi:type="PagosPim:Action" label="Delete" name="deletePagadora" service="/0/@views.1/@frontservices.4"/>
+      <frontservices name="get" fullName="readPagadora"/>
+      <frontservices xsi:type="PagosPim:Action" label="Query" name="readPagadora" service="/0/@views.1/@frontservices.6"/>
+    </views>
+    <views name="Pensionado" title="Administrador Pensionado">
+      <attributes xsi:type="PagosPim:Input" label="Cedula" name="cedula"/>
+      <attributes xsi:type="PagosPim:Input" label="Salario" name="salario"/>
+      <attributes xsi:type="PagosPim:Input" label="Vivienda" name="vivienda"/>
+      <attributes xsi:type="PagosPim:Input" label="Grupofamiliar" name="grupofamiliar"/>
+      <attributes xsi:type="PagosPim:Input" label="NovedadesMes" name="NovedadesMes"/>
+      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad"/>
+      <attributes xsi:type="PagosPim:Input" label="AltoRiesgo" name="AltoRiesgo"/>
+      <attributes xsi:type="PagosPim:Input" label="RiesgoLaboral" name="RiesgoLaboral"/>
+      <attributes xsi:type="PagosPim:Input" label="Profesion" name="Profesion"/>
+      <subcomponents name="Novedades"/>
+      <subcomponents name="Pagos"/>
+      <frontservices name="post" fullName="createPensionado"/>
+      <frontservices xsi:type="PagosPim:Action" label="Add" name="createPensionado" service="/0/@views.2/@frontservices.0"/>
+      <frontservices name="put" fullName="updatePensionado"/>
+      <frontservices xsi:type="PagosPim:Action" label="Modify" name="updatePensionado" service="/0/@views.2/@frontservices.2"/>
+      <frontservices name="delete" fullName="deletePensionado"/>
+      <frontservices xsi:type="PagosPim:Action" label="Delete" name="deletePensionado" service="/0/@views.2/@frontservices.4"/>
+      <frontservices name="get" fullName="readPensionado"/>
+      <frontservices xsi:type="PagosPim:Action" label="Query" name="readPensionado" service="/0/@views.2/@frontservices.6"/>
+    </views>
+    <views name="Novedades" title="Administrador Novedades">
+      <attributes xsi:type="PagosPim:Input" label="FechaInicial" name="FechaInicial"/>
+      <attributes xsi:type="PagosPim:Input" label="FechaFinal" name="FechaFinal"/>
+      <attributes xsi:type="PagosPim:Input" label="TipoNovedad" name="TipoNovedad"/>
+      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad"/>
+      <attributes xsi:type="PagosPim:Input" label="IdEntidad" name="idEntidad"/>
+      <frontservices name="post" fullName="createNovedades"/>
+      <frontservices xsi:type="PagosPim:Action" label="Add" name="createNovedades" service="/0/@views.3/@frontservices.0"/>
+      <frontservices name="put" fullName="updateNovedades"/>
+      <frontservices xsi:type="PagosPim:Action" label="Modify" name="updateNovedades" service="/0/@views.3/@frontservices.2"/>
+      <frontservices name="delete" fullName="deleteNovedades"/>
+      <frontservices xsi:type="PagosPim:Action" label="Delete" name="deleteNovedades" service="/0/@views.3/@frontservices.4"/>
+      <frontservices name="get" fullName="readNovedades"/>
+      <frontservices xsi:type="PagosPim:Action" label="Query" name="readNovedades" service="/0/@views.3/@frontservices.6"/>
+    </views>
+    <views name="Pagos" title="Administrador Pagos">
+      <attributes xsi:type="PagosPim:Input" label="FechaPago" name="FechaPago"/>
+      <attributes xsi:type="PagosPim:Input" label="Monto" name="Monto"/>
+      <attributes xsi:type="PagosPim:Input" label="Status" name="Status"/>
+      <attributes xsi:type="PagosPim:Input" label="MesPago" name="MesPago"/>
+      <attributes xsi:type="PagosPim:Input" label="IdEntidad" name="idEntidad"/>
+      <frontservices name="post" fullName="createPagos"/>
+      <frontservices xsi:type="PagosPim:Action" label="Add" name="createPagos" service="/0/@views.4/@frontservices.0"/>
+      <frontservices name="put" fullName="updatePagos"/>
+      <frontservices xsi:type="PagosPim:Action" label="Modify" name="updatePagos" service="/0/@views.4/@frontservices.2"/>
+      <frontservices name="delete" fullName="deletePagos"/>
+      <frontservices xsi:type="PagosPim:Action" label="Delete" name="deletePagos" service="/0/@views.4/@frontservices.4"/>
+      <frontservices name="get" fullName="readPagos"/>
+      <frontservices xsi:type="PagosPim:Action" label="Query" name="readPagos" service="/0/@views.4/@frontservices.6"/>
+      <frontservices fullName="calculateEPS"/>
+      <frontservices xsi:type="PagosPim:Action" name="calculateEPS" service="/0/@views.4/@frontservices.8"/>
+      <frontservices fullName="calculatePension"/>
+      <frontservices xsi:type="PagosPim:Action" name="calculatePension" service="/0/@views.4/@frontservices.10"/>
+      <frontservices fullName="calculateRiesgosLaborales"/>
+      <frontservices xsi:type="PagosPim:Action" name="calculateRiesgosLaborales" service="/0/@views.4/@frontservices.12"/>
+    </views>
+    <views name="PrestadoraServicios" title="Administrador PrestadoraServicios">
+      <attributes xsi:type="PagosPim:Input" label="Nombre" name="Nombre"/>
+      <attributes xsi:type="PagosPim:Input" label="NIT" name="NIT"/>
+      <attributes xsi:type="PagosPim:Input" label="CodigoCIIU" name="CodigoCIIU"/>
+      <frontservices name="post" fullName="createPrestadoraServicios"/>
+      <frontservices xsi:type="PagosPim:Action" label="Add" name="createPrestadoraServicios" service="/0/@views.5/@frontservices.0"/>
+      <frontservices name="put" fullName="updatePrestadoraServicios"/>
+      <frontservices xsi:type="PagosPim:Action" label="Modify" name="updatePrestadoraServicios" service="/0/@views.5/@frontservices.2"/>
+      <frontservices name="delete" fullName="deletePrestadoraServicios"/>
+      <frontservices xsi:type="PagosPim:Action" label="Delete" name="deletePrestadoraServicios" service="/0/@views.5/@frontservices.4"/>
+      <frontservices name="get" fullName="readPrestadoraServicios"/>
+      <frontservices xsi:type="PagosPim:Action" label="Query" name="readPrestadoraServicios" service="/0/@views.5/@frontservices.6"/>
+    </views>
   </PagosPim:Application>
   <PagosPim:Body/>
   <PagosPim:Body/>
   <PagosPim:Body/>
+  <PagosPim:Input label="Impuesto" name="impuesto"/>
+  <PagosPim:Input label="DiasMes" name="diasMes"/>
+  <PagosPim:Input label="SalarioHora" name="salarioHora"/>
+  <PagosPim:Input label="PensionNormal" name="pensionNormal"/>
+  <PagosPim:Input label="RiesgoLaboral" name="riesgoLaboral"/>
+  <PagosPim:Input label="DiasLaborables" name="diasLaborables"/>
+  <PagosPim:Input label="RiesgoI" name="RiesgoI"/>
+  <PagosPim:Input label="RiesgoII" name="RiesgoII"/>
+  <PagosPim:Input label="RiesgoIII" name="RiesgoIII"/>
+  <PagosPim:Input label="RiesgoIV" name="RiesgoIV"/>
+  <PagosPim:Input label="RiesgoV" name="RiesgoV"/>
 </xmi:XMI>
