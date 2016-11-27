@@ -2,7 +2,7 @@ package co.edu.uniandes.businesslogic;
 
 import co.edu.uniandes.dao.IntermediaryUserDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
-import co.edu.uniandes.entity.User;
+import co.edu.uniandes.entity.UserPayments;
 import co.edu.uniandes.entity.UserIntermediary;
 import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.to.PilaUserTO;

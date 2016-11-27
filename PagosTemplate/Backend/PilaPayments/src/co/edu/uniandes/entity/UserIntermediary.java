@@ -9,7 +9,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(name = "intermediary_id", referencedColumnName = "user_id")
-public class UserIntermediary extends User{
+public class UserIntermediary extends UserPayments{
 
 	/**
 	 * Constructor

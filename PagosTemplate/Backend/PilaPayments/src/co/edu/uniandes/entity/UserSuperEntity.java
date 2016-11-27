@@ -11,7 +11,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 @Entity
 @PrimaryKeyJoinColumn(name = "super_id", referencedColumnName = "user_id")
-public class UserSuperEntity extends User{
+public class UserSuperEntity extends UserPayments{
 	
 	/**
 	 * super entidad a la cual esta asociada 
