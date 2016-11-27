@@ -60,6 +60,27 @@ public class ParameterManager {
         return response;
     }
     
+    /**
+     * Retorna los TipoPagador
+     *
+     * @return entidades
+     */
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/actividadeconomica")
+    public String listAllActividadEconomica() {
+        ObjectMapper mapper = new ObjectMapper();
+        logger.debug("Start getEntities");
+        String response = "";
+        try {
+            response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getParameterLogic().findAllActividadEconomica());
+        } catch (JsonProcessingException e) {
+            response = "No se pudo obtener la lista " + e.getMessage();
+        }
+        logger.debug("end getEntities:" + response);
+        return response;
+    }
+    
 	 /**
      * Retorna los TipoPensionado para un TipoPagador
      *
