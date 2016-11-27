@@ -29,7 +29,7 @@
         <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
           <a>{{fireLoginService.getUserData().email}}</a>
         </li>
-        <li ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
+        <li (click)="fireLoginService.logout()" ripple="#ffffff" class="ripple" [routerLinkActive]="['active']">
           <a routerLink="/">Salir</a>
         </li>
       </ul>
