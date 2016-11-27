@@ -15,7 +15,7 @@ export class IntermediaryBusinessService {
   public selectedRow:any = {};
   public econActivities = [];
 
-  constructor(private intermediaryApiService: IntermediaryApiService,
+  constructor(private restApiService: IntermediaryApiService,
               private userApiService: UserApiService) {
   }
 
@@ -40,7 +40,7 @@ export class IntermediaryBusinessService {
   }
 
   public loadSuperEntity(): any {
-    this.intermediaryApiService.getSuperEntityData('*')
+    this.restApiService.getSuperEntityData('*')
       .subscribe((response: any) => {
         this.rows = response;
       });
@@ -49,7 +49,7 @@ export class IntermediaryBusinessService {
   //Crea la superentidad y crea el administrador quien podra entrar a como admin de superentidad
   public saveSuperEntity(superEntity: SuperEntity, user: User): void {
     console.log("**Intermediary:Save Superentity " + superEntity.name + ' NIT ' + superEntity.nit);
-    this.intermediaryApiService.saveSuperEntity(superEntity).subscribe((response: any) => {
+    this.restApiService.saveSuperEntity(superEntity).subscribe((response: any) => {
       if (response) {
         this.loadSuperEntity();
         this.resetSelectedRow();
@@ -77,14 +77,14 @@ export class IntermediaryBusinessService {
   }
 
   public updateSuperEntity(superEntity: SuperEntity): void {
-    this.intermediaryApiService.updateSuperEntity(superEntity)
+    this.restApiService.updateSuperEntity(superEntity)
       .subscribe((response: any) => {
         this.loadSuperEntity();
       });
   }
 
   public deleteSuperEntity(id: string) {
-    this.intermediaryApiService.deleteSuperEntity(id)
+    this.restApiService.deleteSuperEntity(id)
       .subscribe((response: any) => {
         var index = this.rows.indexOf(this.selectedRow, 0);
         if (index > -1) {
@@ -96,9 +96,13 @@ export class IntermediaryBusinessService {
 
 
   public loadEconnActivities() {
-    this.intermediaryApiService.getEconnActivities()
+    this.restApiService.getEconnActivities()
       .subscribe((response: any) => {
         this.econActivities = response;
       });
+  }
+
+  public getParameters(url:string) {
+    return this.restApiService.getParameters(url);
   }
 }

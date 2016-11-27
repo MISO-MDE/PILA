@@ -69,4 +69,9 @@ export class IntermediaryApiService {
         console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
     }
+
+    getParameters(resourceUrl: string) {
+      let url = 'PilaPayments/api' + resourceUrl;
+      return this.http.get(url).map(this.extractData);
+    }
 }

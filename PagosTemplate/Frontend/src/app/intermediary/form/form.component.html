@@ -13,8 +13,8 @@
 
     <label>Tipo de pagador</label>
     <select class="form-control"
-            [(ngModel)]="businessService.selectedRow.ciiuCode">
-      <option *ngFor="let option of  businessService.econActivities" [value]="option.id">{{option.name}}</option>
+            [(ngModel)]="businessService.selectedRow.tipoPagador">
+      <option *ngFor="let option of  parameters" [value]="option.id">{{option.descripcion}}</option>
     </select>
     <br>
     <!--Informacion del Administrador del la superentidad-->
