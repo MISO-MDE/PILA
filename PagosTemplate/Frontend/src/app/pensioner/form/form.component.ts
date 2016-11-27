@@ -19,7 +19,7 @@ export class PensionerFormComponent implements OnInit {
     },
     {
       'id': "13",
-      'name': "Extetior"
+      'name': "Exterior"
     }
   ];
 

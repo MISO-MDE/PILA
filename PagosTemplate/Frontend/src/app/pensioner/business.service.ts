@@ -30,15 +30,7 @@ export class PensionerBusinessService {
 
   public save(entity: any): void {
 
-    this.toasterService.pop('success', 'Args Title', 'Args Body');
-    var toast : Toast = {
-      type: 'error',
-      title: 'Title text',
-      body: 'Body text',
-      showCloseButton: true
-    };
 
-    this.toasterService.pop(toast);
     this.restApiService.save(entity).subscribe((response: any) => {
       if (response) {
         this.loadList();
