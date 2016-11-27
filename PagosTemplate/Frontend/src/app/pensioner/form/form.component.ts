@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PensionerBusinessService} from "../business.service";
+import {FireLoginService} from "../../commons/fire-login/fire-login.service";
 
 @Component({
   selector: 'app-pensioner-form',
@@ -22,11 +23,14 @@ export class PensionerFormComponent implements OnInit {
     }
   ];
 
-  constructor(public businessService: PensionerBusinessService) {
+  constructor(public fireLoginService :FireLoginService,
+              public businessService: PensionerBusinessService) {
   }
 
   ngOnInit() {
-    this.businessService.getParameters('/parameters/tipopagador/2/opciones').subscribe((response: any) => {
+    var userData = this.fireLoginService.getUserData();
+    var tipopagador = userData.superEntity.tipopagador || 1;
+    this.businessService.getParameters('/parameters/tipopagador/'+tipopagador+'/opciones').subscribe((response: any) => {
       this.parameters = response;
     });
   }

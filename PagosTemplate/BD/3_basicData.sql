@@ -14,11 +14,11 @@ values(1, 900539845, 'ESTABLECIMIENTO_EDUCACION_MEDIA',6, 1);
 
 insert into userpayments
 (user_id, email, password, userid, username, rol)
-values (2, 'a@a.com', null, 'gZb2YS9yafhbPDKzTrW5MkGl92b2', 'Ivan', 'Intermediary');
+values (2, 'rtaimal1113@gmail.com', null, 'gZb2YS9yafhbPDKzTrW5MkGl92b2', 'Ivan', 'Intermediary');
 
 
-insert into usersuperentity
-values (1, 1);
+insert into usersuperentity (super_id, superentity_id)
+values (2, 1);
 
 commit;
 
