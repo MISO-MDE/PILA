@@ -1,0 +1,43 @@
+[*FIELD HTML*]
+[%operation pila_front!Field writeHTML(){self.writeHTML(0);}%]
+[%operation pila_front!Field getFixedName(): String{return self.name.replace(" ", "_").toLowerCase;}%]
+
+[*INPUT HTML*]
+[%operation pila_front!Input writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<label>[%=self.name%]</label>
+	[%=tab%]<input [(ngModel)]="businessService.selectedRow.[%=self.getFixedName()%]" type="text" class="form-control"/>
+[%}%]
+	
+[*SELECT HTML*]
+[%operation pila_front!Select writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<label>[%=self.name%]</label>
+	[%=tab%]<select class="form-control" 
+	[%=tab + "\t"%][(ngModel)]="businessService.selectedRow.[%=optionName%]">
+	[%=tab + "\t"%]<option *ngfor="let option of [%=optionName%]Options"  [value]="option.name">{{option.name}}</option>
+	[%=tab%]</select> type="text" class="form-control"/>
+[%}%]
+
+[*ACTION HTML*]
+[%operation pila_front!Action writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%]() class="btn btn-primary">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*TABULATION*]
+[%function calculateTab(indent):String{
+	var tab = "";
+	var i = 0;
+	while(i < indent){
+		tab += "\t";
+		i++;
+	}
+	return tab;
+}%]
+
+[**]

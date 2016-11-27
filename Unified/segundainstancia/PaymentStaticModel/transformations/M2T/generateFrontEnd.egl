@@ -1,0 +1,9 @@
+[%
+	import "Form/generate_form_component.egl";
+	
+	var outputDir = "../../TransformationOutput/";
+	
+	for(view in pila_front!View.allInstances()){
+		generateFormComponent(outputDir, view);
+	}	
+%]
