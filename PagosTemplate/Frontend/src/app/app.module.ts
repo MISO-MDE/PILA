@@ -48,6 +48,7 @@ import {PaymentsComponent} from './payments/grid/grid.component';
 import {PaymentFormComponent} from './payments/form/form.component';
 import {PaymentApiService} from "./payments/rest.api.service";
 import {PaymentsBusinessService} from "./payments/business.service";
+import { SuperentityComponent } from './superentity/superentity.component';
 
 
 export const firebaseConfig = {
@@ -80,7 +81,8 @@ const myFirebaseAuthConfig = {
     NewFormComponent,
     PensionersGridComponent,
     PensionerFormComponent,
-    Ripple
+    Ripple,
+    SuperentityComponent
   ],
   imports: [
     BrowserModule,
