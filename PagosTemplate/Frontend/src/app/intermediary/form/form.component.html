@@ -7,7 +7,7 @@
     <input [(ngModel)]="businessService.selectedRow.name" type="text" class="form-control"/>
     <label>Actividad Económica</label>
     <select class="form-control"
-            [(ngModel)]="businessService.selectedRow.ciiuCode">
+            [(ngModel)]="businessService.selectedRow.actividadeconomica">
       <option *ngFor="let option of  actividadeconomica" [value]="option.id">{{option.descripcion}}</option>
     </select>
 
