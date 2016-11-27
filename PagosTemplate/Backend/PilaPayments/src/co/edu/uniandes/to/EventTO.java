@@ -52,12 +52,7 @@ public class EventTO {
 	/**
 	 * entity al cual se le aplica la novedad
 	 */
-	private PilaEntity entity;
-	
-	/**
-	 * Super entity que crea la novedad
-	 */
-	private SuperEntity superEntity;
+	private Long cedulaEntity;
 	
 	/**
 	 * dias habiles de la novedad
@@ -156,31 +151,46 @@ public class EventTO {
 	}
 
 	/**
-	 * @return the entity
+	 * @return the diasHabiles
 	 */
-	public PilaEntity getEntity() {
-		return entity;
+	public int getDiasHabiles() {
+		return diasHabiles;
 	}
 
 	/**
-	 * @param entity the entity to set
+	 * @param diasHabiles the diasHabiles to set
 	 */
-	public void setEntity(PilaEntity entity) {
-		this.entity = entity;
+	public void setDiasHabiles(int diasHabiles) {
+		this.diasHabiles = diasHabiles;
+	}
+	
+	
+
+	/**
+	 * @return the cedulaEntity
+	 */
+	public Long getCedulaEntity() {
+		return cedulaEntity;
 	}
 
 	/**
-	 * @return the superEntity
+	 * @param cedulaEntity the cedulaEntity to set
 	 */
-	public SuperEntity getSuperEntity() {
-		return superEntity;
+	public void setCedulaEntity(Long cedulaEntity) {
+		this.cedulaEntity = cedulaEntity;
 	}
 
 	/**
-	 * @param superEntity the superEntity to set
+	 * @return the id
 	 */
-	public void setSuperEntity(SuperEntity superEntity) {
-		this.superEntity = superEntity;
+	public Long getId() {
+		return id;
 	}
 
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
 }

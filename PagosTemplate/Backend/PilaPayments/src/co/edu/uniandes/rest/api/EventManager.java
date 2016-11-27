@@ -95,7 +95,7 @@ public class EventManager {
 		
 		EventTO event = mapObjectEntity2EvenTO(theEvent);
 		
-		EventLogic.getEventLogic().createEvent(event);
+		EventLogic.getEventLogic().create(event);
 
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
 
@@ -147,6 +147,10 @@ public class EventManager {
 
 		if(node.get("variacionSalario").asLong() > 0) {
 			to.setVariacionSalario(node.get("variacionSalario").asLong());
+		}
+		
+		if(node.get("diasHabiles").asInt() > 0) {
+			to.setDiasHabiles((node.get("tipoNovedad").asInt()));
 		}
 
 		return to;

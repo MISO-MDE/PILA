@@ -7,6 +7,8 @@ import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAO;
 import co.edu.uniandes.dao.NovedadDAOImpl;
 import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.entity.PilaEntity;
+import co.edu.uniandes.staticmodel.EstadoNovedad;
 import co.edu.uniandes.staticmodel.TipoNovedad;
 import co.edu.uniandes.to.EventTO;
 
@@ -36,9 +38,23 @@ public class EventLogic {
 	 * @param novedadTO to con los valores de novedad
 	 * @return retorna valor de novedad
 	 */
-	public String createEvent(EventTO novedadTO) {
+	public String create(EventTO novedadTO) {
 		
-		return "";
+		String response = "";
+		
+		PilaEntity entity = new PilaEntity();
+		Novedad novedad = new Novedad();
+		novedad.setEntity(entityDAO.find(novedadTO.getCedulaEntity()));
+		novedad.setEstado(EstadoNovedad.PENDIENTE);
+		novedad.setFechaCreacion(novedadTO.getFechaCreacion());
+		novedad.setFechaInicio(novedadTO.getFechaInicio());
+		novedad.setFechaFin(novedadTO.getFechaInicio());
+		novedad.setVariacionSalario(novedadTO.getVariacionSalario());
+		novedad.setCantidadDiasHabiles(novedadTO.getDiasHabiles());
+		
+		response = novedadDAO.create(novedad).getId().toString();
+		
+		return response;
 	}
 	
 	public List<Novedad> findByEntityTipo(Long idEntity, TipoNovedad tipo) {
