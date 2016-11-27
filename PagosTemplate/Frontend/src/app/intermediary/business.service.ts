@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {IntermediaryApiService} from "./rest.api.service";
 import {SuperEntity, User} from "../commons/sharedresources/classes";
-import {UserApiService} from "../services/user.api.service";
+import {UserApiService} from "../commons/fire-login/user.api.service";
 @Injectable()
 export class IntermediaryBusinessService {
   public rows: Array<any>;

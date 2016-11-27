@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule}   from '@angular/router';
-import {UserApiService} from './services/user.api.service';
+import {UserApiService} from './commons/fire-login/user.api.service';
 import {ModalModule} from 'angular2-modal';
 import {BootstrapModalModule} from 'angular2-modal/plugins/bootstrap';
 import {AngularFireModule, AuthMethods, AuthProviders} from 'angularfire2';
