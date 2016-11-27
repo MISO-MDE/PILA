@@ -1,3 +1,5 @@
+
+    --Estos son los datos de los parametros
     --ActividadEconomica
     insert into ActividadEconomica (id, codigo, descripcion) values(1,'8022','Establecimientos de educación media');
 	insert into ActividadEconomica (id, codigo, descripcion) values(2,'8513','Empresas dedicadas a practicas de odontologia');

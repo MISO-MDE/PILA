@@ -1,4 +1,5 @@
 
+--Este archivo se debe autogenerar con el modelo   de las validaciones
 --validacionpensionadopagador
 insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(1,1,1);
 insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(2,1,2);
