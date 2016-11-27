@@ -1,26 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 import {PAsideService} from "../../commons/p-aside/p-aside.service";
-import {PaymentFormComponent} from "../form/form.component";
-import {PaymentsBusinessService} from "../business.service";
+import {NewFormComponent} from "../form/form.component";
+import {NewsBusinessService} from "../business.service";
 
 @Component({
-  selector: 'app-payments',
+  selector: 'app-news',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.less']
 })
-export class PaymentsComponent implements OnInit {
+export class NewsComponent implements OnInit {
+
 
   constructor(private asideService: PAsideService,
-              private businessService: PaymentsBusinessService) {
+              public businessService: NewsBusinessService) {
   }
 
   ngOnInit() {
-    this.asideService.showAside(PaymentFormComponent);
-    this.businessService.loadPayments();
+    this.asideService.showAside(NewFormComponent);
+    this.businessService.loadEvents();
   }
 
   public editRow(row: any) {
-    console.log(row);
+     this.businessService.selectRow(row);
   }
 
   public deleteRow(row: any) {
@@ -30,5 +31,4 @@ export class PaymentsComponent implements OnInit {
   public getRowData(row, data) {
     return row [data];
   }
-
 }

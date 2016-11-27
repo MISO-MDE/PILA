@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FireLoginService} from "../fire-login/fire-login.service";
+import {FireLoginService} from "../../commons/fire-login/fire-login.service";
 
 @Component({
   selector: 'app-p-header',

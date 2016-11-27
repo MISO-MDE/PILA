@@ -3,7 +3,7 @@ import {Component, OnInit, ViewContainerRef, ViewEncapsulation} from '@angular/c
 import {Overlay} from 'angular2-modal';
 import {Modal} from 'angular2-modal/plugins/bootstrap';
 import {Router} from '@angular/router';
-import {UserApiService} from '../services/user.api.service';
+import {UserApiService} from './user.api.service';
 import {IUser} from '../sharedresources/interfaces'
 import {PAsideService} from "../p-aside/p-aside.service";
 import {FireLoginService} from "./fire-login.service";

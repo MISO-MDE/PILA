@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
-import { ISuperEntity } from '../sharedresources/interfaces'
+import { ISuperEntity } from '../commons/sharedresources/interfaces'
 
 @Injectable()
 export class IntermediaryApiService {

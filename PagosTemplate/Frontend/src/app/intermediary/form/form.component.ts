@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IntermediaryBusinessService} from "../business.service";
-import {ISuperEntity, IUser} from "../../sharedresources/interfaces";
+import {ISuperEntity, IUser} from "../../commons/sharedresources/interfaces";
 
 @Component({
   selector: 'app-intermediary-form',
