@@ -67,11 +67,10 @@ export class PensionerBusinessService {
   }
 
   public selectRow(row) {
-    this.selectedRow = JSON.parse(JSON.stringify(row)); //clona el objeto
-    //this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
-    this.selectedRow.pensionType = row.pensionType.name;
-    this.selectedRow.pensionerType = row.pensionerType.name;
-    this.selectedRow.profession = row.profession.id;
+    this.selectedRow = JSON.parse(JSON.stringify(row));
+    this.selectedRow.tipoPension = row.tipoPension.id;
+    this.selectedRow.tipoPensionado = row.tipoPensionado.id;
+    this.selectedRow.profession = row.profession;
     this.selectedRow.residenceCountry = row.residence.id + "";
     this.selectedRow.familyResidenceCountry = row.familyResidence.id + "";
   }

@@ -43,12 +43,9 @@
       <option *ngFor="let option of  countryOptions" [value]="option.id">{{option.name}}</option>
     </select>
 
-    <!-- Field type: select -->
+    <!-- Field type: text -->
     <label>Profesión</label>
-    <select class="form-control"
-            [(ngModel)]="businessService.selectedRow.actividad">
-      <option *ngFor="let option of  profession" [value]="option.id">{{option.name}}</option>
-    </select>
+    <input [(ngModel)]="businessService.selectedRow.profesion" type="text" class="form-control"/>
 
     <!-- Field type: number -->
     <label>Salario</label>
@@ -57,7 +54,7 @@
 
   <div class="text-right">
     <!-- Action type: save -->
-    <button (click)="save()" class="btn btn-primary">
+    <button *ngIf="!businessService.isEditingRow()" (click)="save()" class="btn btn-primary">
       <span>Crear</span>
     </button>
 

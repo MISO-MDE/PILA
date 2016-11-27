@@ -14,7 +14,7 @@ export class PensionerApiService {
   public loadList(userId: String): Observable<any> {
     var urlGet;
     if (userId === '*') {
-      urlGet = this.url;
+      urlGet = this.url + '/entities';
     }
     else {
       urlGet = this.url + '/entities' + "?" + userId;
