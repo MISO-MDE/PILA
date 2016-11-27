@@ -54,7 +54,7 @@ public class SuperEntityLogic {
 	 * crea una super entidad
 	 * @param superTO
 	 */
-	public String createSuperEntity(SuperEntityTO superTO) {
+	public String create(SuperEntityTO superTO) {
 		
 		// se crea la super entidad
 		SuperEntity superEntity= new SuperEntity();
@@ -80,7 +80,7 @@ public class SuperEntityLogic {
 		//se crea el usuario
 		UserSuperEntity user = new UserSuperEntity();
 		
-		SuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(Long.parseLong(superTO.getIdSuperEntity()));
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
@@ -103,12 +103,12 @@ public class SuperEntityLogic {
 	 * Actualiza la superEntidad
 	 * @return super entidad actualizada
 	 */
-	public String updateSuperEntityUser(SuperEntityTO superTO) {
+	public String update(SuperEntityTO superTO) {
 		
-		SuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(Long.parseLong(superTO.getIdSuperEntity()));
 		String response = "SuperEntity not updated";
 		if(superEntity != null) {
-		
+			
 			if(!superTO.getNombre().isEmpty()) {
 				superEntity.setNombre(superTO.getNombre());
 			} 
@@ -137,7 +137,7 @@ public class SuperEntityLogic {
 	 * elimina un super entity
 	 * @param id
 	 */
-	public void removeSuperEntity(Long id) {
+	public void delete(Long id) {
 		SuperEntity superEntity = superDAO.findSuperEntityById(id);
 		superDAO.deleteEntity(superEntity);
 	}

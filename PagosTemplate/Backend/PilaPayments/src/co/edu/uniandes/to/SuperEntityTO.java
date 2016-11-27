@@ -9,7 +9,7 @@ public class SuperEntityTO {
 	/**
 	 * id del super entity
 	 */
-	private Long idSuperEntity;
+	private String idSuperEntity;
 	
 	/**
 	 * Nit de la super entidad
@@ -142,18 +142,18 @@ public class SuperEntityTO {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
+	
 	/**
 	 * @return the idSuperEntity
 	 */
-	public Long getIdSuperEntity() {
+	public String getIdSuperEntity() {
 		return idSuperEntity;
 	}
 
 	/**
 	 * @param idSuperEntity the idSuperEntity to set
 	 */
-	public void setIdSuperEntity(Long idSuperEntity) {
+	public void setIdSuperEntity(String idSuperEntity) {
 		this.idSuperEntity = idSuperEntity;
 	}
 

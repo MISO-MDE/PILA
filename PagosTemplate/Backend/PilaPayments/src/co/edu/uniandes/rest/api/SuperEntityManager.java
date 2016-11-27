@@ -129,7 +129,7 @@ public class SuperEntityManager {
 			return  Response.status(Response.Status.BAD_REQUEST).build();
 		}
 		
-		String id = getSuperEntityLogic().createSuperEntity(superTO);
+		String id = getSuperEntityLogic().create(superTO);
 		
 		String response = "{\"id\":\""+ id +"\"}"; 
 
@@ -151,6 +151,12 @@ public class SuperEntityManager {
 		final ObjectNode node = mapper.readValue(theSuperEntity.toString(), ObjectNode.class);
 		SuperEntityTO superTO = new SuperEntityTO();
 		
+		if(!node.get("id").asText().isEmpty()) {
+			superTO.setIdSuperEntity(node.get("id").asText());
+		} else {
+			return "No se recibio el id del super entity";
+		}
+		
 		if(!node.get("nit").asText().isEmpty()) {
 			superTO.setNIT(node.get("nit").asText());
 		}
@@ -167,7 +173,7 @@ public class SuperEntityManager {
 			superTO.setActividadEconomica(node.get("tipoPagador").asText());
 		}
 		
-		String id = getSuperEntityLogic().updateSuperEntityUser(superTO);
+		String id = getSuperEntityLogic().update(superTO);
 		String response = "{\"id\":\"" + id + "\"}";
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");
@@ -185,7 +191,7 @@ public class SuperEntityManager {
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response deleteSuperEntity(@PathParam("id") String id) {
 		logger.debug("Start deleteSuperEntity"+id);
-		getSuperEntityLogic().removeSuperEntity(Long.parseLong(id));
+		getSuperEntityLogic().delete(Long.parseLong(id));
 		
 		return Response.status(200).entity("ok").build();
 	}
