@@ -9,7 +9,8 @@ import {ISuperEntity, IUser} from "../../commons/sharedresources/interfaces";
 })
 export class IntermediaryFormComponent implements OnInit {
   public userAdmin: any = <IUser>{};
-  public parameters: any = [];
+  public tipopagador: any = [];
+  public actividadeconomica: any = [];
 
   constructor(private businessService: IntermediaryBusinessService) {
   }
@@ -17,10 +18,16 @@ export class IntermediaryFormComponent implements OnInit {
   ngOnInit() {
     //this.superEntity = () => this.intermediaryService.selectedRow;
     this.businessService.loadEconnActivities();
+
     this.businessService.getParameters('/parameters/tipopagador')
       .subscribe((response: any) => {
-        this.parameters = response;
+        this.tipopagador = response;
       });
+    this.businessService.getParameters('/parameters/actividadeconomica')
+      .subscribe((response: any) => {
+        this.actividadeconomica = response;
+      });
+
   }
 
   public saveSuperEntity() {
