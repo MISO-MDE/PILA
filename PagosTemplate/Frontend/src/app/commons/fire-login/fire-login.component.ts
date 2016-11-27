@@ -45,6 +45,7 @@ export class FireLoginComponent implements OnInit {
         this.userApiService.getUserData(res.uid).subscribe((user: IUser) => {
           //guarda la data en un singleton
           this.fireLoginService.setUserData(user);
+          localStorage.setItem("userData", JSON.stringify(user));
           console.log("Navega a homepage " + user.roleName);
           if (user.roleName === 'SuperEntity') {
             link = ['/homepage']; // landingpage de la super entidad

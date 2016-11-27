@@ -7,6 +7,7 @@ export class FireLoginService {
   private userData: any = {};
 
   constructor() {
+    this.userData = JSON.parse(localStorage.getItem("userData")) || {};
   }
 
   public setUserData(data) {
@@ -15,5 +16,10 @@ export class FireLoginService {
 
   public getUserData() {
     return this.userData;
+  }
+
+  public logout(){
+    this.userData ={};
+    localStorage.removeItem("userData");
   }
 }
