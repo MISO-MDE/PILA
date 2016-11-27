@@ -22,11 +22,6 @@ public class SuperEntityTO {
 	private String nombre;
 	
 	/**
-	 * CIU de la actividad economica
-	 */
-	private String CIU;
-	
-	/**
 	 * email del usuario
 	 */
 	private String email;
@@ -51,9 +46,9 @@ public class SuperEntityTO {
 	/**
 	 * id dle tipopagador
 	 */
-	private Long tipoPagador;
+	private String tipoPagador;
 	
-	private Long actividadEconomica;
+	private String actividadEconomica;
 	
 	private String profesion;
 	
@@ -90,20 +85,6 @@ public class SuperEntityTO {
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	/**
-	 * @return the cIU
-	 */
-	public String getCIU() {
-		return CIU;
-	}
-
-	/**
-	 * @param cIU the cIU to set
-	 */
-	public void setCIU(String cIU) {
-		CIU = cIU;
 	}
 
 	/**
@@ -177,34 +158,6 @@ public class SuperEntityTO {
 	}
 
 	/**
-	 * @return the tipoPagador
-	 */
-	public Long getTipoPagador() {
-		return tipoPagador;
-	}
-
-	/**
-	 * @param tipoPagador the tipoPagador to set
-	 */
-	public void setTipoPagador(Long tipoPagador) {
-		this.tipoPagador = tipoPagador;
-	}
-
-	/**
-	 * @return the actividadEconomica
-	 */
-	public Long getActividadEconomica() {
-		return actividadEconomica;
-	}
-
-	/**
-	 * @param actividadEconomica the actividadEconomica to set
-	 */
-	public void setActividadEconomica(Long actividadEconomica) {
-		this.actividadEconomica = actividadEconomica;
-	}
-
-	/**
 	 * @return the profesion
 	 */
 	public String getProfesion() {
@@ -216,5 +169,33 @@ public class SuperEntityTO {
 	 */
 	public void setProfesion(String profesion) {
 		this.profesion = profesion;
+	}
+
+	/**
+	 * @return the tipoPagador
+	 */
+	public String getTipoPagador() {
+		return tipoPagador;
+	}
+
+	/**
+	 * @param tipoPagador the tipoPagador to set
+	 */
+	public void setTipoPagador(String tipoPagador) {
+		this.tipoPagador = tipoPagador;
+	}
+
+	/**
+	 * @return the actividadEconomica
+	 */
+	public String getActividadEconomica() {
+		return actividadEconomica;
+	}
+
+	/**
+	 * @param actividadEconomica the actividadEconomica to set
+	 */
+	public void setActividadEconomica(String actividadEconomica) {
+		this.actividadEconomica = actividadEconomica;
 	}
 }

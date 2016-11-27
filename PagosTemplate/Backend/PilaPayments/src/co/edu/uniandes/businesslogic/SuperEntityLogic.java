@@ -60,8 +60,8 @@ public class SuperEntityLogic {
 		SuperEntity superEntity= new SuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
-		superEntity.setActividad(actividadDAO.find(superTO.getActividadEconomica()));
-		superEntity.setTipoPagador(pagadorDAO.find(superTO.getTipoPagador()));
+		superEntity.setActividad(actividadDAO.find(Long.parseLong(superTO.getActividadEconomica())));
+		superEntity.setTipoPagador(pagadorDAO.find(Long.parseLong(superTO.getTipoPagador())));
 		
 		superEntity = superDAO.create(superEntity);	
 		
@@ -117,12 +117,12 @@ public class SuperEntityLogic {
 				superEntity.setNIT(superTO.getNIT());
 			}
 			
-			if(!superTO.getCIU().isEmpty()) {
-				superEntity.setActividad(actividadDAO.find(superTO.getActividadEconomica()));
+			if(!superTO.getActividadEconomica().isEmpty()) {
+				superEntity.setActividad(actividadDAO.find(Long.valueOf(superTO.getActividadEconomica())));
 			}
 			
 			if(superTO.getTipoPagador() != null) {
-				superEntity.setTipoPagador(pagadorDAO.find(superTO.getTipoPagador()));
+				superEntity.setTipoPagador(pagadorDAO.find(Long.valueOf(superTO.getTipoPagador())));
 			}
 			
 			

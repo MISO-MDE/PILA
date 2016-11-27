@@ -111,21 +111,23 @@ public class SuperEntityManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
+	public Response postSuperEntity(String theSuperEntity) {
 
 		logger.debug("Start postSuperEntity");
 		
 		logger.debug("Object " + theSuperEntity.toString());
-		
-		final ObjectNode node = new ObjectMapper().readValue(theSuperEntity.toString(), ObjectNode.class);
-
+	
 		SuperEntityTO superTO = new SuperEntityTO();
-		
-		superTO.setNIT(node.get("nit").asText());
-		superTO.setNombre(node.get("name").asText());
-		superTO.setCIU(node.get("ciiuCode").asText());
-		
-		logger.debug("Start postSuperEntity Revisando Ciucode:" + node.get("ciiuCode").asText());
+		try {
+			final ObjectNode node = new ObjectMapper().readValue(theSuperEntity.toString(), ObjectNode.class);
+			superTO.setNIT(node.get("nit").asText());
+			superTO.setNombre(node.get("name").asText());
+			superTO.setActividadEconomica(node.get("actividadeconomica").asText());
+			superTO.setTipoPagador(node.get("tipoPagador").asText());
+			
+		} catch(IOException e) {
+			return  Response.status(Response.Status.BAD_REQUEST).build();
+		}
 		
 		String id = getSuperEntityLogic().createSuperEntity(superTO);
 		
@@ -157,12 +159,16 @@ public class SuperEntityManager {
 			superTO.setNombre(node.get("name").asText());
 		}
 		
-		if(!node.get("ciiuCode").asText().isEmpty()) {
-			superTO.setCIU(node.get("ciiuCode").asText());
+		if(!node.get("actividadeconomica").asText().isEmpty()) {
+			superTO.setActividadEconomica(node.get("actividadeconomica").asText());
 		}
 		
-		String response = getSuperEntityLogic().updateSuperEntityUser(superTO);
-
+		if(!node.get("tipoPagador").asText().isEmpty()) {
+			superTO.setActividadEconomica(node.get("tipoPagador").asText());
+		}
+		
+		String id = getSuperEntityLogic().updateSuperEntityUser(superTO);
+		String response = "{\"id\":\"" + id + "\"}";
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");
 

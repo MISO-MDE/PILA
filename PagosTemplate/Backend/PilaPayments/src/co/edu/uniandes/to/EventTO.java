@@ -163,8 +163,6 @@ public class EventTO {
 	public void setDiasHabiles(int diasHabiles) {
 		this.diasHabiles = diasHabiles;
 	}
-	
-	
 
 	/**
 	 * @return the cedulaEntity

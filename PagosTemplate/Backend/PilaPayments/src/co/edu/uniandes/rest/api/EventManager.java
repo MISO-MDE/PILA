@@ -89,14 +89,43 @@ public class EventManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response create(String theEvent) throws JsonParseException, JsonMappingException, IOException, ParseException {
-
+	public Response create(String theEvent) throws ParseException {
+		
 		logger.debug("Start postEvent");
-		
-		EventTO event = mapObjectEntity2EvenTO(theEvent);
-		
-		EventLogic.getEventLogic().create(event);
 
+		EventTO to = new EventTO();
+		try {
+			final ObjectNode node = new ObjectMapper().readValue(theEvent.toString(), ObjectNode.class);
+			
+			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+			if(!node.get("fechaFinal").asText().isEmpty()) {	        	
+				to.setFechaFin(format.parse(node.get("fechaFinal").asText()));
+			}
+
+			if(!node.get("fechaInicial").asText().isEmpty()) {	        	
+				to.setFechaInicio(format.parse(node.get("fechaInicial").asText()));
+			}
+
+			to.setFechaCreacion(new Date());
+
+			if(node.get("tipoNovedad").asInt() > 0) {
+				to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
+			}
+
+			if(node.get("variacionSalario").asLong() > 0) {
+				to.setVariacionSalario(node.get("variacionSalario").asLong());
+			}
+			
+			if(node.get("diasHabiles").asInt() > 0) {
+				to.setDiasHabiles((node.get("tipoNovedad").asInt()));
+			}
+			String id = EventLogic.getEventLogic().create(to);
+			
+			String response = "{\"id\":\""+ id +"\"}";
+		} catch(IOException | ParseException e) {
+			return  Response.status(Response.Status.BAD_REQUEST).build();
+		}
+		
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
 
 		logger.debug("result: '"+response+"'");
@@ -107,12 +136,44 @@ public class EventManager {
 
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
-	public String putSuperEntity(Object theEvent) {
+	public String udpate(Object theEvent) throws JsonParseException, JsonMappingException, IOException, ParseException {
 		logger.debug("Start putEvent");
 		
-		
+		String response = "";
+		String id = "";
+		EventTO to = new EventTO();
+		try {
+			final ObjectNode node = new ObjectMapper().readValue(theEvent.toString(), ObjectNode.class);
+			
+			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+			if(!node.get("fechaFinal").asText().isEmpty()) {	        	
+				to.setFechaFin(format.parse(node.get("fechaFinal").asText()));
+			}
 
-		String response = null;
+			if(!node.get("fechaInicial").asText().isEmpty()) {	        	
+				to.setFechaInicio(format.parse(node.get("fechaInicial").asText()));
+			}
+
+			to.setFechaCreacion(new Date());
+
+			if(node.get("tipoNovedad").asInt() > 0) {
+				to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
+			}
+
+			if(node.get("variacionSalario").asLong() > 0) {
+				to.setVariacionSalario(node.get("variacionSalario").asLong());
+			}
+			
+			if(node.get("diasHabiles").asInt() > 0) {
+				to.setDiasHabiles((node.get("tipoNovedad").asInt()));
+			}
+			id = EventLogic.getEventLogic().create(to);
+			
+		} catch(IOException | ParseException e) {
+			response = "No se pudo actualizar la novedad " + e.getMessage();
+		}
+		
+		response = "{\"id\":\""+ id +"\"}";
 
 		logger.debug("result: '"+response+"'");
         logger.debug("End putEvent");
@@ -124,37 +185,6 @@ public class EventManager {
 	public void deleteSuperEntity(Object theEvent) {
 		
 		logger.debug("Start deleteEntity");
-	}
-	
-	private EventTO mapObjectEntity2EvenTO(Object theEntity) throws JsonParseException, JsonMappingException, IOException, ParseException {
-		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
-		logger.debug("Object " + node.asText());
-		EventTO to = new EventTO();
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		if(!node.get("fechaFinal").asText().isEmpty()) {	        	
-			to.setFechaFin(format.parse(node.get("fechaFinal").asText()));
-		}
-
-		if(!node.get("fechaInicial").asText().isEmpty()) {	        	
-			to.setFechaInicio(format.parse(node.get("fechaInicial").asText()));
-		}
-
-		to.setFechaCreacion(new Date());
-
-		if(node.get("tipoNovedad").asInt() > 0) {
-			to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
-		}
-
-		if(node.get("variacionSalario").asLong() > 0) {
-			to.setVariacionSalario(node.get("variacionSalario").asLong());
-		}
-		
-		if(node.get("diasHabiles").asInt() > 0) {
-			to.setDiasHabiles((node.get("tipoNovedad").asInt()));
-		}
-
-		return to;
-
 	}
 		
 	/**

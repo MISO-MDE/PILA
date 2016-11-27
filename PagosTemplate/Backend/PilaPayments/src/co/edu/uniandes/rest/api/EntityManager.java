@@ -95,7 +95,7 @@ public class EntityManager {
         EntityTO entityTO = this.mapObjectEntity2PilaEntityTO(theEntity);
         String id = getEntityLogic().update(entityTO);
 
-        String response = null;
+        String response = "{\"id\":\"" + id + "\"}";
         logger.debug("result: '" + response + "'");
         logger.debug("End update");
         return response;

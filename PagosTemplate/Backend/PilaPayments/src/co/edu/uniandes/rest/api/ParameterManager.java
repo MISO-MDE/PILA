@@ -16,19 +16,11 @@ import org.apache.logging.log4j.Logger;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import co.edu.uniandes.businesslogic.EntityLogic;
 import co.edu.uniandes.businesslogic.ParameterLogic;
-import co.edu.uniandes.dao.ActividadEconomicaDAO;
 import co.edu.uniandes.dao.ActividadEconomicaDAOImpl;
-import co.edu.uniandes.dao.EntityDAOImpl;
-import co.edu.uniandes.dao.SuperEntityDAOImpl;
-import co.edu.uniandes.dao.TipoPagadorDAO;
 import co.edu.uniandes.dao.TipoPagadorDAOImpl;
-import co.edu.uniandes.dao.TipoPensionDAO;
 import co.edu.uniandes.dao.TipoPensionDAOImpl;
-import co.edu.uniandes.dao.TipoPensionadoDAO;
 import co.edu.uniandes.dao.TipoPensionadoDAOImpl;
-import co.edu.uniandes.entity.Parametro;
 import co.edu.uniandes.entity.TipoPension;
 import co.edu.uniandes.entity.TipoPensionado;
 import co.edu.uniandes.entity.Validacion;
@@ -41,7 +33,6 @@ public class ParameterManager {
 
 	 /**
      * Retorna los TipoPagador
-     *
      * @return entidades
      */
     @GET
