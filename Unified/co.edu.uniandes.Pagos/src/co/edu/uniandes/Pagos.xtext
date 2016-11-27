@@ -3,8 +3,8 @@ grammar co.edu.uniandes.Pagos with org.eclipse.xtext.common.Terminals
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-import "http://www.edu.co/uniandes/Pagos" 
-//generate pagos "http://www.edu.co/uniandes/Pagos"
+//import "http://www.edu.co/uniandes/Pagos" 
+generate pagos "http://www.edu.co/uniandes/Pagos"
 
 Application:
 	LBRACE
@@ -88,7 +88,7 @@ CalculationTemplate:
 		'calculationattributes' COLON 
 			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET
 		COMMA
-		'calculationrules' COLON formulas += Formula
+		'calculationrules' COLON formulas = Formula
 	RBRACE
 	;
 
@@ -108,7 +108,7 @@ IfCondition returns IfCondition:
 			RBRACKET
 		THEN
 		LBRACE
-			RETURN COLON expression += Adicion
+			formulaReturn = ReturnBlock
 		RBRACE
 	;
 

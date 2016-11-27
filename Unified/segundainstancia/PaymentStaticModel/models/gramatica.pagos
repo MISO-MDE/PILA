@@ -61,7 +61,7 @@ intermediary:
 								calculationrules:
 									SI [vivienda  <> "Colombia" && grupofamiliar <> "Colombia"] ENTONCES
 									{
-										RETORNAR: 0
+										RETORNAR: 5 - 2
 									}	
 									SINO
 									{

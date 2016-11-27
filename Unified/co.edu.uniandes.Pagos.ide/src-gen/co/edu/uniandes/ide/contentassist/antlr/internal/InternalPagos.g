@@ -5470,9 +5470,9 @@ rule__IfCondition__Group__7__Impl
 	}
 :
 (
-	{ before(grammarAccess.getIfConditionAccess().getRETURNTerminalRuleCall_7()); }
-	RULE_RETURN
-	{ after(grammarAccess.getIfConditionAccess().getRETURNTerminalRuleCall_7()); }
+	{ before(grammarAccess.getIfConditionAccess().getFormulaReturnAssignment_7()); }
+	(rule__IfCondition__FormulaReturnAssignment_7)
+	{ after(grammarAccess.getIfConditionAccess().getFormulaReturnAssignment_7()); }
 )
 ;
 finally {
@@ -5485,7 +5485,6 @@ rule__IfCondition__Group__8
 	}
 :
 	rule__IfCondition__Group__8__Impl
-	rule__IfCondition__Group__9
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -5497,62 +5496,9 @@ rule__IfCondition__Group__8__Impl
 	}
 :
 (
-	{ before(grammarAccess.getIfConditionAccess().getCOLONTerminalRuleCall_8()); }
-	RULE_COLON
-	{ after(grammarAccess.getIfConditionAccess().getCOLONTerminalRuleCall_8()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IfCondition__Group__9
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IfCondition__Group__9__Impl
-	rule__IfCondition__Group__10
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IfCondition__Group__9__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIfConditionAccess().getExpressionAssignment_9()); }
-	(rule__IfCondition__ExpressionAssignment_9)
-	{ after(grammarAccess.getIfConditionAccess().getExpressionAssignment_9()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IfCondition__Group__10
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__IfCondition__Group__10__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__IfCondition__Group__10__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_10()); }
+	{ before(grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_8()); }
 	RULE_RBRACE
-	{ after(grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_10()); }
+	{ after(grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_8()); }
 )
 ;
 finally {
@@ -7367,15 +7313,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__IfCondition__ExpressionAssignment_9
+rule__IfCondition__FormulaReturnAssignment_7
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getIfConditionAccess().getExpressionAdicionParserRuleCall_9_0()); }
-		ruleAdicion
-		{ after(grammarAccess.getIfConditionAccess().getExpressionAdicionParserRuleCall_9_0()); }
+		{ before(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0()); }
+		ruleReturnBlock
+		{ after(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0()); }
 	)
 ;
 finally {

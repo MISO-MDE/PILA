@@ -856,13 +856,13 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//	'calculationattributes' COLON
 		//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
 		//	COMMA
-		//	'calculationrules' COLON formulas+=Formula
+		//	'calculationrules' COLON formulas=Formula
 		//	RBRACE;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{CalculationTemplate} LBRACE 'name' COLON name=ID COMMA 'description' COLON description=STRING COMMA
 		//'calculationattributes' COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET COMMA
-		//'calculationrules' COLON formulas+=Formula RBRACE
+		//'calculationrules' COLON formulas=Formula RBRACE
 		public Group getGroup() { return cGroup; }
 		
 		//{CalculationTemplate}
@@ -940,7 +940,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_18() { return cCOLONTerminalRuleCall_18; }
 		
-		//formulas+=Formula
+		//formulas=Formula
 		public Assignment getFormulasAssignment_19() { return cFormulasAssignment_19; }
 		
 		//Formula
@@ -1034,11 +1034,9 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRBRACKETTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		private final RuleCall cTHENTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		private final RuleCall cLBRACETerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
-		private final RuleCall cRETURNTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
-		private final RuleCall cCOLONTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
-		private final Assignment cExpressionAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cExpressionAdicionParserRuleCall_9_0 = (RuleCall)cExpressionAssignment_9.eContents().get(0);
-		private final RuleCall cRBRACETerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final Assignment cFormulaReturnAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cFormulaReturnReturnBlockParserRuleCall_7_0 = (RuleCall)cFormulaReturnAssignment_7.eContents().get(0);
+		private final RuleCall cRBRACETerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
 		
 		//IfCondition:
 		//	{IfCondition} IF LBRACKET
@@ -1046,11 +1044,11 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//	RBRACKET
 		//	THEN
 		//	LBRACE
-		//	RETURN COLON expression+=Adicion
+		//	formulaReturn=ReturnBlock
 		//	RBRACE;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{IfCondition} IF LBRACKET logExp+=ExpresionLogica RBRACKET THEN LBRACE RETURN COLON expression+=Adicion RBRACE
+		//{IfCondition} IF LBRACKET logExp+=ExpresionLogica RBRACKET THEN LBRACE formulaReturn=ReturnBlock RBRACE
 		public Group getGroup() { return cGroup; }
 		
 		//{IfCondition}
@@ -1077,20 +1075,14 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//LBRACE
 		public RuleCall getLBRACETerminalRuleCall_6() { return cLBRACETerminalRuleCall_6; }
 		
-		//RETURN
-		public RuleCall getRETURNTerminalRuleCall_7() { return cRETURNTerminalRuleCall_7; }
+		//formulaReturn=ReturnBlock
+		public Assignment getFormulaReturnAssignment_7() { return cFormulaReturnAssignment_7; }
 		
-		//COLON
-		public RuleCall getCOLONTerminalRuleCall_8() { return cCOLONTerminalRuleCall_8; }
-		
-		//expression+=Adicion
-		public Assignment getExpressionAssignment_9() { return cExpressionAssignment_9; }
-		
-		//Adicion
-		public RuleCall getExpressionAdicionParserRuleCall_9_0() { return cExpressionAdicionParserRuleCall_9_0; }
+		//ReturnBlock
+		public RuleCall getFormulaReturnReturnBlockParserRuleCall_7_0() { return cFormulaReturnReturnBlockParserRuleCall_7_0; }
 		
 		//RBRACE
-		public RuleCall getRBRACETerminalRuleCall_10() { return cRBRACETerminalRuleCall_10; }
+		public RuleCall getRBRACETerminalRuleCall_8() { return cRBRACETerminalRuleCall_8; }
 	}
 	public class ElseSegmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.ElseSegment");
@@ -1771,7 +1763,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	//	'calculationattributes' COLON
 	//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
 	//	COMMA
-	//	'calculationrules' COLON formulas+=Formula
+	//	'calculationrules' COLON formulas=Formula
 	//	RBRACE;
 	public CalculationTemplateElements getCalculationTemplateAccess() {
 		return pCalculationTemplate;
@@ -1807,7 +1799,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	//	RBRACKET
 	//	THEN
 	//	LBRACE
-	//	RETURN COLON expression+=Adicion
+	//	formulaReturn=ReturnBlock
 	//	RBRACE;
 	public IfConditionElements getIfConditionAccess() {
 		return pIfCondition;

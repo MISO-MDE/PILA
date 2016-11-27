@@ -120,7 +120,7 @@ public class PagosParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIfBlockAccess().getIfSentenceAssignment_1(), "rule__IfBlock__IfSentenceAssignment_1");
 					put(grammarAccess.getIfBlockAccess().getElseSentenceAssignment_2_1(), "rule__IfBlock__ElseSentenceAssignment_2_1");
 					put(grammarAccess.getIfConditionAccess().getLogExpAssignment_3(), "rule__IfCondition__LogExpAssignment_3");
-					put(grammarAccess.getIfConditionAccess().getExpressionAssignment_9(), "rule__IfCondition__ExpressionAssignment_9");
+					put(grammarAccess.getIfConditionAccess().getFormulaReturnAssignment_7(), "rule__IfCondition__FormulaReturnAssignment_7");
 					put(grammarAccess.getElseSegmentAccess().getIfSentenceAssignment_2(), "rule__ElseSegment__IfSentenceAssignment_2");
 					put(grammarAccess.getReturnBlockAccess().getExpressionAssignment_3(), "rule__ReturnBlock__ExpressionAssignment_3");
 					put(grammarAccess.getExpresionLogicaAccess().getVariableAssignment_0(), "rule__ExpresionLogica__VariableAssignment_0");

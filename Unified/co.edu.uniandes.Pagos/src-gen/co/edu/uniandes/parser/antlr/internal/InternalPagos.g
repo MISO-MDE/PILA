@@ -1315,7 +1315,7 @@ ruleCalculationTemplate returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCalculationTemplateRule());
 					}
-					add(
+					set(
 						$current,
 						"formulas",
 						lv_formulas_20_0,
@@ -1530,36 +1530,28 @@ ruleIfCondition returns [EObject current=null]
 		{
 			newLeafNode(this_LBRACE_6, grammarAccess.getIfConditionAccess().getLBRACETerminalRuleCall_6());
 		}
-		this_RETURN_7=RULE_RETURN
-		{
-			newLeafNode(this_RETURN_7, grammarAccess.getIfConditionAccess().getRETURNTerminalRuleCall_7());
-		}
-		this_COLON_8=RULE_COLON
-		{
-			newLeafNode(this_COLON_8, grammarAccess.getIfConditionAccess().getCOLONTerminalRuleCall_8());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getIfConditionAccess().getExpressionAdicionParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0());
 				}
-				lv_expression_9_0=ruleAdicion
+				lv_formulaReturn_7_0=ruleReturnBlock
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getIfConditionRule());
 					}
-					add(
+					set(
 						$current,
-						"expression",
-						lv_expression_9_0,
-						"co.edu.uniandes.Pagos.Adicion");
+						"formulaReturn",
+						lv_formulaReturn_7_0,
+						"co.edu.uniandes.Pagos.ReturnBlock");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		this_RBRACE_10=RULE_RBRACE
+		this_RBRACE_8=RULE_RBRACE
 		{
-			newLeafNode(this_RBRACE_10, grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_10());
+			newLeafNode(this_RBRACE_8, grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_8());
 		}
 	)
 ;

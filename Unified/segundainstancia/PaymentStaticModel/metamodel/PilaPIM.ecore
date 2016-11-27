@@ -66,9 +66,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameterList" eType="#//ParameterList"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="#//Body"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//Body" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
@@ -91,8 +92,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Return">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Body">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ifblock" upperBound="-1"
@@ -109,30 +110,32 @@
         eType="#//ProgramIfExpression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IfCondition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalexpressions" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalexpressions" upperBound="-1"
         eType="#//LogicalExpression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="return" eType="#//Return"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnBlock" eType="#//Return"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="innerIf" eType="#//IfBlock"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewEClass21"/>
   <eClassifiers xsi:type="ecore:EClass" name="ElseSegment">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="innerIfBlocks" eType="#//IfBlock"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerIfBlocks" eType="#//Body"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Return"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="LogicalExpression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="leftTerm" eType="#//TerminalValue"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rightTerm" eType="#//TerminalValue"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logicalOperator" eType="#//LogicalOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftTerm" upperBound="-1"
+        eType="#//TerminalValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightTerm" upperBound="-1"
+        eType="#//TerminalValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logicalOperator" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="moreExpressions" upperBound="-1"
         eType="#//LogicalExpression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conOper" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProgramIfExpression">
@@ -149,22 +152,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="Add" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="leftExp" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rigthExp" eType="#//Expression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//AddOper"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mult" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rigthtExp" eType="#//Expression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="leftExp" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//MultOper"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AddOper">
-    <eLiterals name="ADD"/>
+    <eLiterals name="ADD" literal="+"/>
+    <eLiterals name="MINUS" value="1" literal="-"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MultOper">
-    <eLiterals name="MULT"/>
+    <eLiterals name="MULT" literal="*"/>
+    <eLiterals name="DIV" value="1" literal="/"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationType">
     <eLiterals name="COMPOSITION"/>

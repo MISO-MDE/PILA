@@ -1,75 +1,235 @@
 <?xml version="1.0" encoding="ASCII"?>
-<PagosPim:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim" name="PilaProcessor">
-  <logicalComponents name="Planillator"/>
-  <logicalComponents name="Pagadora">
-    <attributes name="superEntityId"/>
-    <attributes name="Nombre"/>
-    <attributes name="NIT"/>
-    <operations name="createPagadora"/>
-    <operations name="updatePagadora"/>
-    <operations name="deletePagadora"/>
-    <operations name="readPagadora"/>
-  </logicalComponents>
-  <logicalComponents name="Pensionado">
-    <attributes name="Id"/>
-    <attributes name="cedula"/>
-    <attributes name="salario"/>
-    <attributes name="vivienda"/>
-    <attributes name="grupofamiliar"/>
-    <attributes name="NovedadesMes"/>
-    <attributes name="DiasNovedad"/>
-    <attributes name="AltoRiesgo"/>
-    <attributes name="RiesgoLaboral"/>
-    <attributes name="Profesion"/>
-    <operations name="createPensionado"/>
-    <operations name="updatePensionado"/>
-    <operations name="deletePensionado"/>
-    <operations name="readPensionado"/>
-  </logicalComponents>
-  <logicalComponents name="Novedades">
-    <attributes name="FechaInicial"/>
-    <attributes name="FechaFinal"/>
-    <attributes name="TipoNovedad"/>
-    <attributes name="DiasNovedad"/>
-    <attributes name="idEntidad"/>
-    <attributes name="superEntityId"/>
-    <operations name="createNovedades"/>
-    <operations name="updateNovedades"/>
-    <operations name="deleteNovedades"/>
-    <operations name="readNovedades"/>
-  </logicalComponents>
-  <logicalComponents name="Pagos">
-    <attributes name="FechaPago"/>
-    <attributes name="Monto"/>
-    <attributes name="Status"/>
-    <attributes name="MesPago"/>
-    <attributes name="idEntidad"/>
-    <attributes name="superEntityId"/>
-    <operations name="createPagos"/>
-    <operations name="updatePagos"/>
-    <operations name="deletePagos"/>
-    <operations name="readPagos"/>
-  </logicalComponents>
-  <logicalComponents name="EPS">
-    <attributes name="impuesto"/>
-    <attributes name="diasMes"/>
-    <attributes name="salarioHora"/>
-  </logicalComponents>
-  <logicalComponents name="Pension">
-    <attributes name="pensionNormal"/>
-    <attributes name="riesgoLaboral"/>
-    <attributes name="diasLaborables"/>
-  </logicalComponents>
-  <logicalComponents name="RiesgosLaborales">
-    <attributes name="RiesgoI"/>
-    <attributes name="RiesgoII"/>
-    <attributes name="RiesgoIII"/>
-    <attributes name="RiesgoIV"/>
-    <attributes name="RiesgoV"/>
-  </logicalComponents>
-  <logicalComponents name="PrestadoraServicios">
-    <attributes name="Nombre"/>
-    <attributes name="NIT"/>
-    <attributes name="CodigoCIIU"/>
-  </logicalComponents>
-</PagosPim:Application>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim">
+  <PagosPim:Application name="PilaProcessor">
+    <logicalComponents name="Planillator"/>
+    <logicalComponents name="Pagadora">
+      <attributes name="superEntityId"/>
+      <attributes name="Nombre"/>
+      <attributes name="NIT"/>
+      <operations name="createPagadora">
+        <body/>
+      </operations>
+      <operations name="updatePagadora">
+        <body/>
+      </operations>
+      <operations name="deletePagadora">
+        <body/>
+      </operations>
+      <operations name="readPagadora">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents xsi:type="PagosPim:View" title="Administracion Pagadora" name="Pagadora"/>
+    <logicalComponents name="Pensionado">
+      <attributes name="Id"/>
+      <attributes name="cedula"/>
+      <attributes name="salario"/>
+      <attributes name="vivienda"/>
+      <attributes name="grupofamiliar"/>
+      <attributes name="NovedadesMes">
+        <expression xsi:type="PagosPim:TerminalValue" value="0"/>
+      </attributes>
+      <attributes name="DiasNovedad"/>
+      <attributes name="AltoRiesgo"/>
+      <attributes name="RiesgoLaboral"/>
+      <attributes name="Profesion"/>
+      <operations name="createPensionado">
+        <body/>
+      </operations>
+      <operations name="updatePensionado">
+        <body/>
+      </operations>
+      <operations name="deletePensionado">
+        <body/>
+      </operations>
+      <operations name="readPensionado">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents xsi:type="PagosPim:View" name="Pensionado"/>
+    <logicalComponents name="Novedades">
+      <attributes name="FechaInicial"/>
+      <attributes name="FechaFinal"/>
+      <attributes name="TipoNovedad"/>
+      <attributes name="DiasNovedad"/>
+      <attributes name="idEntidad">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.3/@attributes.0"/>
+      </attributes>
+      <attributes name="superEntityId">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.5/@attributes.5"/>
+      </attributes>
+      <operations name="createNovedades">
+        <body/>
+      </operations>
+      <operations name="updateNovedades">
+        <body/>
+      </operations>
+      <operations name="deleteNovedades">
+        <body/>
+      </operations>
+      <operations name="readNovedades">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents xsi:type="PagosPim:View"/>
+    <logicalComponents name="Pagos">
+      <attributes name="FechaPago"/>
+      <attributes name="Monto"/>
+      <attributes name="Status"/>
+      <attributes name="MesPago"/>
+      <attributes name="idEntidad">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.3/@attributes.0"/>
+      </attributes>
+      <attributes name="superEntityId">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.7/@attributes.5"/>
+      </attributes>
+      <operations name="createPagos">
+        <body/>
+      </operations>
+      <operations name="updatePagos">
+        <body/>
+      </operations>
+      <operations name="deletePagos">
+        <body/>
+      </operations>
+      <operations name="readPagos">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents xsi:type="PagosPim:View"/>
+  </PagosPim:Application>
+  <PagosPim:LogicComponent/>
+  <PagosPim:Operation/>
+  <PagosPim:Operation/>
+  <PagosPim:Operation/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfBlock/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:IfCondition/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:ElseSegment/>
+  <PagosPim:Return/>
+  <PagosPim:Return/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:TerminalValue/>
+  <PagosPim:Add/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:Mult/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:LogicalExpression/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:Attribute/>
+  <PagosPim:View title="Administracion Planillator" name="Planillator"/>
+  <PagosPim:View/>
+</xmi:XMI>

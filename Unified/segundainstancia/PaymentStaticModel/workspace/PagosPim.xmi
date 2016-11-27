@@ -1,7 +1,427 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PagosPim="http://www.uniandes.edu.co/PagosPim">
   <PagosPim:Application name="PilaProcessor">
-    <logicalComponents name="Planillator"/>
+    <logicalComponents name="Planillator">
+      <relations targetComponent="/0/@logicalComponents.1" name="Pagadora"/>
+    </logicalComponents>
+    <logicalComponents name="Pagadora">
+      <attributes name="superEntityId"/>
+      <attributes name="Nombre"/>
+      <attributes name="NIT"/>
+      <relations targetComponent="/0/@logicalComponents.2" name="Pensionado"/>
+      <operations name="createPagadora">
+        <body/>
+      </operations>
+      <operations name="updatePagadora">
+        <body/>
+      </operations>
+      <operations name="deletePagadora">
+        <body/>
+      </operations>
+      <operations name="readPagadora">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents name="Pensionado">
+      <attributes name="Id"/>
+      <attributes name="cedula"/>
+      <attributes name="salario"/>
+      <attributes name="vivienda"/>
+      <attributes name="grupofamiliar"/>
+      <attributes name="NovedadesMes">
+        <expression xsi:type="PagosPim:TerminalValue" value="0"/>
+      </attributes>
+      <attributes name="DiasNovedad"/>
+      <attributes name="AltoRiesgo"/>
+      <attributes name="RiesgoLaboral"/>
+      <attributes name="Profesion"/>
+      <relations targetComponent="/0/@logicalComponents.3" name="Novedades"/>
+      <relations targetComponent="/0/@logicalComponents.4" name="Pagos"/>
+      <operations name="createPensionado">
+        <body/>
+      </operations>
+      <operations name="updatePensionado">
+        <body/>
+      </operations>
+      <operations name="deletePensionado">
+        <body/>
+      </operations>
+      <operations name="readPensionado">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents name="Novedades">
+      <attributes name="FechaInicial"/>
+      <attributes name="FechaFinal"/>
+      <attributes name="TipoNovedad"/>
+      <attributes name="DiasNovedad"/>
+      <attributes name="idEntidad">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0"/>
+      </attributes>
+      <attributes name="superEntityId">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.3/@attributes.5"/>
+      </attributes>
+      <operations name="createNovedades">
+        <body/>
+      </operations>
+      <operations name="updateNovedades">
+        <body/>
+      </operations>
+      <operations name="deleteNovedades">
+        <body/>
+      </operations>
+      <operations name="readNovedades">
+        <body/>
+      </operations>
+    </logicalComponents>
+    <logicalComponents name="Pagos">
+      <attributes name="FechaPago"/>
+      <attributes name="Monto"/>
+      <attributes name="Status"/>
+      <attributes name="MesPago"/>
+      <attributes name="idEntidad">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0"/>
+      </attributes>
+      <attributes name="superEntityId">
+        <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@attributes.5"/>
+      </attributes>
+      <operations name="createPagos">
+        <body/>
+      </operations>
+      <operations name="updatePagos">
+        <body/>
+      </operations>
+      <operations name="deletePagos">
+        <body/>
+      </operations>
+      <operations name="readPagos">
+        <body/>
+      </operations>
+      <operations name="calculateEPS">
+        <body>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions conOper="&amp;&amp;">
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.3"/>
+                <logicalOperator>&lt;></logicalOperator>
+                <moreExpressions>
+                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.4"/>
+                  <logicalOperator>&lt;></logicalOperator>
+                  <literal>Colombia</literal>
+                </moreExpressions>
+                <literal>Colombia</literal>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Add" operator="-">
+                  <leftExp xsi:type="PagosPim:TerminalValue" value="5"/>
+                  <rightExp xsi:type="PagosPim:TerminalValue" value="2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+            <elsesegment>
+              <innerIfBlocks>
+                <returnExp>
+                  <expression xsi:type="PagosPim:Mult">
+                    <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.4/@attributes.0"/>
+                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                  </expression>
+                </returnExp>
+              </innerIfBlocks>
+            </elsesegment>
+          </ifblock>
+        </body>
+        <attributes name="impuesto">
+          <expression xsi:type="PagosPim:TerminalValue" value="0.12"/>
+        </attributes>
+        <attributes name="diasMes">
+          <expression xsi:type="PagosPim:TerminalValue" value="30"/>
+        </attributes>
+        <attributes name="salarioHora">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="8"/>
+            <leftExp xsi:type="PagosPim:Mult" operator="/">
+              <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.4/@attributes.1"/>
+              <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+            </leftExp>
+          </expression>
+        </attributes>
+      </operations>
+      <operations name="calculatePension">
+        <body>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions conOper="||">
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.7"/>
+                <rightTerm value="4"/>
+                <logicalOperator>=</logicalOperator>
+                <moreExpressions>
+                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.7"/>
+                  <rightTerm value="5"/>
+                  <logicalOperator>=</logicalOperator>
+                </moreExpressions>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" value="0.26"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+            <elsesegment>
+              <innerIfBlocks>
+                <ifblock>
+                  <ifcondition>
+                    <logicalexpressions>
+                      <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
+                      <logicalOperator>=</logicalOperator>
+                      <literal>Congresista</literal>
+                    </logicalexpressions>
+                    <returnBlock>
+                      <expression xsi:type="PagosPim:Mult">
+                        <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.5/@attributes.1"/>
+                        <leftExp xsi:type="PagosPim:Mult">
+                          <rightExp xsi:type="PagosPim:TerminalValue" value="0.255"/>
+                          <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                        </leftExp>
+                      </expression>
+                    </returnBlock>
+                  </ifcondition>
+                  <elsesegment>
+                    <innerIfBlocks>
+                      <ifblock>
+                        <ifcondition>
+                          <logicalexpressions>
+                            <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
+                            <logicalOperator>=</logicalOperator>
+                            <literal>CTI</literal>
+                          </logicalexpressions>
+                          <returnBlock>
+                            <expression xsi:type="PagosPim:Mult">
+                              <rightExp xsi:type="PagosPim:TerminalValue" value="0.35"/>
+                              <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                            </expression>
+                          </returnBlock>
+                        </ifcondition>
+                        <elsesegment>
+                          <innerIfBlocks>
+                            <ifblock>
+                              <ifcondition>
+                                <logicalexpressions>
+                                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
+                                  <logicalOperator>=</logicalOperator>
+                                  <literal>Aviador</literal>
+                                </logicalexpressions>
+                                <returnBlock>
+                                  <expression xsi:type="PagosPim:Mult">
+                                    <rightExp xsi:type="PagosPim:TerminalValue" value="0.21"/>
+                                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                                  </expression>
+                                </returnBlock>
+                              </ifcondition>
+                            </ifblock>
+                          </innerIfBlocks>
+                        </elsesegment>
+                      </ifblock>
+                    </innerIfBlocks>
+                  </elsesegment>
+                </ifblock>
+              </innerIfBlocks>
+            </elsesegment>
+          </ifblock>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.5"/>
+                <rightTerm value="0"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.5/@attributes.0"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+            <elsesegment>
+              <innerIfBlocks>
+                <ifblock>
+                  <ifcondition>
+                    <logicalexpressions conOper="&amp;&amp;">
+                      <leftTerm attribute="/0/@logicalComponents.4/@operations.5/@attributes.2"/>
+                      <rightTerm value="3"/>
+                      <logicalOperator>>=</logicalOperator>
+                      <moreExpressions conOper="&amp;&amp;">
+                        <leftTerm attribute="/0/@logicalComponents.4/@operations.5/@attributes.2"/>
+                        <rightTerm value="20"/>
+                        <logicalOperator>&lt;</logicalOperator>
+                        <moreExpressions>
+                          <leftTerm attribute="/0/@logicalComponents.3/@attributes.2"/>
+                          <logicalOperator>=</logicalOperator>
+                          <literal>SLN</literal>
+                        </moreExpressions>
+                      </moreExpressions>
+                    </logicalexpressions>
+                    <returnBlock>
+                      <expression xsi:type="PagosPim:Mult">
+                        <rightExp xsi:type="PagosPim:TerminalValue" value="0.12"/>
+                        <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                      </expression>
+                    </returnBlock>
+                  </ifcondition>
+                  <elsesegment>
+                    <innerIfBlocks>
+                      <returnExp>
+                        <expression xsi:type="PagosPim:TerminalValue" value="0"/>
+                      </returnExp>
+                    </innerIfBlocks>
+                  </elsesegment>
+                </ifblock>
+              </innerIfBlocks>
+            </elsesegment>
+          </ifblock>
+        </body>
+        <attributes name="pensionNormal">
+          <expression xsi:type="PagosPim:TerminalValue" value="0.16"/>
+        </attributes>
+        <attributes name="riesgoLaboral">
+          <expression xsi:type="PagosPim:TerminalValue" value="0.20"/>
+        </attributes>
+        <attributes name="diasLaborables">
+          <expression xsi:type="PagosPim:Add" operator="-">
+            <leftExp xsi:type="PagosPim:TerminalValue" value="20"/>
+            <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.3/@attributes.3"/>
+          </expression>
+        </attributes>
+      </operations>
+      <operations name="calculateRiesgosLaborales">
+        <body>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <rightTerm value="1"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.6/@attributes.0"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+          </ifblock>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <rightTerm value="2"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.6/@attributes.1"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+          </ifblock>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <rightTerm value="3"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.6/@attributes.2"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+          </ifblock>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <rightTerm value="4"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.6/@attributes.3"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+          </ifblock>
+          <ifblock>
+            <ifcondition>
+              <logicalexpressions>
+                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <rightTerm value="5"/>
+                <logicalOperator>=</logicalOperator>
+              </logicalexpressions>
+              <returnBlock>
+                <expression xsi:type="PagosPim:Mult">
+                  <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@operations.6/@attributes.4"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.2"/>
+                </expression>
+              </returnBlock>
+            </ifcondition>
+          </ifblock>
+        </body>
+        <attributes name="RiesgoI">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="100"/>
+            <leftExp xsi:type="PagosPim:TerminalValue" value="0.522"/>
+          </expression>
+        </attributes>
+        <attributes name="RiesgoII">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="100"/>
+            <leftExp xsi:type="PagosPim:TerminalValue" value="1.044"/>
+          </expression>
+        </attributes>
+        <attributes name="RiesgoIII">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="100"/>
+            <leftExp xsi:type="PagosPim:TerminalValue" value="2.436"/>
+          </expression>
+        </attributes>
+        <attributes name="RiesgoIV">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="100"/>
+            <leftExp xsi:type="PagosPim:TerminalValue" value="4.350"/>
+          </expression>
+        </attributes>
+        <attributes name="RiesgoV">
+          <expression xsi:type="PagosPim:Mult" operator="/">
+            <rightExp xsi:type="PagosPim:TerminalValue" value="100"/>
+            <leftExp xsi:type="PagosPim:TerminalValue" value="6.960"/>
+          </expression>
+        </attributes>
+      </operations>
+    </logicalComponents>
+    <logicalComponents name="PrestadoraServicios">
+      <attributes name="Nombre"/>
+      <attributes name="NIT"/>
+      <attributes name="CodigoCIIU"/>
+      <operations name="createPrestadoraServicios">
+        <body/>
+      </operations>
+      <operations name="updatePrestadoraServicios">
+        <body/>
+      </operations>
+      <operations name="deletePrestadoraServicios">
+        <body/>
+      </operations>
+      <operations name="readPrestadoraServicios">
+        <body/>
+      </operations>
+    </logicalComponents>
   </PagosPim:Application>
-  <PagosPim:LogicComponent name="Pagadora"/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
+  <PagosPim:Body/>
 </xmi:XMI>

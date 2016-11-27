@@ -41,202 +41,194 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class FormulaImpl extends MinimalEObjectImpl.Container implements Formula
 {
   /**
-   * The cached value of the '{@link #getFormulaBody() <em>Formula Body</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFormulaBody() <em>Formula Body</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFormulaBody()
-   * @generated
-   * @ordered
-   */
+	 * @see #getFormulaBody()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<IfBlock> formulaBody;
 
   /**
-   * The cached value of the '{@link #getFormulaReturn() <em>Formula Return</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFormulaReturn() <em>Formula Return</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFormulaReturn()
-   * @generated
-   * @ordered
-   */
+	 * @see #getFormulaReturn()
+	 * @generated
+	 * @ordered
+	 */
   protected ReturnBlock formulaReturn;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected FormulaImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return PagosPackage.Literals.FORMULA;
-  }
+		return PagosPackage.Literals.FORMULA;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<IfBlock> getFormulaBody()
   {
-    if (formulaBody == null)
-    {
-      formulaBody = new EObjectContainmentEList<IfBlock>(IfBlock.class, this, PagosPackage.FORMULA__FORMULA_BODY);
-    }
-    return formulaBody;
-  }
+		if (formulaBody == null) {
+			formulaBody = new EObjectContainmentEList<IfBlock>(IfBlock.class, this, PagosPackage.FORMULA__FORMULA_BODY);
+		}
+		return formulaBody;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ReturnBlock getFormulaReturn()
   {
-    return formulaReturn;
-  }
+		return formulaReturn;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NotificationChain basicSetFormulaReturn(ReturnBlock newFormulaReturn, NotificationChain msgs)
   {
-    ReturnBlock oldFormulaReturn = formulaReturn;
-    formulaReturn = newFormulaReturn;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, oldFormulaReturn, newFormulaReturn);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		ReturnBlock oldFormulaReturn = formulaReturn;
+		formulaReturn = newFormulaReturn;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, oldFormulaReturn, newFormulaReturn);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setFormulaReturn(ReturnBlock newFormulaReturn)
   {
-    if (newFormulaReturn != formulaReturn)
-    {
-      NotificationChain msgs = null;
-      if (formulaReturn != null)
-        msgs = ((InternalEObject)formulaReturn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
-      if (newFormulaReturn != null)
-        msgs = ((InternalEObject)newFormulaReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
-      msgs = basicSetFormulaReturn(newFormulaReturn, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, newFormulaReturn, newFormulaReturn));
-  }
+		if (newFormulaReturn != formulaReturn) {
+			NotificationChain msgs = null;
+			if (formulaReturn != null)
+				msgs = ((InternalEObject)formulaReturn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
+			if (newFormulaReturn != null)
+				msgs = ((InternalEObject)newFormulaReturn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.FORMULA__FORMULA_RETURN, null, msgs);
+			msgs = basicSetFormulaReturn(newFormulaReturn, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.FORMULA__FORMULA_RETURN, newFormulaReturn, newFormulaReturn));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case PagosPackage.FORMULA__FORMULA_BODY:
-        return ((InternalEList<?>)getFormulaBody()).basicRemove(otherEnd, msgs);
-      case PagosPackage.FORMULA__FORMULA_RETURN:
-        return basicSetFormulaReturn(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case PagosPackage.FORMULA__FORMULA_BODY:
+				return ((InternalEList<?>)getFormulaBody()).basicRemove(otherEnd, msgs);
+			case PagosPackage.FORMULA__FORMULA_RETURN:
+				return basicSetFormulaReturn(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case PagosPackage.FORMULA__FORMULA_BODY:
-        return getFormulaBody();
-      case PagosPackage.FORMULA__FORMULA_RETURN:
-        return getFormulaReturn();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case PagosPackage.FORMULA__FORMULA_BODY:
+				return getFormulaBody();
+			case PagosPackage.FORMULA__FORMULA_RETURN:
+				return getFormulaReturn();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case PagosPackage.FORMULA__FORMULA_BODY:
-        getFormulaBody().clear();
-        getFormulaBody().addAll((Collection<? extends IfBlock>)newValue);
-        return;
-      case PagosPackage.FORMULA__FORMULA_RETURN:
-        setFormulaReturn((ReturnBlock)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case PagosPackage.FORMULA__FORMULA_BODY:
+				getFormulaBody().clear();
+				getFormulaBody().addAll((Collection<? extends IfBlock>)newValue);
+				return;
+			case PagosPackage.FORMULA__FORMULA_RETURN:
+				setFormulaReturn((ReturnBlock)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.FORMULA__FORMULA_BODY:
-        getFormulaBody().clear();
-        return;
-      case PagosPackage.FORMULA__FORMULA_RETURN:
-        setFormulaReturn((ReturnBlock)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.FORMULA__FORMULA_BODY:
+				getFormulaBody().clear();
+				return;
+			case PagosPackage.FORMULA__FORMULA_RETURN:
+				setFormulaReturn((ReturnBlock)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.FORMULA__FORMULA_BODY:
-        return formulaBody != null && !formulaBody.isEmpty();
-      case PagosPackage.FORMULA__FORMULA_RETURN:
-        return formulaReturn != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.FORMULA__FORMULA_BODY:
+				return formulaBody != null && !formulaBody.isEmpty();
+			case PagosPackage.FORMULA__FORMULA_RETURN:
+				return formulaReturn != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //FormulaImpl

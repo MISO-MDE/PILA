@@ -24,55 +24,55 @@ package co.edu.uniandes.pagos;
 public interface TerminalValue extends Expression
 {
   /**
-   * Returns the value of the '<em><b>Variable</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Variable</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Variable</em>' reference.
-   * @see #setVariable(BusinessAttribute)
-   * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Variable()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Variable</em>' reference.
+	 * @see #setVariable(BusinessAttribute)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Variable()
+	 * @model
+	 * @generated
+	 */
   BusinessAttribute getVariable();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getVariable <em>Variable</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getVariable <em>Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Variable</em>' reference.
-   * @see #getVariable()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Variable</em>' reference.
+	 * @see #getVariable()
+	 * @generated
+	 */
   void setVariable(BusinessAttribute value);
 
   /**
-   * Returns the value of the '<em><b>Valor</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Valor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Valor</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Valor</em>' attribute.
-   * @see #setValor(String)
-   * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Valor()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Valor</em>' attribute.
+	 * @see #setValor(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Valor()
+	 * @model
+	 * @generated
+	 */
   String getValor();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getValor <em>Valor</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getValor <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Valor</em>' attribute.
-   * @see #getValor()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Valor</em>' attribute.
+	 * @see #getValor()
+	 * @generated
+	 */
   void setValor(String value);
 
 } // TerminalValue

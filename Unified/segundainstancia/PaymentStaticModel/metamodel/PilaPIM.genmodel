@@ -19,9 +19,11 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//AddOper">
       <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//AddOper/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//AddOper/MINUS"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//MultOper">
       <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//MultOper/MULT"/>
+      <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//MultOper/DIV"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="PilaPIM.ecore#//RelationType">
       <genEnumLiterals ecoreEnumLiteral="PilaPIM.ecore#//RelationType/COMPOSITION"/>
@@ -82,6 +84,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Operation/parameterList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Operation/body"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Operation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Operation/attributes"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//ParameterList">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//ParameterList/parameters"/>
@@ -112,7 +115,7 @@
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//IfCondition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/logicalexpressions"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/return"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/returnBlock"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//IfCondition/innerIf"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//NewEClass21"/>
@@ -139,11 +142,11 @@
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//Add">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Add/leftExp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Add/rigthExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Add/rightExp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Add/operator"/>
     </genClasses>
     <genClasses ecoreClass="PilaPIM.ecore#//Mult">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Mult/rigthtExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Mult/rightExp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PilaPIM.ecore#//Mult/leftExp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PilaPIM.ecore#//Mult/operator"/>
     </genClasses>

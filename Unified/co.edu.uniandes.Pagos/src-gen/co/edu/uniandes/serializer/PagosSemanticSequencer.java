@@ -170,7 +170,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     CalculationTemplate returns CalculationTemplate
 	 *
 	 * Constraint:
-	 *     (name=ID description=STRING attLists+=BusinessAttribute attLists+=BusinessAttribute* formulas+=Formula)
+	 *     (name=ID description=STRING attLists+=BusinessAttribute attLists+=BusinessAttribute* formulas=Formula)
 	 */
 	protected void sequence_CalculationTemplate(ISerializationContext context, CalculationTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -236,7 +236,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     IfCondition returns IfCondition
 	 *
 	 * Constraint:
-	 *     (logExp+=ExpresionLogica expression+=Adicion)
+	 *     (logExp+=ExpresionLogica formulaReturn=ReturnBlock)
 	 */
 	protected void sequence_IfCondition(ISerializationContext context, IfCondition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

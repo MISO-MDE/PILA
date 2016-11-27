@@ -25,81 +25,81 @@ package co.edu.uniandes.pagos;
 public interface Adicion extends Expression
 {
   /**
-   * Returns the value of the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Left</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Expression)
-   * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Left()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Left</em>' containment reference.
+	 * @see #setLeft(Expression)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Left()
+	 * @model containment="true"
+	 * @generated
+	 */
   Expression getLeft();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getLeft <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getLeft <em>Left</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left</em>' containment reference.
-   * @see #getLeft()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Left</em>' containment reference.
+	 * @see #getLeft()
+	 * @generated
+	 */
   void setLeft(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Operator</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operator</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Operator</em>' attribute.
-   * @see #setOperator(String)
-   * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Operator()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Operator</em>' attribute.
+	 * @see #setOperator(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Operator()
+	 * @model
+	 * @generated
+	 */
   String getOperator();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getOperator <em>Operator</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getOperator <em>Operator</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Operator</em>' attribute.
-   * @see #getOperator()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Operator</em>' attribute.
+	 * @see #getOperator()
+	 * @generated
+	 */
   void setOperator(String value);
 
   /**
-   * Returns the value of the '<em><b>Rexp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Rexp</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Rexp</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rexp</em>' containment reference.
-   * @see #setRexp(Expression)
-   * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Rexp()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Rexp</em>' containment reference.
+	 * @see #setRexp(Expression)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getAdicion_Rexp()
+	 * @model containment="true"
+	 * @generated
+	 */
   Expression getRexp();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getRexp <em>Rexp</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.Adicion#getRexp <em>Rexp</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rexp</em>' containment reference.
-   * @see #getRexp()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Rexp</em>' containment reference.
+	 * @see #getRexp()
+	 * @generated
+	 */
   void setRexp(Expression value);
 
 } // Adicion
