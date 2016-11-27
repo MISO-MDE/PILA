@@ -1,22 +1,22 @@
 package co.edu.uniandes.businesslogic;
 
-import co.edu.uniandes.dao.EntityDAO;
-import co.edu.uniandes.dao.RiesgoDAOImpl;
+import java.util.List;
+
+import co.edu.uniandes.entity.Novedad;
 import co.edu.uniandes.entity.PilaEntity;
+import co.edu.uniandes.staticmodel.EstadoNovedad;
+import co.edu.uniandes.staticmodel.TipoNovedad;
 
 public class CalculationFormula1 {
 	
 	private long entityId;
 	PilaEntity entity;
 	
-	
-	private short novedadesMes = 0;
-	private short diasLaborables = 0;
+	private int diasLaborables = 0;
 	private String tipoNovedad = "";
 	
 	public CalculationFormula1(PilaEntity entity) {
 		this.entity = entity;
-		processNovedadesSinProcesar();
 	}
 	
 	public long getEntityId() {
@@ -38,6 +38,9 @@ public class CalculationFormula1 {
 		double pensionNormal = 0.16;
 		int riesgoLaboral = 0; 
 		
+		List<Novedad> novedades = EventLogic.getEventLogic().findByEntityTipo(entityId, TipoNovedad.SLN);
+		processNovedadesSinProcesar(novedades);
+		
 		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
 		//Calculo por labor
 		if (riesgoLaboral == 4 && riesgoLaboral == 5) 
@@ -52,7 +55,7 @@ public class CalculationFormula1 {
 				if (entity.getProfesion().equals("Aviador")) 	
 					return this.entity.getSalario() * 0.21;
 		//Novedades
-		if (novedadesMes == 0)
+		if (novedades.size() == 0)
 			return this.entity.getSalario() * pensionNormal;
 		else 
 			if (diasLaborables >=3 && diasLaborables < 20 && tipoNovedad.equals("SLN"))
@@ -97,17 +100,19 @@ public class CalculationFormula1 {
 	}
 	
 	//DesarrollarRiesgo tabla 2
-	private int getRiegoTabla2(Long activity) {
-		
+	private int getRiegoTabla2(Long activity) {		
 		return RiesgoLogic.getRiesgoLogic().findByActividadEconomica(activity).getClaseRiesgo();
-
 	}
 	
-	void processNovedadesSinProcesar() {
-		//Contar los dias habiles de todas las novedades en estado no procesado que son de tipo SLN
-		this.tipoNovedad = "SLN";
-		this.diasLaborables = 0; //La suma de los dias habiles de las novedades sin procesar tipo SLN
-		this.novedadesMes = 0; // Numero de novedades SLN sin procesar
+	void processNovedadesSinProcesar(List<Novedad> novedades) {
+		
+		for(Novedad novedad : novedades) {
+			
+			diasLaborables += novedad.getCantidadDiasHabiles();
+			
+			novedad.setEstado(EstadoNovedad.PROCESADA);
+			EventLogic.getEventLogic().update(novedad);
+		}
 		
 	}
 	

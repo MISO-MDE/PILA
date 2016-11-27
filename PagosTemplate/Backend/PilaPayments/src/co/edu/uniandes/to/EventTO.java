@@ -12,7 +12,7 @@ import co.edu.uniandes.staticmodel.TipoNovedad;
  * @author Rafa
  */
 
-public class PilaNovedadTO {
+public class EventTO {
 	
 	/**
 	 * id de la novedad
@@ -60,9 +60,14 @@ public class PilaNovedadTO {
 	private SuperEntity superEntity;
 	
 	/**
+	 * dias habiles de la novedad
+	 */
+	private int diasHabiles;
+	
+	/**
 	 * Constructor
 	 */
-	public PilaNovedadTO() {
+	public EventTO() {
 		
 	}
 

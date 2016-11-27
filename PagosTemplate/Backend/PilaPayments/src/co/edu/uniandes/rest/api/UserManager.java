@@ -101,6 +101,7 @@ public class UserManager {
 		superTO.setUsername(node.get("name").asText());
 		superTO.setUserId(node.get("userId").asText()); //Guarda el Firebase Id para consultar luego al hacer login
 		superTO.setIdSuperEntity(node.get("superEntityId").asLong());
+		superTO.setPassword(node.get("password").asText());
 		
 		
 		logger.debug("FirebaseId: SuperTo:" + superTO.getUserId());

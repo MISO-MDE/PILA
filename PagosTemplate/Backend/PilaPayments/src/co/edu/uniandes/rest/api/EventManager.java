@@ -1,5 +1,11 @@
 package co.edu.uniandes.rest.api;
 
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -8,20 +14,23 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.EventLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAOImpl;
-import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.staticmodel.TipoNovedad;
+import co.edu.uniandes.to.EventTO;
 
 
 @Path("/event")
@@ -80,16 +89,13 @@ public class EventManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postEntity(String theEvent) {
+	public Response create(String theEvent) throws JsonParseException, JsonMappingException, IOException, ParseException {
 
 		logger.debug("Start postEvent");
 		
-		logger.debug("Object " + theEvent.toString());
+		EventTO event = mapObjectEntity2EvenTO(theEvent);
 		
-		Novedad news = new Novedad();
-		//news.setTipoNovedad(theEvent.newType);
-		//news.
-		
+		EventLogic.getEventLogic().createEvent(event);
 
 		String response = "{\"id\":\"123443\"}"; // Debe retornar el id creado la entidad
 
@@ -120,6 +126,33 @@ public class EventManager {
 		logger.debug("Start deleteEntity");
 	}
 	
+	private EventTO mapObjectEntity2EvenTO(Object theEntity) throws JsonParseException, JsonMappingException, IOException, ParseException {
+		final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
+		logger.debug("Object " + node.asText());
+		EventTO to = new EventTO();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		if(!node.get("fechaFinal").asText().isEmpty()) {	        	
+			to.setFechaFin(format.parse(node.get("fechaFinal").asText()));
+		}
+
+		if(!node.get("fechaInicial").asText().isEmpty()) {	        	
+			to.setFechaInicio(format.parse(node.get("fechaInicial").asText()));
+		}
+
+		to.setFechaCreacion(new Date());
+
+		if(node.get("tipoNovedad").asInt() > 0) {
+			to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
+		}
+
+		if(node.get("variacionSalario").asLong() > 0) {
+			to.setVariacionSalario(node.get("variacionSalario").asLong());
+		}
+
+		return to;
+
+	}
+		
 	/**
 	 * Retorna instancia inicializada de la logica de negocio
 	 * @return

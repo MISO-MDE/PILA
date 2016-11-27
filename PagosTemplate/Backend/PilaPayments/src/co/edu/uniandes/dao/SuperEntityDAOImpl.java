@@ -17,7 +17,7 @@ public class SuperEntityDAOImpl extends DAOBaseImpl<SuperEntity> implements Supe
 	 */
 	@Override
 	public SuperEntity findSuperEntity(String nit) {
-		Query query = getEntityManager().createQuery("select se from PilaUserSuperEntity se where se.nit = :nit");
+		Query query = getEntityManager().createQuery("select se from UserSuperEntity se where se.nit = :nit");
 		query.setParameter("nit", nit);
 	    
 	    return query.getResultList().isEmpty() ? null : (SuperEntity)query.getResultList().get(0);
@@ -28,7 +28,7 @@ public class SuperEntityDAOImpl extends DAOBaseImpl<SuperEntity> implements Supe
 	 */
 	@Override
 	public List<SuperEntity> findAllSuperEntity() {
-		Query query = getEntityManager().createQuery("from PilaSuperEntity");
+		Query query = getEntityManager().createQuery("from SuperEntity");
 			
 		return query.getResultList();
 	}
@@ -38,7 +38,7 @@ public class SuperEntityDAOImpl extends DAOBaseImpl<SuperEntity> implements Supe
 	 */
 	@Override
 	public SuperEntity findSuperEntityById(Long id) {
-		Query query = getEntityManager().createQuery("select se from PilaSuperEntity se where se.id = :id");
+		Query query = getEntityManager().createQuery("select se from SuperEntity se where se.id = :id");
 		query.setParameter("id", id);
 	    
 	    return query.getResultList().isEmpty() ? null : (SuperEntity)query.getResultList().get(0);

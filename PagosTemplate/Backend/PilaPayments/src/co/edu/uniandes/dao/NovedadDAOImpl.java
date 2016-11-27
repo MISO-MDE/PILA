@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Query;
 
 import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.staticmodel.EstadoNovedad;
+import co.edu.uniandes.staticmodel.TipoNovedad;
 
 /**
  * implementacion del dao de novedad
@@ -13,12 +15,16 @@ import co.edu.uniandes.entity.Novedad;
 public class NovedadDAOImpl extends DAOBaseImpl<Novedad> implements NovedadDAO {
 
 	/**
-	 * @see co.edu.uniandes.dao.NovedadDAO#findNovedadesEntity(java.lang.Long)
+	 * @see co.edu.uniandes.dao.NovedadDAO#findByEntity(java.lang.Long)
 	 */
 	@Override
-	public List<Novedad> findNovedadesEntity(Long idEntity) {
-		Query query = getEntityManager().createQuery("select no from Novedad no where no.entity.id = :idEntity");
+	public List<Novedad> findByEntityTipo(Long idEntity, TipoNovedad tipo) {
+		Query query = getEntityManager().createQuery("select no from Novedad no where no.entity.id = :idEntity "
+				+ "and no.estado = :estado "
+				+ "and no.tipoNovedad = :tipo");
 		query.setParameter("idEntity", idEntity);
+		query.setParameter("estado", EstadoNovedad.PENDIENTE);
+		query.setParameter("tipo", TipoNovedad.SLN);
 		
 		return query.getResultList();
 	}

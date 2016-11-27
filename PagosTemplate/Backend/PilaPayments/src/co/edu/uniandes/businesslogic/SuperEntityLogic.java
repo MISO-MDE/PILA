@@ -84,6 +84,7 @@ public class SuperEntityLogic {
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
+		user.setPassword(superTO.getPassword());
 		user.setUserId(superTO.getUserId()); // Guarda el id de firebase
 		user.setSuperEntity(superEntity);
 		

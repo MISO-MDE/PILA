@@ -9,23 +9,26 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum TipoNovedad {
 	
-	TRASLADO("Traslado"),
-	VARIACION_TRANSITORIA_SALARIO("Variación transitoria del salario"),
-	SLN("Suspension temporal, licencia no remunerada o comosión de servicios"),
-	INCAPACIDAD_ENFERMEDAD("Incapacidad temporal por enfermedad"),
-	LICENCIA_MATERNIDAD_PATERNIDAD("Licencia de maternidad o paternidad"),
-	VACACIONES("Vacaciones"),
-	LICENCIA_REMUNERADA("Licencia remunerada"),
-	APORTE_VOLUNTARIO("Aporte voluntario a pensiones"),
-	SUSPENSION("Suspension");
+	TRASLADO(1,"Traslado"),
+	VARIACION_TRANSITORIA_SALARIO(2, "Variación transitoria del salario"),
+	SLN(3,"Suspension temporal, licencia no remunerada o comosión de servicios"),
+	INCAPACIDAD_ENFERMEDAD(4,"Incapacidad temporal por enfermedad"),
+	LICENCIA_MATERNIDAD_PATERNIDAD(5, "Licencia de maternidad o paternidad"),
+	VACACIONES(6, "Vacaciones"),
+	LICENCIA_REMUNERADA(7, "Licencia remunerada"),
+	APORTE_VOLUNTARIO(8, "Aporte voluntario a pensiones"),
+	SUSPENSION(9, "Suspension");
 	
 	private final String text;
+	
+	private final int codigo;
 
     /**
      * @param text
      */
-    TipoNovedad(final String text) {
-        this.text = text;
+    TipoNovedad(final int codigo, final String text) {
+        this.codigo = codigo;
+    	this.text = text;
     }
 
     /**
@@ -36,16 +39,20 @@ public enum TipoNovedad {
         return text;
     }
     
+    public int getCodigo() {
+    	return this.codigo;
+    }
+    
   //devuelve el texto del enum
     public String getName() {
     	return this.text;
     }
     
-    static public TipoNovedad getEnumbyDesc(String desc)
+    static public TipoNovedad getTipoByCodigo(int codigo)
     {
         for(TipoNovedad act : TipoNovedad.values())
         {
-            if(act.getName().equals(desc)) {
+            if(act.getCodigo() == codigo) {
             	return act;
             }
         }

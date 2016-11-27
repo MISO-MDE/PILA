@@ -12,7 +12,7 @@ public class SuperEntityUserDAOImpl extends DAOBaseImpl<UserSuperEntity> impleme
 
 	@Override
 	public UserSuperEntity getUser(String userId) {
-		Query query = getEntityManager().createQuery("select us from PilaUserSuperEntity us where us.userId = :userId");
+		Query query = getEntityManager().createQuery("select us from UserSuperEntity us where us.userId = :userId");
 		query.setParameter("userId", userId);
 	    
 	    return query.getResultList().isEmpty() ? null : (UserSuperEntity)query.getResultList().get(0);

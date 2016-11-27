@@ -81,7 +81,7 @@ public class EntityManager {
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(String theEntity) throws JsonParseException, JsonMappingException, IOException {
-        EntityTO entityTO = this.mapObjectEntity2PilaEntityTO(theEntity);
+        EntityTO entityTO = mapObjectEntity2PilaEntityTO(theEntity);
         String id = getEntityLogic().create(entityTO);
         String response = "{\"id\":\"" + id + "\"}";
         logger.debug("result: '" + response + "'");
@@ -133,7 +133,6 @@ public class EntityManager {
         entityTO.setSalario(node.get("salario").asDouble());
         entityTO.setTipoPension(node.get("tipoPension").asLong());
         entityTO.setTipoPensionado(node.get("tipoPensionado").asLong());
-        entityTO.setActividad(node.get("actividad").asLong());
         entityTO.setPais(Long.valueOf(node.get("pais").asText()));
         entityTO.setPaisGrupoFamiliar(Long.valueOf(node.get("paisGrupoFamiliar").asText()));
         entityTO.setProfesion(node.get("profesion").asText());

@@ -3,10 +3,12 @@ package co.edu.uniandes.businesslogic;
 import java.util.List;
 
 import co.edu.uniandes.dao.EntityDAO;
+import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAO;
+import co.edu.uniandes.dao.NovedadDAOImpl;
 import co.edu.uniandes.entity.Novedad;
-import co.edu.uniandes.entity.SuperEntity;
-import co.edu.uniandes.to.PilaNovedadTO;
+import co.edu.uniandes.staticmodel.TipoNovedad;
+import co.edu.uniandes.to.EventTO;
 
 public class EventLogic {
 	
@@ -34,11 +36,17 @@ public class EventLogic {
 	 * @param novedadTO to con los valores de novedad
 	 * @return retorna valor de novedad
 	 */
-	public String createEvent(PilaNovedadTO novedadTO) {
-		
-		
+	public String createEvent(EventTO novedadTO) {
 		
 		return "";
+	}
+	
+	public List<Novedad> findByEntityTipo(Long idEntity, TipoNovedad tipo) {
+		return novedadDAO.findByEntityTipo(idEntity, tipo);
+	}
+	
+	public Novedad update(Novedad novedad) {
+		return novedadDAO.update(novedad);
 	}
 	
 	/**
@@ -47,5 +55,9 @@ public class EventLogic {
 	 */
 	public List<Novedad> getEventsByCedula(String cedulaEntity) {
 		return novedadDAO.findNovedadesEntityByCedula(cedulaEntity);
+	}
+	
+	public static EventLogic getEventLogic() {
+		return new EventLogic(new NovedadDAOImpl(), new EntityDAOImpl());
 	}
 }

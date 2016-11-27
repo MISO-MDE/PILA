@@ -67,6 +67,11 @@ public class Novedad {
 	private SuperEntity superEntity;
 	
 	/**
+	 * cantidad de dias habiles para el calculo
+	 */
+	private int cantidadDiasHabiles;
+	
+	/**
 	 * Constructor
 	 */
 	public Novedad() {
@@ -206,4 +211,20 @@ public class Novedad {
 	public void setSuperEntity(SuperEntity superEntity) {
 		this.superEntity = superEntity;
 	}
+
+	/**
+	 * @return the cantidadDiasHabiles
+	 */
+	public int getCantidadDiasHabiles() {
+		return cantidadDiasHabiles;
+	}
+
+	/**
+	 * @param cantidadDiasHabiles the cantidadDiasHabiles to set
+	 */
+	public void setCantidadDiasHabiles(int cantidadDiasHabiles) {
+		this.cantidadDiasHabiles = cantidadDiasHabiles;
+	}
+	
+	
 }
