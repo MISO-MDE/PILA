@@ -48,7 +48,7 @@ public class UserLogic {
 			resultado.setEmail(user.getEmail());
 			resultado.setRoleName("SuperEntity");
 			resultado.setUserId(userId);
-			resultado.setSuperEntityId(user.getSuperEntity().getId().toString());
+			resultado.setSuperEntity(user.getSuperEntity());
 			resultado.setPassword(user.getPassword());
 			
 		} else if(user2 != null) {
@@ -57,7 +57,7 @@ public class UserLogic {
 			resultado.setEmail(user2.getEmail());
 			resultado.setRoleName("Intermediary");
 			resultado.setUserId(userId);
-			resultado.setSuperEntityId("");
+			resultado.setSuperEntity(null);
 			resultado.setPassword(user2.getPassword());
 		}
 		
