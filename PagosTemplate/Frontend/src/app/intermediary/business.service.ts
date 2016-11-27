@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import {IntermediaryApiService} from "../services/intermediary.api.service";
-import {SuperEntity, User} from "../sharedresources/classes";
+import {IntermediaryApiService} from "./rest.api.service";
+import {SuperEntity, User} from "../commons/sharedresources/classes";
 import {UserApiService} from "../services/user.api.service";
 @Injectable()
 export class IntermediaryBusinessService {
-  public rows: Array<any>; //Toma los datos en el On Init de esta clase
+  public rows: Array<any>;
   public columns: Array<any> = [
     {title: 'Nombre empresa', className: 'col-md-1', name: 'name'},
     {title: 'NIT', className: 'col-md-1', name: 'nit'},

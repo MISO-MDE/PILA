@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
-import {IPayment} from '../sharedresources/interfaces';
+import {IPayment} from '../commons/sharedresources/interfaces';
 
 @Injectable()
 export class PaymentApiService {
@@ -16,7 +16,7 @@ export class PaymentApiService {
 
      getPayments(userId: String ): Observable<any> {
         var urlGet;
-        
+
         if (userId === '*') {
             urlGet = this.url + 'payment';
         }

@@ -8,14 +8,14 @@ import {ModalModule} from 'angular2-modal';
 import {BootstrapModalModule} from 'angular2-modal/plugins/bootstrap';
 import {AngularFireModule, AuthMethods, AuthProviders} from 'angularfire2';
 import {AppComponent} from './app.component';
-import {FireLoginComponent} from './fire-login/fire-login.component';
+import {FireLoginComponent} from './commons/fire-login/fire-login.component';
 import {HomepageComponent} from './homepage/homepage.component';
-import {PAsideComponent} from './p-aside/p-aside.component';
-import {PHeaderComponent} from './p-header/p-header.component';
-import {PAsideService} from "./p-aside/p-aside.service";
-import {PDynamicComponent} from './p-dynamic/p-dynamic.component';
+import {PAsideComponent} from './commons/p-aside/p-aside.component';
+import {PHeaderComponent} from './commons/p-header/p-header.component';
+import {PAsideService} from "./commons/p-aside/p-aside.service";
+import {PDynamicComponent} from './commons/p-dynamic/p-dynamic.component';
 import {Ripple} from "./commons/directives/ripple/ripple";
-import {FireLoginService} from "./fire-login/fire-login.service";
+import {FireLoginService} from "./commons/fire-login/fire-login.service";
 import {ToasterModule} from 'angular2-toaster/angular2-toaster';
 
 /***
@@ -24,7 +24,7 @@ import {ToasterModule} from 'angular2-toaster/angular2-toaster';
 import {IntermediaryBusinessService} from "./intermediary/business.service";
 import {IntermediaryFormComponent} from './intermediary/form/form.component';
 import {IntermediaryComponent} from './intermediary/grid/grid.component';
-import {IntermediaryApiService} from './services/intermediary.api.service';
+import {IntermediaryApiService} from './intermediary/rest.api.service';
 
 /***
  * Pensioner

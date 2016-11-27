@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PensionerApiService} from '../../pensioner/rest.api.service';
 import {PaymentApiService} from '../rest.api.service';
 
-import {Entity} from '../../sharedresources/classes';
+import {Entity} from '../../commons/sharedresources/classes';
 
 @Component({
   selector: 'app-payment-form',

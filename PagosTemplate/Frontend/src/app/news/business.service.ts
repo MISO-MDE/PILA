@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {EventApiService} from "./rest.api.service";
-import {News} from "../sharedresources/classes";
-import {INews} from "../sharedresources/interfaces";
+import {News} from "../commons/sharedresources/classes";
+import {INews} from "../commons/sharedresources/interfaces";
 
 @Injectable()
 export class NewsBusinessService {

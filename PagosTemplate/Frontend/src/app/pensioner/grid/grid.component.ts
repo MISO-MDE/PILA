@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PAsideService} from "../../p-aside/p-aside.service";
+import {PAsideService} from "../../commons/p-aside/p-aside.service";
 import {PensionerBusinessService} from "../business.service";
 import {PensionerFormComponent} from "../form/form.component";
 

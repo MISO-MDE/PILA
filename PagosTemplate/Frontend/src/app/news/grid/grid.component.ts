@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PAsideService} from "../../p-aside/p-aside.service";
+import {PAsideService} from "../../commons/p-aside/p-aside.service";
 import {NewFormComponent} from "../form/form.component";
 import {NewsBusinessService} from "../business.service";
 

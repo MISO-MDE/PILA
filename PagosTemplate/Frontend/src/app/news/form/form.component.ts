@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PensionerApiService} from '../../pensioner/rest.api.service';
 import {NewsBusinessService} from "../business.service";
-import { INews } from "../../sharedresources/interfaces"
+import { INews } from "../../commons/sharedresources/interfaces"
 
 @Component({
   selector: 'app-new-form',

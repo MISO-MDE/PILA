@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
-import { IUser } from '../sharedresources/interfaces'
+import { IUser } from '../commons/sharedresources/interfaces'
 
 @Injectable()
 export class UserApiService {
