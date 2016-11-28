@@ -1,0 +1,16 @@
+[%
+	function generateFormComponent(genPath, view){
+		var outputDir = genPath + "/" + view.name + "/form/";
+		
+		//FORM HTML
+		//var form_html:Template:= TemplateFactory.load('./Form/generate_form_html.egl');
+		var form_html:Template:= TemplateFactory.load('./frontend/form/generate_form_html.egl');
+		form_html.populate("view", view);
+		form_html.generate(outputDir + 'form.component.html');
+		
+		//FORM TS
+		var form_ts:Template:= TemplateFactory.load('./frontend/form/generate_form_ts.egl');
+		form_ts.populate("view", view);
+		form_ts.generate(outputDir + 'form.component.ts');
+	}
+%]

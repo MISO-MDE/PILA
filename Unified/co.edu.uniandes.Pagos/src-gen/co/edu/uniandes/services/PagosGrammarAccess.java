@@ -669,8 +669,8 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//{InformationTemplate} LBRACE 'name' COLON name=ID COMMA 'description' COLON description=STRING COMMA 'FormAttributes'
 		//COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET RBRACE (COMMA
-		//'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)* RBRACKET)?
-		//(COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?
+		//'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)*
+		//RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?
 		public Group getGroup() { return cGroup; }
 		
 		//{InformationTemplate}

@@ -1,9 +1,14 @@
 [%
-	import "Form/generate_form_component.egl";
+	import "frontend/form/generate_form_component.egl";
 	
-	var outputDir = "../../TransformationOutput/";
+	function generateFrontEnd(){
 	
-	for(view in pila_front!View.allInstances()){
-		generateFormComponent(outputDir, view);
-	}	
+		var outputDir = "../../TransformationOutput/FrontEnd/";
+	
+		for(view in pila_front!View.allInstances()){
+		
+			generateFormComponent(outputDir, view);
+		
+		}
+	}
 %]
