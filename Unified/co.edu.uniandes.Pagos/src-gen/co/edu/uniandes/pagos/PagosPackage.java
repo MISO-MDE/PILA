@@ -703,13 +703,22 @@ public interface PagosPackage extends EPackage
   int BUSINESS_ATTRIBUTE__EXP = 2;
 
   /**
+	 * The feature id for the '<em><b>Is Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int BUSINESS_ATTRIBUTE__IS_INDEX = 3;
+
+  /**
 	 * The number of structural features of the '<em>Business Attribute</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BUSINESS_ATTRIBUTE_FEATURE_COUNT = 3;
+  int BUSINESS_ATTRIBUTE_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link co.edu.uniandes.pagos.impl.TerminalValueImpl <em>Terminal Value</em>}' class.
@@ -722,13 +731,22 @@ public interface PagosPackage extends EPackage
   int TERMINAL_VALUE = 15;
 
   /**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int TERMINAL_VALUE__PARENT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TERMINAL_VALUE__VARIABLE = EXPRESSION_FEATURE_COUNT + 0;
+  int TERMINAL_VALUE__VARIABLE = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -737,7 +755,7 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TERMINAL_VALUE__VALOR = EXPRESSION_FEATURE_COUNT + 1;
+  int TERMINAL_VALUE__VALOR = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of structural features of the '<em>Terminal Value</em>' class.
@@ -746,7 +764,7 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TERMINAL_VALUE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int TERMINAL_VALUE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
 	 * The meta object id for the '{@link co.edu.uniandes.pagos.impl.AdicionImpl <em>Adicion</em>}' class.
@@ -1443,6 +1461,17 @@ public interface PagosPackage extends EPackage
   EReference getBusinessAttribute_Exp();
 
   /**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.BusinessAttribute#getIsIndex <em>Is Index</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Index</em>'.
+	 * @see co.edu.uniandes.pagos.BusinessAttribute#getIsIndex()
+	 * @see #getBusinessAttribute()
+	 * @generated
+	 */
+  EAttribute getBusinessAttribute_IsIndex();
+
+  /**
 	 * Returns the meta object for class '{@link co.edu.uniandes.pagos.TerminalValue <em>Terminal Value</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1451,6 +1480,17 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 */
   EClass getTerminalValue();
+
+  /**
+	 * Returns the meta object for the reference '{@link co.edu.uniandes.pagos.TerminalValue#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see co.edu.uniandes.pagos.TerminalValue#getParent()
+	 * @see #getTerminalValue()
+	 * @generated
+	 */
+  EReference getTerminalValue_Parent();
 
   /**
 	 * Returns the meta object for the reference '{@link co.edu.uniandes.pagos.TerminalValue#getVariable <em>Variable</em>}'.
@@ -2062,6 +2102,14 @@ public interface PagosPackage extends EPackage
     EReference BUSINESS_ATTRIBUTE__EXP = eINSTANCE.getBusinessAttribute_Exp();
 
     /**
+		 * The meta object literal for the '<em><b>Is Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute BUSINESS_ATTRIBUTE__IS_INDEX = eINSTANCE.getBusinessAttribute_IsIndex();
+
+    /**
 		 * The meta object literal for the '{@link co.edu.uniandes.pagos.impl.TerminalValueImpl <em>Terminal Value</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2070,6 +2118,14 @@ public interface PagosPackage extends EPackage
 		 * @generated
 		 */
     EClass TERMINAL_VALUE = eINSTANCE.getTerminalValue();
+
+    /**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EReference TERMINAL_VALUE__PARENT = eINSTANCE.getTerminalValue_Parent();
 
     /**
 		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.

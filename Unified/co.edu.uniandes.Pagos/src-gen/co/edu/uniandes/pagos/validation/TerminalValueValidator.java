@@ -6,6 +6,8 @@ package co.edu.uniandes.pagos.validation;
 
 import co.edu.uniandes.pagos.BusinessAttribute;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * A sample validator interface for {@link co.edu.uniandes.pagos.TerminalValue}.
  * This doesn't really do anything, and it's not a real EMF artifact.
@@ -15,6 +17,7 @@ import co.edu.uniandes.pagos.BusinessAttribute;
 public interface TerminalValueValidator {
 	boolean validate();
 
+	boolean validateParent(EObject value);
 	boolean validateVariable(BusinessAttribute value);
 	boolean validateValor(String value);
 }

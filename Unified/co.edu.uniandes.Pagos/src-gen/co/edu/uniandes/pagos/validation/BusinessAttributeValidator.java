@@ -18,4 +18,5 @@ public interface BusinessAttributeValidator {
 	boolean validateName(String value);
 	boolean validateType(String value);
 	boolean validateExp(Expression value);
+	boolean validateIsIndex(String value);
 }

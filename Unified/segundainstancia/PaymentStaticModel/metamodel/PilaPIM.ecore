@@ -7,7 +7,7 @@
         eType="#//LogicComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="serverservice" upperBound="-1"
         eType="#//ServerService" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="datalayercomponent" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datalayercomponents" upperBound="-1"
         eType="#//DataLayerComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="daocomponent" upperBound="-1"
         eType="#//DaoComponent" containment="true"/>
@@ -19,12 +19,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Control #//Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//FrontService"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Control"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Control #//Attribute"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DataTypes">
     <eLiterals name="STRING"/>
     <eLiterals name="INTEGER" value="1"/>
+    <eLiterals name="NUMBER" value="2"/>
+    <eLiterals name="DATE" value="3"/>
+    <eLiterals name="DOUBLE" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FrontService" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="serviceCalls" upperBound="-1"
@@ -53,6 +55,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//AttributeDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameterList" eType="#//ParameterList"
@@ -79,7 +82,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinition" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//DataTypes"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="complexType" eType="#//GenericComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Return">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -133,6 +136,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TerminalValue" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -180,10 +184,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataLayerComponent" eSuperTypes="#//GenericComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendsData" eType="#//DaoComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//Field" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DaoComponent" eSuperTypes="#//GenericComponent"/>
   <eClassifiers xsi:type="ecore:EClass" name="SubComponent" eSuperTypes="#//Relation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//Control #//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//FrontService"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#//Attribute"/>
 </ecore:EPackage>

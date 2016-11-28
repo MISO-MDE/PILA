@@ -36,6 +36,10 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getCOLONToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCOMMARule())
 			return getCOMMAToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getDASHRule())
+			return getDASHToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getDOTRule())
+			return getDOTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getELSERule())
 			return getELSEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getIFRule())
@@ -71,6 +75,24 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return ",";
+	}
+	
+	/**
+	 * terminal DASH: "#";
+	 */
+	protected String getDASHToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "#";
+	}
+	
+	/**
+	 * terminal DOT: '.';
+	 */
+	protected String getDOTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ".";
 	}
 	
 	/**
@@ -164,6 +186,11 @@ public class PagosSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) 'FU' DOT parent=[CalculationTemplate|ID]
+	 *     (rule start) (ambiguity) 'IT' DOT parent=[InformationTemplate|ID]
+	 *     (rule start) (ambiguity) 'PA' DOT parent=[Participant|ID]
+	 *     (rule start) (ambiguity) 'SU' DOT parent=[SuperEntity|ID]
+	 *     (rule start) (ambiguity) (rule start)
 	 *     (rule start) (ambiguity) valor=Number
 	 *     (rule start) (ambiguity) variable=[BusinessAttribute|ID]
 	 *     (rule start) (ambiguity) {Adicion.left=}

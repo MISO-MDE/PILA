@@ -829,40 +829,40 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCOLONTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
 		private final Assignment cDescriptionAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_8_0 = (RuleCall)cDescriptionAssignment_8.eContents().get(0);
-		private final RuleCall cCOMMATerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
-		private final Keyword cCalculationattributesKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final RuleCall cCOLONTerminalRuleCall_11 = (RuleCall)cGroup.eContents().get(11);
-		private final RuleCall cLBRACKETTerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
-		private final Assignment cAttListsAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cAttListsBusinessAttributeParserRuleCall_13_0 = (RuleCall)cAttListsAssignment_13.eContents().get(0);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final RuleCall cCOMMATerminalRuleCall_14_0 = (RuleCall)cGroup_14.eContents().get(0);
-		private final Assignment cAttListsAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
-		private final RuleCall cAttListsBusinessAttributeParserRuleCall_14_1_0 = (RuleCall)cAttListsAssignment_14_1.eContents().get(0);
-		private final RuleCall cRBRACKETTerminalRuleCall_15 = (RuleCall)cGroup.eContents().get(15);
-		private final RuleCall cCOMMATerminalRuleCall_16 = (RuleCall)cGroup.eContents().get(16);
-		private final Keyword cCalculationrulesKeyword_17 = (Keyword)cGroup.eContents().get(17);
-		private final RuleCall cCOLONTerminalRuleCall_18 = (RuleCall)cGroup.eContents().get(18);
-		private final Assignment cFormulasAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cFormulasFormulaParserRuleCall_19_0 = (RuleCall)cFormulasAssignment_19.eContents().get(0);
-		private final RuleCall cRBRACETerminalRuleCall_20 = (RuleCall)cGroup.eContents().get(20);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final RuleCall cCOMMATerminalRuleCall_9_0 = (RuleCall)cGroup_9.eContents().get(0);
+		private final Keyword cCalculationattributesKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final RuleCall cCOLONTerminalRuleCall_9_2 = (RuleCall)cGroup_9.eContents().get(2);
+		private final RuleCall cLBRACKETTerminalRuleCall_9_3 = (RuleCall)cGroup_9.eContents().get(3);
+		private final Assignment cAttListsAssignment_9_4 = (Assignment)cGroup_9.eContents().get(4);
+		private final RuleCall cAttListsBusinessAttributeParserRuleCall_9_4_0 = (RuleCall)cAttListsAssignment_9_4.eContents().get(0);
+		private final Group cGroup_9_5 = (Group)cGroup_9.eContents().get(5);
+		private final RuleCall cCOMMATerminalRuleCall_9_5_0 = (RuleCall)cGroup_9_5.eContents().get(0);
+		private final Assignment cAttListsAssignment_9_5_1 = (Assignment)cGroup_9_5.eContents().get(1);
+		private final RuleCall cAttListsBusinessAttributeParserRuleCall_9_5_1_0 = (RuleCall)cAttListsAssignment_9_5_1.eContents().get(0);
+		private final RuleCall cRBRACKETTerminalRuleCall_9_6 = (RuleCall)cGroup_9.eContents().get(6);
+		private final RuleCall cCOMMATerminalRuleCall_10 = (RuleCall)cGroup.eContents().get(10);
+		private final Keyword cCalculationrulesKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final RuleCall cCOLONTerminalRuleCall_12 = (RuleCall)cGroup.eContents().get(12);
+		private final Assignment cFormulasAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cFormulasFormulaParserRuleCall_13_0 = (RuleCall)cFormulasAssignment_13.eContents().get(0);
+		private final RuleCall cRBRACETerminalRuleCall_14 = (RuleCall)cGroup.eContents().get(14);
 		
 		//CalculationTemplate:
 		//	{CalculationTemplate} LBRACE
 		//	'name' COLON name=ID
 		//	COMMA
-		//	'description' COLON description=STRING
-		//	COMMA
+		//	'description' COLON description=STRING (COMMA
 		//	'calculationattributes' COLON
-		//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
+		//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET)?
 		//	COMMA
 		//	'calculationrules' COLON formulas=Formula
 		//	RBRACE;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{CalculationTemplate} LBRACE 'name' COLON name=ID COMMA 'description' COLON description=STRING COMMA
-		//'calculationattributes' COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET COMMA
-		//'calculationrules' COLON formulas=Formula RBRACE
+		//{CalculationTemplate} LBRACE 'name' COLON name=ID COMMA 'description' COLON description=STRING (COMMA
+		//'calculationattributes' COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET)?
+		//COMMA 'calculationrules' COLON formulas=Formula RBRACE
 		public Group getGroup() { return cGroup; }
 		
 		//{CalculationTemplate}
@@ -898,56 +898,60 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_8_0() { return cDescriptionSTRINGTerminalRuleCall_8_0; }
 		
+		//(COMMA 'calculationattributes' COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)*
+		//RBRACKET)?
+		public Group getGroup_9() { return cGroup_9; }
+		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_9() { return cCOMMATerminalRuleCall_9; }
+		public RuleCall getCOMMATerminalRuleCall_9_0() { return cCOMMATerminalRuleCall_9_0; }
 		
 		//'calculationattributes'
-		public Keyword getCalculationattributesKeyword_10() { return cCalculationattributesKeyword_10; }
+		public Keyword getCalculationattributesKeyword_9_1() { return cCalculationattributesKeyword_9_1; }
 		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_11() { return cCOLONTerminalRuleCall_11; }
+		public RuleCall getCOLONTerminalRuleCall_9_2() { return cCOLONTerminalRuleCall_9_2; }
 		
 		//LBRACKET
-		public RuleCall getLBRACKETTerminalRuleCall_12() { return cLBRACKETTerminalRuleCall_12; }
+		public RuleCall getLBRACKETTerminalRuleCall_9_3() { return cLBRACKETTerminalRuleCall_9_3; }
 		
 		//attLists+=BusinessAttribute
-		public Assignment getAttListsAssignment_13() { return cAttListsAssignment_13; }
+		public Assignment getAttListsAssignment_9_4() { return cAttListsAssignment_9_4; }
 		
 		//BusinessAttribute
-		public RuleCall getAttListsBusinessAttributeParserRuleCall_13_0() { return cAttListsBusinessAttributeParserRuleCall_13_0; }
+		public RuleCall getAttListsBusinessAttributeParserRuleCall_9_4_0() { return cAttListsBusinessAttributeParserRuleCall_9_4_0; }
 		
 		//(COMMA attLists+=BusinessAttribute)*
-		public Group getGroup_14() { return cGroup_14; }
+		public Group getGroup_9_5() { return cGroup_9_5; }
 		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_14_0() { return cCOMMATerminalRuleCall_14_0; }
+		public RuleCall getCOMMATerminalRuleCall_9_5_0() { return cCOMMATerminalRuleCall_9_5_0; }
 		
 		//attLists+=BusinessAttribute
-		public Assignment getAttListsAssignment_14_1() { return cAttListsAssignment_14_1; }
+		public Assignment getAttListsAssignment_9_5_1() { return cAttListsAssignment_9_5_1; }
 		
 		//BusinessAttribute
-		public RuleCall getAttListsBusinessAttributeParserRuleCall_14_1_0() { return cAttListsBusinessAttributeParserRuleCall_14_1_0; }
+		public RuleCall getAttListsBusinessAttributeParserRuleCall_9_5_1_0() { return cAttListsBusinessAttributeParserRuleCall_9_5_1_0; }
 		
 		//RBRACKET
-		public RuleCall getRBRACKETTerminalRuleCall_15() { return cRBRACKETTerminalRuleCall_15; }
+		public RuleCall getRBRACKETTerminalRuleCall_9_6() { return cRBRACKETTerminalRuleCall_9_6; }
 		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_16() { return cCOMMATerminalRuleCall_16; }
+		public RuleCall getCOMMATerminalRuleCall_10() { return cCOMMATerminalRuleCall_10; }
 		
 		//'calculationrules'
-		public Keyword getCalculationrulesKeyword_17() { return cCalculationrulesKeyword_17; }
+		public Keyword getCalculationrulesKeyword_11() { return cCalculationrulesKeyword_11; }
 		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_18() { return cCOLONTerminalRuleCall_18; }
+		public RuleCall getCOLONTerminalRuleCall_12() { return cCOLONTerminalRuleCall_12; }
 		
 		//formulas=Formula
-		public Assignment getFormulasAssignment_19() { return cFormulasAssignment_19; }
+		public Assignment getFormulasAssignment_13() { return cFormulasAssignment_13; }
 		
 		//Formula
-		public RuleCall getFormulasFormulaParserRuleCall_19_0() { return cFormulasFormulaParserRuleCall_19_0; }
+		public RuleCall getFormulasFormulaParserRuleCall_13_0() { return cFormulasFormulaParserRuleCall_13_0; }
 		
 		//RBRACE
-		public RuleCall getRBRACETerminalRuleCall_20() { return cRBRACETerminalRuleCall_20; }
+		public RuleCall getRBRACETerminalRuleCall_14() { return cRBRACETerminalRuleCall_14; }
 	}
 	public class FormulaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.Formula");
@@ -1343,15 +1347,17 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonEqualsSignKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cExpAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cExpAdicionParserRuleCall_5_1_0 = (RuleCall)cExpAssignment_5_1.eContents().get(0);
-		private final RuleCall cRBRACETerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Assignment cIsIndexAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cIsIndexINDEXTerminalRuleCall_6_0 = (RuleCall)cIsIndexAssignment_6.eContents().get(0);
+		private final RuleCall cRBRACETerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
 		
 		//BusinessAttribute:
 		//	{BusinessAttribute} LBRACE
-		//	name=ID COLON type=TYPE (':=' exp=Adicion)?
+		//	name=ID COLON type=TYPE (':=' exp=Adicion)? isIndex=INDEX?
 		//	RBRACE;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{BusinessAttribute} LBRACE name=ID COLON type=TYPE (':=' exp=Adicion)? RBRACE
+		//{BusinessAttribute} LBRACE name=ID COLON type=TYPE (':=' exp=Adicion)? isIndex=INDEX? RBRACE
 		public Group getGroup() { return cGroup; }
 		
 		//{BusinessAttribute}
@@ -1387,47 +1393,189 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//Adicion
 		public RuleCall getExpAdicionParserRuleCall_5_1_0() { return cExpAdicionParserRuleCall_5_1_0; }
 		
+		//isIndex=INDEX?
+		public Assignment getIsIndexAssignment_6() { return cIsIndexAssignment_6; }
+		
+		//INDEX
+		public RuleCall getIsIndexINDEXTerminalRuleCall_6_0() { return cIsIndexINDEXTerminalRuleCall_6_0; }
+		
 		//RBRACE
-		public RuleCall getRBRACETerminalRuleCall_6() { return cRBRACETerminalRuleCall_6; }
+		public RuleCall getRBRACETerminalRuleCall_7() { return cRBRACETerminalRuleCall_7; }
 	}
 	public class TerminalValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.TerminalValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cTerminalValueAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Assignment cVariableAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final CrossReference cVariableBusinessAttributeCrossReference_0_1_0 = (CrossReference)cVariableAssignment_0_1.eContents().get(0);
-		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_0_1_0.eContents().get(1);
-		private final Assignment cValorAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cValorNumberParserRuleCall_1_0 = (RuleCall)cValorAssignment_1.eContents().get(0);
+		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
+		private final Keyword cPAKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
+		private final Assignment cParentAssignment_0_1_2 = (Assignment)cGroup_0_1.eContents().get(2);
+		private final CrossReference cParentParticipantCrossReference_0_1_2_0 = (CrossReference)cParentAssignment_0_1_2.eContents().get(0);
+		private final RuleCall cParentParticipantIDTerminalRuleCall_0_1_2_0_1 = (RuleCall)cParentParticipantCrossReference_0_1_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_0_1_3 = (RuleCall)cGroup_0_1.eContents().get(3);
+		private final Assignment cVariableAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final CrossReference cVariableBusinessAttributeCrossReference_0_2_0 = (CrossReference)cVariableAssignment_0_2.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_0_2_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cSUKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cParentAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cParentSuperEntityCrossReference_1_2_0 = (CrossReference)cParentAssignment_1_2.eContents().get(0);
+		private final RuleCall cParentSuperEntityIDTerminalRuleCall_1_2_0_1 = (RuleCall)cParentSuperEntityCrossReference_1_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
+		private final Assignment cVariableAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
+		private final CrossReference cVariableBusinessAttributeCrossReference_1_4_0 = (CrossReference)cVariableAssignment_1_4.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_1_4_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Keyword cITKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		private final Assignment cParentAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cParentInformationTemplateCrossReference_2_2_0 = (CrossReference)cParentAssignment_2_2.eContents().get(0);
+		private final RuleCall cParentInformationTemplateIDTerminalRuleCall_2_2_0_1 = (RuleCall)cParentInformationTemplateCrossReference_2_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_2_3 = (RuleCall)cGroup_2.eContents().get(3);
+		private final Assignment cVariableAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
+		private final CrossReference cVariableBusinessAttributeCrossReference_2_4_0 = (CrossReference)cVariableAssignment_2_4.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_2_4_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
+		private final Keyword cFUKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Assignment cParentAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final CrossReference cParentCalculationTemplateCrossReference_3_2_0 = (CrossReference)cParentAssignment_3_2.eContents().get(0);
+		private final RuleCall cParentCalculationTemplateIDTerminalRuleCall_3_2_0_1 = (RuleCall)cParentCalculationTemplateCrossReference_3_2_0.eContents().get(1);
+		private final Assignment cValorAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
+		private final RuleCall cValorNumberParserRuleCall_4_0 = (RuleCall)cValorAssignment_4.eContents().get(0);
 		
 		//TerminalValue:
-		//	{TerminalValue} variable=[BusinessAttribute] | valor=Number;
+		//	{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity]
+		//	DASH variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? |
+		//	('FU' DOT parent=[CalculationTemplate])? | valor=Number;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{TerminalValue} variable=[BusinessAttribute] | valor=Number
+		//{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity] DASH
+		//variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? | ('FU' DOT
+		//parent=[CalculationTemplate])? | valor=Number
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//{TerminalValue} variable=[BusinessAttribute]
+		//{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute]
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{TerminalValue}
 		public Action getTerminalValueAction_0_0() { return cTerminalValueAction_0_0; }
 		
-		//variable=[BusinessAttribute]
-		public Assignment getVariableAssignment_0_1() { return cVariableAssignment_0_1; }
+		//('PA' DOT parent=[Participant] DASH)?
+		public Group getGroup_0_1() { return cGroup_0_1; }
 		
-		//[BusinessAttribute]
-		public CrossReference getVariableBusinessAttributeCrossReference_0_1_0() { return cVariableBusinessAttributeCrossReference_0_1_0; }
+		//'PA'
+		public Keyword getPAKeyword_0_1_0() { return cPAKeyword_0_1_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_0_1_1() { return cDOTTerminalRuleCall_0_1_1; }
+		
+		//parent=[Participant]
+		public Assignment getParentAssignment_0_1_2() { return cParentAssignment_0_1_2; }
+		
+		//[Participant]
+		public CrossReference getParentParticipantCrossReference_0_1_2_0() { return cParentParticipantCrossReference_0_1_2_0; }
 		
 		//ID
-		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1; }
+		public RuleCall getParentParticipantIDTerminalRuleCall_0_1_2_0_1() { return cParentParticipantIDTerminalRuleCall_0_1_2_0_1; }
+		
+		//DASH
+		public RuleCall getDASHTerminalRuleCall_0_1_3() { return cDASHTerminalRuleCall_0_1_3; }
+		
+		//variable=[BusinessAttribute]
+		public Assignment getVariableAssignment_0_2() { return cVariableAssignment_0_2; }
+		
+		//[BusinessAttribute]
+		public CrossReference getVariableBusinessAttributeCrossReference_0_2_0() { return cVariableBusinessAttributeCrossReference_0_2_0; }
+		
+		//ID
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1; }
+		
+		//('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'SU'
+		public Keyword getSUKeyword_1_0() { return cSUKeyword_1_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_1_1() { return cDOTTerminalRuleCall_1_1; }
+		
+		//parent=[SuperEntity]
+		public Assignment getParentAssignment_1_2() { return cParentAssignment_1_2; }
+		
+		//[SuperEntity]
+		public CrossReference getParentSuperEntityCrossReference_1_2_0() { return cParentSuperEntityCrossReference_1_2_0; }
+		
+		//ID
+		public RuleCall getParentSuperEntityIDTerminalRuleCall_1_2_0_1() { return cParentSuperEntityIDTerminalRuleCall_1_2_0_1; }
+		
+		//DASH
+		public RuleCall getDASHTerminalRuleCall_1_3() { return cDASHTerminalRuleCall_1_3; }
+		
+		//variable=[BusinessAttribute]
+		public Assignment getVariableAssignment_1_4() { return cVariableAssignment_1_4; }
+		
+		//[BusinessAttribute]
+		public CrossReference getVariableBusinessAttributeCrossReference_1_4_0() { return cVariableBusinessAttributeCrossReference_1_4_0; }
+		
+		//ID
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1; }
+		
+		//('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'IT'
+		public Keyword getITKeyword_2_0() { return cITKeyword_2_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_2_1() { return cDOTTerminalRuleCall_2_1; }
+		
+		//parent=[InformationTemplate]
+		public Assignment getParentAssignment_2_2() { return cParentAssignment_2_2; }
+		
+		//[InformationTemplate]
+		public CrossReference getParentInformationTemplateCrossReference_2_2_0() { return cParentInformationTemplateCrossReference_2_2_0; }
+		
+		//ID
+		public RuleCall getParentInformationTemplateIDTerminalRuleCall_2_2_0_1() { return cParentInformationTemplateIDTerminalRuleCall_2_2_0_1; }
+		
+		//DASH
+		public RuleCall getDASHTerminalRuleCall_2_3() { return cDASHTerminalRuleCall_2_3; }
+		
+		//variable=[BusinessAttribute]
+		public Assignment getVariableAssignment_2_4() { return cVariableAssignment_2_4; }
+		
+		//[BusinessAttribute]
+		public CrossReference getVariableBusinessAttributeCrossReference_2_4_0() { return cVariableBusinessAttributeCrossReference_2_4_0; }
+		
+		//ID
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1; }
+		
+		//('FU' DOT parent=[CalculationTemplate])?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'FU'
+		public Keyword getFUKeyword_3_0() { return cFUKeyword_3_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_3_1() { return cDOTTerminalRuleCall_3_1; }
+		
+		//parent=[CalculationTemplate]
+		public Assignment getParentAssignment_3_2() { return cParentAssignment_3_2; }
+		
+		//[CalculationTemplate]
+		public CrossReference getParentCalculationTemplateCrossReference_3_2_0() { return cParentCalculationTemplateCrossReference_3_2_0; }
+		
+		//ID
+		public RuleCall getParentCalculationTemplateIDTerminalRuleCall_3_2_0_1() { return cParentCalculationTemplateIDTerminalRuleCall_3_2_0_1; }
 		
 		//valor=Number
-		public Assignment getValorAssignment_1() { return cValorAssignment_1; }
+		public Assignment getValorAssignment_4() { return cValorAssignment_4; }
 		
 		//Number
-		public RuleCall getValorNumberParserRuleCall_1_0() { return cValorNumberParserRuleCall_1_0; }
+		public RuleCall getValorNumberParserRuleCall_4_0() { return cValorNumberParserRuleCall_4_0; }
 	}
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.Number");
@@ -1460,7 +1608,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.EDouble");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cDOTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Alternatives cAlternatives_3_0 = (Alternatives)cGroup_3.eContents().get(0);
@@ -1469,17 +1617,17 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cINTTerminalRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
 		
 		//EDouble ecore::EDouble:
-		//	INT? '.' INT (('E' | 'e') INT)?
+		//	INT? DOT INT (('E' | 'e') INT)?
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT? '.' INT (('E' | 'e') INT)?
+		//INT? DOT INT (('E' | 'e') INT)?
 		public Group getGroup() { return cGroup; }
 		
 		//INT?
 		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
 		
-		//'.'
-		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_1() { return cDOTTerminalRuleCall_1; }
 		
 		//INT
 		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
@@ -1553,6 +1701,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	private final EDoubleElements pEDouble;
 	private final IntegerElements pInteger;
 	private final EStringElements pEString;
+	private final TerminalRule tINDEX;
 	private final TerminalRule tIF;
 	private final TerminalRule tTHEN;
 	private final TerminalRule tELSE;
@@ -1570,6 +1719,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tCOMMA;
 	private final TerminalRule tCOLON;
 	private final TerminalRule tDASH;
+	private final TerminalRule tDOT;
 	private final TerminalRule tSTRING;
 	private final TerminalRule tSTR_ESC;
 	
@@ -1604,6 +1754,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEDouble = new EDoubleElements();
 		this.pInteger = new IntegerElements();
 		this.pEString = new EStringElements();
+		this.tINDEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.INDEX");
 		this.tIF = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.IF");
 		this.tTHEN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.THEN");
 		this.tELSE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.ELSE");
@@ -1621,6 +1772,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		this.tCOMMA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.COMMA");
 		this.tCOLON = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.COLON");
 		this.tDASH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.DASH");
+		this.tDOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.DOT");
 		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.STRING");
 		this.tSTR_ESC = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.STR_ESC");
 	}
@@ -1758,10 +1910,9 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	//	{CalculationTemplate} LBRACE
 	//	'name' COLON name=ID
 	//	COMMA
-	//	'description' COLON description=STRING
-	//	COMMA
+	//	'description' COLON description=STRING (COMMA
 	//	'calculationattributes' COLON
-	//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
+	//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET)?
 	//	COMMA
 	//	'calculationrules' COLON formulas=Formula
 	//	RBRACE;
@@ -1873,7 +2024,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//BusinessAttribute:
 	//	{BusinessAttribute} LBRACE
-	//	name=ID COLON type=TYPE (':=' exp=Adicion)?
+	//	name=ID COLON type=TYPE (':=' exp=Adicion)? isIndex=INDEX?
 	//	RBRACE;
 	public BusinessAttributeElements getBusinessAttributeAccess() {
 		return pBusinessAttribute;
@@ -1884,7 +2035,9 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TerminalValue:
-	//	{TerminalValue} variable=[BusinessAttribute] | valor=Number;
+	//	{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity]
+	//	DASH variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? |
+	//	('FU' DOT parent=[CalculationTemplate])? | valor=Number;
 	public TerminalValueElements getTerminalValueAccess() {
 		return pTerminalValue;
 	}
@@ -1912,7 +2065,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//EDouble ecore::EDouble:
-	//	INT? '.' INT (('E' | 'e') INT)?
+	//	INT? DOT INT (('E' | 'e') INT)?
 	public EDoubleElements getEDoubleAccess() {
 		return pEDouble;
 	}
@@ -1939,6 +2092,12 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getEStringRule() {
 		return getEStringAccess().getRule();
+	}
+	
+	//terminal INDEX:
+	//	'@Indice';
+	public TerminalRule getINDEXRule() {
+		return tINDEX;
 	}
 	
 	//terminal IF:
@@ -1990,7 +2149,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal ID:
-	//	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')* ('.' ('Ultima' | 'Primera' | 'Tamano'))*;
+	//	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
 		return tID;
 	}
@@ -2041,6 +2200,12 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	//	"#";
 	public TerminalRule getDASHRule() {
 		return tDASH;
+	}
+	
+	//terminal DOT:
+	//	'.';
+	public TerminalRule getDOTRule() {
+		return tDOT;
 	}
 	
 	//terminal STRING:

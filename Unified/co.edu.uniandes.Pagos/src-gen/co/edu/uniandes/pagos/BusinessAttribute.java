@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link co.edu.uniandes.pagos.BusinessAttribute#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.BusinessAttribute#getType <em>Type</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.BusinessAttribute#getExp <em>Exp</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.BusinessAttribute#getIsIndex <em>Is Index</em>}</li>
  * </ul>
  *
  * @see co.edu.uniandes.pagos.PagosPackage#getBusinessAttribute()
@@ -102,5 +103,31 @@ public interface BusinessAttribute extends EObject
 	 * @generated
 	 */
   void setExp(Expression value);
+
+  /**
+	 * Returns the value of the '<em><b>Is Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Is Index</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Index</em>' attribute.
+	 * @see #setIsIndex(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getBusinessAttribute_IsIndex()
+	 * @model
+	 * @generated
+	 */
+  String getIsIndex();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.BusinessAttribute#getIsIndex <em>Is Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Index</em>' attribute.
+	 * @see #getIsIndex()
+	 * @generated
+	 */
+  void setIsIndex(String value);
 
 } // BusinessAttribute
