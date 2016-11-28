@@ -16,6 +16,7 @@ export class NewsBusinessService {
     {title: 'Estado', name: 'status'}
   ];
   public selectedRow:any = {};
+  public selectedEntity:any={};
 
   constructor(private eventApiService: EventApiService) {
   }
@@ -35,12 +36,12 @@ export class NewsBusinessService {
   }
 
    public saveNews(news: News): void {
-    console.log("**Saving:Save Entity " + JSON.stringify(news));
+     news.entityId = this.selectedEntity.id;
+     news.fechaCreacion = new Date();
+     news.diasHabiles = 15;
     this.eventApiService.saveNews(news).subscribe((response: any) => {
       if (response) {
         this.loadEvents();
-        //Salva ahora el administrador luego de que la superentidad quedo guardada
-        console.log("**SUCCESS: Se guardo la Novedad" + JSON.stringify(response));
       } else {
         console.log("**ERORR: No se guardo la Novedad revisar Logs");
       }

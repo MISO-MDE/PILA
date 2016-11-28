@@ -20,11 +20,11 @@ export class User implements IUser {
     getUserId():string {
         return this.userId;
     }
-    
+
     getRoleName():string {
         return this.roleName;
     }
-        
+
 }
 
 export class SuperEntity implements ISuperEntity {
@@ -46,7 +46,7 @@ export class Entity implements IEntity {
 	public residence: string;
 	public familyResidence: string;
 	public profession: string;
-	public salary: number; 
+	public salary: number;
 }
 
 export class Payment implements IPayment {
@@ -70,7 +70,7 @@ export class Validation implements IValidation {
 }
 
 export class News implements INews {
-    
+
     public id: number;
     public entityId:number;
     public superEntityId:number;
@@ -79,4 +79,5 @@ export class News implements INews {
 	public variacionSalario:number;
 	public tipoNovedad:string;
 	public estado:string;
+  public diasHabiles:number;
 }
