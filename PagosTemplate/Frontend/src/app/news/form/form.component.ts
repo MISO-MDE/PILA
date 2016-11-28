@@ -34,6 +34,7 @@ export class NewFormComponent implements OnInit {
     this.pensionerService.loadById(this.businessService.selectedEntity.cedula).subscribe((entityObj:any) => {
       this.businessService.selectedEntity = entityObj;
     });
+    this.businessService.loadEvents(this.businessService.selectedEntity.cedula);
   }
 
   public saveNews() {

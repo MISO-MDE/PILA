@@ -20,7 +20,7 @@ export class EventApiService {
             urlGet = this.url;
         }
         else {
-            urlGet = this.url + "?" + userId;
+            urlGet = this.url + "/" + userId;
         }
         return this.http.get(urlGet).map(this.extractData);
     }

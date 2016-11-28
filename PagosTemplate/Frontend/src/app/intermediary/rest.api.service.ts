@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response} from '@angular/http';
-
+import {ToasterService, Toast} from 'angular2-toaster/angular2-toaster';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
@@ -11,7 +11,7 @@ import { ISuperEntity } from '../commons/sharedresources/interfaces'
 export class IntermediaryApiService {
     private url: string = 'PilaPayments/api/superentities';
 
-    constructor(private http: Http) {
+    constructor(private http: Http,  private toasterService: ToasterService) {
     }
 
      getSuperEntityData(userId: String ): Observable<ISuperEntity> {

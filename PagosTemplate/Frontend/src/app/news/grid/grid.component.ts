@@ -17,7 +17,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.asideService.showAside(NewFormComponent);
-    this.businessService.loadEvents();
+    this.businessService.loadEvents('*');
   }
 
   public editRow(row: any) {
@@ -29,6 +29,10 @@ export class NewsComponent implements OnInit {
   }
 
   public getRowData(row, data) {
-    return row [data];
+    let value = row [data];
+    if (typeof value === 'object') {
+      return value.descripcion;
+    }
+    return value;
   }
 }
