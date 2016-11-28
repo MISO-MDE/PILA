@@ -31,7 +31,7 @@ export class NewsComponent implements OnInit {
   public getRowData(row, data) {
     let value = row [data];
     if (typeof value === 'object') {
-      return value.descripcion;
+      return value.name;
     }
     return value;
   }
