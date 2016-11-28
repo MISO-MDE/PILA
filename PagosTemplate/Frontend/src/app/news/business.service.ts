@@ -10,9 +10,9 @@ export class NewsBusinessService {
   public rows: Array<INews>;
 
   public columns: Array<any> = [
-    {title: 'Tipo', className: 'text-warning', name: 'type'},
-    {title: 'Fecha inicial', className: 'text-warning', name: 'fromDate'},
-    {title: 'Fecha final', className: 'text-warning', name: 'toDate'},
+    {title: 'Tipo', className: 'text-warning', name: 'tipoNovedad'},
+    {title: 'Fecha inicial', className: 'text-warning', name: 'fechaInicio'},
+    {title: 'Fecha final', className: 'text-warning', name: 'fechaFin'},
     {title: 'Estado', name: 'status'}
   ];
   public selectedRow:any = {};
@@ -28,8 +28,8 @@ export class NewsBusinessService {
   }
 
 
-  public loadEvents(): any {
-    this.eventApiService.getEvents('*')
+  public loadEvents(cedulaEntity:string): any {
+    this.eventApiService.getEvents(cedulaEntity)
       .subscribe((response: any) => {
         this.rows = response;
       });
@@ -41,7 +41,7 @@ export class NewsBusinessService {
      news.cedulaEntity = this.selectedEntity.cedula;
     this.eventApiService.saveNews(news).subscribe((response: any) => {
       if (response) {
-        this.loadEvents();
+        this.loadEvents("*");
       } else {
         console.log("**ERORR: No se guardo la Novedad revisar Logs");
       }

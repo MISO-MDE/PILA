@@ -5,7 +5,7 @@ export interface IUser {
     email: string;
     password:string;
     name: string;
-    roleName: string;   
+    roleName: string;
 
     getUserId():string;
     getRoleName():string;
@@ -62,4 +62,6 @@ export interface INews {
 	variacionSalario:number;
 	tipoNovedad:string;
 	estado:string;
+   diasHabiles:number;
+   cedulaEntity:string;
 }
