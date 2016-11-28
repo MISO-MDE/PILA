@@ -1,12 +1,13 @@
 package co.edu.uniandes.entity;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 
 
@@ -26,16 +27,11 @@ public class Riesgo {
 	 * Codigo del riesgo
 	 */
 	private int claseRiesgo;
-	
-	/**
-	 * Valor inicial para el calculo
-	 */
-	private double valorInicial;
-	
+
 	/**
 	 * Actividades economicas asociadas al riesgo
 	 */
-	private Set<ActividadEconomica> actividadesEconomicas;
+	private List<ActividadEconomica> actividadesEconomicas;
 	
 	/**
 	 * Constructor
@@ -75,32 +71,20 @@ public class Riesgo {
 	}
 
 	/**
-	 * @return the valorInicial
-	 */
-	public double getValorInicial() {
-		return valorInicial;
-	}
-
-	/**
-	 * @param valorInicial the valorInicial to set
-	 */
-	public void setValorInicial(double valorInicial) {
-		this.valorInicial = valorInicial;
-	}
-
-	/**
 	 * @return the actividadesEconomicas
 	 */
-	@OneToMany
-	@JoinColumn(name="actividad_economica_id")
-	public Set<ActividadEconomica> getActividadesEconomicas() {
+	 @OneToMany
+	 @JoinTable(name = "riesgo_actividad", 
+	   joinColumns = @JoinColumn(name = "riesgo_id"), 
+	   inverseJoinColumns = @JoinColumn(name = "actividadeconomica_id"))
+	public List<ActividadEconomica> getActividadesEconomicas() {
 		return actividadesEconomicas;
 	}
 
 	/**
 	 * @param actividadesEconomicas the actividadesEconomicas to set
 	 */
-	public void setActividadesEconomicas(Set<ActividadEconomica> actividadesEconomicas) {
+	public void setActividadesEconomicas(List<ActividadEconomica> actividadesEconomicas) {
 		this.actividadesEconomicas = actividadesEconomicas;
 	}
 }

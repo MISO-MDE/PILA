@@ -18,9 +18,9 @@ public class PagoDAOImpl extends DAOBaseImpl<Pago> implements PagoDAO{
 	 * @see co.edu.uniandes.dao.PagoDAO#findPagosEntity(co.edu.uniandes.entity.PilaEntity)
 	 */
 	@Override
-	public List<Pago> findPagosEntity(PilaEntity entity) {
-		Query query = getEntityManager().createQuery("select pago from PilaPago pago where pago.entity = :entity");
-		query.setParameter("entity", entity);
+	public List<Pago> findPagosEntity(Long cedula) {
+		Query query = getEntityManager().createQuery("select pago from PilaPago pago where pago.entity.cedula = :cedula");
+		query.setParameter("cedula", cedula);
 	    
 	    return query.getResultList();
 	}
@@ -29,9 +29,9 @@ public class PagoDAOImpl extends DAOBaseImpl<Pago> implements PagoDAO{
 	 * @see co.edu.uniandes.dao.PagoDAO#findPagosSuperEntity(co.edu.uniandes.entity.PilaEntity)
 	 */
 	@Override
-	public List<Pago> findPagosSuperEntity(SuperEntity superEntity) {
+	public List<Pago> findPagosSuperEntity(Long idSuperEntity) {
 		Query query = getEntityManager().createQuery("select pago from PilaPago pago where pago.superEntity = :superEntity");
-		query.setParameter("superEntity", superEntity);
+		query.setParameter("idSuperEntity", idSuperEntity);
 	    
 	    return query.getResultList();
 	}

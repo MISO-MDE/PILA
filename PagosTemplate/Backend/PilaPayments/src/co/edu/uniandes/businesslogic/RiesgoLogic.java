@@ -13,16 +13,9 @@ public class RiesgoLogic {
 		this.riesgoDAO = riesgoDAO;
 	}
 	
-	public RiesgoTO findByActividadEconomica(Long idActividad) {
+	public Riesgo findByActividadEconomica(Long idActividad) {
 		
-		RiesgoTO to = new RiesgoTO();
-		Riesgo riesgo = riesgoDAO.findByActividadEconomica(idActividad);
-		
-		to.setClaseRiesgo(riesgo.getClaseRiesgo());
-		to.setValorInicial(riesgo.getValorInicial());
-		to.setId(riesgo.getId());
-		
-		return to;
+		return riesgoDAO.findByActividadEconomica(idActividad);
 	}
 	
 	public static RiesgoLogic getRiesgoLogic() {

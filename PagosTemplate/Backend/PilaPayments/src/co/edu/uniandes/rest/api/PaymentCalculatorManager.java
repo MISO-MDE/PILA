@@ -11,13 +11,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import co.edu.uniandes.businesslogic.BusinessValidations;
-import co.edu.uniandes.businesslogic.CalculationFormula1;
+import co.edu.uniandes.businesslogic.CalculationFormula;
 import co.edu.uniandes.businesslogic.EntityLogic;
 import co.edu.uniandes.businesslogic.ValidacionLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.TipoPensionDAOImpl;
-import co.edu.uniandes.dao.TipoPensionadoDAO;
 import co.edu.uniandes.dao.TipoPensionadoDAOImpl;
 import co.edu.uniandes.dao.ValidacionDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
@@ -44,10 +43,9 @@ public class PaymentCalculatorManager {
 		logger.debug("data: '" + id + "'");
 		String errorCondition = "";
 		
-		PilaEntity theEntity = getEntityLogic().find(Long.valueOf(id));
+		PilaEntity theEntity = EntityLogic.getEntityLogic().find(Long.valueOf(id));
 		
 		logger.debug("data:theEntity '" + theEntity.getCedula() + "'");
-		
 		
 		BusinessValidations busVal = new BusinessValidations(theEntity, new ValidacionLogic(new ValidacionDAOImpl()));
 		
@@ -55,7 +53,7 @@ public class PaymentCalculatorManager {
 		
 		if (validations.isEmpty()) {
  		
-			CalculationFormula1 formulaCalculation = new CalculationFormula1(theEntity);
+			CalculationFormula formulaCalculation = new CalculationFormula(theEntity);
 			
 			calculo1 = formulaCalculation.getFormula1();
 			calculo2 = formulaCalculation.getFormula2();
@@ -65,20 +63,14 @@ public class PaymentCalculatorManager {
 		else {
 			errorCondition = validations;
 		}
-		
-		
-		
-		
-		
-		
-		
+				
 		String response = null;
 		// Si pasa todas las validaciones devuelve 
 		
 		response = 	"{" +  
 					"\"" + "id\":" + "7392," +
-					"\"" + "supetrEntityId\":" + "1," +
-					"\"" + "entityId\":" + "2," +
+					"\"" + "supetrEntityId\":" + theEntity.getSuperEntidad().getId() + "," +
+					"\"" + "entityId\":" + theEntity.getId() + "," +
 					"\"" + "subTotal1\":" + calculo1 + "," +
 					"\"" + "subTotal2\":" + calculo2 + "," +
 					"\"" + "subTotal3\":" + calculo3 + "," +

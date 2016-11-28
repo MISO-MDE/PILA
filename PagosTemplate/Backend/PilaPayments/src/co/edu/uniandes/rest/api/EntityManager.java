@@ -25,10 +25,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.EntityLogic;
-import co.edu.uniandes.dao.EntityDAOImpl;
-import co.edu.uniandes.dao.SuperEntityDAOImpl;
-import co.edu.uniandes.dao.TipoPensionDAOImpl;
-import co.edu.uniandes.dao.TipoPensionadoDAOImpl;
 import co.edu.uniandes.to.EntityTO;
 
 
@@ -51,7 +47,7 @@ public class EntityManager {
         logger.debug("Start getEntities");
         String response = "";
         try {
-            response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEntityLogic().findAll());
+            response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(EntityLogic.getEntityLogic().findAll());
         } catch (JsonProcessingException e) {
             response = "No se pudo obtener la lista " + e.getMessage();
         }
@@ -70,7 +66,7 @@ public class EntityManager {
         String response = "";
         try {
             response = mapper.writerWithDefaultPrettyPrinter()
-                    .writeValueAsString(getEntityLogic().find(Long.valueOf(id)));
+                    .writeValueAsString(EntityLogic.getEntityLogic().find(Long.valueOf(id)));
         } catch (Exception ex) {
             response = "No se pudo encontrar el registro. \n" + ex.getMessage();
         }
@@ -83,7 +79,7 @@ public class EntityManager {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(String theEntity) throws JsonParseException, JsonMappingException, IOException {
         EntityTO entityTO = mapObjectEntity2PilaEntityTO(theEntity);
-        String id = getEntityLogic().create(entityTO);
+        String id = EntityLogic.getEntityLogic().create(entityTO);
         String response = "{\"id\":\"" + id + "\"}";
         logger.debug("result: '" + response + "'");
         return Response.status(200).entity(response).build();
@@ -95,7 +91,7 @@ public class EntityManager {
     public String update(String theEntity) throws JsonParseException, JsonMappingException, IOException {
         logger.debug("Start update");
         EntityTO entityTO = this.mapObjectEntity2PilaEntityTO(theEntity);
-        String id = getEntityLogic().update(entityTO);
+        String id = EntityLogic.getEntityLogic().update(entityTO);
 
         String response = "{\"id\":\"" + id + "\"}";
         logger.debug("result: '" + response + "'");
@@ -107,22 +103,10 @@ public class EntityManager {
     @Path("{id}")
     public Response delete(@PathParam("id") Long id) throws JsonParseException, JsonMappingException, IOException {
         logger.debug("Start delete");
-        String idDeleted = getEntityLogic().delete(id); 
+        String idDeleted = EntityLogic.getEntityLogic().delete(id); 
         String response = "{\"id\":\"" + idDeleted + "\"}";
         logger.debug("result: '" + response + "'");
         return Response.status(200).entity(response).build();
-    }
-
-    /**
-     * metodo auxiliar para obtener la logica del entity
-     *
-     * @return
-     */
-    public EntityLogic getEntityLogic() {
-        if (logic == null) {
-            logic = new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new TipoPensionDAOImpl(), new TipoPensionadoDAOImpl());
-        }
-        return logic;
     }
 
     private EntityTO mapObjectEntity2PilaEntityTO(String theEntity) throws JsonParseException, JsonMappingException, IOException {

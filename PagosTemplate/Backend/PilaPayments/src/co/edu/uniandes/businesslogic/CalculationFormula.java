@@ -7,7 +7,7 @@ import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.staticmodel.EstadoNovedad;
 import co.edu.uniandes.staticmodel.TipoNovedad;
 
-public class CalculationFormula1 {
+public class CalculationFormula {
 	
 	private long entityId;
 	PilaEntity entity;
@@ -15,7 +15,7 @@ public class CalculationFormula1 {
 	private int diasLaborables = 0;
 	private String tipoNovedad = "";
 	
-	public CalculationFormula1(PilaEntity entity) {
+	public CalculationFormula(PilaEntity entity) {
 		this.entity = entity;
 	}
 	

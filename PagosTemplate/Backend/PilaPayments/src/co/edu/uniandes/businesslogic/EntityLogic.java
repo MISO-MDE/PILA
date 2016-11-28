@@ -7,9 +7,13 @@ import org.apache.logging.log4j.Logger;
 
 import co.edu.uniandes.dao.ActividadEconomicaDAO;
 import co.edu.uniandes.dao.EntityDAO;
+import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAO;
+import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.TipoPensionDAO;
+import co.edu.uniandes.dao.TipoPensionDAOImpl;
 import co.edu.uniandes.dao.TipoPensionadoDAO;
+import co.edu.uniandes.dao.TipoPensionadoDAOImpl;
 import co.edu.uniandes.entity.PilaEntity;
 import co.edu.uniandes.to.EntityTO;
 
@@ -153,4 +157,12 @@ public class EntityLogic {
 	      String sTitle = s1 + s.substring(1);
 	      return sTitle;
 	}
+	
+    /**
+     * metodo auxiliar para obtener la logica del entity
+     * @return
+     */
+    public static EntityLogic getEntityLogic() {       
+        return new EntityLogic(new EntityDAOImpl(), new SuperEntityDAOImpl(), new TipoPensionDAOImpl(), new TipoPensionadoDAOImpl()); 
+    }
 }
