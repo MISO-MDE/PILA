@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.ws.rs.Consumes;
@@ -29,7 +30,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import co.edu.uniandes.businesslogic.EventLogic;
 import co.edu.uniandes.dao.EntityDAOImpl;
 import co.edu.uniandes.dao.NovedadDAOImpl;
-import co.edu.uniandes.staticmodel.TipoNovedad;
 import co.edu.uniandes.to.EventTO;
 
 
@@ -56,33 +56,11 @@ public class EventManager {
 		ObjectMapper mapper = new ObjectMapper();
 		String response = "";
 		try {
-			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(logic.getEventsByCedula(cedula));
+			response = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(getEventLogic().getEventsByCedula(cedula));
 		} catch (JsonProcessingException e) {
 			response = "No se pudo obtener la lista " + e.getMessage();
 		}
-		return response;
-//		response = "{"
-//					 +" \"results\": ["
-//					 +"   {"
-//					 +"     \"id\": 155,"
-//					 +"     \"type\": \"SLN\","
-//					 +"     \"fromDate\": \"10/10/16\","
-//					 +"     \"toDate\": \"22/10/16\","
-//					 +"     \"workingDays\": 10,"
-//					 +"     \"status\": \"Procesado\","
-//					 +"     \"salary\": 27000000"
-//					 +"   },"
-//					 +"   {"
-//					 +"     \"id\": 152,"
-//					 +"     \"type\": \"Otra\","
-//					 +"     \"fromDate\": \"11/10/16\","
-//					 +"     \"toDate\": \"22/10/16\","
-//					 +"     \"workingDays\": 10,"
-//					 +"     \"status\": \"Procesado\","
-//					 +"     \"salary\": 27000000"
-//					 +"   }"
-//					 +"]"
-//					 +"}";      
+		return response;   
 
 	}
 
@@ -98,26 +76,27 @@ public class EventManager {
 			final ObjectNode node = new ObjectMapper().readValue(theEvent.toString(), ObjectNode.class);
 			
 			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-			if(!node.get("fechaFinal").asText().isEmpty()) {	        	
-				to.setFechaFin(format.parse(node.get("fechaFinal").asText()));
+			Calendar cal = Calendar.getInstance();
+			if(!node.get("cedulaEntity").asText().isEmpty()) {
+				to.setCedulaEntity((node.get("cedulaEntity").asText()));
+			}
+			
+			if(!node.get("fechaFinal").asText().isEmpty()) {	
+				cal.setTime(format.parse(node.get("fechaFinal").asText()));
+				to.setFechaFin(cal.getTime());
 			}
 
 			if(!node.get("fechaInicial").asText().isEmpty()) {	        	
-				to.setFechaInicio(format.parse(node.get("fechaInicial").asText()));
+				cal.setTime(format.parse(node.get("fechaInicial").asText()));
+				to.setFechaInicio(cal.getTime());
 			}
 
-			to.setFechaCreacion(new Date());
-
-			if(node.get("tipoNovedad").asInt() > 0) {
-				to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
-			}
-
-			if(node.get("variacionSalario").asLong() > 0) {
-				to.setVariacionSalario(node.get("variacionSalario").asLong());
+			if(!node.get("tipoNovedad").asText().isEmpty()) {
+				to.setTipoNovedad(node.get("tipoNovedad").asText());
 			}
 			
-			if(node.get("diasHabiles").asInt() > 0) {
-				to.setDiasHabiles((node.get("tipoNovedad").asInt()));
+			if(!node.get("diasHabiles").asText().isEmpty()) {
+				to.setDiasHabiles((node.get("diasHabiles").asText()));
 			}
 			String id = EventLogic.getEventLogic().create(to);
 			
@@ -136,7 +115,7 @@ public class EventManager {
 
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
-	public String udpate(Object theEvent) throws JsonParseException, JsonMappingException, IOException, ParseException {
+	public String udpate(String theEvent) throws JsonParseException, JsonMappingException, IOException, ParseException {
 		logger.debug("Start putEvent");
 		
 		String response = "";
@@ -156,16 +135,12 @@ public class EventManager {
 
 			to.setFechaCreacion(new Date());
 
-			if(node.get("tipoNovedad").asInt() > 0) {
-				to.setTipoNovedad(TipoNovedad.getTipoByCodigo(node.get("tipoNovedad").asInt()));
-			}
-
-			if(node.get("variacionSalario").asLong() > 0) {
-				to.setVariacionSalario(node.get("variacionSalario").asLong());
+			if(!node.get("tipoNovedad").asText().isEmpty()) {
+				to.setTipoNovedad(node.get("tipoNovedad").asText());
 			}
 			
-			if(node.get("diasHabiles").asInt() > 0) {
-				to.setDiasHabiles((node.get("tipoNovedad").asInt()));
+			if(!node.get("diasHabiles").asText().isEmpty()) {
+				to.setDiasHabiles(node.get("diasHabiles").asText());
 			}
 			id = EventLogic.getEventLogic().create(to);
 			

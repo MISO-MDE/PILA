@@ -1,5 +1,6 @@
 package co.edu.uniandes.businesslogic;
 
+import java.util.Date;
 import java.util.List;
 
 import co.edu.uniandes.dao.EntityDAO;
@@ -44,13 +45,13 @@ public class EventLogic {
 		
 		PilaEntity entity = new PilaEntity();
 		Novedad novedad = new Novedad();
-		novedad.setEntity(entityDAO.find(novedadTO.getCedulaEntity()));
+		novedad.setEntity(entityDAO.find(Long.parseLong(novedadTO.getCedulaEntity())));
 		novedad.setEstado(EstadoNovedad.PENDIENTE);
-		novedad.setFechaCreacion(novedadTO.getFechaCreacion());
+		novedad.setFechaCreacion(new Date());
 		novedad.setFechaInicio(novedadTO.getFechaInicio());
-		novedad.setFechaFin(novedadTO.getFechaInicio());
-		novedad.setVariacionSalario(novedadTO.getVariacionSalario());
-		novedad.setCantidadDiasHabiles(novedadTO.getDiasHabiles());
+		novedad.setFechaFin(novedadTO.getFechaFin());
+		novedad.setTipoNovedad(TipoNovedad.getTipoByCodigo(Integer.parseInt(novedadTO.getTipoNovedad())));
+		novedad.setCantidadDiasHabiles(Integer.parseInt(novedadTO.getDiasHabiles()));
 		
 		response = novedadDAO.create(novedad).getId().toString();
 		
@@ -70,7 +71,11 @@ public class EventLogic {
 	 * @return
 	 */
 	public List<Novedad> getEventsByCedula(String cedulaEntity) {
-		return novedadDAO.findNovedadesEntityByCedula(cedulaEntity);
+		return novedadDAO.findNovedadesEntityByCedula(Long.parseLong(cedulaEntity));
+	}
+	
+	public List<Novedad> getEventsBySuperEntity(String idSuperEntity ) {
+		return novedadDAO.findNovedadesSuperEntity(Long.parseLong(idSuperEntity));
 	}
 	
 	public static EventLogic getEventLogic() {

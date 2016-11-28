@@ -40,12 +40,7 @@ public class Novedad {
 	 * Fecha de fin de la novedad
 	 */
 	private Date fechaFin;
-	
-	/**
-	 * Variacion del salario
-	 */
-	private Long variacionSalario;
-	
+
 	/**
 	 * tipo de novedad
 	 */
@@ -149,20 +144,6 @@ public class Novedad {
 	 */
 	public void setTipoNovedad(TipoNovedad tipoNovedad) {
 		this.tipoNovedad = tipoNovedad;
-	}
-
-	/**
-	 * @return the variacionSalario
-	 */
-	public Long getVariacionSalario() {
-		return variacionSalario;
-	}
-
-	/**
-	 * @param variacionSalario the variacionSalario to set
-	 */
-	public void setVariacionSalario(Long variacionSalario) {
-		this.variacionSalario = variacionSalario;
 	}
 
 	/**

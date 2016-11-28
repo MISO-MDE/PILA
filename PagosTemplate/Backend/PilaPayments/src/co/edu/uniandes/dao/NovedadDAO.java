@@ -23,7 +23,7 @@ public interface NovedadDAO extends DAOBase<Novedad>{
 	 * @param idEntity id de la entidad
 	 * @return lista con todas las novedades de entidad
 	 */
-	public List<Novedad> findNovedadesEntityByCedula(String cedulaEntity);
+	public List<Novedad> findNovedadesEntityByCedula(Long cedulaEntity);
 	
 	/**
 	 * retorna las novedad de una super entity
