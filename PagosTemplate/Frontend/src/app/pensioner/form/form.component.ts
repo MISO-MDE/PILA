@@ -52,11 +52,15 @@ export class PensionerFormComponent implements OnInit {
   }
 
   public save() {
-    this.businessService.save(this.businessService.selectedRow);
+    var row = this.businessService.selectedRow;
+    row.superEntityId =this.fireLoginService.getUserData().superEntity.id;
+    this.businessService.save(row);
   }
 
   public update() {
-    this.businessService.update(this.businessService.selectedRow);
+    var row = this.businessService.selectedRow;
+    row.superEntityId =this.fireLoginService.getUserData().superEntity.id;
+    this.businessService.update(row);
   }
 
   public delete() {
