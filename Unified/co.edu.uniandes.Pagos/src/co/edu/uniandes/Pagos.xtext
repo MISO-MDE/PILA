@@ -84,9 +84,9 @@ CalculationTemplate:
 		'name' COLON name = ID
 		COMMA
 		'description' COLON description = STRING
-		COMMA
+		(COMMA
 		'calculationattributes' COLON 
-			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET
+			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET)?
 		COMMA
 		'calculationrules' COLON formulas = Formula
 	RBRACE
@@ -146,14 +146,19 @@ SigleExp returns Expression:
 BusinessAttribute:
 	{BusinessAttribute}
 	LBRACE
-		name = ID COLON type = TYPE (':=' exp = Adicion)?
+		name = ID COLON type = TYPE (':=' exp = Adicion)? (isIndex = INDEX)? 
 	RBRACE 
 	;
 	
 TerminalValue returns TerminalValue:
 	{TerminalValue}
-	variable = [BusinessAttribute] | valor = Number 
-;
+	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] | 
+	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? |
+	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? |
+	('FU' DOT parent = [CalculationTemplate])? |
+	valor = Number
+;	
+	
 
 /*
 mathADD returns mathADD:
@@ -170,7 +175,7 @@ Number:
 ;
 
 EDouble returns ecore::EDouble:
-	INT? '.' INT (('E'|'e') INT)?;
+	INT? DOT INT (('E'|'e') INT)?;
 
 Integer returns ecore::EInt:
 	INT
@@ -181,6 +186,7 @@ EString returns ecore::EString:
 	
 /* Terminals */
 
+terminal INDEX: '@Indice'; 
 terminal IF:'SI';
 terminal THEN:'ENTONCES';
 terminal ELSE: 'SINO';
@@ -193,7 +199,7 @@ terminal ADDOP: '+' | '-';
 
 terminal LOGICALCONN: '&&' | '||';
 
-terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*(('.')('Ultima' | 'Primera' | 'Tamano'))*;
+terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>');
 
 terminal LBRACE: "{";
@@ -203,6 +209,7 @@ terminal RBRACKET: "]";
 terminal COMMA: ",";
 terminal COLON: ':';
 terminal DASH: "#";
+terminal DOT: '.';
 
 terminal STRING:
 	'"' (STR_ESC | !('"'|'\r'|'\n'|'\\'))* '"'

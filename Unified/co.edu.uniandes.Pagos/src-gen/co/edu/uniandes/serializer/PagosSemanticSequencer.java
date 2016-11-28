@@ -158,7 +158,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     BusinessAttribute returns BusinessAttribute
 	 *
 	 * Constraint:
-	 *     (name=ID type=TYPE exp=Adicion?)
+	 *     (name=ID type=TYPE exp=Adicion? isIndex=INDEX?)
 	 */
 	protected void sequence_BusinessAttribute(ISerializationContext context, BusinessAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -170,7 +170,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     CalculationTemplate returns CalculationTemplate
 	 *
 	 * Constraint:
-	 *     (name=ID description=STRING attLists+=BusinessAttribute attLists+=BusinessAttribute* formulas=Formula)
+	 *     (name=ID description=STRING (attLists+=BusinessAttribute attLists+=BusinessAttribute*)? formulas=Formula)
 	 */
 	protected void sequence_CalculationTemplate(ISerializationContext context, CalculationTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -373,7 +373,13 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     TerminalValue returns TerminalValue
 	 *
 	 * Constraint:
-	 *     (variable=[BusinessAttribute|ID] | valor=Number)
+	 *     (
+	 *         (parent=[Participant|ID]? variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[SuperEntity|ID] variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[InformationTemplate|ID] variable=[BusinessAttribute|ID]) | 
+	 *         parent=[CalculationTemplate|ID] | 
+	 *         valor=Number
+	 *     )
 	 */
 	protected void sequence_TerminalValue(ISerializationContext context, TerminalValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

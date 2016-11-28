@@ -11,7 +11,7 @@ intermediary:
 			{
 				name:Pagadora,
 				description: "Empresa Pagadora de los Servicios",
-				attributes: [{superEntityId:Integer}, {Nombre:String}, {NIT:String}],
+				attributes: [{Id:Integer}, {Nombre:String}, {NIT:String}],
 				
 				/*Entidades o beneficiario del servicio por los que se paga el servicio*/
 				entities:
@@ -19,6 +19,7 @@ intermediary:
 					{	name:Pensionado,
 						description: "Persona receptora de los servicios EPS, Pension, Riesgos",
 						attributes: [{Id: Integer}, 
+									{superEntityId: Integer := SU.Pagadora#Id}, 
 									{cedula:String}, 
 									{salario:Double}, 
 									{vivienda:String}, 
@@ -40,8 +41,9 @@ intermediary:
 								{FechaFinal:Date}, 
 								{TipoNovedad:String}, 
 								{DiasNovedad:Integer},
-								{idEntidad:Integer := Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
-								{superEntityId:Integer :=  superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion	
+								{idEntidad:Integer := PA.Pensionado#Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
+								{superEntityId:Integer := SU.Pagadora#Id}, //Relaciona la super entidad que crea la novedad o grupo de informacion
+								{cedula:String := PA.Pensionado#cedula @Indice} //Referencia la cedula del pensionado como campo de busqueda	
 							]
 						},
 										/*Formulas de Calculo del Formulario de Pagos */
@@ -59,9 +61,9 @@ intermediary:
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									SI [vivienda  <> "Colombia" && grupofamiliar <> "Colombia"] ENTONCES
+									SI [PA.Pensionado#vivienda  <> "Colombia" && PA.Pensionado#grupofamiliar <> "Colombia"] ENTONCES
 									{
-										RETORNAR: 5 - 2
+										RETORNAR: 0
 									}	
 									SINO
 									{
@@ -74,6 +76,7 @@ intermediary:
 								calculationattributes:
 								[	{pensionNormal:Double := 0.16}, 
 									{riesgoLaboral:Integer := 0.20}, 
+									{TipoNovedad:String := IT.Novedades#TipoNovedad},
 									{diasLaborables:Integer := 20 - DiasNovedad} // Usado para el calculo de % segun novedades del mes
 								], 
 								calculationrules:
@@ -150,7 +153,14 @@ intermediary:
 									{
 										RETORNAR: salario * RiesgoV
 									}		
-							} // FIN FORMULA DE CALCULO SISTEMA GENERAL DE RIESGOS
+							},
+							{	name:Totalizador, /*Calculo del Pago total*/
+								description: "Total a Pagos",
+								/*Condicion y Formula de Pago */
+								calculationrules:
+									RETORNAR: FU.EPS + FU.Pension + FU.RiesgoLaboral
+							} // FIN FORMULA DE CALCULO 1 SALUD // FIN FORMULA DE CALCULO SISTEMA GENERAL DE RIESGOS
+							
 						], //FIN DE LOS CALCULOS
 						{	name:Pagos,
 							description: "Formulario para Registro de Pagos",
@@ -159,8 +169,8 @@ intermediary:
 											{Monto:Double}, 
 											{Status:String}, 
 											{MesPago:Integer},
-											{idEntidad:Integer := Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
-											{superEntityId:Integer := superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion
+											{idEntidad:Integer := PA.Pensionado#Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
+											{superEntityId:Integer := SU.Pagadora#superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion
 							]
 						},
 						providers:[

@@ -10,6 +10,7 @@ import co.edu.uniandes.pagos.TerminalValue;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getValor <em>Valor</em>}</li>
  * </ul>
@@ -30,6 +32,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 {
+  /**
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+  protected EObject parent;
+
   /**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -79,6 +91,47 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
   protected EClass eStaticClass()
   {
 		return PagosPackage.Literals.TERMINAL_VALUE;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EObject getParent()
+  {
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PagosPackage.TERMINAL_VALUE__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EObject basicGetParent()
+  {
+		return parent;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setParent(EObject newParent)
+  {
+		EObject oldParent = parent;
+		parent = newParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__PARENT, oldParent, parent));
 	}
 
   /**
@@ -154,6 +207,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				if (resolve) return getParent();
+				return basicGetParent();
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
@@ -172,6 +228,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				setParent((EObject)newValue);
+				return;
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				setVariable((BusinessAttribute)newValue);
 				return;
@@ -191,6 +250,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
   public void eUnset(int featureID)
   {
 		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				setParent((EObject)null);
+				return;
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				setVariable((BusinessAttribute)null);
 				return;
@@ -210,6 +272,8 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				return parent != null;
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				return variable != null;
 			case PagosPackage.TERMINAL_VALUE__VALOR:

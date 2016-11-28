@@ -17,16 +17,19 @@ rule Pagos2PimApp
 			t.logicalComponents.addAll(se->participants.equivalent()); //Entidad a Objeto de Negocio
 			for (pa:PagosM!Participant in se->participants) {
 				t.logicalComponents.addAll(pa->templatesForms.equivalent()); //Templates de Informacion
-				for (it:PagosM!InformationTemplate in pa->templatesForms) {//REVISAR PARA CONVERTIR EN OPERACION
+				for (it:PagosM!InformationTemplate in pa->templatesForms) {
 					t.logicalComponents.addAll(it->providers.equivalent());// Adiciona los providers 
-					t.logicalComponents.last().operations.addAll(it->templates.equivalent()); // Adiciona operaciones de calculo
+					t.logicalComponents.last().operations.addAll(it->templates.equivalent()); // Adiciona operaciones de calculo para formulas dadas
 				}	
 			}
 		}
-		setRelations(s, t);
+		setRelations(s, t); //Adiciona relaciones entre objetos
 		
 		//Iniciando logica UI Creando Vistas Iniciales
 		t.views = t.logicalComponents.equivalent("LogicComp2ViewCom");
+		
+		//Iniciando Capa de datos DAO - Entities
+		t.datalayercomponents = t.logicalComponents.equivalent("LogicComp2DataLayer");
 		
 	}
 	
@@ -43,8 +46,8 @@ rule LogicComp2ViewCom
 		t.attributes = s.attributes.equivalent();
 		t.controls = s.operations.equivalent();
 		t.frontservices = s.operations.equivalent();
-		t.subcomponents = s.relations.equivalent(); 
-		
+		t.subcomponents = s.relations.equivalent();
+		//t.frontservices.add 
 	}
 	
 	rule Operation2FrontService
@@ -53,6 +56,7 @@ rule LogicComp2ViewCom
 	to	
 		t:PagosPim!FrontService
 	{
+		guard: (not s.name.startsWith('calculate'))
 		if (s.name.startsWith("create")) 
 			t.name = 'post';
 		else if (s.name.startsWith("update"))
@@ -61,8 +65,10 @@ rule LogicComp2ViewCom
 			t.name = 'delete';	
 		else if (s.name.startsWith("read"))
 			t.name = 'get';
+		else 
+			t.name = s.name;	
+		t.name = t.name.concat(s.name);
 		t.fullName = s.name;
-		
 	}
 	
 	rule Operation2Action
@@ -71,6 +77,8 @@ rule LogicComp2ViewCom
 	to	
 		t:PagosPim!Action
 	{
+		guard: (not s.name.startsWith('calculate'))
+		t.name = s.name;
 		if (s.name.startsWith("create"))
 			t.label = 'Add';
 		else if (s.name.startsWith("update"))
@@ -78,9 +86,8 @@ rule LogicComp2ViewCom
 		else if (s.name.startsWith("delete"))
 			t.label = 'Delete';	
 		else if (s.name.startsWith("read"))
-			t.label = 'Query';	
-		t.name = s.name;
-		t.service = PagosPim!FrontService.AllInstances->select(e | e.fullName = s.name).first(); //getSetvice(s, t);
+			t.label = 'Query';
+		t.service = PagosPim!FrontService.AllInstances->select(e | e.fullName = s.name).first(); 
 	}
 
 rule Attrib2Input
@@ -89,7 +96,38 @@ rule Attrib2Input
 	to	
 		t:PagosPim!Input
 	{
-		guard: (not s.name.endsWith("Id"))
+		guard: (s.complexType = null or s.isIndex = "@Indice")
+		t.name = s.name;
+		t.type = s.type;
+		t.isIndex = s.isIndex;
+		t.complexType = getComplexType(s);
+		t.label = s.name.firstToUpperCase();
+		if (s.isIndex = "@Indice") { //Busca el servicio que consulta la entidad y lo asocial al campo
+			t.service = PagosPim!FrontService.AllInstances->select(e | e.fullName = "read".concat(s.complexType.name)).first();
+		}
+	}
+
+rule Attrib2Output
+	transform 
+		s:PagosPim!Attribute
+	to	
+		t:PagosPim!Output
+	{
+		guard: (s.complexType <> null and s.isIndex = null)
+		t.name = s.name;
+		t.type = s.type;
+		t.isIndex = s.isIndex;
+		t.complexType = getComplexType(s);
+		t.label = s.name.firstToUpperCase();
+	}
+
+rule Operation2Output //Adiciona los campos de salida de los calculos
+	transform 
+		s:PagosPim!Operation
+	to	
+		t:PagosPim!Output
+	{
+		guard: (s.name.startsWith('calculate') or s.name.startsWith('getTotal'))
 		t.name = s.name;
 		t.label = s.name.firstToUpperCase();
 	}
@@ -168,7 +206,10 @@ rule CalculationTemplate2Operation
 		t:PagosPim!Operation
 	{
 		var body = new PagosPim!Body;
-		t.name = 'calculate' + s.name;
+		if (s.name = "Totalizador") 
+			t.name = 'getTotal';
+		else
+			t.name = 'calculate' + s.name;
 		t.attributes = s.attLists.equivalent();
 		t.body = s.formulas.equivalent(); 
 	}
@@ -245,7 +286,7 @@ rule TerminalValue2TerminalValue
 	{
 		t.value = s.valor;
 		t.attribute = s.variable.equivalent();
-		
+		t.parent = s.parent;
 	}
 
 rule Adicion2Add
@@ -294,11 +335,51 @@ rule BusinessAttribute2Attribute
 		t:PagosPim!Attribute
 	{
 		t.name = s.name;
+		t.isIndex = s.isIndex;
+		t.type = getType(s.type);
 		t.expression = s.exp.equivalent();
-		
+		t.complexType = getComplexTypePagosM(s);
 	}
-		
+	
+	
+//Capa Datos Entities
+@lazy
+rule LogicComp2DataLayer
+	transform 
+		s:PagosPim!LogicComponent
+	to	
+		t:PagosPim!DataLayerComponent
+	{
+		t.name = s.name;
+		t.fields = s.attributes.equivalent("Attrib2Field");
+		t.fields.addAll(s.operations.equivalent("Operation2Field"));
+	}
 
+@lazy
+rule Attrib2Field
+	transform 
+		s:PagosPim!Attribute
+	to	
+		t:PagosPim!Field
+	{
+		t.name = s.name;
+		t.type = s.type;
+		t.isIndex = s.isIndex;
+		t.complexType = getComplexType(s);
+	}
+	
+@lazy
+rule Operation2Field //Adiciona los campos de salida de los calculos
+	transform 
+		s:PagosPim!Operation
+	to	
+		t:PagosPim!Field
+	{
+		guard: (s.name.startsWith('calculate') or s.name.startsWith('getTotal'))
+		t.name = s.name;
+		t.name.println();
+	}
+	
 //OPERATIONS ***************************************************************************************//
 
 //adiciona CRUD para las entidades
@@ -329,10 +410,18 @@ operation getSign(operator: String) {
 	}
 }
 
+operation getType(type: String) {
+	switch (type) {
+		case "String": return PagosPim!DataTypes#STRING;
+		case "Date": return PagosPim!DataTypes#DATE;
+		case "Number": return PagosPim!DataTypes#NUMBER;
+		case "Double": return PagosPim!DataTypes#DOUBLE;
+		case "Integer": return PagosPim!DataTypes#INTEGER;
+	}
+}
 
 operation setRelations(s, t) {
 	"RELACION".println();
-	t.type.println();
 	for (it:PagosM!Intermediary in s.intermediary) { //Padre
 		var parent = t.logicalComponents->selectOne(e|e.name = it.name);
 		for (se:PagosM!SuperEntity in it->superentities) {	 //Hijos	 Intermediario
@@ -356,4 +445,26 @@ operation createRealtion(parent, se, t) {
 	relation.targetComponent = child;
 	relation.name = child.name;
 	parent.relations.add(relation);
+}
+
+operation getComplexType(s) {
+	var isFeature = s->expression.isKindOf(PagosPim!TerminalValue);
+	if (isFeature) {
+		var objTV = s->expression;
+		if (objTV.hasProperty("parent")) {
+			return objTV.parent;
+		}
+	}
+	return null;
+}
+
+operation getComplexTypePagosM(s) {
+	var isFeature = s->exp.isKindOf(PagosM!TerminalValue);
+	if (isFeature) {
+		var objTV = s->exp;
+		if (objTV.hasProperty("parent")) {
+			return objTV.parent;
+		}
+	}
+	return null;
 }

@@ -793,6 +793,16 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EAttribute getBusinessAttribute_IsIndex()
+  {
+		return (EAttribute)businessAttributeEClass.getEStructuralFeatures().get(3);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EClass getTerminalValue()
   {
 		return terminalValueEClass;
@@ -803,7 +813,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getTerminalValue_Variable()
+  public EReference getTerminalValue_Parent()
   {
 		return (EReference)terminalValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -813,9 +823,19 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getTerminalValue_Variable()
+  {
+		return (EReference)terminalValueEClass.getEStructuralFeatures().get(1);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getTerminalValue_Valor()
   {
-		return (EAttribute)terminalValueEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)terminalValueEClass.getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -998,8 +1018,10 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		createEAttribute(businessAttributeEClass, BUSINESS_ATTRIBUTE__NAME);
 		createEAttribute(businessAttributeEClass, BUSINESS_ATTRIBUTE__TYPE);
 		createEReference(businessAttributeEClass, BUSINESS_ATTRIBUTE__EXP);
+		createEAttribute(businessAttributeEClass, BUSINESS_ATTRIBUTE__IS_INDEX);
 
 		terminalValueEClass = createEClass(TERMINAL_VALUE);
+		createEReference(terminalValueEClass, TERMINAL_VALUE__PARENT);
 		createEReference(terminalValueEClass, TERMINAL_VALUE__VARIABLE);
 		createEAttribute(terminalValueEClass, TERMINAL_VALUE__VALOR);
 
@@ -1118,8 +1140,10 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		initEAttribute(getBusinessAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusinessAttribute_Type(), ecorePackage.getEString(), "type", null, 0, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusinessAttribute_Exp(), this.getExpression(), null, "exp", null, 0, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusinessAttribute_IsIndex(), ecorePackage.getEString(), "isIndex", null, 0, 1, BusinessAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(terminalValueEClass, TerminalValue.class, "TerminalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTerminalValue_Parent(), ecorePackage.getEObject(), null, "parent", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTerminalValue_Variable(), this.getBusinessAttribute(), null, "variable", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTerminalValue_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

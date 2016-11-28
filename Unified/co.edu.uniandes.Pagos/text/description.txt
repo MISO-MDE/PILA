@@ -77,8 +77,10 @@ Package pagos <http://www.edu.co/uniandes/Pagos>
     Attribute name : EString
     Attribute type : EString
     Reference exp : Expression
+    Attribute isIndex : EString
 
   Class TerminalValue -> Expression
+    Reference parent : EObject
     Reference variable : BusinessAttribute
     Attribute valor : EString
 

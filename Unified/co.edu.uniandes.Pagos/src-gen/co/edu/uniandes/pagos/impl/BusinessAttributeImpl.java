@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link co.edu.uniandes.pagos.impl.BusinessAttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.BusinessAttributeImpl#getType <em>Type</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.BusinessAttributeImpl#getExp <em>Exp</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.impl.BusinessAttributeImpl#getIsIndex <em>Is Index</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +83,26 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
   protected Expression exp;
+
+  /**
+	 * The default value of the '{@link #getIsIndex() <em>Is Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getIsIndex()
+	 * @generated
+	 * @ordered
+	 */
+  protected static final String IS_INDEX_EDEFAULT = null;
+
+  /**
+	 * The cached value of the '{@link #getIsIndex() <em>Is Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getIsIndex()
+	 * @generated
+	 * @ordered
+	 */
+  protected String isIndex = IS_INDEX_EDEFAULT;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -201,6 +222,29 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public String getIsIndex()
+  {
+		return isIndex;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setIsIndex(String newIsIndex)
+  {
+		String oldIsIndex = isIndex;
+		isIndex = newIsIndex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX, oldIsIndex, isIndex));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -226,6 +270,8 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return getType();
 			case PagosPackage.BUSINESS_ATTRIBUTE__EXP:
 				return getExp();
+			case PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX:
+				return getIsIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -247,6 +293,9 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case PagosPackage.BUSINESS_ATTRIBUTE__EXP:
 				setExp((Expression)newValue);
+				return;
+			case PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX:
+				setIsIndex((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -270,6 +319,9 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 			case PagosPackage.BUSINESS_ATTRIBUTE__EXP:
 				setExp((Expression)null);
 				return;
+			case PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX:
+				setIsIndex(IS_INDEX_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -289,6 +341,8 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case PagosPackage.BUSINESS_ATTRIBUTE__EXP:
 				return exp != null;
+			case PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX:
+				return IS_INDEX_EDEFAULT == null ? isIndex != null : !IS_INDEX_EDEFAULT.equals(isIndex);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -308,6 +362,8 @@ public class BusinessAttributeImpl extends MinimalEObjectImpl.Container implemen
 		result.append(name);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", isIndex: ");
+		result.append(isIndex);
 		result.append(')');
 		return result.toString();
 	}
