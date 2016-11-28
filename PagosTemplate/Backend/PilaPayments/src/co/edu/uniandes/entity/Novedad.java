@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Type;
+
 import co.edu.uniandes.staticmodel.EstadoNovedad;
 import co.edu.uniandes.staticmodel.TipoNovedad;
 
@@ -106,6 +108,7 @@ public class Novedad {
 	/**
 	 * @return the fechaInicio
 	 */
+	@Type(type="date")
 	public Date getFechaInicio() {
 		return fechaInicio;
 	}
@@ -120,6 +123,7 @@ public class Novedad {
 	/**
 	 * @return the fechaFin
 	 */
+	@Type(type="date")
 	public Date getFechaFin() {
 		return fechaFin;
 	}
