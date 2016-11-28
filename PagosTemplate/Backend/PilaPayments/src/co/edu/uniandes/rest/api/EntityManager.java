@@ -18,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -90,7 +91,8 @@ public class EntityManager {
 
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
-    public String update(Object theEntity) throws JsonParseException, JsonMappingException, IOException {
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String update(String theEntity) throws JsonParseException, JsonMappingException, IOException {
         logger.debug("Start update");
         EntityTO entityTO = this.mapObjectEntity2PilaEntityTO(theEntity);
         String id = getEntityLogic().update(entityTO);
@@ -123,13 +125,17 @@ public class EntityManager {
         return logic;
     }
 
-    private EntityTO mapObjectEntity2PilaEntityTO(Object theEntity) throws JsonParseException, JsonMappingException, IOException {
-        final ObjectNode node = new ObjectMapper().readValue(theEntity.toString(), ObjectNode.class);
+    private EntityTO mapObjectEntity2PilaEntityTO(String theEntity) throws JsonParseException, JsonMappingException, IOException {
+    	ObjectMapper mapper = new ObjectMapper();
+		mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+		
+		final ObjectNode node = mapper.readValue(theEntity.toString(), ObjectNode.class);
         logger.debug("Object " + node.asText());
         EntityTO entityTO = new EntityTO();
-        if(!node.get("id").asText().isEmpty()) {
+        if(node.get("id") != null && !node.get("id").asText().isEmpty())  {        	
         	 entityTO.setId(node.get("id").asText());
         }
+        entityTO.setSuperEntidad(node.get("superEntityId").asText());
         entityTO.setCedula(node.get("cedula").asText());
         entityTO.setNombre(node.get("nombre").asText());
         entityTO.setApellido(node.get("apellido").asText());

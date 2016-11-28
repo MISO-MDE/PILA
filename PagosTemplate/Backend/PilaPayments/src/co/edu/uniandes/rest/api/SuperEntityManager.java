@@ -142,7 +142,7 @@ public class SuperEntityManager {
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public String putSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
+	public String update(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
 		logger.debug("Start putSuperEntity");
 		
 		ObjectMapper mapper = new ObjectMapper();

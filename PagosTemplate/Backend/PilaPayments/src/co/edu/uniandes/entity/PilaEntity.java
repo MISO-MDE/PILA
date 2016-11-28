@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * representa una entidad asociada a una super entidad de PILA
@@ -64,6 +66,7 @@ public class PilaEntity {
 	/**
 	 * super entidad a la que pertenece
 	 */
+	@JsonIgnore
 	private SuperEntity superEntidad;
 	
 	/**

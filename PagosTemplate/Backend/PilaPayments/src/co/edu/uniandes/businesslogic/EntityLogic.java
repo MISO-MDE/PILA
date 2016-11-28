@@ -79,7 +79,7 @@ public class EntityLogic {
 			}
 			
 			if(!entityTO.getPaisGrupoFamiliar().isEmpty()) {
-				entity.setPaisGrupoFamiliar(Long.parseLong(entityTO.getProfesion()));
+				entity.setPaisGrupoFamiliar(Long.parseLong(entityTO.getPaisGrupoFamiliar()));
 			}
 				
 			entity = entityDAO.update(entity);
