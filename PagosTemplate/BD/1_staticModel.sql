@@ -44,17 +44,12 @@
 	insert into TipoPensionado (id, codigo, descripcion) values(8,'08','Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión');
 	insert into TipoPensionado (id, codigo, descripcion) values(9,'09','Beneficiario UPC adicional');
 
-    --TipoNovedad
-	--insert into TipoNovedad (id, codigo, descripcion) values(1,'01','Traslado');
-	--insert into TipoNovedad (id, codigo, descripcion) values(2,'02','Variación transitoria del salario');
-	--insert into TipoNovedad (id, codigo, descripcion) values(3,'03','Suspension temporal, licencia no remunerada o comosión de servicios');
-	--insert into TipoNovedad (id, codigo, descripcion) values(4,'04','Incapacidad temporal por enfermedad');
-	--insert into TipoNovedad (id, codigo, descripcion) values(5,'05','Licencia de maternidad o paternidad');
-	--insert into TipoNovedad (id, codigo, descripcion) values(6,'06','Vacaciones');
-	--insert into TipoNovedad (id, codigo, descripcion) values(7,'07','Licencia remunerada');
-	--insert into TipoNovedad (id, codigo, descripcion) values(8,'08','Aporte voluntario a pensiones');
-	--insert into TipoNovedad (id, codigo, descripcion) values(9,'09','Suspension');
-
+    --Riesgo
+	insert into Riesgo (id, claseRiesgo) values(1,1);
+	insert into Riesgo (id, claseRiesgo) values(1,2);
+	insert into Riesgo (id, claseRiesgo) values(1,3);
+	insert into Riesgo (id, claseRiesgo) values(1,4);
+	insert into Riesgo (id, claseRiesgo) values(1,5);
 
 	--TipoPagador
 	insert into TipoPagador (id, codigo, descripcion) values(1,'01','Empleador');

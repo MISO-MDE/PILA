@@ -1,5 +1,18 @@
 
 --Este archivo se debe autogenerar con el modelo   de las validaciones
+
+--riesgo actividadeconomica
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (1,1)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (1,2)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (2,3)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (2,4)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (3,5)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (3,6)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (4,7)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (4,8)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (5,9)
+insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (5,10)
+
 --validacionpensionadopagador
 insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(1,1,1);
 insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(2,1,2);
