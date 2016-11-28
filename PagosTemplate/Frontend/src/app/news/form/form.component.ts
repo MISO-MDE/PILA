@@ -10,41 +10,33 @@ import { INews } from "../../commons/sharedresources/interfaces"
 })
 export class NewFormComponent implements OnInit {
 
-  public newTypeOptions: Array<any> = [
-                          {'id':"REG",'name':"Traslado"},
-                          {'id':"REG",'name': "Variacion Transitoria del Salario"},
-                          {'id':"SLN",'name':"SLN-Suspension Temporal"},
-                          {'id':"SLN",'name':"SLN-Licencia No Remunerada"},
-                          {'id':"SLN",'name':"SLN-Comision de Servicios"}
+    public tipoNovedad = [
+      {id: '1', name: 'Traslado'},
+      {id: '2', name: 'Variación transitoria del salario'},
+      {id: '3', name: 'Suspension temporal, licencia no remunerada o comosión de servicios'},
+      {id: '4', name: 'Incapacidad temporal por enfermedad'},
+      {id: '5', name: 'Licencia de maternidad o paternidad'},
+      {id: '6', name: 'Vacaciones'},
+      {id: '7', name: 'Licencia remunerada'},
+      {id: '8', name: 'Aporte voluntario a pensiones'},
+      {id: '9', name: 'Suspension'}
+    ];
 
-
-  ];
-
-  public cedula: string;
-  public firstName: string;
-  public lastName: string;
-  public entityid:number;
+  public entity = {};
 
   constructor(private pensionerService: PensionerApiService,
-              private businessService: NewsBusinessService) { }
+              public businessService: NewsBusinessService) { }
 
   ngOnInit() {
   }
 
   getEntity() {
-    console.log("Evento llamando datos de la entidad:" + this.cedula);
-    this.pensionerService.loadById(this.cedula).subscribe((entityObj:any) => {
-      console.log("Evento llamando datos de la entidad:" + JSON.stringify(entityObj));
-      this.firstName = entityObj.firstName;
-      this.lastName = entityObj.lastName;
-      this.entityid = entityObj.id;
+    this.pensionerService.loadById(this.businessService.selectedEntity.cedula).subscribe((entityObj:any) => {
+      this.businessService.selectedEntity = entityObj;
     });
   }
 
   public saveNews() {
-    this.businessService.selectedRow.entityId = this.entityid;
-    this.businessService.selectedRow.entityId = this.entityid;
-    this.businessService.selectedRow.fechaCreacion = new Date();
     this.businessService.saveNews(<INews>this.businessService.selectedRow);
   }
 
