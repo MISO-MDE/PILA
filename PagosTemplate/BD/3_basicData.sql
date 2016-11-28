@@ -6,3 +6,4 @@ values (1, 'pagos@deuna.com', null, 'M00UYKY5EReZlnhzsHeEWG0Mhpn1', 'PagosAdmin'
 /* Inserta Interseccion */
 insert into userintermediary
 values (1);
+commit;
