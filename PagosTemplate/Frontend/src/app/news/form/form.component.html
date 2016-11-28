@@ -18,7 +18,7 @@
     <label>Tipo de novedad</label>
     <select class="form-control"
             [(ngModel)]="businessService.selectedRow.tipoNovedad">
-      <option *ngFor="let option of  tipoNovedad" [value]="option.name">{{option.name}}</option>
+      <option *ngFor="let option of  tipoNovedad" [value]="option.id">{{option.name}}</option>
     </select>
     <label>Fecha inicial</label>
     <input [(ngModel)]="businessService.selectedRow.fechaInicial" type="date" class="form-control"/>

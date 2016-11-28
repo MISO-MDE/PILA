@@ -38,6 +38,7 @@ export class NewsBusinessService {
    public saveNews(news: News): void {
      news.entityId = this.selectedEntity.id;
      news.fechaCreacion = new Date();
+     news.cedulaEntity = this.selectedEntity.cedula;
     this.eventApiService.saveNews(news).subscribe((response: any) => {
       if (response) {
         this.loadEvents();

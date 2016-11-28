@@ -80,4 +80,5 @@ export class News implements INews {
 	public tipoNovedad:string;
 	public estado:string;
   public diasHabiles:number;
+  public cedulaEntity:string;
 }
