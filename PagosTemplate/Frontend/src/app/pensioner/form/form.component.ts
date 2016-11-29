@@ -29,7 +29,7 @@ export class PensionerFormComponent implements OnInit {
 
   ngOnInit() {
     var userData = this.fireLoginService.getUserData();
-    var tipopagador = userData.superEntity.tipopagador || 1;
+    var tipopagador = userData.superEntity.tipoPagador.id || 1;
     this.businessService.getParameters('/parameters/tipopagador/'+tipopagador+'/opciones').subscribe((response: any) => {
       this.parameters = response;
     });
