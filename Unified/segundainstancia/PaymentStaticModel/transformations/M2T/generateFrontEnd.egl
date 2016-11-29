@@ -1,5 +1,6 @@
 [%
 	import "frontend/form/generate_form_component.egl";
+	import "frontend/grid/generate_grid_component.egl";
 	
 	function generateFrontEnd(){
 	
@@ -8,6 +9,7 @@
 		for(view in pila_front!View.allInstances()){
 		
 			generateFormComponent(outputDir, view);
+			generateGridComponent(outputDir, view);
 		
 		}
 	}

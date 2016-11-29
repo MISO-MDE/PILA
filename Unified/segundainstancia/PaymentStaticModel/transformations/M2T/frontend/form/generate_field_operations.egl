@@ -1,3 +1,4 @@
+
 [*FIELD HTML*]
 [%operation pila_front!Field writeHTML(){self.writeHTML(0);}%]
 [%operation pila_front!Field getFixedName(): String{return self.name.replace(" ", "_").toLowerCase;}%]
@@ -20,11 +21,29 @@
 	[%=tab%]</select> type="text" class="form-control"/>
 [%}%]
 
-[*ACTION HTML*]
+[*DEFAULT ACTION HTML*]
 [%operation pila_front!Action writeHTML(indent){
 	var tab = calculateTab(indent);
 	var optionName = self.getFixedName();%]
 	[%=tab%]<button (click)=[%=self.value.toLowerCase()%]() class="btn btn-primary">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*CREATE ACTION HTML*]
+[%operation pila_front!CreateAction writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button *ngIf="!businessService.isEditingRow()" (click)=[%=self.value.toLowerCase()%]() class="btn btn-primary">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*UPDATE ACTION HTML*]
+[%operation pila_front!UpdateAction writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button *ngIf="!businessService.isEditingRow()" (click)=[%=self.value.toLowerCase()%]() class="btn btn-warning">
 	[%=tab + "\t"%]<span>[%=self.name%]</span>
 	[%=tab%]</button>
 [%}%]

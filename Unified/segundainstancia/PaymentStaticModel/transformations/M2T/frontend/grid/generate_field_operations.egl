@@ -1,0 +1,38 @@
+
+[*DEFAULT ACTION HTML*]
+[%operation pila_front!Action writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%]() class="btn btn-primary">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*CREATE ACTION HTML*]
+[%operation pila_front!CreateAction writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button *ngIf="!businessService.isEditingRow()" (click)=[%=self.value.toLowerCase()%]() class="btn btn-primary">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*UPDATE ACTION HTML*]
+[%operation pila_front!UpdateAction writeHTML(indent){
+	var tab = calculateTab(indent);
+	var optionName = self.getFixedName();%]
+	[%=tab%]<button *ngIf="!businessService.isEditingRow()" (click)=[%=self.value.toLowerCase()%]() class="btn btn-warning">
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*TABULATION*]
+[%function calculateTab(indent):String{
+	var tab = "";
+	var i = 0;
+	while(i < indent){
+		tab += "\t";
+		i++;
+	}
+	return tab;
+}%]

@@ -1,6 +1,6 @@
 [%
 	function generateFormComponent(genPath, view){
-		var outputDir = genPath + "/" + view.name + "/form/";
+		var outputDir = genPath + "/" + view.name.toLowerCase + "/form/";
 		
 		//FORM HTML
 		//var form_html:Template:= TemplateFactory.load('./Form/generate_form_html.egl');

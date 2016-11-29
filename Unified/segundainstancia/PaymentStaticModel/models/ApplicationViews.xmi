@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pila_front:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pila_front="http://www.uniandes.edu.co/Metamodelo/pila_front">
+  <views name="Pensioner" url="www.pensioner.com">
+    <form name="Pensionado">
+      <fields xsi:type="pila_front:Input" name="Nombre" value="Rafa"/>
+      <fields xsi:type="pila_front:Input" name="Cedula" value="88754319"/>
+      <fields xsi:type="pila_front:Input" name="Apellido" value="Bustamante"/>
+      <fields xsi:type="pila_front:Input" name="Salario" value="1200000"/>
+      <fields xsi:type="pila_front:Select" name="Tipo Pension"/>
+      <fields xsi:type="pila_front:Select" name="Tipo Pensionado"/>
+      <fields xsi:type="pila_front:Select" name="País de Residencia"/>
+      <fields xsi:type="pila_front:Select" name="Residencia Grupo Familiar"/>
+      <fields xsi:type="pila_front:CreateAction" name="Crear" value="Save" service="//@views.0/@services.0"/>
+      <fields xsi:type="pila_front:UpdateAction" name="Actualizar" value="Update" service="//@views.0/@services.1"/>
+    </form>
+    <grid name="Lista de Pensionados"/>
+    <services name="PensionerSave" url="www.pensioner.com/save"/>
+    <services name="PensionerUpdate" url="www.pensioner.com/update"/>
+  </views>
+  <views name="Intermediary" url="www.superentity.com">
+    <form name="Empresa Aportante">
+      <fields xsi:type="pila_front:Input" name="NIT"/>
+      <fields xsi:type="pila_front:Input" name="Nombre"/>
+      <fields xsi:type="pila_front:Select" name="Actividad Economica"/>
+      <fields xsi:type="pila_front:Select" name="Tipo de Pagador"/>
+      <fields xsi:type="pila_front:CreateAction" name="Crear" value="Create" service="//@views.1/@services.0"/>
+      <fields xsi:type="pila_front:UpdateAction" name="Actualizar" value="Update" service="//@views.1/@services.1"/>
+      <fields xsi:type="pila_front:CancelAction" name="Cancelar" value="Cancel" service="//@views.1/@services.2"/>
+    </form>
+    <grid name="Lista de Empresas Aportantes"/>
+    <services name="IntermediaryCreate" url="www.intermediary.com/create"/>
+    <services name="IntermediaryUpdate" url="www.intermediary.com/update"/>
+    <services name="IntermediaryCancel" url="www.intermediary.com/cancel"/>
+  </views>
+</pila_front:Application>
