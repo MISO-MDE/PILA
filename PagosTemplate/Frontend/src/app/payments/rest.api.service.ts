@@ -28,8 +28,7 @@ export class PaymentApiService {
 
     getPaymentCalculation(cedula:string): Observable<IPayment> {
         var urlGet;
-        urlGet = this.url + "calculation" + "?id=" + cedula;
-        console.log("getCalculatinData: " + urlGet);
+        urlGet = this.url + "calculation/" + cedula;
         return this.http.get(urlGet).map(this.extractData);
     }
 
@@ -38,14 +37,12 @@ export class PaymentApiService {
         let body;
         // check if empty, before call json
         if (res.text()) {
-            console.error("retorno" + JSON.stringify(res));
             body = res.json();
         }
         return body || {};
     }
 
     handleError(error: any): any {
-        console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
     }
 }
