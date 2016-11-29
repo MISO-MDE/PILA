@@ -15,6 +15,11 @@
     </div>
     <br>
     <div class="currency-group">
+      <label>Salario:</label>
+      <label class="pull-right currency-field">{{businessService.selectedEntity.salario | currency:'USD':true}}</label>
+    </div>
+    <br>
+    <div class="currency-group">
       <label>Subtotal EPS:</label>
       <label class="pull-right currency-field">{{businessService.selectedRow.subTotal1 | currency:'USD':true}}</label>
     </div>

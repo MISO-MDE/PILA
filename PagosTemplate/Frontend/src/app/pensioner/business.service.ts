@@ -12,7 +12,8 @@ export class PensionerBusinessService {
   public columns: Array<any> = [
     {title: 'Nombre', className: 'text-warning', name: 'nombre'},
     {title: 'Apellido', className: 'text-warning', name: 'apellido'},
-    {title: 'Identificación', name: 'cedula'}
+    {title: 'Identificación', name: 'cedula'},
+    {title: 'Salario', name: 'salario'}
   ];
   public selectedRow: any = {};
 
