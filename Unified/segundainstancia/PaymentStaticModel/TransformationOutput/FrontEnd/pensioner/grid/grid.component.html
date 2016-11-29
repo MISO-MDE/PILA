@@ -1,11 +1,7 @@
-[%
-import "generate_grid_field_operations.egl";
-var grid = view.grid;
-%]
-<div class="[%=view.name.toLowerCase%]">
+<div class="pensioner">
 	<h4 class="section-title">
     <i class="glyphicon glyphicon-user"></i>
-    <span>[%=grid.name%]</span>
+    <span>Lista de Pensionados</span>
   </h4>
   <table class="table dataTable table-striped table-bordered" border="1px">
   	<thead>
@@ -18,11 +14,14 @@ var grid = view.grid;
 	    <tr *ngFor="let row of businessService.rows">
 	      <td *ngFor="let column of businessService.columns">{{getRowData(row,column.name)}}</td>
 	      <td>
-	      	[%for(col in grid.columns){
-      			for(field in col.fields){
-      				if(field.isKindOf(pila_front!Action)){%]
-      		[%field.writeHTML(2);%]
-	        [%}}}%]
+			<button (click)=editrow(row) class="btn btn-primary">
+				<i class="glyphicon glyphicon-pencil"></i>
+				<span>Editar</span>
+			</button>
+			<button (click)=deleterow(row) class="btn btn-primary">
+				<i class="glyphicon glyphicon-pencil"></i>
+				<span>Eliminar</span>
+			</button>
 	      </td>
 	    </tr>
     </tbody>

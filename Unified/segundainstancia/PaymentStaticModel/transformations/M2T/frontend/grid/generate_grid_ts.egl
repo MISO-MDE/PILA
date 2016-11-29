@@ -1,0 +1,28 @@
+[%
+	var name=view.name;
+	var grid = view.grid;
+%]
+import {Component, OnInit} from '@angular/core';
+import {PAsideService} from "../../commons/p-aside/p-aside.service";
+import {[%=name%]BusinessService} from "../business.service";
+import {[%=name%]FormComponent} from "../form/form.component";
+
+@Component({
+  selector: 'app-[%=name.toLowerCase%]s',
+  templateUrl: './grid.component.html',
+  styleUrls: ['./grid.component.less']
+})
+
+export class [%=name%]GridComponent implements OnInit {
+	
+	public rows: Array<any>;
+	
+	public columns: Array<any> = [
+		[%
+		if(grid.isDefined()){
+		for(col in grid.columns){
+		%]
+		
+		[%}}%]
+	]
+}

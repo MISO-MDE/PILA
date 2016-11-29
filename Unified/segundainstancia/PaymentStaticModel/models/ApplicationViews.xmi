@@ -13,9 +13,15 @@
       <fields xsi:type="pila_front:CreateAction" name="Crear" value="Save" service="//@views.0/@services.0"/>
       <fields xsi:type="pila_front:UpdateAction" name="Actualizar" value="Update" service="//@views.0/@services.1"/>
     </form>
-    <grid name="Lista de Pensionados"/>
+    <grid name="Lista de Pensionados">
+      <columns name="Buttons">
+        <fields xsi:type="pila_front:UpdateAction" name="Editar" value="editRow" service="//@views.0/@services.1"/>
+        <fields xsi:type="pila_front:DeleteAction" name="Eliminar" value="deleteRow" service="//@views.0/@services.2"/>
+      </columns>
+    </grid>
     <services name="PensionerSave" url="www.pensioner.com/save"/>
     <services name="PensionerUpdate" url="www.pensioner.com/update"/>
+    <services name="PensionerDelete" url="www.pensioner.com/delete"/>
   </views>
   <views name="Intermediary" url="www.superentity.com">
     <form name="Empresa Aportante">

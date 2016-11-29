@@ -6,11 +6,11 @@
 		var grid_html:Template:= TemplateFactory.load('./frontend/grid/generate_grid_html.egl');
 		grid_html.populate("view", view);
 		grid_html.generate(outputDir + 'grid.component.html');
-		/*
+		
 		//FORM TS
 		var grid_ts:Template:= TemplateFactory.load('./frontend/grid/generate_grid_ts.egl');
 		grid_ts.populate("view", view);
 		grid_ts.generate(outputDir + 'grid.component.ts');
-		*/
+		
 	}
 %]

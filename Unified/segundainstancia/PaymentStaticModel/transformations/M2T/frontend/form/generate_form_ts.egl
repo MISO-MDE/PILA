@@ -1,5 +1,5 @@
 [%
-import "generate_field_operations.egl"; 
+import "generate_form_field_operations.egl"; 
 
 var viewName = view.name;
 var form = view.form;

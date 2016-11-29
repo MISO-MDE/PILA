@@ -1,0 +1,56 @@
+
+[*DEFAULT ACTION HTML*]
+[%operation pila_front!Action writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%](row) class="btn btn-primary">
+	[%=tab + "\t"%]<i class="glyphicon glyphicon-pencil"></i>
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*CREATE ACTION HTML*]
+[%operation pila_front!CreateAction writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%](row) class="btn btn-primary">
+	[%=tab + "\t"%]<i class="glyphicon glyphicon-pencil"></i>
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*READ ACTION HTML*]
+[%operation pila_front!ReadAction writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%](row) class="btn btn-primary">
+	[%=tab + "\t"%]<i class="glyphicon glyphicon-pencil"></i>
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*UPDATE ACTION HTML*]
+[%operation pila_front!UpdateAction writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%](row) class="btn btn-primary">
+	[%=tab + "\t"%]<i class="glyphicon glyphicon-pencil"></i>
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*DELETE ACTION HTML*]
+[%operation pila_front!DeleteAction writeHTML(indent){
+	var tab = calculateTab(indent);%]
+	[%=tab%]<button (click)=[%=self.value.toLowerCase()%](row) class="btn btn-primary">
+	[%=tab + "\t"%]<i class="glyphicon glyphicon-trash"></i>
+	[%=tab + "\t"%]<span>[%=self.name%]</span>
+	[%=tab%]</button>
+[%}%]
+
+[*TABULATION*]
+[%function calculateTab(indent):String{
+	var tab = "";
+	var i = 0;
+	while(i < indent){
+		tab += "\t";
+		i++;
+	}
+	return tab;
+}%]
