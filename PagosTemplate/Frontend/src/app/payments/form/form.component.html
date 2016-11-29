@@ -2,16 +2,16 @@
   <div class="form-group">
     <h4>Pagos</h4>
     <label>Cédula</label>
-    <input [(ngModel)]="cedula" type="text" class="form-control" (blur)="getEntity()"/>
+    <input [(ngModel)]="businessService.selectedEntity.cedula" type="text" class="form-control" (blur)="getEntity()"/>
     <br><br>
     <div class="currency-group">
       <label>Nombres:</label>
-      <label class="currency-field">{{firstName}}</label>
+      <label class="currency-field">{{businessService.selectedEntity.nombre}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Apellidos:</label>
-      <label class="currency-field">{{lastName}}</label>
+      <label class="currency-field">{{businessService.selectedEntity.apellido}}</label>
     </div>
     <br>
     <div class="currency-group">
