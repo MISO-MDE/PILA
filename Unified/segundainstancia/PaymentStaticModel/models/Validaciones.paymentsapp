@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PaymentsApp:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="http://www.edu.co/uniandes/PaymentsApp" name="APP MDE MISO">
   <intermediary name="Pagos de Una">
+    <businessValue xsi:type="PaymentsApp:BusinessString" value="Pagos de Una"/>
     <intermediaryAttributes name="Tipo Pensionado">
       <businessAttributes name="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2">
         <exp xsi:type="PaymentsApp:TerminalValue"/>
@@ -27,7 +28,7 @@
       <businessAttributes name="Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension"/>
       <businessAttributes name="Sobrevivencia vitalicia por riesgo laboral" type="TipoPension"/>
       <businessAttributes name="Sobrevivencia temporal por riesgo laboral" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension"/>
+      <businessAttributes name="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
       <businessAttributes name="Invalidez riesgo común" type="TipoPension"/>
       <businessAttributes name="Invalidez resgo laboral" type="TipoPension"/>
       <businessAttributes name="Jubilacion" type="TipoPension"/>
