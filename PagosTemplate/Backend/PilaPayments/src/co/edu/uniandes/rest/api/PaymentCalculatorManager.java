@@ -2,6 +2,7 @@ package co.edu.uniandes.rest.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -35,15 +36,16 @@ public class PaymentCalculatorManager {
 	private static final Logger logger = LogManager.getLogger(EventManager.class);
 	//Devuelve el calculo de los pagos
 	@GET
+	@Path("{cedula}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getCalculationPayment(@QueryParam("id") String id) {
+	public Response getCalculationPayment(@PathParam("cedula") String cedula) {
 		
 		Response restResponse;
 		logger.debug("Start getPayment");
-		logger.debug("data: '" + id + "'");
+		logger.debug("data: '" + cedula + "'");
 		String errorCondition = "";
 		
-		PilaEntity theEntity = EntityLogic.getEntityLogic().find(Long.valueOf(id));
+		PilaEntity theEntity = EntityLogic.getEntityLogic().find(Long.valueOf(cedula));
 		
 		logger.debug("data:theEntity '" + theEntity.getCedula() + "'");
 		
@@ -68,7 +70,7 @@ public class PaymentCalculatorManager {
 		// Si pasa todas las validaciones devuelve 
 		
 		response = 	"{" +  
-					"\"" + "id\":" + "7392," +
+					"\"" + "id\": " + theEntity.getId() + "," +
 					"\"" + "supetrEntityId\":" + theEntity.getSuperEntidad().getId() + "," +
 					"\"" + "entityId\":" + theEntity.getId() + "," +
 					"\"" + "subTotal1\":" + calculo1 + "," +
