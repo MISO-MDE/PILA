@@ -36,6 +36,7 @@ Package pagos <http://www.edu.co/uniandes/Pagos>
     Attribute name : EString
     Attribute description : EString
     Reference attLists : BusinessAttribute<<0..*>>
+    Attribute templateCalc : EString
     Reference templates : CalculationTemplate<<0..*>>
     Reference providers : Provider<<0..*>>
 

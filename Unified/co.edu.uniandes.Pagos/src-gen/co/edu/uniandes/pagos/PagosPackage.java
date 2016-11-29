@@ -325,13 +325,22 @@ public interface PagosPackage extends EPackage
   int INFORMATION_TEMPLATE__ATT_LISTS = 2;
 
   /**
+	 * The feature id for the '<em><b>Template Calc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int INFORMATION_TEMPLATE__TEMPLATE_CALC = 3;
+
+  /**
 	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int INFORMATION_TEMPLATE__TEMPLATES = 3;
+  int INFORMATION_TEMPLATE__TEMPLATES = 4;
 
   /**
 	 * The feature id for the '<em><b>Providers</b></em>' containment reference list.
@@ -340,7 +349,7 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INFORMATION_TEMPLATE__PROVIDERS = 4;
+  int INFORMATION_TEMPLATE__PROVIDERS = 5;
 
   /**
 	 * The number of structural features of the '<em>Information Template</em>' class.
@@ -349,7 +358,7 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int INFORMATION_TEMPLATE_FEATURE_COUNT = 5;
+  int INFORMATION_TEMPLATE_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link co.edu.uniandes.pagos.impl.CalculationTemplateImpl <em>Calculation Template</em>}' class.
@@ -1118,6 +1127,17 @@ public interface PagosPackage extends EPackage
   EReference getInformationTemplate_AttLists();
 
   /**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.InformationTemplate#getTemplateCalc <em>Template Calc</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Template Calc</em>'.
+	 * @see co.edu.uniandes.pagos.InformationTemplate#getTemplateCalc()
+	 * @see #getInformationTemplate()
+	 * @generated
+	 */
+  EAttribute getInformationTemplate_TemplateCalc();
+
+  /**
 	 * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.InformationTemplate#getTemplates <em>Templates</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1826,6 +1846,14 @@ public interface PagosPackage extends EPackage
 		 * @generated
 		 */
     EReference INFORMATION_TEMPLATE__ATT_LISTS = eINSTANCE.getInformationTemplate_AttLists();
+
+    /**
+		 * The meta object literal for the '<em><b>Template Calc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute INFORMATION_TEMPLATE__TEMPLATE_CALC = eINSTANCE.getInformationTemplate_TemplateCalc();
 
     /**
 		 * The meta object literal for the '<em><b>Templates</b></em>' containment reference list feature.

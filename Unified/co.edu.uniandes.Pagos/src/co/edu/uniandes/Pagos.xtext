@@ -74,7 +74,7 @@ InformationTemplate:
 			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET
 	RBRACE
 	(COMMA
-	'calculationtemplates' COLON LBRACKET templates += CalculationTemplate (COMMA templates += CalculationTemplate)* RBRACKET)?	
+	'calculationtemplates' templateCalc = ID COLON LBRACKET templates += CalculationTemplate (COMMA templates += CalculationTemplate)* RBRACKET)?	
 	(COMMA 'providers' COLON LBRACKET providers += Provider (COMMA providers += Provider)* RBRACKET)?
 ;
 
@@ -200,7 +200,7 @@ terminal ADDOP: '+' | '-';
 terminal LOGICALCONN: '&&' | '||';
 
 terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>');
+terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>' | '!=');
 
 terminal LBRACE: "{";
 terminal RBRACE: "}";

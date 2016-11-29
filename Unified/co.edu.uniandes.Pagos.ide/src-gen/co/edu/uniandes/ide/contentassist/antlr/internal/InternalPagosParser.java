@@ -11938,7 +11938,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             // InternalPagos.g:4019:1: ( rule__InformationTemplate__Group_17__1__Impl rule__InformationTemplate__Group_17__2 )
             // InternalPagos.g:4020:2: rule__InformationTemplate__Group_17__1__Impl rule__InformationTemplate__Group_17__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_5);
             rule__InformationTemplate__Group_17__1__Impl();
 
             state._fsp--;
@@ -12013,7 +12013,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             // InternalPagos.g:4046:1: ( rule__InformationTemplate__Group_17__2__Impl rule__InformationTemplate__Group_17__3 )
             // InternalPagos.g:4047:2: rule__InformationTemplate__Group_17__2__Impl rule__InformationTemplate__Group_17__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_4);
             rule__InformationTemplate__Group_17__2__Impl();
 
             state._fsp--;
@@ -12042,21 +12042,31 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__2__Impl"
-    // InternalPagos.g:4054:1: rule__InformationTemplate__Group_17__2__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4054:1: rule__InformationTemplate__Group_17__2__Impl : ( ( rule__InformationTemplate__TemplateCalcAssignment_17_2 ) ) ;
     public final void rule__InformationTemplate__Group_17__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4058:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4059:1: ( RULE_COLON )
+            // InternalPagos.g:4058:1: ( ( ( rule__InformationTemplate__TemplateCalcAssignment_17_2 ) ) )
+            // InternalPagos.g:4059:1: ( ( rule__InformationTemplate__TemplateCalcAssignment_17_2 ) )
             {
-            // InternalPagos.g:4059:1: ( RULE_COLON )
-            // InternalPagos.g:4060:2: RULE_COLON
+            // InternalPagos.g:4059:1: ( ( rule__InformationTemplate__TemplateCalcAssignment_17_2 ) )
+            // InternalPagos.g:4060:2: ( rule__InformationTemplate__TemplateCalcAssignment_17_2 )
             {
-             before(grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_2()); 
-            match(input,RULE_COLON,FOLLOW_2); 
-             after(grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_2()); 
+             before(grammarAccess.getInformationTemplateAccess().getTemplateCalcAssignment_17_2()); 
+            // InternalPagos.g:4061:2: ( rule__InformationTemplate__TemplateCalcAssignment_17_2 )
+            // InternalPagos.g:4061:3: rule__InformationTemplate__TemplateCalcAssignment_17_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__InformationTemplate__TemplateCalcAssignment_17_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getInformationTemplateAccess().getTemplateCalcAssignment_17_2()); 
 
             }
 
@@ -12088,7 +12098,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             // InternalPagos.g:4073:1: ( rule__InformationTemplate__Group_17__3__Impl rule__InformationTemplate__Group_17__4 )
             // InternalPagos.g:4074:2: rule__InformationTemplate__Group_17__3__Impl rule__InformationTemplate__Group_17__4
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_11);
             rule__InformationTemplate__Group_17__3__Impl();
 
             state._fsp--;
@@ -12117,21 +12127,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__3__Impl"
-    // InternalPagos.g:4081:1: rule__InformationTemplate__Group_17__3__Impl : ( RULE_LBRACKET ) ;
+    // InternalPagos.g:4081:1: rule__InformationTemplate__Group_17__3__Impl : ( RULE_COLON ) ;
     public final void rule__InformationTemplate__Group_17__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4085:1: ( ( RULE_LBRACKET ) )
-            // InternalPagos.g:4086:1: ( RULE_LBRACKET )
+            // InternalPagos.g:4085:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4086:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4086:1: ( RULE_LBRACKET )
-            // InternalPagos.g:4087:2: RULE_LBRACKET
+            // InternalPagos.g:4086:1: ( RULE_COLON )
+            // InternalPagos.g:4087:2: RULE_COLON
             {
-             before(grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_3()); 
-            match(input,RULE_LBRACKET,FOLLOW_2); 
-             after(grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_3()); 
+             before(grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_3()); 
+            match(input,RULE_COLON,FOLLOW_2); 
+             after(grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_3()); 
 
             }
 
@@ -12163,7 +12173,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             // InternalPagos.g:4100:1: ( rule__InformationTemplate__Group_17__4__Impl rule__InformationTemplate__Group_17__5 )
             // InternalPagos.g:4101:2: rule__InformationTemplate__Group_17__4__Impl rule__InformationTemplate__Group_17__5
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_8);
             rule__InformationTemplate__Group_17__4__Impl();
 
             state._fsp--;
@@ -12192,31 +12202,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__4__Impl"
-    // InternalPagos.g:4108:1: rule__InformationTemplate__Group_17__4__Impl : ( ( rule__InformationTemplate__TemplatesAssignment_17_4 ) ) ;
+    // InternalPagos.g:4108:1: rule__InformationTemplate__Group_17__4__Impl : ( RULE_LBRACKET ) ;
     public final void rule__InformationTemplate__Group_17__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4112:1: ( ( ( rule__InformationTemplate__TemplatesAssignment_17_4 ) ) )
-            // InternalPagos.g:4113:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_4 ) )
+            // InternalPagos.g:4112:1: ( ( RULE_LBRACKET ) )
+            // InternalPagos.g:4113:1: ( RULE_LBRACKET )
             {
-            // InternalPagos.g:4113:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_4 ) )
-            // InternalPagos.g:4114:2: ( rule__InformationTemplate__TemplatesAssignment_17_4 )
+            // InternalPagos.g:4113:1: ( RULE_LBRACKET )
+            // InternalPagos.g:4114:2: RULE_LBRACKET
             {
-             before(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_4()); 
-            // InternalPagos.g:4115:2: ( rule__InformationTemplate__TemplatesAssignment_17_4 )
-            // InternalPagos.g:4115:3: rule__InformationTemplate__TemplatesAssignment_17_4
-            {
-            pushFollow(FOLLOW_2);
-            rule__InformationTemplate__TemplatesAssignment_17_4();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_4()); 
+             before(grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_4()); 
+            match(input,RULE_LBRACKET,FOLLOW_2); 
+             after(grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_4()); 
 
             }
 
@@ -12277,49 +12277,31 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__5__Impl"
-    // InternalPagos.g:4135:1: rule__InformationTemplate__Group_17__5__Impl : ( ( rule__InformationTemplate__Group_17_5__0 )* ) ;
+    // InternalPagos.g:4135:1: rule__InformationTemplate__Group_17__5__Impl : ( ( rule__InformationTemplate__TemplatesAssignment_17_5 ) ) ;
     public final void rule__InformationTemplate__Group_17__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4139:1: ( ( ( rule__InformationTemplate__Group_17_5__0 )* ) )
-            // InternalPagos.g:4140:1: ( ( rule__InformationTemplate__Group_17_5__0 )* )
+            // InternalPagos.g:4139:1: ( ( ( rule__InformationTemplate__TemplatesAssignment_17_5 ) ) )
+            // InternalPagos.g:4140:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_5 ) )
             {
-            // InternalPagos.g:4140:1: ( ( rule__InformationTemplate__Group_17_5__0 )* )
-            // InternalPagos.g:4141:2: ( rule__InformationTemplate__Group_17_5__0 )*
+            // InternalPagos.g:4140:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_5 ) )
+            // InternalPagos.g:4141:2: ( rule__InformationTemplate__TemplatesAssignment_17_5 )
             {
-             before(grammarAccess.getInformationTemplateAccess().getGroup_17_5()); 
-            // InternalPagos.g:4142:2: ( rule__InformationTemplate__Group_17_5__0 )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+             before(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5()); 
+            // InternalPagos.g:4142:2: ( rule__InformationTemplate__TemplatesAssignment_17_5 )
+            // InternalPagos.g:4142:3: rule__InformationTemplate__TemplatesAssignment_17_5
+            {
+            pushFollow(FOLLOW_2);
+            rule__InformationTemplate__TemplatesAssignment_17_5();
 
-                if ( (LA20_0==RULE_COMMA) ) {
-                    alt20=1;
-                }
+            state._fsp--;
 
 
-                switch (alt20) {
-            	case 1 :
-            	    // InternalPagos.g:4142:3: rule__InformationTemplate__Group_17_5__0
-            	    {
-            	    pushFollow(FOLLOW_13);
-            	    rule__InformationTemplate__Group_17_5__0();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
-
-             after(grammarAccess.getInformationTemplateAccess().getGroup_17_5()); 
+             after(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5()); 
 
             }
 
@@ -12342,17 +12324,22 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__6"
-    // InternalPagos.g:4150:1: rule__InformationTemplate__Group_17__6 : rule__InformationTemplate__Group_17__6__Impl ;
+    // InternalPagos.g:4150:1: rule__InformationTemplate__Group_17__6 : rule__InformationTemplate__Group_17__6__Impl rule__InformationTemplate__Group_17__7 ;
     public final void rule__InformationTemplate__Group_17__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4154:1: ( rule__InformationTemplate__Group_17__6__Impl )
-            // InternalPagos.g:4155:2: rule__InformationTemplate__Group_17__6__Impl
+            // InternalPagos.g:4154:1: ( rule__InformationTemplate__Group_17__6__Impl rule__InformationTemplate__Group_17__7 )
+            // InternalPagos.g:4155:2: rule__InformationTemplate__Group_17__6__Impl rule__InformationTemplate__Group_17__7
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_12);
             rule__InformationTemplate__Group_17__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__InformationTemplate__Group_17__7();
 
             state._fsp--;
 
@@ -12375,21 +12362,49 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_17__6__Impl"
-    // InternalPagos.g:4161:1: rule__InformationTemplate__Group_17__6__Impl : ( RULE_RBRACKET ) ;
+    // InternalPagos.g:4162:1: rule__InformationTemplate__Group_17__6__Impl : ( ( rule__InformationTemplate__Group_17_6__0 )* ) ;
     public final void rule__InformationTemplate__Group_17__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4165:1: ( ( RULE_RBRACKET ) )
-            // InternalPagos.g:4166:1: ( RULE_RBRACKET )
+            // InternalPagos.g:4166:1: ( ( ( rule__InformationTemplate__Group_17_6__0 )* ) )
+            // InternalPagos.g:4167:1: ( ( rule__InformationTemplate__Group_17_6__0 )* )
             {
-            // InternalPagos.g:4166:1: ( RULE_RBRACKET )
-            // InternalPagos.g:4167:2: RULE_RBRACKET
+            // InternalPagos.g:4167:1: ( ( rule__InformationTemplate__Group_17_6__0 )* )
+            // InternalPagos.g:4168:2: ( rule__InformationTemplate__Group_17_6__0 )*
             {
-             before(grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_6()); 
-            match(input,RULE_RBRACKET,FOLLOW_2); 
-             after(grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_6()); 
+             before(grammarAccess.getInformationTemplateAccess().getGroup_17_6()); 
+            // InternalPagos.g:4169:2: ( rule__InformationTemplate__Group_17_6__0 )*
+            loop20:
+            do {
+                int alt20=2;
+                int LA20_0 = input.LA(1);
+
+                if ( (LA20_0==RULE_COMMA) ) {
+                    alt20=1;
+                }
+
+
+                switch (alt20) {
+            	case 1 :
+            	    // InternalPagos.g:4169:3: rule__InformationTemplate__Group_17_6__0
+            	    {
+            	    pushFollow(FOLLOW_13);
+            	    rule__InformationTemplate__Group_17_6__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop20;
+                }
+            } while (true);
+
+             after(grammarAccess.getInformationTemplateAccess().getGroup_17_6()); 
 
             }
 
@@ -12411,23 +12426,93 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__InformationTemplate__Group_17__6__Impl"
 
 
-    // $ANTLR start "rule__InformationTemplate__Group_17_5__0"
-    // InternalPagos.g:4177:1: rule__InformationTemplate__Group_17_5__0 : rule__InformationTemplate__Group_17_5__0__Impl rule__InformationTemplate__Group_17_5__1 ;
-    public final void rule__InformationTemplate__Group_17_5__0() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__Group_17__7"
+    // InternalPagos.g:4177:1: rule__InformationTemplate__Group_17__7 : rule__InformationTemplate__Group_17__7__Impl ;
+    public final void rule__InformationTemplate__Group_17__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4181:1: ( rule__InformationTemplate__Group_17_5__0__Impl rule__InformationTemplate__Group_17_5__1 )
-            // InternalPagos.g:4182:2: rule__InformationTemplate__Group_17_5__0__Impl rule__InformationTemplate__Group_17_5__1
+            // InternalPagos.g:4181:1: ( rule__InformationTemplate__Group_17__7__Impl )
+            // InternalPagos.g:4182:2: rule__InformationTemplate__Group_17__7__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__InformationTemplate__Group_17__7__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__InformationTemplate__Group_17__7"
+
+
+    // $ANTLR start "rule__InformationTemplate__Group_17__7__Impl"
+    // InternalPagos.g:4188:1: rule__InformationTemplate__Group_17__7__Impl : ( RULE_RBRACKET ) ;
+    public final void rule__InformationTemplate__Group_17__7__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPagos.g:4192:1: ( ( RULE_RBRACKET ) )
+            // InternalPagos.g:4193:1: ( RULE_RBRACKET )
+            {
+            // InternalPagos.g:4193:1: ( RULE_RBRACKET )
+            // InternalPagos.g:4194:2: RULE_RBRACKET
+            {
+             before(grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_7()); 
+            match(input,RULE_RBRACKET,FOLLOW_2); 
+             after(grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_7()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__InformationTemplate__Group_17__7__Impl"
+
+
+    // $ANTLR start "rule__InformationTemplate__Group_17_6__0"
+    // InternalPagos.g:4204:1: rule__InformationTemplate__Group_17_6__0 : rule__InformationTemplate__Group_17_6__0__Impl rule__InformationTemplate__Group_17_6__1 ;
+    public final void rule__InformationTemplate__Group_17_6__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPagos.g:4208:1: ( rule__InformationTemplate__Group_17_6__0__Impl rule__InformationTemplate__Group_17_6__1 )
+            // InternalPagos.g:4209:2: rule__InformationTemplate__Group_17_6__0__Impl rule__InformationTemplate__Group_17_6__1
             {
             pushFollow(FOLLOW_8);
-            rule__InformationTemplate__Group_17_5__0__Impl();
+            rule__InformationTemplate__Group_17_6__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__InformationTemplate__Group_17_5__1();
+            rule__InformationTemplate__Group_17_6__1();
 
             state._fsp--;
 
@@ -12446,25 +12531,25 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__Group_17_5__0"
+    // $ANTLR end "rule__InformationTemplate__Group_17_6__0"
 
 
-    // $ANTLR start "rule__InformationTemplate__Group_17_5__0__Impl"
-    // InternalPagos.g:4189:1: rule__InformationTemplate__Group_17_5__0__Impl : ( RULE_COMMA ) ;
-    public final void rule__InformationTemplate__Group_17_5__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__Group_17_6__0__Impl"
+    // InternalPagos.g:4216:1: rule__InformationTemplate__Group_17_6__0__Impl : ( RULE_COMMA ) ;
+    public final void rule__InformationTemplate__Group_17_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4193:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4194:1: ( RULE_COMMA )
+            // InternalPagos.g:4220:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4221:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4194:1: ( RULE_COMMA )
-            // InternalPagos.g:4195:2: RULE_COMMA
+            // InternalPagos.g:4221:1: ( RULE_COMMA )
+            // InternalPagos.g:4222:2: RULE_COMMA
             {
-             before(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_5_0()); 
+             before(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_6_0()); 
             match(input,RULE_COMMA,FOLLOW_2); 
-             after(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_5_0()); 
+             after(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_6_0()); 
 
             }
 
@@ -12483,21 +12568,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__Group_17_5__0__Impl"
+    // $ANTLR end "rule__InformationTemplate__Group_17_6__0__Impl"
 
 
-    // $ANTLR start "rule__InformationTemplate__Group_17_5__1"
-    // InternalPagos.g:4204:1: rule__InformationTemplate__Group_17_5__1 : rule__InformationTemplate__Group_17_5__1__Impl ;
-    public final void rule__InformationTemplate__Group_17_5__1() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__Group_17_6__1"
+    // InternalPagos.g:4231:1: rule__InformationTemplate__Group_17_6__1 : rule__InformationTemplate__Group_17_6__1__Impl ;
+    public final void rule__InformationTemplate__Group_17_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4208:1: ( rule__InformationTemplate__Group_17_5__1__Impl )
-            // InternalPagos.g:4209:2: rule__InformationTemplate__Group_17_5__1__Impl
+            // InternalPagos.g:4235:1: ( rule__InformationTemplate__Group_17_6__1__Impl )
+            // InternalPagos.g:4236:2: rule__InformationTemplate__Group_17_6__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__InformationTemplate__Group_17_5__1__Impl();
+            rule__InformationTemplate__Group_17_6__1__Impl();
 
             state._fsp--;
 
@@ -12516,35 +12601,35 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__Group_17_5__1"
+    // $ANTLR end "rule__InformationTemplate__Group_17_6__1"
 
 
-    // $ANTLR start "rule__InformationTemplate__Group_17_5__1__Impl"
-    // InternalPagos.g:4215:1: rule__InformationTemplate__Group_17_5__1__Impl : ( ( rule__InformationTemplate__TemplatesAssignment_17_5_1 ) ) ;
-    public final void rule__InformationTemplate__Group_17_5__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__Group_17_6__1__Impl"
+    // InternalPagos.g:4242:1: rule__InformationTemplate__Group_17_6__1__Impl : ( ( rule__InformationTemplate__TemplatesAssignment_17_6_1 ) ) ;
+    public final void rule__InformationTemplate__Group_17_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4219:1: ( ( ( rule__InformationTemplate__TemplatesAssignment_17_5_1 ) ) )
-            // InternalPagos.g:4220:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_5_1 ) )
+            // InternalPagos.g:4246:1: ( ( ( rule__InformationTemplate__TemplatesAssignment_17_6_1 ) ) )
+            // InternalPagos.g:4247:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_6_1 ) )
             {
-            // InternalPagos.g:4220:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_5_1 ) )
-            // InternalPagos.g:4221:2: ( rule__InformationTemplate__TemplatesAssignment_17_5_1 )
+            // InternalPagos.g:4247:1: ( ( rule__InformationTemplate__TemplatesAssignment_17_6_1 ) )
+            // InternalPagos.g:4248:2: ( rule__InformationTemplate__TemplatesAssignment_17_6_1 )
             {
-             before(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5_1()); 
-            // InternalPagos.g:4222:2: ( rule__InformationTemplate__TemplatesAssignment_17_5_1 )
-            // InternalPagos.g:4222:3: rule__InformationTemplate__TemplatesAssignment_17_5_1
+             before(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_6_1()); 
+            // InternalPagos.g:4249:2: ( rule__InformationTemplate__TemplatesAssignment_17_6_1 )
+            // InternalPagos.g:4249:3: rule__InformationTemplate__TemplatesAssignment_17_6_1
             {
             pushFollow(FOLLOW_2);
-            rule__InformationTemplate__TemplatesAssignment_17_5_1();
+            rule__InformationTemplate__TemplatesAssignment_17_6_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5_1()); 
+             after(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_6_1()); 
 
             }
 
@@ -12563,18 +12648,18 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__Group_17_5__1__Impl"
+    // $ANTLR end "rule__InformationTemplate__Group_17_6__1__Impl"
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__0"
-    // InternalPagos.g:4231:1: rule__InformationTemplate__Group_18__0 : rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1 ;
+    // InternalPagos.g:4258:1: rule__InformationTemplate__Group_18__0 : rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1 ;
     public final void rule__InformationTemplate__Group_18__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4235:1: ( rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1 )
-            // InternalPagos.g:4236:2: rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1
+            // InternalPagos.g:4262:1: ( rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1 )
+            // InternalPagos.g:4263:2: rule__InformationTemplate__Group_18__0__Impl rule__InformationTemplate__Group_18__1
             {
             pushFollow(FOLLOW_21);
             rule__InformationTemplate__Group_18__0__Impl();
@@ -12605,17 +12690,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__0__Impl"
-    // InternalPagos.g:4243:1: rule__InformationTemplate__Group_18__0__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:4270:1: rule__InformationTemplate__Group_18__0__Impl : ( RULE_COMMA ) ;
     public final void rule__InformationTemplate__Group_18__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4247:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4248:1: ( RULE_COMMA )
+            // InternalPagos.g:4274:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4275:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4248:1: ( RULE_COMMA )
-            // InternalPagos.g:4249:2: RULE_COMMA
+            // InternalPagos.g:4275:1: ( RULE_COMMA )
+            // InternalPagos.g:4276:2: RULE_COMMA
             {
              before(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_0()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -12642,14 +12727,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__1"
-    // InternalPagos.g:4258:1: rule__InformationTemplate__Group_18__1 : rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2 ;
+    // InternalPagos.g:4285:1: rule__InformationTemplate__Group_18__1 : rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2 ;
     public final void rule__InformationTemplate__Group_18__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4262:1: ( rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2 )
-            // InternalPagos.g:4263:2: rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2
+            // InternalPagos.g:4289:1: ( rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2 )
+            // InternalPagos.g:4290:2: rule__InformationTemplate__Group_18__1__Impl rule__InformationTemplate__Group_18__2
             {
             pushFollow(FOLLOW_4);
             rule__InformationTemplate__Group_18__1__Impl();
@@ -12680,17 +12765,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__1__Impl"
-    // InternalPagos.g:4270:1: rule__InformationTemplate__Group_18__1__Impl : ( 'providers' ) ;
+    // InternalPagos.g:4297:1: rule__InformationTemplate__Group_18__1__Impl : ( 'providers' ) ;
     public final void rule__InformationTemplate__Group_18__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4274:1: ( ( 'providers' ) )
-            // InternalPagos.g:4275:1: ( 'providers' )
+            // InternalPagos.g:4301:1: ( ( 'providers' ) )
+            // InternalPagos.g:4302:1: ( 'providers' )
             {
-            // InternalPagos.g:4275:1: ( 'providers' )
-            // InternalPagos.g:4276:2: 'providers'
+            // InternalPagos.g:4302:1: ( 'providers' )
+            // InternalPagos.g:4303:2: 'providers'
             {
              before(grammarAccess.getInformationTemplateAccess().getProvidersKeyword_18_1()); 
             match(input,41,FOLLOW_2); 
@@ -12717,14 +12802,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__2"
-    // InternalPagos.g:4285:1: rule__InformationTemplate__Group_18__2 : rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3 ;
+    // InternalPagos.g:4312:1: rule__InformationTemplate__Group_18__2 : rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3 ;
     public final void rule__InformationTemplate__Group_18__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4289:1: ( rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3 )
-            // InternalPagos.g:4290:2: rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3
+            // InternalPagos.g:4316:1: ( rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3 )
+            // InternalPagos.g:4317:2: rule__InformationTemplate__Group_18__2__Impl rule__InformationTemplate__Group_18__3
             {
             pushFollow(FOLLOW_11);
             rule__InformationTemplate__Group_18__2__Impl();
@@ -12755,17 +12840,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__2__Impl"
-    // InternalPagos.g:4297:1: rule__InformationTemplate__Group_18__2__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4324:1: rule__InformationTemplate__Group_18__2__Impl : ( RULE_COLON ) ;
     public final void rule__InformationTemplate__Group_18__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4301:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4302:1: ( RULE_COLON )
+            // InternalPagos.g:4328:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4329:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4302:1: ( RULE_COLON )
-            // InternalPagos.g:4303:2: RULE_COLON
+            // InternalPagos.g:4329:1: ( RULE_COLON )
+            // InternalPagos.g:4330:2: RULE_COLON
             {
              before(grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_18_2()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -12792,14 +12877,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__3"
-    // InternalPagos.g:4312:1: rule__InformationTemplate__Group_18__3 : rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4 ;
+    // InternalPagos.g:4339:1: rule__InformationTemplate__Group_18__3 : rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4 ;
     public final void rule__InformationTemplate__Group_18__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4316:1: ( rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4 )
-            // InternalPagos.g:4317:2: rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4
+            // InternalPagos.g:4343:1: ( rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4 )
+            // InternalPagos.g:4344:2: rule__InformationTemplate__Group_18__3__Impl rule__InformationTemplate__Group_18__4
             {
             pushFollow(FOLLOW_8);
             rule__InformationTemplate__Group_18__3__Impl();
@@ -12830,17 +12915,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__3__Impl"
-    // InternalPagos.g:4324:1: rule__InformationTemplate__Group_18__3__Impl : ( RULE_LBRACKET ) ;
+    // InternalPagos.g:4351:1: rule__InformationTemplate__Group_18__3__Impl : ( RULE_LBRACKET ) ;
     public final void rule__InformationTemplate__Group_18__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4328:1: ( ( RULE_LBRACKET ) )
-            // InternalPagos.g:4329:1: ( RULE_LBRACKET )
+            // InternalPagos.g:4355:1: ( ( RULE_LBRACKET ) )
+            // InternalPagos.g:4356:1: ( RULE_LBRACKET )
             {
-            // InternalPagos.g:4329:1: ( RULE_LBRACKET )
-            // InternalPagos.g:4330:2: RULE_LBRACKET
+            // InternalPagos.g:4356:1: ( RULE_LBRACKET )
+            // InternalPagos.g:4357:2: RULE_LBRACKET
             {
              before(grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_18_3()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -12867,14 +12952,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__4"
-    // InternalPagos.g:4339:1: rule__InformationTemplate__Group_18__4 : rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5 ;
+    // InternalPagos.g:4366:1: rule__InformationTemplate__Group_18__4 : rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5 ;
     public final void rule__InformationTemplate__Group_18__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4343:1: ( rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5 )
-            // InternalPagos.g:4344:2: rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5
+            // InternalPagos.g:4370:1: ( rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5 )
+            // InternalPagos.g:4371:2: rule__InformationTemplate__Group_18__4__Impl rule__InformationTemplate__Group_18__5
             {
             pushFollow(FOLLOW_12);
             rule__InformationTemplate__Group_18__4__Impl();
@@ -12905,21 +12990,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__4__Impl"
-    // InternalPagos.g:4351:1: rule__InformationTemplate__Group_18__4__Impl : ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) ) ;
+    // InternalPagos.g:4378:1: rule__InformationTemplate__Group_18__4__Impl : ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) ) ;
     public final void rule__InformationTemplate__Group_18__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4355:1: ( ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) ) )
-            // InternalPagos.g:4356:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) )
+            // InternalPagos.g:4382:1: ( ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) ) )
+            // InternalPagos.g:4383:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) )
             {
-            // InternalPagos.g:4356:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) )
-            // InternalPagos.g:4357:2: ( rule__InformationTemplate__ProvidersAssignment_18_4 )
+            // InternalPagos.g:4383:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_4 ) )
+            // InternalPagos.g:4384:2: ( rule__InformationTemplate__ProvidersAssignment_18_4 )
             {
              before(grammarAccess.getInformationTemplateAccess().getProvidersAssignment_18_4()); 
-            // InternalPagos.g:4358:2: ( rule__InformationTemplate__ProvidersAssignment_18_4 )
-            // InternalPagos.g:4358:3: rule__InformationTemplate__ProvidersAssignment_18_4
+            // InternalPagos.g:4385:2: ( rule__InformationTemplate__ProvidersAssignment_18_4 )
+            // InternalPagos.g:4385:3: rule__InformationTemplate__ProvidersAssignment_18_4
             {
             pushFollow(FOLLOW_2);
             rule__InformationTemplate__ProvidersAssignment_18_4();
@@ -12952,14 +13037,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__5"
-    // InternalPagos.g:4366:1: rule__InformationTemplate__Group_18__5 : rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6 ;
+    // InternalPagos.g:4393:1: rule__InformationTemplate__Group_18__5 : rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6 ;
     public final void rule__InformationTemplate__Group_18__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4370:1: ( rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6 )
-            // InternalPagos.g:4371:2: rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6
+            // InternalPagos.g:4397:1: ( rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6 )
+            // InternalPagos.g:4398:2: rule__InformationTemplate__Group_18__5__Impl rule__InformationTemplate__Group_18__6
             {
             pushFollow(FOLLOW_12);
             rule__InformationTemplate__Group_18__5__Impl();
@@ -12990,20 +13075,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__5__Impl"
-    // InternalPagos.g:4378:1: rule__InformationTemplate__Group_18__5__Impl : ( ( rule__InformationTemplate__Group_18_5__0 )* ) ;
+    // InternalPagos.g:4405:1: rule__InformationTemplate__Group_18__5__Impl : ( ( rule__InformationTemplate__Group_18_5__0 )* ) ;
     public final void rule__InformationTemplate__Group_18__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4382:1: ( ( ( rule__InformationTemplate__Group_18_5__0 )* ) )
-            // InternalPagos.g:4383:1: ( ( rule__InformationTemplate__Group_18_5__0 )* )
+            // InternalPagos.g:4409:1: ( ( ( rule__InformationTemplate__Group_18_5__0 )* ) )
+            // InternalPagos.g:4410:1: ( ( rule__InformationTemplate__Group_18_5__0 )* )
             {
-            // InternalPagos.g:4383:1: ( ( rule__InformationTemplate__Group_18_5__0 )* )
-            // InternalPagos.g:4384:2: ( rule__InformationTemplate__Group_18_5__0 )*
+            // InternalPagos.g:4410:1: ( ( rule__InformationTemplate__Group_18_5__0 )* )
+            // InternalPagos.g:4411:2: ( rule__InformationTemplate__Group_18_5__0 )*
             {
              before(grammarAccess.getInformationTemplateAccess().getGroup_18_5()); 
-            // InternalPagos.g:4385:2: ( rule__InformationTemplate__Group_18_5__0 )*
+            // InternalPagos.g:4412:2: ( rule__InformationTemplate__Group_18_5__0 )*
             loop21:
             do {
                 int alt21=2;
@@ -13016,7 +13101,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalPagos.g:4385:3: rule__InformationTemplate__Group_18_5__0
+            	    // InternalPagos.g:4412:3: rule__InformationTemplate__Group_18_5__0
             	    {
             	    pushFollow(FOLLOW_13);
             	    rule__InformationTemplate__Group_18_5__0();
@@ -13055,14 +13140,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__6"
-    // InternalPagos.g:4393:1: rule__InformationTemplate__Group_18__6 : rule__InformationTemplate__Group_18__6__Impl ;
+    // InternalPagos.g:4420:1: rule__InformationTemplate__Group_18__6 : rule__InformationTemplate__Group_18__6__Impl ;
     public final void rule__InformationTemplate__Group_18__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4397:1: ( rule__InformationTemplate__Group_18__6__Impl )
-            // InternalPagos.g:4398:2: rule__InformationTemplate__Group_18__6__Impl
+            // InternalPagos.g:4424:1: ( rule__InformationTemplate__Group_18__6__Impl )
+            // InternalPagos.g:4425:2: rule__InformationTemplate__Group_18__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__InformationTemplate__Group_18__6__Impl();
@@ -13088,17 +13173,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18__6__Impl"
-    // InternalPagos.g:4404:1: rule__InformationTemplate__Group_18__6__Impl : ( RULE_RBRACKET ) ;
+    // InternalPagos.g:4431:1: rule__InformationTemplate__Group_18__6__Impl : ( RULE_RBRACKET ) ;
     public final void rule__InformationTemplate__Group_18__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4408:1: ( ( RULE_RBRACKET ) )
-            // InternalPagos.g:4409:1: ( RULE_RBRACKET )
+            // InternalPagos.g:4435:1: ( ( RULE_RBRACKET ) )
+            // InternalPagos.g:4436:1: ( RULE_RBRACKET )
             {
-            // InternalPagos.g:4409:1: ( RULE_RBRACKET )
-            // InternalPagos.g:4410:2: RULE_RBRACKET
+            // InternalPagos.g:4436:1: ( RULE_RBRACKET )
+            // InternalPagos.g:4437:2: RULE_RBRACKET
             {
              before(grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_18_6()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -13125,14 +13210,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18_5__0"
-    // InternalPagos.g:4420:1: rule__InformationTemplate__Group_18_5__0 : rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1 ;
+    // InternalPagos.g:4447:1: rule__InformationTemplate__Group_18_5__0 : rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1 ;
     public final void rule__InformationTemplate__Group_18_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4424:1: ( rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1 )
-            // InternalPagos.g:4425:2: rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1
+            // InternalPagos.g:4451:1: ( rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1 )
+            // InternalPagos.g:4452:2: rule__InformationTemplate__Group_18_5__0__Impl rule__InformationTemplate__Group_18_5__1
             {
             pushFollow(FOLLOW_8);
             rule__InformationTemplate__Group_18_5__0__Impl();
@@ -13163,17 +13248,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18_5__0__Impl"
-    // InternalPagos.g:4432:1: rule__InformationTemplate__Group_18_5__0__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:4459:1: rule__InformationTemplate__Group_18_5__0__Impl : ( RULE_COMMA ) ;
     public final void rule__InformationTemplate__Group_18_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4436:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4437:1: ( RULE_COMMA )
+            // InternalPagos.g:4463:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4464:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4437:1: ( RULE_COMMA )
-            // InternalPagos.g:4438:2: RULE_COMMA
+            // InternalPagos.g:4464:1: ( RULE_COMMA )
+            // InternalPagos.g:4465:2: RULE_COMMA
             {
              before(grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_5_0()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -13200,14 +13285,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18_5__1"
-    // InternalPagos.g:4447:1: rule__InformationTemplate__Group_18_5__1 : rule__InformationTemplate__Group_18_5__1__Impl ;
+    // InternalPagos.g:4474:1: rule__InformationTemplate__Group_18_5__1 : rule__InformationTemplate__Group_18_5__1__Impl ;
     public final void rule__InformationTemplate__Group_18_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4451:1: ( rule__InformationTemplate__Group_18_5__1__Impl )
-            // InternalPagos.g:4452:2: rule__InformationTemplate__Group_18_5__1__Impl
+            // InternalPagos.g:4478:1: ( rule__InformationTemplate__Group_18_5__1__Impl )
+            // InternalPagos.g:4479:2: rule__InformationTemplate__Group_18_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__InformationTemplate__Group_18_5__1__Impl();
@@ -13233,21 +13318,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__Group_18_5__1__Impl"
-    // InternalPagos.g:4458:1: rule__InformationTemplate__Group_18_5__1__Impl : ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) ) ;
+    // InternalPagos.g:4485:1: rule__InformationTemplate__Group_18_5__1__Impl : ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) ) ;
     public final void rule__InformationTemplate__Group_18_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4462:1: ( ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) ) )
-            // InternalPagos.g:4463:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) )
+            // InternalPagos.g:4489:1: ( ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) ) )
+            // InternalPagos.g:4490:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) )
             {
-            // InternalPagos.g:4463:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) )
-            // InternalPagos.g:4464:2: ( rule__InformationTemplate__ProvidersAssignment_18_5_1 )
+            // InternalPagos.g:4490:1: ( ( rule__InformationTemplate__ProvidersAssignment_18_5_1 ) )
+            // InternalPagos.g:4491:2: ( rule__InformationTemplate__ProvidersAssignment_18_5_1 )
             {
              before(grammarAccess.getInformationTemplateAccess().getProvidersAssignment_18_5_1()); 
-            // InternalPagos.g:4465:2: ( rule__InformationTemplate__ProvidersAssignment_18_5_1 )
-            // InternalPagos.g:4465:3: rule__InformationTemplate__ProvidersAssignment_18_5_1
+            // InternalPagos.g:4492:2: ( rule__InformationTemplate__ProvidersAssignment_18_5_1 )
+            // InternalPagos.g:4492:3: rule__InformationTemplate__ProvidersAssignment_18_5_1
             {
             pushFollow(FOLLOW_2);
             rule__InformationTemplate__ProvidersAssignment_18_5_1();
@@ -13280,14 +13365,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__0"
-    // InternalPagos.g:4474:1: rule__CalculationTemplate__Group__0 : rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1 ;
+    // InternalPagos.g:4501:1: rule__CalculationTemplate__Group__0 : rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1 ;
     public final void rule__CalculationTemplate__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4478:1: ( rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1 )
-            // InternalPagos.g:4479:2: rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1
+            // InternalPagos.g:4505:1: ( rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1 )
+            // InternalPagos.g:4506:2: rule__CalculationTemplate__Group__0__Impl rule__CalculationTemplate__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__CalculationTemplate__Group__0__Impl();
@@ -13318,21 +13403,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__0__Impl"
-    // InternalPagos.g:4486:1: rule__CalculationTemplate__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:4513:1: rule__CalculationTemplate__Group__0__Impl : ( () ) ;
     public final void rule__CalculationTemplate__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4490:1: ( ( () ) )
-            // InternalPagos.g:4491:1: ( () )
+            // InternalPagos.g:4517:1: ( ( () ) )
+            // InternalPagos.g:4518:1: ( () )
             {
-            // InternalPagos.g:4491:1: ( () )
-            // InternalPagos.g:4492:2: ()
+            // InternalPagos.g:4518:1: ( () )
+            // InternalPagos.g:4519:2: ()
             {
              before(grammarAccess.getCalculationTemplateAccess().getCalculationTemplateAction_0()); 
-            // InternalPagos.g:4493:2: ()
-            // InternalPagos.g:4493:3: 
+            // InternalPagos.g:4520:2: ()
+            // InternalPagos.g:4520:3: 
             {
             }
 
@@ -13355,14 +13440,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__1"
-    // InternalPagos.g:4501:1: rule__CalculationTemplate__Group__1 : rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2 ;
+    // InternalPagos.g:4528:1: rule__CalculationTemplate__Group__1 : rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2 ;
     public final void rule__CalculationTemplate__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4505:1: ( rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2 )
-            // InternalPagos.g:4506:2: rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2
+            // InternalPagos.g:4532:1: ( rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2 )
+            // InternalPagos.g:4533:2: rule__CalculationTemplate__Group__1__Impl rule__CalculationTemplate__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__CalculationTemplate__Group__1__Impl();
@@ -13393,17 +13478,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__1__Impl"
-    // InternalPagos.g:4513:1: rule__CalculationTemplate__Group__1__Impl : ( RULE_LBRACE ) ;
+    // InternalPagos.g:4540:1: rule__CalculationTemplate__Group__1__Impl : ( RULE_LBRACE ) ;
     public final void rule__CalculationTemplate__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4517:1: ( ( RULE_LBRACE ) )
-            // InternalPagos.g:4518:1: ( RULE_LBRACE )
+            // InternalPagos.g:4544:1: ( ( RULE_LBRACE ) )
+            // InternalPagos.g:4545:1: ( RULE_LBRACE )
             {
-            // InternalPagos.g:4518:1: ( RULE_LBRACE )
-            // InternalPagos.g:4519:2: RULE_LBRACE
+            // InternalPagos.g:4545:1: ( RULE_LBRACE )
+            // InternalPagos.g:4546:2: RULE_LBRACE
             {
              before(grammarAccess.getCalculationTemplateAccess().getLBRACETerminalRuleCall_1()); 
             match(input,RULE_LBRACE,FOLLOW_2); 
@@ -13430,14 +13515,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__2"
-    // InternalPagos.g:4528:1: rule__CalculationTemplate__Group__2 : rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3 ;
+    // InternalPagos.g:4555:1: rule__CalculationTemplate__Group__2 : rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3 ;
     public final void rule__CalculationTemplate__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4532:1: ( rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3 )
-            // InternalPagos.g:4533:2: rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3
+            // InternalPagos.g:4559:1: ( rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3 )
+            // InternalPagos.g:4560:2: rule__CalculationTemplate__Group__2__Impl rule__CalculationTemplate__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__CalculationTemplate__Group__2__Impl();
@@ -13468,17 +13553,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__2__Impl"
-    // InternalPagos.g:4540:1: rule__CalculationTemplate__Group__2__Impl : ( 'name' ) ;
+    // InternalPagos.g:4567:1: rule__CalculationTemplate__Group__2__Impl : ( 'name' ) ;
     public final void rule__CalculationTemplate__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4544:1: ( ( 'name' ) )
-            // InternalPagos.g:4545:1: ( 'name' )
+            // InternalPagos.g:4571:1: ( ( 'name' ) )
+            // InternalPagos.g:4572:1: ( 'name' )
             {
-            // InternalPagos.g:4545:1: ( 'name' )
-            // InternalPagos.g:4546:2: 'name'
+            // InternalPagos.g:4572:1: ( 'name' )
+            // InternalPagos.g:4573:2: 'name'
             {
              before(grammarAccess.getCalculationTemplateAccess().getNameKeyword_2()); 
             match(input,32,FOLLOW_2); 
@@ -13505,14 +13590,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__3"
-    // InternalPagos.g:4555:1: rule__CalculationTemplate__Group__3 : rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4 ;
+    // InternalPagos.g:4582:1: rule__CalculationTemplate__Group__3 : rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4 ;
     public final void rule__CalculationTemplate__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4559:1: ( rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4 )
-            // InternalPagos.g:4560:2: rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4
+            // InternalPagos.g:4586:1: ( rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4 )
+            // InternalPagos.g:4587:2: rule__CalculationTemplate__Group__3__Impl rule__CalculationTemplate__Group__4
             {
             pushFollow(FOLLOW_5);
             rule__CalculationTemplate__Group__3__Impl();
@@ -13543,17 +13628,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__3__Impl"
-    // InternalPagos.g:4567:1: rule__CalculationTemplate__Group__3__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4594:1: rule__CalculationTemplate__Group__3__Impl : ( RULE_COLON ) ;
     public final void rule__CalculationTemplate__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4571:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4572:1: ( RULE_COLON )
+            // InternalPagos.g:4598:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4599:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4572:1: ( RULE_COLON )
-            // InternalPagos.g:4573:2: RULE_COLON
+            // InternalPagos.g:4599:1: ( RULE_COLON )
+            // InternalPagos.g:4600:2: RULE_COLON
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_3()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -13580,14 +13665,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__4"
-    // InternalPagos.g:4582:1: rule__CalculationTemplate__Group__4 : rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5 ;
+    // InternalPagos.g:4609:1: rule__CalculationTemplate__Group__4 : rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5 ;
     public final void rule__CalculationTemplate__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4586:1: ( rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5 )
-            // InternalPagos.g:4587:2: rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5
+            // InternalPagos.g:4613:1: ( rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5 )
+            // InternalPagos.g:4614:2: rule__CalculationTemplate__Group__4__Impl rule__CalculationTemplate__Group__5
             {
             pushFollow(FOLLOW_6);
             rule__CalculationTemplate__Group__4__Impl();
@@ -13618,21 +13703,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__4__Impl"
-    // InternalPagos.g:4594:1: rule__CalculationTemplate__Group__4__Impl : ( ( rule__CalculationTemplate__NameAssignment_4 ) ) ;
+    // InternalPagos.g:4621:1: rule__CalculationTemplate__Group__4__Impl : ( ( rule__CalculationTemplate__NameAssignment_4 ) ) ;
     public final void rule__CalculationTemplate__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4598:1: ( ( ( rule__CalculationTemplate__NameAssignment_4 ) ) )
-            // InternalPagos.g:4599:1: ( ( rule__CalculationTemplate__NameAssignment_4 ) )
+            // InternalPagos.g:4625:1: ( ( ( rule__CalculationTemplate__NameAssignment_4 ) ) )
+            // InternalPagos.g:4626:1: ( ( rule__CalculationTemplate__NameAssignment_4 ) )
             {
-            // InternalPagos.g:4599:1: ( ( rule__CalculationTemplate__NameAssignment_4 ) )
-            // InternalPagos.g:4600:2: ( rule__CalculationTemplate__NameAssignment_4 )
+            // InternalPagos.g:4626:1: ( ( rule__CalculationTemplate__NameAssignment_4 ) )
+            // InternalPagos.g:4627:2: ( rule__CalculationTemplate__NameAssignment_4 )
             {
              before(grammarAccess.getCalculationTemplateAccess().getNameAssignment_4()); 
-            // InternalPagos.g:4601:2: ( rule__CalculationTemplate__NameAssignment_4 )
-            // InternalPagos.g:4601:3: rule__CalculationTemplate__NameAssignment_4
+            // InternalPagos.g:4628:2: ( rule__CalculationTemplate__NameAssignment_4 )
+            // InternalPagos.g:4628:3: rule__CalculationTemplate__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__NameAssignment_4();
@@ -13665,14 +13750,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__5"
-    // InternalPagos.g:4609:1: rule__CalculationTemplate__Group__5 : rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6 ;
+    // InternalPagos.g:4636:1: rule__CalculationTemplate__Group__5 : rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6 ;
     public final void rule__CalculationTemplate__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4613:1: ( rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6 )
-            // InternalPagos.g:4614:2: rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6
+            // InternalPagos.g:4640:1: ( rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6 )
+            // InternalPagos.g:4641:2: rule__CalculationTemplate__Group__5__Impl rule__CalculationTemplate__Group__6
             {
             pushFollow(FOLLOW_14);
             rule__CalculationTemplate__Group__5__Impl();
@@ -13703,17 +13788,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__5__Impl"
-    // InternalPagos.g:4621:1: rule__CalculationTemplate__Group__5__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:4648:1: rule__CalculationTemplate__Group__5__Impl : ( RULE_COMMA ) ;
     public final void rule__CalculationTemplate__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4625:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4626:1: ( RULE_COMMA )
+            // InternalPagos.g:4652:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4653:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4626:1: ( RULE_COMMA )
-            // InternalPagos.g:4627:2: RULE_COMMA
+            // InternalPagos.g:4653:1: ( RULE_COMMA )
+            // InternalPagos.g:4654:2: RULE_COMMA
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_5()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -13740,14 +13825,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__6"
-    // InternalPagos.g:4636:1: rule__CalculationTemplate__Group__6 : rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7 ;
+    // InternalPagos.g:4663:1: rule__CalculationTemplate__Group__6 : rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7 ;
     public final void rule__CalculationTemplate__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4640:1: ( rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7 )
-            // InternalPagos.g:4641:2: rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7
+            // InternalPagos.g:4667:1: ( rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7 )
+            // InternalPagos.g:4668:2: rule__CalculationTemplate__Group__6__Impl rule__CalculationTemplate__Group__7
             {
             pushFollow(FOLLOW_4);
             rule__CalculationTemplate__Group__6__Impl();
@@ -13778,17 +13863,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__6__Impl"
-    // InternalPagos.g:4648:1: rule__CalculationTemplate__Group__6__Impl : ( 'description' ) ;
+    // InternalPagos.g:4675:1: rule__CalculationTemplate__Group__6__Impl : ( 'description' ) ;
     public final void rule__CalculationTemplate__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4652:1: ( ( 'description' ) )
-            // InternalPagos.g:4653:1: ( 'description' )
+            // InternalPagos.g:4679:1: ( ( 'description' ) )
+            // InternalPagos.g:4680:1: ( 'description' )
             {
-            // InternalPagos.g:4653:1: ( 'description' )
-            // InternalPagos.g:4654:2: 'description'
+            // InternalPagos.g:4680:1: ( 'description' )
+            // InternalPagos.g:4681:2: 'description'
             {
              before(grammarAccess.getCalculationTemplateAccess().getDescriptionKeyword_6()); 
             match(input,35,FOLLOW_2); 
@@ -13815,14 +13900,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__7"
-    // InternalPagos.g:4663:1: rule__CalculationTemplate__Group__7 : rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8 ;
+    // InternalPagos.g:4690:1: rule__CalculationTemplate__Group__7 : rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8 ;
     public final void rule__CalculationTemplate__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4667:1: ( rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8 )
-            // InternalPagos.g:4668:2: rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8
+            // InternalPagos.g:4694:1: ( rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8 )
+            // InternalPagos.g:4695:2: rule__CalculationTemplate__Group__7__Impl rule__CalculationTemplate__Group__8
             {
             pushFollow(FOLLOW_15);
             rule__CalculationTemplate__Group__7__Impl();
@@ -13853,17 +13938,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__7__Impl"
-    // InternalPagos.g:4675:1: rule__CalculationTemplate__Group__7__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4702:1: rule__CalculationTemplate__Group__7__Impl : ( RULE_COLON ) ;
     public final void rule__CalculationTemplate__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4679:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4680:1: ( RULE_COLON )
+            // InternalPagos.g:4706:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4707:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4680:1: ( RULE_COLON )
-            // InternalPagos.g:4681:2: RULE_COLON
+            // InternalPagos.g:4707:1: ( RULE_COLON )
+            // InternalPagos.g:4708:2: RULE_COLON
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_7()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -13890,14 +13975,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__8"
-    // InternalPagos.g:4690:1: rule__CalculationTemplate__Group__8 : rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9 ;
+    // InternalPagos.g:4717:1: rule__CalculationTemplate__Group__8 : rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9 ;
     public final void rule__CalculationTemplate__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4694:1: ( rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9 )
-            // InternalPagos.g:4695:2: rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9
+            // InternalPagos.g:4721:1: ( rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9 )
+            // InternalPagos.g:4722:2: rule__CalculationTemplate__Group__8__Impl rule__CalculationTemplate__Group__9
             {
             pushFollow(FOLLOW_6);
             rule__CalculationTemplate__Group__8__Impl();
@@ -13928,21 +14013,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__8__Impl"
-    // InternalPagos.g:4702:1: rule__CalculationTemplate__Group__8__Impl : ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) ) ;
+    // InternalPagos.g:4729:1: rule__CalculationTemplate__Group__8__Impl : ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) ) ;
     public final void rule__CalculationTemplate__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4706:1: ( ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) ) )
-            // InternalPagos.g:4707:1: ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) )
+            // InternalPagos.g:4733:1: ( ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) ) )
+            // InternalPagos.g:4734:1: ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) )
             {
-            // InternalPagos.g:4707:1: ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) )
-            // InternalPagos.g:4708:2: ( rule__CalculationTemplate__DescriptionAssignment_8 )
+            // InternalPagos.g:4734:1: ( ( rule__CalculationTemplate__DescriptionAssignment_8 ) )
+            // InternalPagos.g:4735:2: ( rule__CalculationTemplate__DescriptionAssignment_8 )
             {
              before(grammarAccess.getCalculationTemplateAccess().getDescriptionAssignment_8()); 
-            // InternalPagos.g:4709:2: ( rule__CalculationTemplate__DescriptionAssignment_8 )
-            // InternalPagos.g:4709:3: rule__CalculationTemplate__DescriptionAssignment_8
+            // InternalPagos.g:4736:2: ( rule__CalculationTemplate__DescriptionAssignment_8 )
+            // InternalPagos.g:4736:3: rule__CalculationTemplate__DescriptionAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__DescriptionAssignment_8();
@@ -13975,14 +14060,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__9"
-    // InternalPagos.g:4717:1: rule__CalculationTemplate__Group__9 : rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10 ;
+    // InternalPagos.g:4744:1: rule__CalculationTemplate__Group__9 : rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10 ;
     public final void rule__CalculationTemplate__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4721:1: ( rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10 )
-            // InternalPagos.g:4722:2: rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10
+            // InternalPagos.g:4748:1: ( rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10 )
+            // InternalPagos.g:4749:2: rule__CalculationTemplate__Group__9__Impl rule__CalculationTemplate__Group__10
             {
             pushFollow(FOLLOW_6);
             rule__CalculationTemplate__Group__9__Impl();
@@ -14013,20 +14098,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__9__Impl"
-    // InternalPagos.g:4729:1: rule__CalculationTemplate__Group__9__Impl : ( ( rule__CalculationTemplate__Group_9__0 )? ) ;
+    // InternalPagos.g:4756:1: rule__CalculationTemplate__Group__9__Impl : ( ( rule__CalculationTemplate__Group_9__0 )? ) ;
     public final void rule__CalculationTemplate__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4733:1: ( ( ( rule__CalculationTemplate__Group_9__0 )? ) )
-            // InternalPagos.g:4734:1: ( ( rule__CalculationTemplate__Group_9__0 )? )
+            // InternalPagos.g:4760:1: ( ( ( rule__CalculationTemplate__Group_9__0 )? ) )
+            // InternalPagos.g:4761:1: ( ( rule__CalculationTemplate__Group_9__0 )? )
             {
-            // InternalPagos.g:4734:1: ( ( rule__CalculationTemplate__Group_9__0 )? )
-            // InternalPagos.g:4735:2: ( rule__CalculationTemplate__Group_9__0 )?
+            // InternalPagos.g:4761:1: ( ( rule__CalculationTemplate__Group_9__0 )? )
+            // InternalPagos.g:4762:2: ( rule__CalculationTemplate__Group_9__0 )?
             {
              before(grammarAccess.getCalculationTemplateAccess().getGroup_9()); 
-            // InternalPagos.g:4736:2: ( rule__CalculationTemplate__Group_9__0 )?
+            // InternalPagos.g:4763:2: ( rule__CalculationTemplate__Group_9__0 )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -14039,7 +14124,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalPagos.g:4736:3: rule__CalculationTemplate__Group_9__0
+                    // InternalPagos.g:4763:3: rule__CalculationTemplate__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__CalculationTemplate__Group_9__0();
@@ -14075,14 +14160,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__10"
-    // InternalPagos.g:4744:1: rule__CalculationTemplate__Group__10 : rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11 ;
+    // InternalPagos.g:4771:1: rule__CalculationTemplate__Group__10 : rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11 ;
     public final void rule__CalculationTemplate__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4748:1: ( rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11 )
-            // InternalPagos.g:4749:2: rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11
+            // InternalPagos.g:4775:1: ( rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11 )
+            // InternalPagos.g:4776:2: rule__CalculationTemplate__Group__10__Impl rule__CalculationTemplate__Group__11
             {
             pushFollow(FOLLOW_22);
             rule__CalculationTemplate__Group__10__Impl();
@@ -14113,17 +14198,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__10__Impl"
-    // InternalPagos.g:4756:1: rule__CalculationTemplate__Group__10__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:4783:1: rule__CalculationTemplate__Group__10__Impl : ( RULE_COMMA ) ;
     public final void rule__CalculationTemplate__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4760:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4761:1: ( RULE_COMMA )
+            // InternalPagos.g:4787:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4788:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4761:1: ( RULE_COMMA )
-            // InternalPagos.g:4762:2: RULE_COMMA
+            // InternalPagos.g:4788:1: ( RULE_COMMA )
+            // InternalPagos.g:4789:2: RULE_COMMA
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_10()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -14150,14 +14235,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__11"
-    // InternalPagos.g:4771:1: rule__CalculationTemplate__Group__11 : rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12 ;
+    // InternalPagos.g:4798:1: rule__CalculationTemplate__Group__11 : rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12 ;
     public final void rule__CalculationTemplate__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4775:1: ( rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12 )
-            // InternalPagos.g:4776:2: rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12
+            // InternalPagos.g:4802:1: ( rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12 )
+            // InternalPagos.g:4803:2: rule__CalculationTemplate__Group__11__Impl rule__CalculationTemplate__Group__12
             {
             pushFollow(FOLLOW_4);
             rule__CalculationTemplate__Group__11__Impl();
@@ -14188,17 +14273,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__11__Impl"
-    // InternalPagos.g:4783:1: rule__CalculationTemplate__Group__11__Impl : ( 'calculationrules' ) ;
+    // InternalPagos.g:4810:1: rule__CalculationTemplate__Group__11__Impl : ( 'calculationrules' ) ;
     public final void rule__CalculationTemplate__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4787:1: ( ( 'calculationrules' ) )
-            // InternalPagos.g:4788:1: ( 'calculationrules' )
+            // InternalPagos.g:4814:1: ( ( 'calculationrules' ) )
+            // InternalPagos.g:4815:1: ( 'calculationrules' )
             {
-            // InternalPagos.g:4788:1: ( 'calculationrules' )
-            // InternalPagos.g:4789:2: 'calculationrules'
+            // InternalPagos.g:4815:1: ( 'calculationrules' )
+            // InternalPagos.g:4816:2: 'calculationrules'
             {
              before(grammarAccess.getCalculationTemplateAccess().getCalculationrulesKeyword_11()); 
             match(input,42,FOLLOW_2); 
@@ -14225,14 +14310,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__12"
-    // InternalPagos.g:4798:1: rule__CalculationTemplate__Group__12 : rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13 ;
+    // InternalPagos.g:4825:1: rule__CalculationTemplate__Group__12 : rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13 ;
     public final void rule__CalculationTemplate__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4802:1: ( rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13 )
-            // InternalPagos.g:4803:2: rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13
+            // InternalPagos.g:4829:1: ( rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13 )
+            // InternalPagos.g:4830:2: rule__CalculationTemplate__Group__12__Impl rule__CalculationTemplate__Group__13
             {
             pushFollow(FOLLOW_23);
             rule__CalculationTemplate__Group__12__Impl();
@@ -14263,17 +14348,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__12__Impl"
-    // InternalPagos.g:4810:1: rule__CalculationTemplate__Group__12__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4837:1: rule__CalculationTemplate__Group__12__Impl : ( RULE_COLON ) ;
     public final void rule__CalculationTemplate__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4814:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4815:1: ( RULE_COLON )
+            // InternalPagos.g:4841:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4842:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4815:1: ( RULE_COLON )
-            // InternalPagos.g:4816:2: RULE_COLON
+            // InternalPagos.g:4842:1: ( RULE_COLON )
+            // InternalPagos.g:4843:2: RULE_COLON
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_12()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -14300,14 +14385,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__13"
-    // InternalPagos.g:4825:1: rule__CalculationTemplate__Group__13 : rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14 ;
+    // InternalPagos.g:4852:1: rule__CalculationTemplate__Group__13 : rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14 ;
     public final void rule__CalculationTemplate__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4829:1: ( rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14 )
-            // InternalPagos.g:4830:2: rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14
+            // InternalPagos.g:4856:1: ( rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14 )
+            // InternalPagos.g:4857:2: rule__CalculationTemplate__Group__13__Impl rule__CalculationTemplate__Group__14
             {
             pushFollow(FOLLOW_9);
             rule__CalculationTemplate__Group__13__Impl();
@@ -14338,21 +14423,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__13__Impl"
-    // InternalPagos.g:4837:1: rule__CalculationTemplate__Group__13__Impl : ( ( rule__CalculationTemplate__FormulasAssignment_13 ) ) ;
+    // InternalPagos.g:4864:1: rule__CalculationTemplate__Group__13__Impl : ( ( rule__CalculationTemplate__FormulasAssignment_13 ) ) ;
     public final void rule__CalculationTemplate__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4841:1: ( ( ( rule__CalculationTemplate__FormulasAssignment_13 ) ) )
-            // InternalPagos.g:4842:1: ( ( rule__CalculationTemplate__FormulasAssignment_13 ) )
+            // InternalPagos.g:4868:1: ( ( ( rule__CalculationTemplate__FormulasAssignment_13 ) ) )
+            // InternalPagos.g:4869:1: ( ( rule__CalculationTemplate__FormulasAssignment_13 ) )
             {
-            // InternalPagos.g:4842:1: ( ( rule__CalculationTemplate__FormulasAssignment_13 ) )
-            // InternalPagos.g:4843:2: ( rule__CalculationTemplate__FormulasAssignment_13 )
+            // InternalPagos.g:4869:1: ( ( rule__CalculationTemplate__FormulasAssignment_13 ) )
+            // InternalPagos.g:4870:2: ( rule__CalculationTemplate__FormulasAssignment_13 )
             {
              before(grammarAccess.getCalculationTemplateAccess().getFormulasAssignment_13()); 
-            // InternalPagos.g:4844:2: ( rule__CalculationTemplate__FormulasAssignment_13 )
-            // InternalPagos.g:4844:3: rule__CalculationTemplate__FormulasAssignment_13
+            // InternalPagos.g:4871:2: ( rule__CalculationTemplate__FormulasAssignment_13 )
+            // InternalPagos.g:4871:3: rule__CalculationTemplate__FormulasAssignment_13
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__FormulasAssignment_13();
@@ -14385,14 +14470,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__14"
-    // InternalPagos.g:4852:1: rule__CalculationTemplate__Group__14 : rule__CalculationTemplate__Group__14__Impl ;
+    // InternalPagos.g:4879:1: rule__CalculationTemplate__Group__14 : rule__CalculationTemplate__Group__14__Impl ;
     public final void rule__CalculationTemplate__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4856:1: ( rule__CalculationTemplate__Group__14__Impl )
-            // InternalPagos.g:4857:2: rule__CalculationTemplate__Group__14__Impl
+            // InternalPagos.g:4883:1: ( rule__CalculationTemplate__Group__14__Impl )
+            // InternalPagos.g:4884:2: rule__CalculationTemplate__Group__14__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__Group__14__Impl();
@@ -14418,17 +14503,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group__14__Impl"
-    // InternalPagos.g:4863:1: rule__CalculationTemplate__Group__14__Impl : ( RULE_RBRACE ) ;
+    // InternalPagos.g:4890:1: rule__CalculationTemplate__Group__14__Impl : ( RULE_RBRACE ) ;
     public final void rule__CalculationTemplate__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4867:1: ( ( RULE_RBRACE ) )
-            // InternalPagos.g:4868:1: ( RULE_RBRACE )
+            // InternalPagos.g:4894:1: ( ( RULE_RBRACE ) )
+            // InternalPagos.g:4895:1: ( RULE_RBRACE )
             {
-            // InternalPagos.g:4868:1: ( RULE_RBRACE )
-            // InternalPagos.g:4869:2: RULE_RBRACE
+            // InternalPagos.g:4895:1: ( RULE_RBRACE )
+            // InternalPagos.g:4896:2: RULE_RBRACE
             {
              before(grammarAccess.getCalculationTemplateAccess().getRBRACETerminalRuleCall_14()); 
             match(input,RULE_RBRACE,FOLLOW_2); 
@@ -14455,14 +14540,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__0"
-    // InternalPagos.g:4879:1: rule__CalculationTemplate__Group_9__0 : rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1 ;
+    // InternalPagos.g:4906:1: rule__CalculationTemplate__Group_9__0 : rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1 ;
     public final void rule__CalculationTemplate__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4883:1: ( rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1 )
-            // InternalPagos.g:4884:2: rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1
+            // InternalPagos.g:4910:1: ( rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1 )
+            // InternalPagos.g:4911:2: rule__CalculationTemplate__Group_9__0__Impl rule__CalculationTemplate__Group_9__1
             {
             pushFollow(FOLLOW_24);
             rule__CalculationTemplate__Group_9__0__Impl();
@@ -14493,17 +14578,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__0__Impl"
-    // InternalPagos.g:4891:1: rule__CalculationTemplate__Group_9__0__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:4918:1: rule__CalculationTemplate__Group_9__0__Impl : ( RULE_COMMA ) ;
     public final void rule__CalculationTemplate__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4895:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:4896:1: ( RULE_COMMA )
+            // InternalPagos.g:4922:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:4923:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:4896:1: ( RULE_COMMA )
-            // InternalPagos.g:4897:2: RULE_COMMA
+            // InternalPagos.g:4923:1: ( RULE_COMMA )
+            // InternalPagos.g:4924:2: RULE_COMMA
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9_0()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -14530,14 +14615,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__1"
-    // InternalPagos.g:4906:1: rule__CalculationTemplate__Group_9__1 : rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2 ;
+    // InternalPagos.g:4933:1: rule__CalculationTemplate__Group_9__1 : rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2 ;
     public final void rule__CalculationTemplate__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4910:1: ( rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2 )
-            // InternalPagos.g:4911:2: rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2
+            // InternalPagos.g:4937:1: ( rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2 )
+            // InternalPagos.g:4938:2: rule__CalculationTemplate__Group_9__1__Impl rule__CalculationTemplate__Group_9__2
             {
             pushFollow(FOLLOW_4);
             rule__CalculationTemplate__Group_9__1__Impl();
@@ -14568,17 +14653,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__1__Impl"
-    // InternalPagos.g:4918:1: rule__CalculationTemplate__Group_9__1__Impl : ( 'calculationattributes' ) ;
+    // InternalPagos.g:4945:1: rule__CalculationTemplate__Group_9__1__Impl : ( 'calculationattributes' ) ;
     public final void rule__CalculationTemplate__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4922:1: ( ( 'calculationattributes' ) )
-            // InternalPagos.g:4923:1: ( 'calculationattributes' )
+            // InternalPagos.g:4949:1: ( ( 'calculationattributes' ) )
+            // InternalPagos.g:4950:1: ( 'calculationattributes' )
             {
-            // InternalPagos.g:4923:1: ( 'calculationattributes' )
-            // InternalPagos.g:4924:2: 'calculationattributes'
+            // InternalPagos.g:4950:1: ( 'calculationattributes' )
+            // InternalPagos.g:4951:2: 'calculationattributes'
             {
              before(grammarAccess.getCalculationTemplateAccess().getCalculationattributesKeyword_9_1()); 
             match(input,43,FOLLOW_2); 
@@ -14605,14 +14690,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__2"
-    // InternalPagos.g:4933:1: rule__CalculationTemplate__Group_9__2 : rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3 ;
+    // InternalPagos.g:4960:1: rule__CalculationTemplate__Group_9__2 : rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3 ;
     public final void rule__CalculationTemplate__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4937:1: ( rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3 )
-            // InternalPagos.g:4938:2: rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3
+            // InternalPagos.g:4964:1: ( rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3 )
+            // InternalPagos.g:4965:2: rule__CalculationTemplate__Group_9__2__Impl rule__CalculationTemplate__Group_9__3
             {
             pushFollow(FOLLOW_11);
             rule__CalculationTemplate__Group_9__2__Impl();
@@ -14643,17 +14728,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__2__Impl"
-    // InternalPagos.g:4945:1: rule__CalculationTemplate__Group_9__2__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:4972:1: rule__CalculationTemplate__Group_9__2__Impl : ( RULE_COLON ) ;
     public final void rule__CalculationTemplate__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4949:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:4950:1: ( RULE_COLON )
+            // InternalPagos.g:4976:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:4977:1: ( RULE_COLON )
             {
-            // InternalPagos.g:4950:1: ( RULE_COLON )
-            // InternalPagos.g:4951:2: RULE_COLON
+            // InternalPagos.g:4977:1: ( RULE_COLON )
+            // InternalPagos.g:4978:2: RULE_COLON
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_9_2()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -14680,14 +14765,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__3"
-    // InternalPagos.g:4960:1: rule__CalculationTemplate__Group_9__3 : rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4 ;
+    // InternalPagos.g:4987:1: rule__CalculationTemplate__Group_9__3 : rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4 ;
     public final void rule__CalculationTemplate__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4964:1: ( rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4 )
-            // InternalPagos.g:4965:2: rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4
+            // InternalPagos.g:4991:1: ( rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4 )
+            // InternalPagos.g:4992:2: rule__CalculationTemplate__Group_9__3__Impl rule__CalculationTemplate__Group_9__4
             {
             pushFollow(FOLLOW_8);
             rule__CalculationTemplate__Group_9__3__Impl();
@@ -14718,17 +14803,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__3__Impl"
-    // InternalPagos.g:4972:1: rule__CalculationTemplate__Group_9__3__Impl : ( RULE_LBRACKET ) ;
+    // InternalPagos.g:4999:1: rule__CalculationTemplate__Group_9__3__Impl : ( RULE_LBRACKET ) ;
     public final void rule__CalculationTemplate__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4976:1: ( ( RULE_LBRACKET ) )
-            // InternalPagos.g:4977:1: ( RULE_LBRACKET )
+            // InternalPagos.g:5003:1: ( ( RULE_LBRACKET ) )
+            // InternalPagos.g:5004:1: ( RULE_LBRACKET )
             {
-            // InternalPagos.g:4977:1: ( RULE_LBRACKET )
-            // InternalPagos.g:4978:2: RULE_LBRACKET
+            // InternalPagos.g:5004:1: ( RULE_LBRACKET )
+            // InternalPagos.g:5005:2: RULE_LBRACKET
             {
              before(grammarAccess.getCalculationTemplateAccess().getLBRACKETTerminalRuleCall_9_3()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -14755,14 +14840,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__4"
-    // InternalPagos.g:4987:1: rule__CalculationTemplate__Group_9__4 : rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5 ;
+    // InternalPagos.g:5014:1: rule__CalculationTemplate__Group_9__4 : rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5 ;
     public final void rule__CalculationTemplate__Group_9__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:4991:1: ( rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5 )
-            // InternalPagos.g:4992:2: rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5
+            // InternalPagos.g:5018:1: ( rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5 )
+            // InternalPagos.g:5019:2: rule__CalculationTemplate__Group_9__4__Impl rule__CalculationTemplate__Group_9__5
             {
             pushFollow(FOLLOW_12);
             rule__CalculationTemplate__Group_9__4__Impl();
@@ -14793,21 +14878,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__4__Impl"
-    // InternalPagos.g:4999:1: rule__CalculationTemplate__Group_9__4__Impl : ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) ) ;
+    // InternalPagos.g:5026:1: rule__CalculationTemplate__Group_9__4__Impl : ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) ) ;
     public final void rule__CalculationTemplate__Group_9__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5003:1: ( ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) ) )
-            // InternalPagos.g:5004:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) )
+            // InternalPagos.g:5030:1: ( ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) ) )
+            // InternalPagos.g:5031:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) )
             {
-            // InternalPagos.g:5004:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) )
-            // InternalPagos.g:5005:2: ( rule__CalculationTemplate__AttListsAssignment_9_4 )
+            // InternalPagos.g:5031:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_4 ) )
+            // InternalPagos.g:5032:2: ( rule__CalculationTemplate__AttListsAssignment_9_4 )
             {
              before(grammarAccess.getCalculationTemplateAccess().getAttListsAssignment_9_4()); 
-            // InternalPagos.g:5006:2: ( rule__CalculationTemplate__AttListsAssignment_9_4 )
-            // InternalPagos.g:5006:3: rule__CalculationTemplate__AttListsAssignment_9_4
+            // InternalPagos.g:5033:2: ( rule__CalculationTemplate__AttListsAssignment_9_4 )
+            // InternalPagos.g:5033:3: rule__CalculationTemplate__AttListsAssignment_9_4
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__AttListsAssignment_9_4();
@@ -14840,14 +14925,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__5"
-    // InternalPagos.g:5014:1: rule__CalculationTemplate__Group_9__5 : rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6 ;
+    // InternalPagos.g:5041:1: rule__CalculationTemplate__Group_9__5 : rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6 ;
     public final void rule__CalculationTemplate__Group_9__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5018:1: ( rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6 )
-            // InternalPagos.g:5019:2: rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6
+            // InternalPagos.g:5045:1: ( rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6 )
+            // InternalPagos.g:5046:2: rule__CalculationTemplate__Group_9__5__Impl rule__CalculationTemplate__Group_9__6
             {
             pushFollow(FOLLOW_12);
             rule__CalculationTemplate__Group_9__5__Impl();
@@ -14878,20 +14963,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__5__Impl"
-    // InternalPagos.g:5026:1: rule__CalculationTemplate__Group_9__5__Impl : ( ( rule__CalculationTemplate__Group_9_5__0 )* ) ;
+    // InternalPagos.g:5053:1: rule__CalculationTemplate__Group_9__5__Impl : ( ( rule__CalculationTemplate__Group_9_5__0 )* ) ;
     public final void rule__CalculationTemplate__Group_9__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5030:1: ( ( ( rule__CalculationTemplate__Group_9_5__0 )* ) )
-            // InternalPagos.g:5031:1: ( ( rule__CalculationTemplate__Group_9_5__0 )* )
+            // InternalPagos.g:5057:1: ( ( ( rule__CalculationTemplate__Group_9_5__0 )* ) )
+            // InternalPagos.g:5058:1: ( ( rule__CalculationTemplate__Group_9_5__0 )* )
             {
-            // InternalPagos.g:5031:1: ( ( rule__CalculationTemplate__Group_9_5__0 )* )
-            // InternalPagos.g:5032:2: ( rule__CalculationTemplate__Group_9_5__0 )*
+            // InternalPagos.g:5058:1: ( ( rule__CalculationTemplate__Group_9_5__0 )* )
+            // InternalPagos.g:5059:2: ( rule__CalculationTemplate__Group_9_5__0 )*
             {
              before(grammarAccess.getCalculationTemplateAccess().getGroup_9_5()); 
-            // InternalPagos.g:5033:2: ( rule__CalculationTemplate__Group_9_5__0 )*
+            // InternalPagos.g:5060:2: ( rule__CalculationTemplate__Group_9_5__0 )*
             loop23:
             do {
                 int alt23=2;
@@ -14904,7 +14989,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // InternalPagos.g:5033:3: rule__CalculationTemplate__Group_9_5__0
+            	    // InternalPagos.g:5060:3: rule__CalculationTemplate__Group_9_5__0
             	    {
             	    pushFollow(FOLLOW_13);
             	    rule__CalculationTemplate__Group_9_5__0();
@@ -14943,14 +15028,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__6"
-    // InternalPagos.g:5041:1: rule__CalculationTemplate__Group_9__6 : rule__CalculationTemplate__Group_9__6__Impl ;
+    // InternalPagos.g:5068:1: rule__CalculationTemplate__Group_9__6 : rule__CalculationTemplate__Group_9__6__Impl ;
     public final void rule__CalculationTemplate__Group_9__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5045:1: ( rule__CalculationTemplate__Group_9__6__Impl )
-            // InternalPagos.g:5046:2: rule__CalculationTemplate__Group_9__6__Impl
+            // InternalPagos.g:5072:1: ( rule__CalculationTemplate__Group_9__6__Impl )
+            // InternalPagos.g:5073:2: rule__CalculationTemplate__Group_9__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__Group_9__6__Impl();
@@ -14976,17 +15061,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9__6__Impl"
-    // InternalPagos.g:5052:1: rule__CalculationTemplate__Group_9__6__Impl : ( RULE_RBRACKET ) ;
+    // InternalPagos.g:5079:1: rule__CalculationTemplate__Group_9__6__Impl : ( RULE_RBRACKET ) ;
     public final void rule__CalculationTemplate__Group_9__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5056:1: ( ( RULE_RBRACKET ) )
-            // InternalPagos.g:5057:1: ( RULE_RBRACKET )
+            // InternalPagos.g:5083:1: ( ( RULE_RBRACKET ) )
+            // InternalPagos.g:5084:1: ( RULE_RBRACKET )
             {
-            // InternalPagos.g:5057:1: ( RULE_RBRACKET )
-            // InternalPagos.g:5058:2: RULE_RBRACKET
+            // InternalPagos.g:5084:1: ( RULE_RBRACKET )
+            // InternalPagos.g:5085:2: RULE_RBRACKET
             {
              before(grammarAccess.getCalculationTemplateAccess().getRBRACKETTerminalRuleCall_9_6()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -15013,14 +15098,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9_5__0"
-    // InternalPagos.g:5068:1: rule__CalculationTemplate__Group_9_5__0 : rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1 ;
+    // InternalPagos.g:5095:1: rule__CalculationTemplate__Group_9_5__0 : rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1 ;
     public final void rule__CalculationTemplate__Group_9_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5072:1: ( rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1 )
-            // InternalPagos.g:5073:2: rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1
+            // InternalPagos.g:5099:1: ( rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1 )
+            // InternalPagos.g:5100:2: rule__CalculationTemplate__Group_9_5__0__Impl rule__CalculationTemplate__Group_9_5__1
             {
             pushFollow(FOLLOW_8);
             rule__CalculationTemplate__Group_9_5__0__Impl();
@@ -15051,17 +15136,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9_5__0__Impl"
-    // InternalPagos.g:5080:1: rule__CalculationTemplate__Group_9_5__0__Impl : ( RULE_COMMA ) ;
+    // InternalPagos.g:5107:1: rule__CalculationTemplate__Group_9_5__0__Impl : ( RULE_COMMA ) ;
     public final void rule__CalculationTemplate__Group_9_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5084:1: ( ( RULE_COMMA ) )
-            // InternalPagos.g:5085:1: ( RULE_COMMA )
+            // InternalPagos.g:5111:1: ( ( RULE_COMMA ) )
+            // InternalPagos.g:5112:1: ( RULE_COMMA )
             {
-            // InternalPagos.g:5085:1: ( RULE_COMMA )
-            // InternalPagos.g:5086:2: RULE_COMMA
+            // InternalPagos.g:5112:1: ( RULE_COMMA )
+            // InternalPagos.g:5113:2: RULE_COMMA
             {
              before(grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9_5_0()); 
             match(input,RULE_COMMA,FOLLOW_2); 
@@ -15088,14 +15173,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9_5__1"
-    // InternalPagos.g:5095:1: rule__CalculationTemplate__Group_9_5__1 : rule__CalculationTemplate__Group_9_5__1__Impl ;
+    // InternalPagos.g:5122:1: rule__CalculationTemplate__Group_9_5__1 : rule__CalculationTemplate__Group_9_5__1__Impl ;
     public final void rule__CalculationTemplate__Group_9_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5099:1: ( rule__CalculationTemplate__Group_9_5__1__Impl )
-            // InternalPagos.g:5100:2: rule__CalculationTemplate__Group_9_5__1__Impl
+            // InternalPagos.g:5126:1: ( rule__CalculationTemplate__Group_9_5__1__Impl )
+            // InternalPagos.g:5127:2: rule__CalculationTemplate__Group_9_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__Group_9_5__1__Impl();
@@ -15121,21 +15206,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__Group_9_5__1__Impl"
-    // InternalPagos.g:5106:1: rule__CalculationTemplate__Group_9_5__1__Impl : ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) ) ;
+    // InternalPagos.g:5133:1: rule__CalculationTemplate__Group_9_5__1__Impl : ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) ) ;
     public final void rule__CalculationTemplate__Group_9_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5110:1: ( ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) ) )
-            // InternalPagos.g:5111:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) )
+            // InternalPagos.g:5137:1: ( ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) ) )
+            // InternalPagos.g:5138:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) )
             {
-            // InternalPagos.g:5111:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) )
-            // InternalPagos.g:5112:2: ( rule__CalculationTemplate__AttListsAssignment_9_5_1 )
+            // InternalPagos.g:5138:1: ( ( rule__CalculationTemplate__AttListsAssignment_9_5_1 ) )
+            // InternalPagos.g:5139:2: ( rule__CalculationTemplate__AttListsAssignment_9_5_1 )
             {
              before(grammarAccess.getCalculationTemplateAccess().getAttListsAssignment_9_5_1()); 
-            // InternalPagos.g:5113:2: ( rule__CalculationTemplate__AttListsAssignment_9_5_1 )
-            // InternalPagos.g:5113:3: rule__CalculationTemplate__AttListsAssignment_9_5_1
+            // InternalPagos.g:5140:2: ( rule__CalculationTemplate__AttListsAssignment_9_5_1 )
+            // InternalPagos.g:5140:3: rule__CalculationTemplate__AttListsAssignment_9_5_1
             {
             pushFollow(FOLLOW_2);
             rule__CalculationTemplate__AttListsAssignment_9_5_1();
@@ -15168,14 +15253,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__Group_0__0"
-    // InternalPagos.g:5122:1: rule__Formula__Group_0__0 : rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1 ;
+    // InternalPagos.g:5149:1: rule__Formula__Group_0__0 : rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1 ;
     public final void rule__Formula__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5126:1: ( rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1 )
-            // InternalPagos.g:5127:2: rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1
+            // InternalPagos.g:5153:1: ( rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1 )
+            // InternalPagos.g:5154:2: rule__Formula__Group_0__0__Impl rule__Formula__Group_0__1
             {
             pushFollow(FOLLOW_25);
             rule__Formula__Group_0__0__Impl();
@@ -15206,21 +15291,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__Group_0__0__Impl"
-    // InternalPagos.g:5134:1: rule__Formula__Group_0__0__Impl : ( () ) ;
+    // InternalPagos.g:5161:1: rule__Formula__Group_0__0__Impl : ( () ) ;
     public final void rule__Formula__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5138:1: ( ( () ) )
-            // InternalPagos.g:5139:1: ( () )
+            // InternalPagos.g:5165:1: ( ( () ) )
+            // InternalPagos.g:5166:1: ( () )
             {
-            // InternalPagos.g:5139:1: ( () )
-            // InternalPagos.g:5140:2: ()
+            // InternalPagos.g:5166:1: ( () )
+            // InternalPagos.g:5167:2: ()
             {
              before(grammarAccess.getFormulaAccess().getFormulaAction_0_0()); 
-            // InternalPagos.g:5141:2: ()
-            // InternalPagos.g:5141:3: 
+            // InternalPagos.g:5168:2: ()
+            // InternalPagos.g:5168:3: 
             {
             }
 
@@ -15243,14 +15328,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__Group_0__1"
-    // InternalPagos.g:5149:1: rule__Formula__Group_0__1 : rule__Formula__Group_0__1__Impl ;
+    // InternalPagos.g:5176:1: rule__Formula__Group_0__1 : rule__Formula__Group_0__1__Impl ;
     public final void rule__Formula__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5153:1: ( rule__Formula__Group_0__1__Impl )
-            // InternalPagos.g:5154:2: rule__Formula__Group_0__1__Impl
+            // InternalPagos.g:5180:1: ( rule__Formula__Group_0__1__Impl )
+            // InternalPagos.g:5181:2: rule__Formula__Group_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Formula__Group_0__1__Impl();
@@ -15276,20 +15361,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__Group_0__1__Impl"
-    // InternalPagos.g:5160:1: rule__Formula__Group_0__1__Impl : ( ( rule__Formula__FormulaBodyAssignment_0_1 )* ) ;
+    // InternalPagos.g:5187:1: rule__Formula__Group_0__1__Impl : ( ( rule__Formula__FormulaBodyAssignment_0_1 )* ) ;
     public final void rule__Formula__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5164:1: ( ( ( rule__Formula__FormulaBodyAssignment_0_1 )* ) )
-            // InternalPagos.g:5165:1: ( ( rule__Formula__FormulaBodyAssignment_0_1 )* )
+            // InternalPagos.g:5191:1: ( ( ( rule__Formula__FormulaBodyAssignment_0_1 )* ) )
+            // InternalPagos.g:5192:1: ( ( rule__Formula__FormulaBodyAssignment_0_1 )* )
             {
-            // InternalPagos.g:5165:1: ( ( rule__Formula__FormulaBodyAssignment_0_1 )* )
-            // InternalPagos.g:5166:2: ( rule__Formula__FormulaBodyAssignment_0_1 )*
+            // InternalPagos.g:5192:1: ( ( rule__Formula__FormulaBodyAssignment_0_1 )* )
+            // InternalPagos.g:5193:2: ( rule__Formula__FormulaBodyAssignment_0_1 )*
             {
              before(grammarAccess.getFormulaAccess().getFormulaBodyAssignment_0_1()); 
-            // InternalPagos.g:5167:2: ( rule__Formula__FormulaBodyAssignment_0_1 )*
+            // InternalPagos.g:5194:2: ( rule__Formula__FormulaBodyAssignment_0_1 )*
             loop24:
             do {
                 int alt24=2;
@@ -15302,7 +15387,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalPagos.g:5167:3: rule__Formula__FormulaBodyAssignment_0_1
+            	    // InternalPagos.g:5194:3: rule__Formula__FormulaBodyAssignment_0_1
             	    {
             	    pushFollow(FOLLOW_26);
             	    rule__Formula__FormulaBodyAssignment_0_1();
@@ -15341,14 +15426,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__0"
-    // InternalPagos.g:5176:1: rule__IfBlock__Group__0 : rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1 ;
+    // InternalPagos.g:5203:1: rule__IfBlock__Group__0 : rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1 ;
     public final void rule__IfBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5180:1: ( rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1 )
-            // InternalPagos.g:5181:2: rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1
+            // InternalPagos.g:5207:1: ( rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1 )
+            // InternalPagos.g:5208:2: rule__IfBlock__Group__0__Impl rule__IfBlock__Group__1
             {
             pushFollow(FOLLOW_25);
             rule__IfBlock__Group__0__Impl();
@@ -15379,21 +15464,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__0__Impl"
-    // InternalPagos.g:5188:1: rule__IfBlock__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:5215:1: rule__IfBlock__Group__0__Impl : ( () ) ;
     public final void rule__IfBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5192:1: ( ( () ) )
-            // InternalPagos.g:5193:1: ( () )
+            // InternalPagos.g:5219:1: ( ( () ) )
+            // InternalPagos.g:5220:1: ( () )
             {
-            // InternalPagos.g:5193:1: ( () )
-            // InternalPagos.g:5194:2: ()
+            // InternalPagos.g:5220:1: ( () )
+            // InternalPagos.g:5221:2: ()
             {
              before(grammarAccess.getIfBlockAccess().getIfBlockAction_0()); 
-            // InternalPagos.g:5195:2: ()
-            // InternalPagos.g:5195:3: 
+            // InternalPagos.g:5222:2: ()
+            // InternalPagos.g:5222:3: 
             {
             }
 
@@ -15416,14 +15501,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__1"
-    // InternalPagos.g:5203:1: rule__IfBlock__Group__1 : rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2 ;
+    // InternalPagos.g:5230:1: rule__IfBlock__Group__1 : rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2 ;
     public final void rule__IfBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5207:1: ( rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2 )
-            // InternalPagos.g:5208:2: rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2
+            // InternalPagos.g:5234:1: ( rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2 )
+            // InternalPagos.g:5235:2: rule__IfBlock__Group__1__Impl rule__IfBlock__Group__2
             {
             pushFollow(FOLLOW_27);
             rule__IfBlock__Group__1__Impl();
@@ -15454,21 +15539,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__1__Impl"
-    // InternalPagos.g:5215:1: rule__IfBlock__Group__1__Impl : ( ( rule__IfBlock__IfSentenceAssignment_1 ) ) ;
+    // InternalPagos.g:5242:1: rule__IfBlock__Group__1__Impl : ( ( rule__IfBlock__IfSentenceAssignment_1 ) ) ;
     public final void rule__IfBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5219:1: ( ( ( rule__IfBlock__IfSentenceAssignment_1 ) ) )
-            // InternalPagos.g:5220:1: ( ( rule__IfBlock__IfSentenceAssignment_1 ) )
+            // InternalPagos.g:5246:1: ( ( ( rule__IfBlock__IfSentenceAssignment_1 ) ) )
+            // InternalPagos.g:5247:1: ( ( rule__IfBlock__IfSentenceAssignment_1 ) )
             {
-            // InternalPagos.g:5220:1: ( ( rule__IfBlock__IfSentenceAssignment_1 ) )
-            // InternalPagos.g:5221:2: ( rule__IfBlock__IfSentenceAssignment_1 )
+            // InternalPagos.g:5247:1: ( ( rule__IfBlock__IfSentenceAssignment_1 ) )
+            // InternalPagos.g:5248:2: ( rule__IfBlock__IfSentenceAssignment_1 )
             {
              before(grammarAccess.getIfBlockAccess().getIfSentenceAssignment_1()); 
-            // InternalPagos.g:5222:2: ( rule__IfBlock__IfSentenceAssignment_1 )
-            // InternalPagos.g:5222:3: rule__IfBlock__IfSentenceAssignment_1
+            // InternalPagos.g:5249:2: ( rule__IfBlock__IfSentenceAssignment_1 )
+            // InternalPagos.g:5249:3: rule__IfBlock__IfSentenceAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__IfBlock__IfSentenceAssignment_1();
@@ -15501,14 +15586,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__2"
-    // InternalPagos.g:5230:1: rule__IfBlock__Group__2 : rule__IfBlock__Group__2__Impl ;
+    // InternalPagos.g:5257:1: rule__IfBlock__Group__2 : rule__IfBlock__Group__2__Impl ;
     public final void rule__IfBlock__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5234:1: ( rule__IfBlock__Group__2__Impl )
-            // InternalPagos.g:5235:2: rule__IfBlock__Group__2__Impl
+            // InternalPagos.g:5261:1: ( rule__IfBlock__Group__2__Impl )
+            // InternalPagos.g:5262:2: rule__IfBlock__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IfBlock__Group__2__Impl();
@@ -15534,20 +15619,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group__2__Impl"
-    // InternalPagos.g:5241:1: rule__IfBlock__Group__2__Impl : ( ( rule__IfBlock__Group_2__0 )? ) ;
+    // InternalPagos.g:5268:1: rule__IfBlock__Group__2__Impl : ( ( rule__IfBlock__Group_2__0 )? ) ;
     public final void rule__IfBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5245:1: ( ( ( rule__IfBlock__Group_2__0 )? ) )
-            // InternalPagos.g:5246:1: ( ( rule__IfBlock__Group_2__0 )? )
+            // InternalPagos.g:5272:1: ( ( ( rule__IfBlock__Group_2__0 )? ) )
+            // InternalPagos.g:5273:1: ( ( rule__IfBlock__Group_2__0 )? )
             {
-            // InternalPagos.g:5246:1: ( ( rule__IfBlock__Group_2__0 )? )
-            // InternalPagos.g:5247:2: ( rule__IfBlock__Group_2__0 )?
+            // InternalPagos.g:5273:1: ( ( rule__IfBlock__Group_2__0 )? )
+            // InternalPagos.g:5274:2: ( rule__IfBlock__Group_2__0 )?
             {
              before(grammarAccess.getIfBlockAccess().getGroup_2()); 
-            // InternalPagos.g:5248:2: ( rule__IfBlock__Group_2__0 )?
+            // InternalPagos.g:5275:2: ( rule__IfBlock__Group_2__0 )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -15556,7 +15641,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt25) {
                 case 1 :
-                    // InternalPagos.g:5248:3: rule__IfBlock__Group_2__0
+                    // InternalPagos.g:5275:3: rule__IfBlock__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__IfBlock__Group_2__0();
@@ -15592,14 +15677,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group_2__0"
-    // InternalPagos.g:5257:1: rule__IfBlock__Group_2__0 : rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1 ;
+    // InternalPagos.g:5284:1: rule__IfBlock__Group_2__0 : rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1 ;
     public final void rule__IfBlock__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5261:1: ( rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1 )
-            // InternalPagos.g:5262:2: rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1
+            // InternalPagos.g:5288:1: ( rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1 )
+            // InternalPagos.g:5289:2: rule__IfBlock__Group_2__0__Impl rule__IfBlock__Group_2__1
             {
             pushFollow(FOLLOW_8);
             rule__IfBlock__Group_2__0__Impl();
@@ -15630,17 +15715,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group_2__0__Impl"
-    // InternalPagos.g:5269:1: rule__IfBlock__Group_2__0__Impl : ( RULE_ELSE ) ;
+    // InternalPagos.g:5296:1: rule__IfBlock__Group_2__0__Impl : ( RULE_ELSE ) ;
     public final void rule__IfBlock__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5273:1: ( ( RULE_ELSE ) )
-            // InternalPagos.g:5274:1: ( RULE_ELSE )
+            // InternalPagos.g:5300:1: ( ( RULE_ELSE ) )
+            // InternalPagos.g:5301:1: ( RULE_ELSE )
             {
-            // InternalPagos.g:5274:1: ( RULE_ELSE )
-            // InternalPagos.g:5275:2: RULE_ELSE
+            // InternalPagos.g:5301:1: ( RULE_ELSE )
+            // InternalPagos.g:5302:2: RULE_ELSE
             {
              before(grammarAccess.getIfBlockAccess().getELSETerminalRuleCall_2_0()); 
             match(input,RULE_ELSE,FOLLOW_2); 
@@ -15667,14 +15752,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group_2__1"
-    // InternalPagos.g:5284:1: rule__IfBlock__Group_2__1 : rule__IfBlock__Group_2__1__Impl ;
+    // InternalPagos.g:5311:1: rule__IfBlock__Group_2__1 : rule__IfBlock__Group_2__1__Impl ;
     public final void rule__IfBlock__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5288:1: ( rule__IfBlock__Group_2__1__Impl )
-            // InternalPagos.g:5289:2: rule__IfBlock__Group_2__1__Impl
+            // InternalPagos.g:5315:1: ( rule__IfBlock__Group_2__1__Impl )
+            // InternalPagos.g:5316:2: rule__IfBlock__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IfBlock__Group_2__1__Impl();
@@ -15700,21 +15785,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__Group_2__1__Impl"
-    // InternalPagos.g:5295:1: rule__IfBlock__Group_2__1__Impl : ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) ) ;
+    // InternalPagos.g:5322:1: rule__IfBlock__Group_2__1__Impl : ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) ) ;
     public final void rule__IfBlock__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5299:1: ( ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) ) )
-            // InternalPagos.g:5300:1: ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) )
+            // InternalPagos.g:5326:1: ( ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) ) )
+            // InternalPagos.g:5327:1: ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) )
             {
-            // InternalPagos.g:5300:1: ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) )
-            // InternalPagos.g:5301:2: ( rule__IfBlock__ElseSentenceAssignment_2_1 )
+            // InternalPagos.g:5327:1: ( ( rule__IfBlock__ElseSentenceAssignment_2_1 ) )
+            // InternalPagos.g:5328:2: ( rule__IfBlock__ElseSentenceAssignment_2_1 )
             {
              before(grammarAccess.getIfBlockAccess().getElseSentenceAssignment_2_1()); 
-            // InternalPagos.g:5302:2: ( rule__IfBlock__ElseSentenceAssignment_2_1 )
-            // InternalPagos.g:5302:3: rule__IfBlock__ElseSentenceAssignment_2_1
+            // InternalPagos.g:5329:2: ( rule__IfBlock__ElseSentenceAssignment_2_1 )
+            // InternalPagos.g:5329:3: rule__IfBlock__ElseSentenceAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__IfBlock__ElseSentenceAssignment_2_1();
@@ -15747,14 +15832,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__0"
-    // InternalPagos.g:5311:1: rule__IfCondition__Group__0 : rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 ;
+    // InternalPagos.g:5338:1: rule__IfCondition__Group__0 : rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 ;
     public final void rule__IfCondition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5315:1: ( rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 )
-            // InternalPagos.g:5316:2: rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1
+            // InternalPagos.g:5342:1: ( rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 )
+            // InternalPagos.g:5343:2: rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1
             {
             pushFollow(FOLLOW_25);
             rule__IfCondition__Group__0__Impl();
@@ -15785,21 +15870,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__0__Impl"
-    // InternalPagos.g:5323:1: rule__IfCondition__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:5350:1: rule__IfCondition__Group__0__Impl : ( () ) ;
     public final void rule__IfCondition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5327:1: ( ( () ) )
-            // InternalPagos.g:5328:1: ( () )
+            // InternalPagos.g:5354:1: ( ( () ) )
+            // InternalPagos.g:5355:1: ( () )
             {
-            // InternalPagos.g:5328:1: ( () )
-            // InternalPagos.g:5329:2: ()
+            // InternalPagos.g:5355:1: ( () )
+            // InternalPagos.g:5356:2: ()
             {
              before(grammarAccess.getIfConditionAccess().getIfConditionAction_0()); 
-            // InternalPagos.g:5330:2: ()
-            // InternalPagos.g:5330:3: 
+            // InternalPagos.g:5357:2: ()
+            // InternalPagos.g:5357:3: 
             {
             }
 
@@ -15822,14 +15907,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__1"
-    // InternalPagos.g:5338:1: rule__IfCondition__Group__1 : rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 ;
+    // InternalPagos.g:5365:1: rule__IfCondition__Group__1 : rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 ;
     public final void rule__IfCondition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5342:1: ( rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 )
-            // InternalPagos.g:5343:2: rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2
+            // InternalPagos.g:5369:1: ( rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 )
+            // InternalPagos.g:5370:2: rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__IfCondition__Group__1__Impl();
@@ -15860,17 +15945,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__1__Impl"
-    // InternalPagos.g:5350:1: rule__IfCondition__Group__1__Impl : ( RULE_IF ) ;
+    // InternalPagos.g:5377:1: rule__IfCondition__Group__1__Impl : ( RULE_IF ) ;
     public final void rule__IfCondition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5354:1: ( ( RULE_IF ) )
-            // InternalPagos.g:5355:1: ( RULE_IF )
+            // InternalPagos.g:5381:1: ( ( RULE_IF ) )
+            // InternalPagos.g:5382:1: ( RULE_IF )
             {
-            // InternalPagos.g:5355:1: ( RULE_IF )
-            // InternalPagos.g:5356:2: RULE_IF
+            // InternalPagos.g:5382:1: ( RULE_IF )
+            // InternalPagos.g:5383:2: RULE_IF
             {
              before(grammarAccess.getIfConditionAccess().getIFTerminalRuleCall_1()); 
             match(input,RULE_IF,FOLLOW_2); 
@@ -15897,14 +15982,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__2"
-    // InternalPagos.g:5365:1: rule__IfCondition__Group__2 : rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 ;
+    // InternalPagos.g:5392:1: rule__IfCondition__Group__2 : rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 ;
     public final void rule__IfCondition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5369:1: ( rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 )
-            // InternalPagos.g:5370:2: rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3
+            // InternalPagos.g:5396:1: ( rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 )
+            // InternalPagos.g:5397:2: rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3
             {
             pushFollow(FOLLOW_28);
             rule__IfCondition__Group__2__Impl();
@@ -15935,17 +16020,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__2__Impl"
-    // InternalPagos.g:5377:1: rule__IfCondition__Group__2__Impl : ( RULE_LBRACKET ) ;
+    // InternalPagos.g:5404:1: rule__IfCondition__Group__2__Impl : ( RULE_LBRACKET ) ;
     public final void rule__IfCondition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5381:1: ( ( RULE_LBRACKET ) )
-            // InternalPagos.g:5382:1: ( RULE_LBRACKET )
+            // InternalPagos.g:5408:1: ( ( RULE_LBRACKET ) )
+            // InternalPagos.g:5409:1: ( RULE_LBRACKET )
             {
-            // InternalPagos.g:5382:1: ( RULE_LBRACKET )
-            // InternalPagos.g:5383:2: RULE_LBRACKET
+            // InternalPagos.g:5409:1: ( RULE_LBRACKET )
+            // InternalPagos.g:5410:2: RULE_LBRACKET
             {
              before(grammarAccess.getIfConditionAccess().getLBRACKETTerminalRuleCall_2()); 
             match(input,RULE_LBRACKET,FOLLOW_2); 
@@ -15972,14 +16057,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__3"
-    // InternalPagos.g:5392:1: rule__IfCondition__Group__3 : rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 ;
+    // InternalPagos.g:5419:1: rule__IfCondition__Group__3 : rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 ;
     public final void rule__IfCondition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5396:1: ( rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 )
-            // InternalPagos.g:5397:2: rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4
+            // InternalPagos.g:5423:1: ( rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 )
+            // InternalPagos.g:5424:2: rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4
             {
             pushFollow(FOLLOW_29);
             rule__IfCondition__Group__3__Impl();
@@ -16010,21 +16095,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__3__Impl"
-    // InternalPagos.g:5404:1: rule__IfCondition__Group__3__Impl : ( ( rule__IfCondition__LogExpAssignment_3 ) ) ;
+    // InternalPagos.g:5431:1: rule__IfCondition__Group__3__Impl : ( ( rule__IfCondition__LogExpAssignment_3 ) ) ;
     public final void rule__IfCondition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5408:1: ( ( ( rule__IfCondition__LogExpAssignment_3 ) ) )
-            // InternalPagos.g:5409:1: ( ( rule__IfCondition__LogExpAssignment_3 ) )
+            // InternalPagos.g:5435:1: ( ( ( rule__IfCondition__LogExpAssignment_3 ) ) )
+            // InternalPagos.g:5436:1: ( ( rule__IfCondition__LogExpAssignment_3 ) )
             {
-            // InternalPagos.g:5409:1: ( ( rule__IfCondition__LogExpAssignment_3 ) )
-            // InternalPagos.g:5410:2: ( rule__IfCondition__LogExpAssignment_3 )
+            // InternalPagos.g:5436:1: ( ( rule__IfCondition__LogExpAssignment_3 ) )
+            // InternalPagos.g:5437:2: ( rule__IfCondition__LogExpAssignment_3 )
             {
              before(grammarAccess.getIfConditionAccess().getLogExpAssignment_3()); 
-            // InternalPagos.g:5411:2: ( rule__IfCondition__LogExpAssignment_3 )
-            // InternalPagos.g:5411:3: rule__IfCondition__LogExpAssignment_3
+            // InternalPagos.g:5438:2: ( rule__IfCondition__LogExpAssignment_3 )
+            // InternalPagos.g:5438:3: rule__IfCondition__LogExpAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__IfCondition__LogExpAssignment_3();
@@ -16057,14 +16142,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__4"
-    // InternalPagos.g:5419:1: rule__IfCondition__Group__4 : rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5 ;
+    // InternalPagos.g:5446:1: rule__IfCondition__Group__4 : rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5 ;
     public final void rule__IfCondition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5423:1: ( rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5 )
-            // InternalPagos.g:5424:2: rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5
+            // InternalPagos.g:5450:1: ( rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5 )
+            // InternalPagos.g:5451:2: rule__IfCondition__Group__4__Impl rule__IfCondition__Group__5
             {
             pushFollow(FOLLOW_30);
             rule__IfCondition__Group__4__Impl();
@@ -16095,17 +16180,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__4__Impl"
-    // InternalPagos.g:5431:1: rule__IfCondition__Group__4__Impl : ( RULE_RBRACKET ) ;
+    // InternalPagos.g:5458:1: rule__IfCondition__Group__4__Impl : ( RULE_RBRACKET ) ;
     public final void rule__IfCondition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5435:1: ( ( RULE_RBRACKET ) )
-            // InternalPagos.g:5436:1: ( RULE_RBRACKET )
+            // InternalPagos.g:5462:1: ( ( RULE_RBRACKET ) )
+            // InternalPagos.g:5463:1: ( RULE_RBRACKET )
             {
-            // InternalPagos.g:5436:1: ( RULE_RBRACKET )
-            // InternalPagos.g:5437:2: RULE_RBRACKET
+            // InternalPagos.g:5463:1: ( RULE_RBRACKET )
+            // InternalPagos.g:5464:2: RULE_RBRACKET
             {
              before(grammarAccess.getIfConditionAccess().getRBRACKETTerminalRuleCall_4()); 
             match(input,RULE_RBRACKET,FOLLOW_2); 
@@ -16132,14 +16217,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__5"
-    // InternalPagos.g:5446:1: rule__IfCondition__Group__5 : rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6 ;
+    // InternalPagos.g:5473:1: rule__IfCondition__Group__5 : rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6 ;
     public final void rule__IfCondition__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5450:1: ( rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6 )
-            // InternalPagos.g:5451:2: rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6
+            // InternalPagos.g:5477:1: ( rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6 )
+            // InternalPagos.g:5478:2: rule__IfCondition__Group__5__Impl rule__IfCondition__Group__6
             {
             pushFollow(FOLLOW_8);
             rule__IfCondition__Group__5__Impl();
@@ -16170,17 +16255,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__5__Impl"
-    // InternalPagos.g:5458:1: rule__IfCondition__Group__5__Impl : ( RULE_THEN ) ;
+    // InternalPagos.g:5485:1: rule__IfCondition__Group__5__Impl : ( RULE_THEN ) ;
     public final void rule__IfCondition__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5462:1: ( ( RULE_THEN ) )
-            // InternalPagos.g:5463:1: ( RULE_THEN )
+            // InternalPagos.g:5489:1: ( ( RULE_THEN ) )
+            // InternalPagos.g:5490:1: ( RULE_THEN )
             {
-            // InternalPagos.g:5463:1: ( RULE_THEN )
-            // InternalPagos.g:5464:2: RULE_THEN
+            // InternalPagos.g:5490:1: ( RULE_THEN )
+            // InternalPagos.g:5491:2: RULE_THEN
             {
              before(grammarAccess.getIfConditionAccess().getTHENTerminalRuleCall_5()); 
             match(input,RULE_THEN,FOLLOW_2); 
@@ -16207,14 +16292,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__6"
-    // InternalPagos.g:5473:1: rule__IfCondition__Group__6 : rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7 ;
+    // InternalPagos.g:5500:1: rule__IfCondition__Group__6 : rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7 ;
     public final void rule__IfCondition__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5477:1: ( rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7 )
-            // InternalPagos.g:5478:2: rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7
+            // InternalPagos.g:5504:1: ( rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7 )
+            // InternalPagos.g:5505:2: rule__IfCondition__Group__6__Impl rule__IfCondition__Group__7
             {
             pushFollow(FOLLOW_23);
             rule__IfCondition__Group__6__Impl();
@@ -16245,17 +16330,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__6__Impl"
-    // InternalPagos.g:5485:1: rule__IfCondition__Group__6__Impl : ( RULE_LBRACE ) ;
+    // InternalPagos.g:5512:1: rule__IfCondition__Group__6__Impl : ( RULE_LBRACE ) ;
     public final void rule__IfCondition__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5489:1: ( ( RULE_LBRACE ) )
-            // InternalPagos.g:5490:1: ( RULE_LBRACE )
+            // InternalPagos.g:5516:1: ( ( RULE_LBRACE ) )
+            // InternalPagos.g:5517:1: ( RULE_LBRACE )
             {
-            // InternalPagos.g:5490:1: ( RULE_LBRACE )
-            // InternalPagos.g:5491:2: RULE_LBRACE
+            // InternalPagos.g:5517:1: ( RULE_LBRACE )
+            // InternalPagos.g:5518:2: RULE_LBRACE
             {
              before(grammarAccess.getIfConditionAccess().getLBRACETerminalRuleCall_6()); 
             match(input,RULE_LBRACE,FOLLOW_2); 
@@ -16282,14 +16367,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__7"
-    // InternalPagos.g:5500:1: rule__IfCondition__Group__7 : rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8 ;
+    // InternalPagos.g:5527:1: rule__IfCondition__Group__7 : rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8 ;
     public final void rule__IfCondition__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5504:1: ( rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8 )
-            // InternalPagos.g:5505:2: rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8
+            // InternalPagos.g:5531:1: ( rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8 )
+            // InternalPagos.g:5532:2: rule__IfCondition__Group__7__Impl rule__IfCondition__Group__8
             {
             pushFollow(FOLLOW_9);
             rule__IfCondition__Group__7__Impl();
@@ -16320,21 +16405,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__7__Impl"
-    // InternalPagos.g:5512:1: rule__IfCondition__Group__7__Impl : ( ( rule__IfCondition__FormulaReturnAssignment_7 ) ) ;
+    // InternalPagos.g:5539:1: rule__IfCondition__Group__7__Impl : ( ( rule__IfCondition__FormulaReturnAssignment_7 ) ) ;
     public final void rule__IfCondition__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5516:1: ( ( ( rule__IfCondition__FormulaReturnAssignment_7 ) ) )
-            // InternalPagos.g:5517:1: ( ( rule__IfCondition__FormulaReturnAssignment_7 ) )
+            // InternalPagos.g:5543:1: ( ( ( rule__IfCondition__FormulaReturnAssignment_7 ) ) )
+            // InternalPagos.g:5544:1: ( ( rule__IfCondition__FormulaReturnAssignment_7 ) )
             {
-            // InternalPagos.g:5517:1: ( ( rule__IfCondition__FormulaReturnAssignment_7 ) )
-            // InternalPagos.g:5518:2: ( rule__IfCondition__FormulaReturnAssignment_7 )
+            // InternalPagos.g:5544:1: ( ( rule__IfCondition__FormulaReturnAssignment_7 ) )
+            // InternalPagos.g:5545:2: ( rule__IfCondition__FormulaReturnAssignment_7 )
             {
              before(grammarAccess.getIfConditionAccess().getFormulaReturnAssignment_7()); 
-            // InternalPagos.g:5519:2: ( rule__IfCondition__FormulaReturnAssignment_7 )
-            // InternalPagos.g:5519:3: rule__IfCondition__FormulaReturnAssignment_7
+            // InternalPagos.g:5546:2: ( rule__IfCondition__FormulaReturnAssignment_7 )
+            // InternalPagos.g:5546:3: rule__IfCondition__FormulaReturnAssignment_7
             {
             pushFollow(FOLLOW_2);
             rule__IfCondition__FormulaReturnAssignment_7();
@@ -16367,14 +16452,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__8"
-    // InternalPagos.g:5527:1: rule__IfCondition__Group__8 : rule__IfCondition__Group__8__Impl ;
+    // InternalPagos.g:5554:1: rule__IfCondition__Group__8 : rule__IfCondition__Group__8__Impl ;
     public final void rule__IfCondition__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5531:1: ( rule__IfCondition__Group__8__Impl )
-            // InternalPagos.g:5532:2: rule__IfCondition__Group__8__Impl
+            // InternalPagos.g:5558:1: ( rule__IfCondition__Group__8__Impl )
+            // InternalPagos.g:5559:2: rule__IfCondition__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IfCondition__Group__8__Impl();
@@ -16400,17 +16485,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__8__Impl"
-    // InternalPagos.g:5538:1: rule__IfCondition__Group__8__Impl : ( RULE_RBRACE ) ;
+    // InternalPagos.g:5565:1: rule__IfCondition__Group__8__Impl : ( RULE_RBRACE ) ;
     public final void rule__IfCondition__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5542:1: ( ( RULE_RBRACE ) )
-            // InternalPagos.g:5543:1: ( RULE_RBRACE )
+            // InternalPagos.g:5569:1: ( ( RULE_RBRACE ) )
+            // InternalPagos.g:5570:1: ( RULE_RBRACE )
             {
-            // InternalPagos.g:5543:1: ( RULE_RBRACE )
-            // InternalPagos.g:5544:2: RULE_RBRACE
+            // InternalPagos.g:5570:1: ( RULE_RBRACE )
+            // InternalPagos.g:5571:2: RULE_RBRACE
             {
              before(grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_8()); 
             match(input,RULE_RBRACE,FOLLOW_2); 
@@ -16437,14 +16522,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__0"
-    // InternalPagos.g:5554:1: rule__ElseSegment__Group__0 : rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1 ;
+    // InternalPagos.g:5581:1: rule__ElseSegment__Group__0 : rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1 ;
     public final void rule__ElseSegment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5558:1: ( rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1 )
-            // InternalPagos.g:5559:2: rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1
+            // InternalPagos.g:5585:1: ( rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1 )
+            // InternalPagos.g:5586:2: rule__ElseSegment__Group__0__Impl rule__ElseSegment__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__ElseSegment__Group__0__Impl();
@@ -16475,21 +16560,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__0__Impl"
-    // InternalPagos.g:5566:1: rule__ElseSegment__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:5593:1: rule__ElseSegment__Group__0__Impl : ( () ) ;
     public final void rule__ElseSegment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5570:1: ( ( () ) )
-            // InternalPagos.g:5571:1: ( () )
+            // InternalPagos.g:5597:1: ( ( () ) )
+            // InternalPagos.g:5598:1: ( () )
             {
-            // InternalPagos.g:5571:1: ( () )
-            // InternalPagos.g:5572:2: ()
+            // InternalPagos.g:5598:1: ( () )
+            // InternalPagos.g:5599:2: ()
             {
              before(grammarAccess.getElseSegmentAccess().getElseSegmentAction_0()); 
-            // InternalPagos.g:5573:2: ()
-            // InternalPagos.g:5573:3: 
+            // InternalPagos.g:5600:2: ()
+            // InternalPagos.g:5600:3: 
             {
             }
 
@@ -16512,14 +16597,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__1"
-    // InternalPagos.g:5581:1: rule__ElseSegment__Group__1 : rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2 ;
+    // InternalPagos.g:5608:1: rule__ElseSegment__Group__1 : rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2 ;
     public final void rule__ElseSegment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5585:1: ( rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2 )
-            // InternalPagos.g:5586:2: rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2
+            // InternalPagos.g:5612:1: ( rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2 )
+            // InternalPagos.g:5613:2: rule__ElseSegment__Group__1__Impl rule__ElseSegment__Group__2
             {
             pushFollow(FOLLOW_23);
             rule__ElseSegment__Group__1__Impl();
@@ -16550,17 +16635,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__1__Impl"
-    // InternalPagos.g:5593:1: rule__ElseSegment__Group__1__Impl : ( RULE_LBRACE ) ;
+    // InternalPagos.g:5620:1: rule__ElseSegment__Group__1__Impl : ( RULE_LBRACE ) ;
     public final void rule__ElseSegment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5597:1: ( ( RULE_LBRACE ) )
-            // InternalPagos.g:5598:1: ( RULE_LBRACE )
+            // InternalPagos.g:5624:1: ( ( RULE_LBRACE ) )
+            // InternalPagos.g:5625:1: ( RULE_LBRACE )
             {
-            // InternalPagos.g:5598:1: ( RULE_LBRACE )
-            // InternalPagos.g:5599:2: RULE_LBRACE
+            // InternalPagos.g:5625:1: ( RULE_LBRACE )
+            // InternalPagos.g:5626:2: RULE_LBRACE
             {
              before(grammarAccess.getElseSegmentAccess().getLBRACETerminalRuleCall_1()); 
             match(input,RULE_LBRACE,FOLLOW_2); 
@@ -16587,14 +16672,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__2"
-    // InternalPagos.g:5608:1: rule__ElseSegment__Group__2 : rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3 ;
+    // InternalPagos.g:5635:1: rule__ElseSegment__Group__2 : rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3 ;
     public final void rule__ElseSegment__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5612:1: ( rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3 )
-            // InternalPagos.g:5613:2: rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3
+            // InternalPagos.g:5639:1: ( rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3 )
+            // InternalPagos.g:5640:2: rule__ElseSegment__Group__2__Impl rule__ElseSegment__Group__3
             {
             pushFollow(FOLLOW_9);
             rule__ElseSegment__Group__2__Impl();
@@ -16625,21 +16710,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__2__Impl"
-    // InternalPagos.g:5620:1: rule__ElseSegment__Group__2__Impl : ( ( rule__ElseSegment__IfSentenceAssignment_2 ) ) ;
+    // InternalPagos.g:5647:1: rule__ElseSegment__Group__2__Impl : ( ( rule__ElseSegment__IfSentenceAssignment_2 ) ) ;
     public final void rule__ElseSegment__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5624:1: ( ( ( rule__ElseSegment__IfSentenceAssignment_2 ) ) )
-            // InternalPagos.g:5625:1: ( ( rule__ElseSegment__IfSentenceAssignment_2 ) )
+            // InternalPagos.g:5651:1: ( ( ( rule__ElseSegment__IfSentenceAssignment_2 ) ) )
+            // InternalPagos.g:5652:1: ( ( rule__ElseSegment__IfSentenceAssignment_2 ) )
             {
-            // InternalPagos.g:5625:1: ( ( rule__ElseSegment__IfSentenceAssignment_2 ) )
-            // InternalPagos.g:5626:2: ( rule__ElseSegment__IfSentenceAssignment_2 )
+            // InternalPagos.g:5652:1: ( ( rule__ElseSegment__IfSentenceAssignment_2 ) )
+            // InternalPagos.g:5653:2: ( rule__ElseSegment__IfSentenceAssignment_2 )
             {
              before(grammarAccess.getElseSegmentAccess().getIfSentenceAssignment_2()); 
-            // InternalPagos.g:5627:2: ( rule__ElseSegment__IfSentenceAssignment_2 )
-            // InternalPagos.g:5627:3: rule__ElseSegment__IfSentenceAssignment_2
+            // InternalPagos.g:5654:2: ( rule__ElseSegment__IfSentenceAssignment_2 )
+            // InternalPagos.g:5654:3: rule__ElseSegment__IfSentenceAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ElseSegment__IfSentenceAssignment_2();
@@ -16672,14 +16757,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__3"
-    // InternalPagos.g:5635:1: rule__ElseSegment__Group__3 : rule__ElseSegment__Group__3__Impl ;
+    // InternalPagos.g:5662:1: rule__ElseSegment__Group__3 : rule__ElseSegment__Group__3__Impl ;
     public final void rule__ElseSegment__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5639:1: ( rule__ElseSegment__Group__3__Impl )
-            // InternalPagos.g:5640:2: rule__ElseSegment__Group__3__Impl
+            // InternalPagos.g:5666:1: ( rule__ElseSegment__Group__3__Impl )
+            // InternalPagos.g:5667:2: rule__ElseSegment__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElseSegment__Group__3__Impl();
@@ -16705,17 +16790,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__Group__3__Impl"
-    // InternalPagos.g:5646:1: rule__ElseSegment__Group__3__Impl : ( RULE_RBRACE ) ;
+    // InternalPagos.g:5673:1: rule__ElseSegment__Group__3__Impl : ( RULE_RBRACE ) ;
     public final void rule__ElseSegment__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5650:1: ( ( RULE_RBRACE ) )
-            // InternalPagos.g:5651:1: ( RULE_RBRACE )
+            // InternalPagos.g:5677:1: ( ( RULE_RBRACE ) )
+            // InternalPagos.g:5678:1: ( RULE_RBRACE )
             {
-            // InternalPagos.g:5651:1: ( RULE_RBRACE )
-            // InternalPagos.g:5652:2: RULE_RBRACE
+            // InternalPagos.g:5678:1: ( RULE_RBRACE )
+            // InternalPagos.g:5679:2: RULE_RBRACE
             {
              before(grammarAccess.getElseSegmentAccess().getRBRACETerminalRuleCall_3()); 
             match(input,RULE_RBRACE,FOLLOW_2); 
@@ -16742,14 +16827,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__0"
-    // InternalPagos.g:5662:1: rule__ReturnBlock__Group__0 : rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1 ;
+    // InternalPagos.g:5689:1: rule__ReturnBlock__Group__0 : rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1 ;
     public final void rule__ReturnBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5666:1: ( rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1 )
-            // InternalPagos.g:5667:2: rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1
+            // InternalPagos.g:5693:1: ( rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1 )
+            // InternalPagos.g:5694:2: rule__ReturnBlock__Group__0__Impl rule__ReturnBlock__Group__1
             {
             pushFollow(FOLLOW_23);
             rule__ReturnBlock__Group__0__Impl();
@@ -16780,21 +16865,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__0__Impl"
-    // InternalPagos.g:5674:1: rule__ReturnBlock__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:5701:1: rule__ReturnBlock__Group__0__Impl : ( () ) ;
     public final void rule__ReturnBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5678:1: ( ( () ) )
-            // InternalPagos.g:5679:1: ( () )
+            // InternalPagos.g:5705:1: ( ( () ) )
+            // InternalPagos.g:5706:1: ( () )
             {
-            // InternalPagos.g:5679:1: ( () )
-            // InternalPagos.g:5680:2: ()
+            // InternalPagos.g:5706:1: ( () )
+            // InternalPagos.g:5707:2: ()
             {
              before(grammarAccess.getReturnBlockAccess().getReturnBlockAction_0()); 
-            // InternalPagos.g:5681:2: ()
-            // InternalPagos.g:5681:3: 
+            // InternalPagos.g:5708:2: ()
+            // InternalPagos.g:5708:3: 
             {
             }
 
@@ -16817,14 +16902,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__1"
-    // InternalPagos.g:5689:1: rule__ReturnBlock__Group__1 : rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2 ;
+    // InternalPagos.g:5716:1: rule__ReturnBlock__Group__1 : rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2 ;
     public final void rule__ReturnBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5693:1: ( rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2 )
-            // InternalPagos.g:5694:2: rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2
+            // InternalPagos.g:5720:1: ( rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2 )
+            // InternalPagos.g:5721:2: rule__ReturnBlock__Group__1__Impl rule__ReturnBlock__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__ReturnBlock__Group__1__Impl();
@@ -16855,17 +16940,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__1__Impl"
-    // InternalPagos.g:5701:1: rule__ReturnBlock__Group__1__Impl : ( RULE_RETURN ) ;
+    // InternalPagos.g:5728:1: rule__ReturnBlock__Group__1__Impl : ( RULE_RETURN ) ;
     public final void rule__ReturnBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5705:1: ( ( RULE_RETURN ) )
-            // InternalPagos.g:5706:1: ( RULE_RETURN )
+            // InternalPagos.g:5732:1: ( ( RULE_RETURN ) )
+            // InternalPagos.g:5733:1: ( RULE_RETURN )
             {
-            // InternalPagos.g:5706:1: ( RULE_RETURN )
-            // InternalPagos.g:5707:2: RULE_RETURN
+            // InternalPagos.g:5733:1: ( RULE_RETURN )
+            // InternalPagos.g:5734:2: RULE_RETURN
             {
              before(grammarAccess.getReturnBlockAccess().getRETURNTerminalRuleCall_1()); 
             match(input,RULE_RETURN,FOLLOW_2); 
@@ -16892,14 +16977,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__2"
-    // InternalPagos.g:5716:1: rule__ReturnBlock__Group__2 : rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3 ;
+    // InternalPagos.g:5743:1: rule__ReturnBlock__Group__2 : rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3 ;
     public final void rule__ReturnBlock__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5720:1: ( rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3 )
-            // InternalPagos.g:5721:2: rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3
+            // InternalPagos.g:5747:1: ( rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3 )
+            // InternalPagos.g:5748:2: rule__ReturnBlock__Group__2__Impl rule__ReturnBlock__Group__3
             {
             pushFollow(FOLLOW_31);
             rule__ReturnBlock__Group__2__Impl();
@@ -16930,17 +17015,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__2__Impl"
-    // InternalPagos.g:5728:1: rule__ReturnBlock__Group__2__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:5755:1: rule__ReturnBlock__Group__2__Impl : ( RULE_COLON ) ;
     public final void rule__ReturnBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5732:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:5733:1: ( RULE_COLON )
+            // InternalPagos.g:5759:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:5760:1: ( RULE_COLON )
             {
-            // InternalPagos.g:5733:1: ( RULE_COLON )
-            // InternalPagos.g:5734:2: RULE_COLON
+            // InternalPagos.g:5760:1: ( RULE_COLON )
+            // InternalPagos.g:5761:2: RULE_COLON
             {
              before(grammarAccess.getReturnBlockAccess().getCOLONTerminalRuleCall_2()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -16967,14 +17052,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__3"
-    // InternalPagos.g:5743:1: rule__ReturnBlock__Group__3 : rule__ReturnBlock__Group__3__Impl ;
+    // InternalPagos.g:5770:1: rule__ReturnBlock__Group__3 : rule__ReturnBlock__Group__3__Impl ;
     public final void rule__ReturnBlock__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5747:1: ( rule__ReturnBlock__Group__3__Impl )
-            // InternalPagos.g:5748:2: rule__ReturnBlock__Group__3__Impl
+            // InternalPagos.g:5774:1: ( rule__ReturnBlock__Group__3__Impl )
+            // InternalPagos.g:5775:2: rule__ReturnBlock__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ReturnBlock__Group__3__Impl();
@@ -17000,21 +17085,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__Group__3__Impl"
-    // InternalPagos.g:5754:1: rule__ReturnBlock__Group__3__Impl : ( ( rule__ReturnBlock__ExpressionAssignment_3 ) ) ;
+    // InternalPagos.g:5781:1: rule__ReturnBlock__Group__3__Impl : ( ( rule__ReturnBlock__ExpressionAssignment_3 ) ) ;
     public final void rule__ReturnBlock__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5758:1: ( ( ( rule__ReturnBlock__ExpressionAssignment_3 ) ) )
-            // InternalPagos.g:5759:1: ( ( rule__ReturnBlock__ExpressionAssignment_3 ) )
+            // InternalPagos.g:5785:1: ( ( ( rule__ReturnBlock__ExpressionAssignment_3 ) ) )
+            // InternalPagos.g:5786:1: ( ( rule__ReturnBlock__ExpressionAssignment_3 ) )
             {
-            // InternalPagos.g:5759:1: ( ( rule__ReturnBlock__ExpressionAssignment_3 ) )
-            // InternalPagos.g:5760:2: ( rule__ReturnBlock__ExpressionAssignment_3 )
+            // InternalPagos.g:5786:1: ( ( rule__ReturnBlock__ExpressionAssignment_3 ) )
+            // InternalPagos.g:5787:2: ( rule__ReturnBlock__ExpressionAssignment_3 )
             {
              before(grammarAccess.getReturnBlockAccess().getExpressionAssignment_3()); 
-            // InternalPagos.g:5761:2: ( rule__ReturnBlock__ExpressionAssignment_3 )
-            // InternalPagos.g:5761:3: rule__ReturnBlock__ExpressionAssignment_3
+            // InternalPagos.g:5788:2: ( rule__ReturnBlock__ExpressionAssignment_3 )
+            // InternalPagos.g:5788:3: rule__ReturnBlock__ExpressionAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__ReturnBlock__ExpressionAssignment_3();
@@ -17047,14 +17132,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__0"
-    // InternalPagos.g:5770:1: rule__ExpresionLogica__Group__0 : rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1 ;
+    // InternalPagos.g:5797:1: rule__ExpresionLogica__Group__0 : rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1 ;
     public final void rule__ExpresionLogica__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5774:1: ( rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1 )
-            // InternalPagos.g:5775:2: rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1
+            // InternalPagos.g:5801:1: ( rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1 )
+            // InternalPagos.g:5802:2: rule__ExpresionLogica__Group__0__Impl rule__ExpresionLogica__Group__1
             {
             pushFollow(FOLLOW_32);
             rule__ExpresionLogica__Group__0__Impl();
@@ -17085,21 +17170,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__0__Impl"
-    // InternalPagos.g:5782:1: rule__ExpresionLogica__Group__0__Impl : ( ( rule__ExpresionLogica__VariableAssignment_0 ) ) ;
+    // InternalPagos.g:5809:1: rule__ExpresionLogica__Group__0__Impl : ( ( rule__ExpresionLogica__VariableAssignment_0 ) ) ;
     public final void rule__ExpresionLogica__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5786:1: ( ( ( rule__ExpresionLogica__VariableAssignment_0 ) ) )
-            // InternalPagos.g:5787:1: ( ( rule__ExpresionLogica__VariableAssignment_0 ) )
+            // InternalPagos.g:5813:1: ( ( ( rule__ExpresionLogica__VariableAssignment_0 ) ) )
+            // InternalPagos.g:5814:1: ( ( rule__ExpresionLogica__VariableAssignment_0 ) )
             {
-            // InternalPagos.g:5787:1: ( ( rule__ExpresionLogica__VariableAssignment_0 ) )
-            // InternalPagos.g:5788:2: ( rule__ExpresionLogica__VariableAssignment_0 )
+            // InternalPagos.g:5814:1: ( ( rule__ExpresionLogica__VariableAssignment_0 ) )
+            // InternalPagos.g:5815:2: ( rule__ExpresionLogica__VariableAssignment_0 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getVariableAssignment_0()); 
-            // InternalPagos.g:5789:2: ( rule__ExpresionLogica__VariableAssignment_0 )
-            // InternalPagos.g:5789:3: rule__ExpresionLogica__VariableAssignment_0
+            // InternalPagos.g:5816:2: ( rule__ExpresionLogica__VariableAssignment_0 )
+            // InternalPagos.g:5816:3: rule__ExpresionLogica__VariableAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__VariableAssignment_0();
@@ -17132,14 +17217,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__1"
-    // InternalPagos.g:5797:1: rule__ExpresionLogica__Group__1 : rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2 ;
+    // InternalPagos.g:5824:1: rule__ExpresionLogica__Group__1 : rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2 ;
     public final void rule__ExpresionLogica__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5801:1: ( rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2 )
-            // InternalPagos.g:5802:2: rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2
+            // InternalPagos.g:5828:1: ( rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2 )
+            // InternalPagos.g:5829:2: rule__ExpresionLogica__Group__1__Impl rule__ExpresionLogica__Group__2
             {
             pushFollow(FOLLOW_33);
             rule__ExpresionLogica__Group__1__Impl();
@@ -17170,24 +17255,24 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__1__Impl"
-    // InternalPagos.g:5809:1: rule__ExpresionLogica__Group__1__Impl : ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) ) ;
+    // InternalPagos.g:5836:1: rule__ExpresionLogica__Group__1__Impl : ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) ) ;
     public final void rule__ExpresionLogica__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5813:1: ( ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) ) )
-            // InternalPagos.g:5814:1: ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) )
+            // InternalPagos.g:5840:1: ( ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) ) )
+            // InternalPagos.g:5841:1: ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) )
             {
-            // InternalPagos.g:5814:1: ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) )
-            // InternalPagos.g:5815:2: ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* )
+            // InternalPagos.g:5841:1: ( ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* ) )
+            // InternalPagos.g:5842:2: ( ( rule__ExpresionLogica__Group_1__0 ) ) ( ( rule__ExpresionLogica__Group_1__0 )* )
             {
-            // InternalPagos.g:5815:2: ( ( rule__ExpresionLogica__Group_1__0 ) )
-            // InternalPagos.g:5816:3: ( rule__ExpresionLogica__Group_1__0 )
+            // InternalPagos.g:5842:2: ( ( rule__ExpresionLogica__Group_1__0 ) )
+            // InternalPagos.g:5843:3: ( rule__ExpresionLogica__Group_1__0 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getGroup_1()); 
-            // InternalPagos.g:5817:3: ( rule__ExpresionLogica__Group_1__0 )
-            // InternalPagos.g:5817:4: rule__ExpresionLogica__Group_1__0
+            // InternalPagos.g:5844:3: ( rule__ExpresionLogica__Group_1__0 )
+            // InternalPagos.g:5844:4: rule__ExpresionLogica__Group_1__0
             {
             pushFollow(FOLLOW_34);
             rule__ExpresionLogica__Group_1__0();
@@ -17201,11 +17286,11 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalPagos.g:5820:2: ( ( rule__ExpresionLogica__Group_1__0 )* )
-            // InternalPagos.g:5821:3: ( rule__ExpresionLogica__Group_1__0 )*
+            // InternalPagos.g:5847:2: ( ( rule__ExpresionLogica__Group_1__0 )* )
+            // InternalPagos.g:5848:3: ( rule__ExpresionLogica__Group_1__0 )*
             {
              before(grammarAccess.getExpresionLogicaAccess().getGroup_1()); 
-            // InternalPagos.g:5822:3: ( rule__ExpresionLogica__Group_1__0 )*
+            // InternalPagos.g:5849:3: ( rule__ExpresionLogica__Group_1__0 )*
             loop26:
             do {
                 int alt26=2;
@@ -17218,7 +17303,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalPagos.g:5822:4: rule__ExpresionLogica__Group_1__0
+            	    // InternalPagos.g:5849:4: rule__ExpresionLogica__Group_1__0
             	    {
             	    pushFollow(FOLLOW_34);
             	    rule__ExpresionLogica__Group_1__0();
@@ -17260,14 +17345,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__2"
-    // InternalPagos.g:5831:1: rule__ExpresionLogica__Group__2 : rule__ExpresionLogica__Group__2__Impl ;
+    // InternalPagos.g:5858:1: rule__ExpresionLogica__Group__2 : rule__ExpresionLogica__Group__2__Impl ;
     public final void rule__ExpresionLogica__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5835:1: ( rule__ExpresionLogica__Group__2__Impl )
-            // InternalPagos.g:5836:2: rule__ExpresionLogica__Group__2__Impl
+            // InternalPagos.g:5862:1: ( rule__ExpresionLogica__Group__2__Impl )
+            // InternalPagos.g:5863:2: rule__ExpresionLogica__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__Group__2__Impl();
@@ -17293,20 +17378,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group__2__Impl"
-    // InternalPagos.g:5842:1: rule__ExpresionLogica__Group__2__Impl : ( ( rule__ExpresionLogica__Group_2__0 )? ) ;
+    // InternalPagos.g:5869:1: rule__ExpresionLogica__Group__2__Impl : ( ( rule__ExpresionLogica__Group_2__0 )? ) ;
     public final void rule__ExpresionLogica__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5846:1: ( ( ( rule__ExpresionLogica__Group_2__0 )? ) )
-            // InternalPagos.g:5847:1: ( ( rule__ExpresionLogica__Group_2__0 )? )
+            // InternalPagos.g:5873:1: ( ( ( rule__ExpresionLogica__Group_2__0 )? ) )
+            // InternalPagos.g:5874:1: ( ( rule__ExpresionLogica__Group_2__0 )? )
             {
-            // InternalPagos.g:5847:1: ( ( rule__ExpresionLogica__Group_2__0 )? )
-            // InternalPagos.g:5848:2: ( rule__ExpresionLogica__Group_2__0 )?
+            // InternalPagos.g:5874:1: ( ( rule__ExpresionLogica__Group_2__0 )? )
+            // InternalPagos.g:5875:2: ( rule__ExpresionLogica__Group_2__0 )?
             {
              before(grammarAccess.getExpresionLogicaAccess().getGroup_2()); 
-            // InternalPagos.g:5849:2: ( rule__ExpresionLogica__Group_2__0 )?
+            // InternalPagos.g:5876:2: ( rule__ExpresionLogica__Group_2__0 )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -17315,7 +17400,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalPagos.g:5849:3: rule__ExpresionLogica__Group_2__0
+                    // InternalPagos.g:5876:3: rule__ExpresionLogica__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ExpresionLogica__Group_2__0();
@@ -17351,14 +17436,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_1__0"
-    // InternalPagos.g:5858:1: rule__ExpresionLogica__Group_1__0 : rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1 ;
+    // InternalPagos.g:5885:1: rule__ExpresionLogica__Group_1__0 : rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1 ;
     public final void rule__ExpresionLogica__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5862:1: ( rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1 )
-            // InternalPagos.g:5863:2: rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1
+            // InternalPagos.g:5889:1: ( rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1 )
+            // InternalPagos.g:5890:2: rule__ExpresionLogica__Group_1__0__Impl rule__ExpresionLogica__Group_1__1
             {
             pushFollow(FOLLOW_35);
             rule__ExpresionLogica__Group_1__0__Impl();
@@ -17389,21 +17474,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_1__0__Impl"
-    // InternalPagos.g:5870:1: rule__ExpresionLogica__Group_1__0__Impl : ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) ) ;
+    // InternalPagos.g:5897:1: rule__ExpresionLogica__Group_1__0__Impl : ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) ) ;
     public final void rule__ExpresionLogica__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5874:1: ( ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) ) )
-            // InternalPagos.g:5875:1: ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) )
+            // InternalPagos.g:5901:1: ( ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) ) )
+            // InternalPagos.g:5902:1: ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) )
             {
-            // InternalPagos.g:5875:1: ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) )
-            // InternalPagos.g:5876:2: ( rule__ExpresionLogica__LogOperAssignment_1_0 )
+            // InternalPagos.g:5902:1: ( ( rule__ExpresionLogica__LogOperAssignment_1_0 ) )
+            // InternalPagos.g:5903:2: ( rule__ExpresionLogica__LogOperAssignment_1_0 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getLogOperAssignment_1_0()); 
-            // InternalPagos.g:5877:2: ( rule__ExpresionLogica__LogOperAssignment_1_0 )
-            // InternalPagos.g:5877:3: rule__ExpresionLogica__LogOperAssignment_1_0
+            // InternalPagos.g:5904:2: ( rule__ExpresionLogica__LogOperAssignment_1_0 )
+            // InternalPagos.g:5904:3: rule__ExpresionLogica__LogOperAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__LogOperAssignment_1_0();
@@ -17436,14 +17521,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_1__1"
-    // InternalPagos.g:5885:1: rule__ExpresionLogica__Group_1__1 : rule__ExpresionLogica__Group_1__1__Impl ;
+    // InternalPagos.g:5912:1: rule__ExpresionLogica__Group_1__1 : rule__ExpresionLogica__Group_1__1__Impl ;
     public final void rule__ExpresionLogica__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5889:1: ( rule__ExpresionLogica__Group_1__1__Impl )
-            // InternalPagos.g:5890:2: rule__ExpresionLogica__Group_1__1__Impl
+            // InternalPagos.g:5916:1: ( rule__ExpresionLogica__Group_1__1__Impl )
+            // InternalPagos.g:5917:2: rule__ExpresionLogica__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__Group_1__1__Impl();
@@ -17469,21 +17554,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_1__1__Impl"
-    // InternalPagos.g:5896:1: rule__ExpresionLogica__Group_1__1__Impl : ( ( rule__ExpresionLogica__Alternatives_1_1 ) ) ;
+    // InternalPagos.g:5923:1: rule__ExpresionLogica__Group_1__1__Impl : ( ( rule__ExpresionLogica__Alternatives_1_1 ) ) ;
     public final void rule__ExpresionLogica__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5900:1: ( ( ( rule__ExpresionLogica__Alternatives_1_1 ) ) )
-            // InternalPagos.g:5901:1: ( ( rule__ExpresionLogica__Alternatives_1_1 ) )
+            // InternalPagos.g:5927:1: ( ( ( rule__ExpresionLogica__Alternatives_1_1 ) ) )
+            // InternalPagos.g:5928:1: ( ( rule__ExpresionLogica__Alternatives_1_1 ) )
             {
-            // InternalPagos.g:5901:1: ( ( rule__ExpresionLogica__Alternatives_1_1 ) )
-            // InternalPagos.g:5902:2: ( rule__ExpresionLogica__Alternatives_1_1 )
+            // InternalPagos.g:5928:1: ( ( rule__ExpresionLogica__Alternatives_1_1 ) )
+            // InternalPagos.g:5929:2: ( rule__ExpresionLogica__Alternatives_1_1 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getAlternatives_1_1()); 
-            // InternalPagos.g:5903:2: ( rule__ExpresionLogica__Alternatives_1_1 )
-            // InternalPagos.g:5903:3: rule__ExpresionLogica__Alternatives_1_1
+            // InternalPagos.g:5930:2: ( rule__ExpresionLogica__Alternatives_1_1 )
+            // InternalPagos.g:5930:3: rule__ExpresionLogica__Alternatives_1_1
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__Alternatives_1_1();
@@ -17516,14 +17601,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_2__0"
-    // InternalPagos.g:5912:1: rule__ExpresionLogica__Group_2__0 : rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1 ;
+    // InternalPagos.g:5939:1: rule__ExpresionLogica__Group_2__0 : rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1 ;
     public final void rule__ExpresionLogica__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5916:1: ( rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1 )
-            // InternalPagos.g:5917:2: rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1
+            // InternalPagos.g:5943:1: ( rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1 )
+            // InternalPagos.g:5944:2: rule__ExpresionLogica__Group_2__0__Impl rule__ExpresionLogica__Group_2__1
             {
             pushFollow(FOLLOW_28);
             rule__ExpresionLogica__Group_2__0__Impl();
@@ -17554,21 +17639,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_2__0__Impl"
-    // InternalPagos.g:5924:1: rule__ExpresionLogica__Group_2__0__Impl : ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) ) ;
+    // InternalPagos.g:5951:1: rule__ExpresionLogica__Group_2__0__Impl : ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) ) ;
     public final void rule__ExpresionLogica__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5928:1: ( ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) ) )
-            // InternalPagos.g:5929:1: ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) )
+            // InternalPagos.g:5955:1: ( ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) ) )
+            // InternalPagos.g:5956:1: ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) )
             {
-            // InternalPagos.g:5929:1: ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) )
-            // InternalPagos.g:5930:2: ( rule__ExpresionLogica__ConOperAssignment_2_0 )
+            // InternalPagos.g:5956:1: ( ( rule__ExpresionLogica__ConOperAssignment_2_0 ) )
+            // InternalPagos.g:5957:2: ( rule__ExpresionLogica__ConOperAssignment_2_0 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getConOperAssignment_2_0()); 
-            // InternalPagos.g:5931:2: ( rule__ExpresionLogica__ConOperAssignment_2_0 )
-            // InternalPagos.g:5931:3: rule__ExpresionLogica__ConOperAssignment_2_0
+            // InternalPagos.g:5958:2: ( rule__ExpresionLogica__ConOperAssignment_2_0 )
+            // InternalPagos.g:5958:3: rule__ExpresionLogica__ConOperAssignment_2_0
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__ConOperAssignment_2_0();
@@ -17601,14 +17686,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_2__1"
-    // InternalPagos.g:5939:1: rule__ExpresionLogica__Group_2__1 : rule__ExpresionLogica__Group_2__1__Impl ;
+    // InternalPagos.g:5966:1: rule__ExpresionLogica__Group_2__1 : rule__ExpresionLogica__Group_2__1__Impl ;
     public final void rule__ExpresionLogica__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5943:1: ( rule__ExpresionLogica__Group_2__1__Impl )
-            // InternalPagos.g:5944:2: rule__ExpresionLogica__Group_2__1__Impl
+            // InternalPagos.g:5970:1: ( rule__ExpresionLogica__Group_2__1__Impl )
+            // InternalPagos.g:5971:2: rule__ExpresionLogica__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__Group_2__1__Impl();
@@ -17634,21 +17719,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Group_2__1__Impl"
-    // InternalPagos.g:5950:1: rule__ExpresionLogica__Group_2__1__Impl : ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) ) ;
+    // InternalPagos.g:5977:1: rule__ExpresionLogica__Group_2__1__Impl : ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) ) ;
     public final void rule__ExpresionLogica__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5954:1: ( ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) ) )
-            // InternalPagos.g:5955:1: ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) )
+            // InternalPagos.g:5981:1: ( ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) ) )
+            // InternalPagos.g:5982:1: ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) )
             {
-            // InternalPagos.g:5955:1: ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) )
-            // InternalPagos.g:5956:2: ( rule__ExpresionLogica__ExpAssignment_2_1 )
+            // InternalPagos.g:5982:1: ( ( rule__ExpresionLogica__ExpAssignment_2_1 ) )
+            // InternalPagos.g:5983:2: ( rule__ExpresionLogica__ExpAssignment_2_1 )
             {
              before(grammarAccess.getExpresionLogicaAccess().getExpAssignment_2_1()); 
-            // InternalPagos.g:5957:2: ( rule__ExpresionLogica__ExpAssignment_2_1 )
-            // InternalPagos.g:5957:3: rule__ExpresionLogica__ExpAssignment_2_1
+            // InternalPagos.g:5984:2: ( rule__ExpresionLogica__ExpAssignment_2_1 )
+            // InternalPagos.g:5984:3: rule__ExpresionLogica__ExpAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__ExpresionLogica__ExpAssignment_2_1();
@@ -17681,14 +17766,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group__0"
-    // InternalPagos.g:5966:1: rule__Adicion__Group__0 : rule__Adicion__Group__0__Impl rule__Adicion__Group__1 ;
+    // InternalPagos.g:5993:1: rule__Adicion__Group__0 : rule__Adicion__Group__0__Impl rule__Adicion__Group__1 ;
     public final void rule__Adicion__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5970:1: ( rule__Adicion__Group__0__Impl rule__Adicion__Group__1 )
-            // InternalPagos.g:5971:2: rule__Adicion__Group__0__Impl rule__Adicion__Group__1
+            // InternalPagos.g:5997:1: ( rule__Adicion__Group__0__Impl rule__Adicion__Group__1 )
+            // InternalPagos.g:5998:2: rule__Adicion__Group__0__Impl rule__Adicion__Group__1
             {
             pushFollow(FOLLOW_36);
             rule__Adicion__Group__0__Impl();
@@ -17719,17 +17804,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group__0__Impl"
-    // InternalPagos.g:5978:1: rule__Adicion__Group__0__Impl : ( ruleMultiplicacion ) ;
+    // InternalPagos.g:6005:1: rule__Adicion__Group__0__Impl : ( ruleMultiplicacion ) ;
     public final void rule__Adicion__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5982:1: ( ( ruleMultiplicacion ) )
-            // InternalPagos.g:5983:1: ( ruleMultiplicacion )
+            // InternalPagos.g:6009:1: ( ( ruleMultiplicacion ) )
+            // InternalPagos.g:6010:1: ( ruleMultiplicacion )
             {
-            // InternalPagos.g:5983:1: ( ruleMultiplicacion )
-            // InternalPagos.g:5984:2: ruleMultiplicacion
+            // InternalPagos.g:6010:1: ( ruleMultiplicacion )
+            // InternalPagos.g:6011:2: ruleMultiplicacion
             {
              before(grammarAccess.getAdicionAccess().getMultiplicacionParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -17760,14 +17845,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group__1"
-    // InternalPagos.g:5993:1: rule__Adicion__Group__1 : rule__Adicion__Group__1__Impl ;
+    // InternalPagos.g:6020:1: rule__Adicion__Group__1 : rule__Adicion__Group__1__Impl ;
     public final void rule__Adicion__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:5997:1: ( rule__Adicion__Group__1__Impl )
-            // InternalPagos.g:5998:2: rule__Adicion__Group__1__Impl
+            // InternalPagos.g:6024:1: ( rule__Adicion__Group__1__Impl )
+            // InternalPagos.g:6025:2: rule__Adicion__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Adicion__Group__1__Impl();
@@ -17793,20 +17878,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group__1__Impl"
-    // InternalPagos.g:6004:1: rule__Adicion__Group__1__Impl : ( ( rule__Adicion__Group_1__0 )* ) ;
+    // InternalPagos.g:6031:1: rule__Adicion__Group__1__Impl : ( ( rule__Adicion__Group_1__0 )* ) ;
     public final void rule__Adicion__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6008:1: ( ( ( rule__Adicion__Group_1__0 )* ) )
-            // InternalPagos.g:6009:1: ( ( rule__Adicion__Group_1__0 )* )
+            // InternalPagos.g:6035:1: ( ( ( rule__Adicion__Group_1__0 )* ) )
+            // InternalPagos.g:6036:1: ( ( rule__Adicion__Group_1__0 )* )
             {
-            // InternalPagos.g:6009:1: ( ( rule__Adicion__Group_1__0 )* )
-            // InternalPagos.g:6010:2: ( rule__Adicion__Group_1__0 )*
+            // InternalPagos.g:6036:1: ( ( rule__Adicion__Group_1__0 )* )
+            // InternalPagos.g:6037:2: ( rule__Adicion__Group_1__0 )*
             {
              before(grammarAccess.getAdicionAccess().getGroup_1()); 
-            // InternalPagos.g:6011:2: ( rule__Adicion__Group_1__0 )*
+            // InternalPagos.g:6038:2: ( rule__Adicion__Group_1__0 )*
             loop28:
             do {
                 int alt28=2;
@@ -17819,7 +17904,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalPagos.g:6011:3: rule__Adicion__Group_1__0
+            	    // InternalPagos.g:6038:3: rule__Adicion__Group_1__0
             	    {
             	    pushFollow(FOLLOW_37);
             	    rule__Adicion__Group_1__0();
@@ -17858,14 +17943,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__0"
-    // InternalPagos.g:6020:1: rule__Adicion__Group_1__0 : rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1 ;
+    // InternalPagos.g:6047:1: rule__Adicion__Group_1__0 : rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1 ;
     public final void rule__Adicion__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6024:1: ( rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1 )
-            // InternalPagos.g:6025:2: rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1
+            // InternalPagos.g:6051:1: ( rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1 )
+            // InternalPagos.g:6052:2: rule__Adicion__Group_1__0__Impl rule__Adicion__Group_1__1
             {
             pushFollow(FOLLOW_36);
             rule__Adicion__Group_1__0__Impl();
@@ -17896,21 +17981,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__0__Impl"
-    // InternalPagos.g:6032:1: rule__Adicion__Group_1__0__Impl : ( () ) ;
+    // InternalPagos.g:6059:1: rule__Adicion__Group_1__0__Impl : ( () ) ;
     public final void rule__Adicion__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6036:1: ( ( () ) )
-            // InternalPagos.g:6037:1: ( () )
+            // InternalPagos.g:6063:1: ( ( () ) )
+            // InternalPagos.g:6064:1: ( () )
             {
-            // InternalPagos.g:6037:1: ( () )
-            // InternalPagos.g:6038:2: ()
+            // InternalPagos.g:6064:1: ( () )
+            // InternalPagos.g:6065:2: ()
             {
              before(grammarAccess.getAdicionAccess().getAdicionLeftAction_1_0()); 
-            // InternalPagos.g:6039:2: ()
-            // InternalPagos.g:6039:3: 
+            // InternalPagos.g:6066:2: ()
+            // InternalPagos.g:6066:3: 
             {
             }
 
@@ -17933,14 +18018,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__1"
-    // InternalPagos.g:6047:1: rule__Adicion__Group_1__1 : rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2 ;
+    // InternalPagos.g:6074:1: rule__Adicion__Group_1__1 : rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2 ;
     public final void rule__Adicion__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6051:1: ( rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2 )
-            // InternalPagos.g:6052:2: rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2
+            // InternalPagos.g:6078:1: ( rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2 )
+            // InternalPagos.g:6079:2: rule__Adicion__Group_1__1__Impl rule__Adicion__Group_1__2
             {
             pushFollow(FOLLOW_31);
             rule__Adicion__Group_1__1__Impl();
@@ -17971,21 +18056,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__1__Impl"
-    // InternalPagos.g:6059:1: rule__Adicion__Group_1__1__Impl : ( ( rule__Adicion__OperatorAssignment_1_1 ) ) ;
+    // InternalPagos.g:6086:1: rule__Adicion__Group_1__1__Impl : ( ( rule__Adicion__OperatorAssignment_1_1 ) ) ;
     public final void rule__Adicion__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6063:1: ( ( ( rule__Adicion__OperatorAssignment_1_1 ) ) )
-            // InternalPagos.g:6064:1: ( ( rule__Adicion__OperatorAssignment_1_1 ) )
+            // InternalPagos.g:6090:1: ( ( ( rule__Adicion__OperatorAssignment_1_1 ) ) )
+            // InternalPagos.g:6091:1: ( ( rule__Adicion__OperatorAssignment_1_1 ) )
             {
-            // InternalPagos.g:6064:1: ( ( rule__Adicion__OperatorAssignment_1_1 ) )
-            // InternalPagos.g:6065:2: ( rule__Adicion__OperatorAssignment_1_1 )
+            // InternalPagos.g:6091:1: ( ( rule__Adicion__OperatorAssignment_1_1 ) )
+            // InternalPagos.g:6092:2: ( rule__Adicion__OperatorAssignment_1_1 )
             {
              before(grammarAccess.getAdicionAccess().getOperatorAssignment_1_1()); 
-            // InternalPagos.g:6066:2: ( rule__Adicion__OperatorAssignment_1_1 )
-            // InternalPagos.g:6066:3: rule__Adicion__OperatorAssignment_1_1
+            // InternalPagos.g:6093:2: ( rule__Adicion__OperatorAssignment_1_1 )
+            // InternalPagos.g:6093:3: rule__Adicion__OperatorAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Adicion__OperatorAssignment_1_1();
@@ -18018,14 +18103,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__2"
-    // InternalPagos.g:6074:1: rule__Adicion__Group_1__2 : rule__Adicion__Group_1__2__Impl ;
+    // InternalPagos.g:6101:1: rule__Adicion__Group_1__2 : rule__Adicion__Group_1__2__Impl ;
     public final void rule__Adicion__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6078:1: ( rule__Adicion__Group_1__2__Impl )
-            // InternalPagos.g:6079:2: rule__Adicion__Group_1__2__Impl
+            // InternalPagos.g:6105:1: ( rule__Adicion__Group_1__2__Impl )
+            // InternalPagos.g:6106:2: rule__Adicion__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Adicion__Group_1__2__Impl();
@@ -18051,21 +18136,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__Group_1__2__Impl"
-    // InternalPagos.g:6085:1: rule__Adicion__Group_1__2__Impl : ( ( rule__Adicion__RexpAssignment_1_2 ) ) ;
+    // InternalPagos.g:6112:1: rule__Adicion__Group_1__2__Impl : ( ( rule__Adicion__RexpAssignment_1_2 ) ) ;
     public final void rule__Adicion__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6089:1: ( ( ( rule__Adicion__RexpAssignment_1_2 ) ) )
-            // InternalPagos.g:6090:1: ( ( rule__Adicion__RexpAssignment_1_2 ) )
+            // InternalPagos.g:6116:1: ( ( ( rule__Adicion__RexpAssignment_1_2 ) ) )
+            // InternalPagos.g:6117:1: ( ( rule__Adicion__RexpAssignment_1_2 ) )
             {
-            // InternalPagos.g:6090:1: ( ( rule__Adicion__RexpAssignment_1_2 ) )
-            // InternalPagos.g:6091:2: ( rule__Adicion__RexpAssignment_1_2 )
+            // InternalPagos.g:6117:1: ( ( rule__Adicion__RexpAssignment_1_2 ) )
+            // InternalPagos.g:6118:2: ( rule__Adicion__RexpAssignment_1_2 )
             {
              before(grammarAccess.getAdicionAccess().getRexpAssignment_1_2()); 
-            // InternalPagos.g:6092:2: ( rule__Adicion__RexpAssignment_1_2 )
-            // InternalPagos.g:6092:3: rule__Adicion__RexpAssignment_1_2
+            // InternalPagos.g:6119:2: ( rule__Adicion__RexpAssignment_1_2 )
+            // InternalPagos.g:6119:3: rule__Adicion__RexpAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Adicion__RexpAssignment_1_2();
@@ -18098,14 +18183,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group__0"
-    // InternalPagos.g:6101:1: rule__Multiplicacion__Group__0 : rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1 ;
+    // InternalPagos.g:6128:1: rule__Multiplicacion__Group__0 : rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1 ;
     public final void rule__Multiplicacion__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6105:1: ( rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1 )
-            // InternalPagos.g:6106:2: rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1
+            // InternalPagos.g:6132:1: ( rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1 )
+            // InternalPagos.g:6133:2: rule__Multiplicacion__Group__0__Impl rule__Multiplicacion__Group__1
             {
             pushFollow(FOLLOW_38);
             rule__Multiplicacion__Group__0__Impl();
@@ -18136,17 +18221,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group__0__Impl"
-    // InternalPagos.g:6113:1: rule__Multiplicacion__Group__0__Impl : ( ruleSigleExp ) ;
+    // InternalPagos.g:6140:1: rule__Multiplicacion__Group__0__Impl : ( ruleSigleExp ) ;
     public final void rule__Multiplicacion__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6117:1: ( ( ruleSigleExp ) )
-            // InternalPagos.g:6118:1: ( ruleSigleExp )
+            // InternalPagos.g:6144:1: ( ( ruleSigleExp ) )
+            // InternalPagos.g:6145:1: ( ruleSigleExp )
             {
-            // InternalPagos.g:6118:1: ( ruleSigleExp )
-            // InternalPagos.g:6119:2: ruleSigleExp
+            // InternalPagos.g:6145:1: ( ruleSigleExp )
+            // InternalPagos.g:6146:2: ruleSigleExp
             {
              before(grammarAccess.getMultiplicacionAccess().getSigleExpParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -18177,14 +18262,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group__1"
-    // InternalPagos.g:6128:1: rule__Multiplicacion__Group__1 : rule__Multiplicacion__Group__1__Impl ;
+    // InternalPagos.g:6155:1: rule__Multiplicacion__Group__1 : rule__Multiplicacion__Group__1__Impl ;
     public final void rule__Multiplicacion__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6132:1: ( rule__Multiplicacion__Group__1__Impl )
-            // InternalPagos.g:6133:2: rule__Multiplicacion__Group__1__Impl
+            // InternalPagos.g:6159:1: ( rule__Multiplicacion__Group__1__Impl )
+            // InternalPagos.g:6160:2: rule__Multiplicacion__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Multiplicacion__Group__1__Impl();
@@ -18210,20 +18295,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group__1__Impl"
-    // InternalPagos.g:6139:1: rule__Multiplicacion__Group__1__Impl : ( ( rule__Multiplicacion__Group_1__0 )* ) ;
+    // InternalPagos.g:6166:1: rule__Multiplicacion__Group__1__Impl : ( ( rule__Multiplicacion__Group_1__0 )* ) ;
     public final void rule__Multiplicacion__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6143:1: ( ( ( rule__Multiplicacion__Group_1__0 )* ) )
-            // InternalPagos.g:6144:1: ( ( rule__Multiplicacion__Group_1__0 )* )
+            // InternalPagos.g:6170:1: ( ( ( rule__Multiplicacion__Group_1__0 )* ) )
+            // InternalPagos.g:6171:1: ( ( rule__Multiplicacion__Group_1__0 )* )
             {
-            // InternalPagos.g:6144:1: ( ( rule__Multiplicacion__Group_1__0 )* )
-            // InternalPagos.g:6145:2: ( rule__Multiplicacion__Group_1__0 )*
+            // InternalPagos.g:6171:1: ( ( rule__Multiplicacion__Group_1__0 )* )
+            // InternalPagos.g:6172:2: ( rule__Multiplicacion__Group_1__0 )*
             {
              before(grammarAccess.getMultiplicacionAccess().getGroup_1()); 
-            // InternalPagos.g:6146:2: ( rule__Multiplicacion__Group_1__0 )*
+            // InternalPagos.g:6173:2: ( rule__Multiplicacion__Group_1__0 )*
             loop29:
             do {
                 int alt29=2;
@@ -18236,7 +18321,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // InternalPagos.g:6146:3: rule__Multiplicacion__Group_1__0
+            	    // InternalPagos.g:6173:3: rule__Multiplicacion__Group_1__0
             	    {
             	    pushFollow(FOLLOW_39);
             	    rule__Multiplicacion__Group_1__0();
@@ -18275,14 +18360,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__0"
-    // InternalPagos.g:6155:1: rule__Multiplicacion__Group_1__0 : rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1 ;
+    // InternalPagos.g:6182:1: rule__Multiplicacion__Group_1__0 : rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1 ;
     public final void rule__Multiplicacion__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6159:1: ( rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1 )
-            // InternalPagos.g:6160:2: rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1
+            // InternalPagos.g:6186:1: ( rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1 )
+            // InternalPagos.g:6187:2: rule__Multiplicacion__Group_1__0__Impl rule__Multiplicacion__Group_1__1
             {
             pushFollow(FOLLOW_38);
             rule__Multiplicacion__Group_1__0__Impl();
@@ -18313,21 +18398,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__0__Impl"
-    // InternalPagos.g:6167:1: rule__Multiplicacion__Group_1__0__Impl : ( () ) ;
+    // InternalPagos.g:6194:1: rule__Multiplicacion__Group_1__0__Impl : ( () ) ;
     public final void rule__Multiplicacion__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6171:1: ( ( () ) )
-            // InternalPagos.g:6172:1: ( () )
+            // InternalPagos.g:6198:1: ( ( () ) )
+            // InternalPagos.g:6199:1: ( () )
             {
-            // InternalPagos.g:6172:1: ( () )
-            // InternalPagos.g:6173:2: ()
+            // InternalPagos.g:6199:1: ( () )
+            // InternalPagos.g:6200:2: ()
             {
              before(grammarAccess.getMultiplicacionAccess().getMultiplicacionLeftAction_1_0()); 
-            // InternalPagos.g:6174:2: ()
-            // InternalPagos.g:6174:3: 
+            // InternalPagos.g:6201:2: ()
+            // InternalPagos.g:6201:3: 
             {
             }
 
@@ -18350,14 +18435,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__1"
-    // InternalPagos.g:6182:1: rule__Multiplicacion__Group_1__1 : rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2 ;
+    // InternalPagos.g:6209:1: rule__Multiplicacion__Group_1__1 : rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2 ;
     public final void rule__Multiplicacion__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6186:1: ( rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2 )
-            // InternalPagos.g:6187:2: rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2
+            // InternalPagos.g:6213:1: ( rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2 )
+            // InternalPagos.g:6214:2: rule__Multiplicacion__Group_1__1__Impl rule__Multiplicacion__Group_1__2
             {
             pushFollow(FOLLOW_31);
             rule__Multiplicacion__Group_1__1__Impl();
@@ -18388,21 +18473,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__1__Impl"
-    // InternalPagos.g:6194:1: rule__Multiplicacion__Group_1__1__Impl : ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) ) ;
+    // InternalPagos.g:6221:1: rule__Multiplicacion__Group_1__1__Impl : ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) ) ;
     public final void rule__Multiplicacion__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6198:1: ( ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) ) )
-            // InternalPagos.g:6199:1: ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) )
+            // InternalPagos.g:6225:1: ( ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) ) )
+            // InternalPagos.g:6226:1: ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) )
             {
-            // InternalPagos.g:6199:1: ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) )
-            // InternalPagos.g:6200:2: ( rule__Multiplicacion__OperatorAssignment_1_1 )
+            // InternalPagos.g:6226:1: ( ( rule__Multiplicacion__OperatorAssignment_1_1 ) )
+            // InternalPagos.g:6227:2: ( rule__Multiplicacion__OperatorAssignment_1_1 )
             {
              before(grammarAccess.getMultiplicacionAccess().getOperatorAssignment_1_1()); 
-            // InternalPagos.g:6201:2: ( rule__Multiplicacion__OperatorAssignment_1_1 )
-            // InternalPagos.g:6201:3: rule__Multiplicacion__OperatorAssignment_1_1
+            // InternalPagos.g:6228:2: ( rule__Multiplicacion__OperatorAssignment_1_1 )
+            // InternalPagos.g:6228:3: rule__Multiplicacion__OperatorAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Multiplicacion__OperatorAssignment_1_1();
@@ -18435,14 +18520,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__2"
-    // InternalPagos.g:6209:1: rule__Multiplicacion__Group_1__2 : rule__Multiplicacion__Group_1__2__Impl ;
+    // InternalPagos.g:6236:1: rule__Multiplicacion__Group_1__2 : rule__Multiplicacion__Group_1__2__Impl ;
     public final void rule__Multiplicacion__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6213:1: ( rule__Multiplicacion__Group_1__2__Impl )
-            // InternalPagos.g:6214:2: rule__Multiplicacion__Group_1__2__Impl
+            // InternalPagos.g:6240:1: ( rule__Multiplicacion__Group_1__2__Impl )
+            // InternalPagos.g:6241:2: rule__Multiplicacion__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Multiplicacion__Group_1__2__Impl();
@@ -18468,21 +18553,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__Group_1__2__Impl"
-    // InternalPagos.g:6220:1: rule__Multiplicacion__Group_1__2__Impl : ( ( rule__Multiplicacion__RexpAssignment_1_2 ) ) ;
+    // InternalPagos.g:6247:1: rule__Multiplicacion__Group_1__2__Impl : ( ( rule__Multiplicacion__RexpAssignment_1_2 ) ) ;
     public final void rule__Multiplicacion__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6224:1: ( ( ( rule__Multiplicacion__RexpAssignment_1_2 ) ) )
-            // InternalPagos.g:6225:1: ( ( rule__Multiplicacion__RexpAssignment_1_2 ) )
+            // InternalPagos.g:6251:1: ( ( ( rule__Multiplicacion__RexpAssignment_1_2 ) ) )
+            // InternalPagos.g:6252:1: ( ( rule__Multiplicacion__RexpAssignment_1_2 ) )
             {
-            // InternalPagos.g:6225:1: ( ( rule__Multiplicacion__RexpAssignment_1_2 ) )
-            // InternalPagos.g:6226:2: ( rule__Multiplicacion__RexpAssignment_1_2 )
+            // InternalPagos.g:6252:1: ( ( rule__Multiplicacion__RexpAssignment_1_2 ) )
+            // InternalPagos.g:6253:2: ( rule__Multiplicacion__RexpAssignment_1_2 )
             {
              before(grammarAccess.getMultiplicacionAccess().getRexpAssignment_1_2()); 
-            // InternalPagos.g:6227:2: ( rule__Multiplicacion__RexpAssignment_1_2 )
-            // InternalPagos.g:6227:3: rule__Multiplicacion__RexpAssignment_1_2
+            // InternalPagos.g:6254:2: ( rule__Multiplicacion__RexpAssignment_1_2 )
+            // InternalPagos.g:6254:3: rule__Multiplicacion__RexpAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Multiplicacion__RexpAssignment_1_2();
@@ -18515,14 +18600,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__0"
-    // InternalPagos.g:6236:1: rule__SigleExp__Group_1__0 : rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1 ;
+    // InternalPagos.g:6263:1: rule__SigleExp__Group_1__0 : rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1 ;
     public final void rule__SigleExp__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6240:1: ( rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1 )
-            // InternalPagos.g:6241:2: rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1
+            // InternalPagos.g:6267:1: ( rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1 )
+            // InternalPagos.g:6268:2: rule__SigleExp__Group_1__0__Impl rule__SigleExp__Group_1__1
             {
             pushFollow(FOLLOW_31);
             rule__SigleExp__Group_1__0__Impl();
@@ -18553,17 +18638,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__0__Impl"
-    // InternalPagos.g:6248:1: rule__SigleExp__Group_1__0__Impl : ( '(' ) ;
+    // InternalPagos.g:6275:1: rule__SigleExp__Group_1__0__Impl : ( '(' ) ;
     public final void rule__SigleExp__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6252:1: ( ( '(' ) )
-            // InternalPagos.g:6253:1: ( '(' )
+            // InternalPagos.g:6279:1: ( ( '(' ) )
+            // InternalPagos.g:6280:1: ( '(' )
             {
-            // InternalPagos.g:6253:1: ( '(' )
-            // InternalPagos.g:6254:2: '('
+            // InternalPagos.g:6280:1: ( '(' )
+            // InternalPagos.g:6281:2: '('
             {
              before(grammarAccess.getSigleExpAccess().getLeftParenthesisKeyword_1_0()); 
             match(input,44,FOLLOW_2); 
@@ -18590,14 +18675,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__1"
-    // InternalPagos.g:6263:1: rule__SigleExp__Group_1__1 : rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2 ;
+    // InternalPagos.g:6290:1: rule__SigleExp__Group_1__1 : rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2 ;
     public final void rule__SigleExp__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6267:1: ( rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2 )
-            // InternalPagos.g:6268:2: rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2
+            // InternalPagos.g:6294:1: ( rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2 )
+            // InternalPagos.g:6295:2: rule__SigleExp__Group_1__1__Impl rule__SigleExp__Group_1__2
             {
             pushFollow(FOLLOW_40);
             rule__SigleExp__Group_1__1__Impl();
@@ -18628,17 +18713,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__1__Impl"
-    // InternalPagos.g:6275:1: rule__SigleExp__Group_1__1__Impl : ( ruleAdicion ) ;
+    // InternalPagos.g:6302:1: rule__SigleExp__Group_1__1__Impl : ( ruleAdicion ) ;
     public final void rule__SigleExp__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6279:1: ( ( ruleAdicion ) )
-            // InternalPagos.g:6280:1: ( ruleAdicion )
+            // InternalPagos.g:6306:1: ( ( ruleAdicion ) )
+            // InternalPagos.g:6307:1: ( ruleAdicion )
             {
-            // InternalPagos.g:6280:1: ( ruleAdicion )
-            // InternalPagos.g:6281:2: ruleAdicion
+            // InternalPagos.g:6307:1: ( ruleAdicion )
+            // InternalPagos.g:6308:2: ruleAdicion
             {
              before(grammarAccess.getSigleExpAccess().getAdicionParserRuleCall_1_1()); 
             pushFollow(FOLLOW_2);
@@ -18669,14 +18754,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__2"
-    // InternalPagos.g:6290:1: rule__SigleExp__Group_1__2 : rule__SigleExp__Group_1__2__Impl ;
+    // InternalPagos.g:6317:1: rule__SigleExp__Group_1__2 : rule__SigleExp__Group_1__2__Impl ;
     public final void rule__SigleExp__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6294:1: ( rule__SigleExp__Group_1__2__Impl )
-            // InternalPagos.g:6295:2: rule__SigleExp__Group_1__2__Impl
+            // InternalPagos.g:6321:1: ( rule__SigleExp__Group_1__2__Impl )
+            // InternalPagos.g:6322:2: rule__SigleExp__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__SigleExp__Group_1__2__Impl();
@@ -18702,17 +18787,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SigleExp__Group_1__2__Impl"
-    // InternalPagos.g:6301:1: rule__SigleExp__Group_1__2__Impl : ( ')' ) ;
+    // InternalPagos.g:6328:1: rule__SigleExp__Group_1__2__Impl : ( ')' ) ;
     public final void rule__SigleExp__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6305:1: ( ( ')' ) )
-            // InternalPagos.g:6306:1: ( ')' )
+            // InternalPagos.g:6332:1: ( ( ')' ) )
+            // InternalPagos.g:6333:1: ( ')' )
             {
-            // InternalPagos.g:6306:1: ( ')' )
-            // InternalPagos.g:6307:2: ')'
+            // InternalPagos.g:6333:1: ( ')' )
+            // InternalPagos.g:6334:2: ')'
             {
              before(grammarAccess.getSigleExpAccess().getRightParenthesisKeyword_1_2()); 
             match(input,45,FOLLOW_2); 
@@ -18739,14 +18824,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__0"
-    // InternalPagos.g:6317:1: rule__BusinessAttribute__Group__0 : rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1 ;
+    // InternalPagos.g:6344:1: rule__BusinessAttribute__Group__0 : rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1 ;
     public final void rule__BusinessAttribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6321:1: ( rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1 )
-            // InternalPagos.g:6322:2: rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1
+            // InternalPagos.g:6348:1: ( rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1 )
+            // InternalPagos.g:6349:2: rule__BusinessAttribute__Group__0__Impl rule__BusinessAttribute__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__BusinessAttribute__Group__0__Impl();
@@ -18777,21 +18862,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__0__Impl"
-    // InternalPagos.g:6329:1: rule__BusinessAttribute__Group__0__Impl : ( () ) ;
+    // InternalPagos.g:6356:1: rule__BusinessAttribute__Group__0__Impl : ( () ) ;
     public final void rule__BusinessAttribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6333:1: ( ( () ) )
-            // InternalPagos.g:6334:1: ( () )
+            // InternalPagos.g:6360:1: ( ( () ) )
+            // InternalPagos.g:6361:1: ( () )
             {
-            // InternalPagos.g:6334:1: ( () )
-            // InternalPagos.g:6335:2: ()
+            // InternalPagos.g:6361:1: ( () )
+            // InternalPagos.g:6362:2: ()
             {
              before(grammarAccess.getBusinessAttributeAccess().getBusinessAttributeAction_0()); 
-            // InternalPagos.g:6336:2: ()
-            // InternalPagos.g:6336:3: 
+            // InternalPagos.g:6363:2: ()
+            // InternalPagos.g:6363:3: 
             {
             }
 
@@ -18814,14 +18899,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__1"
-    // InternalPagos.g:6344:1: rule__BusinessAttribute__Group__1 : rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2 ;
+    // InternalPagos.g:6371:1: rule__BusinessAttribute__Group__1 : rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2 ;
     public final void rule__BusinessAttribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6348:1: ( rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2 )
-            // InternalPagos.g:6349:2: rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2
+            // InternalPagos.g:6375:1: ( rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2 )
+            // InternalPagos.g:6376:2: rule__BusinessAttribute__Group__1__Impl rule__BusinessAttribute__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__BusinessAttribute__Group__1__Impl();
@@ -18852,17 +18937,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__1__Impl"
-    // InternalPagos.g:6356:1: rule__BusinessAttribute__Group__1__Impl : ( RULE_LBRACE ) ;
+    // InternalPagos.g:6383:1: rule__BusinessAttribute__Group__1__Impl : ( RULE_LBRACE ) ;
     public final void rule__BusinessAttribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6360:1: ( ( RULE_LBRACE ) )
-            // InternalPagos.g:6361:1: ( RULE_LBRACE )
+            // InternalPagos.g:6387:1: ( ( RULE_LBRACE ) )
+            // InternalPagos.g:6388:1: ( RULE_LBRACE )
             {
-            // InternalPagos.g:6361:1: ( RULE_LBRACE )
-            // InternalPagos.g:6362:2: RULE_LBRACE
+            // InternalPagos.g:6388:1: ( RULE_LBRACE )
+            // InternalPagos.g:6389:2: RULE_LBRACE
             {
              before(grammarAccess.getBusinessAttributeAccess().getLBRACETerminalRuleCall_1()); 
             match(input,RULE_LBRACE,FOLLOW_2); 
@@ -18889,14 +18974,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__2"
-    // InternalPagos.g:6371:1: rule__BusinessAttribute__Group__2 : rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3 ;
+    // InternalPagos.g:6398:1: rule__BusinessAttribute__Group__2 : rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3 ;
     public final void rule__BusinessAttribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6375:1: ( rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3 )
-            // InternalPagos.g:6376:2: rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3
+            // InternalPagos.g:6402:1: ( rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3 )
+            // InternalPagos.g:6403:2: rule__BusinessAttribute__Group__2__Impl rule__BusinessAttribute__Group__3
             {
             pushFollow(FOLLOW_4);
             rule__BusinessAttribute__Group__2__Impl();
@@ -18927,21 +19012,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__2__Impl"
-    // InternalPagos.g:6383:1: rule__BusinessAttribute__Group__2__Impl : ( ( rule__BusinessAttribute__NameAssignment_2 ) ) ;
+    // InternalPagos.g:6410:1: rule__BusinessAttribute__Group__2__Impl : ( ( rule__BusinessAttribute__NameAssignment_2 ) ) ;
     public final void rule__BusinessAttribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6387:1: ( ( ( rule__BusinessAttribute__NameAssignment_2 ) ) )
-            // InternalPagos.g:6388:1: ( ( rule__BusinessAttribute__NameAssignment_2 ) )
+            // InternalPagos.g:6414:1: ( ( ( rule__BusinessAttribute__NameAssignment_2 ) ) )
+            // InternalPagos.g:6415:1: ( ( rule__BusinessAttribute__NameAssignment_2 ) )
             {
-            // InternalPagos.g:6388:1: ( ( rule__BusinessAttribute__NameAssignment_2 ) )
-            // InternalPagos.g:6389:2: ( rule__BusinessAttribute__NameAssignment_2 )
+            // InternalPagos.g:6415:1: ( ( rule__BusinessAttribute__NameAssignment_2 ) )
+            // InternalPagos.g:6416:2: ( rule__BusinessAttribute__NameAssignment_2 )
             {
              before(grammarAccess.getBusinessAttributeAccess().getNameAssignment_2()); 
-            // InternalPagos.g:6390:2: ( rule__BusinessAttribute__NameAssignment_2 )
-            // InternalPagos.g:6390:3: rule__BusinessAttribute__NameAssignment_2
+            // InternalPagos.g:6417:2: ( rule__BusinessAttribute__NameAssignment_2 )
+            // InternalPagos.g:6417:3: rule__BusinessAttribute__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__BusinessAttribute__NameAssignment_2();
@@ -18974,14 +19059,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__3"
-    // InternalPagos.g:6398:1: rule__BusinessAttribute__Group__3 : rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4 ;
+    // InternalPagos.g:6425:1: rule__BusinessAttribute__Group__3 : rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4 ;
     public final void rule__BusinessAttribute__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6402:1: ( rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4 )
-            // InternalPagos.g:6403:2: rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4
+            // InternalPagos.g:6429:1: ( rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4 )
+            // InternalPagos.g:6430:2: rule__BusinessAttribute__Group__3__Impl rule__BusinessAttribute__Group__4
             {
             pushFollow(FOLLOW_41);
             rule__BusinessAttribute__Group__3__Impl();
@@ -19012,17 +19097,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__3__Impl"
-    // InternalPagos.g:6410:1: rule__BusinessAttribute__Group__3__Impl : ( RULE_COLON ) ;
+    // InternalPagos.g:6437:1: rule__BusinessAttribute__Group__3__Impl : ( RULE_COLON ) ;
     public final void rule__BusinessAttribute__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6414:1: ( ( RULE_COLON ) )
-            // InternalPagos.g:6415:1: ( RULE_COLON )
+            // InternalPagos.g:6441:1: ( ( RULE_COLON ) )
+            // InternalPagos.g:6442:1: ( RULE_COLON )
             {
-            // InternalPagos.g:6415:1: ( RULE_COLON )
-            // InternalPagos.g:6416:2: RULE_COLON
+            // InternalPagos.g:6442:1: ( RULE_COLON )
+            // InternalPagos.g:6443:2: RULE_COLON
             {
              before(grammarAccess.getBusinessAttributeAccess().getCOLONTerminalRuleCall_3()); 
             match(input,RULE_COLON,FOLLOW_2); 
@@ -19049,14 +19134,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__4"
-    // InternalPagos.g:6425:1: rule__BusinessAttribute__Group__4 : rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5 ;
+    // InternalPagos.g:6452:1: rule__BusinessAttribute__Group__4 : rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5 ;
     public final void rule__BusinessAttribute__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6429:1: ( rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5 )
-            // InternalPagos.g:6430:2: rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5
+            // InternalPagos.g:6456:1: ( rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5 )
+            // InternalPagos.g:6457:2: rule__BusinessAttribute__Group__4__Impl rule__BusinessAttribute__Group__5
             {
             pushFollow(FOLLOW_42);
             rule__BusinessAttribute__Group__4__Impl();
@@ -19087,21 +19172,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__4__Impl"
-    // InternalPagos.g:6437:1: rule__BusinessAttribute__Group__4__Impl : ( ( rule__BusinessAttribute__TypeAssignment_4 ) ) ;
+    // InternalPagos.g:6464:1: rule__BusinessAttribute__Group__4__Impl : ( ( rule__BusinessAttribute__TypeAssignment_4 ) ) ;
     public final void rule__BusinessAttribute__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6441:1: ( ( ( rule__BusinessAttribute__TypeAssignment_4 ) ) )
-            // InternalPagos.g:6442:1: ( ( rule__BusinessAttribute__TypeAssignment_4 ) )
+            // InternalPagos.g:6468:1: ( ( ( rule__BusinessAttribute__TypeAssignment_4 ) ) )
+            // InternalPagos.g:6469:1: ( ( rule__BusinessAttribute__TypeAssignment_4 ) )
             {
-            // InternalPagos.g:6442:1: ( ( rule__BusinessAttribute__TypeAssignment_4 ) )
-            // InternalPagos.g:6443:2: ( rule__BusinessAttribute__TypeAssignment_4 )
+            // InternalPagos.g:6469:1: ( ( rule__BusinessAttribute__TypeAssignment_4 ) )
+            // InternalPagos.g:6470:2: ( rule__BusinessAttribute__TypeAssignment_4 )
             {
              before(grammarAccess.getBusinessAttributeAccess().getTypeAssignment_4()); 
-            // InternalPagos.g:6444:2: ( rule__BusinessAttribute__TypeAssignment_4 )
-            // InternalPagos.g:6444:3: rule__BusinessAttribute__TypeAssignment_4
+            // InternalPagos.g:6471:2: ( rule__BusinessAttribute__TypeAssignment_4 )
+            // InternalPagos.g:6471:3: rule__BusinessAttribute__TypeAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__BusinessAttribute__TypeAssignment_4();
@@ -19134,14 +19219,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__5"
-    // InternalPagos.g:6452:1: rule__BusinessAttribute__Group__5 : rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6 ;
+    // InternalPagos.g:6479:1: rule__BusinessAttribute__Group__5 : rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6 ;
     public final void rule__BusinessAttribute__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6456:1: ( rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6 )
-            // InternalPagos.g:6457:2: rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6
+            // InternalPagos.g:6483:1: ( rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6 )
+            // InternalPagos.g:6484:2: rule__BusinessAttribute__Group__5__Impl rule__BusinessAttribute__Group__6
             {
             pushFollow(FOLLOW_42);
             rule__BusinessAttribute__Group__5__Impl();
@@ -19172,20 +19257,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__5__Impl"
-    // InternalPagos.g:6464:1: rule__BusinessAttribute__Group__5__Impl : ( ( rule__BusinessAttribute__Group_5__0 )? ) ;
+    // InternalPagos.g:6491:1: rule__BusinessAttribute__Group__5__Impl : ( ( rule__BusinessAttribute__Group_5__0 )? ) ;
     public final void rule__BusinessAttribute__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6468:1: ( ( ( rule__BusinessAttribute__Group_5__0 )? ) )
-            // InternalPagos.g:6469:1: ( ( rule__BusinessAttribute__Group_5__0 )? )
+            // InternalPagos.g:6495:1: ( ( ( rule__BusinessAttribute__Group_5__0 )? ) )
+            // InternalPagos.g:6496:1: ( ( rule__BusinessAttribute__Group_5__0 )? )
             {
-            // InternalPagos.g:6469:1: ( ( rule__BusinessAttribute__Group_5__0 )? )
-            // InternalPagos.g:6470:2: ( rule__BusinessAttribute__Group_5__0 )?
+            // InternalPagos.g:6496:1: ( ( rule__BusinessAttribute__Group_5__0 )? )
+            // InternalPagos.g:6497:2: ( rule__BusinessAttribute__Group_5__0 )?
             {
              before(grammarAccess.getBusinessAttributeAccess().getGroup_5()); 
-            // InternalPagos.g:6471:2: ( rule__BusinessAttribute__Group_5__0 )?
+            // InternalPagos.g:6498:2: ( rule__BusinessAttribute__Group_5__0 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -19194,7 +19279,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalPagos.g:6471:3: rule__BusinessAttribute__Group_5__0
+                    // InternalPagos.g:6498:3: rule__BusinessAttribute__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__BusinessAttribute__Group_5__0();
@@ -19230,14 +19315,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__6"
-    // InternalPagos.g:6479:1: rule__BusinessAttribute__Group__6 : rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7 ;
+    // InternalPagos.g:6506:1: rule__BusinessAttribute__Group__6 : rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7 ;
     public final void rule__BusinessAttribute__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6483:1: ( rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7 )
-            // InternalPagos.g:6484:2: rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7
+            // InternalPagos.g:6510:1: ( rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7 )
+            // InternalPagos.g:6511:2: rule__BusinessAttribute__Group__6__Impl rule__BusinessAttribute__Group__7
             {
             pushFollow(FOLLOW_42);
             rule__BusinessAttribute__Group__6__Impl();
@@ -19268,20 +19353,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__6__Impl"
-    // InternalPagos.g:6491:1: rule__BusinessAttribute__Group__6__Impl : ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? ) ;
+    // InternalPagos.g:6518:1: rule__BusinessAttribute__Group__6__Impl : ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? ) ;
     public final void rule__BusinessAttribute__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6495:1: ( ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? ) )
-            // InternalPagos.g:6496:1: ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? )
+            // InternalPagos.g:6522:1: ( ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? ) )
+            // InternalPagos.g:6523:1: ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? )
             {
-            // InternalPagos.g:6496:1: ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? )
-            // InternalPagos.g:6497:2: ( rule__BusinessAttribute__IsIndexAssignment_6 )?
+            // InternalPagos.g:6523:1: ( ( rule__BusinessAttribute__IsIndexAssignment_6 )? )
+            // InternalPagos.g:6524:2: ( rule__BusinessAttribute__IsIndexAssignment_6 )?
             {
              before(grammarAccess.getBusinessAttributeAccess().getIsIndexAssignment_6()); 
-            // InternalPagos.g:6498:2: ( rule__BusinessAttribute__IsIndexAssignment_6 )?
+            // InternalPagos.g:6525:2: ( rule__BusinessAttribute__IsIndexAssignment_6 )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -19290,7 +19375,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalPagos.g:6498:3: rule__BusinessAttribute__IsIndexAssignment_6
+                    // InternalPagos.g:6525:3: rule__BusinessAttribute__IsIndexAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__BusinessAttribute__IsIndexAssignment_6();
@@ -19326,14 +19411,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__7"
-    // InternalPagos.g:6506:1: rule__BusinessAttribute__Group__7 : rule__BusinessAttribute__Group__7__Impl ;
+    // InternalPagos.g:6533:1: rule__BusinessAttribute__Group__7 : rule__BusinessAttribute__Group__7__Impl ;
     public final void rule__BusinessAttribute__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6510:1: ( rule__BusinessAttribute__Group__7__Impl )
-            // InternalPagos.g:6511:2: rule__BusinessAttribute__Group__7__Impl
+            // InternalPagos.g:6537:1: ( rule__BusinessAttribute__Group__7__Impl )
+            // InternalPagos.g:6538:2: rule__BusinessAttribute__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BusinessAttribute__Group__7__Impl();
@@ -19359,17 +19444,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group__7__Impl"
-    // InternalPagos.g:6517:1: rule__BusinessAttribute__Group__7__Impl : ( RULE_RBRACE ) ;
+    // InternalPagos.g:6544:1: rule__BusinessAttribute__Group__7__Impl : ( RULE_RBRACE ) ;
     public final void rule__BusinessAttribute__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6521:1: ( ( RULE_RBRACE ) )
-            // InternalPagos.g:6522:1: ( RULE_RBRACE )
+            // InternalPagos.g:6548:1: ( ( RULE_RBRACE ) )
+            // InternalPagos.g:6549:1: ( RULE_RBRACE )
             {
-            // InternalPagos.g:6522:1: ( RULE_RBRACE )
-            // InternalPagos.g:6523:2: RULE_RBRACE
+            // InternalPagos.g:6549:1: ( RULE_RBRACE )
+            // InternalPagos.g:6550:2: RULE_RBRACE
             {
              before(grammarAccess.getBusinessAttributeAccess().getRBRACETerminalRuleCall_7()); 
             match(input,RULE_RBRACE,FOLLOW_2); 
@@ -19396,14 +19481,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group_5__0"
-    // InternalPagos.g:6533:1: rule__BusinessAttribute__Group_5__0 : rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1 ;
+    // InternalPagos.g:6560:1: rule__BusinessAttribute__Group_5__0 : rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1 ;
     public final void rule__BusinessAttribute__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6537:1: ( rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1 )
-            // InternalPagos.g:6538:2: rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1
+            // InternalPagos.g:6564:1: ( rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1 )
+            // InternalPagos.g:6565:2: rule__BusinessAttribute__Group_5__0__Impl rule__BusinessAttribute__Group_5__1
             {
             pushFollow(FOLLOW_31);
             rule__BusinessAttribute__Group_5__0__Impl();
@@ -19434,17 +19519,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group_5__0__Impl"
-    // InternalPagos.g:6545:1: rule__BusinessAttribute__Group_5__0__Impl : ( ':=' ) ;
+    // InternalPagos.g:6572:1: rule__BusinessAttribute__Group_5__0__Impl : ( ':=' ) ;
     public final void rule__BusinessAttribute__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6549:1: ( ( ':=' ) )
-            // InternalPagos.g:6550:1: ( ':=' )
+            // InternalPagos.g:6576:1: ( ( ':=' ) )
+            // InternalPagos.g:6577:1: ( ':=' )
             {
-            // InternalPagos.g:6550:1: ( ':=' )
-            // InternalPagos.g:6551:2: ':='
+            // InternalPagos.g:6577:1: ( ':=' )
+            // InternalPagos.g:6578:2: ':='
             {
              before(grammarAccess.getBusinessAttributeAccess().getColonEqualsSignKeyword_5_0()); 
             match(input,46,FOLLOW_2); 
@@ -19471,14 +19556,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group_5__1"
-    // InternalPagos.g:6560:1: rule__BusinessAttribute__Group_5__1 : rule__BusinessAttribute__Group_5__1__Impl ;
+    // InternalPagos.g:6587:1: rule__BusinessAttribute__Group_5__1 : rule__BusinessAttribute__Group_5__1__Impl ;
     public final void rule__BusinessAttribute__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6564:1: ( rule__BusinessAttribute__Group_5__1__Impl )
-            // InternalPagos.g:6565:2: rule__BusinessAttribute__Group_5__1__Impl
+            // InternalPagos.g:6591:1: ( rule__BusinessAttribute__Group_5__1__Impl )
+            // InternalPagos.g:6592:2: rule__BusinessAttribute__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__BusinessAttribute__Group_5__1__Impl();
@@ -19504,21 +19589,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__Group_5__1__Impl"
-    // InternalPagos.g:6571:1: rule__BusinessAttribute__Group_5__1__Impl : ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) ) ;
+    // InternalPagos.g:6598:1: rule__BusinessAttribute__Group_5__1__Impl : ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) ) ;
     public final void rule__BusinessAttribute__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6575:1: ( ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) ) )
-            // InternalPagos.g:6576:1: ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) )
+            // InternalPagos.g:6602:1: ( ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) ) )
+            // InternalPagos.g:6603:1: ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) )
             {
-            // InternalPagos.g:6576:1: ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) )
-            // InternalPagos.g:6577:2: ( rule__BusinessAttribute__ExpAssignment_5_1 )
+            // InternalPagos.g:6603:1: ( ( rule__BusinessAttribute__ExpAssignment_5_1 ) )
+            // InternalPagos.g:6604:2: ( rule__BusinessAttribute__ExpAssignment_5_1 )
             {
              before(grammarAccess.getBusinessAttributeAccess().getExpAssignment_5_1()); 
-            // InternalPagos.g:6578:2: ( rule__BusinessAttribute__ExpAssignment_5_1 )
-            // InternalPagos.g:6578:3: rule__BusinessAttribute__ExpAssignment_5_1
+            // InternalPagos.g:6605:2: ( rule__BusinessAttribute__ExpAssignment_5_1 )
+            // InternalPagos.g:6605:3: rule__BusinessAttribute__ExpAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__BusinessAttribute__ExpAssignment_5_1();
@@ -19551,14 +19636,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__0"
-    // InternalPagos.g:6587:1: rule__TerminalValue__Group_0__0 : rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1 ;
+    // InternalPagos.g:6614:1: rule__TerminalValue__Group_0__0 : rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1 ;
     public final void rule__TerminalValue__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6591:1: ( rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1 )
-            // InternalPagos.g:6592:2: rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1
+            // InternalPagos.g:6618:1: ( rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1 )
+            // InternalPagos.g:6619:2: rule__TerminalValue__Group_0__0__Impl rule__TerminalValue__Group_0__1
             {
             pushFollow(FOLLOW_43);
             rule__TerminalValue__Group_0__0__Impl();
@@ -19589,21 +19674,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__0__Impl"
-    // InternalPagos.g:6599:1: rule__TerminalValue__Group_0__0__Impl : ( () ) ;
+    // InternalPagos.g:6626:1: rule__TerminalValue__Group_0__0__Impl : ( () ) ;
     public final void rule__TerminalValue__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6603:1: ( ( () ) )
-            // InternalPagos.g:6604:1: ( () )
+            // InternalPagos.g:6630:1: ( ( () ) )
+            // InternalPagos.g:6631:1: ( () )
             {
-            // InternalPagos.g:6604:1: ( () )
-            // InternalPagos.g:6605:2: ()
+            // InternalPagos.g:6631:1: ( () )
+            // InternalPagos.g:6632:2: ()
             {
              before(grammarAccess.getTerminalValueAccess().getTerminalValueAction_0_0()); 
-            // InternalPagos.g:6606:2: ()
-            // InternalPagos.g:6606:3: 
+            // InternalPagos.g:6633:2: ()
+            // InternalPagos.g:6633:3: 
             {
             }
 
@@ -19626,14 +19711,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__1"
-    // InternalPagos.g:6614:1: rule__TerminalValue__Group_0__1 : rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2 ;
+    // InternalPagos.g:6641:1: rule__TerminalValue__Group_0__1 : rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2 ;
     public final void rule__TerminalValue__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6618:1: ( rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2 )
-            // InternalPagos.g:6619:2: rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2
+            // InternalPagos.g:6645:1: ( rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2 )
+            // InternalPagos.g:6646:2: rule__TerminalValue__Group_0__1__Impl rule__TerminalValue__Group_0__2
             {
             pushFollow(FOLLOW_43);
             rule__TerminalValue__Group_0__1__Impl();
@@ -19664,20 +19749,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__1__Impl"
-    // InternalPagos.g:6626:1: rule__TerminalValue__Group_0__1__Impl : ( ( rule__TerminalValue__Group_0_1__0 )? ) ;
+    // InternalPagos.g:6653:1: rule__TerminalValue__Group_0__1__Impl : ( ( rule__TerminalValue__Group_0_1__0 )? ) ;
     public final void rule__TerminalValue__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6630:1: ( ( ( rule__TerminalValue__Group_0_1__0 )? ) )
-            // InternalPagos.g:6631:1: ( ( rule__TerminalValue__Group_0_1__0 )? )
+            // InternalPagos.g:6657:1: ( ( ( rule__TerminalValue__Group_0_1__0 )? ) )
+            // InternalPagos.g:6658:1: ( ( rule__TerminalValue__Group_0_1__0 )? )
             {
-            // InternalPagos.g:6631:1: ( ( rule__TerminalValue__Group_0_1__0 )? )
-            // InternalPagos.g:6632:2: ( rule__TerminalValue__Group_0_1__0 )?
+            // InternalPagos.g:6658:1: ( ( rule__TerminalValue__Group_0_1__0 )? )
+            // InternalPagos.g:6659:2: ( rule__TerminalValue__Group_0_1__0 )?
             {
              before(grammarAccess.getTerminalValueAccess().getGroup_0_1()); 
-            // InternalPagos.g:6633:2: ( rule__TerminalValue__Group_0_1__0 )?
+            // InternalPagos.g:6660:2: ( rule__TerminalValue__Group_0_1__0 )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -19686,7 +19771,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalPagos.g:6633:3: rule__TerminalValue__Group_0_1__0
+                    // InternalPagos.g:6660:3: rule__TerminalValue__Group_0_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TerminalValue__Group_0_1__0();
@@ -19722,14 +19807,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__2"
-    // InternalPagos.g:6641:1: rule__TerminalValue__Group_0__2 : rule__TerminalValue__Group_0__2__Impl ;
+    // InternalPagos.g:6668:1: rule__TerminalValue__Group_0__2 : rule__TerminalValue__Group_0__2__Impl ;
     public final void rule__TerminalValue__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6645:1: ( rule__TerminalValue__Group_0__2__Impl )
-            // InternalPagos.g:6646:2: rule__TerminalValue__Group_0__2__Impl
+            // InternalPagos.g:6672:1: ( rule__TerminalValue__Group_0__2__Impl )
+            // InternalPagos.g:6673:2: rule__TerminalValue__Group_0__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__Group_0__2__Impl();
@@ -19755,21 +19840,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0__2__Impl"
-    // InternalPagos.g:6652:1: rule__TerminalValue__Group_0__2__Impl : ( ( rule__TerminalValue__VariableAssignment_0_2 ) ) ;
+    // InternalPagos.g:6679:1: rule__TerminalValue__Group_0__2__Impl : ( ( rule__TerminalValue__VariableAssignment_0_2 ) ) ;
     public final void rule__TerminalValue__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6656:1: ( ( ( rule__TerminalValue__VariableAssignment_0_2 ) ) )
-            // InternalPagos.g:6657:1: ( ( rule__TerminalValue__VariableAssignment_0_2 ) )
+            // InternalPagos.g:6683:1: ( ( ( rule__TerminalValue__VariableAssignment_0_2 ) ) )
+            // InternalPagos.g:6684:1: ( ( rule__TerminalValue__VariableAssignment_0_2 ) )
             {
-            // InternalPagos.g:6657:1: ( ( rule__TerminalValue__VariableAssignment_0_2 ) )
-            // InternalPagos.g:6658:2: ( rule__TerminalValue__VariableAssignment_0_2 )
+            // InternalPagos.g:6684:1: ( ( rule__TerminalValue__VariableAssignment_0_2 ) )
+            // InternalPagos.g:6685:2: ( rule__TerminalValue__VariableAssignment_0_2 )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableAssignment_0_2()); 
-            // InternalPagos.g:6659:2: ( rule__TerminalValue__VariableAssignment_0_2 )
-            // InternalPagos.g:6659:3: rule__TerminalValue__VariableAssignment_0_2
+            // InternalPagos.g:6686:2: ( rule__TerminalValue__VariableAssignment_0_2 )
+            // InternalPagos.g:6686:3: rule__TerminalValue__VariableAssignment_0_2
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__VariableAssignment_0_2();
@@ -19802,14 +19887,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__0"
-    // InternalPagos.g:6668:1: rule__TerminalValue__Group_0_1__0 : rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1 ;
+    // InternalPagos.g:6695:1: rule__TerminalValue__Group_0_1__0 : rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1 ;
     public final void rule__TerminalValue__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6672:1: ( rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1 )
-            // InternalPagos.g:6673:2: rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1
+            // InternalPagos.g:6699:1: ( rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1 )
+            // InternalPagos.g:6700:2: rule__TerminalValue__Group_0_1__0__Impl rule__TerminalValue__Group_0_1__1
             {
             pushFollow(FOLLOW_44);
             rule__TerminalValue__Group_0_1__0__Impl();
@@ -19840,17 +19925,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__0__Impl"
-    // InternalPagos.g:6680:1: rule__TerminalValue__Group_0_1__0__Impl : ( 'PA' ) ;
+    // InternalPagos.g:6707:1: rule__TerminalValue__Group_0_1__0__Impl : ( 'PA' ) ;
     public final void rule__TerminalValue__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6684:1: ( ( 'PA' ) )
-            // InternalPagos.g:6685:1: ( 'PA' )
+            // InternalPagos.g:6711:1: ( ( 'PA' ) )
+            // InternalPagos.g:6712:1: ( 'PA' )
             {
-            // InternalPagos.g:6685:1: ( 'PA' )
-            // InternalPagos.g:6686:2: 'PA'
+            // InternalPagos.g:6712:1: ( 'PA' )
+            // InternalPagos.g:6713:2: 'PA'
             {
              before(grammarAccess.getTerminalValueAccess().getPAKeyword_0_1_0()); 
             match(input,47,FOLLOW_2); 
@@ -19877,14 +19962,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__1"
-    // InternalPagos.g:6695:1: rule__TerminalValue__Group_0_1__1 : rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2 ;
+    // InternalPagos.g:6722:1: rule__TerminalValue__Group_0_1__1 : rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2 ;
     public final void rule__TerminalValue__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6699:1: ( rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2 )
-            // InternalPagos.g:6700:2: rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2
+            // InternalPagos.g:6726:1: ( rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2 )
+            // InternalPagos.g:6727:2: rule__TerminalValue__Group_0_1__1__Impl rule__TerminalValue__Group_0_1__2
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_0_1__1__Impl();
@@ -19915,17 +20000,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__1__Impl"
-    // InternalPagos.g:6707:1: rule__TerminalValue__Group_0_1__1__Impl : ( RULE_DOT ) ;
+    // InternalPagos.g:6734:1: rule__TerminalValue__Group_0_1__1__Impl : ( RULE_DOT ) ;
     public final void rule__TerminalValue__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6711:1: ( ( RULE_DOT ) )
-            // InternalPagos.g:6712:1: ( RULE_DOT )
+            // InternalPagos.g:6738:1: ( ( RULE_DOT ) )
+            // InternalPagos.g:6739:1: ( RULE_DOT )
             {
-            // InternalPagos.g:6712:1: ( RULE_DOT )
-            // InternalPagos.g:6713:2: RULE_DOT
+            // InternalPagos.g:6739:1: ( RULE_DOT )
+            // InternalPagos.g:6740:2: RULE_DOT
             {
              before(grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1()); 
             match(input,RULE_DOT,FOLLOW_2); 
@@ -19952,14 +20037,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__2"
-    // InternalPagos.g:6722:1: rule__TerminalValue__Group_0_1__2 : rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3 ;
+    // InternalPagos.g:6749:1: rule__TerminalValue__Group_0_1__2 : rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3 ;
     public final void rule__TerminalValue__Group_0_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6726:1: ( rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3 )
-            // InternalPagos.g:6727:2: rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3
+            // InternalPagos.g:6753:1: ( rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3 )
+            // InternalPagos.g:6754:2: rule__TerminalValue__Group_0_1__2__Impl rule__TerminalValue__Group_0_1__3
             {
             pushFollow(FOLLOW_45);
             rule__TerminalValue__Group_0_1__2__Impl();
@@ -19990,21 +20075,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__2__Impl"
-    // InternalPagos.g:6734:1: rule__TerminalValue__Group_0_1__2__Impl : ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) ) ;
+    // InternalPagos.g:6761:1: rule__TerminalValue__Group_0_1__2__Impl : ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) ) ;
     public final void rule__TerminalValue__Group_0_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6738:1: ( ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) ) )
-            // InternalPagos.g:6739:1: ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) )
+            // InternalPagos.g:6765:1: ( ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) ) )
+            // InternalPagos.g:6766:1: ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) )
             {
-            // InternalPagos.g:6739:1: ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) )
-            // InternalPagos.g:6740:2: ( rule__TerminalValue__ParentAssignment_0_1_2 )
+            // InternalPagos.g:6766:1: ( ( rule__TerminalValue__ParentAssignment_0_1_2 ) )
+            // InternalPagos.g:6767:2: ( rule__TerminalValue__ParentAssignment_0_1_2 )
             {
              before(grammarAccess.getTerminalValueAccess().getParentAssignment_0_1_2()); 
-            // InternalPagos.g:6741:2: ( rule__TerminalValue__ParentAssignment_0_1_2 )
-            // InternalPagos.g:6741:3: rule__TerminalValue__ParentAssignment_0_1_2
+            // InternalPagos.g:6768:2: ( rule__TerminalValue__ParentAssignment_0_1_2 )
+            // InternalPagos.g:6768:3: rule__TerminalValue__ParentAssignment_0_1_2
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__ParentAssignment_0_1_2();
@@ -20037,14 +20122,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__3"
-    // InternalPagos.g:6749:1: rule__TerminalValue__Group_0_1__3 : rule__TerminalValue__Group_0_1__3__Impl ;
+    // InternalPagos.g:6776:1: rule__TerminalValue__Group_0_1__3 : rule__TerminalValue__Group_0_1__3__Impl ;
     public final void rule__TerminalValue__Group_0_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6753:1: ( rule__TerminalValue__Group_0_1__3__Impl )
-            // InternalPagos.g:6754:2: rule__TerminalValue__Group_0_1__3__Impl
+            // InternalPagos.g:6780:1: ( rule__TerminalValue__Group_0_1__3__Impl )
+            // InternalPagos.g:6781:2: rule__TerminalValue__Group_0_1__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__Group_0_1__3__Impl();
@@ -20070,17 +20155,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_0_1__3__Impl"
-    // InternalPagos.g:6760:1: rule__TerminalValue__Group_0_1__3__Impl : ( RULE_DASH ) ;
+    // InternalPagos.g:6787:1: rule__TerminalValue__Group_0_1__3__Impl : ( RULE_DASH ) ;
     public final void rule__TerminalValue__Group_0_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6764:1: ( ( RULE_DASH ) )
-            // InternalPagos.g:6765:1: ( RULE_DASH )
+            // InternalPagos.g:6791:1: ( ( RULE_DASH ) )
+            // InternalPagos.g:6792:1: ( RULE_DASH )
             {
-            // InternalPagos.g:6765:1: ( RULE_DASH )
-            // InternalPagos.g:6766:2: RULE_DASH
+            // InternalPagos.g:6792:1: ( RULE_DASH )
+            // InternalPagos.g:6793:2: RULE_DASH
             {
              before(grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_0_1_3()); 
             match(input,RULE_DASH,FOLLOW_2); 
@@ -20107,14 +20192,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__0"
-    // InternalPagos.g:6776:1: rule__TerminalValue__Group_1__0 : rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1 ;
+    // InternalPagos.g:6803:1: rule__TerminalValue__Group_1__0 : rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1 ;
     public final void rule__TerminalValue__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6780:1: ( rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1 )
-            // InternalPagos.g:6781:2: rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1
+            // InternalPagos.g:6807:1: ( rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1 )
+            // InternalPagos.g:6808:2: rule__TerminalValue__Group_1__0__Impl rule__TerminalValue__Group_1__1
             {
             pushFollow(FOLLOW_44);
             rule__TerminalValue__Group_1__0__Impl();
@@ -20145,17 +20230,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__0__Impl"
-    // InternalPagos.g:6788:1: rule__TerminalValue__Group_1__0__Impl : ( 'SU' ) ;
+    // InternalPagos.g:6815:1: rule__TerminalValue__Group_1__0__Impl : ( 'SU' ) ;
     public final void rule__TerminalValue__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6792:1: ( ( 'SU' ) )
-            // InternalPagos.g:6793:1: ( 'SU' )
+            // InternalPagos.g:6819:1: ( ( 'SU' ) )
+            // InternalPagos.g:6820:1: ( 'SU' )
             {
-            // InternalPagos.g:6793:1: ( 'SU' )
-            // InternalPagos.g:6794:2: 'SU'
+            // InternalPagos.g:6820:1: ( 'SU' )
+            // InternalPagos.g:6821:2: 'SU'
             {
              before(grammarAccess.getTerminalValueAccess().getSUKeyword_1_0()); 
             match(input,48,FOLLOW_2); 
@@ -20182,14 +20267,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__1"
-    // InternalPagos.g:6803:1: rule__TerminalValue__Group_1__1 : rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2 ;
+    // InternalPagos.g:6830:1: rule__TerminalValue__Group_1__1 : rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2 ;
     public final void rule__TerminalValue__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6807:1: ( rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2 )
-            // InternalPagos.g:6808:2: rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2
+            // InternalPagos.g:6834:1: ( rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2 )
+            // InternalPagos.g:6835:2: rule__TerminalValue__Group_1__1__Impl rule__TerminalValue__Group_1__2
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_1__1__Impl();
@@ -20220,17 +20305,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__1__Impl"
-    // InternalPagos.g:6815:1: rule__TerminalValue__Group_1__1__Impl : ( RULE_DOT ) ;
+    // InternalPagos.g:6842:1: rule__TerminalValue__Group_1__1__Impl : ( RULE_DOT ) ;
     public final void rule__TerminalValue__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6819:1: ( ( RULE_DOT ) )
-            // InternalPagos.g:6820:1: ( RULE_DOT )
+            // InternalPagos.g:6846:1: ( ( RULE_DOT ) )
+            // InternalPagos.g:6847:1: ( RULE_DOT )
             {
-            // InternalPagos.g:6820:1: ( RULE_DOT )
-            // InternalPagos.g:6821:2: RULE_DOT
+            // InternalPagos.g:6847:1: ( RULE_DOT )
+            // InternalPagos.g:6848:2: RULE_DOT
             {
              before(grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1()); 
             match(input,RULE_DOT,FOLLOW_2); 
@@ -20257,14 +20342,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__2"
-    // InternalPagos.g:6830:1: rule__TerminalValue__Group_1__2 : rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3 ;
+    // InternalPagos.g:6857:1: rule__TerminalValue__Group_1__2 : rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3 ;
     public final void rule__TerminalValue__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6834:1: ( rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3 )
-            // InternalPagos.g:6835:2: rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3
+            // InternalPagos.g:6861:1: ( rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3 )
+            // InternalPagos.g:6862:2: rule__TerminalValue__Group_1__2__Impl rule__TerminalValue__Group_1__3
             {
             pushFollow(FOLLOW_45);
             rule__TerminalValue__Group_1__2__Impl();
@@ -20295,21 +20380,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__2__Impl"
-    // InternalPagos.g:6842:1: rule__TerminalValue__Group_1__2__Impl : ( ( rule__TerminalValue__ParentAssignment_1_2 ) ) ;
+    // InternalPagos.g:6869:1: rule__TerminalValue__Group_1__2__Impl : ( ( rule__TerminalValue__ParentAssignment_1_2 ) ) ;
     public final void rule__TerminalValue__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6846:1: ( ( ( rule__TerminalValue__ParentAssignment_1_2 ) ) )
-            // InternalPagos.g:6847:1: ( ( rule__TerminalValue__ParentAssignment_1_2 ) )
+            // InternalPagos.g:6873:1: ( ( ( rule__TerminalValue__ParentAssignment_1_2 ) ) )
+            // InternalPagos.g:6874:1: ( ( rule__TerminalValue__ParentAssignment_1_2 ) )
             {
-            // InternalPagos.g:6847:1: ( ( rule__TerminalValue__ParentAssignment_1_2 ) )
-            // InternalPagos.g:6848:2: ( rule__TerminalValue__ParentAssignment_1_2 )
+            // InternalPagos.g:6874:1: ( ( rule__TerminalValue__ParentAssignment_1_2 ) )
+            // InternalPagos.g:6875:2: ( rule__TerminalValue__ParentAssignment_1_2 )
             {
              before(grammarAccess.getTerminalValueAccess().getParentAssignment_1_2()); 
-            // InternalPagos.g:6849:2: ( rule__TerminalValue__ParentAssignment_1_2 )
-            // InternalPagos.g:6849:3: rule__TerminalValue__ParentAssignment_1_2
+            // InternalPagos.g:6876:2: ( rule__TerminalValue__ParentAssignment_1_2 )
+            // InternalPagos.g:6876:3: rule__TerminalValue__ParentAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__ParentAssignment_1_2();
@@ -20342,14 +20427,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__3"
-    // InternalPagos.g:6857:1: rule__TerminalValue__Group_1__3 : rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4 ;
+    // InternalPagos.g:6884:1: rule__TerminalValue__Group_1__3 : rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4 ;
     public final void rule__TerminalValue__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6861:1: ( rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4 )
-            // InternalPagos.g:6862:2: rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4
+            // InternalPagos.g:6888:1: ( rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4 )
+            // InternalPagos.g:6889:2: rule__TerminalValue__Group_1__3__Impl rule__TerminalValue__Group_1__4
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_1__3__Impl();
@@ -20380,17 +20465,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__3__Impl"
-    // InternalPagos.g:6869:1: rule__TerminalValue__Group_1__3__Impl : ( RULE_DASH ) ;
+    // InternalPagos.g:6896:1: rule__TerminalValue__Group_1__3__Impl : ( RULE_DASH ) ;
     public final void rule__TerminalValue__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6873:1: ( ( RULE_DASH ) )
-            // InternalPagos.g:6874:1: ( RULE_DASH )
+            // InternalPagos.g:6900:1: ( ( RULE_DASH ) )
+            // InternalPagos.g:6901:1: ( RULE_DASH )
             {
-            // InternalPagos.g:6874:1: ( RULE_DASH )
-            // InternalPagos.g:6875:2: RULE_DASH
+            // InternalPagos.g:6901:1: ( RULE_DASH )
+            // InternalPagos.g:6902:2: RULE_DASH
             {
              before(grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_1_3()); 
             match(input,RULE_DASH,FOLLOW_2); 
@@ -20417,14 +20502,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__4"
-    // InternalPagos.g:6884:1: rule__TerminalValue__Group_1__4 : rule__TerminalValue__Group_1__4__Impl ;
+    // InternalPagos.g:6911:1: rule__TerminalValue__Group_1__4 : rule__TerminalValue__Group_1__4__Impl ;
     public final void rule__TerminalValue__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6888:1: ( rule__TerminalValue__Group_1__4__Impl )
-            // InternalPagos.g:6889:2: rule__TerminalValue__Group_1__4__Impl
+            // InternalPagos.g:6915:1: ( rule__TerminalValue__Group_1__4__Impl )
+            // InternalPagos.g:6916:2: rule__TerminalValue__Group_1__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__Group_1__4__Impl();
@@ -20450,21 +20535,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_1__4__Impl"
-    // InternalPagos.g:6895:1: rule__TerminalValue__Group_1__4__Impl : ( ( rule__TerminalValue__VariableAssignment_1_4 ) ) ;
+    // InternalPagos.g:6922:1: rule__TerminalValue__Group_1__4__Impl : ( ( rule__TerminalValue__VariableAssignment_1_4 ) ) ;
     public final void rule__TerminalValue__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6899:1: ( ( ( rule__TerminalValue__VariableAssignment_1_4 ) ) )
-            // InternalPagos.g:6900:1: ( ( rule__TerminalValue__VariableAssignment_1_4 ) )
+            // InternalPagos.g:6926:1: ( ( ( rule__TerminalValue__VariableAssignment_1_4 ) ) )
+            // InternalPagos.g:6927:1: ( ( rule__TerminalValue__VariableAssignment_1_4 ) )
             {
-            // InternalPagos.g:6900:1: ( ( rule__TerminalValue__VariableAssignment_1_4 ) )
-            // InternalPagos.g:6901:2: ( rule__TerminalValue__VariableAssignment_1_4 )
+            // InternalPagos.g:6927:1: ( ( rule__TerminalValue__VariableAssignment_1_4 ) )
+            // InternalPagos.g:6928:2: ( rule__TerminalValue__VariableAssignment_1_4 )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableAssignment_1_4()); 
-            // InternalPagos.g:6902:2: ( rule__TerminalValue__VariableAssignment_1_4 )
-            // InternalPagos.g:6902:3: rule__TerminalValue__VariableAssignment_1_4
+            // InternalPagos.g:6929:2: ( rule__TerminalValue__VariableAssignment_1_4 )
+            // InternalPagos.g:6929:3: rule__TerminalValue__VariableAssignment_1_4
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__VariableAssignment_1_4();
@@ -20497,14 +20582,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__0"
-    // InternalPagos.g:6911:1: rule__TerminalValue__Group_2__0 : rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1 ;
+    // InternalPagos.g:6938:1: rule__TerminalValue__Group_2__0 : rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1 ;
     public final void rule__TerminalValue__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6915:1: ( rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1 )
-            // InternalPagos.g:6916:2: rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1
+            // InternalPagos.g:6942:1: ( rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1 )
+            // InternalPagos.g:6943:2: rule__TerminalValue__Group_2__0__Impl rule__TerminalValue__Group_2__1
             {
             pushFollow(FOLLOW_44);
             rule__TerminalValue__Group_2__0__Impl();
@@ -20535,17 +20620,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__0__Impl"
-    // InternalPagos.g:6923:1: rule__TerminalValue__Group_2__0__Impl : ( 'IT' ) ;
+    // InternalPagos.g:6950:1: rule__TerminalValue__Group_2__0__Impl : ( 'IT' ) ;
     public final void rule__TerminalValue__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6927:1: ( ( 'IT' ) )
-            // InternalPagos.g:6928:1: ( 'IT' )
+            // InternalPagos.g:6954:1: ( ( 'IT' ) )
+            // InternalPagos.g:6955:1: ( 'IT' )
             {
-            // InternalPagos.g:6928:1: ( 'IT' )
-            // InternalPagos.g:6929:2: 'IT'
+            // InternalPagos.g:6955:1: ( 'IT' )
+            // InternalPagos.g:6956:2: 'IT'
             {
              before(grammarAccess.getTerminalValueAccess().getITKeyword_2_0()); 
             match(input,49,FOLLOW_2); 
@@ -20572,14 +20657,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__1"
-    // InternalPagos.g:6938:1: rule__TerminalValue__Group_2__1 : rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2 ;
+    // InternalPagos.g:6965:1: rule__TerminalValue__Group_2__1 : rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2 ;
     public final void rule__TerminalValue__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6942:1: ( rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2 )
-            // InternalPagos.g:6943:2: rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2
+            // InternalPagos.g:6969:1: ( rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2 )
+            // InternalPagos.g:6970:2: rule__TerminalValue__Group_2__1__Impl rule__TerminalValue__Group_2__2
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_2__1__Impl();
@@ -20610,17 +20695,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__1__Impl"
-    // InternalPagos.g:6950:1: rule__TerminalValue__Group_2__1__Impl : ( RULE_DOT ) ;
+    // InternalPagos.g:6977:1: rule__TerminalValue__Group_2__1__Impl : ( RULE_DOT ) ;
     public final void rule__TerminalValue__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6954:1: ( ( RULE_DOT ) )
-            // InternalPagos.g:6955:1: ( RULE_DOT )
+            // InternalPagos.g:6981:1: ( ( RULE_DOT ) )
+            // InternalPagos.g:6982:1: ( RULE_DOT )
             {
-            // InternalPagos.g:6955:1: ( RULE_DOT )
-            // InternalPagos.g:6956:2: RULE_DOT
+            // InternalPagos.g:6982:1: ( RULE_DOT )
+            // InternalPagos.g:6983:2: RULE_DOT
             {
              before(grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1()); 
             match(input,RULE_DOT,FOLLOW_2); 
@@ -20647,14 +20732,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__2"
-    // InternalPagos.g:6965:1: rule__TerminalValue__Group_2__2 : rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3 ;
+    // InternalPagos.g:6992:1: rule__TerminalValue__Group_2__2 : rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3 ;
     public final void rule__TerminalValue__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6969:1: ( rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3 )
-            // InternalPagos.g:6970:2: rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3
+            // InternalPagos.g:6996:1: ( rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3 )
+            // InternalPagos.g:6997:2: rule__TerminalValue__Group_2__2__Impl rule__TerminalValue__Group_2__3
             {
             pushFollow(FOLLOW_45);
             rule__TerminalValue__Group_2__2__Impl();
@@ -20685,21 +20770,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__2__Impl"
-    // InternalPagos.g:6977:1: rule__TerminalValue__Group_2__2__Impl : ( ( rule__TerminalValue__ParentAssignment_2_2 ) ) ;
+    // InternalPagos.g:7004:1: rule__TerminalValue__Group_2__2__Impl : ( ( rule__TerminalValue__ParentAssignment_2_2 ) ) ;
     public final void rule__TerminalValue__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6981:1: ( ( ( rule__TerminalValue__ParentAssignment_2_2 ) ) )
-            // InternalPagos.g:6982:1: ( ( rule__TerminalValue__ParentAssignment_2_2 ) )
+            // InternalPagos.g:7008:1: ( ( ( rule__TerminalValue__ParentAssignment_2_2 ) ) )
+            // InternalPagos.g:7009:1: ( ( rule__TerminalValue__ParentAssignment_2_2 ) )
             {
-            // InternalPagos.g:6982:1: ( ( rule__TerminalValue__ParentAssignment_2_2 ) )
-            // InternalPagos.g:6983:2: ( rule__TerminalValue__ParentAssignment_2_2 )
+            // InternalPagos.g:7009:1: ( ( rule__TerminalValue__ParentAssignment_2_2 ) )
+            // InternalPagos.g:7010:2: ( rule__TerminalValue__ParentAssignment_2_2 )
             {
              before(grammarAccess.getTerminalValueAccess().getParentAssignment_2_2()); 
-            // InternalPagos.g:6984:2: ( rule__TerminalValue__ParentAssignment_2_2 )
-            // InternalPagos.g:6984:3: rule__TerminalValue__ParentAssignment_2_2
+            // InternalPagos.g:7011:2: ( rule__TerminalValue__ParentAssignment_2_2 )
+            // InternalPagos.g:7011:3: rule__TerminalValue__ParentAssignment_2_2
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__ParentAssignment_2_2();
@@ -20732,14 +20817,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__3"
-    // InternalPagos.g:6992:1: rule__TerminalValue__Group_2__3 : rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4 ;
+    // InternalPagos.g:7019:1: rule__TerminalValue__Group_2__3 : rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4 ;
     public final void rule__TerminalValue__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:6996:1: ( rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4 )
-            // InternalPagos.g:6997:2: rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4
+            // InternalPagos.g:7023:1: ( rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4 )
+            // InternalPagos.g:7024:2: rule__TerminalValue__Group_2__3__Impl rule__TerminalValue__Group_2__4
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_2__3__Impl();
@@ -20770,17 +20855,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__3__Impl"
-    // InternalPagos.g:7004:1: rule__TerminalValue__Group_2__3__Impl : ( RULE_DASH ) ;
+    // InternalPagos.g:7031:1: rule__TerminalValue__Group_2__3__Impl : ( RULE_DASH ) ;
     public final void rule__TerminalValue__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7008:1: ( ( RULE_DASH ) )
-            // InternalPagos.g:7009:1: ( RULE_DASH )
+            // InternalPagos.g:7035:1: ( ( RULE_DASH ) )
+            // InternalPagos.g:7036:1: ( RULE_DASH )
             {
-            // InternalPagos.g:7009:1: ( RULE_DASH )
-            // InternalPagos.g:7010:2: RULE_DASH
+            // InternalPagos.g:7036:1: ( RULE_DASH )
+            // InternalPagos.g:7037:2: RULE_DASH
             {
              before(grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_2_3()); 
             match(input,RULE_DASH,FOLLOW_2); 
@@ -20807,14 +20892,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__4"
-    // InternalPagos.g:7019:1: rule__TerminalValue__Group_2__4 : rule__TerminalValue__Group_2__4__Impl ;
+    // InternalPagos.g:7046:1: rule__TerminalValue__Group_2__4 : rule__TerminalValue__Group_2__4__Impl ;
     public final void rule__TerminalValue__Group_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7023:1: ( rule__TerminalValue__Group_2__4__Impl )
-            // InternalPagos.g:7024:2: rule__TerminalValue__Group_2__4__Impl
+            // InternalPagos.g:7050:1: ( rule__TerminalValue__Group_2__4__Impl )
+            // InternalPagos.g:7051:2: rule__TerminalValue__Group_2__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__Group_2__4__Impl();
@@ -20840,21 +20925,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_2__4__Impl"
-    // InternalPagos.g:7030:1: rule__TerminalValue__Group_2__4__Impl : ( ( rule__TerminalValue__VariableAssignment_2_4 ) ) ;
+    // InternalPagos.g:7057:1: rule__TerminalValue__Group_2__4__Impl : ( ( rule__TerminalValue__VariableAssignment_2_4 ) ) ;
     public final void rule__TerminalValue__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7034:1: ( ( ( rule__TerminalValue__VariableAssignment_2_4 ) ) )
-            // InternalPagos.g:7035:1: ( ( rule__TerminalValue__VariableAssignment_2_4 ) )
+            // InternalPagos.g:7061:1: ( ( ( rule__TerminalValue__VariableAssignment_2_4 ) ) )
+            // InternalPagos.g:7062:1: ( ( rule__TerminalValue__VariableAssignment_2_4 ) )
             {
-            // InternalPagos.g:7035:1: ( ( rule__TerminalValue__VariableAssignment_2_4 ) )
-            // InternalPagos.g:7036:2: ( rule__TerminalValue__VariableAssignment_2_4 )
+            // InternalPagos.g:7062:1: ( ( rule__TerminalValue__VariableAssignment_2_4 ) )
+            // InternalPagos.g:7063:2: ( rule__TerminalValue__VariableAssignment_2_4 )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableAssignment_2_4()); 
-            // InternalPagos.g:7037:2: ( rule__TerminalValue__VariableAssignment_2_4 )
-            // InternalPagos.g:7037:3: rule__TerminalValue__VariableAssignment_2_4
+            // InternalPagos.g:7064:2: ( rule__TerminalValue__VariableAssignment_2_4 )
+            // InternalPagos.g:7064:3: rule__TerminalValue__VariableAssignment_2_4
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__VariableAssignment_2_4();
@@ -20887,14 +20972,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__0"
-    // InternalPagos.g:7046:1: rule__TerminalValue__Group_3__0 : rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1 ;
+    // InternalPagos.g:7073:1: rule__TerminalValue__Group_3__0 : rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1 ;
     public final void rule__TerminalValue__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7050:1: ( rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1 )
-            // InternalPagos.g:7051:2: rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1
+            // InternalPagos.g:7077:1: ( rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1 )
+            // InternalPagos.g:7078:2: rule__TerminalValue__Group_3__0__Impl rule__TerminalValue__Group_3__1
             {
             pushFollow(FOLLOW_44);
             rule__TerminalValue__Group_3__0__Impl();
@@ -20925,17 +21010,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__0__Impl"
-    // InternalPagos.g:7058:1: rule__TerminalValue__Group_3__0__Impl : ( 'FU' ) ;
+    // InternalPagos.g:7085:1: rule__TerminalValue__Group_3__0__Impl : ( 'FU' ) ;
     public final void rule__TerminalValue__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7062:1: ( ( 'FU' ) )
-            // InternalPagos.g:7063:1: ( 'FU' )
+            // InternalPagos.g:7089:1: ( ( 'FU' ) )
+            // InternalPagos.g:7090:1: ( 'FU' )
             {
-            // InternalPagos.g:7063:1: ( 'FU' )
-            // InternalPagos.g:7064:2: 'FU'
+            // InternalPagos.g:7090:1: ( 'FU' )
+            // InternalPagos.g:7091:2: 'FU'
             {
              before(grammarAccess.getTerminalValueAccess().getFUKeyword_3_0()); 
             match(input,50,FOLLOW_2); 
@@ -20962,14 +21047,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__1"
-    // InternalPagos.g:7073:1: rule__TerminalValue__Group_3__1 : rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2 ;
+    // InternalPagos.g:7100:1: rule__TerminalValue__Group_3__1 : rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2 ;
     public final void rule__TerminalValue__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7077:1: ( rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2 )
-            // InternalPagos.g:7078:2: rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2
+            // InternalPagos.g:7104:1: ( rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2 )
+            // InternalPagos.g:7105:2: rule__TerminalValue__Group_3__1__Impl rule__TerminalValue__Group_3__2
             {
             pushFollow(FOLLOW_5);
             rule__TerminalValue__Group_3__1__Impl();
@@ -21000,17 +21085,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__1__Impl"
-    // InternalPagos.g:7085:1: rule__TerminalValue__Group_3__1__Impl : ( RULE_DOT ) ;
+    // InternalPagos.g:7112:1: rule__TerminalValue__Group_3__1__Impl : ( RULE_DOT ) ;
     public final void rule__TerminalValue__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7089:1: ( ( RULE_DOT ) )
-            // InternalPagos.g:7090:1: ( RULE_DOT )
+            // InternalPagos.g:7116:1: ( ( RULE_DOT ) )
+            // InternalPagos.g:7117:1: ( RULE_DOT )
             {
-            // InternalPagos.g:7090:1: ( RULE_DOT )
-            // InternalPagos.g:7091:2: RULE_DOT
+            // InternalPagos.g:7117:1: ( RULE_DOT )
+            // InternalPagos.g:7118:2: RULE_DOT
             {
              before(grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_3_1()); 
             match(input,RULE_DOT,FOLLOW_2); 
@@ -21037,14 +21122,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__2"
-    // InternalPagos.g:7100:1: rule__TerminalValue__Group_3__2 : rule__TerminalValue__Group_3__2__Impl ;
+    // InternalPagos.g:7127:1: rule__TerminalValue__Group_3__2 : rule__TerminalValue__Group_3__2__Impl ;
     public final void rule__TerminalValue__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7104:1: ( rule__TerminalValue__Group_3__2__Impl )
-            // InternalPagos.g:7105:2: rule__TerminalValue__Group_3__2__Impl
+            // InternalPagos.g:7131:1: ( rule__TerminalValue__Group_3__2__Impl )
+            // InternalPagos.g:7132:2: rule__TerminalValue__Group_3__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__Group_3__2__Impl();
@@ -21070,21 +21155,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__Group_3__2__Impl"
-    // InternalPagos.g:7111:1: rule__TerminalValue__Group_3__2__Impl : ( ( rule__TerminalValue__ParentAssignment_3_2 ) ) ;
+    // InternalPagos.g:7138:1: rule__TerminalValue__Group_3__2__Impl : ( ( rule__TerminalValue__ParentAssignment_3_2 ) ) ;
     public final void rule__TerminalValue__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7115:1: ( ( ( rule__TerminalValue__ParentAssignment_3_2 ) ) )
-            // InternalPagos.g:7116:1: ( ( rule__TerminalValue__ParentAssignment_3_2 ) )
+            // InternalPagos.g:7142:1: ( ( ( rule__TerminalValue__ParentAssignment_3_2 ) ) )
+            // InternalPagos.g:7143:1: ( ( rule__TerminalValue__ParentAssignment_3_2 ) )
             {
-            // InternalPagos.g:7116:1: ( ( rule__TerminalValue__ParentAssignment_3_2 ) )
-            // InternalPagos.g:7117:2: ( rule__TerminalValue__ParentAssignment_3_2 )
+            // InternalPagos.g:7143:1: ( ( rule__TerminalValue__ParentAssignment_3_2 ) )
+            // InternalPagos.g:7144:2: ( rule__TerminalValue__ParentAssignment_3_2 )
             {
              before(grammarAccess.getTerminalValueAccess().getParentAssignment_3_2()); 
-            // InternalPagos.g:7118:2: ( rule__TerminalValue__ParentAssignment_3_2 )
-            // InternalPagos.g:7118:3: rule__TerminalValue__ParentAssignment_3_2
+            // InternalPagos.g:7145:2: ( rule__TerminalValue__ParentAssignment_3_2 )
+            // InternalPagos.g:7145:3: rule__TerminalValue__ParentAssignment_3_2
             {
             pushFollow(FOLLOW_2);
             rule__TerminalValue__ParentAssignment_3_2();
@@ -21117,14 +21202,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0"
-    // InternalPagos.g:7127:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // InternalPagos.g:7154:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7131:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // InternalPagos.g:7132:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // InternalPagos.g:7158:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // InternalPagos.g:7159:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
             pushFollow(FOLLOW_46);
             rule__EDouble__Group__0__Impl();
@@ -21155,20 +21240,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // InternalPagos.g:7139:1: rule__EDouble__Group__0__Impl : ( ( RULE_INT )? ) ;
+    // InternalPagos.g:7166:1: rule__EDouble__Group__0__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7143:1: ( ( ( RULE_INT )? ) )
-            // InternalPagos.g:7144:1: ( ( RULE_INT )? )
+            // InternalPagos.g:7170:1: ( ( ( RULE_INT )? ) )
+            // InternalPagos.g:7171:1: ( ( RULE_INT )? )
             {
-            // InternalPagos.g:7144:1: ( ( RULE_INT )? )
-            // InternalPagos.g:7145:2: ( RULE_INT )?
+            // InternalPagos.g:7171:1: ( ( RULE_INT )? )
+            // InternalPagos.g:7172:2: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_0()); 
-            // InternalPagos.g:7146:2: ( RULE_INT )?
+            // InternalPagos.g:7173:2: ( RULE_INT )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -21177,7 +21262,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalPagos.g:7146:3: RULE_INT
+                    // InternalPagos.g:7173:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); 
 
@@ -21209,14 +21294,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // InternalPagos.g:7154:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // InternalPagos.g:7181:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7158:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // InternalPagos.g:7159:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // InternalPagos.g:7185:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // InternalPagos.g:7186:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
             pushFollow(FOLLOW_47);
             rule__EDouble__Group__1__Impl();
@@ -21247,17 +21332,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // InternalPagos.g:7166:1: rule__EDouble__Group__1__Impl : ( RULE_DOT ) ;
+    // InternalPagos.g:7193:1: rule__EDouble__Group__1__Impl : ( RULE_DOT ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7170:1: ( ( RULE_DOT ) )
-            // InternalPagos.g:7171:1: ( RULE_DOT )
+            // InternalPagos.g:7197:1: ( ( RULE_DOT ) )
+            // InternalPagos.g:7198:1: ( RULE_DOT )
             {
-            // InternalPagos.g:7171:1: ( RULE_DOT )
-            // InternalPagos.g:7172:2: RULE_DOT
+            // InternalPagos.g:7198:1: ( RULE_DOT )
+            // InternalPagos.g:7199:2: RULE_DOT
             {
              before(grammarAccess.getEDoubleAccess().getDOTTerminalRuleCall_1()); 
             match(input,RULE_DOT,FOLLOW_2); 
@@ -21284,14 +21369,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // InternalPagos.g:7181:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // InternalPagos.g:7208:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7185:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // InternalPagos.g:7186:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // InternalPagos.g:7212:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // InternalPagos.g:7213:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
             pushFollow(FOLLOW_48);
             rule__EDouble__Group__2__Impl();
@@ -21322,17 +21407,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // InternalPagos.g:7193:1: rule__EDouble__Group__2__Impl : ( RULE_INT ) ;
+    // InternalPagos.g:7220:1: rule__EDouble__Group__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7197:1: ( ( RULE_INT ) )
-            // InternalPagos.g:7198:1: ( RULE_INT )
+            // InternalPagos.g:7224:1: ( ( RULE_INT ) )
+            // InternalPagos.g:7225:1: ( RULE_INT )
             {
-            // InternalPagos.g:7198:1: ( RULE_INT )
-            // InternalPagos.g:7199:2: RULE_INT
+            // InternalPagos.g:7225:1: ( RULE_INT )
+            // InternalPagos.g:7226:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_2()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -21359,14 +21444,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // InternalPagos.g:7208:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl ;
+    // InternalPagos.g:7235:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7212:1: ( rule__EDouble__Group__3__Impl )
-            // InternalPagos.g:7213:2: rule__EDouble__Group__3__Impl
+            // InternalPagos.g:7239:1: ( rule__EDouble__Group__3__Impl )
+            // InternalPagos.g:7240:2: rule__EDouble__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group__3__Impl();
@@ -21392,20 +21477,20 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // InternalPagos.g:7219:1: rule__EDouble__Group__3__Impl : ( ( rule__EDouble__Group_3__0 )? ) ;
+    // InternalPagos.g:7246:1: rule__EDouble__Group__3__Impl : ( ( rule__EDouble__Group_3__0 )? ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7223:1: ( ( ( rule__EDouble__Group_3__0 )? ) )
-            // InternalPagos.g:7224:1: ( ( rule__EDouble__Group_3__0 )? )
+            // InternalPagos.g:7250:1: ( ( ( rule__EDouble__Group_3__0 )? ) )
+            // InternalPagos.g:7251:1: ( ( rule__EDouble__Group_3__0 )? )
             {
-            // InternalPagos.g:7224:1: ( ( rule__EDouble__Group_3__0 )? )
-            // InternalPagos.g:7225:2: ( rule__EDouble__Group_3__0 )?
+            // InternalPagos.g:7251:1: ( ( rule__EDouble__Group_3__0 )? )
+            // InternalPagos.g:7252:2: ( rule__EDouble__Group_3__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_3()); 
-            // InternalPagos.g:7226:2: ( rule__EDouble__Group_3__0 )?
+            // InternalPagos.g:7253:2: ( rule__EDouble__Group_3__0 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -21414,7 +21499,7 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalPagos.g:7226:3: rule__EDouble__Group_3__0
+                    // InternalPagos.g:7253:3: rule__EDouble__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__EDouble__Group_3__0();
@@ -21450,14 +21535,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_3__0"
-    // InternalPagos.g:7235:1: rule__EDouble__Group_3__0 : rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1 ;
+    // InternalPagos.g:7262:1: rule__EDouble__Group_3__0 : rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1 ;
     public final void rule__EDouble__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7239:1: ( rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1 )
-            // InternalPagos.g:7240:2: rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1
+            // InternalPagos.g:7266:1: ( rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1 )
+            // InternalPagos.g:7267:2: rule__EDouble__Group_3__0__Impl rule__EDouble__Group_3__1
             {
             pushFollow(FOLLOW_47);
             rule__EDouble__Group_3__0__Impl();
@@ -21488,21 +21573,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_3__0__Impl"
-    // InternalPagos.g:7247:1: rule__EDouble__Group_3__0__Impl : ( ( rule__EDouble__Alternatives_3_0 ) ) ;
+    // InternalPagos.g:7274:1: rule__EDouble__Group_3__0__Impl : ( ( rule__EDouble__Alternatives_3_0 ) ) ;
     public final void rule__EDouble__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7251:1: ( ( ( rule__EDouble__Alternatives_3_0 ) ) )
-            // InternalPagos.g:7252:1: ( ( rule__EDouble__Alternatives_3_0 ) )
+            // InternalPagos.g:7278:1: ( ( ( rule__EDouble__Alternatives_3_0 ) ) )
+            // InternalPagos.g:7279:1: ( ( rule__EDouble__Alternatives_3_0 ) )
             {
-            // InternalPagos.g:7252:1: ( ( rule__EDouble__Alternatives_3_0 ) )
-            // InternalPagos.g:7253:2: ( rule__EDouble__Alternatives_3_0 )
+            // InternalPagos.g:7279:1: ( ( rule__EDouble__Alternatives_3_0 ) )
+            // InternalPagos.g:7280:2: ( rule__EDouble__Alternatives_3_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_3_0()); 
-            // InternalPagos.g:7254:2: ( rule__EDouble__Alternatives_3_0 )
-            // InternalPagos.g:7254:3: rule__EDouble__Alternatives_3_0
+            // InternalPagos.g:7281:2: ( rule__EDouble__Alternatives_3_0 )
+            // InternalPagos.g:7281:3: rule__EDouble__Alternatives_3_0
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Alternatives_3_0();
@@ -21535,14 +21620,14 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_3__1"
-    // InternalPagos.g:7262:1: rule__EDouble__Group_3__1 : rule__EDouble__Group_3__1__Impl ;
+    // InternalPagos.g:7289:1: rule__EDouble__Group_3__1 : rule__EDouble__Group_3__1__Impl ;
     public final void rule__EDouble__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7266:1: ( rule__EDouble__Group_3__1__Impl )
-            // InternalPagos.g:7267:2: rule__EDouble__Group_3__1__Impl
+            // InternalPagos.g:7293:1: ( rule__EDouble__Group_3__1__Impl )
+            // InternalPagos.g:7294:2: rule__EDouble__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group_3__1__Impl();
@@ -21568,17 +21653,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_3__1__Impl"
-    // InternalPagos.g:7273:1: rule__EDouble__Group_3__1__Impl : ( RULE_INT ) ;
+    // InternalPagos.g:7300:1: rule__EDouble__Group_3__1__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7277:1: ( ( RULE_INT ) )
-            // InternalPagos.g:7278:1: ( RULE_INT )
+            // InternalPagos.g:7304:1: ( ( RULE_INT ) )
+            // InternalPagos.g:7305:1: ( RULE_INT )
             {
-            // InternalPagos.g:7278:1: ( RULE_INT )
-            // InternalPagos.g:7279:2: RULE_INT
+            // InternalPagos.g:7305:1: ( RULE_INT )
+            // InternalPagos.g:7306:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3_1()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -21605,17 +21690,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Application__NameAssignment_3"
-    // InternalPagos.g:7289:1: rule__Application__NameAssignment_3 : ( RULE_ID ) ;
+    // InternalPagos.g:7316:1: rule__Application__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__Application__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7293:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7294:2: ( RULE_ID )
+            // InternalPagos.g:7320:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7321:2: ( RULE_ID )
             {
-            // InternalPagos.g:7294:2: ( RULE_ID )
-            // InternalPagos.g:7295:3: RULE_ID
+            // InternalPagos.g:7321:2: ( RULE_ID )
+            // InternalPagos.g:7322:3: RULE_ID
             {
              before(grammarAccess.getApplicationAccess().getNameIDTerminalRuleCall_3_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -21642,17 +21727,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Application__IntermediaryAssignment_7"
-    // InternalPagos.g:7304:1: rule__Application__IntermediaryAssignment_7 : ( ruleIntermediary ) ;
+    // InternalPagos.g:7331:1: rule__Application__IntermediaryAssignment_7 : ( ruleIntermediary ) ;
     public final void rule__Application__IntermediaryAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7308:1: ( ( ruleIntermediary ) )
-            // InternalPagos.g:7309:2: ( ruleIntermediary )
+            // InternalPagos.g:7335:1: ( ( ruleIntermediary ) )
+            // InternalPagos.g:7336:2: ( ruleIntermediary )
             {
-            // InternalPagos.g:7309:2: ( ruleIntermediary )
-            // InternalPagos.g:7310:3: ruleIntermediary
+            // InternalPagos.g:7336:2: ( ruleIntermediary )
+            // InternalPagos.g:7337:3: ruleIntermediary
             {
              before(grammarAccess.getApplicationAccess().getIntermediaryIntermediaryParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -21683,17 +21768,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Intermediary__NameAssignment_4"
-    // InternalPagos.g:7319:1: rule__Intermediary__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7346:1: rule__Intermediary__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__Intermediary__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7323:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7324:2: ( RULE_ID )
+            // InternalPagos.g:7350:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7351:2: ( RULE_ID )
             {
-            // InternalPagos.g:7324:2: ( RULE_ID )
-            // InternalPagos.g:7325:3: RULE_ID
+            // InternalPagos.g:7351:2: ( RULE_ID )
+            // InternalPagos.g:7352:3: RULE_ID
             {
              before(grammarAccess.getIntermediaryAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -21720,17 +21805,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Intermediary__SuperentitiesAssignment_9"
-    // InternalPagos.g:7334:1: rule__Intermediary__SuperentitiesAssignment_9 : ( ruleSuperEntity ) ;
+    // InternalPagos.g:7361:1: rule__Intermediary__SuperentitiesAssignment_9 : ( ruleSuperEntity ) ;
     public final void rule__Intermediary__SuperentitiesAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7338:1: ( ( ruleSuperEntity ) )
-            // InternalPagos.g:7339:2: ( ruleSuperEntity )
+            // InternalPagos.g:7365:1: ( ( ruleSuperEntity ) )
+            // InternalPagos.g:7366:2: ( ruleSuperEntity )
             {
-            // InternalPagos.g:7339:2: ( ruleSuperEntity )
-            // InternalPagos.g:7340:3: ruleSuperEntity
+            // InternalPagos.g:7366:2: ( ruleSuperEntity )
+            // InternalPagos.g:7367:3: ruleSuperEntity
             {
              before(grammarAccess.getIntermediaryAccess().getSuperentitiesSuperEntityParserRuleCall_9_0()); 
             pushFollow(FOLLOW_2);
@@ -21761,17 +21846,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Intermediary__SuperentitiesAssignment_10_1"
-    // InternalPagos.g:7349:1: rule__Intermediary__SuperentitiesAssignment_10_1 : ( ruleSuperEntity ) ;
+    // InternalPagos.g:7376:1: rule__Intermediary__SuperentitiesAssignment_10_1 : ( ruleSuperEntity ) ;
     public final void rule__Intermediary__SuperentitiesAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7353:1: ( ( ruleSuperEntity ) )
-            // InternalPagos.g:7354:2: ( ruleSuperEntity )
+            // InternalPagos.g:7380:1: ( ( ruleSuperEntity ) )
+            // InternalPagos.g:7381:2: ( ruleSuperEntity )
             {
-            // InternalPagos.g:7354:2: ( ruleSuperEntity )
-            // InternalPagos.g:7355:3: ruleSuperEntity
+            // InternalPagos.g:7381:2: ( ruleSuperEntity )
+            // InternalPagos.g:7382:3: ruleSuperEntity
             {
              before(grammarAccess.getIntermediaryAccess().getSuperentitiesSuperEntityParserRuleCall_10_1_0()); 
             pushFollow(FOLLOW_2);
@@ -21802,17 +21887,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__NameAssignment_4"
-    // InternalPagos.g:7364:1: rule__SuperEntity__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7391:1: rule__SuperEntity__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__SuperEntity__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7368:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7369:2: ( RULE_ID )
+            // InternalPagos.g:7395:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7396:2: ( RULE_ID )
             {
-            // InternalPagos.g:7369:2: ( RULE_ID )
-            // InternalPagos.g:7370:3: RULE_ID
+            // InternalPagos.g:7396:2: ( RULE_ID )
+            // InternalPagos.g:7397:3: RULE_ID
             {
              before(grammarAccess.getSuperEntityAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -21839,17 +21924,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__DescriptionAssignment_8"
-    // InternalPagos.g:7379:1: rule__SuperEntity__DescriptionAssignment_8 : ( RULE_STRING ) ;
+    // InternalPagos.g:7406:1: rule__SuperEntity__DescriptionAssignment_8 : ( RULE_STRING ) ;
     public final void rule__SuperEntity__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7383:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7384:2: ( RULE_STRING )
+            // InternalPagos.g:7410:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:7411:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7384:2: ( RULE_STRING )
-            // InternalPagos.g:7385:3: RULE_STRING
+            // InternalPagos.g:7411:2: ( RULE_STRING )
+            // InternalPagos.g:7412:3: RULE_STRING
             {
              before(grammarAccess.getSuperEntityAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -21876,17 +21961,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__AttListsAssignment_13"
-    // InternalPagos.g:7394:1: rule__SuperEntity__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7421:1: rule__SuperEntity__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
     public final void rule__SuperEntity__AttListsAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7398:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7399:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7425:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7426:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7399:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7400:3: ruleBusinessAttribute
+            // InternalPagos.g:7426:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7427:3: ruleBusinessAttribute
             {
              before(grammarAccess.getSuperEntityAccess().getAttListsBusinessAttributeParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -21917,17 +22002,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__AttListsAssignment_14_1"
-    // InternalPagos.g:7409:1: rule__SuperEntity__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7436:1: rule__SuperEntity__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
     public final void rule__SuperEntity__AttListsAssignment_14_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7413:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7414:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7440:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7441:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7414:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7415:3: ruleBusinessAttribute
+            // InternalPagos.g:7441:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7442:3: ruleBusinessAttribute
             {
              before(grammarAccess.getSuperEntityAccess().getAttListsBusinessAttributeParserRuleCall_14_1_0()); 
             pushFollow(FOLLOW_2);
@@ -21958,17 +22043,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__ParticipantsAssignment_20"
-    // InternalPagos.g:7424:1: rule__SuperEntity__ParticipantsAssignment_20 : ( ruleParticipant ) ;
+    // InternalPagos.g:7451:1: rule__SuperEntity__ParticipantsAssignment_20 : ( ruleParticipant ) ;
     public final void rule__SuperEntity__ParticipantsAssignment_20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7428:1: ( ( ruleParticipant ) )
-            // InternalPagos.g:7429:2: ( ruleParticipant )
+            // InternalPagos.g:7455:1: ( ( ruleParticipant ) )
+            // InternalPagos.g:7456:2: ( ruleParticipant )
             {
-            // InternalPagos.g:7429:2: ( ruleParticipant )
-            // InternalPagos.g:7430:3: ruleParticipant
+            // InternalPagos.g:7456:2: ( ruleParticipant )
+            // InternalPagos.g:7457:3: ruleParticipant
             {
              before(grammarAccess.getSuperEntityAccess().getParticipantsParticipantParserRuleCall_20_0()); 
             pushFollow(FOLLOW_2);
@@ -21999,17 +22084,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SuperEntity__ParticipantsAssignment_21_1"
-    // InternalPagos.g:7439:1: rule__SuperEntity__ParticipantsAssignment_21_1 : ( ruleParticipant ) ;
+    // InternalPagos.g:7466:1: rule__SuperEntity__ParticipantsAssignment_21_1 : ( ruleParticipant ) ;
     public final void rule__SuperEntity__ParticipantsAssignment_21_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7443:1: ( ( ruleParticipant ) )
-            // InternalPagos.g:7444:2: ( ruleParticipant )
+            // InternalPagos.g:7470:1: ( ( ruleParticipant ) )
+            // InternalPagos.g:7471:2: ( ruleParticipant )
             {
-            // InternalPagos.g:7444:2: ( ruleParticipant )
-            // InternalPagos.g:7445:3: ruleParticipant
+            // InternalPagos.g:7471:2: ( ruleParticipant )
+            // InternalPagos.g:7472:3: ruleParticipant
             {
              before(grammarAccess.getSuperEntityAccess().getParticipantsParticipantParserRuleCall_21_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22040,17 +22125,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__NameAssignment_4"
-    // InternalPagos.g:7454:1: rule__Participant__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7481:1: rule__Participant__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__Participant__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7458:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7459:2: ( RULE_ID )
+            // InternalPagos.g:7485:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7486:2: ( RULE_ID )
             {
-            // InternalPagos.g:7459:2: ( RULE_ID )
-            // InternalPagos.g:7460:3: RULE_ID
+            // InternalPagos.g:7486:2: ( RULE_ID )
+            // InternalPagos.g:7487:3: RULE_ID
             {
              before(grammarAccess.getParticipantAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -22077,17 +22162,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__DescriptionAssignment_8"
-    // InternalPagos.g:7469:1: rule__Participant__DescriptionAssignment_8 : ( RULE_STRING ) ;
+    // InternalPagos.g:7496:1: rule__Participant__DescriptionAssignment_8 : ( RULE_STRING ) ;
     public final void rule__Participant__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7473:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7474:2: ( RULE_STRING )
+            // InternalPagos.g:7500:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:7501:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7474:2: ( RULE_STRING )
-            // InternalPagos.g:7475:3: RULE_STRING
+            // InternalPagos.g:7501:2: ( RULE_STRING )
+            // InternalPagos.g:7502:3: RULE_STRING
             {
              before(grammarAccess.getParticipantAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22114,17 +22199,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__AttListsAssignment_13"
-    // InternalPagos.g:7484:1: rule__Participant__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7511:1: rule__Participant__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
     public final void rule__Participant__AttListsAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7488:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7489:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7515:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7516:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7489:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7490:3: ruleBusinessAttribute
+            // InternalPagos.g:7516:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7517:3: ruleBusinessAttribute
             {
              before(grammarAccess.getParticipantAccess().getAttListsBusinessAttributeParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -22155,17 +22240,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__AttListsAssignment_14_1"
-    // InternalPagos.g:7499:1: rule__Participant__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7526:1: rule__Participant__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
     public final void rule__Participant__AttListsAssignment_14_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7503:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7504:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7530:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7531:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7504:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7505:3: ruleBusinessAttribute
+            // InternalPagos.g:7531:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7532:3: ruleBusinessAttribute
             {
              before(grammarAccess.getParticipantAccess().getAttListsBusinessAttributeParserRuleCall_14_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22196,17 +22281,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__TemplatesFormsAssignment_17_4"
-    // InternalPagos.g:7514:1: rule__Participant__TemplatesFormsAssignment_17_4 : ( ruleInformationTemplate ) ;
+    // InternalPagos.g:7541:1: rule__Participant__TemplatesFormsAssignment_17_4 : ( ruleInformationTemplate ) ;
     public final void rule__Participant__TemplatesFormsAssignment_17_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7518:1: ( ( ruleInformationTemplate ) )
-            // InternalPagos.g:7519:2: ( ruleInformationTemplate )
+            // InternalPagos.g:7545:1: ( ( ruleInformationTemplate ) )
+            // InternalPagos.g:7546:2: ( ruleInformationTemplate )
             {
-            // InternalPagos.g:7519:2: ( ruleInformationTemplate )
-            // InternalPagos.g:7520:3: ruleInformationTemplate
+            // InternalPagos.g:7546:2: ( ruleInformationTemplate )
+            // InternalPagos.g:7547:3: ruleInformationTemplate
             {
              before(grammarAccess.getParticipantAccess().getTemplatesFormsInformationTemplateParserRuleCall_17_4_0()); 
             pushFollow(FOLLOW_2);
@@ -22237,17 +22322,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Participant__TemplatesFormsAssignment_17_5_1"
-    // InternalPagos.g:7529:1: rule__Participant__TemplatesFormsAssignment_17_5_1 : ( ruleInformationTemplate ) ;
+    // InternalPagos.g:7556:1: rule__Participant__TemplatesFormsAssignment_17_5_1 : ( ruleInformationTemplate ) ;
     public final void rule__Participant__TemplatesFormsAssignment_17_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7533:1: ( ( ruleInformationTemplate ) )
-            // InternalPagos.g:7534:2: ( ruleInformationTemplate )
+            // InternalPagos.g:7560:1: ( ( ruleInformationTemplate ) )
+            // InternalPagos.g:7561:2: ( ruleInformationTemplate )
             {
-            // InternalPagos.g:7534:2: ( ruleInformationTemplate )
-            // InternalPagos.g:7535:3: ruleInformationTemplate
+            // InternalPagos.g:7561:2: ( ruleInformationTemplate )
+            // InternalPagos.g:7562:3: ruleInformationTemplate
             {
              before(grammarAccess.getParticipantAccess().getTemplatesFormsInformationTemplateParserRuleCall_17_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22278,17 +22363,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Provider__NameAssignment_4"
-    // InternalPagos.g:7544:1: rule__Provider__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7571:1: rule__Provider__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__Provider__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7548:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7549:2: ( RULE_ID )
+            // InternalPagos.g:7575:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7576:2: ( RULE_ID )
             {
-            // InternalPagos.g:7549:2: ( RULE_ID )
-            // InternalPagos.g:7550:3: RULE_ID
+            // InternalPagos.g:7576:2: ( RULE_ID )
+            // InternalPagos.g:7577:3: RULE_ID
             {
              before(grammarAccess.getProviderAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -22315,17 +22400,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Provider__DescriptionAssignment_8"
-    // InternalPagos.g:7559:1: rule__Provider__DescriptionAssignment_8 : ( RULE_STRING ) ;
+    // InternalPagos.g:7586:1: rule__Provider__DescriptionAssignment_8 : ( RULE_STRING ) ;
     public final void rule__Provider__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7563:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7564:2: ( RULE_STRING )
+            // InternalPagos.g:7590:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:7591:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7564:2: ( RULE_STRING )
-            // InternalPagos.g:7565:3: RULE_STRING
+            // InternalPagos.g:7591:2: ( RULE_STRING )
+            // InternalPagos.g:7592:3: RULE_STRING
             {
              before(grammarAccess.getProviderAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22352,17 +22437,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Provider__AttListsAssignment_13"
-    // InternalPagos.g:7574:1: rule__Provider__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7601:1: rule__Provider__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
     public final void rule__Provider__AttListsAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7578:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7579:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7605:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7606:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7579:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7580:3: ruleBusinessAttribute
+            // InternalPagos.g:7606:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7607:3: ruleBusinessAttribute
             {
              before(grammarAccess.getProviderAccess().getAttListsBusinessAttributeParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -22393,17 +22478,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Provider__AttListsAssignment_14_1"
-    // InternalPagos.g:7589:1: rule__Provider__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7616:1: rule__Provider__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
     public final void rule__Provider__AttListsAssignment_14_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7593:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7594:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7620:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7621:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7594:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7595:3: ruleBusinessAttribute
+            // InternalPagos.g:7621:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7622:3: ruleBusinessAttribute
             {
              before(grammarAccess.getProviderAccess().getAttListsBusinessAttributeParserRuleCall_14_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22434,17 +22519,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__NameAssignment_4"
-    // InternalPagos.g:7604:1: rule__InformationTemplate__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7631:1: rule__InformationTemplate__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__InformationTemplate__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7608:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7609:2: ( RULE_ID )
+            // InternalPagos.g:7635:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7636:2: ( RULE_ID )
             {
-            // InternalPagos.g:7609:2: ( RULE_ID )
-            // InternalPagos.g:7610:3: RULE_ID
+            // InternalPagos.g:7636:2: ( RULE_ID )
+            // InternalPagos.g:7637:3: RULE_ID
             {
              before(grammarAccess.getInformationTemplateAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -22471,17 +22556,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__DescriptionAssignment_8"
-    // InternalPagos.g:7619:1: rule__InformationTemplate__DescriptionAssignment_8 : ( RULE_STRING ) ;
+    // InternalPagos.g:7646:1: rule__InformationTemplate__DescriptionAssignment_8 : ( RULE_STRING ) ;
     public final void rule__InformationTemplate__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7623:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7624:2: ( RULE_STRING )
+            // InternalPagos.g:7650:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:7651:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7624:2: ( RULE_STRING )
-            // InternalPagos.g:7625:3: RULE_STRING
+            // InternalPagos.g:7651:2: ( RULE_STRING )
+            // InternalPagos.g:7652:3: RULE_STRING
             {
              before(grammarAccess.getInformationTemplateAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22508,17 +22593,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__AttListsAssignment_13"
-    // InternalPagos.g:7634:1: rule__InformationTemplate__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7661:1: rule__InformationTemplate__AttListsAssignment_13 : ( ruleBusinessAttribute ) ;
     public final void rule__InformationTemplate__AttListsAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7638:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7639:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7665:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7666:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7639:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7640:3: ruleBusinessAttribute
+            // InternalPagos.g:7666:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7667:3: ruleBusinessAttribute
             {
              before(grammarAccess.getInformationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -22549,17 +22634,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__AttListsAssignment_14_1"
-    // InternalPagos.g:7649:1: rule__InformationTemplate__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7676:1: rule__InformationTemplate__AttListsAssignment_14_1 : ( ruleBusinessAttribute ) ;
     public final void rule__InformationTemplate__AttListsAssignment_14_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7653:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7654:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7680:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7681:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7654:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7655:3: ruleBusinessAttribute
+            // InternalPagos.g:7681:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7682:3: ruleBusinessAttribute
             {
              before(grammarAccess.getInformationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_14_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22589,26 +22674,22 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__InformationTemplate__AttListsAssignment_14_1"
 
 
-    // $ANTLR start "rule__InformationTemplate__TemplatesAssignment_17_4"
-    // InternalPagos.g:7664:1: rule__InformationTemplate__TemplatesAssignment_17_4 : ( ruleCalculationTemplate ) ;
-    public final void rule__InformationTemplate__TemplatesAssignment_17_4() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__TemplateCalcAssignment_17_2"
+    // InternalPagos.g:7691:1: rule__InformationTemplate__TemplateCalcAssignment_17_2 : ( RULE_ID ) ;
+    public final void rule__InformationTemplate__TemplateCalcAssignment_17_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7668:1: ( ( ruleCalculationTemplate ) )
-            // InternalPagos.g:7669:2: ( ruleCalculationTemplate )
+            // InternalPagos.g:7695:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7696:2: ( RULE_ID )
             {
-            // InternalPagos.g:7669:2: ( ruleCalculationTemplate )
-            // InternalPagos.g:7670:3: ruleCalculationTemplate
+            // InternalPagos.g:7696:2: ( RULE_ID )
+            // InternalPagos.g:7697:3: RULE_ID
             {
-             before(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_4_0()); 
-            pushFollow(FOLLOW_2);
-            ruleCalculationTemplate();
-
-            state._fsp--;
-
-             after(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_4_0()); 
+             before(grammarAccess.getInformationTemplateAccess().getTemplateCalcIDTerminalRuleCall_17_2_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getInformationTemplateAccess().getTemplateCalcIDTerminalRuleCall_17_2_0()); 
 
             }
 
@@ -22627,29 +22708,29 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__TemplatesAssignment_17_4"
+    // $ANTLR end "rule__InformationTemplate__TemplateCalcAssignment_17_2"
 
 
-    // $ANTLR start "rule__InformationTemplate__TemplatesAssignment_17_5_1"
-    // InternalPagos.g:7679:1: rule__InformationTemplate__TemplatesAssignment_17_5_1 : ( ruleCalculationTemplate ) ;
-    public final void rule__InformationTemplate__TemplatesAssignment_17_5_1() throws RecognitionException {
+    // $ANTLR start "rule__InformationTemplate__TemplatesAssignment_17_5"
+    // InternalPagos.g:7706:1: rule__InformationTemplate__TemplatesAssignment_17_5 : ( ruleCalculationTemplate ) ;
+    public final void rule__InformationTemplate__TemplatesAssignment_17_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7683:1: ( ( ruleCalculationTemplate ) )
-            // InternalPagos.g:7684:2: ( ruleCalculationTemplate )
+            // InternalPagos.g:7710:1: ( ( ruleCalculationTemplate ) )
+            // InternalPagos.g:7711:2: ( ruleCalculationTemplate )
             {
-            // InternalPagos.g:7684:2: ( ruleCalculationTemplate )
-            // InternalPagos.g:7685:3: ruleCalculationTemplate
+            // InternalPagos.g:7711:2: ( ruleCalculationTemplate )
+            // InternalPagos.g:7712:3: ruleCalculationTemplate
             {
-             before(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_1_0()); 
+             before(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_0()); 
             pushFollow(FOLLOW_2);
             ruleCalculationTemplate();
 
             state._fsp--;
 
-             after(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_1_0()); 
+             after(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_0()); 
 
             }
 
@@ -22668,21 +22749,62 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__InformationTemplate__TemplatesAssignment_17_5_1"
+    // $ANTLR end "rule__InformationTemplate__TemplatesAssignment_17_5"
+
+
+    // $ANTLR start "rule__InformationTemplate__TemplatesAssignment_17_6_1"
+    // InternalPagos.g:7721:1: rule__InformationTemplate__TemplatesAssignment_17_6_1 : ( ruleCalculationTemplate ) ;
+    public final void rule__InformationTemplate__TemplatesAssignment_17_6_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPagos.g:7725:1: ( ( ruleCalculationTemplate ) )
+            // InternalPagos.g:7726:2: ( ruleCalculationTemplate )
+            {
+            // InternalPagos.g:7726:2: ( ruleCalculationTemplate )
+            // InternalPagos.g:7727:3: ruleCalculationTemplate
+            {
+             before(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_6_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleCalculationTemplate();
+
+            state._fsp--;
+
+             after(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_6_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__InformationTemplate__TemplatesAssignment_17_6_1"
 
 
     // $ANTLR start "rule__InformationTemplate__ProvidersAssignment_18_4"
-    // InternalPagos.g:7694:1: rule__InformationTemplate__ProvidersAssignment_18_4 : ( ruleProvider ) ;
+    // InternalPagos.g:7736:1: rule__InformationTemplate__ProvidersAssignment_18_4 : ( ruleProvider ) ;
     public final void rule__InformationTemplate__ProvidersAssignment_18_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7698:1: ( ( ruleProvider ) )
-            // InternalPagos.g:7699:2: ( ruleProvider )
+            // InternalPagos.g:7740:1: ( ( ruleProvider ) )
+            // InternalPagos.g:7741:2: ( ruleProvider )
             {
-            // InternalPagos.g:7699:2: ( ruleProvider )
-            // InternalPagos.g:7700:3: ruleProvider
+            // InternalPagos.g:7741:2: ( ruleProvider )
+            // InternalPagos.g:7742:3: ruleProvider
             {
              before(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_4_0()); 
             pushFollow(FOLLOW_2);
@@ -22713,17 +22835,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InformationTemplate__ProvidersAssignment_18_5_1"
-    // InternalPagos.g:7709:1: rule__InformationTemplate__ProvidersAssignment_18_5_1 : ( ruleProvider ) ;
+    // InternalPagos.g:7751:1: rule__InformationTemplate__ProvidersAssignment_18_5_1 : ( ruleProvider ) ;
     public final void rule__InformationTemplate__ProvidersAssignment_18_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7713:1: ( ( ruleProvider ) )
-            // InternalPagos.g:7714:2: ( ruleProvider )
+            // InternalPagos.g:7755:1: ( ( ruleProvider ) )
+            // InternalPagos.g:7756:2: ( ruleProvider )
             {
-            // InternalPagos.g:7714:2: ( ruleProvider )
-            // InternalPagos.g:7715:3: ruleProvider
+            // InternalPagos.g:7756:2: ( ruleProvider )
+            // InternalPagos.g:7757:3: ruleProvider
             {
              before(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22754,17 +22876,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__NameAssignment_4"
-    // InternalPagos.g:7724:1: rule__CalculationTemplate__NameAssignment_4 : ( RULE_ID ) ;
+    // InternalPagos.g:7766:1: rule__CalculationTemplate__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__CalculationTemplate__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7728:1: ( ( RULE_ID ) )
-            // InternalPagos.g:7729:2: ( RULE_ID )
+            // InternalPagos.g:7770:1: ( ( RULE_ID ) )
+            // InternalPagos.g:7771:2: ( RULE_ID )
             {
-            // InternalPagos.g:7729:2: ( RULE_ID )
-            // InternalPagos.g:7730:3: RULE_ID
+            // InternalPagos.g:7771:2: ( RULE_ID )
+            // InternalPagos.g:7772:3: RULE_ID
             {
              before(grammarAccess.getCalculationTemplateAccess().getNameIDTerminalRuleCall_4_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -22791,17 +22913,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__DescriptionAssignment_8"
-    // InternalPagos.g:7739:1: rule__CalculationTemplate__DescriptionAssignment_8 : ( RULE_STRING ) ;
+    // InternalPagos.g:7781:1: rule__CalculationTemplate__DescriptionAssignment_8 : ( RULE_STRING ) ;
     public final void rule__CalculationTemplate__DescriptionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7743:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7744:2: ( RULE_STRING )
+            // InternalPagos.g:7785:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:7786:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7744:2: ( RULE_STRING )
-            // InternalPagos.g:7745:3: RULE_STRING
+            // InternalPagos.g:7786:2: ( RULE_STRING )
+            // InternalPagos.g:7787:3: RULE_STRING
             {
              before(grammarAccess.getCalculationTemplateAccess().getDescriptionSTRINGTerminalRuleCall_8_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -22828,17 +22950,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__AttListsAssignment_9_4"
-    // InternalPagos.g:7754:1: rule__CalculationTemplate__AttListsAssignment_9_4 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7796:1: rule__CalculationTemplate__AttListsAssignment_9_4 : ( ruleBusinessAttribute ) ;
     public final void rule__CalculationTemplate__AttListsAssignment_9_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7758:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7759:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7800:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7801:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7759:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7760:3: ruleBusinessAttribute
+            // InternalPagos.g:7801:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7802:3: ruleBusinessAttribute
             {
              before(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_4_0()); 
             pushFollow(FOLLOW_2);
@@ -22869,17 +22991,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__AttListsAssignment_9_5_1"
-    // InternalPagos.g:7769:1: rule__CalculationTemplate__AttListsAssignment_9_5_1 : ( ruleBusinessAttribute ) ;
+    // InternalPagos.g:7811:1: rule__CalculationTemplate__AttListsAssignment_9_5_1 : ( ruleBusinessAttribute ) ;
     public final void rule__CalculationTemplate__AttListsAssignment_9_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7773:1: ( ( ruleBusinessAttribute ) )
-            // InternalPagos.g:7774:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7815:1: ( ( ruleBusinessAttribute ) )
+            // InternalPagos.g:7816:2: ( ruleBusinessAttribute )
             {
-            // InternalPagos.g:7774:2: ( ruleBusinessAttribute )
-            // InternalPagos.g:7775:3: ruleBusinessAttribute
+            // InternalPagos.g:7816:2: ( ruleBusinessAttribute )
+            // InternalPagos.g:7817:3: ruleBusinessAttribute
             {
              before(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22910,17 +23032,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CalculationTemplate__FormulasAssignment_13"
-    // InternalPagos.g:7784:1: rule__CalculationTemplate__FormulasAssignment_13 : ( ruleFormula ) ;
+    // InternalPagos.g:7826:1: rule__CalculationTemplate__FormulasAssignment_13 : ( ruleFormula ) ;
     public final void rule__CalculationTemplate__FormulasAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7788:1: ( ( ruleFormula ) )
-            // InternalPagos.g:7789:2: ( ruleFormula )
+            // InternalPagos.g:7830:1: ( ( ruleFormula ) )
+            // InternalPagos.g:7831:2: ( ruleFormula )
             {
-            // InternalPagos.g:7789:2: ( ruleFormula )
-            // InternalPagos.g:7790:3: ruleFormula
+            // InternalPagos.g:7831:2: ( ruleFormula )
+            // InternalPagos.g:7832:3: ruleFormula
             {
              before(grammarAccess.getCalculationTemplateAccess().getFormulasFormulaParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -22951,17 +23073,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__FormulaBodyAssignment_0_1"
-    // InternalPagos.g:7799:1: rule__Formula__FormulaBodyAssignment_0_1 : ( ruleIfBlock ) ;
+    // InternalPagos.g:7841:1: rule__Formula__FormulaBodyAssignment_0_1 : ( ruleIfBlock ) ;
     public final void rule__Formula__FormulaBodyAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7803:1: ( ( ruleIfBlock ) )
-            // InternalPagos.g:7804:2: ( ruleIfBlock )
+            // InternalPagos.g:7845:1: ( ( ruleIfBlock ) )
+            // InternalPagos.g:7846:2: ( ruleIfBlock )
             {
-            // InternalPagos.g:7804:2: ( ruleIfBlock )
-            // InternalPagos.g:7805:3: ruleIfBlock
+            // InternalPagos.g:7846:2: ( ruleIfBlock )
+            // InternalPagos.g:7847:3: ruleIfBlock
             {
              before(grammarAccess.getFormulaAccess().getFormulaBodyIfBlockParserRuleCall_0_1_0()); 
             pushFollow(FOLLOW_2);
@@ -22992,17 +23114,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formula__FormulaReturnAssignment_1"
-    // InternalPagos.g:7814:1: rule__Formula__FormulaReturnAssignment_1 : ( ruleReturnBlock ) ;
+    // InternalPagos.g:7856:1: rule__Formula__FormulaReturnAssignment_1 : ( ruleReturnBlock ) ;
     public final void rule__Formula__FormulaReturnAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7818:1: ( ( ruleReturnBlock ) )
-            // InternalPagos.g:7819:2: ( ruleReturnBlock )
+            // InternalPagos.g:7860:1: ( ( ruleReturnBlock ) )
+            // InternalPagos.g:7861:2: ( ruleReturnBlock )
             {
-            // InternalPagos.g:7819:2: ( ruleReturnBlock )
-            // InternalPagos.g:7820:3: ruleReturnBlock
+            // InternalPagos.g:7861:2: ( ruleReturnBlock )
+            // InternalPagos.g:7862:3: ruleReturnBlock
             {
              before(grammarAccess.getFormulaAccess().getFormulaReturnReturnBlockParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23033,17 +23155,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__IfSentenceAssignment_1"
-    // InternalPagos.g:7829:1: rule__IfBlock__IfSentenceAssignment_1 : ( ruleIfCondition ) ;
+    // InternalPagos.g:7871:1: rule__IfBlock__IfSentenceAssignment_1 : ( ruleIfCondition ) ;
     public final void rule__IfBlock__IfSentenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7833:1: ( ( ruleIfCondition ) )
-            // InternalPagos.g:7834:2: ( ruleIfCondition )
+            // InternalPagos.g:7875:1: ( ( ruleIfCondition ) )
+            // InternalPagos.g:7876:2: ( ruleIfCondition )
             {
-            // InternalPagos.g:7834:2: ( ruleIfCondition )
-            // InternalPagos.g:7835:3: ruleIfCondition
+            // InternalPagos.g:7876:2: ( ruleIfCondition )
+            // InternalPagos.g:7877:3: ruleIfCondition
             {
              before(grammarAccess.getIfBlockAccess().getIfSentenceIfConditionParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23074,17 +23196,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfBlock__ElseSentenceAssignment_2_1"
-    // InternalPagos.g:7844:1: rule__IfBlock__ElseSentenceAssignment_2_1 : ( ruleElseSegment ) ;
+    // InternalPagos.g:7886:1: rule__IfBlock__ElseSentenceAssignment_2_1 : ( ruleElseSegment ) ;
     public final void rule__IfBlock__ElseSentenceAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7848:1: ( ( ruleElseSegment ) )
-            // InternalPagos.g:7849:2: ( ruleElseSegment )
+            // InternalPagos.g:7890:1: ( ( ruleElseSegment ) )
+            // InternalPagos.g:7891:2: ( ruleElseSegment )
             {
-            // InternalPagos.g:7849:2: ( ruleElseSegment )
-            // InternalPagos.g:7850:3: ruleElseSegment
+            // InternalPagos.g:7891:2: ( ruleElseSegment )
+            // InternalPagos.g:7892:3: ruleElseSegment
             {
              before(grammarAccess.getIfBlockAccess().getElseSentenceElseSegmentParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23115,17 +23237,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__LogExpAssignment_3"
-    // InternalPagos.g:7859:1: rule__IfCondition__LogExpAssignment_3 : ( ruleExpresionLogica ) ;
+    // InternalPagos.g:7901:1: rule__IfCondition__LogExpAssignment_3 : ( ruleExpresionLogica ) ;
     public final void rule__IfCondition__LogExpAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7863:1: ( ( ruleExpresionLogica ) )
-            // InternalPagos.g:7864:2: ( ruleExpresionLogica )
+            // InternalPagos.g:7905:1: ( ( ruleExpresionLogica ) )
+            // InternalPagos.g:7906:2: ( ruleExpresionLogica )
             {
-            // InternalPagos.g:7864:2: ( ruleExpresionLogica )
-            // InternalPagos.g:7865:3: ruleExpresionLogica
+            // InternalPagos.g:7906:2: ( ruleExpresionLogica )
+            // InternalPagos.g:7907:3: ruleExpresionLogica
             {
              before(grammarAccess.getIfConditionAccess().getLogExpExpresionLogicaParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -23156,17 +23278,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__FormulaReturnAssignment_7"
-    // InternalPagos.g:7874:1: rule__IfCondition__FormulaReturnAssignment_7 : ( ruleReturnBlock ) ;
+    // InternalPagos.g:7916:1: rule__IfCondition__FormulaReturnAssignment_7 : ( ruleReturnBlock ) ;
     public final void rule__IfCondition__FormulaReturnAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7878:1: ( ( ruleReturnBlock ) )
-            // InternalPagos.g:7879:2: ( ruleReturnBlock )
+            // InternalPagos.g:7920:1: ( ( ruleReturnBlock ) )
+            // InternalPagos.g:7921:2: ( ruleReturnBlock )
             {
-            // InternalPagos.g:7879:2: ( ruleReturnBlock )
-            // InternalPagos.g:7880:3: ruleReturnBlock
+            // InternalPagos.g:7921:2: ( ruleReturnBlock )
+            // InternalPagos.g:7922:3: ruleReturnBlock
             {
              before(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -23197,17 +23319,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseSegment__IfSentenceAssignment_2"
-    // InternalPagos.g:7889:1: rule__ElseSegment__IfSentenceAssignment_2 : ( ruleFormula ) ;
+    // InternalPagos.g:7931:1: rule__ElseSegment__IfSentenceAssignment_2 : ( ruleFormula ) ;
     public final void rule__ElseSegment__IfSentenceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7893:1: ( ( ruleFormula ) )
-            // InternalPagos.g:7894:2: ( ruleFormula )
+            // InternalPagos.g:7935:1: ( ( ruleFormula ) )
+            // InternalPagos.g:7936:2: ( ruleFormula )
             {
-            // InternalPagos.g:7894:2: ( ruleFormula )
-            // InternalPagos.g:7895:3: ruleFormula
+            // InternalPagos.g:7936:2: ( ruleFormula )
+            // InternalPagos.g:7937:3: ruleFormula
             {
              before(grammarAccess.getElseSegmentAccess().getIfSentenceFormulaParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23238,17 +23360,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReturnBlock__ExpressionAssignment_3"
-    // InternalPagos.g:7904:1: rule__ReturnBlock__ExpressionAssignment_3 : ( ruleAdicion ) ;
+    // InternalPagos.g:7946:1: rule__ReturnBlock__ExpressionAssignment_3 : ( ruleAdicion ) ;
     public final void rule__ReturnBlock__ExpressionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7908:1: ( ( ruleAdicion ) )
-            // InternalPagos.g:7909:2: ( ruleAdicion )
+            // InternalPagos.g:7950:1: ( ( ruleAdicion ) )
+            // InternalPagos.g:7951:2: ( ruleAdicion )
             {
-            // InternalPagos.g:7909:2: ( ruleAdicion )
-            // InternalPagos.g:7910:3: ruleAdicion
+            // InternalPagos.g:7951:2: ( ruleAdicion )
+            // InternalPagos.g:7952:3: ruleAdicion
             {
              before(grammarAccess.getReturnBlockAccess().getExpressionAdicionParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -23279,17 +23401,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__VariableAssignment_0"
-    // InternalPagos.g:7919:1: rule__ExpresionLogica__VariableAssignment_0 : ( ruleTerminalValue ) ;
+    // InternalPagos.g:7961:1: rule__ExpresionLogica__VariableAssignment_0 : ( ruleTerminalValue ) ;
     public final void rule__ExpresionLogica__VariableAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7923:1: ( ( ruleTerminalValue ) )
-            // InternalPagos.g:7924:2: ( ruleTerminalValue )
+            // InternalPagos.g:7965:1: ( ( ruleTerminalValue ) )
+            // InternalPagos.g:7966:2: ( ruleTerminalValue )
             {
-            // InternalPagos.g:7924:2: ( ruleTerminalValue )
-            // InternalPagos.g:7925:3: ruleTerminalValue
+            // InternalPagos.g:7966:2: ( ruleTerminalValue )
+            // InternalPagos.g:7967:3: ruleTerminalValue
             {
              before(grammarAccess.getExpresionLogicaAccess().getVariableTerminalValueParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -23320,17 +23442,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__LogOperAssignment_1_0"
-    // InternalPagos.g:7934:1: rule__ExpresionLogica__LogOperAssignment_1_0 : ( RULE_OPERADORLOGICO ) ;
+    // InternalPagos.g:7976:1: rule__ExpresionLogica__LogOperAssignment_1_0 : ( RULE_OPERADORLOGICO ) ;
     public final void rule__ExpresionLogica__LogOperAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7938:1: ( ( RULE_OPERADORLOGICO ) )
-            // InternalPagos.g:7939:2: ( RULE_OPERADORLOGICO )
+            // InternalPagos.g:7980:1: ( ( RULE_OPERADORLOGICO ) )
+            // InternalPagos.g:7981:2: ( RULE_OPERADORLOGICO )
             {
-            // InternalPagos.g:7939:2: ( RULE_OPERADORLOGICO )
-            // InternalPagos.g:7940:3: RULE_OPERADORLOGICO
+            // InternalPagos.g:7981:2: ( RULE_OPERADORLOGICO )
+            // InternalPagos.g:7982:3: RULE_OPERADORLOGICO
             {
              before(grammarAccess.getExpresionLogicaAccess().getLogOperOPERADORLOGICOTerminalRuleCall_1_0_0()); 
             match(input,RULE_OPERADORLOGICO,FOLLOW_2); 
@@ -23357,17 +23479,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__Variable2Assignment_1_1_0"
-    // InternalPagos.g:7949:1: rule__ExpresionLogica__Variable2Assignment_1_1_0 : ( ruleTerminalValue ) ;
+    // InternalPagos.g:7991:1: rule__ExpresionLogica__Variable2Assignment_1_1_0 : ( ruleTerminalValue ) ;
     public final void rule__ExpresionLogica__Variable2Assignment_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7953:1: ( ( ruleTerminalValue ) )
-            // InternalPagos.g:7954:2: ( ruleTerminalValue )
+            // InternalPagos.g:7995:1: ( ( ruleTerminalValue ) )
+            // InternalPagos.g:7996:2: ( ruleTerminalValue )
             {
-            // InternalPagos.g:7954:2: ( ruleTerminalValue )
-            // InternalPagos.g:7955:3: ruleTerminalValue
+            // InternalPagos.g:7996:2: ( ruleTerminalValue )
+            // InternalPagos.g:7997:3: ruleTerminalValue
             {
              before(grammarAccess.getExpresionLogicaAccess().getVariable2TerminalValueParserRuleCall_1_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -23398,17 +23520,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__LiteralAssignment_1_1_1"
-    // InternalPagos.g:7964:1: rule__ExpresionLogica__LiteralAssignment_1_1_1 : ( RULE_STRING ) ;
+    // InternalPagos.g:8006:1: rule__ExpresionLogica__LiteralAssignment_1_1_1 : ( RULE_STRING ) ;
     public final void rule__ExpresionLogica__LiteralAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7968:1: ( ( RULE_STRING ) )
-            // InternalPagos.g:7969:2: ( RULE_STRING )
+            // InternalPagos.g:8010:1: ( ( RULE_STRING ) )
+            // InternalPagos.g:8011:2: ( RULE_STRING )
             {
-            // InternalPagos.g:7969:2: ( RULE_STRING )
-            // InternalPagos.g:7970:3: RULE_STRING
+            // InternalPagos.g:8011:2: ( RULE_STRING )
+            // InternalPagos.g:8012:3: RULE_STRING
             {
              before(grammarAccess.getExpresionLogicaAccess().getLiteralSTRINGTerminalRuleCall_1_1_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -23435,17 +23557,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__ConOperAssignment_2_0"
-    // InternalPagos.g:7979:1: rule__ExpresionLogica__ConOperAssignment_2_0 : ( RULE_LOGICALCONN ) ;
+    // InternalPagos.g:8021:1: rule__ExpresionLogica__ConOperAssignment_2_0 : ( RULE_LOGICALCONN ) ;
     public final void rule__ExpresionLogica__ConOperAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7983:1: ( ( RULE_LOGICALCONN ) )
-            // InternalPagos.g:7984:2: ( RULE_LOGICALCONN )
+            // InternalPagos.g:8025:1: ( ( RULE_LOGICALCONN ) )
+            // InternalPagos.g:8026:2: ( RULE_LOGICALCONN )
             {
-            // InternalPagos.g:7984:2: ( RULE_LOGICALCONN )
-            // InternalPagos.g:7985:3: RULE_LOGICALCONN
+            // InternalPagos.g:8026:2: ( RULE_LOGICALCONN )
+            // InternalPagos.g:8027:3: RULE_LOGICALCONN
             {
              before(grammarAccess.getExpresionLogicaAccess().getConOperLOGICALCONNTerminalRuleCall_2_0_0()); 
             match(input,RULE_LOGICALCONN,FOLLOW_2); 
@@ -23472,17 +23594,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExpresionLogica__ExpAssignment_2_1"
-    // InternalPagos.g:7994:1: rule__ExpresionLogica__ExpAssignment_2_1 : ( ruleExpresionLogica ) ;
+    // InternalPagos.g:8036:1: rule__ExpresionLogica__ExpAssignment_2_1 : ( ruleExpresionLogica ) ;
     public final void rule__ExpresionLogica__ExpAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:7998:1: ( ( ruleExpresionLogica ) )
-            // InternalPagos.g:7999:2: ( ruleExpresionLogica )
+            // InternalPagos.g:8040:1: ( ( ruleExpresionLogica ) )
+            // InternalPagos.g:8041:2: ( ruleExpresionLogica )
             {
-            // InternalPagos.g:7999:2: ( ruleExpresionLogica )
-            // InternalPagos.g:8000:3: ruleExpresionLogica
+            // InternalPagos.g:8041:2: ( ruleExpresionLogica )
+            // InternalPagos.g:8042:3: ruleExpresionLogica
             {
              before(grammarAccess.getExpresionLogicaAccess().getExpExpresionLogicaParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23513,17 +23635,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__OperatorAssignment_1_1"
-    // InternalPagos.g:8009:1: rule__Adicion__OperatorAssignment_1_1 : ( RULE_ADDOP ) ;
+    // InternalPagos.g:8051:1: rule__Adicion__OperatorAssignment_1_1 : ( RULE_ADDOP ) ;
     public final void rule__Adicion__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8013:1: ( ( RULE_ADDOP ) )
-            // InternalPagos.g:8014:2: ( RULE_ADDOP )
+            // InternalPagos.g:8055:1: ( ( RULE_ADDOP ) )
+            // InternalPagos.g:8056:2: ( RULE_ADDOP )
             {
-            // InternalPagos.g:8014:2: ( RULE_ADDOP )
-            // InternalPagos.g:8015:3: RULE_ADDOP
+            // InternalPagos.g:8056:2: ( RULE_ADDOP )
+            // InternalPagos.g:8057:3: RULE_ADDOP
             {
              before(grammarAccess.getAdicionAccess().getOperatorADDOPTerminalRuleCall_1_1_0()); 
             match(input,RULE_ADDOP,FOLLOW_2); 
@@ -23550,17 +23672,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Adicion__RexpAssignment_1_2"
-    // InternalPagos.g:8024:1: rule__Adicion__RexpAssignment_1_2 : ( ruleMultiplicacion ) ;
+    // InternalPagos.g:8066:1: rule__Adicion__RexpAssignment_1_2 : ( ruleMultiplicacion ) ;
     public final void rule__Adicion__RexpAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8028:1: ( ( ruleMultiplicacion ) )
-            // InternalPagos.g:8029:2: ( ruleMultiplicacion )
+            // InternalPagos.g:8070:1: ( ( ruleMultiplicacion ) )
+            // InternalPagos.g:8071:2: ( ruleMultiplicacion )
             {
-            // InternalPagos.g:8029:2: ( ruleMultiplicacion )
-            // InternalPagos.g:8030:3: ruleMultiplicacion
+            // InternalPagos.g:8071:2: ( ruleMultiplicacion )
+            // InternalPagos.g:8072:3: ruleMultiplicacion
             {
              before(grammarAccess.getAdicionAccess().getRexpMultiplicacionParserRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23591,17 +23713,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__OperatorAssignment_1_1"
-    // InternalPagos.g:8039:1: rule__Multiplicacion__OperatorAssignment_1_1 : ( RULE_MULTOP ) ;
+    // InternalPagos.g:8081:1: rule__Multiplicacion__OperatorAssignment_1_1 : ( RULE_MULTOP ) ;
     public final void rule__Multiplicacion__OperatorAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8043:1: ( ( RULE_MULTOP ) )
-            // InternalPagos.g:8044:2: ( RULE_MULTOP )
+            // InternalPagos.g:8085:1: ( ( RULE_MULTOP ) )
+            // InternalPagos.g:8086:2: ( RULE_MULTOP )
             {
-            // InternalPagos.g:8044:2: ( RULE_MULTOP )
-            // InternalPagos.g:8045:3: RULE_MULTOP
+            // InternalPagos.g:8086:2: ( RULE_MULTOP )
+            // InternalPagos.g:8087:3: RULE_MULTOP
             {
              before(grammarAccess.getMultiplicacionAccess().getOperatorMULTOPTerminalRuleCall_1_1_0()); 
             match(input,RULE_MULTOP,FOLLOW_2); 
@@ -23628,17 +23750,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplicacion__RexpAssignment_1_2"
-    // InternalPagos.g:8054:1: rule__Multiplicacion__RexpAssignment_1_2 : ( ruleSigleExp ) ;
+    // InternalPagos.g:8096:1: rule__Multiplicacion__RexpAssignment_1_2 : ( ruleSigleExp ) ;
     public final void rule__Multiplicacion__RexpAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8058:1: ( ( ruleSigleExp ) )
-            // InternalPagos.g:8059:2: ( ruleSigleExp )
+            // InternalPagos.g:8100:1: ( ( ruleSigleExp ) )
+            // InternalPagos.g:8101:2: ( ruleSigleExp )
             {
-            // InternalPagos.g:8059:2: ( ruleSigleExp )
-            // InternalPagos.g:8060:3: ruleSigleExp
+            // InternalPagos.g:8101:2: ( ruleSigleExp )
+            // InternalPagos.g:8102:3: ruleSigleExp
             {
              before(grammarAccess.getMultiplicacionAccess().getRexpSigleExpParserRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -23669,17 +23791,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__NameAssignment_2"
-    // InternalPagos.g:8069:1: rule__BusinessAttribute__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalPagos.g:8111:1: rule__BusinessAttribute__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__BusinessAttribute__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8073:1: ( ( RULE_ID ) )
-            // InternalPagos.g:8074:2: ( RULE_ID )
+            // InternalPagos.g:8115:1: ( ( RULE_ID ) )
+            // InternalPagos.g:8116:2: ( RULE_ID )
             {
-            // InternalPagos.g:8074:2: ( RULE_ID )
-            // InternalPagos.g:8075:3: RULE_ID
+            // InternalPagos.g:8116:2: ( RULE_ID )
+            // InternalPagos.g:8117:3: RULE_ID
             {
              before(grammarAccess.getBusinessAttributeAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -23706,17 +23828,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__TypeAssignment_4"
-    // InternalPagos.g:8084:1: rule__BusinessAttribute__TypeAssignment_4 : ( RULE_TYPE ) ;
+    // InternalPagos.g:8126:1: rule__BusinessAttribute__TypeAssignment_4 : ( RULE_TYPE ) ;
     public final void rule__BusinessAttribute__TypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8088:1: ( ( RULE_TYPE ) )
-            // InternalPagos.g:8089:2: ( RULE_TYPE )
+            // InternalPagos.g:8130:1: ( ( RULE_TYPE ) )
+            // InternalPagos.g:8131:2: ( RULE_TYPE )
             {
-            // InternalPagos.g:8089:2: ( RULE_TYPE )
-            // InternalPagos.g:8090:3: RULE_TYPE
+            // InternalPagos.g:8131:2: ( RULE_TYPE )
+            // InternalPagos.g:8132:3: RULE_TYPE
             {
              before(grammarAccess.getBusinessAttributeAccess().getTypeTYPETerminalRuleCall_4_0()); 
             match(input,RULE_TYPE,FOLLOW_2); 
@@ -23743,17 +23865,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__ExpAssignment_5_1"
-    // InternalPagos.g:8099:1: rule__BusinessAttribute__ExpAssignment_5_1 : ( ruleAdicion ) ;
+    // InternalPagos.g:8141:1: rule__BusinessAttribute__ExpAssignment_5_1 : ( ruleAdicion ) ;
     public final void rule__BusinessAttribute__ExpAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8103:1: ( ( ruleAdicion ) )
-            // InternalPagos.g:8104:2: ( ruleAdicion )
+            // InternalPagos.g:8145:1: ( ( ruleAdicion ) )
+            // InternalPagos.g:8146:2: ( ruleAdicion )
             {
-            // InternalPagos.g:8104:2: ( ruleAdicion )
-            // InternalPagos.g:8105:3: ruleAdicion
+            // InternalPagos.g:8146:2: ( ruleAdicion )
+            // InternalPagos.g:8147:3: ruleAdicion
             {
              before(grammarAccess.getBusinessAttributeAccess().getExpAdicionParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23784,17 +23906,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BusinessAttribute__IsIndexAssignment_6"
-    // InternalPagos.g:8114:1: rule__BusinessAttribute__IsIndexAssignment_6 : ( RULE_INDEX ) ;
+    // InternalPagos.g:8156:1: rule__BusinessAttribute__IsIndexAssignment_6 : ( RULE_INDEX ) ;
     public final void rule__BusinessAttribute__IsIndexAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8118:1: ( ( RULE_INDEX ) )
-            // InternalPagos.g:8119:2: ( RULE_INDEX )
+            // InternalPagos.g:8160:1: ( ( RULE_INDEX ) )
+            // InternalPagos.g:8161:2: ( RULE_INDEX )
             {
-            // InternalPagos.g:8119:2: ( RULE_INDEX )
-            // InternalPagos.g:8120:3: RULE_INDEX
+            // InternalPagos.g:8161:2: ( RULE_INDEX )
+            // InternalPagos.g:8162:3: RULE_INDEX
             {
              before(grammarAccess.getBusinessAttributeAccess().getIsIndexINDEXTerminalRuleCall_6_0()); 
             match(input,RULE_INDEX,FOLLOW_2); 
@@ -23821,21 +23943,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__ParentAssignment_0_1_2"
-    // InternalPagos.g:8129:1: rule__TerminalValue__ParentAssignment_0_1_2 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8171:1: rule__TerminalValue__ParentAssignment_0_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__ParentAssignment_0_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8133:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8134:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8175:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8176:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8134:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8135:3: ( RULE_ID )
+            // InternalPagos.g:8176:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8177:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getParentParticipantCrossReference_0_1_2_0()); 
-            // InternalPagos.g:8136:3: ( RULE_ID )
-            // InternalPagos.g:8137:4: RULE_ID
+            // InternalPagos.g:8178:3: ( RULE_ID )
+            // InternalPagos.g:8179:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getParentParticipantIDTerminalRuleCall_0_1_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -23866,21 +23988,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__VariableAssignment_0_2"
-    // InternalPagos.g:8148:1: rule__TerminalValue__VariableAssignment_0_2 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8190:1: rule__TerminalValue__VariableAssignment_0_2 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__VariableAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8152:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8153:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8194:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8195:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8153:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8154:3: ( RULE_ID )
+            // InternalPagos.g:8195:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8196:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_0_2_0()); 
-            // InternalPagos.g:8155:3: ( RULE_ID )
-            // InternalPagos.g:8156:4: RULE_ID
+            // InternalPagos.g:8197:3: ( RULE_ID )
+            // InternalPagos.g:8198:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -23911,21 +24033,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__ParentAssignment_1_2"
-    // InternalPagos.g:8167:1: rule__TerminalValue__ParentAssignment_1_2 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8209:1: rule__TerminalValue__ParentAssignment_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__ParentAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8171:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8172:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8213:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8214:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8172:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8173:3: ( RULE_ID )
+            // InternalPagos.g:8214:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8215:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getParentSuperEntityCrossReference_1_2_0()); 
-            // InternalPagos.g:8174:3: ( RULE_ID )
-            // InternalPagos.g:8175:4: RULE_ID
+            // InternalPagos.g:8216:3: ( RULE_ID )
+            // InternalPagos.g:8217:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getParentSuperEntityIDTerminalRuleCall_1_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -23956,21 +24078,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__VariableAssignment_1_4"
-    // InternalPagos.g:8186:1: rule__TerminalValue__VariableAssignment_1_4 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8228:1: rule__TerminalValue__VariableAssignment_1_4 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__VariableAssignment_1_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8190:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8191:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8232:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8233:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8191:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8192:3: ( RULE_ID )
+            // InternalPagos.g:8233:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8234:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_1_4_0()); 
-            // InternalPagos.g:8193:3: ( RULE_ID )
-            // InternalPagos.g:8194:4: RULE_ID
+            // InternalPagos.g:8235:3: ( RULE_ID )
+            // InternalPagos.g:8236:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -24001,21 +24123,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__ParentAssignment_2_2"
-    // InternalPagos.g:8205:1: rule__TerminalValue__ParentAssignment_2_2 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8247:1: rule__TerminalValue__ParentAssignment_2_2 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__ParentAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8209:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8210:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8251:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8252:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8210:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8211:3: ( RULE_ID )
+            // InternalPagos.g:8252:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8253:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getParentInformationTemplateCrossReference_2_2_0()); 
-            // InternalPagos.g:8212:3: ( RULE_ID )
-            // InternalPagos.g:8213:4: RULE_ID
+            // InternalPagos.g:8254:3: ( RULE_ID )
+            // InternalPagos.g:8255:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getParentInformationTemplateIDTerminalRuleCall_2_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -24046,21 +24168,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__VariableAssignment_2_4"
-    // InternalPagos.g:8224:1: rule__TerminalValue__VariableAssignment_2_4 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8266:1: rule__TerminalValue__VariableAssignment_2_4 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__VariableAssignment_2_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8228:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8229:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8270:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8271:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8229:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8230:3: ( RULE_ID )
+            // InternalPagos.g:8271:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8272:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_2_4_0()); 
-            // InternalPagos.g:8231:3: ( RULE_ID )
-            // InternalPagos.g:8232:4: RULE_ID
+            // InternalPagos.g:8273:3: ( RULE_ID )
+            // InternalPagos.g:8274:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -24091,21 +24213,21 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__ParentAssignment_3_2"
-    // InternalPagos.g:8243:1: rule__TerminalValue__ParentAssignment_3_2 : ( ( RULE_ID ) ) ;
+    // InternalPagos.g:8285:1: rule__TerminalValue__ParentAssignment_3_2 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalValue__ParentAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8247:1: ( ( ( RULE_ID ) ) )
-            // InternalPagos.g:8248:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8289:1: ( ( ( RULE_ID ) ) )
+            // InternalPagos.g:8290:2: ( ( RULE_ID ) )
             {
-            // InternalPagos.g:8248:2: ( ( RULE_ID ) )
-            // InternalPagos.g:8249:3: ( RULE_ID )
+            // InternalPagos.g:8290:2: ( ( RULE_ID ) )
+            // InternalPagos.g:8291:3: ( RULE_ID )
             {
              before(grammarAccess.getTerminalValueAccess().getParentCalculationTemplateCrossReference_3_2_0()); 
-            // InternalPagos.g:8250:3: ( RULE_ID )
-            // InternalPagos.g:8251:4: RULE_ID
+            // InternalPagos.g:8292:3: ( RULE_ID )
+            // InternalPagos.g:8293:4: RULE_ID
             {
              before(grammarAccess.getTerminalValueAccess().getParentCalculationTemplateIDTerminalRuleCall_3_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -24136,17 +24258,17 @@ public class InternalPagosParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TerminalValue__ValorAssignment_4"
-    // InternalPagos.g:8262:1: rule__TerminalValue__ValorAssignment_4 : ( ruleNumber ) ;
+    // InternalPagos.g:8304:1: rule__TerminalValue__ValorAssignment_4 : ( ruleNumber ) ;
     public final void rule__TerminalValue__ValorAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPagos.g:8266:1: ( ( ruleNumber ) )
-            // InternalPagos.g:8267:2: ( ruleNumber )
+            // InternalPagos.g:8308:1: ( ( ruleNumber ) )
+            // InternalPagos.g:8309:2: ( ruleNumber )
             {
-            // InternalPagos.g:8267:2: ( ruleNumber )
-            // InternalPagos.g:8268:3: ruleNumber
+            // InternalPagos.g:8309:2: ( ruleNumber )
+            // InternalPagos.g:8310:3: ruleNumber
             {
              before(grammarAccess.getTerminalValueAccess().getValorNumberParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);

@@ -1708,7 +1708,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInformationTemplate"
-    // InternalPagos.g:871:1: ruleInformationTemplate returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )? (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )? ) ;
+    // InternalPagos.g:871:1: ruleInformationTemplate returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )? (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )? ) ;
     public final EObject ruleInformationTemplate() throws RecognitionException {
         EObject current = null;
 
@@ -1729,38 +1729,39 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         Token this_RBRACE_17=null;
         Token this_COMMA_18=null;
         Token otherlv_19=null;
-        Token this_COLON_20=null;
-        Token this_LBRACKET_21=null;
-        Token this_COMMA_23=null;
-        Token this_RBRACKET_25=null;
-        Token this_COMMA_26=null;
-        Token otherlv_27=null;
-        Token this_COLON_28=null;
-        Token this_LBRACKET_29=null;
-        Token this_COMMA_31=null;
-        Token this_RBRACKET_33=null;
+        Token lv_templateCalc_20_0=null;
+        Token this_COLON_21=null;
+        Token this_LBRACKET_22=null;
+        Token this_COMMA_24=null;
+        Token this_RBRACKET_26=null;
+        Token this_COMMA_27=null;
+        Token otherlv_28=null;
+        Token this_COLON_29=null;
+        Token this_LBRACKET_30=null;
+        Token this_COMMA_32=null;
+        Token this_RBRACKET_34=null;
         EObject lv_attLists_13_0 = null;
 
         EObject lv_attLists_15_0 = null;
 
-        EObject lv_templates_22_0 = null;
+        EObject lv_templates_23_0 = null;
 
-        EObject lv_templates_24_0 = null;
+        EObject lv_templates_25_0 = null;
 
-        EObject lv_providers_30_0 = null;
+        EObject lv_providers_31_0 = null;
 
-        EObject lv_providers_32_0 = null;
+        EObject lv_providers_33_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPagos.g:877:2: ( ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )? (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )? ) )
-            // InternalPagos.g:878:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )? (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )? )
+            // InternalPagos.g:877:2: ( ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )? (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )? ) )
+            // InternalPagos.g:878:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )? (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )? )
             {
-            // InternalPagos.g:878:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )? (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )? )
-            // InternalPagos.g:879:3: () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )? (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )?
+            // InternalPagos.g:878:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )? (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )? )
+            // InternalPagos.g:879:3: () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) this_COMMA_9= RULE_COMMA otherlv_10= 'FormAttributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET this_RBRACE_17= RULE_RBRACE (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )? (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )?
             {
             // InternalPagos.g:879:3: ()
             // InternalPagos.g:880:4: 
@@ -1963,7 +1964,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_RBRACE_17, grammarAccess.getInformationTemplateAccess().getRBRACETerminalRuleCall_16());
             		
-            // InternalPagos.g:1014:3: (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET )?
+            // InternalPagos.g:1014:3: (this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1976,35 +1977,61 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalPagos.g:1015:4: this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' this_COLON_20= RULE_COLON this_LBRACKET_21= RULE_LBRACKET ( (lv_templates_22_0= ruleCalculationTemplate ) ) (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )* this_RBRACKET_25= RULE_RBRACKET
+                    // InternalPagos.g:1015:4: this_COMMA_18= RULE_COMMA otherlv_19= 'calculationtemplates' ( (lv_templateCalc_20_0= RULE_ID ) ) this_COLON_21= RULE_COLON this_LBRACKET_22= RULE_LBRACKET ( (lv_templates_23_0= ruleCalculationTemplate ) ) (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )* this_RBRACKET_26= RULE_RBRACKET
                     {
                     this_COMMA_18=(Token)match(input,RULE_COMMA,FOLLOW_20); 
 
                     				newLeafNode(this_COMMA_18, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_0());
                     			
-                    otherlv_19=(Token)match(input,38,FOLLOW_4); 
+                    otherlv_19=(Token)match(input,38,FOLLOW_5); 
 
                     				newLeafNode(otherlv_19, grammarAccess.getInformationTemplateAccess().getCalculationtemplatesKeyword_17_1());
                     			
-                    this_COLON_20=(Token)match(input,RULE_COLON,FOLLOW_11); 
-
-                    				newLeafNode(this_COLON_20, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_2());
-                    			
-                    this_LBRACKET_21=(Token)match(input,RULE_LBRACKET,FOLLOW_8); 
-
-                    				newLeafNode(this_LBRACKET_21, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_3());
-                    			
-                    // InternalPagos.g:1031:4: ( (lv_templates_22_0= ruleCalculationTemplate ) )
-                    // InternalPagos.g:1032:5: (lv_templates_22_0= ruleCalculationTemplate )
+                    // InternalPagos.g:1023:4: ( (lv_templateCalc_20_0= RULE_ID ) )
+                    // InternalPagos.g:1024:5: (lv_templateCalc_20_0= RULE_ID )
                     {
-                    // InternalPagos.g:1032:5: (lv_templates_22_0= ruleCalculationTemplate )
-                    // InternalPagos.g:1033:6: lv_templates_22_0= ruleCalculationTemplate
+                    // InternalPagos.g:1024:5: (lv_templateCalc_20_0= RULE_ID )
+                    // InternalPagos.g:1025:6: lv_templateCalc_20_0= RULE_ID
+                    {
+                    lv_templateCalc_20_0=(Token)match(input,RULE_ID,FOLLOW_4); 
+
+                    						newLeafNode(lv_templateCalc_20_0, grammarAccess.getInformationTemplateAccess().getTemplateCalcIDTerminalRuleCall_17_2_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getInformationTemplateRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"templateCalc",
+                    							lv_templateCalc_20_0,
+                    							"co.edu.uniandes.Pagos.ID");
+                    					
+
+                    }
+
+
+                    }
+
+                    this_COLON_21=(Token)match(input,RULE_COLON,FOLLOW_11); 
+
+                    				newLeafNode(this_COLON_21, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_3());
+                    			
+                    this_LBRACKET_22=(Token)match(input,RULE_LBRACKET,FOLLOW_8); 
+
+                    				newLeafNode(this_LBRACKET_22, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_4());
+                    			
+                    // InternalPagos.g:1049:4: ( (lv_templates_23_0= ruleCalculationTemplate ) )
+                    // InternalPagos.g:1050:5: (lv_templates_23_0= ruleCalculationTemplate )
+                    {
+                    // InternalPagos.g:1050:5: (lv_templates_23_0= ruleCalculationTemplate )
+                    // InternalPagos.g:1051:6: lv_templates_23_0= ruleCalculationTemplate
                     {
 
-                    						newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_4_0());
+                    						newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_0());
                     					
                     pushFollow(FOLLOW_12);
-                    lv_templates_22_0=ruleCalculationTemplate();
+                    lv_templates_23_0=ruleCalculationTemplate();
 
                     state._fsp--;
 
@@ -2015,7 +2042,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     						add(
                     							current,
                     							"templates",
-                    							lv_templates_22_0,
+                    							lv_templates_23_0,
                     							"co.edu.uniandes.Pagos.CalculationTemplate");
                     						afterParserOrEnumRuleCall();
                     					
@@ -2025,7 +2052,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:1050:4: (this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) ) )*
+                    // InternalPagos.g:1068:4: (this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) ) )*
                     loop9:
                     do {
                         int alt9=2;
@@ -2038,23 +2065,23 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalPagos.g:1051:5: this_COMMA_23= RULE_COMMA ( (lv_templates_24_0= ruleCalculationTemplate ) )
+                    	    // InternalPagos.g:1069:5: this_COMMA_24= RULE_COMMA ( (lv_templates_25_0= ruleCalculationTemplate ) )
                     	    {
-                    	    this_COMMA_23=(Token)match(input,RULE_COMMA,FOLLOW_8); 
+                    	    this_COMMA_24=(Token)match(input,RULE_COMMA,FOLLOW_8); 
 
-                    	    					newLeafNode(this_COMMA_23, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_5_0());
+                    	    					newLeafNode(this_COMMA_24, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_6_0());
                     	    				
-                    	    // InternalPagos.g:1055:5: ( (lv_templates_24_0= ruleCalculationTemplate ) )
-                    	    // InternalPagos.g:1056:6: (lv_templates_24_0= ruleCalculationTemplate )
+                    	    // InternalPagos.g:1073:5: ( (lv_templates_25_0= ruleCalculationTemplate ) )
+                    	    // InternalPagos.g:1074:6: (lv_templates_25_0= ruleCalculationTemplate )
                     	    {
-                    	    // InternalPagos.g:1056:6: (lv_templates_24_0= ruleCalculationTemplate )
-                    	    // InternalPagos.g:1057:7: lv_templates_24_0= ruleCalculationTemplate
+                    	    // InternalPagos.g:1074:6: (lv_templates_25_0= ruleCalculationTemplate )
+                    	    // InternalPagos.g:1075:7: lv_templates_25_0= ruleCalculationTemplate
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_1_0());
+                    	    							newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_6_1_0());
                     	    						
                     	    pushFollow(FOLLOW_12);
-                    	    lv_templates_24_0=ruleCalculationTemplate();
+                    	    lv_templates_25_0=ruleCalculationTemplate();
 
                     	    state._fsp--;
 
@@ -2065,7 +2092,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     	    							add(
                     	    								current,
                     	    								"templates",
-                    	    								lv_templates_24_0,
+                    	    								lv_templates_25_0,
                     	    								"co.edu.uniandes.Pagos.CalculationTemplate");
                     	    							afterParserOrEnumRuleCall();
                     	    						
@@ -2084,9 +2111,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    this_RBRACKET_25=(Token)match(input,RULE_RBRACKET,FOLLOW_19); 
+                    this_RBRACKET_26=(Token)match(input,RULE_RBRACKET,FOLLOW_19); 
 
-                    				newLeafNode(this_RBRACKET_25, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_6());
+                    				newLeafNode(this_RBRACKET_26, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_7());
                     			
 
                     }
@@ -2094,7 +2121,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:1080:3: (this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET )?
+            // InternalPagos.g:1098:3: (this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2107,35 +2134,35 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalPagos.g:1081:4: this_COMMA_26= RULE_COMMA otherlv_27= 'providers' this_COLON_28= RULE_COLON this_LBRACKET_29= RULE_LBRACKET ( (lv_providers_30_0= ruleProvider ) ) (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )* this_RBRACKET_33= RULE_RBRACKET
+                    // InternalPagos.g:1099:4: this_COMMA_27= RULE_COMMA otherlv_28= 'providers' this_COLON_29= RULE_COLON this_LBRACKET_30= RULE_LBRACKET ( (lv_providers_31_0= ruleProvider ) ) (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )* this_RBRACKET_34= RULE_RBRACKET
                     {
-                    this_COMMA_26=(Token)match(input,RULE_COMMA,FOLLOW_21); 
+                    this_COMMA_27=(Token)match(input,RULE_COMMA,FOLLOW_21); 
 
-                    				newLeafNode(this_COMMA_26, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_0());
+                    				newLeafNode(this_COMMA_27, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_0());
                     			
-                    otherlv_27=(Token)match(input,39,FOLLOW_4); 
+                    otherlv_28=(Token)match(input,39,FOLLOW_4); 
 
-                    				newLeafNode(otherlv_27, grammarAccess.getInformationTemplateAccess().getProvidersKeyword_18_1());
+                    				newLeafNode(otherlv_28, grammarAccess.getInformationTemplateAccess().getProvidersKeyword_18_1());
                     			
-                    this_COLON_28=(Token)match(input,RULE_COLON,FOLLOW_11); 
+                    this_COLON_29=(Token)match(input,RULE_COLON,FOLLOW_11); 
 
-                    				newLeafNode(this_COLON_28, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_18_2());
+                    				newLeafNode(this_COLON_29, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_18_2());
                     			
-                    this_LBRACKET_29=(Token)match(input,RULE_LBRACKET,FOLLOW_8); 
+                    this_LBRACKET_30=(Token)match(input,RULE_LBRACKET,FOLLOW_8); 
 
-                    				newLeafNode(this_LBRACKET_29, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_18_3());
+                    				newLeafNode(this_LBRACKET_30, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_18_3());
                     			
-                    // InternalPagos.g:1097:4: ( (lv_providers_30_0= ruleProvider ) )
-                    // InternalPagos.g:1098:5: (lv_providers_30_0= ruleProvider )
+                    // InternalPagos.g:1115:4: ( (lv_providers_31_0= ruleProvider ) )
+                    // InternalPagos.g:1116:5: (lv_providers_31_0= ruleProvider )
                     {
-                    // InternalPagos.g:1098:5: (lv_providers_30_0= ruleProvider )
-                    // InternalPagos.g:1099:6: lv_providers_30_0= ruleProvider
+                    // InternalPagos.g:1116:5: (lv_providers_31_0= ruleProvider )
+                    // InternalPagos.g:1117:6: lv_providers_31_0= ruleProvider
                     {
 
                     						newCompositeNode(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_4_0());
                     					
                     pushFollow(FOLLOW_12);
-                    lv_providers_30_0=ruleProvider();
+                    lv_providers_31_0=ruleProvider();
 
                     state._fsp--;
 
@@ -2146,7 +2173,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     						add(
                     							current,
                     							"providers",
-                    							lv_providers_30_0,
+                    							lv_providers_31_0,
                     							"co.edu.uniandes.Pagos.Provider");
                     						afterParserOrEnumRuleCall();
                     					
@@ -2156,7 +2183,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:1116:4: (this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) ) )*
+                    // InternalPagos.g:1134:4: (this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) ) )*
                     loop11:
                     do {
                         int alt11=2;
@@ -2169,23 +2196,23 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // InternalPagos.g:1117:5: this_COMMA_31= RULE_COMMA ( (lv_providers_32_0= ruleProvider ) )
+                    	    // InternalPagos.g:1135:5: this_COMMA_32= RULE_COMMA ( (lv_providers_33_0= ruleProvider ) )
                     	    {
-                    	    this_COMMA_31=(Token)match(input,RULE_COMMA,FOLLOW_8); 
+                    	    this_COMMA_32=(Token)match(input,RULE_COMMA,FOLLOW_8); 
 
-                    	    					newLeafNode(this_COMMA_31, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_5_0());
+                    	    					newLeafNode(this_COMMA_32, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_5_0());
                     	    				
-                    	    // InternalPagos.g:1121:5: ( (lv_providers_32_0= ruleProvider ) )
-                    	    // InternalPagos.g:1122:6: (lv_providers_32_0= ruleProvider )
+                    	    // InternalPagos.g:1139:5: ( (lv_providers_33_0= ruleProvider ) )
+                    	    // InternalPagos.g:1140:6: (lv_providers_33_0= ruleProvider )
                     	    {
-                    	    // InternalPagos.g:1122:6: (lv_providers_32_0= ruleProvider )
-                    	    // InternalPagos.g:1123:7: lv_providers_32_0= ruleProvider
+                    	    // InternalPagos.g:1140:6: (lv_providers_33_0= ruleProvider )
+                    	    // InternalPagos.g:1141:7: lv_providers_33_0= ruleProvider
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_5_1_0());
                     	    						
                     	    pushFollow(FOLLOW_12);
-                    	    lv_providers_32_0=ruleProvider();
+                    	    lv_providers_33_0=ruleProvider();
 
                     	    state._fsp--;
 
@@ -2196,7 +2223,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     	    							add(
                     	    								current,
                     	    								"providers",
-                    	    								lv_providers_32_0,
+                    	    								lv_providers_33_0,
                     	    								"co.edu.uniandes.Pagos.Provider");
                     	    							afterParserOrEnumRuleCall();
                     	    						
@@ -2215,9 +2242,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    this_RBRACKET_33=(Token)match(input,RULE_RBRACKET,FOLLOW_2); 
+                    this_RBRACKET_34=(Token)match(input,RULE_RBRACKET,FOLLOW_2); 
 
-                    				newLeafNode(this_RBRACKET_33, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_18_6());
+                    				newLeafNode(this_RBRACKET_34, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_18_6());
                     			
 
                     }
@@ -2248,7 +2275,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCalculationTemplate"
-    // InternalPagos.g:1150:1: entryRuleCalculationTemplate returns [EObject current=null] : iv_ruleCalculationTemplate= ruleCalculationTemplate EOF ;
+    // InternalPagos.g:1168:1: entryRuleCalculationTemplate returns [EObject current=null] : iv_ruleCalculationTemplate= ruleCalculationTemplate EOF ;
     public final EObject entryRuleCalculationTemplate() throws RecognitionException {
         EObject current = null;
 
@@ -2256,8 +2283,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1150:60: (iv_ruleCalculationTemplate= ruleCalculationTemplate EOF )
-            // InternalPagos.g:1151:2: iv_ruleCalculationTemplate= ruleCalculationTemplate EOF
+            // InternalPagos.g:1168:60: (iv_ruleCalculationTemplate= ruleCalculationTemplate EOF )
+            // InternalPagos.g:1169:2: iv_ruleCalculationTemplate= ruleCalculationTemplate EOF
             {
              newCompositeNode(grammarAccess.getCalculationTemplateRule()); 
             pushFollow(FOLLOW_1);
@@ -2284,7 +2311,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCalculationTemplate"
-    // InternalPagos.g:1157:1: ruleCalculationTemplate returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE ) ;
+    // InternalPagos.g:1175:1: ruleCalculationTemplate returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE ) ;
     public final EObject ruleCalculationTemplate() throws RecognitionException {
         EObject current = null;
 
@@ -2317,14 +2344,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1163:2: ( ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE ) )
-            // InternalPagos.g:1164:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE )
+            // InternalPagos.g:1181:2: ( ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE ) )
+            // InternalPagos.g:1182:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE )
             {
-            // InternalPagos.g:1164:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE )
-            // InternalPagos.g:1165:3: () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE
+            // InternalPagos.g:1182:2: ( () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE )
+            // InternalPagos.g:1183:3: () this_LBRACE_1= RULE_LBRACE otherlv_2= 'name' this_COLON_3= RULE_COLON ( (lv_name_4_0= RULE_ID ) ) this_COMMA_5= RULE_COMMA otherlv_6= 'description' this_COLON_7= RULE_COLON ( (lv_description_8_0= RULE_STRING ) ) (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )? this_COMMA_17= RULE_COMMA otherlv_18= 'calculationrules' this_COLON_19= RULE_COLON ( (lv_formulas_20_0= ruleFormula ) ) this_RBRACE_21= RULE_RBRACE
             {
-            // InternalPagos.g:1165:3: ()
-            // InternalPagos.g:1166:4: 
+            // InternalPagos.g:1183:3: ()
+            // InternalPagos.g:1184:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2346,11 +2373,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_3, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_3());
             		
-            // InternalPagos.g:1184:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalPagos.g:1185:4: (lv_name_4_0= RULE_ID )
+            // InternalPagos.g:1202:3: ( (lv_name_4_0= RULE_ID ) )
+            // InternalPagos.g:1203:4: (lv_name_4_0= RULE_ID )
             {
-            // InternalPagos.g:1185:4: (lv_name_4_0= RULE_ID )
-            // InternalPagos.g:1186:5: lv_name_4_0= RULE_ID
+            // InternalPagos.g:1203:4: (lv_name_4_0= RULE_ID )
+            // InternalPagos.g:1204:5: lv_name_4_0= RULE_ID
             {
             lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_6); 
 
@@ -2384,11 +2411,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_7, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_7());
             		
-            // InternalPagos.g:1214:3: ( (lv_description_8_0= RULE_STRING ) )
-            // InternalPagos.g:1215:4: (lv_description_8_0= RULE_STRING )
+            // InternalPagos.g:1232:3: ( (lv_description_8_0= RULE_STRING ) )
+            // InternalPagos.g:1233:4: (lv_description_8_0= RULE_STRING )
             {
-            // InternalPagos.g:1215:4: (lv_description_8_0= RULE_STRING )
-            // InternalPagos.g:1216:5: lv_description_8_0= RULE_STRING
+            // InternalPagos.g:1233:4: (lv_description_8_0= RULE_STRING )
+            // InternalPagos.g:1234:5: lv_description_8_0= RULE_STRING
             {
             lv_description_8_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
@@ -2410,7 +2437,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:1232:3: (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )?
+            // InternalPagos.g:1250:3: (this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -2423,7 +2450,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt14) {
                 case 1 :
-                    // InternalPagos.g:1233:4: this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET
+                    // InternalPagos.g:1251:4: this_COMMA_9= RULE_COMMA otherlv_10= 'calculationattributes' this_COLON_11= RULE_COLON this_LBRACKET_12= RULE_LBRACKET ( (lv_attLists_13_0= ruleBusinessAttribute ) ) (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )* this_RBRACKET_16= RULE_RBRACKET
                     {
                     this_COMMA_9=(Token)match(input,RULE_COMMA,FOLLOW_22); 
 
@@ -2441,11 +2468,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(this_LBRACKET_12, grammarAccess.getCalculationTemplateAccess().getLBRACKETTerminalRuleCall_9_3());
                     			
-                    // InternalPagos.g:1249:4: ( (lv_attLists_13_0= ruleBusinessAttribute ) )
-                    // InternalPagos.g:1250:5: (lv_attLists_13_0= ruleBusinessAttribute )
+                    // InternalPagos.g:1267:4: ( (lv_attLists_13_0= ruleBusinessAttribute ) )
+                    // InternalPagos.g:1268:5: (lv_attLists_13_0= ruleBusinessAttribute )
                     {
-                    // InternalPagos.g:1250:5: (lv_attLists_13_0= ruleBusinessAttribute )
-                    // InternalPagos.g:1251:6: lv_attLists_13_0= ruleBusinessAttribute
+                    // InternalPagos.g:1268:5: (lv_attLists_13_0= ruleBusinessAttribute )
+                    // InternalPagos.g:1269:6: lv_attLists_13_0= ruleBusinessAttribute
                     {
 
                     						newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_4_0());
@@ -2472,7 +2499,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:1268:4: (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )*
+                    // InternalPagos.g:1286:4: (this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) ) )*
                     loop13:
                     do {
                         int alt13=2;
@@ -2485,17 +2512,17 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // InternalPagos.g:1269:5: this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) )
+                    	    // InternalPagos.g:1287:5: this_COMMA_14= RULE_COMMA ( (lv_attLists_15_0= ruleBusinessAttribute ) )
                     	    {
                     	    this_COMMA_14=(Token)match(input,RULE_COMMA,FOLLOW_8); 
 
                     	    					newLeafNode(this_COMMA_14, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9_5_0());
                     	    				
-                    	    // InternalPagos.g:1273:5: ( (lv_attLists_15_0= ruleBusinessAttribute ) )
-                    	    // InternalPagos.g:1274:6: (lv_attLists_15_0= ruleBusinessAttribute )
+                    	    // InternalPagos.g:1291:5: ( (lv_attLists_15_0= ruleBusinessAttribute ) )
+                    	    // InternalPagos.g:1292:6: (lv_attLists_15_0= ruleBusinessAttribute )
                     	    {
-                    	    // InternalPagos.g:1274:6: (lv_attLists_15_0= ruleBusinessAttribute )
-                    	    // InternalPagos.g:1275:7: lv_attLists_15_0= ruleBusinessAttribute
+                    	    // InternalPagos.g:1292:6: (lv_attLists_15_0= ruleBusinessAttribute )
+                    	    // InternalPagos.g:1293:7: lv_attLists_15_0= ruleBusinessAttribute
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_5_1_0());
@@ -2553,11 +2580,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_19, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_12());
             		
-            // InternalPagos.g:1310:3: ( (lv_formulas_20_0= ruleFormula ) )
-            // InternalPagos.g:1311:4: (lv_formulas_20_0= ruleFormula )
+            // InternalPagos.g:1328:3: ( (lv_formulas_20_0= ruleFormula ) )
+            // InternalPagos.g:1329:4: (lv_formulas_20_0= ruleFormula )
             {
-            // InternalPagos.g:1311:4: (lv_formulas_20_0= ruleFormula )
-            // InternalPagos.g:1312:5: lv_formulas_20_0= ruleFormula
+            // InternalPagos.g:1329:4: (lv_formulas_20_0= ruleFormula )
+            // InternalPagos.g:1330:5: lv_formulas_20_0= ruleFormula
             {
 
             					newCompositeNode(grammarAccess.getCalculationTemplateAccess().getFormulasFormulaParserRuleCall_13_0());
@@ -2611,7 +2638,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFormula"
-    // InternalPagos.g:1337:1: entryRuleFormula returns [EObject current=null] : iv_ruleFormula= ruleFormula EOF ;
+    // InternalPagos.g:1355:1: entryRuleFormula returns [EObject current=null] : iv_ruleFormula= ruleFormula EOF ;
     public final EObject entryRuleFormula() throws RecognitionException {
         EObject current = null;
 
@@ -2619,8 +2646,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1337:48: (iv_ruleFormula= ruleFormula EOF )
-            // InternalPagos.g:1338:2: iv_ruleFormula= ruleFormula EOF
+            // InternalPagos.g:1355:48: (iv_ruleFormula= ruleFormula EOF )
+            // InternalPagos.g:1356:2: iv_ruleFormula= ruleFormula EOF
             {
              newCompositeNode(grammarAccess.getFormulaRule()); 
             pushFollow(FOLLOW_1);
@@ -2647,7 +2674,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFormula"
-    // InternalPagos.g:1344:1: ruleFormula returns [EObject current=null] : ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) ) ;
+    // InternalPagos.g:1362:1: ruleFormula returns [EObject current=null] : ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) ) ;
     public final EObject ruleFormula() throws RecognitionException {
         EObject current = null;
 
@@ -2660,10 +2687,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1350:2: ( ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) ) )
-            // InternalPagos.g:1351:2: ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) )
+            // InternalPagos.g:1368:2: ( ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) ) )
+            // InternalPagos.g:1369:2: ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) )
             {
-            // InternalPagos.g:1351:2: ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) )
+            // InternalPagos.g:1369:2: ( ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* ) | ( (lv_formulaReturn_2_0= ruleReturnBlock ) ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -2681,13 +2708,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalPagos.g:1352:3: ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* )
+                    // InternalPagos.g:1370:3: ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* )
                     {
-                    // InternalPagos.g:1352:3: ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* )
-                    // InternalPagos.g:1353:4: () ( (lv_formulaBody_1_0= ruleIfBlock ) )*
+                    // InternalPagos.g:1370:3: ( () ( (lv_formulaBody_1_0= ruleIfBlock ) )* )
+                    // InternalPagos.g:1371:4: () ( (lv_formulaBody_1_0= ruleIfBlock ) )*
                     {
-                    // InternalPagos.g:1353:4: ()
-                    // InternalPagos.g:1354:5: 
+                    // InternalPagos.g:1371:4: ()
+                    // InternalPagos.g:1372:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -2697,7 +2724,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:1360:4: ( (lv_formulaBody_1_0= ruleIfBlock ) )*
+                    // InternalPagos.g:1378:4: ( (lv_formulaBody_1_0= ruleIfBlock ) )*
                     loop15:
                     do {
                         int alt15=2;
@@ -2710,10 +2737,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // InternalPagos.g:1361:5: (lv_formulaBody_1_0= ruleIfBlock )
+                    	    // InternalPagos.g:1379:5: (lv_formulaBody_1_0= ruleIfBlock )
                     	    {
-                    	    // InternalPagos.g:1361:5: (lv_formulaBody_1_0= ruleIfBlock )
-                    	    // InternalPagos.g:1362:6: lv_formulaBody_1_0= ruleIfBlock
+                    	    // InternalPagos.g:1379:5: (lv_formulaBody_1_0= ruleIfBlock )
+                    	    // InternalPagos.g:1380:6: lv_formulaBody_1_0= ruleIfBlock
                     	    {
 
                     	    						newCompositeNode(grammarAccess.getFormulaAccess().getFormulaBodyIfBlockParserRuleCall_0_1_0());
@@ -2753,13 +2780,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:1381:3: ( (lv_formulaReturn_2_0= ruleReturnBlock ) )
+                    // InternalPagos.g:1399:3: ( (lv_formulaReturn_2_0= ruleReturnBlock ) )
                     {
-                    // InternalPagos.g:1381:3: ( (lv_formulaReturn_2_0= ruleReturnBlock ) )
-                    // InternalPagos.g:1382:4: (lv_formulaReturn_2_0= ruleReturnBlock )
+                    // InternalPagos.g:1399:3: ( (lv_formulaReturn_2_0= ruleReturnBlock ) )
+                    // InternalPagos.g:1400:4: (lv_formulaReturn_2_0= ruleReturnBlock )
                     {
-                    // InternalPagos.g:1382:4: (lv_formulaReturn_2_0= ruleReturnBlock )
-                    // InternalPagos.g:1383:5: lv_formulaReturn_2_0= ruleReturnBlock
+                    // InternalPagos.g:1400:4: (lv_formulaReturn_2_0= ruleReturnBlock )
+                    // InternalPagos.g:1401:5: lv_formulaReturn_2_0= ruleReturnBlock
                     {
 
                     					newCompositeNode(grammarAccess.getFormulaAccess().getFormulaReturnReturnBlockParserRuleCall_1_0());
@@ -2812,7 +2839,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIfBlock"
-    // InternalPagos.g:1404:1: entryRuleIfBlock returns [EObject current=null] : iv_ruleIfBlock= ruleIfBlock EOF ;
+    // InternalPagos.g:1422:1: entryRuleIfBlock returns [EObject current=null] : iv_ruleIfBlock= ruleIfBlock EOF ;
     public final EObject entryRuleIfBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2820,8 +2847,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1404:48: (iv_ruleIfBlock= ruleIfBlock EOF )
-            // InternalPagos.g:1405:2: iv_ruleIfBlock= ruleIfBlock EOF
+            // InternalPagos.g:1422:48: (iv_ruleIfBlock= ruleIfBlock EOF )
+            // InternalPagos.g:1423:2: iv_ruleIfBlock= ruleIfBlock EOF
             {
              newCompositeNode(grammarAccess.getIfBlockRule()); 
             pushFollow(FOLLOW_1);
@@ -2848,7 +2875,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIfBlock"
-    // InternalPagos.g:1411:1: ruleIfBlock returns [EObject current=null] : ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? ) ;
+    // InternalPagos.g:1429:1: ruleIfBlock returns [EObject current=null] : ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? ) ;
     public final EObject ruleIfBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2862,14 +2889,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1417:2: ( ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? ) )
-            // InternalPagos.g:1418:2: ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? )
+            // InternalPagos.g:1435:2: ( ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? ) )
+            // InternalPagos.g:1436:2: ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? )
             {
-            // InternalPagos.g:1418:2: ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? )
-            // InternalPagos.g:1419:3: () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )?
+            // InternalPagos.g:1436:2: ( () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )? )
+            // InternalPagos.g:1437:3: () ( (lv_ifSentence_1_0= ruleIfCondition ) ) (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )?
             {
-            // InternalPagos.g:1419:3: ()
-            // InternalPagos.g:1420:4: 
+            // InternalPagos.g:1437:3: ()
+            // InternalPagos.g:1438:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2879,11 +2906,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:1426:3: ( (lv_ifSentence_1_0= ruleIfCondition ) )
-            // InternalPagos.g:1427:4: (lv_ifSentence_1_0= ruleIfCondition )
+            // InternalPagos.g:1444:3: ( (lv_ifSentence_1_0= ruleIfCondition ) )
+            // InternalPagos.g:1445:4: (lv_ifSentence_1_0= ruleIfCondition )
             {
-            // InternalPagos.g:1427:4: (lv_ifSentence_1_0= ruleIfCondition )
-            // InternalPagos.g:1428:5: lv_ifSentence_1_0= ruleIfCondition
+            // InternalPagos.g:1445:4: (lv_ifSentence_1_0= ruleIfCondition )
+            // InternalPagos.g:1446:5: lv_ifSentence_1_0= ruleIfCondition
             {
 
             					newCompositeNode(grammarAccess.getIfBlockAccess().getIfSentenceIfConditionParserRuleCall_1_0());
@@ -2910,7 +2937,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:1445:3: (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )?
+            // InternalPagos.g:1463:3: (this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) ) )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2919,17 +2946,17 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalPagos.g:1446:4: this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) )
+                    // InternalPagos.g:1464:4: this_ELSE_2= RULE_ELSE ( (lv_elseSentence_3_0= ruleElseSegment ) )
                     {
                     this_ELSE_2=(Token)match(input,RULE_ELSE,FOLLOW_8); 
 
                     				newLeafNode(this_ELSE_2, grammarAccess.getIfBlockAccess().getELSETerminalRuleCall_2_0());
                     			
-                    // InternalPagos.g:1450:4: ( (lv_elseSentence_3_0= ruleElseSegment ) )
-                    // InternalPagos.g:1451:5: (lv_elseSentence_3_0= ruleElseSegment )
+                    // InternalPagos.g:1468:4: ( (lv_elseSentence_3_0= ruleElseSegment ) )
+                    // InternalPagos.g:1469:5: (lv_elseSentence_3_0= ruleElseSegment )
                     {
-                    // InternalPagos.g:1451:5: (lv_elseSentence_3_0= ruleElseSegment )
-                    // InternalPagos.g:1452:6: lv_elseSentence_3_0= ruleElseSegment
+                    // InternalPagos.g:1469:5: (lv_elseSentence_3_0= ruleElseSegment )
+                    // InternalPagos.g:1470:6: lv_elseSentence_3_0= ruleElseSegment
                     {
 
                     						newCompositeNode(grammarAccess.getIfBlockAccess().getElseSentenceElseSegmentParserRuleCall_2_1_0());
@@ -2985,7 +3012,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIfCondition"
-    // InternalPagos.g:1474:1: entryRuleIfCondition returns [EObject current=null] : iv_ruleIfCondition= ruleIfCondition EOF ;
+    // InternalPagos.g:1492:1: entryRuleIfCondition returns [EObject current=null] : iv_ruleIfCondition= ruleIfCondition EOF ;
     public final EObject entryRuleIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -2993,8 +3020,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1474:52: (iv_ruleIfCondition= ruleIfCondition EOF )
-            // InternalPagos.g:1475:2: iv_ruleIfCondition= ruleIfCondition EOF
+            // InternalPagos.g:1492:52: (iv_ruleIfCondition= ruleIfCondition EOF )
+            // InternalPagos.g:1493:2: iv_ruleIfCondition= ruleIfCondition EOF
             {
              newCompositeNode(grammarAccess.getIfConditionRule()); 
             pushFollow(FOLLOW_1);
@@ -3021,7 +3048,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIfCondition"
-    // InternalPagos.g:1481:1: ruleIfCondition returns [EObject current=null] : ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE ) ;
+    // InternalPagos.g:1499:1: ruleIfCondition returns [EObject current=null] : ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE ) ;
     public final EObject ruleIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -3040,14 +3067,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1487:2: ( ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE ) )
-            // InternalPagos.g:1488:2: ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE )
+            // InternalPagos.g:1505:2: ( ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE ) )
+            // InternalPagos.g:1506:2: ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE )
             {
-            // InternalPagos.g:1488:2: ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE )
-            // InternalPagos.g:1489:3: () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE
+            // InternalPagos.g:1506:2: ( () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE )
+            // InternalPagos.g:1507:3: () this_IF_1= RULE_IF this_LBRACKET_2= RULE_LBRACKET ( (lv_logExp_3_0= ruleExpresionLogica ) ) this_RBRACKET_4= RULE_RBRACKET this_THEN_5= RULE_THEN this_LBRACE_6= RULE_LBRACE ( (lv_formulaReturn_7_0= ruleReturnBlock ) ) this_RBRACE_8= RULE_RBRACE
             {
-            // InternalPagos.g:1489:3: ()
-            // InternalPagos.g:1490:4: 
+            // InternalPagos.g:1507:3: ()
+            // InternalPagos.g:1508:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3065,11 +3092,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_LBRACKET_2, grammarAccess.getIfConditionAccess().getLBRACKETTerminalRuleCall_2());
             		
-            // InternalPagos.g:1504:3: ( (lv_logExp_3_0= ruleExpresionLogica ) )
-            // InternalPagos.g:1505:4: (lv_logExp_3_0= ruleExpresionLogica )
+            // InternalPagos.g:1522:3: ( (lv_logExp_3_0= ruleExpresionLogica ) )
+            // InternalPagos.g:1523:4: (lv_logExp_3_0= ruleExpresionLogica )
             {
-            // InternalPagos.g:1505:4: (lv_logExp_3_0= ruleExpresionLogica )
-            // InternalPagos.g:1506:5: lv_logExp_3_0= ruleExpresionLogica
+            // InternalPagos.g:1523:4: (lv_logExp_3_0= ruleExpresionLogica )
+            // InternalPagos.g:1524:5: lv_logExp_3_0= ruleExpresionLogica
             {
 
             					newCompositeNode(grammarAccess.getIfConditionAccess().getLogExpExpresionLogicaParserRuleCall_3_0());
@@ -3108,11 +3135,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_LBRACE_6, grammarAccess.getIfConditionAccess().getLBRACETerminalRuleCall_6());
             		
-            // InternalPagos.g:1535:3: ( (lv_formulaReturn_7_0= ruleReturnBlock ) )
-            // InternalPagos.g:1536:4: (lv_formulaReturn_7_0= ruleReturnBlock )
+            // InternalPagos.g:1553:3: ( (lv_formulaReturn_7_0= ruleReturnBlock ) )
+            // InternalPagos.g:1554:4: (lv_formulaReturn_7_0= ruleReturnBlock )
             {
-            // InternalPagos.g:1536:4: (lv_formulaReturn_7_0= ruleReturnBlock )
-            // InternalPagos.g:1537:5: lv_formulaReturn_7_0= ruleReturnBlock
+            // InternalPagos.g:1554:4: (lv_formulaReturn_7_0= ruleReturnBlock )
+            // InternalPagos.g:1555:5: lv_formulaReturn_7_0= ruleReturnBlock
             {
 
             					newCompositeNode(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0());
@@ -3166,7 +3193,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElseSegment"
-    // InternalPagos.g:1562:1: entryRuleElseSegment returns [EObject current=null] : iv_ruleElseSegment= ruleElseSegment EOF ;
+    // InternalPagos.g:1580:1: entryRuleElseSegment returns [EObject current=null] : iv_ruleElseSegment= ruleElseSegment EOF ;
     public final EObject entryRuleElseSegment() throws RecognitionException {
         EObject current = null;
 
@@ -3174,8 +3201,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1562:52: (iv_ruleElseSegment= ruleElseSegment EOF )
-            // InternalPagos.g:1563:2: iv_ruleElseSegment= ruleElseSegment EOF
+            // InternalPagos.g:1580:52: (iv_ruleElseSegment= ruleElseSegment EOF )
+            // InternalPagos.g:1581:2: iv_ruleElseSegment= ruleElseSegment EOF
             {
              newCompositeNode(grammarAccess.getElseSegmentRule()); 
             pushFollow(FOLLOW_1);
@@ -3202,7 +3229,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElseSegment"
-    // InternalPagos.g:1569:1: ruleElseSegment returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE ) ;
+    // InternalPagos.g:1587:1: ruleElseSegment returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE ) ;
     public final EObject ruleElseSegment() throws RecognitionException {
         EObject current = null;
 
@@ -3215,14 +3242,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1575:2: ( ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE ) )
-            // InternalPagos.g:1576:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE )
+            // InternalPagos.g:1593:2: ( ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE ) )
+            // InternalPagos.g:1594:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE )
             {
-            // InternalPagos.g:1576:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE )
-            // InternalPagos.g:1577:3: () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE
+            // InternalPagos.g:1594:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE )
+            // InternalPagos.g:1595:3: () this_LBRACE_1= RULE_LBRACE ( (lv_ifSentence_2_0= ruleFormula ) ) this_RBRACE_3= RULE_RBRACE
             {
-            // InternalPagos.g:1577:3: ()
-            // InternalPagos.g:1578:4: 
+            // InternalPagos.g:1595:3: ()
+            // InternalPagos.g:1596:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3236,11 +3263,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_LBRACE_1, grammarAccess.getElseSegmentAccess().getLBRACETerminalRuleCall_1());
             		
-            // InternalPagos.g:1588:3: ( (lv_ifSentence_2_0= ruleFormula ) )
-            // InternalPagos.g:1589:4: (lv_ifSentence_2_0= ruleFormula )
+            // InternalPagos.g:1606:3: ( (lv_ifSentence_2_0= ruleFormula ) )
+            // InternalPagos.g:1607:4: (lv_ifSentence_2_0= ruleFormula )
             {
-            // InternalPagos.g:1589:4: (lv_ifSentence_2_0= ruleFormula )
-            // InternalPagos.g:1590:5: lv_ifSentence_2_0= ruleFormula
+            // InternalPagos.g:1607:4: (lv_ifSentence_2_0= ruleFormula )
+            // InternalPagos.g:1608:5: lv_ifSentence_2_0= ruleFormula
             {
 
             					newCompositeNode(grammarAccess.getElseSegmentAccess().getIfSentenceFormulaParserRuleCall_2_0());
@@ -3294,7 +3321,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReturnBlock"
-    // InternalPagos.g:1615:1: entryRuleReturnBlock returns [EObject current=null] : iv_ruleReturnBlock= ruleReturnBlock EOF ;
+    // InternalPagos.g:1633:1: entryRuleReturnBlock returns [EObject current=null] : iv_ruleReturnBlock= ruleReturnBlock EOF ;
     public final EObject entryRuleReturnBlock() throws RecognitionException {
         EObject current = null;
 
@@ -3302,8 +3329,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1615:52: (iv_ruleReturnBlock= ruleReturnBlock EOF )
-            // InternalPagos.g:1616:2: iv_ruleReturnBlock= ruleReturnBlock EOF
+            // InternalPagos.g:1633:52: (iv_ruleReturnBlock= ruleReturnBlock EOF )
+            // InternalPagos.g:1634:2: iv_ruleReturnBlock= ruleReturnBlock EOF
             {
              newCompositeNode(grammarAccess.getReturnBlockRule()); 
             pushFollow(FOLLOW_1);
@@ -3330,7 +3357,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReturnBlock"
-    // InternalPagos.g:1622:1: ruleReturnBlock returns [EObject current=null] : ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) ) ;
+    // InternalPagos.g:1640:1: ruleReturnBlock returns [EObject current=null] : ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) ) ;
     public final EObject ruleReturnBlock() throws RecognitionException {
         EObject current = null;
 
@@ -3343,14 +3370,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1628:2: ( ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) ) )
-            // InternalPagos.g:1629:2: ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) )
+            // InternalPagos.g:1646:2: ( ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) ) )
+            // InternalPagos.g:1647:2: ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) )
             {
-            // InternalPagos.g:1629:2: ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) )
-            // InternalPagos.g:1630:3: () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) )
+            // InternalPagos.g:1647:2: ( () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) ) )
+            // InternalPagos.g:1648:3: () this_RETURN_1= RULE_RETURN this_COLON_2= RULE_COLON ( (lv_expression_3_0= ruleAdicion ) )
             {
-            // InternalPagos.g:1630:3: ()
-            // InternalPagos.g:1631:4: 
+            // InternalPagos.g:1648:3: ()
+            // InternalPagos.g:1649:4: 
             {
 
             				current = forceCreateModelElement(
@@ -3368,11 +3395,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_2, grammarAccess.getReturnBlockAccess().getCOLONTerminalRuleCall_2());
             		
-            // InternalPagos.g:1645:3: ( (lv_expression_3_0= ruleAdicion ) )
-            // InternalPagos.g:1646:4: (lv_expression_3_0= ruleAdicion )
+            // InternalPagos.g:1663:3: ( (lv_expression_3_0= ruleAdicion ) )
+            // InternalPagos.g:1664:4: (lv_expression_3_0= ruleAdicion )
             {
-            // InternalPagos.g:1646:4: (lv_expression_3_0= ruleAdicion )
-            // InternalPagos.g:1647:5: lv_expression_3_0= ruleAdicion
+            // InternalPagos.g:1664:4: (lv_expression_3_0= ruleAdicion )
+            // InternalPagos.g:1665:5: lv_expression_3_0= ruleAdicion
             {
 
             					newCompositeNode(grammarAccess.getReturnBlockAccess().getExpressionAdicionParserRuleCall_3_0());
@@ -3422,7 +3449,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpresionLogica"
-    // InternalPagos.g:1668:1: entryRuleExpresionLogica returns [EObject current=null] : iv_ruleExpresionLogica= ruleExpresionLogica EOF ;
+    // InternalPagos.g:1686:1: entryRuleExpresionLogica returns [EObject current=null] : iv_ruleExpresionLogica= ruleExpresionLogica EOF ;
     public final EObject entryRuleExpresionLogica() throws RecognitionException {
         EObject current = null;
 
@@ -3430,8 +3457,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1668:56: (iv_ruleExpresionLogica= ruleExpresionLogica EOF )
-            // InternalPagos.g:1669:2: iv_ruleExpresionLogica= ruleExpresionLogica EOF
+            // InternalPagos.g:1686:56: (iv_ruleExpresionLogica= ruleExpresionLogica EOF )
+            // InternalPagos.g:1687:2: iv_ruleExpresionLogica= ruleExpresionLogica EOF
             {
              newCompositeNode(grammarAccess.getExpresionLogicaRule()); 
             pushFollow(FOLLOW_1);
@@ -3458,7 +3485,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresionLogica"
-    // InternalPagos.g:1675:1: ruleExpresionLogica returns [EObject current=null] : ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? ) ;
+    // InternalPagos.g:1693:1: ruleExpresionLogica returns [EObject current=null] : ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? ) ;
     public final EObject ruleExpresionLogica() throws RecognitionException {
         EObject current = null;
 
@@ -3476,17 +3503,17 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1681:2: ( ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? ) )
-            // InternalPagos.g:1682:2: ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? )
+            // InternalPagos.g:1699:2: ( ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? ) )
+            // InternalPagos.g:1700:2: ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? )
             {
-            // InternalPagos.g:1682:2: ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? )
-            // InternalPagos.g:1683:3: ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )?
+            // InternalPagos.g:1700:2: ( ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )? )
+            // InternalPagos.g:1701:3: ( (lv_variable_0_0= ruleTerminalValue ) ) ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+ ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )?
             {
-            // InternalPagos.g:1683:3: ( (lv_variable_0_0= ruleTerminalValue ) )
-            // InternalPagos.g:1684:4: (lv_variable_0_0= ruleTerminalValue )
+            // InternalPagos.g:1701:3: ( (lv_variable_0_0= ruleTerminalValue ) )
+            // InternalPagos.g:1702:4: (lv_variable_0_0= ruleTerminalValue )
             {
-            // InternalPagos.g:1684:4: (lv_variable_0_0= ruleTerminalValue )
-            // InternalPagos.g:1685:5: lv_variable_0_0= ruleTerminalValue
+            // InternalPagos.g:1702:4: (lv_variable_0_0= ruleTerminalValue )
+            // InternalPagos.g:1703:5: lv_variable_0_0= ruleTerminalValue
             {
 
             					newCompositeNode(grammarAccess.getExpresionLogicaAccess().getVariableTerminalValueParserRuleCall_0_0());
@@ -3513,7 +3540,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:1702:3: ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+
+            // InternalPagos.g:1720:3: ( ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) ) )+
             int cnt19=0;
             loop19:
             do {
@@ -3527,13 +3554,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // InternalPagos.g:1703:4: ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) )
+            	    // InternalPagos.g:1721:4: ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) ) ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) )
             	    {
-            	    // InternalPagos.g:1703:4: ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) )
-            	    // InternalPagos.g:1704:5: (lv_logOper_1_0= RULE_OPERADORLOGICO )
+            	    // InternalPagos.g:1721:4: ( (lv_logOper_1_0= RULE_OPERADORLOGICO ) )
+            	    // InternalPagos.g:1722:5: (lv_logOper_1_0= RULE_OPERADORLOGICO )
             	    {
-            	    // InternalPagos.g:1704:5: (lv_logOper_1_0= RULE_OPERADORLOGICO )
-            	    // InternalPagos.g:1705:6: lv_logOper_1_0= RULE_OPERADORLOGICO
+            	    // InternalPagos.g:1722:5: (lv_logOper_1_0= RULE_OPERADORLOGICO )
+            	    // InternalPagos.g:1723:6: lv_logOper_1_0= RULE_OPERADORLOGICO
             	    {
             	    lv_logOper_1_0=(Token)match(input,RULE_OPERADORLOGICO,FOLLOW_32); 
 
@@ -3555,7 +3582,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalPagos.g:1721:4: ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) )
+            	    // InternalPagos.g:1739:4: ( ( (lv_variable2_2_0= ruleTerminalValue ) ) | ( (lv_literal_3_0= RULE_STRING ) ) )
             	    int alt18=2;
             	    int LA18_0 = input.LA(1);
 
@@ -3573,13 +3600,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt18) {
             	        case 1 :
-            	            // InternalPagos.g:1722:5: ( (lv_variable2_2_0= ruleTerminalValue ) )
+            	            // InternalPagos.g:1740:5: ( (lv_variable2_2_0= ruleTerminalValue ) )
             	            {
-            	            // InternalPagos.g:1722:5: ( (lv_variable2_2_0= ruleTerminalValue ) )
-            	            // InternalPagos.g:1723:6: (lv_variable2_2_0= ruleTerminalValue )
+            	            // InternalPagos.g:1740:5: ( (lv_variable2_2_0= ruleTerminalValue ) )
+            	            // InternalPagos.g:1741:6: (lv_variable2_2_0= ruleTerminalValue )
             	            {
-            	            // InternalPagos.g:1723:6: (lv_variable2_2_0= ruleTerminalValue )
-            	            // InternalPagos.g:1724:7: lv_variable2_2_0= ruleTerminalValue
+            	            // InternalPagos.g:1741:6: (lv_variable2_2_0= ruleTerminalValue )
+            	            // InternalPagos.g:1742:7: lv_variable2_2_0= ruleTerminalValue
             	            {
 
             	            							newCompositeNode(grammarAccess.getExpresionLogicaAccess().getVariable2TerminalValueParserRuleCall_1_1_0_0());
@@ -3610,13 +3637,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalPagos.g:1742:5: ( (lv_literal_3_0= RULE_STRING ) )
+            	            // InternalPagos.g:1760:5: ( (lv_literal_3_0= RULE_STRING ) )
             	            {
-            	            // InternalPagos.g:1742:5: ( (lv_literal_3_0= RULE_STRING ) )
-            	            // InternalPagos.g:1743:6: (lv_literal_3_0= RULE_STRING )
+            	            // InternalPagos.g:1760:5: ( (lv_literal_3_0= RULE_STRING ) )
+            	            // InternalPagos.g:1761:6: (lv_literal_3_0= RULE_STRING )
             	            {
-            	            // InternalPagos.g:1743:6: (lv_literal_3_0= RULE_STRING )
-            	            // InternalPagos.g:1744:7: lv_literal_3_0= RULE_STRING
+            	            // InternalPagos.g:1761:6: (lv_literal_3_0= RULE_STRING )
+            	            // InternalPagos.g:1762:7: lv_literal_3_0= RULE_STRING
             	            {
             	            lv_literal_3_0=(Token)match(input,RULE_STRING,FOLLOW_33); 
 
@@ -3657,7 +3684,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                 cnt19++;
             } while (true);
 
-            // InternalPagos.g:1762:3: ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )?
+            // InternalPagos.g:1780:3: ( ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) ) )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -3666,13 +3693,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt20) {
                 case 1 :
-                    // InternalPagos.g:1763:4: ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) )
+                    // InternalPagos.g:1781:4: ( (lv_conOper_4_0= RULE_LOGICALCONN ) ) ( (lv_exp_5_0= ruleExpresionLogica ) )
                     {
-                    // InternalPagos.g:1763:4: ( (lv_conOper_4_0= RULE_LOGICALCONN ) )
-                    // InternalPagos.g:1764:5: (lv_conOper_4_0= RULE_LOGICALCONN )
+                    // InternalPagos.g:1781:4: ( (lv_conOper_4_0= RULE_LOGICALCONN ) )
+                    // InternalPagos.g:1782:5: (lv_conOper_4_0= RULE_LOGICALCONN )
                     {
-                    // InternalPagos.g:1764:5: (lv_conOper_4_0= RULE_LOGICALCONN )
-                    // InternalPagos.g:1765:6: lv_conOper_4_0= RULE_LOGICALCONN
+                    // InternalPagos.g:1782:5: (lv_conOper_4_0= RULE_LOGICALCONN )
+                    // InternalPagos.g:1783:6: lv_conOper_4_0= RULE_LOGICALCONN
                     {
                     lv_conOper_4_0=(Token)match(input,RULE_LOGICALCONN,FOLLOW_27); 
 
@@ -3694,11 +3721,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:1781:4: ( (lv_exp_5_0= ruleExpresionLogica ) )
-                    // InternalPagos.g:1782:5: (lv_exp_5_0= ruleExpresionLogica )
+                    // InternalPagos.g:1799:4: ( (lv_exp_5_0= ruleExpresionLogica ) )
+                    // InternalPagos.g:1800:5: (lv_exp_5_0= ruleExpresionLogica )
                     {
-                    // InternalPagos.g:1782:5: (lv_exp_5_0= ruleExpresionLogica )
-                    // InternalPagos.g:1783:6: lv_exp_5_0= ruleExpresionLogica
+                    // InternalPagos.g:1800:5: (lv_exp_5_0= ruleExpresionLogica )
+                    // InternalPagos.g:1801:6: lv_exp_5_0= ruleExpresionLogica
                     {
 
                     						newCompositeNode(grammarAccess.getExpresionLogicaAccess().getExpExpresionLogicaParserRuleCall_2_1_0());
@@ -3754,7 +3781,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAdicion"
-    // InternalPagos.g:1805:1: entryRuleAdicion returns [EObject current=null] : iv_ruleAdicion= ruleAdicion EOF ;
+    // InternalPagos.g:1823:1: entryRuleAdicion returns [EObject current=null] : iv_ruleAdicion= ruleAdicion EOF ;
     public final EObject entryRuleAdicion() throws RecognitionException {
         EObject current = null;
 
@@ -3762,8 +3789,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1805:48: (iv_ruleAdicion= ruleAdicion EOF )
-            // InternalPagos.g:1806:2: iv_ruleAdicion= ruleAdicion EOF
+            // InternalPagos.g:1823:48: (iv_ruleAdicion= ruleAdicion EOF )
+            // InternalPagos.g:1824:2: iv_ruleAdicion= ruleAdicion EOF
             {
              newCompositeNode(grammarAccess.getAdicionRule()); 
             pushFollow(FOLLOW_1);
@@ -3790,7 +3817,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdicion"
-    // InternalPagos.g:1812:1: ruleAdicion returns [EObject current=null] : (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* ) ;
+    // InternalPagos.g:1830:1: ruleAdicion returns [EObject current=null] : (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* ) ;
     public final EObject ruleAdicion() throws RecognitionException {
         EObject current = null;
 
@@ -3804,11 +3831,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1818:2: ( (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* ) )
-            // InternalPagos.g:1819:2: (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* )
+            // InternalPagos.g:1836:2: ( (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* ) )
+            // InternalPagos.g:1837:2: (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* )
             {
-            // InternalPagos.g:1819:2: (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* )
-            // InternalPagos.g:1820:3: this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )*
+            // InternalPagos.g:1837:2: (this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )* )
+            // InternalPagos.g:1838:3: this_Multiplicacion_0= ruleMultiplicacion ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )*
             {
 
             			newCompositeNode(grammarAccess.getAdicionAccess().getMultiplicacionParserRuleCall_0());
@@ -3822,7 +3849,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             			current = this_Multiplicacion_0;
             			afterParserOrEnumRuleCall();
             		
-            // InternalPagos.g:1828:3: ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )*
+            // InternalPagos.g:1846:3: ( () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) ) )*
             loop21:
             do {
                 int alt21=2;
@@ -3835,10 +3862,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalPagos.g:1829:4: () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) )
+            	    // InternalPagos.g:1847:4: () ( (lv_operator_2_0= RULE_ADDOP ) ) ( (lv_rexp_3_0= ruleMultiplicacion ) )
             	    {
-            	    // InternalPagos.g:1829:4: ()
-            	    // InternalPagos.g:1830:5: 
+            	    // InternalPagos.g:1847:4: ()
+            	    // InternalPagos.g:1848:5: 
             	    {
 
             	    					current = forceCreateModelElementAndSet(
@@ -3848,11 +3875,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalPagos.g:1836:4: ( (lv_operator_2_0= RULE_ADDOP ) )
-            	    // InternalPagos.g:1837:5: (lv_operator_2_0= RULE_ADDOP )
+            	    // InternalPagos.g:1854:4: ( (lv_operator_2_0= RULE_ADDOP ) )
+            	    // InternalPagos.g:1855:5: (lv_operator_2_0= RULE_ADDOP )
             	    {
-            	    // InternalPagos.g:1837:5: (lv_operator_2_0= RULE_ADDOP )
-            	    // InternalPagos.g:1838:6: lv_operator_2_0= RULE_ADDOP
+            	    // InternalPagos.g:1855:5: (lv_operator_2_0= RULE_ADDOP )
+            	    // InternalPagos.g:1856:6: lv_operator_2_0= RULE_ADDOP
             	    {
             	    lv_operator_2_0=(Token)match(input,RULE_ADDOP,FOLLOW_30); 
 
@@ -3874,11 +3901,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalPagos.g:1854:4: ( (lv_rexp_3_0= ruleMultiplicacion ) )
-            	    // InternalPagos.g:1855:5: (lv_rexp_3_0= ruleMultiplicacion )
+            	    // InternalPagos.g:1872:4: ( (lv_rexp_3_0= ruleMultiplicacion ) )
+            	    // InternalPagos.g:1873:5: (lv_rexp_3_0= ruleMultiplicacion )
             	    {
-            	    // InternalPagos.g:1855:5: (lv_rexp_3_0= ruleMultiplicacion )
-            	    // InternalPagos.g:1856:6: lv_rexp_3_0= ruleMultiplicacion
+            	    // InternalPagos.g:1873:5: (lv_rexp_3_0= ruleMultiplicacion )
+            	    // InternalPagos.g:1874:6: lv_rexp_3_0= ruleMultiplicacion
             	    {
 
             	    						newCompositeNode(grammarAccess.getAdicionAccess().getRexpMultiplicacionParserRuleCall_1_2_0());
@@ -3937,7 +3964,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplicacion"
-    // InternalPagos.g:1878:1: entryRuleMultiplicacion returns [EObject current=null] : iv_ruleMultiplicacion= ruleMultiplicacion EOF ;
+    // InternalPagos.g:1896:1: entryRuleMultiplicacion returns [EObject current=null] : iv_ruleMultiplicacion= ruleMultiplicacion EOF ;
     public final EObject entryRuleMultiplicacion() throws RecognitionException {
         EObject current = null;
 
@@ -3945,8 +3972,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1878:55: (iv_ruleMultiplicacion= ruleMultiplicacion EOF )
-            // InternalPagos.g:1879:2: iv_ruleMultiplicacion= ruleMultiplicacion EOF
+            // InternalPagos.g:1896:55: (iv_ruleMultiplicacion= ruleMultiplicacion EOF )
+            // InternalPagos.g:1897:2: iv_ruleMultiplicacion= ruleMultiplicacion EOF
             {
              newCompositeNode(grammarAccess.getMultiplicacionRule()); 
             pushFollow(FOLLOW_1);
@@ -3973,7 +4000,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicacion"
-    // InternalPagos.g:1885:1: ruleMultiplicacion returns [EObject current=null] : (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* ) ;
+    // InternalPagos.g:1903:1: ruleMultiplicacion returns [EObject current=null] : (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* ) ;
     public final EObject ruleMultiplicacion() throws RecognitionException {
         EObject current = null;
 
@@ -3987,11 +4014,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1891:2: ( (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* ) )
-            // InternalPagos.g:1892:2: (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* )
+            // InternalPagos.g:1909:2: ( (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* ) )
+            // InternalPagos.g:1910:2: (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* )
             {
-            // InternalPagos.g:1892:2: (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* )
-            // InternalPagos.g:1893:3: this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )*
+            // InternalPagos.g:1910:2: (this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )* )
+            // InternalPagos.g:1911:3: this_SigleExp_0= ruleSigleExp ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )*
             {
 
             			newCompositeNode(grammarAccess.getMultiplicacionAccess().getSigleExpParserRuleCall_0());
@@ -4005,7 +4032,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             			current = this_SigleExp_0;
             			afterParserOrEnumRuleCall();
             		
-            // InternalPagos.g:1901:3: ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )*
+            // InternalPagos.g:1919:3: ( () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) ) )*
             loop22:
             do {
                 int alt22=2;
@@ -4018,10 +4045,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalPagos.g:1902:4: () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) )
+            	    // InternalPagos.g:1920:4: () ( (lv_operator_2_0= RULE_MULTOP ) ) ( (lv_rexp_3_0= ruleSigleExp ) )
             	    {
-            	    // InternalPagos.g:1902:4: ()
-            	    // InternalPagos.g:1903:5: 
+            	    // InternalPagos.g:1920:4: ()
+            	    // InternalPagos.g:1921:5: 
             	    {
 
             	    					current = forceCreateModelElementAndSet(
@@ -4031,11 +4058,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalPagos.g:1909:4: ( (lv_operator_2_0= RULE_MULTOP ) )
-            	    // InternalPagos.g:1910:5: (lv_operator_2_0= RULE_MULTOP )
+            	    // InternalPagos.g:1927:4: ( (lv_operator_2_0= RULE_MULTOP ) )
+            	    // InternalPagos.g:1928:5: (lv_operator_2_0= RULE_MULTOP )
             	    {
-            	    // InternalPagos.g:1910:5: (lv_operator_2_0= RULE_MULTOP )
-            	    // InternalPagos.g:1911:6: lv_operator_2_0= RULE_MULTOP
+            	    // InternalPagos.g:1928:5: (lv_operator_2_0= RULE_MULTOP )
+            	    // InternalPagos.g:1929:6: lv_operator_2_0= RULE_MULTOP
             	    {
             	    lv_operator_2_0=(Token)match(input,RULE_MULTOP,FOLLOW_30); 
 
@@ -4057,11 +4084,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalPagos.g:1927:4: ( (lv_rexp_3_0= ruleSigleExp ) )
-            	    // InternalPagos.g:1928:5: (lv_rexp_3_0= ruleSigleExp )
+            	    // InternalPagos.g:1945:4: ( (lv_rexp_3_0= ruleSigleExp ) )
+            	    // InternalPagos.g:1946:5: (lv_rexp_3_0= ruleSigleExp )
             	    {
-            	    // InternalPagos.g:1928:5: (lv_rexp_3_0= ruleSigleExp )
-            	    // InternalPagos.g:1929:6: lv_rexp_3_0= ruleSigleExp
+            	    // InternalPagos.g:1946:5: (lv_rexp_3_0= ruleSigleExp )
+            	    // InternalPagos.g:1947:6: lv_rexp_3_0= ruleSigleExp
             	    {
 
             	    						newCompositeNode(grammarAccess.getMultiplicacionAccess().getRexpSigleExpParserRuleCall_1_2_0());
@@ -4120,7 +4147,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSigleExp"
-    // InternalPagos.g:1951:1: entryRuleSigleExp returns [EObject current=null] : iv_ruleSigleExp= ruleSigleExp EOF ;
+    // InternalPagos.g:1969:1: entryRuleSigleExp returns [EObject current=null] : iv_ruleSigleExp= ruleSigleExp EOF ;
     public final EObject entryRuleSigleExp() throws RecognitionException {
         EObject current = null;
 
@@ -4128,8 +4155,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1951:49: (iv_ruleSigleExp= ruleSigleExp EOF )
-            // InternalPagos.g:1952:2: iv_ruleSigleExp= ruleSigleExp EOF
+            // InternalPagos.g:1969:49: (iv_ruleSigleExp= ruleSigleExp EOF )
+            // InternalPagos.g:1970:2: iv_ruleSigleExp= ruleSigleExp EOF
             {
              newCompositeNode(grammarAccess.getSigleExpRule()); 
             pushFollow(FOLLOW_1);
@@ -4156,7 +4183,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSigleExp"
-    // InternalPagos.g:1958:1: ruleSigleExp returns [EObject current=null] : (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) ) ;
+    // InternalPagos.g:1976:1: ruleSigleExp returns [EObject current=null] : (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) ) ;
     public final EObject ruleSigleExp() throws RecognitionException {
         EObject current = null;
 
@@ -4171,10 +4198,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:1964:2: ( (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) ) )
-            // InternalPagos.g:1965:2: (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) )
+            // InternalPagos.g:1982:2: ( (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) ) )
+            // InternalPagos.g:1983:2: (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) )
             {
-            // InternalPagos.g:1965:2: (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) )
+            // InternalPagos.g:1983:2: (this_TerminalValue_0= ruleTerminalValue | (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' ) )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -4192,7 +4219,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalPagos.g:1966:3: this_TerminalValue_0= ruleTerminalValue
+                    // InternalPagos.g:1984:3: this_TerminalValue_0= ruleTerminalValue
                     {
 
                     			newCompositeNode(grammarAccess.getSigleExpAccess().getTerminalValueParserRuleCall_0());
@@ -4210,10 +4237,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:1975:3: (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' )
+                    // InternalPagos.g:1993:3: (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' )
                     {
-                    // InternalPagos.g:1975:3: (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' )
-                    // InternalPagos.g:1976:4: otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')'
+                    // InternalPagos.g:1993:3: (otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')' )
+                    // InternalPagos.g:1994:4: otherlv_1= '(' this_Adicion_2= ruleAdicion otherlv_3= ')'
                     {
                     otherlv_1=(Token)match(input,42,FOLLOW_30); 
 
@@ -4264,7 +4291,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBusinessAttribute"
-    // InternalPagos.g:1997:1: entryRuleBusinessAttribute returns [EObject current=null] : iv_ruleBusinessAttribute= ruleBusinessAttribute EOF ;
+    // InternalPagos.g:2015:1: entryRuleBusinessAttribute returns [EObject current=null] : iv_ruleBusinessAttribute= ruleBusinessAttribute EOF ;
     public final EObject entryRuleBusinessAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -4272,8 +4299,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:1997:58: (iv_ruleBusinessAttribute= ruleBusinessAttribute EOF )
-            // InternalPagos.g:1998:2: iv_ruleBusinessAttribute= ruleBusinessAttribute EOF
+            // InternalPagos.g:2015:58: (iv_ruleBusinessAttribute= ruleBusinessAttribute EOF )
+            // InternalPagos.g:2016:2: iv_ruleBusinessAttribute= ruleBusinessAttribute EOF
             {
              newCompositeNode(grammarAccess.getBusinessAttributeRule()); 
             pushFollow(FOLLOW_1);
@@ -4300,7 +4327,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBusinessAttribute"
-    // InternalPagos.g:2004:1: ruleBusinessAttribute returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE ) ;
+    // InternalPagos.g:2022:1: ruleBusinessAttribute returns [EObject current=null] : ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE ) ;
     public final EObject ruleBusinessAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -4318,14 +4345,14 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2010:2: ( ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE ) )
-            // InternalPagos.g:2011:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE )
+            // InternalPagos.g:2028:2: ( ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE ) )
+            // InternalPagos.g:2029:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE )
             {
-            // InternalPagos.g:2011:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE )
-            // InternalPagos.g:2012:3: () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE
+            // InternalPagos.g:2029:2: ( () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE )
+            // InternalPagos.g:2030:3: () this_LBRACE_1= RULE_LBRACE ( (lv_name_2_0= RULE_ID ) ) this_COLON_3= RULE_COLON ( (lv_type_4_0= RULE_TYPE ) ) (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )? ( (lv_isIndex_7_0= RULE_INDEX ) )? this_RBRACE_8= RULE_RBRACE
             {
-            // InternalPagos.g:2012:3: ()
-            // InternalPagos.g:2013:4: 
+            // InternalPagos.g:2030:3: ()
+            // InternalPagos.g:2031:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4339,11 +4366,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_LBRACE_1, grammarAccess.getBusinessAttributeAccess().getLBRACETerminalRuleCall_1());
             		
-            // InternalPagos.g:2023:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalPagos.g:2024:4: (lv_name_2_0= RULE_ID )
+            // InternalPagos.g:2041:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalPagos.g:2042:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalPagos.g:2024:4: (lv_name_2_0= RULE_ID )
-            // InternalPagos.g:2025:5: lv_name_2_0= RULE_ID
+            // InternalPagos.g:2042:4: (lv_name_2_0= RULE_ID )
+            // InternalPagos.g:2043:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -4369,11 +4396,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_COLON_3, grammarAccess.getBusinessAttributeAccess().getCOLONTerminalRuleCall_3());
             		
-            // InternalPagos.g:2045:3: ( (lv_type_4_0= RULE_TYPE ) )
-            // InternalPagos.g:2046:4: (lv_type_4_0= RULE_TYPE )
+            // InternalPagos.g:2063:3: ( (lv_type_4_0= RULE_TYPE ) )
+            // InternalPagos.g:2064:4: (lv_type_4_0= RULE_TYPE )
             {
-            // InternalPagos.g:2046:4: (lv_type_4_0= RULE_TYPE )
-            // InternalPagos.g:2047:5: lv_type_4_0= RULE_TYPE
+            // InternalPagos.g:2064:4: (lv_type_4_0= RULE_TYPE )
+            // InternalPagos.g:2065:5: lv_type_4_0= RULE_TYPE
             {
             lv_type_4_0=(Token)match(input,RULE_TYPE,FOLLOW_38); 
 
@@ -4395,7 +4422,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:2063:3: (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )?
+            // InternalPagos.g:2081:3: (otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) ) )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -4404,17 +4431,17 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalPagos.g:2064:4: otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) )
+                    // InternalPagos.g:2082:4: otherlv_5= ':=' ( (lv_exp_6_0= ruleAdicion ) )
                     {
                     otherlv_5=(Token)match(input,44,FOLLOW_30); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getBusinessAttributeAccess().getColonEqualsSignKeyword_5_0());
                     			
-                    // InternalPagos.g:2068:4: ( (lv_exp_6_0= ruleAdicion ) )
-                    // InternalPagos.g:2069:5: (lv_exp_6_0= ruleAdicion )
+                    // InternalPagos.g:2086:4: ( (lv_exp_6_0= ruleAdicion ) )
+                    // InternalPagos.g:2087:5: (lv_exp_6_0= ruleAdicion )
                     {
-                    // InternalPagos.g:2069:5: (lv_exp_6_0= ruleAdicion )
-                    // InternalPagos.g:2070:6: lv_exp_6_0= ruleAdicion
+                    // InternalPagos.g:2087:5: (lv_exp_6_0= ruleAdicion )
+                    // InternalPagos.g:2088:6: lv_exp_6_0= ruleAdicion
                     {
 
                     						newCompositeNode(grammarAccess.getBusinessAttributeAccess().getExpAdicionParserRuleCall_5_1_0());
@@ -4447,7 +4474,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPagos.g:2088:3: ( (lv_isIndex_7_0= RULE_INDEX ) )?
+            // InternalPagos.g:2106:3: ( (lv_isIndex_7_0= RULE_INDEX ) )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -4456,10 +4483,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // InternalPagos.g:2089:4: (lv_isIndex_7_0= RULE_INDEX )
+                    // InternalPagos.g:2107:4: (lv_isIndex_7_0= RULE_INDEX )
                     {
-                    // InternalPagos.g:2089:4: (lv_isIndex_7_0= RULE_INDEX )
-                    // InternalPagos.g:2090:5: lv_isIndex_7_0= RULE_INDEX
+                    // InternalPagos.g:2107:4: (lv_isIndex_7_0= RULE_INDEX )
+                    // InternalPagos.g:2108:5: lv_isIndex_7_0= RULE_INDEX
                     {
                     lv_isIndex_7_0=(Token)match(input,RULE_INDEX,FOLLOW_9); 
 
@@ -4511,7 +4538,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerminalValue"
-    // InternalPagos.g:2114:1: entryRuleTerminalValue returns [EObject current=null] : iv_ruleTerminalValue= ruleTerminalValue EOF ;
+    // InternalPagos.g:2132:1: entryRuleTerminalValue returns [EObject current=null] : iv_ruleTerminalValue= ruleTerminalValue EOF ;
     public final EObject entryRuleTerminalValue() throws RecognitionException {
         EObject current = null;
 
@@ -4519,8 +4546,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2114:54: (iv_ruleTerminalValue= ruleTerminalValue EOF )
-            // InternalPagos.g:2115:2: iv_ruleTerminalValue= ruleTerminalValue EOF
+            // InternalPagos.g:2132:54: (iv_ruleTerminalValue= ruleTerminalValue EOF )
+            // InternalPagos.g:2133:2: iv_ruleTerminalValue= ruleTerminalValue EOF
             {
              newCompositeNode(grammarAccess.getTerminalValueRule()); 
             pushFollow(FOLLOW_1);
@@ -4547,7 +4574,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalValue"
-    // InternalPagos.g:2121:1: ruleTerminalValue returns [EObject current=null] : ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) ;
+    // InternalPagos.g:2139:1: ruleTerminalValue returns [EObject current=null] : ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) ;
     public final EObject ruleTerminalValue() throws RecognitionException {
         EObject current = null;
 
@@ -4576,21 +4603,21 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2127:2: ( ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) )
-            // InternalPagos.g:2128:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
+            // InternalPagos.g:2145:2: ( ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) )
+            // InternalPagos.g:2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
             {
-            // InternalPagos.g:2128:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
+            // InternalPagos.g:2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
             int alt30=5;
             alt30 = dfa30.predict(input);
             switch (alt30) {
                 case 1 :
-                    // InternalPagos.g:2129:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
+                    // InternalPagos.g:2147:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
                     {
-                    // InternalPagos.g:2129:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
-                    // InternalPagos.g:2130:4: () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) )
+                    // InternalPagos.g:2147:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
+                    // InternalPagos.g:2148:4: () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) )
                     {
-                    // InternalPagos.g:2130:4: ()
-                    // InternalPagos.g:2131:5: 
+                    // InternalPagos.g:2148:4: ()
+                    // InternalPagos.g:2149:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -4600,7 +4627,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:2137:4: (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )?
+                    // InternalPagos.g:2155:4: (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -4609,7 +4636,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt26) {
                         case 1 :
-                            // InternalPagos.g:2138:5: otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH
+                            // InternalPagos.g:2156:5: otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH
                             {
                             otherlv_1=(Token)match(input,45,FOLLOW_40); 
 
@@ -4619,11 +4646,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             					newLeafNode(this_DOT_2, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1());
                             				
-                            // InternalPagos.g:2146:5: ( (otherlv_3= RULE_ID ) )
-                            // InternalPagos.g:2147:6: (otherlv_3= RULE_ID )
+                            // InternalPagos.g:2164:5: ( (otherlv_3= RULE_ID ) )
+                            // InternalPagos.g:2165:6: (otherlv_3= RULE_ID )
                             {
-                            // InternalPagos.g:2147:6: (otherlv_3= RULE_ID )
-                            // InternalPagos.g:2148:7: otherlv_3= RULE_ID
+                            // InternalPagos.g:2165:6: (otherlv_3= RULE_ID )
+                            // InternalPagos.g:2166:7: otherlv_3= RULE_ID
                             {
 
                             							if (current==null) {
@@ -4650,11 +4677,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:2164:4: ( (otherlv_5= RULE_ID ) )
-                    // InternalPagos.g:2165:5: (otherlv_5= RULE_ID )
+                    // InternalPagos.g:2182:4: ( (otherlv_5= RULE_ID ) )
+                    // InternalPagos.g:2183:5: (otherlv_5= RULE_ID )
                     {
-                    // InternalPagos.g:2165:5: (otherlv_5= RULE_ID )
-                    // InternalPagos.g:2166:6: otherlv_5= RULE_ID
+                    // InternalPagos.g:2183:5: (otherlv_5= RULE_ID )
+                    // InternalPagos.g:2184:6: otherlv_5= RULE_ID
                     {
 
                     						if (current==null) {
@@ -4678,9 +4705,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:2179:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
+                    // InternalPagos.g:2197:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
                     {
-                    // InternalPagos.g:2179:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
+                    // InternalPagos.g:2197:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
@@ -4689,7 +4716,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt27) {
                         case 1 :
-                            // InternalPagos.g:2180:4: otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) )
+                            // InternalPagos.g:2198:4: otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) )
                             {
                             otherlv_6=(Token)match(input,46,FOLLOW_40); 
 
@@ -4699,11 +4726,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             				newLeafNode(this_DOT_7, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1());
                             			
-                            // InternalPagos.g:2188:4: ( (otherlv_8= RULE_ID ) )
-                            // InternalPagos.g:2189:5: (otherlv_8= RULE_ID )
+                            // InternalPagos.g:2206:4: ( (otherlv_8= RULE_ID ) )
+                            // InternalPagos.g:2207:5: (otherlv_8= RULE_ID )
                             {
-                            // InternalPagos.g:2189:5: (otherlv_8= RULE_ID )
-                            // InternalPagos.g:2190:6: otherlv_8= RULE_ID
+                            // InternalPagos.g:2207:5: (otherlv_8= RULE_ID )
+                            // InternalPagos.g:2208:6: otherlv_8= RULE_ID
                             {
 
                             						if (current==null) {
@@ -4724,11 +4751,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             				newLeafNode(this_DASH_9, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_1_3());
                             			
-                            // InternalPagos.g:2205:4: ( (otherlv_10= RULE_ID ) )
-                            // InternalPagos.g:2206:5: (otherlv_10= RULE_ID )
+                            // InternalPagos.g:2223:4: ( (otherlv_10= RULE_ID ) )
+                            // InternalPagos.g:2224:5: (otherlv_10= RULE_ID )
                             {
-                            // InternalPagos.g:2206:5: (otherlv_10= RULE_ID )
-                            // InternalPagos.g:2207:6: otherlv_10= RULE_ID
+                            // InternalPagos.g:2224:5: (otherlv_10= RULE_ID )
+                            // InternalPagos.g:2225:6: otherlv_10= RULE_ID
                             {
 
                             						if (current==null) {
@@ -4755,9 +4782,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPagos.g:2220:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
+                    // InternalPagos.g:2238:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
                     {
-                    // InternalPagos.g:2220:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
+                    // InternalPagos.g:2238:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -4766,7 +4793,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt28) {
                         case 1 :
-                            // InternalPagos.g:2221:4: otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) )
+                            // InternalPagos.g:2239:4: otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) )
                             {
                             otherlv_11=(Token)match(input,47,FOLLOW_40); 
 
@@ -4776,11 +4803,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             				newLeafNode(this_DOT_12, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1());
                             			
-                            // InternalPagos.g:2229:4: ( (otherlv_13= RULE_ID ) )
-                            // InternalPagos.g:2230:5: (otherlv_13= RULE_ID )
+                            // InternalPagos.g:2247:4: ( (otherlv_13= RULE_ID ) )
+                            // InternalPagos.g:2248:5: (otherlv_13= RULE_ID )
                             {
-                            // InternalPagos.g:2230:5: (otherlv_13= RULE_ID )
-                            // InternalPagos.g:2231:6: otherlv_13= RULE_ID
+                            // InternalPagos.g:2248:5: (otherlv_13= RULE_ID )
+                            // InternalPagos.g:2249:6: otherlv_13= RULE_ID
                             {
 
                             						if (current==null) {
@@ -4801,11 +4828,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             				newLeafNode(this_DASH_14, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_2_3());
                             			
-                            // InternalPagos.g:2246:4: ( (otherlv_15= RULE_ID ) )
-                            // InternalPagos.g:2247:5: (otherlv_15= RULE_ID )
+                            // InternalPagos.g:2264:4: ( (otherlv_15= RULE_ID ) )
+                            // InternalPagos.g:2265:5: (otherlv_15= RULE_ID )
                             {
-                            // InternalPagos.g:2247:5: (otherlv_15= RULE_ID )
-                            // InternalPagos.g:2248:6: otherlv_15= RULE_ID
+                            // InternalPagos.g:2265:5: (otherlv_15= RULE_ID )
+                            // InternalPagos.g:2266:6: otherlv_15= RULE_ID
                             {
 
                             						if (current==null) {
@@ -4832,9 +4859,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPagos.g:2261:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
+                    // InternalPagos.g:2279:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
                     {
-                    // InternalPagos.g:2261:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
+                    // InternalPagos.g:2279:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
                     int alt29=2;
                     int LA29_0 = input.LA(1);
 
@@ -4843,7 +4870,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt29) {
                         case 1 :
-                            // InternalPagos.g:2262:4: otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) )
+                            // InternalPagos.g:2280:4: otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) )
                             {
                             otherlv_16=(Token)match(input,48,FOLLOW_40); 
 
@@ -4853,11 +4880,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                             				newLeafNode(this_DOT_17, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_3_1());
                             			
-                            // InternalPagos.g:2270:4: ( (otherlv_18= RULE_ID ) )
-                            // InternalPagos.g:2271:5: (otherlv_18= RULE_ID )
+                            // InternalPagos.g:2288:4: ( (otherlv_18= RULE_ID ) )
+                            // InternalPagos.g:2289:5: (otherlv_18= RULE_ID )
                             {
-                            // InternalPagos.g:2271:5: (otherlv_18= RULE_ID )
-                            // InternalPagos.g:2272:6: otherlv_18= RULE_ID
+                            // InternalPagos.g:2289:5: (otherlv_18= RULE_ID )
+                            // InternalPagos.g:2290:6: otherlv_18= RULE_ID
                             {
 
                             						if (current==null) {
@@ -4884,13 +4911,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPagos.g:2285:3: ( (lv_valor_19_0= ruleNumber ) )
+                    // InternalPagos.g:2303:3: ( (lv_valor_19_0= ruleNumber ) )
                     {
-                    // InternalPagos.g:2285:3: ( (lv_valor_19_0= ruleNumber ) )
-                    // InternalPagos.g:2286:4: (lv_valor_19_0= ruleNumber )
+                    // InternalPagos.g:2303:3: ( (lv_valor_19_0= ruleNumber ) )
+                    // InternalPagos.g:2304:4: (lv_valor_19_0= ruleNumber )
                     {
-                    // InternalPagos.g:2286:4: (lv_valor_19_0= ruleNumber )
-                    // InternalPagos.g:2287:5: lv_valor_19_0= ruleNumber
+                    // InternalPagos.g:2304:4: (lv_valor_19_0= ruleNumber )
+                    // InternalPagos.g:2305:5: lv_valor_19_0= ruleNumber
                     {
 
                     					newCompositeNode(grammarAccess.getTerminalValueAccess().getValorNumberParserRuleCall_4_0());
@@ -4943,7 +4970,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // InternalPagos.g:2308:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // InternalPagos.g:2326:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -4951,8 +4978,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2308:46: (iv_ruleNumber= ruleNumber EOF )
-            // InternalPagos.g:2309:2: iv_ruleNumber= ruleNumber EOF
+            // InternalPagos.g:2326:46: (iv_ruleNumber= ruleNumber EOF )
+            // InternalPagos.g:2327:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
             pushFollow(FOLLOW_1);
@@ -4979,7 +5006,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // InternalPagos.g:2315:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) ;
+    // InternalPagos.g:2333:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4992,10 +5019,10 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2321:2: ( (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) )
-            // InternalPagos.g:2322:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
+            // InternalPagos.g:2339:2: ( (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) )
+            // InternalPagos.g:2340:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
             {
-            // InternalPagos.g:2322:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
+            // InternalPagos.g:2340:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -5026,7 +5053,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalPagos.g:2323:3: this_EDouble_0= ruleEDouble
+                    // InternalPagos.g:2341:3: this_EDouble_0= ruleEDouble
                     {
 
                     			newCompositeNode(grammarAccess.getNumberAccess().getEDoubleParserRuleCall_0());
@@ -5046,7 +5073,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:2334:3: this_Integer_1= ruleInteger
+                    // InternalPagos.g:2352:3: this_Integer_1= ruleInteger
                     {
 
                     			newCompositeNode(grammarAccess.getNumberAccess().getIntegerParserRuleCall_1());
@@ -5088,7 +5115,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEDouble"
-    // InternalPagos.g:2348:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
+    // InternalPagos.g:2366:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
     public final String entryRuleEDouble() throws RecognitionException {
         String current = null;
 
@@ -5096,8 +5123,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2348:47: (iv_ruleEDouble= ruleEDouble EOF )
-            // InternalPagos.g:2349:2: iv_ruleEDouble= ruleEDouble EOF
+            // InternalPagos.g:2366:47: (iv_ruleEDouble= ruleEDouble EOF )
+            // InternalPagos.g:2367:2: iv_ruleEDouble= ruleEDouble EOF
             {
              newCompositeNode(grammarAccess.getEDoubleRule()); 
             pushFollow(FOLLOW_1);
@@ -5124,7 +5151,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDouble"
-    // InternalPagos.g:2355:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) ;
+    // InternalPagos.g:2373:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleEDouble() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5138,13 +5165,13 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2361:2: ( ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) )
-            // InternalPagos.g:2362:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
+            // InternalPagos.g:2379:2: ( ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) )
+            // InternalPagos.g:2380:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
             {
-            // InternalPagos.g:2362:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
-            // InternalPagos.g:2363:3: (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
+            // InternalPagos.g:2380:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
+            // InternalPagos.g:2381:3: (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
             {
-            // InternalPagos.g:2363:3: (this_INT_0= RULE_INT )?
+            // InternalPagos.g:2381:3: (this_INT_0= RULE_INT )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -5153,7 +5180,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalPagos.g:2364:4: this_INT_0= RULE_INT
+                    // InternalPagos.g:2382:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FOLLOW_40); 
 
@@ -5182,7 +5209,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(this_INT_2, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_2());
             		
-            // InternalPagos.g:2386:3: ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
+            // InternalPagos.g:2404:3: ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -5191,9 +5218,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalPagos.g:2387:4: (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT
+                    // InternalPagos.g:2405:4: (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT
                     {
-                    // InternalPagos.g:2387:4: (kw= 'E' | kw= 'e' )
+                    // InternalPagos.g:2405:4: (kw= 'E' | kw= 'e' )
                     int alt33=2;
                     int LA33_0 = input.LA(1);
 
@@ -5211,7 +5238,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt33) {
                         case 1 :
-                            // InternalPagos.g:2388:5: kw= 'E'
+                            // InternalPagos.g:2406:5: kw= 'E'
                             {
                             kw=(Token)match(input,49,FOLLOW_42); 
 
@@ -5222,7 +5249,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPagos.g:2394:5: kw= 'e'
+                            // InternalPagos.g:2412:5: kw= 'e'
                             {
                             kw=(Token)match(input,50,FOLLOW_42); 
 
@@ -5271,7 +5298,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteger"
-    // InternalPagos.g:2412:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
+    // InternalPagos.g:2430:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
     public final String entryRuleInteger() throws RecognitionException {
         String current = null;
 
@@ -5279,8 +5306,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2412:47: (iv_ruleInteger= ruleInteger EOF )
-            // InternalPagos.g:2413:2: iv_ruleInteger= ruleInteger EOF
+            // InternalPagos.g:2430:47: (iv_ruleInteger= ruleInteger EOF )
+            // InternalPagos.g:2431:2: iv_ruleInteger= ruleInteger EOF
             {
              newCompositeNode(grammarAccess.getIntegerRule()); 
             pushFollow(FOLLOW_1);
@@ -5307,7 +5334,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteger"
-    // InternalPagos.g:2419:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // InternalPagos.g:2437:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleInteger() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5317,8 +5344,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2425:2: (this_INT_0= RULE_INT )
-            // InternalPagos.g:2426:2: this_INT_0= RULE_INT
+            // InternalPagos.g:2443:2: (this_INT_0= RULE_INT )
+            // InternalPagos.g:2444:2: this_INT_0= RULE_INT
             {
             this_INT_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -5394,7 +5421,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "2128:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )";
+            return "2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )";
         }
     }
  

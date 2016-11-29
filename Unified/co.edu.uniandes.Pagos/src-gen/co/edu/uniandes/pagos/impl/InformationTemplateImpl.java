@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getAttLists <em>Att Lists</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getTemplateCalc <em>Template Calc</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getTemplates <em>Templates</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.InformationTemplateImpl#getProviders <em>Providers</em>}</li>
  * </ul>
@@ -93,6 +94,26 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
   protected EList<BusinessAttribute> attLists;
+
+  /**
+	 * The default value of the '{@link #getTemplateCalc() <em>Template Calc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getTemplateCalc()
+	 * @generated
+	 * @ordered
+	 */
+  protected static final String TEMPLATE_CALC_EDEFAULT = null;
+
+  /**
+	 * The cached value of the '{@link #getTemplateCalc() <em>Template Calc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getTemplateCalc()
+	 * @generated
+	 * @ordered
+	 */
+  protected String templateCalc = TEMPLATE_CALC_EDEFAULT;
 
   /**
 	 * The cached value of the '{@link #getTemplates() <em>Templates</em>}' containment reference list.
@@ -199,6 +220,29 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public String getTemplateCalc()
+  {
+		return templateCalc;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setTemplateCalc(String newTemplateCalc)
+  {
+		String oldTemplateCalc = templateCalc;
+		templateCalc = newTemplateCalc;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC, oldTemplateCalc, templateCalc));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EList<CalculationTemplate> getTemplates()
   {
 		if (templates == null) {
@@ -254,6 +298,8 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 				return getDescription();
 			case PagosPackage.INFORMATION_TEMPLATE__ATT_LISTS:
 				return getAttLists();
+			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC:
+				return getTemplateCalc();
 			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATES:
 				return getTemplates();
 			case PagosPackage.INFORMATION_TEMPLATE__PROVIDERS:
@@ -281,6 +327,9 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 			case PagosPackage.INFORMATION_TEMPLATE__ATT_LISTS:
 				getAttLists().clear();
 				getAttLists().addAll((Collection<? extends BusinessAttribute>)newValue);
+				return;
+			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC:
+				setTemplateCalc((String)newValue);
 				return;
 			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATES:
 				getTemplates().clear();
@@ -312,6 +361,9 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 			case PagosPackage.INFORMATION_TEMPLATE__ATT_LISTS:
 				getAttLists().clear();
 				return;
+			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC:
+				setTemplateCalc(TEMPLATE_CALC_EDEFAULT);
+				return;
 			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATES:
 				getTemplates().clear();
 				return;
@@ -337,6 +389,8 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case PagosPackage.INFORMATION_TEMPLATE__ATT_LISTS:
 				return attLists != null && !attLists.isEmpty();
+			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC:
+				return TEMPLATE_CALC_EDEFAULT == null ? templateCalc != null : !TEMPLATE_CALC_EDEFAULT.equals(templateCalc);
 			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATES:
 				return templates != null && !templates.isEmpty();
 			case PagosPackage.INFORMATION_TEMPLATE__PROVIDERS:
@@ -360,6 +414,8 @@ public class InformationTemplateImpl extends MinimalEObjectImpl.Container implem
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", templateCalc: ");
+		result.append(templateCalc);
 		result.append(')');
 		return result.toString();
 	}

@@ -473,9 +473,19 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EAttribute getInformationTemplate_TemplateCalc()
+  {
+		return (EAttribute)informationTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public EReference getInformationTemplate_Templates()
   {
-		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(3);
+		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -485,7 +495,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 	 */
   public EReference getInformationTemplate_Providers()
   {
-		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(4);
+		return (EReference)informationTemplateEClass.getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -977,6 +987,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		createEAttribute(informationTemplateEClass, INFORMATION_TEMPLATE__NAME);
 		createEAttribute(informationTemplateEClass, INFORMATION_TEMPLATE__DESCRIPTION);
 		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__ATT_LISTS);
+		createEAttribute(informationTemplateEClass, INFORMATION_TEMPLATE__TEMPLATE_CALC);
 		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__TEMPLATES);
 		createEReference(informationTemplateEClass, INFORMATION_TEMPLATE__PROVIDERS);
 
@@ -1099,6 +1110,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		initEAttribute(getInformationTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInformationTemplate_Description(), ecorePackage.getEString(), "description", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInformationTemplate_AttLists(), this.getBusinessAttribute(), null, "attLists", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationTemplate_TemplateCalc(), ecorePackage.getEString(), "templateCalc", null, 0, 1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInformationTemplate_Templates(), this.getCalculationTemplate(), null, "templates", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInformationTemplate_Providers(), this.getProvider(), null, "providers", null, 0, -1, InformationTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

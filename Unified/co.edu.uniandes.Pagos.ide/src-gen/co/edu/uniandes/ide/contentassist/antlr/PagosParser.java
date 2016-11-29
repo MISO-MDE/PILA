@@ -57,7 +57,7 @@ public class PagosParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInformationTemplateAccess().getGroup(), "rule__InformationTemplate__Group__0");
 					put(grammarAccess.getInformationTemplateAccess().getGroup_14(), "rule__InformationTemplate__Group_14__0");
 					put(grammarAccess.getInformationTemplateAccess().getGroup_17(), "rule__InformationTemplate__Group_17__0");
-					put(grammarAccess.getInformationTemplateAccess().getGroup_17_5(), "rule__InformationTemplate__Group_17_5__0");
+					put(grammarAccess.getInformationTemplateAccess().getGroup_17_6(), "rule__InformationTemplate__Group_17_6__0");
 					put(grammarAccess.getInformationTemplateAccess().getGroup_18(), "rule__InformationTemplate__Group_18__0");
 					put(grammarAccess.getInformationTemplateAccess().getGroup_18_5(), "rule__InformationTemplate__Group_18_5__0");
 					put(grammarAccess.getCalculationTemplateAccess().getGroup(), "rule__CalculationTemplate__Group__0");
@@ -111,8 +111,9 @@ public class PagosParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInformationTemplateAccess().getDescriptionAssignment_8(), "rule__InformationTemplate__DescriptionAssignment_8");
 					put(grammarAccess.getInformationTemplateAccess().getAttListsAssignment_13(), "rule__InformationTemplate__AttListsAssignment_13");
 					put(grammarAccess.getInformationTemplateAccess().getAttListsAssignment_14_1(), "rule__InformationTemplate__AttListsAssignment_14_1");
-					put(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_4(), "rule__InformationTemplate__TemplatesAssignment_17_4");
-					put(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5_1(), "rule__InformationTemplate__TemplatesAssignment_17_5_1");
+					put(grammarAccess.getInformationTemplateAccess().getTemplateCalcAssignment_17_2(), "rule__InformationTemplate__TemplateCalcAssignment_17_2");
+					put(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_5(), "rule__InformationTemplate__TemplatesAssignment_17_5");
+					put(grammarAccess.getInformationTemplateAccess().getTemplatesAssignment_17_6_1(), "rule__InformationTemplate__TemplatesAssignment_17_6_1");
 					put(grammarAccess.getInformationTemplateAccess().getProvidersAssignment_18_4(), "rule__InformationTemplate__ProvidersAssignment_18_4");
 					put(grammarAccess.getInformationTemplateAccess().getProvidersAssignment_18_5_1(), "rule__InformationTemplate__ProvidersAssignment_18_5_1");
 					put(grammarAccess.getCalculationTemplateAccess().getNameAssignment_4(), "rule__CalculationTemplate__NameAssignment_4");

@@ -1,0 +1,10 @@
+package co.edu.uniandes.businesslogic;
+
+import java.util.List;
+
+import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.entity.PilaEntity;
+import co.edu.uniandes.staticmodel.EstadoNovedad;
+import co.edu.uniandes.staticmodel.TipoNovedad;
+
+public class CalculationFormula {
