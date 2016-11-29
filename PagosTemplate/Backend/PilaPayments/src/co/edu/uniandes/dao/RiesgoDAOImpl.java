@@ -19,7 +19,7 @@ private static final Logger logger = LogManager.getLogger(EntityDAOImpl.class);
 	
 	@Override
 	public Riesgo findByActividadEconomica(Long idActividad) {
-		Query query = em.createQuery("select r from Riesgo r where r.actividadesEconomicas in (:id)");
+		Query query = em.createQuery("select r from Riesgo r join r.actividadesEconomicas e where e.id = :id");
 		query.setParameter("id", idActividad);
 	    
 	    return query.getResultList().isEmpty() ? null : (Riesgo)query.getSingleResult();
