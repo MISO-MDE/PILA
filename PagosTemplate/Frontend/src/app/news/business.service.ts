@@ -41,7 +41,7 @@ export class NewsBusinessService {
      news.cedulaEntity = this.selectedEntity.cedula;
     this.eventApiService.saveNews(news).subscribe((response: any) => {
       if (response) {
-        this.loadEvents("*");
+        this.loadEvents(this.selectedEntity.cedula);
       } else {
         console.log("**ERORR: No se guardo la Novedad revisar Logs");
       }
