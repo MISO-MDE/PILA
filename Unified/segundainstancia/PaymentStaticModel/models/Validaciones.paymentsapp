@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PaymentsApp:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PaymentsApp="http://www.edu.co/uniandes/PaymentsApp">
-  <intermediary>
+<PaymentsApp:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="http://www.edu.co/uniandes/PaymentsApp" name="APP MDE MISO">
+  <intermediary name="Pagos de Una">
     <intermediaryAttributes name="Tipo Pensionado">
-      <businessAttributes name="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado de régimen de prima media. Sin tope máximo de pensión" type="TipoPensionado"/>
+      <businessAttributes name="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2">
+        <exp xsi:type="PaymentsApp:TerminalValue"/>
+      </businessAttributes>
+      <businessAttributes name="Pensionado de régimen de prima media. Sin tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
       <businessAttributes name="Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión" type="TipoPensionado"/>
       <businessAttributes name="Pensionado de riesgos laborales. Tope máximo de 25 smlmv" type="TipoPensionado"/>
       <businessAttributes name="Pensionado por el empleador. Con tope maximo de pension de 25 smlmv" type="TipoPensionado"/>
