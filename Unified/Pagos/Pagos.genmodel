@@ -75,10 +75,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//BusinessAttribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//BusinessAttribute/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//BusinessAttribute/exp"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//BusinessAttribute/isIndex"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//TerminalValue">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pagos.ecore#//TerminalValue/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pagos.ecore#//TerminalValue/variable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//TerminalValue/valor"/>
     </genClasses>
