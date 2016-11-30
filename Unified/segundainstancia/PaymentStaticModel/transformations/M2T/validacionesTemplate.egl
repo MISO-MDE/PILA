@@ -38,7 +38,7 @@ public class DBUtil {
 		[% var insertIndex = 0;%]			
 		[% for(q in p.businessAttributes){%]
 		    [% insertIndex += 1;%]
-			st.executeUpdate("insert into [%=q.Type%] (id, codigo, descripcion) values([%=insertIndex%],'[%=insertIndex%]','[%=q.name%]");	
+			st.executeUpdate("insert into [%=q.Type%] (id, codigo, descripcion) values([%=insertIndex%],'[%=insertIndex%]','[%=q.name%]')");	
 			[% hashRows.put(q, insertIndex);%]
 		[%}%]
 	[%}%]
