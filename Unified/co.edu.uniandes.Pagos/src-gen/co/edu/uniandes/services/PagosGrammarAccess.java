@@ -632,15 +632,17 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
 		private final RuleCall cCOMMATerminalRuleCall_17_0 = (RuleCall)cGroup_17.eContents().get(0);
 		private final Keyword cCalculationtemplatesKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
-		private final RuleCall cCOLONTerminalRuleCall_17_2 = (RuleCall)cGroup_17.eContents().get(2);
-		private final RuleCall cLBRACKETTerminalRuleCall_17_3 = (RuleCall)cGroup_17.eContents().get(3);
-		private final Assignment cTemplatesAssignment_17_4 = (Assignment)cGroup_17.eContents().get(4);
-		private final RuleCall cTemplatesCalculationTemplateParserRuleCall_17_4_0 = (RuleCall)cTemplatesAssignment_17_4.eContents().get(0);
-		private final Group cGroup_17_5 = (Group)cGroup_17.eContents().get(5);
-		private final RuleCall cCOMMATerminalRuleCall_17_5_0 = (RuleCall)cGroup_17_5.eContents().get(0);
-		private final Assignment cTemplatesAssignment_17_5_1 = (Assignment)cGroup_17_5.eContents().get(1);
-		private final RuleCall cTemplatesCalculationTemplateParserRuleCall_17_5_1_0 = (RuleCall)cTemplatesAssignment_17_5_1.eContents().get(0);
-		private final RuleCall cRBRACKETTerminalRuleCall_17_6 = (RuleCall)cGroup_17.eContents().get(6);
+		private final Assignment cTemplateCalcAssignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
+		private final RuleCall cTemplateCalcIDTerminalRuleCall_17_2_0 = (RuleCall)cTemplateCalcAssignment_17_2.eContents().get(0);
+		private final RuleCall cCOLONTerminalRuleCall_17_3 = (RuleCall)cGroup_17.eContents().get(3);
+		private final RuleCall cLBRACKETTerminalRuleCall_17_4 = (RuleCall)cGroup_17.eContents().get(4);
+		private final Assignment cTemplatesAssignment_17_5 = (Assignment)cGroup_17.eContents().get(5);
+		private final RuleCall cTemplatesCalculationTemplateParserRuleCall_17_5_0 = (RuleCall)cTemplatesAssignment_17_5.eContents().get(0);
+		private final Group cGroup_17_6 = (Group)cGroup_17.eContents().get(6);
+		private final RuleCall cCOMMATerminalRuleCall_17_6_0 = (RuleCall)cGroup_17_6.eContents().get(0);
+		private final Assignment cTemplatesAssignment_17_6_1 = (Assignment)cGroup_17_6.eContents().get(1);
+		private final RuleCall cTemplatesCalculationTemplateParserRuleCall_17_6_1_0 = (RuleCall)cTemplatesAssignment_17_6_1.eContents().get(0);
+		private final RuleCall cRBRACKETTerminalRuleCall_17_7 = (RuleCall)cGroup_17.eContents().get(7);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
 		private final RuleCall cCOMMATerminalRuleCall_18_0 = (RuleCall)cGroup_18.eContents().get(0);
 		private final Keyword cProvidersKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
@@ -663,14 +665,16 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//	'FormAttributes' COLON
 		//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
 		//	RBRACE (COMMA
-		//	'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)*
-		//	RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?;
+		//	'calculationtemplates' templateCalc=ID COLON LBRACKET templates+=CalculationTemplate (COMMA
+		//	templates+=CalculationTemplate)* RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA
+		//	providers+=Provider)* RBRACKET)?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{InformationTemplate} LBRACE 'name' COLON name=ID COMMA 'description' COLON description=STRING COMMA 'FormAttributes'
 		//COLON LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET RBRACE (COMMA
-		//'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)*
-		//RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?
+		//'calculationtemplates' templateCalc=ID COLON LBRACKET templates+=CalculationTemplate (COMMA
+		//templates+=CalculationTemplate)* RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA
+		//providers+=Provider)* RBRACKET)?
 		public Group getGroup() { return cGroup; }
 		
 		//{InformationTemplate}
@@ -742,8 +746,8 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//RBRACE
 		public RuleCall getRBRACETerminalRuleCall_16() { return cRBRACETerminalRuleCall_16; }
 		
-		//(COMMA 'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)*
-		//RBRACKET)?
+		//(COMMA 'calculationtemplates' templateCalc=ID COLON LBRACKET templates+=CalculationTemplate (COMMA
+		//templates+=CalculationTemplate)* RBRACKET)?
 		public Group getGroup_17() { return cGroup_17; }
 		
 		//COMMA
@@ -752,32 +756,38 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//'calculationtemplates'
 		public Keyword getCalculationtemplatesKeyword_17_1() { return cCalculationtemplatesKeyword_17_1; }
 		
+		//templateCalc=ID
+		public Assignment getTemplateCalcAssignment_17_2() { return cTemplateCalcAssignment_17_2; }
+		
+		//ID
+		public RuleCall getTemplateCalcIDTerminalRuleCall_17_2_0() { return cTemplateCalcIDTerminalRuleCall_17_2_0; }
+		
 		//COLON
-		public RuleCall getCOLONTerminalRuleCall_17_2() { return cCOLONTerminalRuleCall_17_2; }
+		public RuleCall getCOLONTerminalRuleCall_17_3() { return cCOLONTerminalRuleCall_17_3; }
 		
 		//LBRACKET
-		public RuleCall getLBRACKETTerminalRuleCall_17_3() { return cLBRACKETTerminalRuleCall_17_3; }
+		public RuleCall getLBRACKETTerminalRuleCall_17_4() { return cLBRACKETTerminalRuleCall_17_4; }
 		
 		//templates+=CalculationTemplate
-		public Assignment getTemplatesAssignment_17_4() { return cTemplatesAssignment_17_4; }
+		public Assignment getTemplatesAssignment_17_5() { return cTemplatesAssignment_17_5; }
 		
 		//CalculationTemplate
-		public RuleCall getTemplatesCalculationTemplateParserRuleCall_17_4_0() { return cTemplatesCalculationTemplateParserRuleCall_17_4_0; }
+		public RuleCall getTemplatesCalculationTemplateParserRuleCall_17_5_0() { return cTemplatesCalculationTemplateParserRuleCall_17_5_0; }
 		
 		//(COMMA templates+=CalculationTemplate)*
-		public Group getGroup_17_5() { return cGroup_17_5; }
+		public Group getGroup_17_6() { return cGroup_17_6; }
 		
 		//COMMA
-		public RuleCall getCOMMATerminalRuleCall_17_5_0() { return cCOMMATerminalRuleCall_17_5_0; }
+		public RuleCall getCOMMATerminalRuleCall_17_6_0() { return cCOMMATerminalRuleCall_17_6_0; }
 		
 		//templates+=CalculationTemplate
-		public Assignment getTemplatesAssignment_17_5_1() { return cTemplatesAssignment_17_5_1; }
+		public Assignment getTemplatesAssignment_17_6_1() { return cTemplatesAssignment_17_6_1; }
 		
 		//CalculationTemplate
-		public RuleCall getTemplatesCalculationTemplateParserRuleCall_17_5_1_0() { return cTemplatesCalculationTemplateParserRuleCall_17_5_1_0; }
+		public RuleCall getTemplatesCalculationTemplateParserRuleCall_17_6_1_0() { return cTemplatesCalculationTemplateParserRuleCall_17_6_1_0; }
 		
 		//RBRACKET
-		public RuleCall getRBRACKETTerminalRuleCall_17_6() { return cRBRACKETTerminalRuleCall_17_6; }
+		public RuleCall getRBRACKETTerminalRuleCall_17_7() { return cRBRACKETTerminalRuleCall_17_7; }
 		
 		//(COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?
 		public Group getGroup_18() { return cGroup_18; }
@@ -1896,8 +1906,9 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	//	'FormAttributes' COLON
 	//	LBRACKET attLists+=BusinessAttribute (COMMA attLists+=BusinessAttribute)* RBRACKET
 	//	RBRACE (COMMA
-	//	'calculationtemplates' COLON LBRACKET templates+=CalculationTemplate (COMMA templates+=CalculationTemplate)*
-	//	RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA providers+=Provider)* RBRACKET)?;
+	//	'calculationtemplates' templateCalc=ID COLON LBRACKET templates+=CalculationTemplate (COMMA
+	//	templates+=CalculationTemplate)* RBRACKET)? (COMMA 'providers' COLON LBRACKET providers+=Provider (COMMA
+	//	providers+=Provider)* RBRACKET)?;
 	public InformationTemplateElements getInformationTemplateAccess() {
 		return pInformationTemplate;
 	}
@@ -2155,7 +2166,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal OPERADORLOGICO:
-	//	'<' | '>' | '<=' | '>=' | '=' | '<>';
+	//	'<' | '>' | '<=' | '>=' | '=' | '<>' | '!=';
 	public TerminalRule getOPERADORLOGICORule() {
 		return tOPERADORLOGICO;
 	}

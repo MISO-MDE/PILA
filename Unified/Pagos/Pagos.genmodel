@@ -35,6 +35,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//InformationTemplate/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//InformationTemplate/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//InformationTemplate/attLists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//InformationTemplate/templateCalc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//InformationTemplate/templates"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Pagos.ecore#//InformationTemplate/providers"/>
     </genClasses>

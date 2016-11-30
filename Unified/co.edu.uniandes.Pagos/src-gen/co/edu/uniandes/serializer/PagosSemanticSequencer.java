@@ -253,7 +253,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         description=STRING 
 	 *         attLists+=BusinessAttribute 
 	 *         attLists+=BusinessAttribute* 
-	 *         (templates+=CalculationTemplate templates+=CalculationTemplate*)? 
+	 *         (templateCalc=ID templates+=CalculationTemplate templates+=CalculationTemplate*)? 
 	 *         (providers+=Provider providers+=Provider*)?
 	 *     )
 	 */

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getName <em>Name</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getDescription <em>Description</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getAttLists <em>Att Lists</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getTemplateCalc <em>Template Calc</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getTemplates <em>Templates</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.InformationTemplate#getProviders <em>Providers</em>}</li>
  * </ul>
@@ -96,6 +97,32 @@ public interface InformationTemplate extends EObject
 	 * @generated
 	 */
   EList<BusinessAttribute> getAttLists();
+
+  /**
+	 * Returns the value of the '<em><b>Template Calc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Template Calc</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Template Calc</em>' attribute.
+	 * @see #setTemplateCalc(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getInformationTemplate_TemplateCalc()
+	 * @model
+	 * @generated
+	 */
+  String getTemplateCalc();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.InformationTemplate#getTemplateCalc <em>Template Calc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Template Calc</em>' attribute.
+	 * @see #getTemplateCalc()
+	 * @generated
+	 */
+  void setTemplateCalc(String value);
 
   /**
 	 * Returns the value of the '<em><b>Templates</b></em>' containment reference list.

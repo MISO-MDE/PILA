@@ -4,5 +4,5 @@
 	var t:Template:= TemplateFactory.load('generadorHTML.egl');
 	t.generate('./generated/index.html');
 	
-	generateFrontEnd();
+	//generateFrontEnd();
 %]

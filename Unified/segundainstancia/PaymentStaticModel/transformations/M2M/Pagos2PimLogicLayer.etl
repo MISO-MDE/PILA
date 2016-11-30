@@ -19,7 +19,14 @@ rule Pagos2PimApp
 				t.logicalComponents.addAll(pa->templatesForms.equivalent()); //Templates de Informacion
 				for (it:PagosM!InformationTemplate in pa->templatesForms) {
 					t.logicalComponents.addAll(it->providers.equivalent());// Adiciona los providers 
-					t.logicalComponents.last().operations.addAll(it->templates.equivalent()); // Adiciona operaciones de calculo para formulas dadas
+					if (it.templateCalc <> "" and it.templateCalc <> null) {
+						var calculationGroup = new PagosPim!LogicComponent;
+						calculationGroup.name = it.templateCalc;
+						calculationGroup.persistible = false; 
+						t.logicalComponents.add(calculationGroup);
+						calculationGroup.operations.addAll(it->templates.equivalent());
+						//t.logicalComponents.last().operations.addAll(it->templates.equivalent()); // Adiciona operaciones de calculo para formulas dadas
+					}
 				}	
 			}
 		}
@@ -350,6 +357,7 @@ rule LogicComp2DataLayer
 	to	
 		t:PagosPim!DataLayerComponent
 	{
+		//guard: (s.persistible)
 		t.name = s.name;
 		t.fields = s.attributes.equivalent("Attrib2Field");
 		t.fields.addAll(s.operations.equivalent("Operation2Field"));
@@ -425,23 +433,35 @@ operation setRelations(s, t) {
 	for (it:PagosM!Intermediary in s.intermediary) { //Padre
 		var parent = t.logicalComponents->selectOne(e|e.name = it.name);
 		for (se:PagosM!SuperEntity in it->superentities) {	 //Hijos	 Intermediario
-			createRealtion(parent, se, t);
+			createRealtion(parent, se, t, "");
 			var parent = t.logicalComponents->selectOne(e|e.name = se.name);
 			for (pa:PagosM!Participant in se->participants) { //Hijos de SuperEntidad
-				createRealtion(parent, pa, t);
+				createRealtion(parent, pa, t, "");
 				var parent = t.logicalComponents->selectOne(e|e.name = pa.name);
 				for (inf:PagosM!InformationTemplate in pa->templatesForms) { //Hijos de Participant
-					createRealtion(parent, inf, t);
+					createRealtion(parent, inf, t, "");
+					var parent = t.logicalComponents->selectOne(e|e.name = inf.name);
+					var calcTem =  inf->templates.first();
+					if (calcTem <> null)
+						createRealtion(parent, calcTem, t, inf.templateCalc);
+					//for (ct:PagosM!CalculationTemplate in inf->templates) { //Hijos de Information Templates
+					//	createRealtion(parent, ct, t, inf.templateCalc);
+					//}
 				}
 			}
 		}
 	}
 }	
 
-operation createRealtion(parent, se, t) {
+operation createRealtion(parent, se, t, prefix) {
 	"creando relacion".println();
+	var child;
 	var relation = new PagosPim!Relation;
-	var child = t.logicalComponents->selectOne(e|e.name = se.name);
+	if (prefix = "")
+		child = t.logicalComponents->selectOne(e|e.name = prefix.concat(se.name));
+	else
+		child = t.logicalComponents->selectOne(e|e.name = prefix);
+	child.name.println();
 	relation.targetComponent = child;
 	relation.name = child.name;
 	parent.relations.add(relation);

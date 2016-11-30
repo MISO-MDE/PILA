@@ -16,7 +16,7 @@ intermediary:
 				/*Entidades o beneficiario del servicio por los que se paga el servicio*/
 				entities:
 				[	//Entidad Pensionado
-					{	name:Pensionado,
+					{	name:Entity,
 						description: "Persona receptora de los servicios EPS, Pension, Riesgos",
 						attributes: [{Id: Integer}, 
 									{superEntityId: Integer := SU.Pagadora#Id}, 
@@ -41,13 +41,26 @@ intermediary:
 								{FechaFinal:Date}, 
 								{TipoNovedad:String}, 
 								{DiasNovedad:Integer},
-								{idEntidad:Integer := PA.Pensionado#Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
-								{superEntityId:Integer := SU.Pagadora#Id}, //Relaciona la super entidad que crea la novedad o grupo de informacion
-								{cedula:String := PA.Pensionado#cedula @Indice} //Referencia la cedula del pensionado como campo de busqueda	
+								{idEntidad:Integer := PA.Entity#Id}, //Relaciona la novedad o grupo de informacion con el ID del Participante
+								{superEntityId:Integer := SU.Entity#Id}, //Relaciona la super entidad que crea la novedad o grupo de informacion
+								{cedula:String := PA.Entity#cedula @Indice} //Referencia la cedula del pensionado como campo de busqueda	
 							]
 						},
-										/*Formulas de Calculo del Formulario de Pagos */
-						calculationtemplates:
+						{	name:Pagos,
+							description: "Formulario para Registro de Pagos",
+							FormAttributes:[
+											{FechaPago:Date}, 
+											{Monto:Double}, 
+											{Status:String}, 
+											{MesPago:Integer},
+											{idEntidad:Integer := PA.Entity#Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
+											{superEntityId:Integer := SU.Pagadora#superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion
+							]
+						},
+						
+						
+						/*Formulas de Calculo del Formulario de Pagos */
+						calculationtemplates CalculationFormula:
 						[	
 							{	name:EPS, /*Calculo PAGO EPS*/
 								description: "Calculo Salud",
@@ -61,7 +74,7 @@ intermediary:
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									SI [PA.Pensionado#vivienda  <> "Colombia" && PA.Pensionado#grupofamiliar <> "Colombia"] ENTONCES
+									SI [PA.Entity#vivienda  != "Colombia" && PA.Entity#grupofamiliar != "Colombia"] ENTONCES
 									{
 										RETORNAR: 0
 									}	
@@ -161,18 +174,7 @@ intermediary:
 									RETORNAR: FU.EPS + FU.Pension + FU.RiesgoLaboral
 							} // FIN FORMULA DE CALCULO 1 SALUD // FIN FORMULA DE CALCULO SISTEMA GENERAL DE RIESGOS
 							
-						], //FIN DE LOS CALCULOS
-						{	name:Pagos,
-							description: "Formulario para Registro de Pagos",
-							FormAttributes:[
-											{FechaPago:Date}, 
-											{Monto:Double}, 
-											{Status:String}, 
-											{MesPago:Integer},
-											{idEntidad:Integer := PA.Pensionado#Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
-											{superEntityId:Integer := SU.Pagadora#superEntityId} //Relaciona la super entidad que crea la novedad o grupo de informacion
-							]
-						},
+						],
 						providers:[
 							{	name:PrestadoraServicios,
 								description: "Empresas Prestadora de los servicios",
