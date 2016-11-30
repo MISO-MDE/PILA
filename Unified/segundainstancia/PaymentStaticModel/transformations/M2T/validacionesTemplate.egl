@@ -5,11 +5,6 @@ public class DBUtil {
 /**
   Plantilla para hacer la insersion de datos
 **/
-
-
-
-
-
 	 public static void main (String[] args) { 
         try {
             String url = "jdbc:postgresql://localhost:5432/pila?useUnicode=true&characterEncoding=UTF-8";
@@ -37,54 +32,52 @@ public class DBUtil {
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(9,'1431', 'Extraccion de esmeraldas')");
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(10,'2321','Fabricacion de productos de la refinación del petroleo, elaborados en refineria')");
 
-	        [% var hashRows: new Map;%]
-	        [% for(p in BusinessAttributeCollection.all){%]
-			//Inserts tabla  [%=p.name%];			    
-				[% var insertIndex = 0;%]			
-				[% for(q in p.businessAttributes){%]
-				    [% insertIndex += 1;%]
-					st.executeUpdate("insert into [%=q.Type%] (id, codigo, descripcion) values([%=insertIndex%],'[%=insertIndex%]','[%=q.name%]");	
-					[% hashRows.put(q, insertIndex);%]
-				[%}%]			
-					
-			[%}%]
-
+    [% var hashRows: new Map;%]
+    [% for(p in BusinessAttributeCollection.all){%]
+	       //Inserts tabla  [%=p.name%];			    
+		[% var insertIndex = 0;%]			
+		[% for(q in p.businessAttributes){%]
+		    [% insertIndex += 1;%]
+			st.executeUpdate("insert into [%=q.Type%] (id, codigo, descripcion) values([%=insertIndex%],'[%=insertIndex%]','[%=q.name%]");	
+			[% hashRows.put(q, insertIndex);%]
+		[%}%]
+	[%}%]
 
             st.executeUpdate("commit");
-           
-          pensionadopagador 
-          [% var pensionadopagadorIndex = 0;%]
-          [% var pensionpagadorIndex = 0;%]
-          [% var pensionpensionadoIndex = 0;%] 
-     	  [% for(p in BusinessAttributeCollection.all){%]			
-				[% var mainIndex = 0;%]
-				[% for(q in p.businessAttributes){%]
-				  [% mainIndex += 1;%]
-				  [% var secondIndex = 0;%]
-			      [% for(r in q.relations){%]			      					      		
-			       		/**  
-			       		 * [%=q.Type%] vs [%=r.Type%]
-			       		 * id: [%=hashRows.get(q)%]  --  id: [%=hashRows.get(r)%]       				       		
-			       		 * [%=q.name%]   --   [%=r.name%]	
-			       		 */			       				       		
-			       		[%if(q.Type =='TipoPensionado'  and r.Type =='TipoPagador'){%]
-			       		 [% pensionadopagadorIndex += 1;%]
-			       		 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values([%=pensionadopagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
-			       		[%}%]			       		
-			       		[%if(q.Type =='TipoPension'  and r.Type =='TipoPagador'){%]
-			       		 [% pensionpagadorIndex += 1;%]
-			       		 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values([%=pensionpagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
-			       		[%}%]			       		
-			       		[%if(q.Type =='TipoPension'  and r.Type =='TipoPensionado'){%]
-			       		 [% pensionpensionadoIndex += 1;%]
-			       		 st.executeUpdate("insert into validacionpensionpensionado (id, pensionado_id, pagador_id) values([%=pensionpensionadoIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
-			       		[%}%]			       					
-				  [%}%]				
-				[%}%]		
-			[%}%]            
+            //Relations           
+ 
+ [%var pensionadopagadorIndex = 0;
+       var pensionpagadorIndex = 0;
+       var pensionpensionadoIndex = 0; 
+ 	   for(p in BusinessAttributeCollection.all){			
+			 var mainIndex = 0;
+			 for(q in p.businessAttributes){
+			   mainIndex += 1;
+			   var secondIndex = 0;
+		       for(r in q.relations){%]			      					      		
+       		/**  
+       		 * [%=q.Type%] vs [%=r.Type%]
+       		 * id: [%=hashRows.get(q)%]  --  id: [%=hashRows.get(r)%]       				       		
+       		 * [%=q.name%]   --   [%=r.name%]	
+       		 */			       				       		
+	       		[%if(q.Type =='TipoPensionado'  and r.Type =='TipoPagador'){
+	       		  pensionadopagadorIndex += 1;%]
+	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values([%=pensionadopagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
+	       		[%}			       		
+	       		 if(q.Type =='TipoPension'  and r.Type =='TipoPagador'){
+	       		  pensionpagadorIndex += 1;%]
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values([%=pensionpagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
+	       		[%}			       		
+	       		 if(q.Type =='TipoPension'  and r.Type =='TipoPensionado'){
+	       		  pensionpensionadoIndex += 1;%]
+	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pensionado_id, pagador_id) values([%=pensionpensionadoIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
+	       		[%}			       					
+		  }				
+		}		
+	}%]            
 
-	        System.out.println("Insersion finalizada");
-	        st.executeUpdate("commit");
+    System.out.println("Insersion finalizada");
+    st.executeUpdate("commit");
 
 	            conn.close(); 
 	        } catch (Exception e) { 
