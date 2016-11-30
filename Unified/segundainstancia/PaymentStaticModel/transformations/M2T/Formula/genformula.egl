@@ -1,0 +1,186 @@
+[%
+	var root:PagosPim!Application := PagosPim!Application.all.at(0);
+	var formulaRoot:PagosPim!LogicComponent := root->logicalComponents.select(e | not e.persistible).first();
+%]
+package co.edu.uniandes.businesslogic;
+
+import java.util.List;
+
+import co.edu.uniandes.entity.Novedad;
+import co.edu.uniandes.entity.PilaEntity;
+import co.edu.uniandes.staticmodel.EstadoNovedad;
+import co.edu.uniandes.staticmodel.TipoNovedad;
+
+public class [%=formulaRoot.name%] {
+	
+	private long entityId;
+	
+	PilaEntity entity;
+	
+	public CalculationFormula(PilaEntity entity) {
+		this.entity = entity;
+	}
+	
+	public long getEntityId() {
+		return entityId;
+	}
+	public void setEntityId(long entityId) {
+		this.entityId = entityId;
+	}
+	[% 
+		for (eachMethod:PagosPim!Operation in formulaRoot->operations) {
+			addMethod(eachMethod);
+		}
+	%]
+
+	
+}
+
+
+[%
+operation addMethod(calcMethod) {
+%]
+	public double [%=calcMethod.name%] {
+		[%
+			addLocalVars(calcMethod);
+			addMethodBody(calcMethod->body);
+		%]
+	}
+[%	
+}
+%]
+
+[%
+operation addLocalVars(calcMethod) {
+	for (eachVar:PagosPim!Attribute in calcMethod->attributes) {
+	%]
+		[%=eachVar.type.name%] [%=eachVar.name%][%if (eachVar->expression.isDefined())%]=[%=getExpression(eachVar->expression)%];
+	[%
+	}
+}
+%]
+
+[%
+operation addMethodBody(methodBody) {
+	if (methodBody->returnExp.isDefined()) {
+		var valueExp = methodBody->returnExp;
+		%]	
+			return [%=getExpression(valueExp->expression.at(0))%];
+	[%}
+	else {
+		%][%
+		if (methodBody->ifblock.isDefined()) {
+			for(ifblock:PagosPim!IfBlock in methodBody->ifblock) {
+				var ifConds = ifblock->ifcondition;
+				for (aIfCond:PagosPim!IfCondition in ifConds) {%]
+				
+		if ([%	
+				addCondition(aIfCond);
+		%]){
+				[%
+				var valueExp =aIfCond->returnBlock;
+				%]		
+			return [%=getExpression(valueExp->expression.at(0))%];
+		}
+			[%
+				}
+				if (ifblock.elsesegment.isDefined()) {
+					var elseSegment = ifblock->elsesegment;
+					%]
+		else {
+				[%
+					if (elseSegment.hasProperty("innerIfBlocks")) {
+						addMethodBody(elseSegment->innerIfBlocks);
+					}
+					else {%
+						if (elseSegment.hasProperty("expression")) {
+					%]
+								return [%=getExpression(elseSegment->expression)%];
+					[%	
+						}
+					}
+					
+				%]		}
+				[%
+				}
+			%][%
+			}
+		}
+	}
+}
+%]
+
+[%
+operation addCondition(ifCondition) {
+		var logExp = ifCondition->logicalexpressions;
+		for (logTuple:PagosPim!LogicalExpression in ifCondition->logicalexpressions) {
+			handdleExpression(logTuple);
+		}
+}
+%]
+
+[% operation handdleExpression(logTuple) {
+		if (logTuple.literal = null) {
+			%][%if (logTuple.leftTerm.value <> null )%][%=logTuple.leftTerm.value%][%else%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%] [%
+			if (logTuple.rightTerm.value <> null )%][%=logTuple.rightTerm.value%][%else%][%=logTuple.rightTerm.attribute.name%][%
+		}
+		else {
+		%][%if (logTuple.leftTerm.value <> null )%][%=logTuple.leftTerm.value%][%else%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%] [%=logTuple.literal%][%
+		}
+
+		if (logTuple.moreExpressions.isDefined()) {
+			%] [%=logTuple.conOper%][%
+				handdleExpression(logTuple.moreExpressions);
+		}
+}
+%]
+
+
+[%
+operation getLogicalExp(logExp) {
+
+	for (logTuple:PagosPim!LogicalExpression in logExp) {
+	%][%=logTuple.literal%] [%=logTuple.logicalOperator%]
+	[%}
+}
+%]
+
+[%operation getExpression(valueExp) {
+	if (valueExp.isKindOf(PagosPim!TerminalValue)) {
+		if (valueExp.parent.isDefined()) { // Suma de formulas o definicion de variables
+			if (valueExp.attribute.isDefined()) {
+				%][%=valueExp.parent.name.firstToLowerCase()%].get[%=valueExp.attribute.name.firstToUpperCase%]()[%
+			}
+			else {
+			%] [%=valueExp.parent.name%] [%
+			}
+		}
+		else {
+			if (valueExp.value <> null )%][%=valueExp.value%][%else%][%=valueExp.attribute.name%][% 
+		}
+	} 
+	else {
+		if (valueExp.isKindOf(PagosPim!Add)) {
+			%] [%=getExpression(valueExp->leftExp)%][%=valueExp.operator%][%=getExpression(valueExp->rightExp)%][%
+		}
+		else {
+			if (valueExp.isKindOf(PagosPim!Mult)) {
+				%][%=getExpression(valueExp->leftExp)%][%=valueExp.operator%][%=getExpression(valueExp->rightExp)%][%
+			}
+		}
+	}
+}	
+%]
+
+[%
+operation getComplexType(s) {
+	var isFeature = s->expression.isKindOf(PagosPim!TerminalValue);
+	if (isFeature) {
+		var objTV = s->expression;
+		if (objTV.hasProperty("parent")) {
+			return objTV.parent;
+		}
+	}
+	return null;
+}
+%]

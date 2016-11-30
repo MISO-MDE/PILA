@@ -10,6 +10,7 @@ import co.edu.uniandes.pagos.TerminalValue;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getValor <em>Valor</em>}</li>
  * </ul>
@@ -31,214 +33,270 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 {
   /**
-   * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVariable()
-   * @generated
-   * @ordered
-   */
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+  protected EObject parent;
+
+  /**
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getVariable()
+	 * @generated
+	 * @ordered
+	 */
   protected BusinessAttribute variable;
 
   /**
-   * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValor()
-   * @generated
-   * @ordered
-   */
+	 * @see #getValor()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String VALOR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValor()
-   * @generated
-   * @ordered
-   */
+	 * @see #getValor()
+	 * @generated
+	 * @ordered
+	 */
   protected String valor = VALOR_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected TerminalValueImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return PagosPackage.Literals.TERMINAL_VALUE;
-  }
+		return PagosPackage.Literals.TERMINAL_VALUE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
+  public EObject getParent()
+  {
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PagosPackage.TERMINAL_VALUE__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EObject basicGetParent()
+  {
+		return parent;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setParent(EObject newParent)
+  {
+		EObject oldParent = parent;
+		parent = newParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__PARENT, oldParent, parent));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public BusinessAttribute getVariable()
   {
-    if (variable != null && variable.eIsProxy())
-    {
-      InternalEObject oldVariable = (InternalEObject)variable;
-      variable = (BusinessAttribute)eResolveProxy(oldVariable);
-      if (variable != oldVariable)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, PagosPackage.TERMINAL_VALUE__VARIABLE, oldVariable, variable));
-      }
-    }
-    return variable;
-  }
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject)variable;
+			variable = (BusinessAttribute)eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PagosPackage.TERMINAL_VALUE__VARIABLE, oldVariable, variable));
+			}
+		}
+		return variable;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public BusinessAttribute basicGetVariable()
   {
-    return variable;
-  }
+		return variable;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setVariable(BusinessAttribute newVariable)
   {
-    BusinessAttribute oldVariable = variable;
-    variable = newVariable;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__VARIABLE, oldVariable, variable));
-  }
+		BusinessAttribute oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__VARIABLE, oldVariable, variable));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getValor()
   {
-    return valor;
-  }
+		return valor;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setValor(String newValor)
   {
-    String oldValor = valor;
-    valor = newValor;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__VALOR, oldValor, valor));
-  }
+		String oldValor = valor;
+		valor = newValor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__VALOR, oldValor, valor));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        if (resolve) return getVariable();
-        return basicGetVariable();
-      case PagosPackage.TERMINAL_VALUE__VALOR:
-        return getValor();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				if (resolve) return getParent();
+				return basicGetParent();
+			case PagosPackage.TERMINAL_VALUE__VARIABLE:
+				if (resolve) return getVariable();
+				return basicGetVariable();
+			case PagosPackage.TERMINAL_VALUE__VALOR:
+				return getValor();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        setVariable((BusinessAttribute)newValue);
-        return;
-      case PagosPackage.TERMINAL_VALUE__VALOR:
-        setValor((String)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				setParent((EObject)newValue);
+				return;
+			case PagosPackage.TERMINAL_VALUE__VARIABLE:
+				setVariable((BusinessAttribute)newValue);
+				return;
+			case PagosPackage.TERMINAL_VALUE__VALOR:
+				setValor((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        setVariable((BusinessAttribute)null);
-        return;
-      case PagosPackage.TERMINAL_VALUE__VALOR:
-        setValor(VALOR_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				setParent((EObject)null);
+				return;
+			case PagosPackage.TERMINAL_VALUE__VARIABLE:
+				setVariable((BusinessAttribute)null);
+				return;
+			case PagosPackage.TERMINAL_VALUE__VALOR:
+				setValor(VALOR_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.TERMINAL_VALUE__VARIABLE:
-        return variable != null;
-      case PagosPackage.TERMINAL_VALUE__VALOR:
-        return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.TERMINAL_VALUE__PARENT:
+				return parent != null;
+			case PagosPackage.TERMINAL_VALUE__VARIABLE:
+				return variable != null;
+			case PagosPackage.TERMINAL_VALUE__VALOR:
+				return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (valor: ");
-    result.append(valor);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (valor: ");
+		result.append(valor);
+		result.append(')');
+		return result.toString();
+	}
 
 } //TerminalValueImpl

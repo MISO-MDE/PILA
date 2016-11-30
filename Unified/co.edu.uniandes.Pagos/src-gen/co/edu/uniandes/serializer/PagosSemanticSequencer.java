@@ -158,7 +158,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     BusinessAttribute returns BusinessAttribute
 	 *
 	 * Constraint:
-	 *     (name=ID type=TYPE exp=Adicion?)
+	 *     (name=ID type=TYPE exp=Adicion? isIndex=INDEX?)
 	 */
 	protected void sequence_BusinessAttribute(ISerializationContext context, BusinessAttribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -170,7 +170,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     CalculationTemplate returns CalculationTemplate
 	 *
 	 * Constraint:
-	 *     (name=ID description=STRING attLists+=BusinessAttribute attLists+=BusinessAttribute* formulas+=Formula)
+	 *     (name=ID description=STRING (attLists+=BusinessAttribute attLists+=BusinessAttribute*)? formulas=Formula)
 	 */
 	protected void sequence_CalculationTemplate(ISerializationContext context, CalculationTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -200,7 +200,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ExpresionLogica returns ExpresionLogica
 	 *
 	 * Constraint:
-	 *     (variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN exp+=ExpresionLogica)?)
+	 *     (variable=TerminalValue (logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+ (conOper=LOGICALCONN exp=ExpresionLogica)?)
 	 */
 	protected void sequence_ExpresionLogica(ISerializationContext context, ExpresionLogica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -236,7 +236,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     IfCondition returns IfCondition
 	 *
 	 * Constraint:
-	 *     (logExp+=ExpresionLogica expression+=Adicion)
+	 *     (logExp+=ExpresionLogica formulaReturn=ReturnBlock)
 	 */
 	protected void sequence_IfCondition(ISerializationContext context, IfCondition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -253,7 +253,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         description=STRING 
 	 *         attLists+=BusinessAttribute 
 	 *         attLists+=BusinessAttribute* 
-	 *         (templates+=CalculationTemplate templates+=CalculationTemplate*)? 
+	 *         (templateCalc=ID templates+=CalculationTemplate templates+=CalculationTemplate*)? 
 	 *         (providers+=Provider providers+=Provider*)?
 	 *     )
 	 */
@@ -373,7 +373,13 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     TerminalValue returns TerminalValue
 	 *
 	 * Constraint:
-	 *     (variable=[BusinessAttribute|ID] | valor=Number)
+	 *     (
+	 *         (parent=[Participant|ID]? variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[SuperEntity|ID] variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[InformationTemplate|ID] variable=[BusinessAttribute|ID]) | 
+	 *         parent=[CalculationTemplate|ID] | 
+	 *         valor=Number
+	 *     )
 	 */
 	protected void sequence_TerminalValue(ISerializationContext context, TerminalValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

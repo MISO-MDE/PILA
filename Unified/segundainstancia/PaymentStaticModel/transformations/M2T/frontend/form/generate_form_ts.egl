@@ -1,0 +1,45 @@
+[%
+import "generate_form_field_operations.egl"; 
+
+var viewName = view.name;
+var form = view.form;
+var selectsBag:Bag;
+var actionsBag:Bag;
+%]
+import {Component, OnInit} from '@angular/core';
+import {[%=viewName%]BusinessService} from "../business.service";
+
+@Component({
+	selector: 'app-[%=viewName.toLowerCase%]-form',
+	templateUrl: './form.component.html',
+	styleUrls: ['./form.component.less']
+})
+export class [%=viewName%]FormComponent implements OnInit {
+	[%for(field in form.fields){
+		if(field.isKindOf(pila_front!Select)){selectsBag.add(field);}
+		else if(field.isKindOf(pila_front!Action)){actionsBag.add(field);} 
+	}%]
+	
+	[%for(field in selectsBag){%]
+	public [%=field.getFixedName()%]Options = [];
+	[%}%]
+	
+	constructor(public businessService: [%=viewName%]BusinessService){
+	}
+	
+	ngOnInit(){
+		[%for(field in selectsBag){%]
+		this.businessService.loadMultiLov('/e[%=field.getFixedName()%]').subscribe((response: any) => {
+			this.[%=field.getFixedName()%]Options = response;
+		});
+		[%}%]
+	}
+	
+	[%for(field in actionsBag){
+	var serviceMethod = field.value.toLowerCase; 
+	%]
+	public [%=serviceMethod%](){
+		this.businessService.[%=serviceMethod%](this.businessService.selectedRow);
+	}
+	[%}%]
+}

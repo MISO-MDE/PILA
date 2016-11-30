@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/PaymentStaticModel/src" modelPluginID="PaymentStaticModel"
+    modelName="PagosPim" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>PagosPIM.ecore</foreignModel>
+  <genPackages prefix="PagosPim" disposableProviderFactory="true" ecorePackage="PagosPIM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//DataTypes">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//DataTypes/String"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//DataTypes/int"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//DataTypes/number"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//DataTypes/Date"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//DataTypes/double"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//Cardinality">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//Cardinality/CEROTOMANY"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//Cardinality/CEROTOONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//LogicalCononnector">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//LogicalCononnector/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//LogicalCononnector/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//AddOper">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//AddOper/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//AddOper/MINUS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//MultOper">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//MultOper/MULT"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//MultOper/DIV"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//RelationType">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//RelationType/COMPOSITION"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//RelationType/REFERENCE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PagosPIM.ecore#//LogicalOperator">
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//LogicalOperator/LESSTHAN"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//LogicalOperator/EQUALTO"/>
+      <genEnumLiterals ecoreEnumLiteral="PagosPIM.ecore#//LogicalOperator/DIFFERENT"/>
+    </genEnums>
+    <genClasses ecoreClass="PagosPIM.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Application/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Application/logicalComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Application/serverservice"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Application/datalayercomponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Application/daocomponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Application/views"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Control">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Control/label"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Input">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Input/service"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Output"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//FrontService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//FrontService/serviceCalls"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//FrontService/serves"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//FrontService/fullName"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//ViewComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//ViewComponent/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ViewComponent/subcomponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ViewComponent/controls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ViewComponent/frontservices"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//GenericComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//GenericComponent/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//GenericComponent/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//GenericComponent/relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//GenericComponent/operations"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Attribute/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Attribute/isIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Operation/parameterList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Operation/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Operation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Operation/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//ParameterList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ParameterList/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Relation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Relation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Relation/targetComponent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Relation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Relation/cardinality"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="PagosPIM.ecore#//AttributeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//AttributeDefinition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//AttributeDefinition/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//AttributeDefinition/complexType"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Return">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Return/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Return/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Body/ifblock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Body/returnExp"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//IfBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfBlock/ifcondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfBlock/elsesegment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfBlock/ifexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//IfCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfCondition/logicalexpressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfCondition/returnBlock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//IfCondition/innerIf"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//NewEClass21"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//ElseSegment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ElseSegment/innerIfBlocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ElseSegment/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Expression"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//LogicalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//LogicalExpression/leftTerm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//LogicalExpression/rightTerm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//LogicalExpression/logicalOperator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//LogicalExpression/moreExpressions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//LogicalExpression/literal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//LogicalExpression/conOper"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//ProgramIfExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ProgramIfExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//TerminalValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//TerminalValue/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//TerminalValue/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//TerminalValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Add">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Add/leftExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Add/rightExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Add/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Mult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Mult/rightExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Mult/leftExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//Mult/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Parameter"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//ServerService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//ServerService/relatesTo"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//LogicComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//LogicComponent/mapsTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PagosPIM.ecore#//LogicComponent/persistible"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//DataLayerComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//DataLayerComponent/extendsData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//DataLayerComponent/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//DaoComponent"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//SubComponent"/>
+    <genClasses ecoreClass="PagosPIM.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PagosPIM.ecore#//Action/service"/>
+    </genClasses>
+    <genClasses ecoreClass="PagosPIM.ecore#//Field"/>
+  </genPackages>
+</genmodel:GenModel>

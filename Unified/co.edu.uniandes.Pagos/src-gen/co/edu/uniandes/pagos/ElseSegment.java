@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface ElseSegment extends EObject
 {
   /**
-   * Returns the value of the '<em><b>If Sentence</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>If Sentence</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>If Sentence</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>If Sentence</em>' containment reference.
-   * @see #setIfSentence(Formula)
-   * @see co.edu.uniandes.pagos.PagosPackage#getElseSegment_IfSentence()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>If Sentence</em>' containment reference.
+	 * @see #setIfSentence(Formula)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getElseSegment_IfSentence()
+	 * @model containment="true"
+	 * @generated
+	 */
   Formula getIfSentence();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.ElseSegment#getIfSentence <em>If Sentence</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ElseSegment#getIfSentence <em>If Sentence</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>If Sentence</em>' containment reference.
-   * @see #getIfSentence()
-   * @generated
-   */
+	 * @param value the new value of the '<em>If Sentence</em>' containment reference.
+	 * @see #getIfSentence()
+	 * @generated
+	 */
   void setIfSentence(Formula value);
 
 } // ElseSegment

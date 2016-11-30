@@ -1020,20 +1020,38 @@ ruleInformationTemplate returns [EObject current=null]
 			{
 				newLeafNode(otherlv_19, grammarAccess.getInformationTemplateAccess().getCalculationtemplatesKeyword_17_1());
 			}
-			this_COLON_20=RULE_COLON
+			(
+				(
+					lv_templateCalc_20_0=RULE_ID
+					{
+						newLeafNode(lv_templateCalc_20_0, grammarAccess.getInformationTemplateAccess().getTemplateCalcIDTerminalRuleCall_17_2_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getInformationTemplateRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"templateCalc",
+							lv_templateCalc_20_0,
+							"co.edu.uniandes.Pagos.ID");
+					}
+				)
+			)
+			this_COLON_21=RULE_COLON
 			{
-				newLeafNode(this_COLON_20, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_2());
+				newLeafNode(this_COLON_21, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_17_3());
 			}
-			this_LBRACKET_21=RULE_LBRACKET
+			this_LBRACKET_22=RULE_LBRACKET
 			{
-				newLeafNode(this_LBRACKET_21, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_3());
+				newLeafNode(this_LBRACKET_22, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_17_4());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_4_0());
+						newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_0());
 					}
-					lv_templates_22_0=ruleCalculationTemplate
+					lv_templates_23_0=ruleCalculationTemplate
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getInformationTemplateRule());
@@ -1041,23 +1059,23 @@ ruleInformationTemplate returns [EObject current=null]
 						add(
 							$current,
 							"templates",
-							lv_templates_22_0,
+							lv_templates_23_0,
 							"co.edu.uniandes.Pagos.CalculationTemplate");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				this_COMMA_23=RULE_COMMA
+				this_COMMA_24=RULE_COMMA
 				{
-					newLeafNode(this_COMMA_23, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_5_0());
+					newLeafNode(this_COMMA_24, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_17_6_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_5_1_0());
+							newCompositeNode(grammarAccess.getInformationTemplateAccess().getTemplatesCalculationTemplateParserRuleCall_17_6_1_0());
 						}
-						lv_templates_24_0=ruleCalculationTemplate
+						lv_templates_25_0=ruleCalculationTemplate
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getInformationTemplateRule());
@@ -1065,41 +1083,41 @@ ruleInformationTemplate returns [EObject current=null]
 							add(
 								$current,
 								"templates",
-								lv_templates_24_0,
+								lv_templates_25_0,
 								"co.edu.uniandes.Pagos.CalculationTemplate");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			this_RBRACKET_25=RULE_RBRACKET
+			this_RBRACKET_26=RULE_RBRACKET
 			{
-				newLeafNode(this_RBRACKET_25, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_6());
+				newLeafNode(this_RBRACKET_26, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_17_7());
 			}
 		)?
 		(
-			this_COMMA_26=RULE_COMMA
+			this_COMMA_27=RULE_COMMA
 			{
-				newLeafNode(this_COMMA_26, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_0());
+				newLeafNode(this_COMMA_27, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_0());
 			}
-			otherlv_27='providers'
+			otherlv_28='providers'
 			{
-				newLeafNode(otherlv_27, grammarAccess.getInformationTemplateAccess().getProvidersKeyword_18_1());
+				newLeafNode(otherlv_28, grammarAccess.getInformationTemplateAccess().getProvidersKeyword_18_1());
 			}
-			this_COLON_28=RULE_COLON
+			this_COLON_29=RULE_COLON
 			{
-				newLeafNode(this_COLON_28, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_18_2());
+				newLeafNode(this_COLON_29, grammarAccess.getInformationTemplateAccess().getCOLONTerminalRuleCall_18_2());
 			}
-			this_LBRACKET_29=RULE_LBRACKET
+			this_LBRACKET_30=RULE_LBRACKET
 			{
-				newLeafNode(this_LBRACKET_29, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_18_3());
+				newLeafNode(this_LBRACKET_30, grammarAccess.getInformationTemplateAccess().getLBRACKETTerminalRuleCall_18_3());
 			}
 			(
 				(
 					{
 						newCompositeNode(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_4_0());
 					}
-					lv_providers_30_0=ruleProvider
+					lv_providers_31_0=ruleProvider
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getInformationTemplateRule());
@@ -1107,23 +1125,23 @@ ruleInformationTemplate returns [EObject current=null]
 						add(
 							$current,
 							"providers",
-							lv_providers_30_0,
+							lv_providers_31_0,
 							"co.edu.uniandes.Pagos.Provider");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				this_COMMA_31=RULE_COMMA
+				this_COMMA_32=RULE_COMMA
 				{
-					newLeafNode(this_COMMA_31, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_5_0());
+					newLeafNode(this_COMMA_32, grammarAccess.getInformationTemplateAccess().getCOMMATerminalRuleCall_18_5_0());
 				}
 				(
 					(
 						{
 							newCompositeNode(grammarAccess.getInformationTemplateAccess().getProvidersProviderParserRuleCall_18_5_1_0());
 						}
-						lv_providers_32_0=ruleProvider
+						lv_providers_33_0=ruleProvider
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getInformationTemplateRule());
@@ -1131,16 +1149,16 @@ ruleInformationTemplate returns [EObject current=null]
 							add(
 								$current,
 								"providers",
-								lv_providers_32_0,
+								lv_providers_33_0,
 								"co.edu.uniandes.Pagos.Provider");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			this_RBRACKET_33=RULE_RBRACKET
+			this_RBRACKET_34=RULE_RBRACKET
 			{
-				newLeafNode(this_RBRACKET_33, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_18_6());
+				newLeafNode(this_RBRACKET_34, grammarAccess.getInformationTemplateAccess().getRBRACKETTerminalRuleCall_18_6());
 			}
 		)?
 	)
@@ -1229,52 +1247,29 @@ ruleCalculationTemplate returns [EObject current=null]
 				}
 			)
 		)
-		this_COMMA_9=RULE_COMMA
-		{
-			newLeafNode(this_COMMA_9, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9());
-		}
-		otherlv_10='calculationattributes'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getCalculationTemplateAccess().getCalculationattributesKeyword_10());
-		}
-		this_COLON_11=RULE_COLON
-		{
-			newLeafNode(this_COLON_11, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_11());
-		}
-		this_LBRACKET_12=RULE_LBRACKET
-		{
-			newLeafNode(this_LBRACKET_12, grammarAccess.getCalculationTemplateAccess().getLBRACKETTerminalRuleCall_12());
-		}
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_13_0());
-				}
-				lv_attLists_13_0=ruleBusinessAttribute
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCalculationTemplateRule());
-					}
-					add(
-						$current,
-						"attLists",
-						lv_attLists_13_0,
-						"co.edu.uniandes.Pagos.BusinessAttribute");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			this_COMMA_14=RULE_COMMA
+			this_COMMA_9=RULE_COMMA
 			{
-				newLeafNode(this_COMMA_14, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_14_0());
+				newLeafNode(this_COMMA_9, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9_0());
+			}
+			otherlv_10='calculationattributes'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getCalculationTemplateAccess().getCalculationattributesKeyword_9_1());
+			}
+			this_COLON_11=RULE_COLON
+			{
+				newLeafNode(this_COLON_11, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_9_2());
+			}
+			this_LBRACKET_12=RULE_LBRACKET
+			{
+				newLeafNode(this_LBRACKET_12, grammarAccess.getCalculationTemplateAccess().getLBRACKETTerminalRuleCall_9_3());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_14_1_0());
+						newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_4_0());
 					}
-					lv_attLists_15_0=ruleBusinessAttribute
+					lv_attLists_13_0=ruleBusinessAttribute
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCalculationTemplateRule());
@@ -1282,40 +1277,65 @@ ruleCalculationTemplate returns [EObject current=null]
 						add(
 							$current,
 							"attLists",
-							lv_attLists_15_0,
+							lv_attLists_13_0,
 							"co.edu.uniandes.Pagos.BusinessAttribute");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-		)*
-		this_RBRACKET_16=RULE_RBRACKET
-		{
-			newLeafNode(this_RBRACKET_16, grammarAccess.getCalculationTemplateAccess().getRBRACKETTerminalRuleCall_15());
-		}
+			(
+				this_COMMA_14=RULE_COMMA
+				{
+					newLeafNode(this_COMMA_14, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_9_5_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getCalculationTemplateAccess().getAttListsBusinessAttributeParserRuleCall_9_5_1_0());
+						}
+						lv_attLists_15_0=ruleBusinessAttribute
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getCalculationTemplateRule());
+							}
+							add(
+								$current,
+								"attLists",
+								lv_attLists_15_0,
+								"co.edu.uniandes.Pagos.BusinessAttribute");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+			this_RBRACKET_16=RULE_RBRACKET
+			{
+				newLeafNode(this_RBRACKET_16, grammarAccess.getCalculationTemplateAccess().getRBRACKETTerminalRuleCall_9_6());
+			}
+		)?
 		this_COMMA_17=RULE_COMMA
 		{
-			newLeafNode(this_COMMA_17, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_16());
+			newLeafNode(this_COMMA_17, grammarAccess.getCalculationTemplateAccess().getCOMMATerminalRuleCall_10());
 		}
 		otherlv_18='calculationrules'
 		{
-			newLeafNode(otherlv_18, grammarAccess.getCalculationTemplateAccess().getCalculationrulesKeyword_17());
+			newLeafNode(otherlv_18, grammarAccess.getCalculationTemplateAccess().getCalculationrulesKeyword_11());
 		}
 		this_COLON_19=RULE_COLON
 		{
-			newLeafNode(this_COLON_19, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_18());
+			newLeafNode(this_COLON_19, grammarAccess.getCalculationTemplateAccess().getCOLONTerminalRuleCall_12());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCalculationTemplateAccess().getFormulasFormulaParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getCalculationTemplateAccess().getFormulasFormulaParserRuleCall_13_0());
 				}
 				lv_formulas_20_0=ruleFormula
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCalculationTemplateRule());
 					}
-					add(
+					set(
 						$current,
 						"formulas",
 						lv_formulas_20_0,
@@ -1326,7 +1346,7 @@ ruleCalculationTemplate returns [EObject current=null]
 		)
 		this_RBRACE_21=RULE_RBRACE
 		{
-			newLeafNode(this_RBRACE_21, grammarAccess.getCalculationTemplateAccess().getRBRACETerminalRuleCall_20());
+			newLeafNode(this_RBRACE_21, grammarAccess.getCalculationTemplateAccess().getRBRACETerminalRuleCall_14());
 		}
 	)
 ;
@@ -1530,36 +1550,28 @@ ruleIfCondition returns [EObject current=null]
 		{
 			newLeafNode(this_LBRACE_6, grammarAccess.getIfConditionAccess().getLBRACETerminalRuleCall_6());
 		}
-		this_RETURN_7=RULE_RETURN
-		{
-			newLeafNode(this_RETURN_7, grammarAccess.getIfConditionAccess().getRETURNTerminalRuleCall_7());
-		}
-		this_COLON_8=RULE_COLON
-		{
-			newLeafNode(this_COLON_8, grammarAccess.getIfConditionAccess().getCOLONTerminalRuleCall_8());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getIfConditionAccess().getExpressionAdicionParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getIfConditionAccess().getFormulaReturnReturnBlockParserRuleCall_7_0());
 				}
-				lv_expression_9_0=ruleAdicion
+				lv_formulaReturn_7_0=ruleReturnBlock
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getIfConditionRule());
 					}
-					add(
+					set(
 						$current,
-						"expression",
-						lv_expression_9_0,
-						"co.edu.uniandes.Pagos.Adicion");
+						"formulaReturn",
+						lv_formulaReturn_7_0,
+						"co.edu.uniandes.Pagos.ReturnBlock");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		this_RBRACE_10=RULE_RBRACE
+		this_RBRACE_8=RULE_RBRACE
 		{
-			newLeafNode(this_RBRACE_10, grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_10());
+			newLeafNode(this_RBRACE_8, grammarAccess.getIfConditionAccess().getRBRACETerminalRuleCall_8());
 		}
 	)
 ;
@@ -1696,7 +1708,7 @@ ruleExpresionLogica returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 					}
-					add(
+					set(
 						$current,
 						"variable",
 						lv_variable_0_0,
@@ -1716,7 +1728,7 @@ ruleExpresionLogica returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getExpresionLogicaRule());
 						}
-						addWithLastConsumed(
+						setWithLastConsumed(
 							$current,
 							"logOper",
 							lv_logOper_1_0,
@@ -1735,7 +1747,7 @@ ruleExpresionLogica returns [EObject current=null]
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 							}
-							add(
+							set(
 								$current,
 								"variable2",
 								lv_variable2_2_0,
@@ -1755,7 +1767,7 @@ ruleExpresionLogica returns [EObject current=null]
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getExpresionLogicaRule());
 							}
-							addWithLastConsumed(
+							setWithLastConsumed(
 								$current,
 								"literal",
 								lv_literal_3_0,
@@ -1794,7 +1806,7 @@ ruleExpresionLogica returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 						}
-						add(
+						set(
 							$current,
 							"exp",
 							lv_exp_5_0,
@@ -2091,9 +2103,27 @@ ruleBusinessAttribute returns [EObject current=null]
 				)
 			)
 		)?
-		this_RBRACE_7=RULE_RBRACE
+		(
+			(
+				lv_isIndex_7_0=RULE_INDEX
+				{
+					newLeafNode(lv_isIndex_7_0, grammarAccess.getBusinessAttributeAccess().getIsIndexINDEXTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBusinessAttributeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"isIndex",
+						lv_isIndex_7_0,
+						"co.edu.uniandes.Pagos.INDEX");
+				}
+			)
+		)?
+		this_RBRACE_8=RULE_RBRACE
 		{
-			newLeafNode(this_RBRACE_7, grammarAccess.getBusinessAttributeAccess().getRBRACETerminalRuleCall_6());
+			newLeafNode(this_RBRACE_8, grammarAccess.getBusinessAttributeAccess().getRBRACETerminalRuleCall_7());
 		}
 	)
 ;
@@ -2123,26 +2153,159 @@ ruleTerminalValue returns [EObject current=null]
 				}
 			)
 			(
+				otherlv_1='PA'
+				{
+					newLeafNode(otherlv_1, grammarAccess.getTerminalValueAccess().getPAKeyword_0_1_0());
+				}
+				this_DOT_2=RULE_DOT
+				{
+					newLeafNode(this_DOT_2, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1());
+				}
+				(
+					(
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getTerminalValueRule());
+							}
+						}
+						otherlv_3=RULE_ID
+						{
+							newLeafNode(otherlv_3, grammarAccess.getTerminalValueAccess().getParentParticipantCrossReference_0_1_2_0());
+						}
+					)
+				)
+				this_DASH_4=RULE_DASH
+				{
+					newLeafNode(this_DASH_4, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_0_1_3());
+				}
+			)?
+			(
 				(
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getTerminalValueRule());
 						}
 					}
-					otherlv_1=RULE_ID
+					otherlv_5=RULE_ID
 					{
-						newLeafNode(otherlv_1, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_0_1_0());
+						newLeafNode(otherlv_5, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_0_2_0());
 					}
 				)
 			)
 		)
 		    |
 		(
+			otherlv_6='SU'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getTerminalValueAccess().getSUKeyword_1_0());
+			}
+			this_DOT_7=RULE_DOT
+			{
+				newLeafNode(this_DOT_7, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTerminalValueRule());
+						}
+					}
+					otherlv_8=RULE_ID
+					{
+						newLeafNode(otherlv_8, grammarAccess.getTerminalValueAccess().getParentSuperEntityCrossReference_1_2_0());
+					}
+				)
+			)
+			this_DASH_9=RULE_DASH
+			{
+				newLeafNode(this_DASH_9, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_1_3());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTerminalValueRule());
+						}
+					}
+					otherlv_10=RULE_ID
+					{
+						newLeafNode(otherlv_10, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_1_4_0());
+					}
+				)
+			)
+		)?
+		    |
+		(
+			otherlv_11='IT'
+			{
+				newLeafNode(otherlv_11, grammarAccess.getTerminalValueAccess().getITKeyword_2_0());
+			}
+			this_DOT_12=RULE_DOT
+			{
+				newLeafNode(this_DOT_12, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTerminalValueRule());
+						}
+					}
+					otherlv_13=RULE_ID
+					{
+						newLeafNode(otherlv_13, grammarAccess.getTerminalValueAccess().getParentInformationTemplateCrossReference_2_2_0());
+					}
+				)
+			)
+			this_DASH_14=RULE_DASH
+			{
+				newLeafNode(this_DASH_14, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_2_3());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTerminalValueRule());
+						}
+					}
+					otherlv_15=RULE_ID
+					{
+						newLeafNode(otherlv_15, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_2_4_0());
+					}
+				)
+			)
+		)?
+		    |
+		(
+			otherlv_16='FU'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getTerminalValueAccess().getFUKeyword_3_0());
+			}
+			this_DOT_17=RULE_DOT
+			{
+				newLeafNode(this_DOT_17, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_3_1());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTerminalValueRule());
+						}
+					}
+					otherlv_18=RULE_ID
+					{
+						newLeafNode(otherlv_18, grammarAccess.getTerminalValueAccess().getParentCalculationTemplateCrossReference_3_2_0());
+					}
+				)
+			)
+		)?
+		    |
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTerminalValueAccess().getValorNumberParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getTerminalValueAccess().getValorNumberParserRuleCall_4_0());
 				}
-				lv_valor_2_0=ruleNumber
+				lv_valor_19_0=ruleNumber
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTerminalValueRule());
@@ -2150,7 +2313,7 @@ ruleTerminalValue returns [EObject current=null]
 					set(
 						$current,
 						"valor",
-						lv_valor_2_0,
+						lv_valor_19_0,
 						"co.edu.uniandes.Pagos.Number");
 					afterParserOrEnumRuleCall();
 				}
@@ -2224,10 +2387,12 @@ ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 				newLeafNode(this_INT_0, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_0());
 			}
 		)?
-		kw='.'
+		this_DOT_1=RULE_DOT
 		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getEDoubleAccess().getFullStopKeyword_1());
+			$current.merge(this_DOT_1);
+		}
+		{
+			newLeafNode(this_DOT_1, grammarAccess.getEDoubleAccess().getDOTTerminalRuleCall_1());
 		}
 		this_INT_2=RULE_INT
 		{
@@ -2285,6 +2450,8 @@ ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 	}
 ;
 
+RULE_INDEX : '@Indice';
+
 RULE_IF : 'SI';
 
 RULE_THEN : 'ENTONCES';
@@ -2301,9 +2468,9 @@ RULE_ADDOP : ('+'|'-');
 
 RULE_LOGICALCONN : ('&&'|'||');
 
-RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ('.' ('Ultima'|'Primera'|'Tamano'))*;
+RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'='|'<>');
+RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'=='|'<>'|'!=');
 
 RULE_LBRACE : '{';
 
@@ -2318,6 +2485,8 @@ RULE_COMMA : ',';
 RULE_COLON : ':';
 
 RULE_DASH : '#';
+
+RULE_DOT : '.';
 
 RULE_STRING : '"' (RULE_STR_ESC|~(('"'|'\r'|'\n'|'\\')))* '"';
 

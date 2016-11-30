@@ -1,0 +1,24 @@
+[%import "generate_form_field_operations.egl";%]
+[%
+var form = view.form;
+var fieldCount = form.fields.size;
+var bag:Bag;
+%]
+<div class="[%=view.name.toLowerCase%]-form">
+	<div class="form-group">
+		<h4>[%=form.name%]</h4>
+		[%for(field in form.fields){%]
+		[%if(not field.isKindOf(pila_front!Action)){%]
+		[%field.writeHTML(1);%]
+		[%}else{
+			bag.add(field);
+		}}%]
+	</div>
+	[%if(bag.size > 0){%]
+	<div class="text-right">
+		[%for(field in bag){
+			field.writeHTML(1);
+		}%]
+	</div>
+	[%}%]
+</div>

@@ -37,132 +37,126 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ReturnBlockImpl extends MinimalEObjectImpl.Container implements ReturnBlock
 {
   /**
-   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpression()
-   * @generated
-   * @ordered
-   */
+	 * @see #getExpression()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Expression> expression;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ReturnBlockImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return PagosPackage.Literals.RETURN_BLOCK;
-  }
+		return PagosPackage.Literals.RETURN_BLOCK;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Expression> getExpression()
   {
-    if (expression == null)
-    {
-      expression = new EObjectContainmentEList<Expression>(Expression.class, this, PagosPackage.RETURN_BLOCK__EXPRESSION);
-    }
-    return expression;
-  }
+		if (expression == null) {
+			expression = new EObjectContainmentEList<Expression>(Expression.class, this, PagosPackage.RETURN_BLOCK__EXPRESSION);
+		}
+		return expression;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case PagosPackage.RETURN_BLOCK__EXPRESSION:
-        return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case PagosPackage.RETURN_BLOCK__EXPRESSION:
+				return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case PagosPackage.RETURN_BLOCK__EXPRESSION:
-        return getExpression();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case PagosPackage.RETURN_BLOCK__EXPRESSION:
+				return getExpression();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case PagosPackage.RETURN_BLOCK__EXPRESSION:
-        getExpression().clear();
-        getExpression().addAll((Collection<? extends Expression>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case PagosPackage.RETURN_BLOCK__EXPRESSION:
+				getExpression().clear();
+				getExpression().addAll((Collection<? extends Expression>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.RETURN_BLOCK__EXPRESSION:
-        getExpression().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.RETURN_BLOCK__EXPRESSION:
+				getExpression().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case PagosPackage.RETURN_BLOCK__EXPRESSION:
-        return expression != null && !expression.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case PagosPackage.RETURN_BLOCK__EXPRESSION:
+				return expression != null && !expression.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //ReturnBlockImpl

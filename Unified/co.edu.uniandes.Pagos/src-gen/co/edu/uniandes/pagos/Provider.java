@@ -28,71 +28,71 @@ import org.eclipse.emf.ecore.EObject;
 public interface Provider extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see co.edu.uniandes.pagos.PagosPackage#getProvider_Name()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getProvider_Name()
+	 * @model
+	 * @generated
+	 */
   String getName();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.Provider#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.Provider#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Description</em>' attribute.
-   * @see #setDescription(String)
-   * @see co.edu.uniandes.pagos.PagosPackage#getProvider_Description()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getProvider_Description()
+	 * @model
+	 * @generated
+	 */
   String getDescription();
 
   /**
-   * Sets the value of the '{@link co.edu.uniandes.pagos.Provider#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.Provider#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
-   * @see #getDescription()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Att Lists</b></em>' containment reference list.
-   * The list contents are of type {@link co.edu.uniandes.pagos.BusinessAttribute}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Att Lists</b></em>' containment reference list.
+	 * The list contents are of type {@link co.edu.uniandes.pagos.BusinessAttribute}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Att Lists</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Att Lists</em>' containment reference list.
-   * @see co.edu.uniandes.pagos.PagosPackage#getProvider_AttLists()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Att Lists</em>' containment reference list.
+	 * @see co.edu.uniandes.pagos.PagosPackage#getProvider_AttLists()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<BusinessAttribute> getAttLists();
 
 } // Provider

@@ -3,8 +3,8 @@ grammar co.edu.uniandes.Pagos with org.eclipse.xtext.common.Terminals
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-import "http://www.edu.co/uniandes/Pagos" 
-//generate pagos "http://www.edu.co/uniandes/Pagos"
+//import "http://www.edu.co/uniandes/Pagos" 
+generate pagos "http://www.edu.co/uniandes/Pagos"
 
 Application:
 	LBRACE
@@ -74,7 +74,7 @@ InformationTemplate:
 			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET
 	RBRACE
 	(COMMA
-	'calculationtemplates' COLON LBRACKET templates += CalculationTemplate (COMMA templates += CalculationTemplate)* RBRACKET)?	
+	'calculationtemplates' templateCalc = ID COLON LBRACKET templates += CalculationTemplate (COMMA templates += CalculationTemplate)* RBRACKET)?	
 	(COMMA 'providers' COLON LBRACKET providers += Provider (COMMA providers += Provider)* RBRACKET)?
 ;
 
@@ -84,11 +84,11 @@ CalculationTemplate:
 		'name' COLON name = ID
 		COMMA
 		'description' COLON description = STRING
-		COMMA
+		(COMMA
 		'calculationattributes' COLON 
-			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET
+			LBRACKET attLists += BusinessAttribute (COMMA attLists += BusinessAttribute)* RBRACKET)?
 		COMMA
-		'calculationrules' COLON formulas += Formula
+		'calculationrules' COLON formulas = Formula
 	RBRACE
 	;
 
@@ -108,7 +108,7 @@ IfCondition returns IfCondition:
 			RBRACKET
 		THEN
 		LBRACE
-			RETURN COLON expression += Adicion
+			formulaReturn = ReturnBlock
 		RBRACE
 	;
 
@@ -126,8 +126,8 @@ ReturnBlock returns ReturnBlock:
 
 
 ExpresionLogica returns ExpresionLogica:
-	variable += TerminalValue (logOper += OPERADORLOGICO (variable2 += TerminalValue | literal += STRING))+
-			(conOper = LOGICALCONN (exp += ExpresionLogica))?
+	variable = TerminalValue (logOper = OPERADORLOGICO (variable2 = TerminalValue | literal = STRING))+
+			(conOper = LOGICALCONN (exp = ExpresionLogica))?
 ;
 
 
@@ -141,19 +141,24 @@ Multiplicacion returns Expression:
 
 SigleExp returns Expression:
 	TerminalValue | '(' Adicion ')'
-;
+;	
 
 BusinessAttribute:
 	{BusinessAttribute}
 	LBRACE
-		name = ID COLON type = TYPE (':=' exp = Adicion)?
+		name = ID COLON type = TYPE (':=' exp = Adicion)? (isIndex = INDEX)? 
 	RBRACE 
 	;
 	
 TerminalValue returns TerminalValue:
 	{TerminalValue}
-	variable = [BusinessAttribute] | valor = Number 
-;
+	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] | 
+	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? |
+	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? |
+	('FU' DOT parent = [CalculationTemplate])? |
+	valor = Number
+;	
+	
 
 /*
 mathADD returns mathADD:
@@ -170,7 +175,7 @@ Number:
 ;
 
 EDouble returns ecore::EDouble:
-	INT? '.' INT (('E'|'e') INT)?;
+	INT? DOT INT (('E'|'e') INT)?;
 
 Integer returns ecore::EInt:
 	INT
@@ -181,6 +186,7 @@ EString returns ecore::EString:
 	
 /* Terminals */
 
+terminal INDEX: '@Indice'; 
 terminal IF:'SI';
 terminal THEN:'ENTONCES';
 terminal ELSE: 'SINO';
@@ -193,8 +199,8 @@ terminal ADDOP: '+' | '-';
 
 terminal LOGICALCONN: '&&' | '||';
 
-terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*(('.')('Ultima' | 'Primera' | 'Tamano'))*;
-terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>');
+terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '==' | '<>' | '!=');
 
 terminal LBRACE: "{";
 terminal RBRACE: "}";
@@ -203,6 +209,7 @@ terminal RBRACKET: "]";
 terminal COMMA: ",";
 terminal COLON: ':';
 terminal DASH: "#";
+terminal DOT: '.';
 
 terminal STRING:
 	'"' (STR_ESC | !('"'|'\r'|'\n'|'\\'))* '"'

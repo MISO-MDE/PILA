@@ -22,290 +22,286 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 public class PagosFactoryImpl extends EFactoryImpl implements PagosFactory
 {
   /**
-   * Creates the default factory implementation.
-   * <!-- begin-user-doc -->
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public static PagosFactory init()
   {
-    try
-    {
-      PagosFactory thePagosFactory = (PagosFactory)EPackage.Registry.INSTANCE.getEFactory(PagosPackage.eNS_URI);
-      if (thePagosFactory != null)
-      {
-        return thePagosFactory;
-      }
-    }
-    catch (Exception exception)
-    {
-      EcorePlugin.INSTANCE.log(exception);
-    }
-    return new PagosFactoryImpl();
-  }
+		try {
+			PagosFactory thePagosFactory = (PagosFactory)EPackage.Registry.INSTANCE.getEFactory(PagosPackage.eNS_URI);
+			if (thePagosFactory != null) {
+				return thePagosFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new PagosFactoryImpl();
+	}
 
   /**
-   * Creates an instance of the factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public PagosFactoryImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EObject create(EClass eClass)
   {
-    switch (eClass.getClassifierID())
-    {
-      case PagosPackage.APPLICATION: return createApplication();
-      case PagosPackage.INTERMEDIARY: return createIntermediary();
-      case PagosPackage.SUPER_ENTITY: return createSuperEntity();
-      case PagosPackage.PARTICIPANT: return createParticipant();
-      case PagosPackage.PROVIDER: return createProvider();
-      case PagosPackage.INFORMATION_TEMPLATE: return createInformationTemplate();
-      case PagosPackage.CALCULATION_TEMPLATE: return createCalculationTemplate();
-      case PagosPackage.FORMULA: return createFormula();
-      case PagosPackage.IF_BLOCK: return createIfBlock();
-      case PagosPackage.IF_CONDITION: return createIfCondition();
-      case PagosPackage.ELSE_SEGMENT: return createElseSegment();
-      case PagosPackage.RETURN_BLOCK: return createReturnBlock();
-      case PagosPackage.EXPRESION_LOGICA: return createExpresionLogica();
-      case PagosPackage.EXPRESSION: return createExpression();
-      case PagosPackage.BUSINESS_ATTRIBUTE: return createBusinessAttribute();
-      case PagosPackage.TERMINAL_VALUE: return createTerminalValue();
-      case PagosPackage.ADICION: return createAdicion();
-      case PagosPackage.MULTIPLICACION: return createMultiplicacion();
-      default:
-        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
+		switch (eClass.getClassifierID()) {
+			case PagosPackage.APPLICATION: return createApplication();
+			case PagosPackage.INTERMEDIARY: return createIntermediary();
+			case PagosPackage.SUPER_ENTITY: return createSuperEntity();
+			case PagosPackage.PARTICIPANT: return createParticipant();
+			case PagosPackage.PROVIDER: return createProvider();
+			case PagosPackage.INFORMATION_TEMPLATE: return createInformationTemplate();
+			case PagosPackage.CALCULATION_TEMPLATE: return createCalculationTemplate();
+			case PagosPackage.FORMULA: return createFormula();
+			case PagosPackage.IF_BLOCK: return createIfBlock();
+			case PagosPackage.IF_CONDITION: return createIfCondition();
+			case PagosPackage.ELSE_SEGMENT: return createElseSegment();
+			case PagosPackage.RETURN_BLOCK: return createReturnBlock();
+			case PagosPackage.EXPRESION_LOGICA: return createExpresionLogica();
+			case PagosPackage.EXPRESSION: return createExpression();
+			case PagosPackage.BUSINESS_ATTRIBUTE: return createBusinessAttribute();
+			case PagosPackage.TERMINAL_VALUE: return createTerminalValue();
+			case PagosPackage.ADICION: return createAdicion();
+			case PagosPackage.MULTIPLICACION: return createMultiplicacion();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Application createApplication()
   {
-    ApplicationImpl application = new ApplicationImpl();
-    return application;
-  }
+		ApplicationImpl application = new ApplicationImpl();
+		return application;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Intermediary createIntermediary()
   {
-    IntermediaryImpl intermediary = new IntermediaryImpl();
-    return intermediary;
-  }
+		IntermediaryImpl intermediary = new IntermediaryImpl();
+		return intermediary;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public SuperEntity createSuperEntity()
   {
-    SuperEntityImpl superEntity = new SuperEntityImpl();
-    return superEntity;
-  }
+		SuperEntityImpl superEntity = new SuperEntityImpl();
+		return superEntity;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Participant createParticipant()
   {
-    ParticipantImpl participant = new ParticipantImpl();
-    return participant;
-  }
+		ParticipantImpl participant = new ParticipantImpl();
+		return participant;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Provider createProvider()
   {
-    ProviderImpl provider = new ProviderImpl();
-    return provider;
-  }
+		ProviderImpl provider = new ProviderImpl();
+		return provider;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public InformationTemplate createInformationTemplate()
   {
-    InformationTemplateImpl informationTemplate = new InformationTemplateImpl();
-    return informationTemplate;
-  }
+		InformationTemplateImpl informationTemplate = new InformationTemplateImpl();
+		return informationTemplate;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public CalculationTemplate createCalculationTemplate()
   {
-    CalculationTemplateImpl calculationTemplate = new CalculationTemplateImpl();
-    return calculationTemplate;
-  }
+		CalculationTemplateImpl calculationTemplate = new CalculationTemplateImpl();
+		return calculationTemplate;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Formula createFormula()
   {
-    FormulaImpl formula = new FormulaImpl();
-    return formula;
-  }
+		FormulaImpl formula = new FormulaImpl();
+		return formula;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public IfBlock createIfBlock()
   {
-    IfBlockImpl ifBlock = new IfBlockImpl();
-    return ifBlock;
-  }
+		IfBlockImpl ifBlock = new IfBlockImpl();
+		return ifBlock;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public IfCondition createIfCondition()
   {
-    IfConditionImpl ifCondition = new IfConditionImpl();
-    return ifCondition;
-  }
+		IfConditionImpl ifCondition = new IfConditionImpl();
+		return ifCondition;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ElseSegment createElseSegment()
   {
-    ElseSegmentImpl elseSegment = new ElseSegmentImpl();
-    return elseSegment;
-  }
+		ElseSegmentImpl elseSegment = new ElseSegmentImpl();
+		return elseSegment;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ReturnBlock createReturnBlock()
   {
-    ReturnBlockImpl returnBlock = new ReturnBlockImpl();
-    return returnBlock;
-  }
+		ReturnBlockImpl returnBlock = new ReturnBlockImpl();
+		return returnBlock;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public ExpresionLogica createExpresionLogica()
   {
-    ExpresionLogicaImpl expresionLogica = new ExpresionLogicaImpl();
-    return expresionLogica;
-  }
+		ExpresionLogicaImpl expresionLogica = new ExpresionLogicaImpl();
+		return expresionLogica;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Expression createExpression()
   {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
-  }
+		ExpressionImpl expression = new ExpressionImpl();
+		return expression;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public BusinessAttribute createBusinessAttribute()
   {
-    BusinessAttributeImpl businessAttribute = new BusinessAttributeImpl();
-    return businessAttribute;
-  }
+		BusinessAttributeImpl businessAttribute = new BusinessAttributeImpl();
+		return businessAttribute;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public TerminalValue createTerminalValue()
   {
-    TerminalValueImpl terminalValue = new TerminalValueImpl();
-    return terminalValue;
-  }
+		TerminalValueImpl terminalValue = new TerminalValueImpl();
+		return terminalValue;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Adicion createAdicion()
   {
-    AdicionImpl adicion = new AdicionImpl();
-    return adicion;
-  }
+		AdicionImpl adicion = new AdicionImpl();
+		return adicion;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Multiplicacion createMultiplicacion()
   {
-    MultiplicacionImpl multiplicacion = new MultiplicacionImpl();
-    return multiplicacion;
-  }
+		MultiplicacionImpl multiplicacion = new MultiplicacionImpl();
+		return multiplicacion;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public PagosPackage getPagosPackage()
   {
-    return (PagosPackage)getEPackage();
-  }
+		return (PagosPackage)getEPackage();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @deprecated
-   * @generated
-   */
+	 * @deprecated
+	 * @generated
+	 */
   @Deprecated
   public static PagosPackage getPackage()
   {
-    return PagosPackage.eINSTANCE;
-  }
+		return PagosPackage.eINSTANCE;
+	}
 
 } //PagosFactoryImpl

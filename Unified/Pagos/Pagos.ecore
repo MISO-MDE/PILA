@@ -38,6 +38,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
         eType="#//BusinessAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="templateCalc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" upperBound="-1"
         eType="#//CalculationTemplate" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="providers" upperBound="-1"
@@ -48,8 +49,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attLists" upperBound="-1"
         eType="#//BusinessAttribute" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formulas" upperBound="-1"
-        eType="#//Formula" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formulas" eType="#//Formula"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Formula">
     <eStructuralFeatures xsi:type="ecore:EReference" name="formulaBody" upperBound="-1"
@@ -66,8 +67,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="IfCondition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="logExp" upperBound="-1"
         eType="#//ExpresionLogica" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-1"
-        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formulaReturn" eType="#//ReturnBlock"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElseSegment">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ifSentence" eType="#//Formula"
@@ -78,16 +79,14 @@
         eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpresionLogica">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
-        eType="#//TerminalValue" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logOper" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable2" upperBound="-1"
-        eType="#//TerminalValue" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//TerminalValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logOper" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable2" eType="#//TerminalValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conOper" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" upperBound="-1" eType="#//ExpresionLogica"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//ExpresionLogica"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
@@ -96,8 +95,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//Expression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TerminalValue" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//BusinessAttribute"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
