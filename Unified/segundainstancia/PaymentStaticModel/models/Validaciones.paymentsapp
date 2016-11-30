@@ -28,7 +28,7 @@
       <businessAttributes name="Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension"/>
       <businessAttributes name="Sobrevivencia vitalicia por riesgo laboral" type="TipoPension"/>
       <businessAttributes name="Sobrevivencia temporal por riesgo laboral" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+      <businessAttributes name="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3 //@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
       <businessAttributes name="Invalidez riesgo común" type="TipoPension"/>
       <businessAttributes name="Invalidez resgo laboral" type="TipoPension"/>
       <businessAttributes name="Jubilacion" type="TipoPension"/>
@@ -39,7 +39,7 @@
       <businessAttributes name="Gracia" type="TipoPension"/>
       <businessAttributes name="Por convenio internacional" type="TipoPension"/>
       <businessAttributes name="Sentencia Judicial" type="TipoPension"/>
-      <businessAttributes name="Conciliaciones" type="TipoPension"/>
+      <businessAttributes name="Conciliaciones" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
     </intermediaryAttributes>
   </intermediary>
 </PaymentsApp:Application>
