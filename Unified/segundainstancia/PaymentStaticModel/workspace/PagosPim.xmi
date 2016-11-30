@@ -5,7 +5,7 @@
       <relations targetComponent="/0/@logicalComponents.1" name="Pagadora"/>
     </logicalComponents>
     <logicalComponents name="Pagadora">
-      <attributes name="Id" type="INTEGER"/>
+      <attributes name="Id" type="int"/>
       <attributes name="Nombre"/>
       <attributes name="NIT"/>
       <relations targetComponent="/0/@logicalComponents.2" name="Entity"/>
@@ -23,24 +23,24 @@
       </operations>
     </logicalComponents>
     <logicalComponents name="Entity">
-      <attributes name="Id" type="INTEGER"/>
-      <attributes name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <attributes name="Id" type="int"/>
+      <attributes name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
         </expression>
       </attributes>
       <attributes name="cedula"/>
       <attributes name="salario" type="DOUBLE"/>
-      <attributes name="vivienda"/>
+      <attributes name="pais"/>
       <attributes name="grupofamiliar"/>
-      <attributes name="NovedadesMes" type="INTEGER">
+      <attributes name="NovedadesMes" type="int">
         <expression xsi:type="PagosPim:TerminalValue" value="0"/>
       </attributes>
-      <attributes name="DiasNovedad" type="INTEGER"/>
+      <attributes name="DiasNovedad" type="int"/>
       <attributes name="AltoRiesgo"/>
-      <attributes name="RiesgoLaboral" type="INTEGER"/>
-      <attributes name="Profesion"/>
+      <attributes name="RiesgoLaboral" type="int"/>
+      <attributes name="activity"/>
       <relations targetComponent="/0/@logicalComponents.3" name="Novedades"/>
       <relations targetComponent="/0/@logicalComponents.4" name="Pagos"/>
       <operations name="createEntity">
@@ -57,26 +57,26 @@
       </operations>
     </logicalComponents>
     <logicalComponents name="Novedades">
-      <attributes name="FechaInicial" type="DATE"/>
-      <attributes name="FechaFinal" type="DATE"/>
+      <attributes name="FechaInicial" type="Date"/>
+      <attributes name="FechaFinal" type="Date"/>
       <attributes name="TipoNovedad"/>
-      <attributes name="DiasNovedad" type="INTEGER"/>
-      <attributes name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes name="DiasNovedad" type="int"/>
+      <attributes name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         </expression>
       </attributes>
-      <attributes name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         </expression>
       </attributes>
       <attributes name="cedula" isIndex="@Indice">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.3/@attributes.6">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         </expression>
       </attributes>
       <operations name="createNovedades">
@@ -93,20 +93,20 @@
       </operations>
     </logicalComponents>
     <logicalComponents name="Pagos">
-      <attributes name="FechaPago" type="DATE"/>
+      <attributes name="FechaPago" type="Date"/>
       <attributes name="Monto" type="DOUBLE"/>
       <attributes name="Status"/>
-      <attributes name="MesPago" type="INTEGER"/>
-      <attributes name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes name="MesPago" type="int"/>
+      <attributes name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.0">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
         </expression>
       </attributes>
-      <attributes name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <attributes name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
         <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.4/@attributes.5">
-          <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+          <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
         </expression>
       </attributes>
       <relations targetComponent="/0/@logicalComponents.6" name="CalculationFormula"/>
@@ -145,19 +145,11 @@
         <body>
           <ifblock>
             <ifcondition>
-              <logicalexpressions conOper="&amp;&amp;">
-                <leftTerm attribute="/0/@logicalComponents.2/@attributes.4">
-                  <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
-                </leftTerm>
-                <logicalOperator>!=</logicalOperator>
-                <moreExpressions>
-                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.5">
-                    <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
-                  </leftTerm>
-                  <logicalOperator>!=</logicalOperator>
-                  <literal>Colombia</literal>
+              <logicalexpressions logicalOperator="!=" literal="Colombia" conOper="&amp;&amp;">
+                <leftTerm attribute="/0/@logicalComponents.6/@operations.0/@attributes.1"/>
+                <moreExpressions logicalOperator="!=" literal="Colombia">
+                  <leftTerm attribute="/0/@logicalComponents.6/@operations.0/@attributes.2"/>
                 </moreExpressions>
-                <literal>Colombia</literal>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:TerminalValue" value="0"/>
@@ -168,7 +160,7 @@
                 <returnExp>
                   <expression xsi:type="PagosPim:Mult">
                     <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.0/@attributes.0"/>
-                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.0/@attributes.3"/>
                   </expression>
                 </returnExp>
               </innerIfBlocks>
@@ -178,16 +170,22 @@
         <attributes name="impuesto" type="DOUBLE">
           <expression xsi:type="PagosPim:TerminalValue" value="0.12"/>
         </attributes>
-        <attributes name="diasMes" type="DOUBLE">
-          <expression xsi:type="PagosPim:TerminalValue" value="30"/>
+        <attributes name="pais">
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.0/@attributes.1">
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          </expression>
         </attributes>
-        <attributes name="salarioHora" type="DOUBLE">
-          <expression xsi:type="PagosPim:Mult" operator="/">
-            <rightExp xsi:type="PagosPim:TerminalValue" value="8"/>
-            <leftExp xsi:type="PagosPim:Mult" operator="/">
-              <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.0/@attributes.1"/>
-              <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
-            </leftExp>
+        <attributes name="grupoFamiliar">
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.5">
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          </expression>
+        </attributes>
+        <attributes name="salario" type="DOUBLE">
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.0/@attributes.3">
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
           </expression>
         </attributes>
       </operations>
@@ -195,20 +193,18 @@
         <body>
           <ifblock>
             <ifcondition>
-              <logicalexpressions conOper="||">
-                <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+              <logicalexpressions logicalOperator="==" conOper="||">
+                <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.1"/>
                 <rightTerm value="4"/>
-                <logicalOperator>=</logicalOperator>
-                <moreExpressions>
-                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.8"/>
+                <moreExpressions logicalOperator="==">
+                  <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.1"/>
                   <rightTerm value="5"/>
-                  <logicalOperator>=</logicalOperator>
                 </moreExpressions>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
                   <rightExp xsi:type="PagosPim:TerminalValue" value="0.26"/>
-                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                 </expression>
               </returnBlock>
             </ifcondition>
@@ -216,18 +212,13 @@
               <innerIfBlocks>
                 <ifblock>
                   <ifcondition>
-                    <logicalexpressions>
-                      <leftTerm attribute="/0/@logicalComponents.2/@attributes.10"/>
-                      <logicalOperator>=</logicalOperator>
-                      <literal>Congresista</literal>
+                    <logicalexpressions logicalOperator="==" literal="Congresista">
+                      <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.5"/>
                     </logicalexpressions>
                     <returnBlock>
                       <expression xsi:type="PagosPim:Mult">
-                        <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.1"/>
-                        <leftExp xsi:type="PagosPim:Mult">
-                          <rightExp xsi:type="PagosPim:TerminalValue" value="0.255"/>
-                          <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
-                        </leftExp>
+                        <rightExp xsi:type="PagosPim:TerminalValue" value="0.255"/>
+                        <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                       </expression>
                     </returnBlock>
                   </ifcondition>
@@ -235,15 +226,13 @@
                     <innerIfBlocks>
                       <ifblock>
                         <ifcondition>
-                          <logicalexpressions>
-                            <leftTerm attribute="/0/@logicalComponents.2/@attributes.10"/>
-                            <logicalOperator>=</logicalOperator>
-                            <literal>CTI</literal>
+                          <logicalexpressions logicalOperator="==" literal="CTI">
+                            <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.5"/>
                           </logicalexpressions>
                           <returnBlock>
                             <expression xsi:type="PagosPim:Mult">
                               <rightExp xsi:type="PagosPim:TerminalValue" value="0.35"/>
-                              <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                              <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                             </expression>
                           </returnBlock>
                         </ifcondition>
@@ -251,15 +240,13 @@
                           <innerIfBlocks>
                             <ifblock>
                               <ifcondition>
-                                <logicalexpressions>
-                                  <leftTerm attribute="/0/@logicalComponents.2/@attributes.10"/>
-                                  <logicalOperator>=</logicalOperator>
-                                  <literal>Aviador</literal>
+                                <logicalexpressions logicalOperator="==" literal="Aviador">
+                                  <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.5"/>
                                 </logicalexpressions>
                                 <returnBlock>
                                   <expression xsi:type="PagosPim:Mult">
                                     <rightExp xsi:type="PagosPim:TerminalValue" value="0.21"/>
-                                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                                    <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                                   </expression>
                                 </returnBlock>
                               </ifcondition>
@@ -275,15 +262,18 @@
           </ifblock>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==" conOper="&amp;&amp;">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.6"/>
                 <rightTerm value="0"/>
-                <logicalOperator>=</logicalOperator>
+                <moreExpressions logicalOperator="&lt;">
+                  <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
+                  <rightTerm value="10"/>
+                </moreExpressions>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
                   <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.0"/>
-                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                  <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                 </expression>
               </returnBlock>
             </ifcondition>
@@ -291,25 +281,21 @@
               <innerIfBlocks>
                 <ifblock>
                   <ifcondition>
-                    <logicalexpressions conOper="&amp;&amp;">
+                    <logicalexpressions logicalOperator=">=" conOper="&amp;&amp;">
                       <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.3"/>
                       <rightTerm value="3"/>
-                      <logicalOperator>>=</logicalOperator>
-                      <moreExpressions conOper="&amp;&amp;">
+                      <moreExpressions logicalOperator="&lt;" conOper="&amp;&amp;">
                         <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.3"/>
                         <rightTerm value="20"/>
-                        <logicalOperator>&lt;</logicalOperator>
-                        <moreExpressions>
+                        <moreExpressions logicalOperator="==" literal="SLN">
                           <leftTerm attribute="/0/@logicalComponents.6/@operations.1/@attributes.2"/>
-                          <logicalOperator>=</logicalOperator>
-                          <literal>SLN</literal>
                         </moreExpressions>
                       </moreExpressions>
                     </logicalexpressions>
                     <returnBlock>
                       <expression xsi:type="PagosPim:Mult">
                         <rightExp xsi:type="PagosPim:TerminalValue" value="0.12"/>
-                        <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.3"/>
+                        <leftExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4"/>
                       </expression>
                     </returnBlock>
                   </ifcondition>
@@ -328,19 +314,31 @@
         <attributes name="pensionNormal" type="DOUBLE">
           <expression xsi:type="PagosPim:TerminalValue" value="0.16"/>
         </attributes>
-        <attributes name="riesgoLaboral" type="INTEGER">
-          <expression xsi:type="PagosPim:TerminalValue" value="0.20"/>
+        <attributes name="riesgoLaboral" type="int">
+          <expression xsi:type="PagosPim:TerminalValue" value="0"/>
         </attributes>
         <attributes name="TipoNovedad">
-          <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
           <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.2">
-            <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
           </expression>
         </attributes>
-        <attributes name="diasLaborables" type="INTEGER">
+        <attributes name="diasLaborables" type="int">
           <expression xsi:type="PagosPim:Add" operator="-">
             <leftExp xsi:type="PagosPim:TerminalValue" value="20"/>
             <rightExp xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.2/@attributes.7"/>
+          </expression>
+        </attributes>
+        <attributes name="salario" type="DOUBLE">
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.4">
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          </expression>
+        </attributes>
+        <attributes name="activity">
+          <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+          <expression xsi:type="PagosPim:TerminalValue" attribute="/0/@logicalComponents.6/@operations.1/@attributes.5">
+            <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
           </expression>
         </attributes>
       </operations>
@@ -348,10 +346,9 @@
         <body>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
                 <rightTerm value="1"/>
-                <logicalOperator>=</logicalOperator>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
@@ -363,10 +360,9 @@
           </ifblock>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
                 <rightTerm value="2"/>
-                <logicalOperator>=</logicalOperator>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
@@ -378,10 +374,9 @@
           </ifblock>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
                 <rightTerm value="3"/>
-                <logicalOperator>=</logicalOperator>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
@@ -393,10 +388,9 @@
           </ifblock>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
                 <rightTerm value="4"/>
-                <logicalOperator>=</logicalOperator>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
@@ -408,10 +402,9 @@
           </ifblock>
           <ifblock>
             <ifcondition>
-              <logicalexpressions>
+              <logicalexpressions logicalOperator="==">
                 <leftTerm attribute="/0/@logicalComponents.2/@attributes.9"/>
                 <rightTerm value="5"/>
-                <logicalOperator>=</logicalOperator>
               </logicalexpressions>
               <returnBlock>
                 <expression xsi:type="PagosPim:Mult">
@@ -459,14 +452,14 @@
             <expression xsi:type="PagosPim:Add">
               <leftExp xsi:type="PagosPim:Add">
                 <leftExp xsi:type="PagosPim:TerminalValue">
-                  <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.0"/>
+                  <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.0"/>
                 </leftExp>
                 <rightExp xsi:type="PagosPim:TerminalValue">
-                  <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1"/>
+                  <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1"/>
                 </rightExp>
               </leftExp>
               <rightExp xsi:type="PagosPim:TerminalValue">
-                <parent href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@attLists.9"/>
+                <parent href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.2"/>
               </rightExp>
             </expression>
           </returnExp>
@@ -475,50 +468,50 @@
     </logicalComponents>
     <datalayercomponents name="Planillator"/>
     <datalayercomponents name="Pagadora">
-      <fields name="Id" type="INTEGER"/>
+      <fields name="Id" type="int"/>
       <fields name="Nombre"/>
       <fields name="NIT"/>
     </datalayercomponents>
     <datalayercomponents name="Entity">
-      <fields name="Id" type="INTEGER"/>
-      <fields name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <fields name="Id" type="int"/>
+      <fields name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
       </fields>
       <fields name="cedula"/>
       <fields name="salario" type="DOUBLE"/>
-      <fields name="vivienda"/>
+      <fields name="pais"/>
       <fields name="grupofamiliar"/>
-      <fields name="NovedadesMes" type="INTEGER"/>
-      <fields name="DiasNovedad" type="INTEGER"/>
+      <fields name="NovedadesMes" type="int"/>
+      <fields name="DiasNovedad" type="int"/>
       <fields name="AltoRiesgo"/>
-      <fields name="RiesgoLaboral" type="INTEGER"/>
-      <fields name="Profesion"/>
+      <fields name="RiesgoLaboral" type="int"/>
+      <fields name="activity"/>
     </datalayercomponents>
     <datalayercomponents name="Novedades">
-      <fields name="FechaInicial" type="DATE"/>
-      <fields name="FechaFinal" type="DATE"/>
+      <fields name="FechaInicial" type="Date"/>
+      <fields name="FechaFinal" type="Date"/>
       <fields name="TipoNovedad"/>
-      <fields name="DiasNovedad" type="INTEGER"/>
-      <fields name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <fields name="DiasNovedad" type="int"/>
+      <fields name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </fields>
-      <fields name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <fields name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </fields>
       <fields name="cedula" isIndex="@Indice">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </fields>
     </datalayercomponents>
     <datalayercomponents name="Pagos">
-      <fields name="FechaPago" type="DATE"/>
+      <fields name="FechaPago" type="Date"/>
       <fields name="Monto" type="DOUBLE"/>
       <fields name="Status"/>
-      <fields name="MesPago" type="INTEGER"/>
-      <fields name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <fields name="MesPago" type="int"/>
+      <fields name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </fields>
-      <fields name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <fields name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
       </fields>
     </datalayercomponents>
     <datalayercomponents name="PrestadoraServicios">
@@ -536,7 +529,7 @@
       <subcomponents name="Pagadora"/>
     </views>
     <views name="Pagadora" title="Administrador Pagadora">
-      <attributes xsi:type="PagosPim:Input" label="Id" name="Id" type="INTEGER"/>
+      <attributes xsi:type="PagosPim:Input" label="Id" name="Id" type="int"/>
       <attributes xsi:type="PagosPim:Input" label="Nombre" name="Nombre"/>
       <attributes xsi:type="PagosPim:Input" label="NIT" name="NIT"/>
       <subcomponents name="Entity"/>
@@ -550,19 +543,19 @@
       <frontservices xsi:type="PagosPim:Action" label="Query" name="readPagadora" service="/0/@views.1/@frontservices.6"/>
     </views>
     <views name="Entity" title="Administrador Entity">
-      <attributes xsi:type="PagosPim:Input" label="Id" name="Id" type="INTEGER"/>
-      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <attributes xsi:type="PagosPim:Input" label="Id" name="Id" type="int"/>
+      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
       </attributes>
       <attributes xsi:type="PagosPim:Input" label="Cedula" name="cedula"/>
       <attributes xsi:type="PagosPim:Input" label="Salario" name="salario" type="DOUBLE"/>
-      <attributes xsi:type="PagosPim:Input" label="Vivienda" name="vivienda"/>
+      <attributes xsi:type="PagosPim:Input" label="Pais" name="pais"/>
       <attributes xsi:type="PagosPim:Input" label="Grupofamiliar" name="grupofamiliar"/>
-      <attributes xsi:type="PagosPim:Input" label="NovedadesMes" name="NovedadesMes" type="INTEGER"/>
-      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad" type="INTEGER"/>
+      <attributes xsi:type="PagosPim:Input" label="NovedadesMes" name="NovedadesMes" type="int"/>
+      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad" type="int"/>
       <attributes xsi:type="PagosPim:Input" label="AltoRiesgo" name="AltoRiesgo"/>
-      <attributes xsi:type="PagosPim:Input" label="RiesgoLaboral" name="RiesgoLaboral" type="INTEGER"/>
-      <attributes xsi:type="PagosPim:Input" label="Profesion" name="Profesion"/>
+      <attributes xsi:type="PagosPim:Input" label="RiesgoLaboral" name="RiesgoLaboral" type="int"/>
+      <attributes xsi:type="PagosPim:Input" label="Activity" name="activity"/>
       <subcomponents name="Novedades"/>
       <subcomponents name="Pagos"/>
       <frontservices name="postcreateEntity" fullName="createEntity"/>
@@ -575,18 +568,18 @@
       <frontservices xsi:type="PagosPim:Action" label="Query" name="readEntity" service="/0/@views.2/@frontservices.6"/>
     </views>
     <views name="Novedades" title="Administrador Novedades">
-      <attributes xsi:type="PagosPim:Input" label="FechaInicial" name="FechaInicial" type="DATE"/>
-      <attributes xsi:type="PagosPim:Input" label="FechaFinal" name="FechaFinal" type="DATE"/>
+      <attributes xsi:type="PagosPim:Input" label="FechaInicial" name="FechaInicial" type="Date"/>
+      <attributes xsi:type="PagosPim:Input" label="FechaFinal" name="FechaFinal" type="Date"/>
       <attributes xsi:type="PagosPim:Input" label="TipoNovedad" name="TipoNovedad"/>
-      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad" type="INTEGER"/>
-      <attributes xsi:type="PagosPim:Output" label="IdEntidad" name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes xsi:type="PagosPim:Input" label="DiasNovedad" name="DiasNovedad" type="int"/>
+      <attributes xsi:type="PagosPim:Output" label="IdEntidad" name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </attributes>
-      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </attributes>
       <attributes xsi:type="PagosPim:Input" label="Cedula" name="cedula" isIndex="@Indice" service="/0/@views.2/@frontservices.6">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </attributes>
       <frontservices name="postcreateNovedades" fullName="createNovedades"/>
       <frontservices xsi:type="PagosPim:Action" label="Add" name="createNovedades" service="/0/@views.3/@frontservices.0"/>
@@ -598,15 +591,15 @@
       <frontservices xsi:type="PagosPim:Action" label="Query" name="readNovedades" service="/0/@views.3/@frontservices.6"/>
     </views>
     <views name="Pagos" title="Administrador Pagos">
-      <attributes xsi:type="PagosPim:Input" label="FechaPago" name="FechaPago" type="DATE"/>
+      <attributes xsi:type="PagosPim:Input" label="FechaPago" name="FechaPago" type="Date"/>
       <attributes xsi:type="PagosPim:Input" label="Monto" name="Monto" type="DOUBLE"/>
       <attributes xsi:type="PagosPim:Input" label="Status" name="Status"/>
-      <attributes xsi:type="PagosPim:Input" label="MesPago" name="MesPago" type="INTEGER"/>
-      <attributes xsi:type="PagosPim:Output" label="IdEntidad" name="idEntidad" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0"/>
+      <attributes xsi:type="PagosPim:Input" label="MesPago" name="MesPago" type="int"/>
+      <attributes xsi:type="PagosPim:Output" label="IdEntidad" name="idEntidad" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
       </attributes>
-      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="INTEGER">
-        <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0"/>
+      <attributes xsi:type="PagosPim:Output" label="SuperEntityId" name="superEntityId" type="int">
+        <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0"/>
       </attributes>
       <subcomponents name="CalculationFormula"/>
       <frontservices name="postcreatePagos" fullName="createPagos"/>
@@ -645,17 +638,30 @@
   <PagosPim:Body/>
   <PagosPim:Body/>
   <PagosPim:Input label="Impuesto" name="impuesto" type="DOUBLE"/>
-  <PagosPim:Input label="DiasMes" name="diasMes" type="DOUBLE"/>
-  <PagosPim:Input label="SalarioHora" name="salarioHora" type="DOUBLE"/>
   <PagosPim:Input label="PensionNormal" name="pensionNormal" type="DOUBLE"/>
-  <PagosPim:Input label="RiesgoLaboral" name="riesgoLaboral" type="INTEGER"/>
-  <PagosPim:Input label="DiasLaborables" name="diasLaborables" type="INTEGER"/>
+  <PagosPim:Input label="RiesgoLaboral" name="riesgoLaboral" type="int"/>
+  <PagosPim:Input label="DiasLaborables" name="diasLaborables" type="int"/>
   <PagosPim:Input label="RiesgoI" name="RiesgoI" type="DOUBLE"/>
   <PagosPim:Input label="RiesgoII" name="RiesgoII" type="DOUBLE"/>
   <PagosPim:Input label="RiesgoIII" name="RiesgoIII" type="DOUBLE"/>
   <PagosPim:Input label="RiesgoIV" name="RiesgoIV" type="DOUBLE"/>
   <PagosPim:Input label="RiesgoV" name="RiesgoV" type="DOUBLE"/>
+  <PagosPim:Output label="Pais" name="pais">
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+  </PagosPim:Output>
+  <PagosPim:Output label="GrupoFamiliar" name="grupoFamiliar">
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+  </PagosPim:Output>
+  <PagosPim:Output label="Salario" name="salario" type="DOUBLE">
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+  </PagosPim:Output>
   <PagosPim:Output label="TipoNovedad" name="TipoNovedad">
-    <complexType href="pagos.xmi?id=85c5511e-83bb-4ddd-b968-2de53a5ad42b-9a6256c0-3a78-409e-9631-a246a163aaea#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0/@templatesForms.0"/>
+  </PagosPim:Output>
+  <PagosPim:Output label="Salario" name="salario" type="DOUBLE">
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
+  </PagosPim:Output>
+  <PagosPim:Output label="Activity" name="activity">
+    <complexType href="pagos.xmi?id=3644aad7-1083-41a3-96b9-98d144c6a13c-013f4e5a-7213-4f1e-8aaa-f3f772711841#//@intermediary/@superentities.0/@participants.0"/>
   </PagosPim:Output>
 </xmi:XMI>

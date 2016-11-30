@@ -3527,7 +3527,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             					if (current==null) {
             						current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
             					}
-            					add(
+            					set(
             						current,
             						"variable",
             						lv_variable_0_0,
@@ -3570,7 +3570,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             	    						if (current==null) {
             	    							current = createModelElement(grammarAccess.getExpresionLogicaRule());
             	    						}
-            	    						addWithLastConsumed(
+            	    						setWithLastConsumed(
             	    							current,
             	    							"logOper",
             	    							lv_logOper_1_0,
@@ -3620,7 +3620,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             	            							if (current==null) {
             	            								current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
             	            							}
-            	            							add(
+            	            							set(
             	            								current,
             	            								"variable2",
             	            								lv_variable2_2_0,
@@ -3653,7 +3653,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             	            							if (current==null) {
             	            								current = createModelElement(grammarAccess.getExpresionLogicaRule());
             	            							}
-            	            							addWithLastConsumed(
+            	            							setWithLastConsumed(
             	            								current,
             	            								"literal",
             	            								lv_literal_3_0,
@@ -3739,7 +3739,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     						if (current==null) {
                     							current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
                     						}
-                    						add(
+                    						set(
                     							current,
                     							"exp",
                     							lv_exp_5_0,

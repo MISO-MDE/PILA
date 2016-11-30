@@ -593,7 +593,7 @@ public interface PagosPackage extends EPackage
   int EXPRESION_LOGICA = 12;
 
   /**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -602,7 +602,7 @@ public interface PagosPackage extends EPackage
   int EXPRESION_LOGICA__VARIABLE = 0;
 
   /**
-	 * The feature id for the '<em><b>Log Oper</b></em>' attribute list.
+	 * The feature id for the '<em><b>Log Oper</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -611,7 +611,7 @@ public interface PagosPackage extends EPackage
   int EXPRESION_LOGICA__LOG_OPER = 1;
 
   /**
-	 * The feature id for the '<em><b>Variable2</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Variable2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -620,7 +620,7 @@ public interface PagosPackage extends EPackage
   int EXPRESION_LOGICA__VARIABLE2 = 2;
 
   /**
-	 * The feature id for the '<em><b>Literal</b></em>' attribute list.
+	 * The feature id for the '<em><b>Literal</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -638,7 +638,7 @@ public interface PagosPackage extends EPackage
   int EXPRESION_LOGICA__CON_OPER = 4;
 
   /**
-	 * The feature id for the '<em><b>Exp</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Exp</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1362,10 +1362,10 @@ public interface PagosPackage extends EPackage
   EClass getExpresionLogica();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable</em>'.
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
 	 * @see co.edu.uniandes.pagos.ExpresionLogica#getVariable()
 	 * @see #getExpresionLogica()
 	 * @generated
@@ -1373,10 +1373,10 @@ public interface PagosPackage extends EPackage
   EReference getExpresionLogica_Variable();
 
   /**
-	 * Returns the meta object for the attribute list '{@link co.edu.uniandes.pagos.ExpresionLogica#getLogOper <em>Log Oper</em>}'.
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.ExpresionLogica#getLogOper <em>Log Oper</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Log Oper</em>'.
+	 * @return the meta object for the attribute '<em>Log Oper</em>'.
 	 * @see co.edu.uniandes.pagos.ExpresionLogica#getLogOper()
 	 * @see #getExpresionLogica()
 	 * @generated
@@ -1384,10 +1384,10 @@ public interface PagosPackage extends EPackage
   EAttribute getExpresionLogica_LogOper();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable2 <em>Variable2</em>}'.
+	 * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable2 <em>Variable2</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable2</em>'.
+	 * @return the meta object for the containment reference '<em>Variable2</em>'.
 	 * @see co.edu.uniandes.pagos.ExpresionLogica#getVariable2()
 	 * @see #getExpresionLogica()
 	 * @generated
@@ -1395,10 +1395,10 @@ public interface PagosPackage extends EPackage
   EReference getExpresionLogica_Variable2();
 
   /**
-	 * Returns the meta object for the attribute list '{@link co.edu.uniandes.pagos.ExpresionLogica#getLiteral <em>Literal</em>}'.
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.ExpresionLogica#getLiteral <em>Literal</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Literal</em>'.
+	 * @return the meta object for the attribute '<em>Literal</em>'.
 	 * @see co.edu.uniandes.pagos.ExpresionLogica#getLiteral()
 	 * @see #getExpresionLogica()
 	 * @generated
@@ -1417,10 +1417,10 @@ public interface PagosPackage extends EPackage
   EAttribute getExpresionLogica_ConOper();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link co.edu.uniandes.pagos.ExpresionLogica#getExp <em>Exp</em>}'.
+	 * Returns the meta object for the containment reference '{@link co.edu.uniandes.pagos.ExpresionLogica#getExp <em>Exp</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Exp</em>'.
+	 * @return the meta object for the containment reference '<em>Exp</em>'.
 	 * @see co.edu.uniandes.pagos.ExpresionLogica#getExp()
 	 * @see #getExpresionLogica()
 	 * @generated
@@ -2038,7 +2038,7 @@ public interface PagosPackage extends EPackage
     EClass EXPRESION_LOGICA = eINSTANCE.getExpresionLogica();
 
     /**
-		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -2046,7 +2046,7 @@ public interface PagosPackage extends EPackage
     EReference EXPRESION_LOGICA__VARIABLE = eINSTANCE.getExpresionLogica_Variable();
 
     /**
-		 * The meta object literal for the '<em><b>Log Oper</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Log Oper</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -2054,7 +2054,7 @@ public interface PagosPackage extends EPackage
     EAttribute EXPRESION_LOGICA__LOG_OPER = eINSTANCE.getExpresionLogica_LogOper();
 
     /**
-		 * The meta object literal for the '<em><b>Variable2</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Variable2</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -2062,7 +2062,7 @@ public interface PagosPackage extends EPackage
     EReference EXPRESION_LOGICA__VARIABLE2 = eINSTANCE.getExpresionLogica_Variable2();
 
     /**
-		 * The meta object literal for the '<em><b>Literal</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Literal</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated
@@ -2078,7 +2078,7 @@ public interface PagosPackage extends EPackage
     EAttribute EXPRESION_LOGICA__CON_OPER = eINSTANCE.getExpresionLogica_ConOper();
 
     /**
-		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
 		 * @generated

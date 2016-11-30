@@ -7,8 +7,6 @@ package co.edu.uniandes.pagos.validation;
 import co.edu.uniandes.pagos.ExpresionLogica;
 import co.edu.uniandes.pagos.TerminalValue;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * A sample validator interface for {@link co.edu.uniandes.pagos.ExpresionLogica}.
  * This doesn't really do anything, and it's not a real EMF artifact.
@@ -18,10 +16,10 @@ import org.eclipse.emf.common.util.EList;
 public interface ExpresionLogicaValidator {
 	boolean validate();
 
-	boolean validateVariable(EList<TerminalValue> value);
-	boolean validateLogOper(EList<String> value);
-	boolean validateVariable2(EList<TerminalValue> value);
-	boolean validateLiteral(EList<String> value);
+	boolean validateVariable(TerminalValue value);
+	boolean validateLogOper(String value);
+	boolean validateVariable2(TerminalValue value);
+	boolean validateLiteral(String value);
 	boolean validateConOper(String value);
-	boolean validateExp(EList<ExpresionLogica> value);
+	boolean validateExp(ExpresionLogica value);
 }

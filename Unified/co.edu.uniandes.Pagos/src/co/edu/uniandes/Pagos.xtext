@@ -126,8 +126,8 @@ ReturnBlock returns ReturnBlock:
 
 
 ExpresionLogica returns ExpresionLogica:
-	variable += TerminalValue (logOper += OPERADORLOGICO (variable2 += TerminalValue | literal += STRING))+
-			(conOper = LOGICALCONN (exp += ExpresionLogica))?
+	variable = TerminalValue (logOper = OPERADORLOGICO (variable2 = TerminalValue | literal = STRING))+
+			(conOper = LOGICALCONN (exp = ExpresionLogica))?
 ;
 
 
@@ -200,7 +200,7 @@ terminal ADDOP: '+' | '-';
 terminal LOGICALCONN: '&&' | '||';
 
 terminal ID:('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '=' | '<>' | '!=');
+terminal OPERADORLOGICO: ('<' | '>' | '<=' | '>=' | '==' | '<>' | '!=');
 
 terminal LBRACE: "{";
 terminal RBRACE: "}";

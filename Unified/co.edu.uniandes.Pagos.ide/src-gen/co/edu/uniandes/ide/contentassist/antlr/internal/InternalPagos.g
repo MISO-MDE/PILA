@@ -8336,7 +8336,7 @@ RULE_LOGICALCONN : ('&&'|'||');
 
 RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'='|'<>'|'!=');
+RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'=='|'<>'|'!=');
 
 RULE_LBRACE : '{';
 

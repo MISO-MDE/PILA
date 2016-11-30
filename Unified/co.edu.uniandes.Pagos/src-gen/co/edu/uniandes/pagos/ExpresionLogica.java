@@ -3,8 +3,6 @@
  */
 package co.edu.uniandes.pagos;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -31,68 +29,108 @@ import org.eclipse.emf.ecore.EObject;
 public interface ExpresionLogica extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Variable</b></em>' containment reference list.
-	 * The list contents are of type {@link co.edu.uniandes.pagos.TerminalValue}.
+	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Variable</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Variable</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable</em>' containment reference list.
+	 * @return the value of the '<em>Variable</em>' containment reference.
+	 * @see #setVariable(TerminalValue)
 	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_Variable()
 	 * @model containment="true"
 	 * @generated
 	 */
-  EList<TerminalValue> getVariable();
+  TerminalValue getVariable();
 
   /**
-	 * Returns the value of the '<em><b>Log Oper</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Log Oper</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Log Oper</em>' attribute list.
-	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_LogOper()
-	 * @model unique="false"
+	 * @param value the new value of the '<em>Variable</em>' containment reference.
+	 * @see #getVariable()
 	 * @generated
 	 */
-  EList<String> getLogOper();
+  void setVariable(TerminalValue value);
 
   /**
-	 * Returns the value of the '<em><b>Variable2</b></em>' containment reference list.
-	 * The list contents are of type {@link co.edu.uniandes.pagos.TerminalValue}.
+	 * Returns the value of the '<em><b>Log Oper</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Variable2</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Log Oper</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable2</em>' containment reference list.
+	 * @return the value of the '<em>Log Oper</em>' attribute.
+	 * @see #setLogOper(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_LogOper()
+	 * @model
+	 * @generated
+	 */
+  String getLogOper();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ExpresionLogica#getLogOper <em>Log Oper</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Log Oper</em>' attribute.
+	 * @see #getLogOper()
+	 * @generated
+	 */
+  void setLogOper(String value);
+
+  /**
+	 * Returns the value of the '<em><b>Variable2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Variable2</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variable2</em>' containment reference.
+	 * @see #setVariable2(TerminalValue)
 	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_Variable2()
 	 * @model containment="true"
 	 * @generated
 	 */
-  EList<TerminalValue> getVariable2();
+  TerminalValue getVariable2();
 
   /**
-	 * Returns the value of the '<em><b>Literal</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ExpresionLogica#getVariable2 <em>Variable2</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variable2</em>' containment reference.
+	 * @see #getVariable2()
+	 * @generated
+	 */
+  void setVariable2(TerminalValue value);
+
+  /**
+	 * Returns the value of the '<em><b>Literal</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Literal</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Literal</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Literal</em>' attribute list.
+	 * @return the value of the '<em>Literal</em>' attribute.
+	 * @see #setLiteral(String)
 	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_Literal()
-	 * @model unique="false"
+	 * @model
 	 * @generated
 	 */
-  EList<String> getLiteral();
+  String getLiteral();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ExpresionLogica#getLiteral <em>Literal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Literal</em>' attribute.
+	 * @see #getLiteral()
+	 * @generated
+	 */
+  void setLiteral(String value);
 
   /**
 	 * Returns the value of the '<em><b>Con Oper</b></em>' attribute.
@@ -121,19 +159,29 @@ public interface ExpresionLogica extends EObject
   void setConOper(String value);
 
   /**
-	 * Returns the value of the '<em><b>Exp</b></em>' containment reference list.
-	 * The list contents are of type {@link co.edu.uniandes.pagos.ExpresionLogica}.
+	 * Returns the value of the '<em><b>Exp</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Exp</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Exp</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exp</em>' containment reference list.
+	 * @return the value of the '<em>Exp</em>' containment reference.
+	 * @see #setExp(ExpresionLogica)
 	 * @see co.edu.uniandes.pagos.PagosPackage#getExpresionLogica_Exp()
 	 * @model containment="true"
 	 * @generated
 	 */
-  EList<ExpresionLogica> getExp();
+  ExpresionLogica getExp();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.ExpresionLogica#getExp <em>Exp</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exp</em>' containment reference.
+	 * @see #getExp()
+	 * @generated
+	 */
+  void setExp(ExpresionLogica value);
 
 } // ExpresionLogica
