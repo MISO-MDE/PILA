@@ -66,11 +66,11 @@ public class DBUtil {
 	       		[%}			       		
 	       		 if(q.Type =='TipoPension'  and r.Type =='TipoPagador'){
 	       		  pensionpagadorIndex += 1;%]
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values([%=pensionpagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values([%=pensionpagadorIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
 	       		[%}			       		
 	       		 if(q.Type =='TipoPension'  and r.Type =='TipoPensionado'){
 	       		  pensionpensionadoIndex += 1;%]
-	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pensionado_id, pagador_id) values([%=pensionpensionadoIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
+	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pension_id, pensionado_id) values([%=pensionpensionadoIndex%],[%=hashRows.get(q)%],[%=hashRows.get(r)%])");
 	       		[%}			       					
 		  }				
 		}		
