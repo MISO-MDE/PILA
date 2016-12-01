@@ -3,43 +3,43 @@
   <intermediary name="Pagos de Una">
     <businessValue xsi:type="PaymentsApp:BusinessString" value="Pagos de Una"/>
     <intermediaryAttributes name="Tipo Pensionado">
-      <businessAttributes name="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2">
+      <businessAttributes name="T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2">
         <exp xsi:type="PaymentsApp:TerminalValue"/>
       </businessAttributes>
-      <businessAttributes name="Pensionado de régimen de prima media. Sin tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
-      <businessAttributes name="Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado de riesgos laborales. Tope máximo de 25 smlmv" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado por el empleador. Con tope maximo de pension de 25 smlmv" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado por el empleador sin tope máximo de pensión" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv" type="TipoPensionado"/>
-      <businessAttributes name="Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión" type="TipoPensionado"/>
-      <businessAttributes name="Beneficiario UPC adicional" type="TipoPensionado"/>
+      <businessAttributes name="T5 Pensionado de régimen de prima media. Sin tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+      <businessAttributes name="T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+      <businessAttributes name="T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+      <businessAttributes name="T5 Pensionado por el empleador. Con tope maximo de pension de 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+      <businessAttributes name="T5 Pensionado por el empleador sin tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+      <businessAttributes name="T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+      <businessAttributes name="T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+      <businessAttributes name="T5 Beneficiario UPC adicional" type="TipoPensionado" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
     </intermediaryAttributes>
     <intermediaryAttributes name="Tipo Pagador">
-      <businessAttributes name="Empleador" type="TipoPagador"/>
-      <businessAttributes name="Administración de pensiones" type="TipoPagador"/>
-      <businessAttributes name="Pagador de pensiones" type="TipoPagador"/>
-      <businessAttributes name="Pensiones de entidades de los regimenes especial y de excepción" type="TipoPagador"/>
+      <businessAttributes name="T4 Empleador" type="TipoPagador"/>
+      <businessAttributes name="T4 Administración de pensiones" type="TipoPagador"/>
+      <businessAttributes name="T4 Pagador de pensiones" type="TipoPagador"/>
+      <businessAttributes name="T4 Pensiones de entidades de los regimenes especial y de excepción" type="TipoPagador"/>
     </intermediaryAttributes>
     <intermediaryAttributes name="Tipo Pension">
-      <businessAttributes name="Vejez" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia vitalicia riesgo comun" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal riesgo comun" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia vitalicia por riesgo laboral" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal por riesgo laboral" type="TipoPension"/>
-      <businessAttributes name="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3 //@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
-      <businessAttributes name="Invalidez riesgo común" type="TipoPension"/>
-      <businessAttributes name="Invalidez resgo laboral" type="TipoPension"/>
-      <businessAttributes name="Jubilacion" type="TipoPension"/>
-      <businessAttributes name="Jubilacion para compartir" type="TipoPension"/>
-      <businessAttributes name="Sanción" type="TipoPension"/>
-      <businessAttributes name="Convencional" type="TipoPension"/>
-      <businessAttributes name="Convencional para compartir" type="TipoPension"/>
-      <businessAttributes name="Gracia" type="TipoPension"/>
-      <businessAttributes name="Por convenio internacional" type="TipoPension"/>
-      <businessAttributes name="Sentencia Judicial" type="TipoPension"/>
-      <businessAttributes name="Conciliaciones" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+      <businessAttributes name="T7 Vejez" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+      <businessAttributes name="T7 Sobrevivencia vitalicia riesgo comun" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+      <businessAttributes name="T7 Sobrevivencia temporal riesgo comun" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+      <businessAttributes name="T7 Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension"/>
+      <businessAttributes name="T7 Sobrevivencia vitalicia por riesgo laboral" type="TipoPension"/>
+      <businessAttributes name="T7 Sobrevivencia temporal por riesgo laboral" type="TipoPension"/>
+      <businessAttributes name="T7 Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.1 //@intermediary/@intermediaryAttributes.1/@businessAttributes.0 //@intermediary/@intermediaryAttributes.1/@businessAttributes.2 //@intermediary/@intermediaryAttributes.1/@businessAttributes.3 //@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+      <businessAttributes name="T7 Invalidez riesgo común" type="TipoPension"/>
+      <businessAttributes name="T7 Invalidez resgo laboral" type="TipoPension"/>
+      <businessAttributes name="T7 Jubilacion" type="TipoPension"/>
+      <businessAttributes name="T7 Jubilacion para compartir" type="TipoPension"/>
+      <businessAttributes name="T7 Sanción" type="TipoPension"/>
+      <businessAttributes name="T7 Convencional" type="TipoPension"/>
+      <businessAttributes name="T7 Convencional para compartir" type="TipoPension"/>
+      <businessAttributes name="T7 Gracia" type="TipoPension"/>
+      <businessAttributes name="T7 Por convenio internacional" type="TipoPension"/>
+      <businessAttributes name="T7 Sentencia Judicial" type="TipoPension"/>
+      <businessAttributes name="T7 Conciliaciones" type="TipoPension" relations="//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
     </intermediaryAttributes>
   </intermediary>
 </PaymentsApp:Application>

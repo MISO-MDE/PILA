@@ -114,42 +114,42 @@ public class DBUtil {
        		 * id: 7  --  id: 2       				       		
        		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos   --   Administración de pensiones	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(1,7,2)");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values(1,7,2)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 1       				       		
        		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos   --   Empleador	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(2,7,1)");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values(2,7,1)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 3       				       		
        		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos   --   Pagador de pensiones	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(3,7,3)");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values(3,7,3)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 4       				       		
        		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos   --   Pensiones de entidades de los regimenes especial y de excepción	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(4,7,4)");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values(4,7,4)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPensionado
        		 * id: 7  --  id: 2       				       		
        		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos   --   Pensionado de régimen de prima media. Sin tope máximo de pensión	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pensionado_id, pagador_id) values(1,7,2)");
+	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pension_id, pensionado_id) values(1,7,2)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 18  --  id: 1       				       		
        		 * Conciliaciones   --   Empleador	
        		 */			       				       		
-	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(5,18,1)");
+	       	 st.executeUpdate("insert into validacionpensionpagador (id, pension_id, pagador_id) values(5,18,1)");
             
 
     System.out.println("Insersion finalizada");
