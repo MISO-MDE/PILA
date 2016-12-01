@@ -149,16 +149,40 @@ BusinessAttribute:
 		name = ID COLON type = TYPE (':=' exp = Adicion)? (isIndex = INDEX)? 
 	RBRACE 
 	;
-	
+/*	
 TerminalValue returns TerminalValue:
 	{TerminalValue}
-	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] | 
-	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? |
-	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? |
-	('FU' DOT parent = [CalculationTemplate])? |
+	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	('FU' DOT parent = [CalculationTemplate])? (DOT Method)?|
 	valor = Number
 ;	
-	
+ */
+ 
+TerminalValue returns TerminalValue:
+	{TerminalValue}
+	(('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] | ('PA' DOT parent = [Participant] DOT method = Method)) | 
+	(('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? | ('SU' DOT parent = [SuperEntity] DOT method = Method)?)|
+	(('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? | ('IT' DOT parent = [InformationTemplate] DOT method = Method))|
+	(('FU' DOT parent = [CalculationTemplate])?) |
+	valor = Number
+;		
+
+/*
+TerminalValue returns TerminalValue:
+	{TerminalValue}
+	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	(('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? | ('IT' DOT parent = [InformationTemplate] DOT Method))|
+	('FU' DOT parent = [CalculationTemplate])? |
+	valor = Number
+;		
+ */
+
+Method:
+	'size()' | 'getCantidadDiasHabiles()' | 'getRiegoTabla2()'
+;
 
 /*
 mathADD returns mathADD:

@@ -188,7 +188,7 @@ public class ExpresionLogicaItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ExpresionLogica)object).getConOper();
+		String label = ((ExpresionLogica)object).getLogOper();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ExpresionLogica_type") :
 			getString("_UI_ExpresionLogica_type") + " " + label;

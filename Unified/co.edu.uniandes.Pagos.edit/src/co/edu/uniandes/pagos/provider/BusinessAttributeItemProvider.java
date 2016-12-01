@@ -66,6 +66,7 @@ public class BusinessAttributeItemProvider
 
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addIsIndexPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +107,28 @@ public class BusinessAttributeItemProvider
 				 getString("_UI_BusinessAttribute_type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_BusinessAttribute_type_feature", "_UI_BusinessAttribute_type"),
 				 PagosPackage.Literals.BUSINESS_ATTRIBUTE__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Index feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsIndexPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BusinessAttribute_isIndex_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BusinessAttribute_isIndex_feature", "_UI_BusinessAttribute_type"),
+				 PagosPackage.Literals.BUSINESS_ATTRIBUTE__IS_INDEX,
 				 true,
 				 false,
 				 false,
@@ -184,6 +207,7 @@ public class BusinessAttributeItemProvider
 		switch (notification.getFeatureID(BusinessAttribute.class)) {
 			case PagosPackage.BUSINESS_ATTRIBUTE__NAME:
 			case PagosPackage.BUSINESS_ATTRIBUTE__TYPE:
+			case PagosPackage.BUSINESS_ATTRIBUTE__IS_INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PagosPackage.BUSINESS_ATTRIBUTE__EXP:

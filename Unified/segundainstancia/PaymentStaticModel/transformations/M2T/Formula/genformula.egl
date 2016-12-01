@@ -42,7 +42,9 @@ operation addMethod(calcMethod) {
 %]
 	public double [%=calcMethod.name%] {
 		[%
+			addStaticData(calcMethod.name);		
 			addLocalVars(calcMethod);
+			addStaticDataPostVar(calcMethod.name);
 			addMethodBody(calcMethod->body);
 		%]
 	}
@@ -120,12 +122,30 @@ operation addCondition(ifCondition) {
 %]
 
 [% operation handdleExpression(logTuple) {
-		if (logTuple.literal = null) {
-			%][%if (logTuple.leftTerm.value <> null )%][%=logTuple.leftTerm.value%][%else%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%] [%
+		if (logTuple.literal = null) { // Al ser nul quiere decir comparacion de dos valores terminales y no constantes
+			%][%
+			if (logTuple.leftTerm.value <> null) {
+				%][%=logTuple.leftTerm.value%][%
+			} 
+			else {
+				%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%][%
+			
+			}
+			
 			if (logTuple.rightTerm.value <> null )%][%=logTuple.rightTerm.value%][%else%][%=logTuple.rightTerm.attribute.name%][%
 		}
 		else {
-		%][%if (logTuple.leftTerm.value <> null )%][%=logTuple.leftTerm.value%][%else%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%] [%=logTuple.literal%][%
+			if (logTuple.leftTerm.value <> null ) {
+				%][%=logTuple.leftTerm.value%][%
+			}
+			else {
+				if (logTuple.logicalOperator = "==" and logTuple.leftTerm.attribute.type.name = "String") {
+					%][%=logTuple.leftTerm.attribute.name%].equals("[%=logTuple.literal%]")[%
+				}
+				else {
+					%][%=logTuple.leftTerm.attribute.name%] [%=logTuple.logicalOperator%] [%=logTuple.literal%][%
+				}
+			}
 		}
 
 		if (logTuple.moreExpressions.isDefined()) {
@@ -134,7 +154,6 @@ operation addCondition(ifCondition) {
 		}
 }
 %]
-
 
 [%
 operation getLogicalExp(logExp) {
@@ -152,7 +171,13 @@ operation getLogicalExp(logExp) {
 				%][%=valueExp.parent.name.firstToLowerCase()%].get[%=valueExp.attribute.name.firstToUpperCase%]()[%
 			}
 			else {
-			%] [%=valueExp.parent.name%] [%
+				if (valueExp.method.isDefined()) {
+					%][%=valueExp.parent.name.firstToLowerCase()%].[%=valueExp.method%][%
+				}
+				else {
+				%]
+					[%=valueExp.parent.name.firstToLowerCase()%][%
+				}
 			}
 		}
 		else {
@@ -182,5 +207,36 @@ operation getComplexType(s) {
 		}
 	}
 	return null;
+}
+%]
+
+
+[% operation addStaticData(method) {
+	if (method = "calculatePension") {
+	%]
+		List<Novedad> novedades = EventLogic.getEventLogic().findByEntityTipo(entityId, TipoNovedad.SLN);
+		processNovedadesSinProcesar(novedades);
+	[%
+	}
+	else {
+		if (method = "calculateRiesgosLaborales") {
+		}
+	}			
+}
+%]
+
+[% operation addStaticDataPostVar(method) {
+	if (method = "calculatePension") {
+	%]
+		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
+	[%
+	}		
+	else {
+		if (method = "calculateRiesgosLaborales") {
+	%]
+			riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
+	[%
+		}
+	}	
 }
 %]

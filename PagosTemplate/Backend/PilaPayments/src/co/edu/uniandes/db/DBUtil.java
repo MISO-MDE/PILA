@@ -13,7 +13,7 @@ public class DBUtil {
 
             Properties props = new Properties();
             props.setProperty("user","postgres");
-            props.setProperty("password","root");
+            props.setProperty("password","admin");
             conn = DriverManager.getConnection(url, props);
 
             Statement st = conn.createStatement();

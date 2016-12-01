@@ -20,7 +20,7 @@
         <attLists name="DiasNovedad" type="Integer"/>
         <attLists name="AltoRiesgo" type="String"/>
         <attLists name="RiesgoLaboral" type="Integer"/>
-        <attLists name="activity" type="String"/>
+        <attLists name="profesion" type="String"/>
         <templatesForms name="Novedades" description="Formulario para Registro de Novedades">
           <attLists name="FechaInicial" type="Date"/>
           <attLists name="FechaFinal" type="Date"/>
@@ -51,10 +51,10 @@
             <attLists name="impuesto" type="Double">
               <exp xsi:type="pagos:TerminalValue" valor="0.12"/>
             </attLists>
-            <attLists name="pais" type="String">
+            <attLists name="pais" type="Integer">
               <exp xsi:type="pagos:TerminalValue" parent="//@intermediary/@superentities.0/@participants.0" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.0/@attLists.1"/>
             </attLists>
-            <attLists name="grupoFamiliar" type="String">
+            <attLists name="grupoFamiliar" type="Integer">
               <exp xsi:type="pagos:TerminalValue" parent="//@intermediary/@superentities.0/@participants.0" variable="//@intermediary/@superentities.0/@participants.0/@attLists.5"/>
             </attLists>
             <attLists name="salario" type="Double">
@@ -63,10 +63,12 @@
             <formulas>
               <formulaBody>
                 <ifSentence>
-                  <logExp logOper="!=" literal="Colombia" conOper="&amp;&amp;">
+                  <logExp logOper="!=" conOper="&amp;&amp;">
                     <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.0/@attLists.1"/>
-                    <exp logOper="!=" literal="Colombia">
+                    <variable2 valor="12"/>
+                    <exp logOper="!=">
                       <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.0/@attLists.2"/>
+                      <variable2 valor="12"/>
                     </exp>
                   </logExp>
                   <formulaReturn>
@@ -105,8 +107,11 @@
             <attLists name="salario" type="Double">
               <exp xsi:type="pagos:TerminalValue" parent="//@intermediary/@superentities.0/@participants.0" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.4"/>
             </attLists>
-            <attLists name="activity" type="String">
+            <attLists name="profesion" type="String">
               <exp xsi:type="pagos:TerminalValue" parent="//@intermediary/@superentities.0/@participants.0" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.5"/>
+            </attLists>
+            <attLists name="novedadAbierta" type="String">
+              <exp xsi:type="pagos:TerminalValue" parent="//@intermediary/@superentities.0/@participants.0/@templatesForms.0" method="size()"/>
             </attLists>
             <formulas>
               <formulaBody>
@@ -180,13 +185,9 @@
               </formulaBody>
               <formulaBody>
                 <ifSentence>
-                  <logExp logOper="==" conOper="&amp;&amp;">
-                    <variable variable="//@intermediary/@superentities.0/@participants.0/@attLists.6"/>
+                  <logExp logOper="==">
+                    <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.6"/>
                     <variable2 valor="0"/>
-                    <exp logOper="&lt;">
-                      <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.4"/>
-                      <variable2 valor="10"/>
-                    </exp>
                   </logExp>
                   <formulaReturn>
                     <expression xsi:type="pagos:Multiplicacion" operator="*">
@@ -201,27 +202,46 @@
                       <ifSentence>
                         <logExp logOper=">=" conOper="&amp;&amp;">
                           <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.3"/>
-                          <variable2 valor="3"/>
-                          <exp logOper="&lt;" conOper="&amp;&amp;">
+                          <variable2 valor="7"/>
+                          <exp logOper="&lt;=">
                             <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.3"/>
                             <variable2 valor="20"/>
-                            <exp logOper="==" literal="SLN">
-                              <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.2"/>
-                            </exp>
                           </exp>
                         </logExp>
                         <formulaReturn>
                           <expression xsi:type="pagos:Multiplicacion" operator="*">
                             <left xsi:type="pagos:TerminalValue" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.4"/>
-                            <rexp xsi:type="pagos:TerminalValue" valor="0.12"/>
+                            <rexp xsi:type="pagos:TerminalValue" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.0"/>
                           </expression>
                         </formulaReturn>
                       </ifSentence>
                       <elseSentence>
                         <ifSentence>
-                          <formulaReturn>
-                            <expression xsi:type="pagos:TerminalValue" valor="0"/>
-                          </formulaReturn>
+                          <formulaBody>
+                            <ifSentence>
+                              <logExp logOper=">=" conOper="&amp;&amp;">
+                                <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.3"/>
+                                <variable2 valor="3"/>
+                                <exp logOper="&lt;">
+                                  <variable variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.3"/>
+                                  <variable2 valor="7"/>
+                                </exp>
+                              </logExp>
+                              <formulaReturn>
+                                <expression xsi:type="pagos:Multiplicacion" operator="*">
+                                  <left xsi:type="pagos:TerminalValue" variable="//@intermediary/@superentities.0/@participants.0/@templatesForms.1/@templates.1/@attLists.4"/>
+                                  <rexp xsi:type="pagos:TerminalValue" valor="0.12"/>
+                                </expression>
+                              </formulaReturn>
+                            </ifSentence>
+                            <elseSentence>
+                              <ifSentence>
+                                <formulaReturn>
+                                  <expression xsi:type="pagos:TerminalValue" valor="0"/>
+                                </formulaReturn>
+                              </ifSentence>
+                            </elseSentence>
+                          </formulaBody>
                         </ifSentence>
                       </elseSentence>
                     </formulaBody>

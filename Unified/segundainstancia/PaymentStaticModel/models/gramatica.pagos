@@ -28,7 +28,7 @@ intermediary:
 									{DiasNovedad:Integer}, 
 									{AltoRiesgo:String},
 									{RiesgoLaboral:Integer}, //Viene de las tablas de validaciones TABLA 2 
-									{activity:String}
+									{profesion:String}
 						]
 					},
 					/*Templates para CRUD de informacion en este caso Novedades, Pagos etc*/
@@ -65,14 +65,14 @@ intermediary:
 								calculationattributes:
 								[
 									{impuesto:Double := 0.12}, 
-									{pais:String := PA.Entity#pais}, 
-									{grupoFamiliar:String := PA.Entity#grupofamiliar},
+									{pais:Integer := PA.Entity#pais}, 
+									{grupoFamiliar:Integer := PA.Entity#grupofamiliar},
 									{salario:Double := PA.Entity#salario}
 								],
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									SI [pais != "Colombia" && grupoFamiliar != "Colombia"] ENTONCES
+									SI [pais != 12 && grupoFamiliar != 12] ENTONCES
 									{
 										RETORNAR: 0
 									}	
@@ -90,7 +90,8 @@ intermediary:
 									{TipoNovedad:String := IT.Novedades#TipoNovedad},
 									{diasLaborables:Integer := 20 - DiasNovedad},
 									{salario:Double := PA.Entity#salario},
-									{activity:String := PA.Entity#activity} 
+									{profesion:String := PA.Entity#profesion},
+									{novedadAbierta:String := IT.Novedades.size()} 
 								], 
 								calculationrules:
 									SI [riesgoLaboral == 4 || riesgoLaboral == 5] ENTONCES
@@ -98,17 +99,17 @@ intermediary:
 										RETORNAR: salario * 0.26
 									}
 									SINO {
-											SI [activity == "Congresista"] ENTONCES
+											SI [profesion == "Congresista"] ENTONCES
 											{
 												RETORNAR: salario * 0.255
 											}
 											SINO {
-												SI [activity == "CTI"] ENTONCES
+												SI [profesion == "CTI"] ENTONCES
 												{
 													RETORNAR: salario * 0.35
 												}
 												SINO {
-													SI [activity == "Aviador"] ENTONCES
+													SI [profesion == "Aviador"] ENTONCES
 													{
 														RETORNAR: salario * 0.21
 													}
@@ -117,18 +118,25 @@ intermediary:
 											
 											}
 									}
-									SI [ NovedadesMes == 0 && salario < 10] ENTONCES
+									SI [ novedadAbierta == 0] ENTONCES
 									{
 										RETORNAR: salario * pensionNormal
 									}
 									SINO {  
-										SI [diasLaborables >=3 && diasLaborables < 20 && TipoNovedad == "SLN"] ENTONCES
+										SI [diasLaborables >=7 && diasLaborables <= 20] ENTONCES
 										{
 											
-											RETORNAR: salario * 0.12
+											RETORNAR: salario * pensionNormal
 										}
 										SINO {
-											RETORNAR: 0
+											SI [diasLaborables >=3 && diasLaborables < 7] ENTONCES
+											{
+												RETORNAR: salario * 0.12
+											}
+											SINO {
+												RETORNAR: 0
+												
+											}
 										}
 									}
 							},
@@ -137,6 +145,7 @@ intermediary:
 								/*Variables y Constantes Auxiliares del calculo*/
 								calculationattributes:
 								[	// Porcentajes de riesgo. 
+									{riesgoLaboral:Integer:=0},
 									{RiesgoI:Double := 0.522/100}, 
 									{RiesgoII:Double := 1.044/100},
 									{RiesgoIII:Double := 2.436/100},

@@ -25,11 +25,11 @@ public class CalculationFormula {
 	}
 	public double calculateEPS {
 		double impuesto=0.12;
-		String pais=entity.getPais();
-		String grupoFamiliar=entity.getGrupofamiliar();
+		int pais=entity.getPais();
+		int grupoFamiliar=entity.getGrupofamiliar();
 		double salario=entity.getSalario();
 				
-		if (pais != Colombia &&grupoFamiliar != Colombia){
+		if (pais !=12 &&grupoFamiliar !=12){
 		
 			return 0;
 		}
@@ -39,12 +39,16 @@ public class CalculationFormula {
 		}
 	}
 	public double calculatePension {
+		List<Novedad> novedades = EventLogic.getEventLogic().findByEntityTipo(entityId, TipoNovedad.SLN);
+		processNovedadesSinProcesar(novedades);
 		double pensionNormal=0.16;
 		int riesgoLaboral=0;
 		String TipoNovedad=novedades.getTipoNovedad();
 		int diasLaborables= 20-DiasNovedad;
 		double salario=entity.getSalario();
-		String activity=entity.getActivity();
+		String profesion=entity.getProfesion();
+		String novedadAbierta=novedades.size();
+		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
 				
 		if (riesgoLaboral ==4 ||riesgoLaboral ==5){
 		
@@ -52,19 +56,19 @@ public class CalculationFormula {
 		}
 		else {
 				
-		if (activity == Congresista){
+		if (profesion.equals("Congresista")){
 		
 			return salario*0.255;
 		}
 		else {
 				
-		if (activity == CTI){
+		if (profesion.equals("CTI")){
 		
 			return salario*0.35;
 		}
 		else {
 				
-		if (activity == Aviador){
+		if (profesion.equals("Aviador")){
 		
 			return salario*0.21;
 		}
@@ -72,19 +76,26 @@ public class CalculationFormula {
 		}
 		}
 				
-		if (NovedadesMes ==0 &&salario <10){
+		if (novedadAbierta ==0){
 		
 			return salario*pensionNormal;
 		}
 		else {
 				
-		if (diasLaborables >=3 &&diasLaborables <20 &&TipoNovedad == SLN){
+		if (diasLaborables >=7 &&diasLaborables <=20){
+		
+			return salario*pensionNormal;
+		}
+		else {
+				
+		if (diasLaborables >=3 &&diasLaborables <7){
 		
 			return salario*0.12;
 		}
 		else {
 	
 			return 0;
+		}
 		}
 		}
 	}
@@ -94,6 +105,7 @@ public class CalculationFormula {
 		double RiesgoIII=2.436/100;
 		double RiesgoIV=4.350/100;
 		double RiesgoV=6.960/100;
+			riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
 				
 		if (RiesgoLaboral ==1){
 		
@@ -122,7 +134,7 @@ public class CalculationFormula {
 	}
 	public double getTotal {
 	
-			return    EPS+ Pension+ RiesgosLaborales;
+			return   					ePS+					pension+					riesgosLaborales;
 	}
 
 	

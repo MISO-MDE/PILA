@@ -1417,36 +1417,67 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cTerminalValueAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
-		private final Keyword cPAKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
-		private final Assignment cParentAssignment_0_1_2 = (Assignment)cGroup_0_1.eContents().get(2);
-		private final CrossReference cParentParticipantCrossReference_0_1_2_0 = (CrossReference)cParentAssignment_0_1_2.eContents().get(0);
-		private final RuleCall cParentParticipantIDTerminalRuleCall_0_1_2_0_1 = (RuleCall)cParentParticipantCrossReference_0_1_2_0.eContents().get(1);
-		private final RuleCall cDASHTerminalRuleCall_0_1_3 = (RuleCall)cGroup_0_1.eContents().get(3);
-		private final Assignment cVariableAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final CrossReference cVariableBusinessAttributeCrossReference_0_2_0 = (CrossReference)cVariableAssignment_0_2.eContents().get(0);
-		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_0_2_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cSUKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Assignment cParentAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final CrossReference cParentSuperEntityCrossReference_1_2_0 = (CrossReference)cParentAssignment_1_2.eContents().get(0);
-		private final RuleCall cParentSuperEntityIDTerminalRuleCall_1_2_0_1 = (RuleCall)cParentSuperEntityCrossReference_1_2_0.eContents().get(1);
-		private final RuleCall cDASHTerminalRuleCall_1_3 = (RuleCall)cGroup_1.eContents().get(3);
-		private final Assignment cVariableAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
-		private final CrossReference cVariableBusinessAttributeCrossReference_1_4_0 = (CrossReference)cVariableAssignment_1_4.eContents().get(0);
-		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_1_4_0.eContents().get(1);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cITKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cDOTTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Assignment cParentAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cParentInformationTemplateCrossReference_2_2_0 = (CrossReference)cParentAssignment_2_2.eContents().get(0);
-		private final RuleCall cParentInformationTemplateIDTerminalRuleCall_2_2_0_1 = (RuleCall)cParentInformationTemplateCrossReference_2_2_0.eContents().get(1);
-		private final RuleCall cDASHTerminalRuleCall_2_3 = (RuleCall)cGroup_2.eContents().get(3);
-		private final Assignment cVariableAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
-		private final CrossReference cVariableBusinessAttributeCrossReference_2_4_0 = (CrossReference)cVariableAssignment_2_4.eContents().get(0);
-		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_2_4_0.eContents().get(1);
+		private final Alternatives cAlternatives_0_1 = (Alternatives)cGroup_0.eContents().get(1);
+		private final Group cGroup_0_1_0 = (Group)cAlternatives_0_1.eContents().get(0);
+		private final Group cGroup_0_1_0_0 = (Group)cGroup_0_1_0.eContents().get(0);
+		private final Keyword cPAKeyword_0_1_0_0_0 = (Keyword)cGroup_0_1_0_0.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_0_1_0_0_1 = (RuleCall)cGroup_0_1_0_0.eContents().get(1);
+		private final Assignment cParentAssignment_0_1_0_0_2 = (Assignment)cGroup_0_1_0_0.eContents().get(2);
+		private final CrossReference cParentParticipantCrossReference_0_1_0_0_2_0 = (CrossReference)cParentAssignment_0_1_0_0_2.eContents().get(0);
+		private final RuleCall cParentParticipantIDTerminalRuleCall_0_1_0_0_2_0_1 = (RuleCall)cParentParticipantCrossReference_0_1_0_0_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_0_1_0_0_3 = (RuleCall)cGroup_0_1_0_0.eContents().get(3);
+		private final Assignment cVariableAssignment_0_1_0_1 = (Assignment)cGroup_0_1_0.eContents().get(1);
+		private final CrossReference cVariableBusinessAttributeCrossReference_0_1_0_1_0 = (CrossReference)cVariableAssignment_0_1_0_1.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_0_1_0_1_0.eContents().get(1);
+		private final Group cGroup_0_1_1 = (Group)cAlternatives_0_1.eContents().get(1);
+		private final Keyword cPAKeyword_0_1_1_0 = (Keyword)cGroup_0_1_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_0_1_1_1 = (RuleCall)cGroup_0_1_1.eContents().get(1);
+		private final Assignment cParentAssignment_0_1_1_2 = (Assignment)cGroup_0_1_1.eContents().get(2);
+		private final CrossReference cParentParticipantCrossReference_0_1_1_2_0 = (CrossReference)cParentAssignment_0_1_1_2.eContents().get(0);
+		private final RuleCall cParentParticipantIDTerminalRuleCall_0_1_1_2_0_1 = (RuleCall)cParentParticipantCrossReference_0_1_1_2_0.eContents().get(1);
+		private final RuleCall cDOTTerminalRuleCall_0_1_1_3 = (RuleCall)cGroup_0_1_1.eContents().get(3);
+		private final Assignment cMethodAssignment_0_1_1_4 = (Assignment)cGroup_0_1_1.eContents().get(4);
+		private final RuleCall cMethodMethodParserRuleCall_0_1_1_4_0 = (RuleCall)cMethodAssignment_0_1_1_4.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cAlternatives.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
+		private final Keyword cSUKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_1_0_1 = (RuleCall)cGroup_1_0.eContents().get(1);
+		private final Assignment cParentAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final CrossReference cParentSuperEntityCrossReference_1_0_2_0 = (CrossReference)cParentAssignment_1_0_2.eContents().get(0);
+		private final RuleCall cParentSuperEntityIDTerminalRuleCall_1_0_2_0_1 = (RuleCall)cParentSuperEntityCrossReference_1_0_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_1_0_3 = (RuleCall)cGroup_1_0.eContents().get(3);
+		private final Assignment cVariableAssignment_1_0_4 = (Assignment)cGroup_1_0.eContents().get(4);
+		private final CrossReference cVariableBusinessAttributeCrossReference_1_0_4_0 = (CrossReference)cVariableAssignment_1_0_4.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_1_0_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_1_0_4_0.eContents().get(1);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cSUKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_1_1_1 = (RuleCall)cGroup_1_1.eContents().get(1);
+		private final Assignment cParentAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
+		private final CrossReference cParentSuperEntityCrossReference_1_1_2_0 = (CrossReference)cParentAssignment_1_1_2.eContents().get(0);
+		private final RuleCall cParentSuperEntityIDTerminalRuleCall_1_1_2_0_1 = (RuleCall)cParentSuperEntityCrossReference_1_1_2_0.eContents().get(1);
+		private final RuleCall cDOTTerminalRuleCall_1_1_3 = (RuleCall)cGroup_1_1.eContents().get(3);
+		private final Assignment cMethodAssignment_1_1_4 = (Assignment)cGroup_1_1.eContents().get(4);
+		private final RuleCall cMethodMethodParserRuleCall_1_1_4_0 = (RuleCall)cMethodAssignment_1_1_4.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cAlternatives.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
+		private final Keyword cITKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_2_0_1 = (RuleCall)cGroup_2_0.eContents().get(1);
+		private final Assignment cParentAssignment_2_0_2 = (Assignment)cGroup_2_0.eContents().get(2);
+		private final CrossReference cParentInformationTemplateCrossReference_2_0_2_0 = (CrossReference)cParentAssignment_2_0_2.eContents().get(0);
+		private final RuleCall cParentInformationTemplateIDTerminalRuleCall_2_0_2_0_1 = (RuleCall)cParentInformationTemplateCrossReference_2_0_2_0.eContents().get(1);
+		private final RuleCall cDASHTerminalRuleCall_2_0_3 = (RuleCall)cGroup_2_0.eContents().get(3);
+		private final Assignment cVariableAssignment_2_0_4 = (Assignment)cGroup_2_0.eContents().get(4);
+		private final CrossReference cVariableBusinessAttributeCrossReference_2_0_4_0 = (CrossReference)cVariableAssignment_2_0_4.eContents().get(0);
+		private final RuleCall cVariableBusinessAttributeIDTerminalRuleCall_2_0_4_0_1 = (RuleCall)cVariableBusinessAttributeCrossReference_2_0_4_0.eContents().get(1);
+		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
+		private final Keyword cITKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final RuleCall cDOTTerminalRuleCall_2_1_1 = (RuleCall)cGroup_2_1.eContents().get(1);
+		private final Assignment cParentAssignment_2_1_2 = (Assignment)cGroup_2_1.eContents().get(2);
+		private final CrossReference cParentInformationTemplateCrossReference_2_1_2_0 = (CrossReference)cParentAssignment_2_1_2.eContents().get(0);
+		private final RuleCall cParentInformationTemplateIDTerminalRuleCall_2_1_2_0_1 = (RuleCall)cParentInformationTemplateCrossReference_2_1_2_0.eContents().get(1);
+		private final RuleCall cDOTTerminalRuleCall_2_1_3 = (RuleCall)cGroup_2_1.eContents().get(3);
+		private final Assignment cMethodAssignment_2_1_4 = (Assignment)cGroup_2_1.eContents().get(4);
+		private final RuleCall cMethodMethodParserRuleCall_2_1_4_0 = (RuleCall)cMethodAssignment_2_1_4.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Keyword cFUKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final RuleCall cDOTTerminalRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
@@ -1456,112 +1487,220 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValorAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
 		private final RuleCall cValorNumberParserRuleCall_4_0 = (RuleCall)cValorAssignment_4.eContents().get(0);
 		
-		//TerminalValue:
-		//	{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity]
-		//	DASH variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? |
-		//	('FU' DOT parent=[CalculationTemplate])? | valor=Number;
+		/// *	
+		//TerminalValue returns TerminalValue:
+		//	{TerminalValue}
+		//	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+		//	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+		//	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? (DOT Method)?|
+		//	('FU' DOT parent = [CalculationTemplate])? (DOT Method)?|
+		//	valor = Number
+		//;	
+		// * / TerminalValue:
+		//	{TerminalValue} (('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | 'PA' DOT parent=[Participant]
+		//	DOT method=Method) | (('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])? | ('SU' DOT
+		//	parent=[SuperEntity] DOT method=Method)?) | (('IT' DOT parent=[InformationTemplate] DASH
+		//	variable=[BusinessAttribute])? | 'IT' DOT parent=[InformationTemplate] DOT method=Method) | ('FU' DOT
+		//	parent=[CalculationTemplate])? | valor=Number;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity] DASH
-		//variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? | ('FU' DOT
-		//parent=[CalculationTemplate])? | valor=Number
+		//{TerminalValue} (('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | 'PA' DOT parent=[Participant] DOT
+		//method=Method) | (('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])? | ('SU' DOT parent=[SuperEntity]
+		//DOT method=Method)?) | (('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? | 'IT' DOT
+		//parent=[InformationTemplate] DOT method=Method) | ('FU' DOT parent=[CalculationTemplate])? | valor=Number
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute]
+		//{TerminalValue} (('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | 'PA' DOT parent=[Participant] DOT
+		//method=Method)
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{TerminalValue}
 		public Action getTerminalValueAction_0_0() { return cTerminalValueAction_0_0; }
 		
+		//(('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | 'PA' DOT parent=[Participant] DOT method=Method)
+		public Alternatives getAlternatives_0_1() { return cAlternatives_0_1; }
+		
+		//('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute]
+		public Group getGroup_0_1_0() { return cGroup_0_1_0; }
+		
 		//('PA' DOT parent=[Participant] DASH)?
-		public Group getGroup_0_1() { return cGroup_0_1; }
+		public Group getGroup_0_1_0_0() { return cGroup_0_1_0_0; }
 		
 		//'PA'
-		public Keyword getPAKeyword_0_1_0() { return cPAKeyword_0_1_0; }
+		public Keyword getPAKeyword_0_1_0_0_0() { return cPAKeyword_0_1_0_0_0; }
 		
 		//DOT
-		public RuleCall getDOTTerminalRuleCall_0_1_1() { return cDOTTerminalRuleCall_0_1_1; }
+		public RuleCall getDOTTerminalRuleCall_0_1_0_0_1() { return cDOTTerminalRuleCall_0_1_0_0_1; }
 		
 		//parent=[Participant]
-		public Assignment getParentAssignment_0_1_2() { return cParentAssignment_0_1_2; }
+		public Assignment getParentAssignment_0_1_0_0_2() { return cParentAssignment_0_1_0_0_2; }
 		
 		//[Participant]
-		public CrossReference getParentParticipantCrossReference_0_1_2_0() { return cParentParticipantCrossReference_0_1_2_0; }
+		public CrossReference getParentParticipantCrossReference_0_1_0_0_2_0() { return cParentParticipantCrossReference_0_1_0_0_2_0; }
 		
 		//ID
-		public RuleCall getParentParticipantIDTerminalRuleCall_0_1_2_0_1() { return cParentParticipantIDTerminalRuleCall_0_1_2_0_1; }
+		public RuleCall getParentParticipantIDTerminalRuleCall_0_1_0_0_2_0_1() { return cParentParticipantIDTerminalRuleCall_0_1_0_0_2_0_1; }
 		
 		//DASH
-		public RuleCall getDASHTerminalRuleCall_0_1_3() { return cDASHTerminalRuleCall_0_1_3; }
+		public RuleCall getDASHTerminalRuleCall_0_1_0_0_3() { return cDASHTerminalRuleCall_0_1_0_0_3; }
 		
 		//variable=[BusinessAttribute]
-		public Assignment getVariableAssignment_0_2() { return cVariableAssignment_0_2; }
+		public Assignment getVariableAssignment_0_1_0_1() { return cVariableAssignment_0_1_0_1; }
 		
 		//[BusinessAttribute]
-		public CrossReference getVariableBusinessAttributeCrossReference_0_2_0() { return cVariableBusinessAttributeCrossReference_0_2_0; }
+		public CrossReference getVariableBusinessAttributeCrossReference_0_1_0_1_0() { return cVariableBusinessAttributeCrossReference_0_1_0_1_0; }
 		
 		//ID
-		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_0_2_0_1; }
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_0_1_0_1_0_1; }
+		
+		//'PA' DOT parent=[Participant] DOT method=Method
+		public Group getGroup_0_1_1() { return cGroup_0_1_1; }
+		
+		//'PA'
+		public Keyword getPAKeyword_0_1_1_0() { return cPAKeyword_0_1_1_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_0_1_1_1() { return cDOTTerminalRuleCall_0_1_1_1; }
+		
+		//parent=[Participant]
+		public Assignment getParentAssignment_0_1_1_2() { return cParentAssignment_0_1_1_2; }
+		
+		//[Participant]
+		public CrossReference getParentParticipantCrossReference_0_1_1_2_0() { return cParentParticipantCrossReference_0_1_1_2_0; }
+		
+		//ID
+		public RuleCall getParentParticipantIDTerminalRuleCall_0_1_1_2_0_1() { return cParentParticipantIDTerminalRuleCall_0_1_1_2_0_1; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_0_1_1_3() { return cDOTTerminalRuleCall_0_1_1_3; }
+		
+		//method=Method
+		public Assignment getMethodAssignment_0_1_1_4() { return cMethodAssignment_0_1_1_4; }
+		
+		//Method
+		public RuleCall getMethodMethodParserRuleCall_0_1_1_4_0() { return cMethodMethodParserRuleCall_0_1_1_4_0; }
+		
+		//(('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])? | ('SU' DOT parent=[SuperEntity] DOT
+		//method=Method)?)
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
 		//('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])?
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_1_0() { return cGroup_1_0; }
 		
 		//'SU'
-		public Keyword getSUKeyword_1_0() { return cSUKeyword_1_0; }
+		public Keyword getSUKeyword_1_0_0() { return cSUKeyword_1_0_0; }
 		
 		//DOT
-		public RuleCall getDOTTerminalRuleCall_1_1() { return cDOTTerminalRuleCall_1_1; }
+		public RuleCall getDOTTerminalRuleCall_1_0_1() { return cDOTTerminalRuleCall_1_0_1; }
 		
 		//parent=[SuperEntity]
-		public Assignment getParentAssignment_1_2() { return cParentAssignment_1_2; }
+		public Assignment getParentAssignment_1_0_2() { return cParentAssignment_1_0_2; }
 		
 		//[SuperEntity]
-		public CrossReference getParentSuperEntityCrossReference_1_2_0() { return cParentSuperEntityCrossReference_1_2_0; }
+		public CrossReference getParentSuperEntityCrossReference_1_0_2_0() { return cParentSuperEntityCrossReference_1_0_2_0; }
 		
 		//ID
-		public RuleCall getParentSuperEntityIDTerminalRuleCall_1_2_0_1() { return cParentSuperEntityIDTerminalRuleCall_1_2_0_1; }
+		public RuleCall getParentSuperEntityIDTerminalRuleCall_1_0_2_0_1() { return cParentSuperEntityIDTerminalRuleCall_1_0_2_0_1; }
 		
 		//DASH
-		public RuleCall getDASHTerminalRuleCall_1_3() { return cDASHTerminalRuleCall_1_3; }
+		public RuleCall getDASHTerminalRuleCall_1_0_3() { return cDASHTerminalRuleCall_1_0_3; }
 		
 		//variable=[BusinessAttribute]
-		public Assignment getVariableAssignment_1_4() { return cVariableAssignment_1_4; }
+		public Assignment getVariableAssignment_1_0_4() { return cVariableAssignment_1_0_4; }
 		
 		//[BusinessAttribute]
-		public CrossReference getVariableBusinessAttributeCrossReference_1_4_0() { return cVariableBusinessAttributeCrossReference_1_4_0; }
+		public CrossReference getVariableBusinessAttributeCrossReference_1_0_4_0() { return cVariableBusinessAttributeCrossReference_1_0_4_0; }
 		
 		//ID
-		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_1_4_0_1; }
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_1_0_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_1_0_4_0_1; }
 		
-		//('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])?
-		public Group getGroup_2() { return cGroup_2; }
+		//('SU' DOT parent=[SuperEntity] DOT method=Method)?
+		public Group getGroup_1_1() { return cGroup_1_1; }
 		
-		//'IT'
-		public Keyword getITKeyword_2_0() { return cITKeyword_2_0; }
+		//'SU'
+		public Keyword getSUKeyword_1_1_0() { return cSUKeyword_1_1_0; }
 		
 		//DOT
-		public RuleCall getDOTTerminalRuleCall_2_1() { return cDOTTerminalRuleCall_2_1; }
+		public RuleCall getDOTTerminalRuleCall_1_1_1() { return cDOTTerminalRuleCall_1_1_1; }
+		
+		//parent=[SuperEntity]
+		public Assignment getParentAssignment_1_1_2() { return cParentAssignment_1_1_2; }
+		
+		//[SuperEntity]
+		public CrossReference getParentSuperEntityCrossReference_1_1_2_0() { return cParentSuperEntityCrossReference_1_1_2_0; }
+		
+		//ID
+		public RuleCall getParentSuperEntityIDTerminalRuleCall_1_1_2_0_1() { return cParentSuperEntityIDTerminalRuleCall_1_1_2_0_1; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_1_1_3() { return cDOTTerminalRuleCall_1_1_3; }
+		
+		//method=Method
+		public Assignment getMethodAssignment_1_1_4() { return cMethodAssignment_1_1_4; }
+		
+		//Method
+		public RuleCall getMethodMethodParserRuleCall_1_1_4_0() { return cMethodMethodParserRuleCall_1_1_4_0; }
+		
+		//(('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? | 'IT' DOT parent=[InformationTemplate] DOT
+		//method=Method)
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
+		//('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])?
+		public Group getGroup_2_0() { return cGroup_2_0; }
+		
+		//'IT'
+		public Keyword getITKeyword_2_0_0() { return cITKeyword_2_0_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_2_0_1() { return cDOTTerminalRuleCall_2_0_1; }
 		
 		//parent=[InformationTemplate]
-		public Assignment getParentAssignment_2_2() { return cParentAssignment_2_2; }
+		public Assignment getParentAssignment_2_0_2() { return cParentAssignment_2_0_2; }
 		
 		//[InformationTemplate]
-		public CrossReference getParentInformationTemplateCrossReference_2_2_0() { return cParentInformationTemplateCrossReference_2_2_0; }
+		public CrossReference getParentInformationTemplateCrossReference_2_0_2_0() { return cParentInformationTemplateCrossReference_2_0_2_0; }
 		
 		//ID
-		public RuleCall getParentInformationTemplateIDTerminalRuleCall_2_2_0_1() { return cParentInformationTemplateIDTerminalRuleCall_2_2_0_1; }
+		public RuleCall getParentInformationTemplateIDTerminalRuleCall_2_0_2_0_1() { return cParentInformationTemplateIDTerminalRuleCall_2_0_2_0_1; }
 		
 		//DASH
-		public RuleCall getDASHTerminalRuleCall_2_3() { return cDASHTerminalRuleCall_2_3; }
+		public RuleCall getDASHTerminalRuleCall_2_0_3() { return cDASHTerminalRuleCall_2_0_3; }
 		
 		//variable=[BusinessAttribute]
-		public Assignment getVariableAssignment_2_4() { return cVariableAssignment_2_4; }
+		public Assignment getVariableAssignment_2_0_4() { return cVariableAssignment_2_0_4; }
 		
 		//[BusinessAttribute]
-		public CrossReference getVariableBusinessAttributeCrossReference_2_4_0() { return cVariableBusinessAttributeCrossReference_2_4_0; }
+		public CrossReference getVariableBusinessAttributeCrossReference_2_0_4_0() { return cVariableBusinessAttributeCrossReference_2_0_4_0; }
 		
 		//ID
-		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_2_4_0_1; }
+		public RuleCall getVariableBusinessAttributeIDTerminalRuleCall_2_0_4_0_1() { return cVariableBusinessAttributeIDTerminalRuleCall_2_0_4_0_1; }
+		
+		//'IT' DOT parent=[InformationTemplate] DOT method=Method
+		public Group getGroup_2_1() { return cGroup_2_1; }
+		
+		//'IT'
+		public Keyword getITKeyword_2_1_0() { return cITKeyword_2_1_0; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_2_1_1() { return cDOTTerminalRuleCall_2_1_1; }
+		
+		//parent=[InformationTemplate]
+		public Assignment getParentAssignment_2_1_2() { return cParentAssignment_2_1_2; }
+		
+		//[InformationTemplate]
+		public CrossReference getParentInformationTemplateCrossReference_2_1_2_0() { return cParentInformationTemplateCrossReference_2_1_2_0; }
+		
+		//ID
+		public RuleCall getParentInformationTemplateIDTerminalRuleCall_2_1_2_0_1() { return cParentInformationTemplateIDTerminalRuleCall_2_1_2_0_1; }
+		
+		//DOT
+		public RuleCall getDOTTerminalRuleCall_2_1_3() { return cDOTTerminalRuleCall_2_1_3; }
+		
+		//method=Method
+		public Assignment getMethodAssignment_2_1_4() { return cMethodAssignment_2_1_4; }
+		
+		//Method
+		public RuleCall getMethodMethodParserRuleCall_2_1_4_0() { return cMethodMethodParserRuleCall_2_1_4_0; }
 		
 		//('FU' DOT parent=[CalculationTemplate])?
 		public Group getGroup_3() { return cGroup_3; }
@@ -1586,6 +1725,38 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Number
 		public RuleCall getValorNumberParserRuleCall_4_0() { return cValorNumberParserRuleCall_4_0; }
+	}
+	public class MethodElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.Method");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cSizeKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cGetCantidadDiasHabilesKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cGetRiegoTabla2Keyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		
+		/// *
+		//TerminalValue returns TerminalValue:
+		//	{TerminalValue}
+		//	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+		//	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+		//	(('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? | ('IT' DOT parent = [InformationTemplate] DOT Method))|
+		//	('FU' DOT parent = [CalculationTemplate])? |
+		//	valor = Number
+		//;		
+		// * / Method:
+		//	'size()' | 'getCantidadDiasHabiles()' | 'getRiegoTabla2()';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'size()' | 'getCantidadDiasHabiles()' | 'getRiegoTabla2()'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//'size()'
+		public Keyword getSizeKeyword_0() { return cSizeKeyword_0; }
+		
+		//'getCantidadDiasHabiles()'
+		public Keyword getGetCantidadDiasHabilesKeyword_1() { return cGetCantidadDiasHabilesKeyword_1; }
+		
+		//'getRiegoTabla2()'
+		public Keyword getGetRiegoTabla2Keyword_2() { return cGetRiegoTabla2Keyword_2; }
 	}
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "co.edu.uniandes.Pagos.Number");
@@ -1707,6 +1878,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	private final SigleExpElements pSigleExp;
 	private final BusinessAttributeElements pBusinessAttribute;
 	private final TerminalValueElements pTerminalValue;
+	private final MethodElements pMethod;
 	private final NumberElements pNumber;
 	private final EDoubleElements pEDouble;
 	private final IntegerElements pInteger;
@@ -1760,6 +1932,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSigleExp = new SigleExpElements();
 		this.pBusinessAttribute = new BusinessAttributeElements();
 		this.pTerminalValue = new TerminalValueElements();
+		this.pMethod = new MethodElements();
 		this.pNumber = new NumberElements();
 		this.pEDouble = new EDoubleElements();
 		this.pInteger = new IntegerElements();
@@ -2045,16 +2218,46 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		return getBusinessAttributeAccess().getRule();
 	}
 	
-	//TerminalValue:
-	//	{TerminalValue} ('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | ('SU' DOT parent=[SuperEntity]
-	//	DASH variable=[BusinessAttribute])? | ('IT' DOT parent=[InformationTemplate] DASH variable=[BusinessAttribute])? |
-	//	('FU' DOT parent=[CalculationTemplate])? | valor=Number;
+	/// *	
+	//TerminalValue returns TerminalValue:
+	//	{TerminalValue}
+	//	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+	//	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	//	('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	//	('FU' DOT parent = [CalculationTemplate])? (DOT Method)?|
+	//	valor = Number
+	//;	
+	// * / TerminalValue:
+	//	{TerminalValue} (('PA' DOT parent=[Participant] DASH)? variable=[BusinessAttribute] | 'PA' DOT parent=[Participant]
+	//	DOT method=Method) | (('SU' DOT parent=[SuperEntity] DASH variable=[BusinessAttribute])? | ('SU' DOT
+	//	parent=[SuperEntity] DOT method=Method)?) | (('IT' DOT parent=[InformationTemplate] DASH
+	//	variable=[BusinessAttribute])? | 'IT' DOT parent=[InformationTemplate] DOT method=Method) | ('FU' DOT
+	//	parent=[CalculationTemplate])? | valor=Number;
 	public TerminalValueElements getTerminalValueAccess() {
 		return pTerminalValue;
 	}
 	
 	public ParserRule getTerminalValueRule() {
 		return getTerminalValueAccess().getRule();
+	}
+	
+	/// *
+	//TerminalValue returns TerminalValue:
+	//	{TerminalValue}
+	//	('PA' DOT parent = [Participant] DASH)? variable = [BusinessAttribute] (DOT Method)?| 
+	//	('SU' DOT parent = [SuperEntity] DASH variable = [BusinessAttribute])? (DOT Method)?|
+	//	(('IT' DOT parent = [InformationTemplate] DASH variable = [BusinessAttribute])? | ('IT' DOT parent = [InformationTemplate] DOT Method))|
+	//	('FU' DOT parent = [CalculationTemplate])? |
+	//	valor = Number
+	//;		
+	// * / Method:
+	//	'size()' | 'getCantidadDiasHabiles()' | 'getRiegoTabla2()';
+	public MethodElements getMethodAccess() {
+		return pMethod;
+	}
+	
+	public ParserRule getMethodRule() {
+		return getMethodAccess().getRule();
 	}
 	
 	/// *

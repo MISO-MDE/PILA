@@ -19,5 +19,6 @@ public interface TerminalValueValidator {
 
 	boolean validateParent(EObject value);
 	boolean validateVariable(BusinessAttribute value);
+	boolean validateMethod(String value);
 	boolean validateValor(String value);
 }
