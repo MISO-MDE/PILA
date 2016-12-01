@@ -31,9 +31,8 @@ public class DBUtil {
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(8,'2322', 'Empresa dedicada a la fabricación de productos derivados del petroleo, fuera de refineria como asfalto')");
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(9,'1431', 'Extraccion de esmeraldas')");
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(10,'2321','Fabricacion de productos de la refinación del petroleo, elaborados en refineria')");
-
-
-            //Inserts de riesgo
+            
+                        //Inserts de riesgo
             st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,1)");
             st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(2,2)");
             st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(3,3)");
