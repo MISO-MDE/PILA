@@ -32,6 +32,14 @@ public class DBUtil {
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(9,'1431', 'Extraccion de esmeraldas')");
             st.executeUpdate("insert into ActividadEconomica (id, codigo, descripcion) values(10,'2321','Fabricacion de productos de la refinación del petroleo, elaborados en refineria')");
 
+
+            //Inserts de riesgo
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,1)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,2)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,3)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,4)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,5)");
+
 	       //Inserts tabla  Tipo Pensionado;			    
 			
 			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(1,'1','T5 Pensionado de r�gimen de prima media. Tope m�ximo de pensi�n 25 smlmv')");	
