@@ -81,6 +81,7 @@
     <genClasses ecoreClass="Pagos.ecore#//TerminalValue">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pagos.ecore#//TerminalValue/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Pagos.ecore#//TerminalValue/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//TerminalValue/method"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Pagos.ecore#//TerminalValue/valor"/>
     </genClasses>
     <genClasses ecoreClass="Pagos.ecore#//Adicion">

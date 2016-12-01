@@ -46,10 +46,34 @@ public class TerminalValueItemProvider extends ExpressionItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addParentPropertyDescriptor(object);
 			addVariablePropertyDescriptor(object);
+			addMethodPropertyDescriptor(object);
 			addValorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TerminalValue_parent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TerminalValue_parent_feature", "_UI_TerminalValue_type"),
+				 PagosPackage.Literals.TERMINAL_VALUE__PARENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -70,6 +94,28 @@ public class TerminalValueItemProvider extends ExpressionItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Method feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMethodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TerminalValue_method_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TerminalValue_method_feature", "_UI_TerminalValue_type"),
+				 PagosPackage.Literals.TERMINAL_VALUE__METHOD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -115,7 +161,7 @@ public class TerminalValueItemProvider extends ExpressionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TerminalValue)object).getValor();
+		String label = ((TerminalValue)object).getMethod();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TerminalValue_type") :
 			getString("_UI_TerminalValue_type") + " " + label;
@@ -134,6 +180,7 @@ public class TerminalValueItemProvider extends ExpressionItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TerminalValue.class)) {
+			case PagosPackage.TERMINAL_VALUE__METHOD:
 			case PagosPackage.TERMINAL_VALUE__VALOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

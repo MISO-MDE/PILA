@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link co.edu.uniandes.pagos.TerminalValue#getParent <em>Parent</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.TerminalValue#getVariable <em>Variable</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.TerminalValue#getMethod <em>Method</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.TerminalValue#getValor <em>Valor</em>}</li>
  * </ul>
  *
@@ -76,6 +77,32 @@ public interface TerminalValue extends Expression
 	 * @generated
 	 */
   void setVariable(BusinessAttribute value);
+
+  /**
+	 * Returns the value of the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Method</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @return the value of the '<em>Method</em>' attribute.
+	 * @see #setMethod(String)
+	 * @see co.edu.uniandes.pagos.PagosPackage#getTerminalValue_Method()
+	 * @model
+	 * @generated
+	 */
+  String getMethod();
+
+  /**
+	 * Sets the value of the '{@link co.edu.uniandes.pagos.TerminalValue#getMethod <em>Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Method</em>' attribute.
+	 * @see #getMethod()
+	 * @generated
+	 */
+  void setMethod(String value);
 
   /**
 	 * Returns the value of the '<em><b>Valor</b></em>' attribute.

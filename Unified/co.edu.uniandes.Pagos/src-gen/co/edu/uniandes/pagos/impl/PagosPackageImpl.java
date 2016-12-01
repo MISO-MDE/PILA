@@ -843,9 +843,19 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTerminalValue_Valor()
+  public EAttribute getTerminalValue_Method()
   {
 		return (EAttribute)terminalValueEClass.getEStructuralFeatures().get(2);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getTerminalValue_Valor()
+  {
+		return (EAttribute)terminalValueEClass.getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -1034,6 +1044,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		terminalValueEClass = createEClass(TERMINAL_VALUE);
 		createEReference(terminalValueEClass, TERMINAL_VALUE__PARENT);
 		createEReference(terminalValueEClass, TERMINAL_VALUE__VARIABLE);
+		createEAttribute(terminalValueEClass, TERMINAL_VALUE__METHOD);
 		createEAttribute(terminalValueEClass, TERMINAL_VALUE__VALOR);
 
 		adicionEClass = createEClass(ADICION);
@@ -1157,6 +1168,7 @@ public class PagosPackageImpl extends EPackageImpl implements PagosPackage
 		initEClass(terminalValueEClass, TerminalValue.class, "TerminalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTerminalValue_Parent(), ecorePackage.getEObject(), null, "parent", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTerminalValue_Variable(), this.getBusinessAttribute(), null, "variable", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerminalValue_Method(), ecorePackage.getEString(), "method", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTerminalValue_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, TerminalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(adicionEClass, Adicion.class, "Adicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

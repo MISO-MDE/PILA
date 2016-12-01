@@ -758,13 +758,22 @@ public interface PagosPackage extends EPackage
   int TERMINAL_VALUE__VARIABLE = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int TERMINAL_VALUE__METHOD = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TERMINAL_VALUE__VALOR = EXPRESSION_FEATURE_COUNT + 2;
+  int TERMINAL_VALUE__VALOR = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
 	 * The number of structural features of the '<em>Terminal Value</em>' class.
@@ -773,7 +782,7 @@ public interface PagosPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int TERMINAL_VALUE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int TERMINAL_VALUE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
 
   /**
 	 * The meta object id for the '{@link co.edu.uniandes.pagos.impl.AdicionImpl <em>Adicion</em>}' class.
@@ -1524,6 +1533,17 @@ public interface PagosPackage extends EPackage
   EReference getTerminalValue_Variable();
 
   /**
+	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.TerminalValue#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see co.edu.uniandes.pagos.TerminalValue#getMethod()
+	 * @see #getTerminalValue()
+	 * @generated
+	 */
+  EAttribute getTerminalValue_Method();
+
+  /**
 	 * Returns the meta object for the attribute '{@link co.edu.uniandes.pagos.TerminalValue#getValor <em>Valor</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2162,6 +2182,14 @@ public interface PagosPackage extends EPackage
 		 * @generated
 		 */
     EReference TERMINAL_VALUE__VARIABLE = eINSTANCE.getTerminalValue_Variable();
+
+    /**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+		 * @generated
+		 */
+    EAttribute TERMINAL_VALUE__METHOD = eINSTANCE.getTerminalValue_Method();
 
     /**
 		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.

@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getVariable <em>Variable</em>}</li>
+ *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link co.edu.uniandes.pagos.impl.TerminalValueImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
@@ -51,6 +52,26 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 	 * @ordered
 	 */
   protected BusinessAttribute variable;
+
+  /**
+	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getMethod()
+	 * @generated
+	 * @ordered
+	 */
+  protected static final String METHOD_EDEFAULT = null;
+
+  /**
+	 * The cached value of the '{@link #getMethod() <em>Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getMethod()
+	 * @generated
+	 * @ordered
+	 */
+  protected String method = METHOD_EDEFAULT;
 
   /**
 	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
@@ -180,6 +201,29 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
    * <!-- end-user-doc -->
 	 * @generated
 	 */
+  public String getMethod()
+  {
+		return method;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setMethod(String newMethod)
+  {
+		String oldMethod = method;
+		method = newMethod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.TERMINAL_VALUE__METHOD, oldMethod, method));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
   public String getValor()
   {
 		return valor;
@@ -213,6 +257,8 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
+			case PagosPackage.TERMINAL_VALUE__METHOD:
+				return getMethod();
 			case PagosPackage.TERMINAL_VALUE__VALOR:
 				return getValor();
 		}
@@ -233,6 +279,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 				return;
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				setVariable((BusinessAttribute)newValue);
+				return;
+			case PagosPackage.TERMINAL_VALUE__METHOD:
+				setMethod((String)newValue);
 				return;
 			case PagosPackage.TERMINAL_VALUE__VALOR:
 				setValor((String)newValue);
@@ -256,6 +305,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				setVariable((BusinessAttribute)null);
 				return;
+			case PagosPackage.TERMINAL_VALUE__METHOD:
+				setMethod(METHOD_EDEFAULT);
+				return;
 			case PagosPackage.TERMINAL_VALUE__VALOR:
 				setValor(VALOR_EDEFAULT);
 				return;
@@ -276,6 +328,8 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 				return parent != null;
 			case PagosPackage.TERMINAL_VALUE__VARIABLE:
 				return variable != null;
+			case PagosPackage.TERMINAL_VALUE__METHOD:
+				return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
 			case PagosPackage.TERMINAL_VALUE__VALOR:
 				return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
 		}
@@ -293,7 +347,9 @@ public class TerminalValueImpl extends ExpressionImpl implements TerminalValue
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (valor: ");
+		result.append(" (method: ");
+		result.append(method);
+		result.append(", valor: ");
 		result.append(valor);
 		result.append(')');
 		return result.toString();

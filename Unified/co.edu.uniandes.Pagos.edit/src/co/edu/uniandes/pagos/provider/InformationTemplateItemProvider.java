@@ -66,6 +66,7 @@ public class InformationTemplateItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addTemplateCalcPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +107,28 @@ public class InformationTemplateItemProvider
 				 getString("_UI_InformationTemplate_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_description_feature", "_UI_InformationTemplate_type"),
 				 PagosPackage.Literals.INFORMATION_TEMPLATE__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Template Calc feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTemplateCalcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InformationTemplate_templateCalc_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationTemplate_templateCalc_feature", "_UI_InformationTemplate_type"),
+				 PagosPackage.Literals.INFORMATION_TEMPLATE__TEMPLATE_CALC,
 				 true,
 				 false,
 				 false,
@@ -186,6 +209,7 @@ public class InformationTemplateItemProvider
 		switch (notification.getFeatureID(InformationTemplate.class)) {
 			case PagosPackage.INFORMATION_TEMPLATE__NAME:
 			case PagosPackage.INFORMATION_TEMPLATE__DESCRIPTION:
+			case PagosPackage.INFORMATION_TEMPLATE__TEMPLATE_CALC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case PagosPackage.INFORMATION_TEMPLATE__ATT_LISTS:

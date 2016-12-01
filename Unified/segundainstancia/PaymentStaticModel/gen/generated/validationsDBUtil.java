@@ -34,35 +34,35 @@ public class DBUtil {
 
 	       //Inserts tabla  Tipo Pensionado;			    
 			
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(1,'1','Pensionado de rÈgimen de prima media. Tope m·ximo de pensiÛn 25 smlmv')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(2,'2','Pensionado de rÈgimen de prima media. Sin tope m·ximo de pensiÛn')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(3,'3','Pensionado de rÈgimen de ahorro individual. No aplica tope m·ximo de pensiÛn')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(4,'4','Pensionado de riesgos laborales. Tope m·ximo de 25 smlmv')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(1,'1','Pensionado de r√©gimen de prima media. Tope m√°ximo de pensi√≥n 25 smlmv')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(2,'2','Pensionado de r√©gimen de prima media. Sin tope m√°ximo de pensi√≥n')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(3,'3','Pensionado de r√©gimen de ahorro individual. No aplica tope m√°ximo de pensi√≥n')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(4,'4','Pensionado de riesgos laborales. Tope m√°ximo de 25 smlmv')");	
 			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(5,'5','Pensionado por el empleador. Con tope maximo de pension de 25 smlmv')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(6,'6','Pensionado por el empleador sin tope m·ximo de pensiÛn')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(7,'7','Pensionado de entidades de los regimenes especial y de excepciÛn, con tope m·ximo de pensiÛn de 25 smlmv')");	
-			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(8,'8','Pensionado de entidades de los regimenes especial y de excepciÛn, sin tope m·ximo de pensiÛn')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(6,'6','Pensionado por el empleador sin tope m√°ximo de pensi√≥n')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(7,'7','Pensionado de entidades de los regimenes especial y de excepci√≥n, con tope m√°ximo de pensi√≥n de 25 smlmv')");	
+			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(8,'8','Pensionado de entidades de los regimenes especial y de excepci√≥n, sin tope m√°ximo de pensi√≥n')");	
 			st.executeUpdate("insert into TipoPensionado (id, codigo, descripcion) values(9,'9','Beneficiario UPC adicional')");	
 	       //Inserts tabla  Tipo Pagador;			    
 			
 			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(1,'1','Empleador')");	
-			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(2,'2','AdministraciÛn de pensiones')");	
+			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(2,'2','Administraci√≥n de pensiones')");	
 			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(3,'3','Pagador de pensiones')");	
-			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(4,'4','Pensiones de entidades de los regimenes especial y de excepciÛn')");	
+			st.executeUpdate("insert into TipoPagador (id, codigo, descripcion) values(4,'4','Pensiones de entidades de los regimenes especial y de excepci√≥n')");	
 	       //Inserts tabla  Tipo Pension;			    
 			
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(1,'1','Vejez')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(2,'2','Sobrevivencia vitalicia riesgo comun')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(3,'3','Sobrevivencia temporal riesgo comun')");	
-			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(4,'4','Sobrevivencia temporal riesgo comun, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos')");	
+			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(4,'4','Sobrevivencia temporal riesgo comun, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(5,'5','Sobrevivencia vitalicia por riesgo laboral')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(6,'6','Sobrevivencia temporal por riesgo laboral')");	
-			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(7,'7','Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos')");	
-			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(8,'8','Invalidez riesgo com˙n')");	
+			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(7,'7','Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos')");	
+			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(8,'8','Invalidez riesgo com√∫n')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(9,'9','Invalidez resgo laboral')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(10,'10','Jubilacion')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(11,'11','Jubilacion para compartir')");	
-			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(12,'12','SanciÛn')");	
+			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(12,'12','Sanci√≥n')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(13,'13','Convencional')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(14,'14','Convencional para compartir')");	
 			st.executeUpdate("insert into TipoPension (id, codigo, descripcion) values(15,'15','Gracia')");	
@@ -77,70 +77,70 @@ public class DBUtil {
        		/**  
        		 * TipoPensionado vs TipoPagador
        		 * id: 1  --  id: 1       				       		
-       		 * Pensionado de rÈgimen de prima media. Tope m·ximo de pensiÛn 25 smlmv   --   Empleador	
+       		 * Pensionado de r√©gimen de prima media. Tope m√°ximo de pensi√≥n 25 smlmv   --   Empleador	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(1,1,1)");
 			      					      		
        		/**  
        		 * TipoPensionado vs TipoPagador
        		 * id: 1  --  id: 2       				       		
-       		 * Pensionado de rÈgimen de prima media. Tope m·ximo de pensiÛn 25 smlmv   --   AdministraciÛn de pensiones	
+       		 * Pensionado de r√©gimen de prima media. Tope m√°ximo de pensi√≥n 25 smlmv   --   Administraci√≥n de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(2,1,2)");
 			      					      		
        		/**  
        		 * TipoPensionado vs TipoPagador
        		 * id: 1  --  id: 3       				       		
-       		 * Pensionado de rÈgimen de prima media. Tope m·ximo de pensiÛn 25 smlmv   --   Pagador de pensiones	
+       		 * Pensionado de r√©gimen de prima media. Tope m√°ximo de pensi√≥n 25 smlmv   --   Pagador de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(3,1,3)");
 			      					      		
        		/**  
        		 * TipoPensionado vs TipoPagador
        		 * id: 2  --  id: 2       				       		
-       		 * Pensionado de rÈgimen de prima media. Sin tope m·ximo de pensiÛn   --   AdministraciÛn de pensiones	
+       		 * Pensionado de r√©gimen de prima media. Sin tope m√°ximo de pensi√≥n   --   Administraci√≥n de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(4,2,2)");
 			      					      		
        		/**  
        		 * TipoPensionado vs TipoPagador
        		 * id: 2  --  id: 3       				       		
-       		 * Pensionado de rÈgimen de prima media. Sin tope m·ximo de pensiÛn   --   Pagador de pensiones	
+       		 * Pensionado de r√©gimen de prima media. Sin tope m√°ximo de pensi√≥n   --   Pagador de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionadopagador (id, pensionado_id, pagador_id) values(5,2,3)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 2       				       		
-       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos   --   AdministraciÛn de pensiones	
+       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos   --   Administraci√≥n de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(1,7,2)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 1       				       		
-       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos   --   Empleador	
+       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos   --   Empleador	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(2,7,1)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 3       				       		
-       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos   --   Pagador de pensiones	
+       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos   --   Pagador de pensiones	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(3,7,3)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPagador
        		 * id: 7  --  id: 4       				       		
-       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos   --   Pensiones de entidades de los regimenes especial y de excepciÛn	
+       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos   --   Pensiones de entidades de los regimenes especial y de excepci√≥n	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionpagador (id, pensionado_id, pagador_id) values(4,7,4)");
 			      					      		
        		/**  
        		 * TipoPension vs TipoPensionado
        		 * id: 7  --  id: 2       				       		
-       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compaÒera(o) menor de 30 aÒos sin hijos   --   Pensionado de rÈgimen de prima media. Sin tope m·ximo de pensiÛn	
+       		 * Sobrevivencia temporal por riesgo laboral, Conyugue o compa√±era(o) menor de 30 a√±os sin hijos   --   Pensionado de r√©gimen de prima media. Sin tope m√°ximo de pensi√≥n	
        		 */			       				       		
 	       	 st.executeUpdate("insert into validacionpensionpensionado (id, pensionado_id, pagador_id) values(1,7,2)");
 			      					      		

@@ -292,6 +292,7 @@ rule TerminalValue2TerminalValue
 		t:PagosPim!TerminalValue
 	{
 		t.value = s.valor;
+		t.method = s.method;
 		t.attribute = s.variable.equivalent();
 		t.parent = s.parent;
 	}

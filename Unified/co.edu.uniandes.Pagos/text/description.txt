@@ -65,12 +65,12 @@ Package pagos <http://www.edu.co/uniandes/Pagos>
     Reference expression : Expression<<0..*>>
 
   Class ExpresionLogica
-    Reference variable : TerminalValue<<0..*>>
-    Attribute logOper : EString<<0..*>>
-    Reference variable2 : TerminalValue<<0..*>>
-    Attribute literal : EString<<0..*>>
+    Reference variable : TerminalValue
+    Attribute logOper : EString
+    Reference variable2 : TerminalValue
+    Attribute literal : EString
     Attribute conOper : EString
-    Reference exp : ExpresionLogica<<0..*>>
+    Reference exp : ExpresionLogica
 
   Class Expression
 
@@ -83,6 +83,7 @@ Package pagos <http://www.edu.co/uniandes/Pagos>
   Class TerminalValue -> Expression
     Reference parent : EObject
     Reference variable : BusinessAttribute
+    Attribute method : EString
     Attribute valor : EString
 
   Class Adicion -> Expression

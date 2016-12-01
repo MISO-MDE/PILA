@@ -21,9 +21,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPagosParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LBRACE", "RULE_COLON", "RULE_ID", "RULE_COMMA", "RULE_RBRACE", "RULE_LBRACKET", "RULE_RBRACKET", "RULE_STRING", "RULE_ELSE", "RULE_IF", "RULE_THEN", "RULE_RETURN", "RULE_OPERADORLOGICO", "RULE_LOGICALCONN", "RULE_ADDOP", "RULE_MULTOP", "RULE_TYPE", "RULE_INDEX", "RULE_DOT", "RULE_DASH", "RULE_INT", "RULE_STR_ESC", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'name'", "'intermediary'", "'superentities'", "'description'", "'attributes'", "'entities'", "'InformationTemplate'", "'FormAttributes'", "'calculationtemplates'", "'providers'", "'calculationattributes'", "'calculationrules'", "'('", "')'", "':='", "'PA'", "'SU'", "'IT'", "'FU'", "'E'", "'e'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LBRACE", "RULE_COLON", "RULE_ID", "RULE_COMMA", "RULE_RBRACE", "RULE_LBRACKET", "RULE_RBRACKET", "RULE_STRING", "RULE_ELSE", "RULE_IF", "RULE_THEN", "RULE_RETURN", "RULE_OPERADORLOGICO", "RULE_LOGICALCONN", "RULE_ADDOP", "RULE_MULTOP", "RULE_TYPE", "RULE_INDEX", "RULE_DOT", "RULE_DASH", "RULE_INT", "RULE_STR_ESC", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'name'", "'intermediary'", "'superentities'", "'description'", "'attributes'", "'entities'", "'InformationTemplate'", "'FormAttributes'", "'calculationtemplates'", "'providers'", "'calculationattributes'", "'calculationrules'", "'('", "')'", "':='", "'PA'", "'SU'", "'IT'", "'FU'", "'size()'", "'getCantidadDiasHabiles()'", "'getRiegoTabla2()'", "'E'", "'e'"
     };
     public static final int T__50=50;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
     public static final int RULE_ID=6;
     public static final int RULE_RETURN=15;
     public static final int RULE_COMMA=7;
@@ -4574,7 +4577,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalValue"
-    // InternalPagos.g:2139:1: ruleTerminalValue returns [EObject current=null] : ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) ;
+    // InternalPagos.g:2139:1: ruleTerminalValue returns [EObject current=null] : ( ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) ) | ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? ) | ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) ) | (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )? | ( (lv_valor_34_0= ruleNumber ) ) ) ;
     public final EObject ruleTerminalValue() throws RecognitionException {
         EObject current = null;
 
@@ -4586,8 +4589,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         Token otherlv_6=null;
         Token this_DOT_7=null;
         Token otherlv_8=null;
-        Token this_DASH_9=null;
-        Token otherlv_10=null;
+        Token this_DOT_9=null;
         Token otherlv_11=null;
         Token this_DOT_12=null;
         Token otherlv_13=null;
@@ -4596,25 +4598,44 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         Token otherlv_16=null;
         Token this_DOT_17=null;
         Token otherlv_18=null;
-        AntlrDatatypeRuleToken lv_valor_19_0 = null;
+        Token this_DOT_19=null;
+        Token otherlv_21=null;
+        Token this_DOT_22=null;
+        Token otherlv_23=null;
+        Token this_DASH_24=null;
+        Token otherlv_25=null;
+        Token otherlv_26=null;
+        Token this_DOT_27=null;
+        Token otherlv_28=null;
+        Token this_DOT_29=null;
+        Token otherlv_31=null;
+        Token this_DOT_32=null;
+        Token otherlv_33=null;
+        AntlrDatatypeRuleToken lv_method_10_0 = null;
+
+        AntlrDatatypeRuleToken lv_method_20_0 = null;
+
+        AntlrDatatypeRuleToken lv_method_30_0 = null;
+
+        AntlrDatatypeRuleToken lv_valor_34_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalPagos.g:2145:2: ( ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) ) )
-            // InternalPagos.g:2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
+            // InternalPagos.g:2145:2: ( ( ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) ) | ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? ) | ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) ) | (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )? | ( (lv_valor_34_0= ruleNumber ) ) ) )
+            // InternalPagos.g:2146:2: ( ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) ) | ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? ) | ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) ) | (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )? | ( (lv_valor_34_0= ruleNumber ) ) )
             {
-            // InternalPagos.g:2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )
-            int alt30=5;
-            alt30 = dfa30.predict(input);
-            switch (alt30) {
+            // InternalPagos.g:2146:2: ( ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) ) | ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? ) | ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) ) | (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )? | ( (lv_valor_34_0= ruleNumber ) ) )
+            int alt34=5;
+            alt34 = dfa34.predict(input);
+            switch (alt34) {
                 case 1 :
-                    // InternalPagos.g:2147:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
+                    // InternalPagos.g:2147:3: ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) )
                     {
-                    // InternalPagos.g:2147:3: ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
-                    // InternalPagos.g:2148:4: () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) )
+                    // InternalPagos.g:2147:3: ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) )
+                    // InternalPagos.g:2148:4: () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) )
                     {
                     // InternalPagos.g:2148:4: ()
                     // InternalPagos.g:2149:5: 
@@ -4627,74 +4648,215 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPagos.g:2155:4: (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )?
-                    int alt26=2;
-                    int LA26_0 = input.LA(1);
+                    // InternalPagos.g:2155:4: ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) )
+                    int alt27=2;
+                    int LA27_0 = input.LA(1);
 
-                    if ( (LA26_0==45) ) {
-                        alt26=1;
+                    if ( (LA27_0==45) ) {
+                        int LA27_1 = input.LA(2);
+
+                        if ( (LA27_1==RULE_DOT) ) {
+                            int LA27_3 = input.LA(3);
+
+                            if ( (LA27_3==RULE_ID) ) {
+                                int LA27_4 = input.LA(4);
+
+                                if ( (LA27_4==RULE_DASH) ) {
+                                    alt27=1;
+                                }
+                                else if ( (LA27_4==RULE_DOT) ) {
+                                    alt27=2;
+                                }
+                                else {
+                                    NoViableAltException nvae =
+                                        new NoViableAltException("", 27, 4, input);
+
+                                    throw nvae;
+                                }
+                            }
+                            else {
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 27, 3, input);
+
+                                throw nvae;
+                            }
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 27, 1, input);
+
+                            throw nvae;
+                        }
                     }
-                    switch (alt26) {
+                    else if ( (LA27_0==RULE_ID) ) {
+                        alt27=1;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 27, 0, input);
+
+                        throw nvae;
+                    }
+                    switch (alt27) {
                         case 1 :
-                            // InternalPagos.g:2156:5: otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH
+                            // InternalPagos.g:2156:5: ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
                             {
-                            otherlv_1=(Token)match(input,45,FOLLOW_40); 
-
-                            					newLeafNode(otherlv_1, grammarAccess.getTerminalValueAccess().getPAKeyword_0_1_0());
-                            				
-                            this_DOT_2=(Token)match(input,RULE_DOT,FOLLOW_5); 
-
-                            					newLeafNode(this_DOT_2, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1());
-                            				
-                            // InternalPagos.g:2164:5: ( (otherlv_3= RULE_ID ) )
-                            // InternalPagos.g:2165:6: (otherlv_3= RULE_ID )
+                            // InternalPagos.g:2156:5: ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) )
+                            // InternalPagos.g:2157:6: (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) )
                             {
-                            // InternalPagos.g:2165:6: (otherlv_3= RULE_ID )
-                            // InternalPagos.g:2166:7: otherlv_3= RULE_ID
+                            // InternalPagos.g:2157:6: (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )?
+                            int alt26=2;
+                            int LA26_0 = input.LA(1);
+
+                            if ( (LA26_0==45) ) {
+                                alt26=1;
+                            }
+                            switch (alt26) {
+                                case 1 :
+                                    // InternalPagos.g:2158:7: otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH
+                                    {
+                                    otherlv_1=(Token)match(input,45,FOLLOW_40); 
+
+                                    							newLeafNode(otherlv_1, grammarAccess.getTerminalValueAccess().getPAKeyword_0_1_0_0_0());
+                                    						
+                                    this_DOT_2=(Token)match(input,RULE_DOT,FOLLOW_5); 
+
+                                    							newLeafNode(this_DOT_2, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_0_0_1());
+                                    						
+                                    // InternalPagos.g:2166:7: ( (otherlv_3= RULE_ID ) )
+                                    // InternalPagos.g:2167:8: (otherlv_3= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2167:8: (otherlv_3= RULE_ID )
+                                    // InternalPagos.g:2168:9: otherlv_3= RULE_ID
+                                    {
+
+                                    									if (current==null) {
+                                    										current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    									}
+                                    								
+                                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_41); 
+
+                                    									newLeafNode(otherlv_3, grammarAccess.getTerminalValueAccess().getParentParticipantCrossReference_0_1_0_0_2_0());
+                                    								
+
+                                    }
+
+
+                                    }
+
+                                    this_DASH_4=(Token)match(input,RULE_DASH,FOLLOW_5); 
+
+                                    							newLeafNode(this_DASH_4, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_0_1_0_0_3());
+                                    						
+
+                                    }
+                                    break;
+
+                            }
+
+                            // InternalPagos.g:2184:6: ( (otherlv_5= RULE_ID ) )
+                            // InternalPagos.g:2185:7: (otherlv_5= RULE_ID )
+                            {
+                            // InternalPagos.g:2185:7: (otherlv_5= RULE_ID )
+                            // InternalPagos.g:2186:8: otherlv_5= RULE_ID
                             {
 
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getTerminalValueRule());
-                            							}
-                            						
-                            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_41); 
+                            								if (current==null) {
+                            									current = createModelElement(grammarAccess.getTerminalValueRule());
+                            								}
+                            							
+                            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                            							newLeafNode(otherlv_3, grammarAccess.getTerminalValueAccess().getParentParticipantCrossReference_0_1_2_0());
-                            						
+                            								newLeafNode(otherlv_5, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_0_1_0_1_0());
+                            							
 
                             }
 
 
                             }
 
-                            this_DASH_4=(Token)match(input,RULE_DASH,FOLLOW_5); 
 
-                            					newLeafNode(this_DASH_4, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_0_1_3());
-                            				
+                            }
+
 
                             }
                             break;
+                        case 2 :
+                            // InternalPagos.g:2199:5: (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) )
+                            {
+                            // InternalPagos.g:2199:5: (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) )
+                            // InternalPagos.g:2200:6: otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) )
+                            {
+                            otherlv_6=(Token)match(input,45,FOLLOW_40); 
 
-                    }
+                            						newLeafNode(otherlv_6, grammarAccess.getTerminalValueAccess().getPAKeyword_0_1_1_0());
+                            					
+                            this_DOT_7=(Token)match(input,RULE_DOT,FOLLOW_5); 
 
-                    // InternalPagos.g:2182:4: ( (otherlv_5= RULE_ID ) )
-                    // InternalPagos.g:2183:5: (otherlv_5= RULE_ID )
-                    {
-                    // InternalPagos.g:2183:5: (otherlv_5= RULE_ID )
-                    // InternalPagos.g:2184:6: otherlv_5= RULE_ID
-                    {
+                            						newLeafNode(this_DOT_7, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1_1());
+                            					
+                            // InternalPagos.g:2208:6: ( (otherlv_8= RULE_ID ) )
+                            // InternalPagos.g:2209:7: (otherlv_8= RULE_ID )
+                            {
+                            // InternalPagos.g:2209:7: (otherlv_8= RULE_ID )
+                            // InternalPagos.g:2210:8: otherlv_8= RULE_ID
+                            {
 
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getTerminalValueRule());
-                    						}
-                    					
-                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_2); 
+                            								if (current==null) {
+                            									current = createModelElement(grammarAccess.getTerminalValueRule());
+                            								}
+                            							
+                            otherlv_8=(Token)match(input,RULE_ID,FOLLOW_40); 
 
-                    						newLeafNode(otherlv_5, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_0_2_0());
-                    					
+                            								newLeafNode(otherlv_8, grammarAccess.getTerminalValueAccess().getParentParticipantCrossReference_0_1_1_2_0());
+                            							
 
-                    }
+                            }
 
+
+                            }
+
+                            this_DOT_9=(Token)match(input,RULE_DOT,FOLLOW_42); 
+
+                            						newLeafNode(this_DOT_9, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_0_1_1_3());
+                            					
+                            // InternalPagos.g:2225:6: ( (lv_method_10_0= ruleMethod ) )
+                            // InternalPagos.g:2226:7: (lv_method_10_0= ruleMethod )
+                            {
+                            // InternalPagos.g:2226:7: (lv_method_10_0= ruleMethod )
+                            // InternalPagos.g:2227:8: lv_method_10_0= ruleMethod
+                            {
+
+                            								newCompositeNode(grammarAccess.getTerminalValueAccess().getMethodMethodParserRuleCall_0_1_1_4_0());
+                            							
+                            pushFollow(FOLLOW_2);
+                            lv_method_10_0=ruleMethod();
+
+                            state._fsp--;
+
+
+                            								if (current==null) {
+                            									current = createModelElementForParent(grammarAccess.getTerminalValueRule());
+                            								}
+                            								set(
+                            									current,
+                            									"method",
+                            									lv_method_10_0,
+                            									"co.edu.uniandes.Pagos.Method");
+                            								afterParserOrEnumRuleCall();
+                            							
+
+                            }
+
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
 
                     }
 
@@ -4705,70 +4867,170 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:2197:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
+                    // InternalPagos.g:2248:3: ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? )
                     {
-                    // InternalPagos.g:2197:3: (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )?
-                    int alt27=2;
-                    int LA27_0 = input.LA(1);
-
-                    if ( (LA27_0==46) ) {
-                        alt27=1;
-                    }
-                    switch (alt27) {
+                    // InternalPagos.g:2248:3: ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? )
+                    int alt30=2;
+                    alt30 = dfa30.predict(input);
+                    switch (alt30) {
                         case 1 :
-                            // InternalPagos.g:2198:4: otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) )
+                            // InternalPagos.g:2249:4: (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
                             {
-                            otherlv_6=(Token)match(input,46,FOLLOW_40); 
+                            // InternalPagos.g:2249:4: (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
+                            int alt28=2;
+                            int LA28_0 = input.LA(1);
 
-                            				newLeafNode(otherlv_6, grammarAccess.getTerminalValueAccess().getSUKeyword_1_0());
-                            			
-                            this_DOT_7=(Token)match(input,RULE_DOT,FOLLOW_5); 
+                            if ( (LA28_0==46) ) {
+                                alt28=1;
+                            }
+                            switch (alt28) {
+                                case 1 :
+                                    // InternalPagos.g:2250:5: otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) )
+                                    {
+                                    otherlv_11=(Token)match(input,46,FOLLOW_40); 
 
-                            				newLeafNode(this_DOT_7, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1());
-                            			
-                            // InternalPagos.g:2206:4: ( (otherlv_8= RULE_ID ) )
-                            // InternalPagos.g:2207:5: (otherlv_8= RULE_ID )
-                            {
-                            // InternalPagos.g:2207:5: (otherlv_8= RULE_ID )
-                            // InternalPagos.g:2208:6: otherlv_8= RULE_ID
-                            {
+                                    					newLeafNode(otherlv_11, grammarAccess.getTerminalValueAccess().getSUKeyword_1_0_0());
+                                    				
+                                    this_DOT_12=(Token)match(input,RULE_DOT,FOLLOW_5); 
 
-                            						if (current==null) {
-                            							current = createModelElement(grammarAccess.getTerminalValueRule());
-                            						}
-                            					
-                            otherlv_8=(Token)match(input,RULE_ID,FOLLOW_41); 
+                                    					newLeafNode(this_DOT_12, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_0_1());
+                                    				
+                                    // InternalPagos.g:2258:5: ( (otherlv_13= RULE_ID ) )
+                                    // InternalPagos.g:2259:6: (otherlv_13= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2259:6: (otherlv_13= RULE_ID )
+                                    // InternalPagos.g:2260:7: otherlv_13= RULE_ID
+                                    {
 
-                            						newLeafNode(otherlv_8, grammarAccess.getTerminalValueAccess().getParentSuperEntityCrossReference_1_2_0());
-                            					
+                                    							if (current==null) {
+                                    								current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    						
+                                    otherlv_13=(Token)match(input,RULE_ID,FOLLOW_41); 
+
+                                    							newLeafNode(otherlv_13, grammarAccess.getTerminalValueAccess().getParentSuperEntityCrossReference_1_0_2_0());
+                                    						
+
+                                    }
+
+
+                                    }
+
+                                    this_DASH_14=(Token)match(input,RULE_DASH,FOLLOW_5); 
+
+                                    					newLeafNode(this_DASH_14, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_1_0_3());
+                                    				
+                                    // InternalPagos.g:2275:5: ( (otherlv_15= RULE_ID ) )
+                                    // InternalPagos.g:2276:6: (otherlv_15= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2276:6: (otherlv_15= RULE_ID )
+                                    // InternalPagos.g:2277:7: otherlv_15= RULE_ID
+                                    {
+
+                                    							if (current==null) {
+                                    								current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    						
+                                    otherlv_15=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+                                    							newLeafNode(otherlv_15, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_1_0_4_0());
+                                    						
+
+                                    }
+
+
+                                    }
+
+
+                                    }
+                                    break;
 
                             }
 
 
                             }
-
-                            this_DASH_9=(Token)match(input,RULE_DASH,FOLLOW_5); 
-
-                            				newLeafNode(this_DASH_9, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_1_3());
-                            			
-                            // InternalPagos.g:2223:4: ( (otherlv_10= RULE_ID ) )
-                            // InternalPagos.g:2224:5: (otherlv_10= RULE_ID )
+                            break;
+                        case 2 :
+                            // InternalPagos.g:2290:4: (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )?
                             {
-                            // InternalPagos.g:2224:5: (otherlv_10= RULE_ID )
-                            // InternalPagos.g:2225:6: otherlv_10= RULE_ID
-                            {
+                            // InternalPagos.g:2290:4: (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )?
+                            int alt29=2;
+                            int LA29_0 = input.LA(1);
 
-                            						if (current==null) {
-                            							current = createModelElement(grammarAccess.getTerminalValueRule());
-                            						}
-                            					
-                            otherlv_10=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-                            						newLeafNode(otherlv_10, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_1_4_0());
-                            					
-
+                            if ( (LA29_0==46) ) {
+                                alt29=1;
                             }
+                            switch (alt29) {
+                                case 1 :
+                                    // InternalPagos.g:2291:5: otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) )
+                                    {
+                                    otherlv_16=(Token)match(input,46,FOLLOW_40); 
 
+                                    					newLeafNode(otherlv_16, grammarAccess.getTerminalValueAccess().getSUKeyword_1_1_0());
+                                    				
+                                    this_DOT_17=(Token)match(input,RULE_DOT,FOLLOW_5); 
+
+                                    					newLeafNode(this_DOT_17, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1_1());
+                                    				
+                                    // InternalPagos.g:2299:5: ( (otherlv_18= RULE_ID ) )
+                                    // InternalPagos.g:2300:6: (otherlv_18= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2300:6: (otherlv_18= RULE_ID )
+                                    // InternalPagos.g:2301:7: otherlv_18= RULE_ID
+                                    {
+
+                                    							if (current==null) {
+                                    								current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    						
+                                    otherlv_18=(Token)match(input,RULE_ID,FOLLOW_40); 
+
+                                    							newLeafNode(otherlv_18, grammarAccess.getTerminalValueAccess().getParentSuperEntityCrossReference_1_1_2_0());
+                                    						
+
+                                    }
+
+
+                                    }
+
+                                    this_DOT_19=(Token)match(input,RULE_DOT,FOLLOW_42); 
+
+                                    					newLeafNode(this_DOT_19, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_1_1_3());
+                                    				
+                                    // InternalPagos.g:2316:5: ( (lv_method_20_0= ruleMethod ) )
+                                    // InternalPagos.g:2317:6: (lv_method_20_0= ruleMethod )
+                                    {
+                                    // InternalPagos.g:2317:6: (lv_method_20_0= ruleMethod )
+                                    // InternalPagos.g:2318:7: lv_method_20_0= ruleMethod
+                                    {
+
+                                    							newCompositeNode(grammarAccess.getTerminalValueAccess().getMethodMethodParserRuleCall_1_1_4_0());
+                                    						
+                                    pushFollow(FOLLOW_2);
+                                    lv_method_20_0=ruleMethod();
+
+                                    state._fsp--;
+
+
+                                    							if (current==null) {
+                                    								current = createModelElementForParent(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    							set(
+                                    								current,
+                                    								"method",
+                                    								lv_method_20_0,
+                                    								"co.edu.uniandes.Pagos.Method");
+                                    							afterParserOrEnumRuleCall();
+                                    						
+
+                                    }
+
+
+                                    }
+
+
+                                    }
+                                    break;
 
                             }
 
@@ -4782,67 +5044,202 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPagos.g:2238:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
+                    // InternalPagos.g:2338:3: ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) )
                     {
-                    // InternalPagos.g:2238:3: (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )?
-                    int alt28=2;
-                    int LA28_0 = input.LA(1);
+                    // InternalPagos.g:2338:3: ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) )
+                    int alt32=2;
+                    int LA32_0 = input.LA(1);
 
-                    if ( (LA28_0==47) ) {
-                        alt28=1;
+                    if ( (LA32_0==47) ) {
+                        int LA32_1 = input.LA(2);
+
+                        if ( (LA32_1==RULE_DOT) ) {
+                            int LA32_3 = input.LA(3);
+
+                            if ( (LA32_3==RULE_ID) ) {
+                                int LA32_4 = input.LA(4);
+
+                                if ( (LA32_4==RULE_DASH) ) {
+                                    alt32=1;
+                                }
+                                else if ( (LA32_4==RULE_DOT) ) {
+                                    alt32=2;
+                                }
+                                else {
+                                    NoViableAltException nvae =
+                                        new NoViableAltException("", 32, 4, input);
+
+                                    throw nvae;
+                                }
+                            }
+                            else {
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 32, 3, input);
+
+                                throw nvae;
+                            }
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 32, 1, input);
+
+                            throw nvae;
+                        }
                     }
-                    switch (alt28) {
+                    else if ( (LA32_0==EOF||LA32_0==RULE_RBRACE||LA32_0==RULE_RBRACKET||(LA32_0>=RULE_OPERADORLOGICO && LA32_0<=RULE_MULTOP)||LA32_0==RULE_INDEX||LA32_0==43) ) {
+                        alt32=1;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 32, 0, input);
+
+                        throw nvae;
+                    }
+                    switch (alt32) {
                         case 1 :
-                            // InternalPagos.g:2239:4: otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) )
+                            // InternalPagos.g:2339:4: (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )?
                             {
-                            otherlv_11=(Token)match(input,47,FOLLOW_40); 
+                            // InternalPagos.g:2339:4: (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )?
+                            int alt31=2;
+                            int LA31_0 = input.LA(1);
 
-                            				newLeafNode(otherlv_11, grammarAccess.getTerminalValueAccess().getITKeyword_2_0());
-                            			
-                            this_DOT_12=(Token)match(input,RULE_DOT,FOLLOW_5); 
+                            if ( (LA31_0==47) ) {
+                                alt31=1;
+                            }
+                            switch (alt31) {
+                                case 1 :
+                                    // InternalPagos.g:2340:5: otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) )
+                                    {
+                                    otherlv_21=(Token)match(input,47,FOLLOW_40); 
 
-                            				newLeafNode(this_DOT_12, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1());
-                            			
-                            // InternalPagos.g:2247:4: ( (otherlv_13= RULE_ID ) )
-                            // InternalPagos.g:2248:5: (otherlv_13= RULE_ID )
+                                    					newLeafNode(otherlv_21, grammarAccess.getTerminalValueAccess().getITKeyword_2_0_0());
+                                    				
+                                    this_DOT_22=(Token)match(input,RULE_DOT,FOLLOW_5); 
+
+                                    					newLeafNode(this_DOT_22, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_0_1());
+                                    				
+                                    // InternalPagos.g:2348:5: ( (otherlv_23= RULE_ID ) )
+                                    // InternalPagos.g:2349:6: (otherlv_23= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2349:6: (otherlv_23= RULE_ID )
+                                    // InternalPagos.g:2350:7: otherlv_23= RULE_ID
+                                    {
+
+                                    							if (current==null) {
+                                    								current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    						
+                                    otherlv_23=(Token)match(input,RULE_ID,FOLLOW_41); 
+
+                                    							newLeafNode(otherlv_23, grammarAccess.getTerminalValueAccess().getParentInformationTemplateCrossReference_2_0_2_0());
+                                    						
+
+                                    }
+
+
+                                    }
+
+                                    this_DASH_24=(Token)match(input,RULE_DASH,FOLLOW_5); 
+
+                                    					newLeafNode(this_DASH_24, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_2_0_3());
+                                    				
+                                    // InternalPagos.g:2365:5: ( (otherlv_25= RULE_ID ) )
+                                    // InternalPagos.g:2366:6: (otherlv_25= RULE_ID )
+                                    {
+                                    // InternalPagos.g:2366:6: (otherlv_25= RULE_ID )
+                                    // InternalPagos.g:2367:7: otherlv_25= RULE_ID
+                                    {
+
+                                    							if (current==null) {
+                                    								current = createModelElement(grammarAccess.getTerminalValueRule());
+                                    							}
+                                    						
+                                    otherlv_25=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+                                    							newLeafNode(otherlv_25, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_2_0_4_0());
+                                    						
+
+                                    }
+
+
+                                    }
+
+
+                                    }
+                                    break;
+
+                            }
+
+
+                            }
+                            break;
+                        case 2 :
+                            // InternalPagos.g:2380:4: (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) )
                             {
-                            // InternalPagos.g:2248:5: (otherlv_13= RULE_ID )
-                            // InternalPagos.g:2249:6: otherlv_13= RULE_ID
+                            // InternalPagos.g:2380:4: (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) )
+                            // InternalPagos.g:2381:5: otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) )
+                            {
+                            otherlv_26=(Token)match(input,47,FOLLOW_40); 
+
+                            					newLeafNode(otherlv_26, grammarAccess.getTerminalValueAccess().getITKeyword_2_1_0());
+                            				
+                            this_DOT_27=(Token)match(input,RULE_DOT,FOLLOW_5); 
+
+                            					newLeafNode(this_DOT_27, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1_1());
+                            				
+                            // InternalPagos.g:2389:5: ( (otherlv_28= RULE_ID ) )
+                            // InternalPagos.g:2390:6: (otherlv_28= RULE_ID )
+                            {
+                            // InternalPagos.g:2390:6: (otherlv_28= RULE_ID )
+                            // InternalPagos.g:2391:7: otherlv_28= RULE_ID
                             {
 
-                            						if (current==null) {
-                            							current = createModelElement(grammarAccess.getTerminalValueRule());
-                            						}
-                            					
-                            otherlv_13=(Token)match(input,RULE_ID,FOLLOW_41); 
+                            							if (current==null) {
+                            								current = createModelElement(grammarAccess.getTerminalValueRule());
+                            							}
+                            						
+                            otherlv_28=(Token)match(input,RULE_ID,FOLLOW_40); 
 
-                            						newLeafNode(otherlv_13, grammarAccess.getTerminalValueAccess().getParentInformationTemplateCrossReference_2_2_0());
-                            					
+                            							newLeafNode(otherlv_28, grammarAccess.getTerminalValueAccess().getParentInformationTemplateCrossReference_2_1_2_0());
+                            						
 
                             }
 
 
                             }
 
-                            this_DASH_14=(Token)match(input,RULE_DASH,FOLLOW_5); 
+                            this_DOT_29=(Token)match(input,RULE_DOT,FOLLOW_42); 
 
-                            				newLeafNode(this_DASH_14, grammarAccess.getTerminalValueAccess().getDASHTerminalRuleCall_2_3());
-                            			
-                            // InternalPagos.g:2264:4: ( (otherlv_15= RULE_ID ) )
-                            // InternalPagos.g:2265:5: (otherlv_15= RULE_ID )
+                            					newLeafNode(this_DOT_29, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_2_1_3());
+                            				
+                            // InternalPagos.g:2406:5: ( (lv_method_30_0= ruleMethod ) )
+                            // InternalPagos.g:2407:6: (lv_method_30_0= ruleMethod )
                             {
-                            // InternalPagos.g:2265:5: (otherlv_15= RULE_ID )
-                            // InternalPagos.g:2266:6: otherlv_15= RULE_ID
+                            // InternalPagos.g:2407:6: (lv_method_30_0= ruleMethod )
+                            // InternalPagos.g:2408:7: lv_method_30_0= ruleMethod
                             {
 
-                            						if (current==null) {
-                            							current = createModelElement(grammarAccess.getTerminalValueRule());
-                            						}
-                            					
-                            otherlv_15=(Token)match(input,RULE_ID,FOLLOW_2); 
+                            							newCompositeNode(grammarAccess.getTerminalValueAccess().getMethodMethodParserRuleCall_2_1_4_0());
+                            						
+                            pushFollow(FOLLOW_2);
+                            lv_method_30_0=ruleMethod();
 
-                            						newLeafNode(otherlv_15, grammarAccess.getTerminalValueAccess().getVariableBusinessAttributeCrossReference_2_4_0());
-                            					
+                            state._fsp--;
+
+
+                            							if (current==null) {
+                            								current = createModelElementForParent(grammarAccess.getTerminalValueRule());
+                            							}
+                            							set(
+                            								current,
+                            								"method",
+                            								lv_method_30_0,
+                            								"co.edu.uniandes.Pagos.Method");
+                            							afterParserOrEnumRuleCall();
+                            						
+
+                            }
+
 
                             }
 
@@ -4859,41 +5256,41 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalPagos.g:2279:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
+                    // InternalPagos.g:2428:3: (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )?
                     {
-                    // InternalPagos.g:2279:3: (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )?
-                    int alt29=2;
-                    int LA29_0 = input.LA(1);
+                    // InternalPagos.g:2428:3: (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )?
+                    int alt33=2;
+                    int LA33_0 = input.LA(1);
 
-                    if ( (LA29_0==48) ) {
-                        alt29=1;
+                    if ( (LA33_0==48) ) {
+                        alt33=1;
                     }
-                    switch (alt29) {
+                    switch (alt33) {
                         case 1 :
-                            // InternalPagos.g:2280:4: otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) )
+                            // InternalPagos.g:2429:4: otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) )
                             {
-                            otherlv_16=(Token)match(input,48,FOLLOW_40); 
+                            otherlv_31=(Token)match(input,48,FOLLOW_40); 
 
-                            				newLeafNode(otherlv_16, grammarAccess.getTerminalValueAccess().getFUKeyword_3_0());
+                            				newLeafNode(otherlv_31, grammarAccess.getTerminalValueAccess().getFUKeyword_3_0());
                             			
-                            this_DOT_17=(Token)match(input,RULE_DOT,FOLLOW_5); 
+                            this_DOT_32=(Token)match(input,RULE_DOT,FOLLOW_5); 
 
-                            				newLeafNode(this_DOT_17, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_3_1());
+                            				newLeafNode(this_DOT_32, grammarAccess.getTerminalValueAccess().getDOTTerminalRuleCall_3_1());
                             			
-                            // InternalPagos.g:2288:4: ( (otherlv_18= RULE_ID ) )
-                            // InternalPagos.g:2289:5: (otherlv_18= RULE_ID )
+                            // InternalPagos.g:2437:4: ( (otherlv_33= RULE_ID ) )
+                            // InternalPagos.g:2438:5: (otherlv_33= RULE_ID )
                             {
-                            // InternalPagos.g:2289:5: (otherlv_18= RULE_ID )
-                            // InternalPagos.g:2290:6: otherlv_18= RULE_ID
+                            // InternalPagos.g:2438:5: (otherlv_33= RULE_ID )
+                            // InternalPagos.g:2439:6: otherlv_33= RULE_ID
                             {
 
                             						if (current==null) {
                             							current = createModelElement(grammarAccess.getTerminalValueRule());
                             						}
                             					
-                            otherlv_18=(Token)match(input,RULE_ID,FOLLOW_2); 
+                            otherlv_33=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-                            						newLeafNode(otherlv_18, grammarAccess.getTerminalValueAccess().getParentCalculationTemplateCrossReference_3_2_0());
+                            						newLeafNode(otherlv_33, grammarAccess.getTerminalValueAccess().getParentCalculationTemplateCrossReference_3_2_0());
                             					
 
                             }
@@ -4911,19 +5308,19 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalPagos.g:2303:3: ( (lv_valor_19_0= ruleNumber ) )
+                    // InternalPagos.g:2452:3: ( (lv_valor_34_0= ruleNumber ) )
                     {
-                    // InternalPagos.g:2303:3: ( (lv_valor_19_0= ruleNumber ) )
-                    // InternalPagos.g:2304:4: (lv_valor_19_0= ruleNumber )
+                    // InternalPagos.g:2452:3: ( (lv_valor_34_0= ruleNumber ) )
+                    // InternalPagos.g:2453:4: (lv_valor_34_0= ruleNumber )
                     {
-                    // InternalPagos.g:2304:4: (lv_valor_19_0= ruleNumber )
-                    // InternalPagos.g:2305:5: lv_valor_19_0= ruleNumber
+                    // InternalPagos.g:2453:4: (lv_valor_34_0= ruleNumber )
+                    // InternalPagos.g:2454:5: lv_valor_34_0= ruleNumber
                     {
 
                     					newCompositeNode(grammarAccess.getTerminalValueAccess().getValorNumberParserRuleCall_4_0());
                     				
                     pushFollow(FOLLOW_2);
-                    lv_valor_19_0=ruleNumber();
+                    lv_valor_34_0=ruleNumber();
 
                     state._fsp--;
 
@@ -4934,7 +5331,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     					set(
                     						current,
                     						"valor",
-                    						lv_valor_19_0,
+                    						lv_valor_34_0,
                     						"co.edu.uniandes.Pagos.Number");
                     					afterParserOrEnumRuleCall();
                     				
@@ -4969,8 +5366,139 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTerminalValue"
 
 
+    // $ANTLR start "entryRuleMethod"
+    // InternalPagos.g:2475:1: entryRuleMethod returns [String current=null] : iv_ruleMethod= ruleMethod EOF ;
+    public final String entryRuleMethod() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleMethod = null;
+
+
+        try {
+            // InternalPagos.g:2475:46: (iv_ruleMethod= ruleMethod EOF )
+            // InternalPagos.g:2476:2: iv_ruleMethod= ruleMethod EOF
+            {
+             newCompositeNode(grammarAccess.getMethodRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleMethod=ruleMethod();
+
+            state._fsp--;
+
+             current =iv_ruleMethod.getText(); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleMethod"
+
+
+    // $ANTLR start "ruleMethod"
+    // InternalPagos.g:2482:1: ruleMethod returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'size()' | kw= 'getCantidadDiasHabiles()' | kw= 'getRiegoTabla2()' ) ;
+    public final AntlrDatatypeRuleToken ruleMethod() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPagos.g:2488:2: ( (kw= 'size()' | kw= 'getCantidadDiasHabiles()' | kw= 'getRiegoTabla2()' ) )
+            // InternalPagos.g:2489:2: (kw= 'size()' | kw= 'getCantidadDiasHabiles()' | kw= 'getRiegoTabla2()' )
+            {
+            // InternalPagos.g:2489:2: (kw= 'size()' | kw= 'getCantidadDiasHabiles()' | kw= 'getRiegoTabla2()' )
+            int alt35=3;
+            switch ( input.LA(1) ) {
+            case 49:
+                {
+                alt35=1;
+                }
+                break;
+            case 50:
+                {
+                alt35=2;
+                }
+                break;
+            case 51:
+                {
+                alt35=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 35, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt35) {
+                case 1 :
+                    // InternalPagos.g:2490:3: kw= 'size()'
+                    {
+                    kw=(Token)match(input,49,FOLLOW_2); 
+
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getMethodAccess().getSizeKeyword_0());
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalPagos.g:2496:3: kw= 'getCantidadDiasHabiles()'
+                    {
+                    kw=(Token)match(input,50,FOLLOW_2); 
+
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getMethodAccess().getGetCantidadDiasHabilesKeyword_1());
+                    		
+
+                    }
+                    break;
+                case 3 :
+                    // InternalPagos.g:2502:3: kw= 'getRiegoTabla2()'
+                    {
+                    kw=(Token)match(input,51,FOLLOW_2); 
+
+                    			current.merge(kw);
+                    			newLeafNode(kw, grammarAccess.getMethodAccess().getGetRiegoTabla2Keyword_2());
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleMethod"
+
+
     // $ANTLR start "entryRuleNumber"
-    // InternalPagos.g:2326:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // InternalPagos.g:2511:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -4978,8 +5506,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2326:46: (iv_ruleNumber= ruleNumber EOF )
-            // InternalPagos.g:2327:2: iv_ruleNumber= ruleNumber EOF
+            // InternalPagos.g:2511:46: (iv_ruleNumber= ruleNumber EOF )
+            // InternalPagos.g:2512:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
             pushFollow(FOLLOW_1);
@@ -5006,7 +5534,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // InternalPagos.g:2333:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) ;
+    // InternalPagos.g:2518:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5019,41 +5547,41 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2339:2: ( (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) )
-            // InternalPagos.g:2340:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
+            // InternalPagos.g:2524:2: ( (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger ) )
+            // InternalPagos.g:2525:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
             {
-            // InternalPagos.g:2340:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // InternalPagos.g:2525:2: (this_EDouble_0= ruleEDouble | this_Integer_1= ruleInteger )
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA31_0==RULE_INT) ) {
-                int LA31_1 = input.LA(2);
+            if ( (LA36_0==RULE_INT) ) {
+                int LA36_1 = input.LA(2);
 
-                if ( (LA31_1==EOF||LA31_1==RULE_RBRACE||LA31_1==RULE_RBRACKET||(LA31_1>=RULE_OPERADORLOGICO && LA31_1<=RULE_MULTOP)||LA31_1==RULE_INDEX||LA31_1==43) ) {
-                    alt31=2;
+                if ( (LA36_1==EOF||LA36_1==RULE_RBRACE||LA36_1==RULE_RBRACKET||(LA36_1>=RULE_OPERADORLOGICO && LA36_1<=RULE_MULTOP)||LA36_1==RULE_INDEX||LA36_1==43) ) {
+                    alt36=2;
                 }
-                else if ( (LA31_1==RULE_DOT) ) {
-                    alt31=1;
+                else if ( (LA36_1==RULE_DOT) ) {
+                    alt36=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 31, 1, input);
+                        new NoViableAltException("", 36, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA31_0==RULE_DOT) ) {
-                alt31=1;
+            else if ( (LA36_0==RULE_DOT) ) {
+                alt36=1;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt36) {
                 case 1 :
-                    // InternalPagos.g:2341:3: this_EDouble_0= ruleEDouble
+                    // InternalPagos.g:2526:3: this_EDouble_0= ruleEDouble
                     {
 
                     			newCompositeNode(grammarAccess.getNumberAccess().getEDoubleParserRuleCall_0());
@@ -5073,7 +5601,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPagos.g:2352:3: this_Integer_1= ruleInteger
+                    // InternalPagos.g:2537:3: this_Integer_1= ruleInteger
                     {
 
                     			newCompositeNode(grammarAccess.getNumberAccess().getIntegerParserRuleCall_1());
@@ -5115,7 +5643,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEDouble"
-    // InternalPagos.g:2366:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
+    // InternalPagos.g:2551:1: entryRuleEDouble returns [String current=null] : iv_ruleEDouble= ruleEDouble EOF ;
     public final String entryRuleEDouble() throws RecognitionException {
         String current = null;
 
@@ -5123,8 +5651,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2366:47: (iv_ruleEDouble= ruleEDouble EOF )
-            // InternalPagos.g:2367:2: iv_ruleEDouble= ruleEDouble EOF
+            // InternalPagos.g:2551:47: (iv_ruleEDouble= ruleEDouble EOF )
+            // InternalPagos.g:2552:2: iv_ruleEDouble= ruleEDouble EOF
             {
              newCompositeNode(grammarAccess.getEDoubleRule()); 
             pushFollow(FOLLOW_1);
@@ -5151,7 +5679,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEDouble"
-    // InternalPagos.g:2373:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) ;
+    // InternalPagos.g:2558:1: ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleEDouble() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5165,22 +5693,22 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2379:2: ( ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) )
-            // InternalPagos.g:2380:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
+            // InternalPagos.g:2564:2: ( ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? ) )
+            // InternalPagos.g:2565:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
             {
-            // InternalPagos.g:2380:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
-            // InternalPagos.g:2381:3: (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
+            // InternalPagos.g:2565:2: ( (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )? )
+            // InternalPagos.g:2566:3: (this_INT_0= RULE_INT )? this_DOT_1= RULE_DOT this_INT_2= RULE_INT ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
             {
-            // InternalPagos.g:2381:3: (this_INT_0= RULE_INT )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalPagos.g:2566:3: (this_INT_0= RULE_INT )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA32_0==RULE_INT) ) {
-                alt32=1;
+            if ( (LA37_0==RULE_INT) ) {
+                alt37=1;
             }
-            switch (alt32) {
+            switch (alt37) {
                 case 1 :
-                    // InternalPagos.g:2382:4: this_INT_0= RULE_INT
+                    // InternalPagos.g:2567:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FOLLOW_40); 
 
@@ -5195,52 +5723,52 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_DOT_1=(Token)match(input,RULE_DOT,FOLLOW_42); 
+            this_DOT_1=(Token)match(input,RULE_DOT,FOLLOW_43); 
 
             			current.merge(this_DOT_1);
             		
 
             			newLeafNode(this_DOT_1, grammarAccess.getEDoubleAccess().getDOTTerminalRuleCall_1());
             		
-            this_INT_2=(Token)match(input,RULE_INT,FOLLOW_43); 
+            this_INT_2=(Token)match(input,RULE_INT,FOLLOW_44); 
 
             			current.merge(this_INT_2);
             		
 
             			newLeafNode(this_INT_2, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_2());
             		
-            // InternalPagos.g:2404:3: ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalPagos.g:2589:3: ( (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( ((LA34_0>=49 && LA34_0<=50)) ) {
-                alt34=1;
+            if ( ((LA39_0>=52 && LA39_0<=53)) ) {
+                alt39=1;
             }
-            switch (alt34) {
+            switch (alt39) {
                 case 1 :
-                    // InternalPagos.g:2405:4: (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT
+                    // InternalPagos.g:2590:4: (kw= 'E' | kw= 'e' ) this_INT_5= RULE_INT
                     {
-                    // InternalPagos.g:2405:4: (kw= 'E' | kw= 'e' )
-                    int alt33=2;
-                    int LA33_0 = input.LA(1);
+                    // InternalPagos.g:2590:4: (kw= 'E' | kw= 'e' )
+                    int alt38=2;
+                    int LA38_0 = input.LA(1);
 
-                    if ( (LA33_0==49) ) {
-                        alt33=1;
+                    if ( (LA38_0==52) ) {
+                        alt38=1;
                     }
-                    else if ( (LA33_0==50) ) {
-                        alt33=2;
+                    else if ( (LA38_0==53) ) {
+                        alt38=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 33, 0, input);
+                            new NoViableAltException("", 38, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt33) {
+                    switch (alt38) {
                         case 1 :
-                            // InternalPagos.g:2406:5: kw= 'E'
+                            // InternalPagos.g:2591:5: kw= 'E'
                             {
-                            kw=(Token)match(input,49,FOLLOW_42); 
+                            kw=(Token)match(input,52,FOLLOW_43); 
 
                             					current.merge(kw);
                             					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_3_0_0());
@@ -5249,9 +5777,9 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalPagos.g:2412:5: kw= 'e'
+                            // InternalPagos.g:2597:5: kw= 'e'
                             {
-                            kw=(Token)match(input,50,FOLLOW_42); 
+                            kw=(Token)match(input,53,FOLLOW_43); 
 
                             					current.merge(kw);
                             					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_3_0_1());
@@ -5298,7 +5826,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteger"
-    // InternalPagos.g:2430:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
+    // InternalPagos.g:2615:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
     public final String entryRuleInteger() throws RecognitionException {
         String current = null;
 
@@ -5306,8 +5834,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPagos.g:2430:47: (iv_ruleInteger= ruleInteger EOF )
-            // InternalPagos.g:2431:2: iv_ruleInteger= ruleInteger EOF
+            // InternalPagos.g:2615:47: (iv_ruleInteger= ruleInteger EOF )
+            // InternalPagos.g:2616:2: iv_ruleInteger= ruleInteger EOF
             {
              newCompositeNode(grammarAccess.getIntegerRule()); 
             pushFollow(FOLLOW_1);
@@ -5334,7 +5862,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteger"
-    // InternalPagos.g:2437:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // InternalPagos.g:2622:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleInteger() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5344,8 +5872,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPagos.g:2443:2: (this_INT_0= RULE_INT )
-            // InternalPagos.g:2444:2: this_INT_0= RULE_INT
+            // InternalPagos.g:2628:2: (this_INT_0= RULE_INT )
+            // InternalPagos.g:2629:2: this_INT_0= RULE_INT
             {
             this_INT_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -5375,6 +5903,7 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
+    protected DFA34 dfa34 = new DFA34(this);
     protected DFA30 dfa30 = new DFA30(this);
     static final String dfa_1s = "\17\uffff";
     static final String dfa_2s = "\1\6\16\uffff";
@@ -5407,11 +5936,11 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
     static final short[] dfa_6 = DFA.unpackEncodedString(dfa_5s);
     static final short[][] dfa_7 = unpackEncodedStringArray(dfa_6s);
 
-    class DFA30 extends DFA {
+    class DFA34 extends DFA {
 
-        public DFA30(BaseRecognizer recognizer) {
+        public DFA34(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 30;
+            this.decisionNumber = 34;
             this.eot = dfa_1;
             this.eof = dfa_2;
             this.min = dfa_3;
@@ -5421,7 +5950,55 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "2146:2: ( ( () (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'SU' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DASH_9= RULE_DASH ( (otherlv_10= RULE_ID ) ) )? | (otherlv_11= 'IT' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'FU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) )? | ( (lv_valor_19_0= ruleNumber ) ) )";
+            return "2146:2: ( ( () ( ( (otherlv_1= 'PA' this_DOT_2= RULE_DOT ( (otherlv_3= RULE_ID ) ) this_DASH_4= RULE_DASH )? ( (otherlv_5= RULE_ID ) ) ) | (otherlv_6= 'PA' this_DOT_7= RULE_DOT ( (otherlv_8= RULE_ID ) ) this_DOT_9= RULE_DOT ( (lv_method_10_0= ruleMethod ) ) ) ) ) | ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? ) | ( (otherlv_21= 'IT' this_DOT_22= RULE_DOT ( (otherlv_23= RULE_ID ) ) this_DASH_24= RULE_DASH ( (otherlv_25= RULE_ID ) ) )? | (otherlv_26= 'IT' this_DOT_27= RULE_DOT ( (otherlv_28= RULE_ID ) ) this_DOT_29= RULE_DOT ( (lv_method_30_0= ruleMethod ) ) ) ) | (otherlv_31= 'FU' this_DOT_32= RULE_DOT ( (otherlv_33= RULE_ID ) ) )? | ( (lv_valor_34_0= ruleNumber ) ) )";
+        }
+    }
+    static final String dfa_7s = "\16\uffff";
+    static final String dfa_8s = "\1\5\15\uffff";
+    static final String dfa_9s = "\1\10\1\26\11\uffff\1\6\1\26\1\uffff";
+    static final String dfa_10s = "\1\56\1\26\11\uffff\1\6\1\27\1\uffff";
+    static final String dfa_11s = "\2\uffff\11\1\2\uffff\1\2";
+    static final String dfa_12s = "\16\uffff}>";
+    static final String[] dfa_13s = {
+            "\1\10\1\uffff\1\4\5\uffff\1\2\1\3\1\7\1\6\1\uffff\1\12\25\uffff\1\11\2\uffff\1\1",
+            "\1\13",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\14",
+            "\1\15\1\12",
+            ""
+    };
+
+    static final short[] dfa_8 = DFA.unpackEncodedString(dfa_7s);
+    static final short[] dfa_9 = DFA.unpackEncodedString(dfa_8s);
+    static final char[] dfa_10 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
+    static final char[] dfa_11 = DFA.unpackEncodedStringToUnsignedChars(dfa_10s);
+    static final short[] dfa_12 = DFA.unpackEncodedString(dfa_11s);
+    static final short[] dfa_13 = DFA.unpackEncodedString(dfa_12s);
+    static final short[][] dfa_14 = unpackEncodedStringArray(dfa_13s);
+
+    class DFA30 extends DFA {
+
+        public DFA30(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 30;
+            this.eot = dfa_8;
+            this.eof = dfa_9;
+            this.min = dfa_10;
+            this.max = dfa_11;
+            this.accept = dfa_12;
+            this.special = dfa_13;
+            this.transition = dfa_14;
+        }
+        public String getDescription() {
+            return "2248:3: ( (otherlv_11= 'SU' this_DOT_12= RULE_DOT ( (otherlv_13= RULE_ID ) ) this_DASH_14= RULE_DASH ( (otherlv_15= RULE_ID ) ) )? | (otherlv_16= 'SU' this_DOT_17= RULE_DOT ( (otherlv_18= RULE_ID ) ) this_DOT_19= RULE_DOT ( (lv_method_20_0= ruleMethod ) ) )? )";
         }
     }
  
@@ -5467,7 +6044,8 @@ public class InternalPagosParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000200100L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0006000000000002L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x000E000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0030000000000002L});
 
 }

@@ -100,6 +100,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TerminalValue" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//BusinessAttribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Adicion" eSuperTypes="#//Expression">

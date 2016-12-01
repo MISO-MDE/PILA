@@ -375,8 +375,11 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (
 	 *         (parent=[Participant|ID]? variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[Participant|ID] method=Method) | 
 	 *         (parent=[SuperEntity|ID] variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[SuperEntity|ID] method=Method) | 
 	 *         (parent=[InformationTemplate|ID] variable=[BusinessAttribute|ID]) | 
+	 *         (parent=[InformationTemplate|ID] method=Method) | 
 	 *         parent=[CalculationTemplate|ID] | 
 	 *         valor=Number
 	 *     )
