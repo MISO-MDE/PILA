@@ -7,22 +7,14 @@ import co.edu.uniandes.pagos.ExpresionLogica;
 import co.edu.uniandes.pagos.PagosPackage;
 import co.edu.uniandes.pagos.TerminalValue;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,44 +37,64 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements ExpresionLogica
 {
   /**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference list.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see #getVariable()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<TerminalValue> variable;
+  protected TerminalValue variable;
 
   /**
-	 * The cached value of the '{@link #getLogOper() <em>Log Oper</em>}' attribute list.
+	 * The default value of the '{@link #getLogOper() <em>Log Oper</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see #getLogOper()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<String> logOper;
+  protected static final String LOG_OPER_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getVariable2() <em>Variable2</em>}' containment reference list.
+	 * The cached value of the '{@link #getLogOper() <em>Log Oper</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getLogOper()
+	 * @generated
+	 * @ordered
+	 */
+  protected String logOper = LOG_OPER_EDEFAULT;
+
+  /**
+	 * The cached value of the '{@link #getVariable2() <em>Variable2</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see #getVariable2()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<TerminalValue> variable2;
+  protected TerminalValue variable2;
 
   /**
-	 * The cached value of the '{@link #getLiteral() <em>Literal</em>}' attribute list.
+	 * The default value of the '{@link #getLiteral() <em>Literal</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see #getLiteral()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<String> literal;
+  protected static final String LITERAL_EDEFAULT = null;
+
+  /**
+	 * The cached value of the '{@link #getLiteral() <em>Literal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @see #getLiteral()
+	 * @generated
+	 * @ordered
+	 */
+  protected String literal = LITERAL_EDEFAULT;
 
   /**
 	 * The default value of the '{@link #getConOper() <em>Con Oper</em>}' attribute.
@@ -105,14 +117,14 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
   protected String conOper = CON_OPER_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference list.
+	 * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @see #getExp()
 	 * @generated
 	 * @ordered
 	 */
-  protected EList<ExpresionLogica> exp;
+  protected ExpresionLogica exp;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -140,11 +152,8 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<TerminalValue> getVariable()
+  public TerminalValue getVariable()
   {
-		if (variable == null) {
-			variable = new EObjectContainmentEList<TerminalValue>(TerminalValue.class, this, PagosPackage.EXPRESION_LOGICA__VARIABLE);
-		}
 		return variable;
 	}
 
@@ -153,11 +162,44 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<String> getLogOper()
+  public NotificationChain basicSetVariable(TerminalValue newVariable, NotificationChain msgs)
   {
-		if (logOper == null) {
-			logOper = new EDataTypeEList<String>(String.class, this, PagosPackage.EXPRESION_LOGICA__LOG_OPER);
+		TerminalValue oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__VARIABLE, oldVariable, newVariable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setVariable(TerminalValue newVariable)
+  {
+		if (newVariable != variable) {
+			NotificationChain msgs = null;
+			if (variable != null)
+				msgs = ((InternalEObject)variable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__VARIABLE, null, msgs);
+			if (newVariable != null)
+				msgs = ((InternalEObject)newVariable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__VARIABLE, null, msgs);
+			msgs = basicSetVariable(newVariable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__VARIABLE, newVariable, newVariable));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public String getLogOper()
+  {
 		return logOper;
 	}
 
@@ -166,11 +208,21 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<TerminalValue> getVariable2()
+  public void setLogOper(String newLogOper)
   {
-		if (variable2 == null) {
-			variable2 = new EObjectContainmentEList<TerminalValue>(TerminalValue.class, this, PagosPackage.EXPRESION_LOGICA__VARIABLE2);
-		}
+		String oldLogOper = logOper;
+		logOper = newLogOper;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__LOG_OPER, oldLogOper, logOper));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public TerminalValue getVariable2()
+  {
 		return variable2;
 	}
 
@@ -179,12 +231,58 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<String> getLiteral()
+  public NotificationChain basicSetVariable2(TerminalValue newVariable2, NotificationChain msgs)
   {
-		if (literal == null) {
-			literal = new EDataTypeEList<String>(String.class, this, PagosPackage.EXPRESION_LOGICA__LITERAL);
+		TerminalValue oldVariable2 = variable2;
+		variable2 = newVariable2;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__VARIABLE2, oldVariable2, newVariable2);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setVariable2(TerminalValue newVariable2)
+  {
+		if (newVariable2 != variable2) {
+			NotificationChain msgs = null;
+			if (variable2 != null)
+				msgs = ((InternalEObject)variable2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__VARIABLE2, null, msgs);
+			if (newVariable2 != null)
+				msgs = ((InternalEObject)newVariable2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__VARIABLE2, null, msgs);
+			msgs = basicSetVariable2(newVariable2, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__VARIABLE2, newVariable2, newVariable2));
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public String getLiteral()
+  {
 		return literal;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setLiteral(String newLiteral)
+  {
+		String oldLiteral = literal;
+		literal = newLiteral;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__LITERAL, oldLiteral, literal));
 	}
 
   /**
@@ -215,12 +313,45 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<ExpresionLogica> getExp()
+  public ExpresionLogica getExp()
   {
-		if (exp == null) {
-			exp = new EObjectContainmentEList<ExpresionLogica>(ExpresionLogica.class, this, PagosPackage.EXPRESION_LOGICA__EXP);
-		}
 		return exp;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public NotificationChain basicSetExp(ExpresionLogica newExp, NotificationChain msgs)
+  {
+		ExpresionLogica oldExp = exp;
+		exp = newExp;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__EXP, oldExp, newExp);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+	 * @generated
+	 */
+  public void setExp(ExpresionLogica newExp)
+  {
+		if (newExp != exp) {
+			NotificationChain msgs = null;
+			if (exp != null)
+				msgs = ((InternalEObject)exp).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__EXP, null, msgs);
+			if (newExp != null)
+				msgs = ((InternalEObject)newExp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PagosPackage.EXPRESION_LOGICA__EXP, null, msgs);
+			msgs = basicSetExp(newExp, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PagosPackage.EXPRESION_LOGICA__EXP, newExp, newExp));
 	}
 
   /**
@@ -233,11 +364,11 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
   {
 		switch (featureID) {
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE:
-				return ((InternalEList<?>)getVariable()).basicRemove(otherEnd, msgs);
+				return basicSetVariable(null, msgs);
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE2:
-				return ((InternalEList<?>)getVariable2()).basicRemove(otherEnd, msgs);
+				return basicSetVariable2(null, msgs);
 			case PagosPackage.EXPRESION_LOGICA__EXP:
-				return ((InternalEList<?>)getExp()).basicRemove(otherEnd, msgs);
+				return basicSetExp(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -272,33 +403,27 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE:
-				getVariable().clear();
-				getVariable().addAll((Collection<? extends TerminalValue>)newValue);
+				setVariable((TerminalValue)newValue);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__LOG_OPER:
-				getLogOper().clear();
-				getLogOper().addAll((Collection<? extends String>)newValue);
+				setLogOper((String)newValue);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE2:
-				getVariable2().clear();
-				getVariable2().addAll((Collection<? extends TerminalValue>)newValue);
+				setVariable2((TerminalValue)newValue);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__LITERAL:
-				getLiteral().clear();
-				getLiteral().addAll((Collection<? extends String>)newValue);
+				setLiteral((String)newValue);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__CON_OPER:
 				setConOper((String)newValue);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__EXP:
-				getExp().clear();
-				getExp().addAll((Collection<? extends ExpresionLogica>)newValue);
+				setExp((ExpresionLogica)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -314,22 +439,22 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
   {
 		switch (featureID) {
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE:
-				getVariable().clear();
+				setVariable((TerminalValue)null);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__LOG_OPER:
-				getLogOper().clear();
+				setLogOper(LOG_OPER_EDEFAULT);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE2:
-				getVariable2().clear();
+				setVariable2((TerminalValue)null);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__LITERAL:
-				getLiteral().clear();
+				setLiteral(LITERAL_EDEFAULT);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__CON_OPER:
 				setConOper(CON_OPER_EDEFAULT);
 				return;
 			case PagosPackage.EXPRESION_LOGICA__EXP:
-				getExp().clear();
+				setExp((ExpresionLogica)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -345,17 +470,17 @@ public class ExpresionLogicaImpl extends MinimalEObjectImpl.Container implements
   {
 		switch (featureID) {
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE:
-				return variable != null && !variable.isEmpty();
+				return variable != null;
 			case PagosPackage.EXPRESION_LOGICA__LOG_OPER:
-				return logOper != null && !logOper.isEmpty();
+				return LOG_OPER_EDEFAULT == null ? logOper != null : !LOG_OPER_EDEFAULT.equals(logOper);
 			case PagosPackage.EXPRESION_LOGICA__VARIABLE2:
-				return variable2 != null && !variable2.isEmpty();
+				return variable2 != null;
 			case PagosPackage.EXPRESION_LOGICA__LITERAL:
-				return literal != null && !literal.isEmpty();
+				return LITERAL_EDEFAULT == null ? literal != null : !LITERAL_EDEFAULT.equals(literal);
 			case PagosPackage.EXPRESION_LOGICA__CON_OPER:
 				return CON_OPER_EDEFAULT == null ? conOper != null : !CON_OPER_EDEFAULT.equals(conOper);
 			case PagosPackage.EXPRESION_LOGICA__EXP:
-				return exp != null && !exp.isEmpty();
+				return exp != null;
 		}
 		return super.eIsSet(featureID);
 	}

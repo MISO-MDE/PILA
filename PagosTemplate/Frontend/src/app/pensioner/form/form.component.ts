@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PensionerBusinessService} from "../business.service";
+import {FireLoginService} from "../../commons/fire-login/fire-login.service";
 
 @Component({
   selector: 'app-pensioner-form',
@@ -8,43 +9,61 @@ import {PensionerBusinessService} from "../business.service";
 })
 export class PensionerFormComponent implements OnInit {
 
-  public pensionTypeOptions = [];
-  public pensionerTypeOptions = [];
+  public parameters: any = {};
   public profession = [];
 
-  public countryOptions : Array<any> = [
+  public countryOptions: Array<any> = [
     {
-      'id':"12",
-      'name':"Colombia"
+      'id': "12",
+      'name': "Colombia"
     },
     {
-      'id':"13",
-      'name':"Extetior"
+      'id': "13",
+      'name': "Exterior"
     }
   ];
 
-  constructor(public businessService: PensionerBusinessService) {
+  constructor(public fireLoginService :FireLoginService,
+              public businessService: PensionerBusinessService) {
   }
 
   ngOnInit() {
-      this.businessService.loadMultiLov('/epensions').subscribe((response: any) => {
-        this.pensionTypeOptions = response;
-      });
-      this.businessService.loadMultiLov('/epensioners').subscribe((response: any) => {
-        this.pensionerTypeOptions = response;
-      });
-      this.businessService.loadMultiLov('/eactivities').subscribe((response: any) => {
-        this.profession = response;
-      });
+    var userData = this.fireLoginService.getUserData();
+    var tipopagador = userData.superEntity.tipoPagador.id || 1;
+    this.businessService.getParameters('/parameters/tipopagador/'+tipopagador+'/opciones').subscribe((response: any) => {
+      this.parameters = response;
+    });
+  }
+
+  public getPensionerOptions() {
+    var key = this.businessService.selectedRow.tipoPension || "0";
+    if (this.parameters.values) {
+      return this.parameters.values.pensionPensionado[key];
+    }
+    return [];
+  }
+
+  public getPensionOptions() {
+    var key = this.businessService.selectedRow.tipoPensionado || "0";
+    if (this.parameters.values) {
+      return this.parameters.values.pensionadoPension[key];
+    }
+    return [];
   }
 
   public save() {
-    this.businessService.save(this.businessService.selectedRow);
+    var row = this.businessService.selectedRow;
+    row.superEntityId =this.fireLoginService.getUserData().superEntity.id;
+    this.businessService.save(row);
   }
-  public update(){
-    this.businessService.update(this.businessService.selectedRow);
+
+  public update() {
+    var row = this.businessService.selectedRow;
+    row.superEntityId =this.fireLoginService.getUserData().superEntity.id;
+    this.businessService.update(row);
   }
-  public delete(){
+
+  public delete() {
     this.businessService.delete(this.businessService.selectedRow);
   }
 

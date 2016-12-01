@@ -200,7 +200,7 @@ public class PagosSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ExpresionLogica returns ExpresionLogica
 	 *
 	 * Constraint:
-	 *     (variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN exp+=ExpresionLogica)?)
+	 *     (variable=TerminalValue (logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+ (conOper=LOGICALCONN exp=ExpresionLogica)?)
 	 */
 	protected void sequence_ExpresionLogica(ISerializationContext context, ExpresionLogica semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -25,9 +25,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
+import co.edu.uniandes.dao.ActividadEconomicaDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
-import co.edu.uniandes.to.PilaSuperEntityTO;
+import co.edu.uniandes.dao.TipoPagadorDAOImpl;
+import co.edu.uniandes.to.SuperEntityTO;
 
 /**
  * Clase para la definicion de WS de la super entidad
@@ -109,23 +111,25 @@ public class SuperEntityManager {
 	@POST
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response postSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
+	public Response postSuperEntity(String theSuperEntity) {
 
 		logger.debug("Start postSuperEntity");
 		
 		logger.debug("Object " + theSuperEntity.toString());
+	
+		SuperEntityTO superTO = new SuperEntityTO();
+		try {
+			final ObjectNode node = new ObjectMapper().readValue(theSuperEntity.toString(), ObjectNode.class);
+			superTO.setNIT(node.get("nit").asText());
+			superTO.setNombre(node.get("name").asText());
+			superTO.setActividadEconomica(node.get("actividadeconomica").asText());
+			superTO.setTipoPagador(node.get("tipoPagador").asText());
+			
+		} catch(IOException e) {
+			return  Response.status(Response.Status.BAD_REQUEST).build();
+		}
 		
-		final ObjectNode node = new ObjectMapper().readValue(theSuperEntity.toString(), ObjectNode.class);
-
-		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
-		
-		superTO.setNIT(node.get("nit").asText());
-		superTO.setNombre(node.get("name").asText());
-		superTO.setCIU(node.get("ciiuCode").asText());
-		
-		logger.debug("Start postSuperEntity Revisando Ciucode:" + node.get("ciiuCode").asText());
-		
-		String id = getSuperEntityLogic().createSuperEntity(superTO);
+		String id = getSuperEntityLogic().create(superTO);
 		
 		String response = "{\"id\":\""+ id +"\"}"; 
 
@@ -138,14 +142,20 @@ public class SuperEntityManager {
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public String putSuperEntity(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
+	public String update(String theSuperEntity) throws JsonParseException, JsonMappingException, IOException {
 		logger.debug("Start putSuperEntity");
 		
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
 		
 		final ObjectNode node = mapper.readValue(theSuperEntity.toString(), ObjectNode.class);
-		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
+		SuperEntityTO superTO = new SuperEntityTO();
+		
+		if(!node.get("id").asText().isEmpty()) {
+			superTO.setIdSuperEntity(node.get("id").asText());
+		} else {
+			return "No se recibio el id del super entity";
+		}
 		
 		if(!node.get("nit").asText().isEmpty()) {
 			superTO.setNIT(node.get("nit").asText());
@@ -155,12 +165,16 @@ public class SuperEntityManager {
 			superTO.setNombre(node.get("name").asText());
 		}
 		
-		if(!node.get("ciiuCode").asText().isEmpty()) {
-			superTO.setCIU(node.get("ciiuCode").asText());
+		if(!node.get("actividadeconomica").asText().isEmpty()) {
+			superTO.setActividadEconomica(node.get("actividadeconomica").asText());
 		}
 		
-		String response = getSuperEntityLogic().updateSuperEntityUser(superTO);
-
+		if(!node.get("tipoPagador").asText().isEmpty()) {
+			superTO.setActividadEconomica(node.get("tipoPagador").asText());
+		}
+		
+		String id = getSuperEntityLogic().update(superTO);
+		String response = "{\"id\":\"" + id + "\"}";
 		logger.debug("result: '"+response+"'");
         logger.debug("End putSuperEntity");
 
@@ -177,7 +191,7 @@ public class SuperEntityManager {
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response deleteSuperEntity(@PathParam("id") String id) {
 		logger.debug("Start deleteSuperEntity"+id);
-		getSuperEntityLogic().removeSuperEntity(Long.parseLong(id));
+		getSuperEntityLogic().delete(Long.parseLong(id));
 		
 		return Response.status(200).entity("ok").build();
 	}
@@ -188,7 +202,8 @@ public class SuperEntityManager {
 	 */
 	public SuperEntityLogic getSuperEntityLogic() {
 		if(logic == null){
-			logic = new SuperEntityLogic(new SuperEntityDAOImpl(), new SuperEntityUserDAOImpl());					
+			logic = new SuperEntityLogic(new SuperEntityDAOImpl(), new SuperEntityUserDAOImpl(), new TipoPagadorDAOImpl(), 
+					new ActividadEconomicaDAOImpl());					
 		}
 		return logic;
 	}

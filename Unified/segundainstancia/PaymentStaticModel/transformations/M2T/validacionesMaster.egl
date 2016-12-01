@@ -1,0 +1,4 @@
+[% 
+	var t:Template:= TemplateFactory.load('validacionesTemplate.egl');
+	t.generate('./generated/validationsDBUtil.java');
+%]

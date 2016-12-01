@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
-import {IPayment} from '../sharedresources/interfaces';
+import {IPayment} from '../commons/sharedresources/interfaces';
 
 @Injectable()
 export class PaymentApiService {
@@ -16,7 +16,7 @@ export class PaymentApiService {
 
      getPayments(userId: String ): Observable<any> {
         var urlGet;
-        
+
         if (userId === '*') {
             urlGet = this.url + 'payment';
         }
@@ -28,8 +28,7 @@ export class PaymentApiService {
 
     getPaymentCalculation(cedula:string): Observable<IPayment> {
         var urlGet;
-        urlGet = this.url + "calculation" + "?id=" + cedula;
-        console.log("getCalculatinData: " + urlGet);
+        urlGet = this.url + "calculation/" + cedula;
         return this.http.get(urlGet).map(this.extractData);
     }
 
@@ -38,14 +37,12 @@ export class PaymentApiService {
         let body;
         // check if empty, before call json
         if (res.text()) {
-            console.error("retorno" + JSON.stringify(res));
             body = res.json();
         }
         return body || {};
     }
 
     handleError(error: any): any {
-        console.error("ERROR REST: " + error);
         return Observable.throw(error || 'Server error');
     }
 }

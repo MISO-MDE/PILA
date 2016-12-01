@@ -2,36 +2,41 @@
   <div class="form-group">
     <h4>Pagos</h4>
     <label>Cédula</label>
-    <input [(ngModel)]="cedula" type="text" class="form-control" (blur)="getEntity()"/>
+    <input [(ngModel)]="businessService.selectedEntity.cedula" type="text" class="form-control" (blur)="getEntity()"/>
     <br><br>
     <div class="currency-group">
       <label>Nombres:</label>
-      <label class="currency-field">{{firstName}}</label>
+      <label class="currency-field">{{businessService.selectedEntity.nombre}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Apellidos:</label>
-      <label class="currency-field">{{lastName}}</label>
+      <label class="currency-field">{{businessService.selectedEntity.apellido}}</label>
+    </div>
+    <br>
+    <div class="currency-group">
+      <label>Salario:</label>
+      <label class="pull-right currency-field">{{businessService.selectedEntity.salario | currency:'USD':true}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Subtotal EPS:</label>
-      <label class="pull-right currency-field">{{subTotal1 | currency:'USD':true}}</label>
+      <label class="pull-right currency-field">{{businessService.selectedRow.subTotal1 | currency:'USD':true}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Subtotal Pension:</label>
-      <label class="pull-right currency-field">{{subTotal2 | currency:'USD':true}}</label>
+      <label class="pull-right currency-field">{{businessService.selectedRow.subTotal2 | currency:'USD':true}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Subtotal Riesgos:</label>
-      <label class="pull-right currency-field">{{subTotal3 | currency:'USD':true}}</label>
+      <label class="pull-right currency-field">{{businessService.selectedRow.subTotal3 | currency:'USD':true}}</label>
     </div>
     <br>
     <div class="currency-group">
       <label>Total:</label>
-      <label class="pull-right currency-field">{{total | currency:'USD':true}}</label>
+      <label class="pull-right currency-field">{{businessService.selectedRow.amount | currency:'USD':true}}</label>
     </div>
     <br>
   </div>

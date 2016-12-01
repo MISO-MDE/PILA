@@ -1708,7 +1708,7 @@ ruleExpresionLogica returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 					}
-					add(
+					set(
 						$current,
 						"variable",
 						lv_variable_0_0,
@@ -1728,7 +1728,7 @@ ruleExpresionLogica returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getExpresionLogicaRule());
 						}
-						addWithLastConsumed(
+						setWithLastConsumed(
 							$current,
 							"logOper",
 							lv_logOper_1_0,
@@ -1747,7 +1747,7 @@ ruleExpresionLogica returns [EObject current=null]
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 							}
-							add(
+							set(
 								$current,
 								"variable2",
 								lv_variable2_2_0,
@@ -1767,7 +1767,7 @@ ruleExpresionLogica returns [EObject current=null]
 							if ($current==null) {
 								$current = createModelElement(grammarAccess.getExpresionLogicaRule());
 							}
-							addWithLastConsumed(
+							setWithLastConsumed(
 								$current,
 								"literal",
 								lv_literal_3_0,
@@ -1806,7 +1806,7 @@ ruleExpresionLogica returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getExpresionLogicaRule());
 						}
-						add(
+						set(
 							$current,
 							"exp",
 							lv_exp_5_0,
@@ -2470,7 +2470,7 @@ RULE_LOGICALCONN : ('&&'|'||');
 
 RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'='|'<>'|'!=');
+RULE_OPERADORLOGICO : ('<'|'>'|'<='|'>='|'=='|'<>'|'!=');
 
 RULE_LBRACE : '{';
 

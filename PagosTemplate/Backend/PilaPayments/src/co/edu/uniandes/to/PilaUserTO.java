@@ -1,5 +1,7 @@
 package co.edu.uniandes.to;
 
+import co.edu.uniandes.entity.SuperEntity;
+
 /**
  * TO para el usuario de pila
  * @author jorge perea
@@ -14,7 +16,7 @@ public class PilaUserTO {
 	/*
 	 * 
 	 */
-	private String superEntityId;
+	private SuperEntity superEntity;
 	
 	/**
 	 * 
@@ -60,15 +62,15 @@ public class PilaUserTO {
 	/**
 	 * @return the superEntityId
 	 */
-	public String getSuperEntityId() {
-		return superEntityId;
+	public SuperEntity getSuperEntity() {
+		return superEntity;
 	}
 
 	/**
 	 * @param superEntityId the superEntityId to set
 	 */
-	public void setSuperEntityId(String superEntityId) {
-		this.superEntityId = superEntityId;
+	public void setSuperEntity(SuperEntity superEntity) {
+		this.superEntity = superEntity;
 	}
 
 	/**

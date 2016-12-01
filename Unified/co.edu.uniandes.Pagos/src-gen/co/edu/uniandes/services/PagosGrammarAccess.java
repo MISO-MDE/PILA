@@ -1181,45 +1181,45 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExpExpresionLogicaParserRuleCall_2_1_0 = (RuleCall)cExpAssignment_2_1.eContents().get(0);
 		
 		//ExpresionLogica:
-		//	variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN
-		//	exp+=ExpresionLogica)?;
+		//	variable=TerminalValue (logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+ (conOper=LOGICALCONN
+		//	exp=ExpresionLogica)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN
-		//exp+=ExpresionLogica)?
+		//variable=TerminalValue (logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+ (conOper=LOGICALCONN
+		//exp=ExpresionLogica)?
 		public Group getGroup() { return cGroup; }
 		
-		//variable+=TerminalValue
+		//variable=TerminalValue
 		public Assignment getVariableAssignment_0() { return cVariableAssignment_0; }
 		
 		//TerminalValue
 		public RuleCall getVariableTerminalValueParserRuleCall_0_0() { return cVariableTerminalValueParserRuleCall_0_0; }
 		
-		//(logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+
+		//(logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//logOper+=OPERADORLOGICO
+		//logOper=OPERADORLOGICO
 		public Assignment getLogOperAssignment_1_0() { return cLogOperAssignment_1_0; }
 		
 		//OPERADORLOGICO
 		public RuleCall getLogOperOPERADORLOGICOTerminalRuleCall_1_0_0() { return cLogOperOPERADORLOGICOTerminalRuleCall_1_0_0; }
 		
-		//(variable2+=TerminalValue | literal+=STRING)
+		//(variable2=TerminalValue | literal=STRING)
 		public Alternatives getAlternatives_1_1() { return cAlternatives_1_1; }
 		
-		//variable2+=TerminalValue
+		//variable2=TerminalValue
 		public Assignment getVariable2Assignment_1_1_0() { return cVariable2Assignment_1_1_0; }
 		
 		//TerminalValue
 		public RuleCall getVariable2TerminalValueParserRuleCall_1_1_0_0() { return cVariable2TerminalValueParserRuleCall_1_1_0_0; }
 		
-		//literal+=STRING
+		//literal=STRING
 		public Assignment getLiteralAssignment_1_1_1() { return cLiteralAssignment_1_1_1; }
 		
 		//STRING
 		public RuleCall getLiteralSTRINGTerminalRuleCall_1_1_1_0() { return cLiteralSTRINGTerminalRuleCall_1_1_1_0; }
 		
-		//(conOper=LOGICALCONN exp+=ExpresionLogica)?
+		//(conOper=LOGICALCONN exp=ExpresionLogica)?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//conOper=LOGICALCONN
@@ -1228,7 +1228,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 		//LOGICALCONN
 		public RuleCall getConOperLOGICALCONNTerminalRuleCall_2_0_0() { return cConOperLOGICALCONNTerminalRuleCall_2_0_0; }
 		
-		//exp+=ExpresionLogica
+		//exp=ExpresionLogica
 		public Assignment getExpAssignment_2_1() { return cExpAssignment_2_1; }
 		
 		//ExpresionLogica
@@ -1993,8 +1993,8 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ExpresionLogica:
-	//	variable+=TerminalValue (logOper+=OPERADORLOGICO (variable2+=TerminalValue | literal+=STRING))+ (conOper=LOGICALCONN
-	//	exp+=ExpresionLogica)?;
+	//	variable=TerminalValue (logOper=OPERADORLOGICO (variable2=TerminalValue | literal=STRING))+ (conOper=LOGICALCONN
+	//	exp=ExpresionLogica)?;
 	public ExpresionLogicaElements getExpresionLogicaAccess() {
 		return pExpresionLogica;
 	}
@@ -2166,7 +2166,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal OPERADORLOGICO:
-	//	'<' | '>' | '<=' | '>=' | '=' | '<>' | '!=';
+	//	'<' | '>' | '<=' | '>=' | '==' | '<>' | '!=';
 	public TerminalRule getOPERADORLOGICORule() {
 		return tOPERADORLOGICO;
 	}

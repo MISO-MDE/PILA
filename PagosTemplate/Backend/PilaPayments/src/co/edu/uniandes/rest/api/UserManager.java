@@ -22,10 +22,12 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import co.edu.uniandes.businesslogic.SuperEntityLogic;
 import co.edu.uniandes.businesslogic.UserLogic;
+import co.edu.uniandes.dao.ActividadEconomicaDAOImpl;
 import co.edu.uniandes.dao.IntermediaryUserDAOImpl;
 import co.edu.uniandes.dao.SuperEntityDAOImpl;
 import co.edu.uniandes.dao.SuperEntityUserDAOImpl;
-import co.edu.uniandes.to.PilaSuperEntityTO;
+import co.edu.uniandes.dao.TipoPagadorDAOImpl;
+import co.edu.uniandes.to.SuperEntityTO;
 import co.edu.uniandes.to.PilaUserTO;
 
 @Path("/users")
@@ -93,12 +95,13 @@ public class UserManager {
 		logger.debug("FirebaseId: '" +node.get("userId").asText() + "'"); //Codigo FirebaseId del Usuario
 		logger.debug("superEntityId: '" +node.get("superEntityId").asText() + "'"); //Super entidad que administra
 		
-		PilaSuperEntityTO superTO = new PilaSuperEntityTO();
+		SuperEntityTO superTO = new SuperEntityTO();
 			
 		superTO.setEmail(node.get("email").asText());
 		superTO.setUsername(node.get("name").asText());
 		superTO.setUserId(node.get("userId").asText()); //Guarda el Firebase Id para consultar luego al hacer login
-		superTO.setIdSuperEntity(node.get("superEntityId").asLong());
+		superTO.setIdSuperEntity(node.get("superEntityId").asText());
+		superTO.setPassword(node.get("password").asText());
 		
 		
 		logger.debug("FirebaseId: SuperTo:" + superTO.getUserId());
@@ -120,7 +123,8 @@ public class UserManager {
 	 */
 	public SuperEntityLogic getSuperEntityLogic() {
 		if(logic == null){
-			logic = new SuperEntityLogic(new SuperEntityDAOImpl(), new SuperEntityUserDAOImpl());
+			logic = new SuperEntityLogic(new SuperEntityDAOImpl(), new SuperEntityUserDAOImpl(), new TipoPagadorDAOImpl(),
+					new ActividadEconomicaDAOImpl());
 		}
 		return logic;
 	}

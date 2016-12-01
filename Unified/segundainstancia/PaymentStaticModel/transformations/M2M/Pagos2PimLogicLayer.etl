@@ -420,11 +420,11 @@ operation getSign(operator: String) {
 
 operation getType(type: String) {
 	switch (type) {
-		case "String": return PagosPim!DataTypes#STRING;
-		case "Date": return PagosPim!DataTypes#DATE;
-		case "Number": return PagosPim!DataTypes#NUMBER;
-		case "Double": return PagosPim!DataTypes#DOUBLE;
-		case "Integer": return PagosPim!DataTypes#INTEGER;
+		case "String": return PagosPim!DataTypes#String;
+		case "Date": return PagosPim!DataTypes#Date;
+		case "Number": return PagosPim!DataTypes#double;
+		case "Double": return PagosPim!DataTypes#double;
+		case "Integer": return PagosPim!DataTypes#int;
 	}
 }
 

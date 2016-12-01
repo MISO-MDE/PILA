@@ -12,7 +12,8 @@ export class PensionerBusinessService {
   public columns: Array<any> = [
     {title: 'Nombre', className: 'text-warning', name: 'nombre'},
     {title: 'Apellido', className: 'text-warning', name: 'apellido'},
-    {title: 'Identificación', name: 'cedula'}
+    {title: 'Identificación', name: 'cedula'},
+    {title: 'Salario', name: 'salario'}
   ];
   public selectedRow: any = {};
 
@@ -30,15 +31,7 @@ export class PensionerBusinessService {
 
   public save(entity: any): void {
 
-    this.toasterService.pop('success', 'Args Title', 'Args Body');
-    var toast : Toast = {
-      type: 'error',
-      title: 'Title text',
-      body: 'Body text',
-      showCloseButton: true
-    };
 
-    this.toasterService.pop(toast);
     this.restApiService.save(entity).subscribe((response: any) => {
       if (response) {
         this.loadList();
@@ -62,9 +55,9 @@ export class PensionerBusinessService {
 
   /***************************************--************************************************/
 
-  public loadMultiLov(lovAddr: string) {
+  public getParameters(lovAddr: string) {
     console.log("Respuesta LOV loadMultiLov:" + lovAddr);
-    return this.restApiService.getMultiLov(lovAddr);
+    return this.restApiService.getParameters(lovAddr);
   }
 
   public isEditingRow() {
@@ -75,11 +68,10 @@ export class PensionerBusinessService {
   }
 
   public selectRow(row) {
-    this.selectedRow = JSON.parse(JSON.stringify(row)); //clona el objeto
-    //this.selectedRow.ciiuCode = parseInt(row.econActivity.id);
-    this.selectedRow.pensionType = row.pensionType.name;
-    this.selectedRow.pensionerType = row.pensionerType.name;
-    this.selectedRow.profession = row.profession.id;
+    this.selectedRow = JSON.parse(JSON.stringify(row));
+    this.selectedRow.tipoPension = row.tipoPension.id;
+    this.selectedRow.tipoPensionado = row.tipoPensionado.id;
+    this.selectedRow.profession = row.profession;
     this.selectedRow.residenceCountry = row.residence.id + "";
     this.selectedRow.familyResidenceCountry = row.familyResidence.id + "";
   }

@@ -3,12 +3,14 @@ package co.edu.uniandes.businesslogic;
 import java.util.Arrays;
 import java.util.List;
 
+import co.edu.uniandes.dao.ActividadEconomicaDAO;
 import co.edu.uniandes.dao.SuperEntityDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
-import co.edu.uniandes.entity.PilaSuperEntity;
-import co.edu.uniandes.entity.PilaUserSuperEntity;
+import co.edu.uniandes.dao.TipoPagadorDAO;
+import co.edu.uniandes.entity.SuperEntity;
+import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.staticmodel.ActividadEconomica;
-import co.edu.uniandes.to.PilaSuperEntityTO;
+import co.edu.uniandes.to.SuperEntityTO;
 
 /**
  * Logica del super entity
@@ -27,25 +29,39 @@ public class SuperEntityLogic {
 	private SuperEntityUserDAO userDAO;
 	
 	/**
+	 * dao de tipo pagador
+	 */
+	private TipoPagadorDAO pagadorDAO;
+	
+	/**
+	 * dao de actividad economica
+	 */
+	private ActividadEconomicaDAO actividadDAO;
+	
+	/**
 	 * Constructor
 	 * @param dao
 	 */
-	public SuperEntityLogic(SuperEntityDAO superDAO, SuperEntityUserDAO userDAO) {
+	public SuperEntityLogic(SuperEntityDAO superDAO, SuperEntityUserDAO userDAO, TipoPagadorDAO pagadorDAO, 
+			ActividadEconomicaDAO actividadDAO) {
 		this.superDAO = superDAO;
 		this.userDAO = userDAO;
+		this.pagadorDAO = pagadorDAO;
+		this.actividadDAO = actividadDAO;
 	}
 	
 	/**
 	 * crea una super entidad
 	 * @param superTO
 	 */
-	public String createSuperEntity(PilaSuperEntityTO superTO) {
+	public String create(SuperEntityTO superTO) {
 		
 		// se crea la super entidad
-		PilaSuperEntity superEntity= new PilaSuperEntity();
+		SuperEntity superEntity= new SuperEntity();
 		superEntity.setNIT(superTO.getNIT());
 		superEntity.setNombre(superTO.getNombre());
-		superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+		superEntity.setActividad(actividadDAO.find(Long.parseLong(superTO.getActividadEconomica())));
+		superEntity.setTipoPagador(pagadorDAO.find(Long.parseLong(superTO.getTipoPagador())));
 		
 		superEntity = superDAO.create(superEntity);	
 		
@@ -57,17 +73,18 @@ public class SuperEntityLogic {
 	 * @param superTO
 	 * @return
 	 */
-	public String createSuperEntityUser(PilaSuperEntityTO superTO) {
+	public String createSuperEntityUser(SuperEntityTO superTO) {
 		
 		String respuesta = "";
 		
 		//se crea el usuario
-		PilaUserSuperEntity user = new PilaUserSuperEntity();
+		UserSuperEntity user = new UserSuperEntity();
 		
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(Long.parseLong(superTO.getIdSuperEntity()));
 		
 		user.setEmail(superTO.getEmail());
 		user.setUsername(superTO.getUsername());
+		user.setPassword(superTO.getPassword());
 		user.setUserId(superTO.getUserId()); // Guarda el id de firebase
 		user.setSuperEntity(superEntity);
 		
@@ -86,12 +103,12 @@ public class SuperEntityLogic {
 	 * Actualiza la superEntidad
 	 * @return super entidad actualizada
 	 */
-	public String updateSuperEntityUser(PilaSuperEntityTO superTO) {
+	public String update(SuperEntityTO superTO) {
 		
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(superTO.getIdSuperEntity());
+		SuperEntity superEntity = superDAO.findSuperEntityById(Long.parseLong(superTO.getIdSuperEntity()));
 		String response = "SuperEntity not updated";
 		if(superEntity != null) {
-		
+			
 			if(!superTO.getNombre().isEmpty()) {
 				superEntity.setNombre(superTO.getNombre());
 			} 
@@ -100,9 +117,14 @@ public class SuperEntityLogic {
 				superEntity.setNIT(superTO.getNIT());
 			}
 			
-			if(!superTO.getCIU().isEmpty()) {
-				superEntity.setActividad(ActividadEconomica.getActividadByCIIU((superTO.getCIU())));
+			if(!superTO.getActividadEconomica().isEmpty()) {
+				superEntity.setActividad(actividadDAO.find(Long.valueOf(superTO.getActividadEconomica())));
 			}
+			
+			if(superTO.getTipoPagador() != null) {
+				superEntity.setTipoPagador(pagadorDAO.find(Long.valueOf(superTO.getTipoPagador())));
+			}
+			
 			
 			superDAO.update(superEntity).getId();
 			response = "SuperEntity updated";
@@ -115,8 +137,8 @@ public class SuperEntityLogic {
 	 * elimina un super entity
 	 * @param id
 	 */
-	public void removeSuperEntity(Long id) {
-		PilaSuperEntity superEntity = superDAO.findSuperEntityById(id);
+	public void delete(Long id) {
+		SuperEntity superEntity = superDAO.findSuperEntityById(id);
 		superDAO.deleteEntity(superEntity);
 	}
 	
@@ -124,7 +146,7 @@ public class SuperEntityLogic {
 	 * retorna las super entidades del sistema
 	 * @return
 	 */
-	public List<PilaSuperEntity> getSuperEntities() {
+	public List<SuperEntity> getSuperEntities() {
 		return superDAO.findAllSuperEntity();
 	}
 	
@@ -132,7 +154,7 @@ public class SuperEntityLogic {
 	 * retorna las super entidad por id
 	 * @return
 	 */
-	public PilaSuperEntity getSuperEntitiesById(long id) {
+	public SuperEntity getSuperEntitiesById(long id) {
 		return superDAO.findSuperEntityById(id);
 	}
 	

@@ -2,9 +2,9 @@ package co.edu.uniandes.businesslogic;
 
 import co.edu.uniandes.dao.IntermediaryUserDAO;
 import co.edu.uniandes.dao.SuperEntityUserDAO;
-import co.edu.uniandes.entity.PilaUser;
-import co.edu.uniandes.entity.PilaUserIntermediary;
-import co.edu.uniandes.entity.PilaUserSuperEntity;
+import co.edu.uniandes.entity.UserPayments;
+import co.edu.uniandes.entity.UserIntermediary;
+import co.edu.uniandes.entity.UserSuperEntity;
 import co.edu.uniandes.to.PilaUserTO;
 
 /**
@@ -39,8 +39,8 @@ public class UserLogic {
 		
 		PilaUserTO resultado = new PilaUserTO();
 		
-		PilaUserSuperEntity user = superDAO.getUser(userId);
-		PilaUserIntermediary user2 = intermediaryDAO.getUser(userId);
+		UserSuperEntity user = superDAO.getUser(userId);
+		UserIntermediary user2 = intermediaryDAO.getUser(userId);
 		
 		if(user != null) {	
 
@@ -48,7 +48,7 @@ public class UserLogic {
 			resultado.setEmail(user.getEmail());
 			resultado.setRoleName("SuperEntity");
 			resultado.setUserId(userId);
-			resultado.setSuperEntityId(user.getSuperEntity().getId().toString());
+			resultado.setSuperEntity(user.getSuperEntity());
 			resultado.setPassword(user.getPassword());
 			
 		} else if(user2 != null) {
@@ -57,7 +57,7 @@ public class UserLogic {
 			resultado.setEmail(user2.getEmail());
 			resultado.setRoleName("Intermediary");
 			resultado.setUserId(userId);
-			resultado.setSuperEntityId("");
+			resultado.setSuperEntity(null);
 			resultado.setPassword(user2.getPassword());
 		}
 		

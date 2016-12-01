@@ -1,8 +1,6 @@
 package co.edu.uniandes.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,11 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import co.edu.uniandes.staticmodel.ActividadEconomica;
-import co.edu.uniandes.staticmodel.TipoPension;
-import co.edu.uniandes.staticmodel.TipoPensionado;
 
 /**
  * representa una entidad asociada a una super entidad de PILA
@@ -69,14 +64,15 @@ public class PilaEntity {
 	private Long paisGrupoFamiliar;
 	
 	/**
-	 * actividad economica
-	 */
-	private ActividadEconomica actividad;
-	
-	/**
 	 * super entidad a la que pertenece
 	 */
-	private PilaSuperEntity superEntidad;
+	@JsonIgnore
+	private SuperEntity superEntidad;
+	
+	/**
+	 * profesion del entity
+	 */
+	private String profesion;
 	
 	/**
 	 * Constructor
@@ -160,7 +156,8 @@ public class PilaEntity {
 	/**
 	 * @return el tipo de pension
 	 */	
-	@Enumerated(EnumType.STRING)
+	@OneToOne
+	@JoinColumn(name="tipo_pension_id")
 	public TipoPension getTipoPension(){
 		return tipoPension;
 	}
@@ -175,7 +172,8 @@ public class PilaEntity {
 	/**
 	 * @return el tipo de pensionado
 	 */	
-	@Enumerated(EnumType.STRING)
+	@OneToOne
+	@JoinColumn(name="tipo_pensionado_id")
 	public TipoPensionado getTipoPensionado(){
 		return tipoPensionado;
 	}
@@ -186,43 +184,27 @@ public class PilaEntity {
 	public void setTipoPensionado(TipoPensionado tipoPensionado){
 		this.tipoPensionado = tipoPensionado;
 	}
-	
-	/**
-	 * @return the actividad
-	 */	
-	@Enumerated(EnumType.STRING)
-	public ActividadEconomica getActividad() {
-		return actividad;
-	}
 
-	/**
-	 * @param actividad the actividad to set
-	 */
-	public void setActividad(ActividadEconomica actividad) {
-		this.actividad = actividad;
-	}
 
 	/**
 	 * @return the superEntidad
 	 */	
 	@ManyToOne
-	@JoinColumn(name="pilaSuperEntity_id")
-	public PilaSuperEntity getSuperEntidad() {
+	@JoinColumn(name="superEntity_id")
+	public SuperEntity getSuperEntidad() {
 		return superEntidad;
 	}
 
 	/**
 	 * @param superEntidad the superEntidad to set
 	 */
-	public void setSuperEntidad(PilaSuperEntity superEntidad) {
+	public void setSuperEntidad(SuperEntity superEntidad) {
 		this.superEntidad = superEntidad;
 	}
 
 	/**
 	 * @return the pais
 	 */	
-	//@OneToOne
-	//@JoinColumn(name="pais_id")
 	public Long getPais() {
 		return pais;
 	}
@@ -237,8 +219,6 @@ public class PilaEntity {
 	/**
 	 * @return the paisGrupoFamiliar
 	 */	
-	//@OneToOne
-	//@JoinColumn(name="pais_idGrupo")
 	public Long getPaisGrupoFamiliar() {
 		return paisGrupoFamiliar;
 	}
@@ -248,5 +228,19 @@ public class PilaEntity {
 	 */
 	public void setPaisGrupoFamiliar(Long paisGrupoFamiliar) {
 		this.paisGrupoFamiliar = paisGrupoFamiliar;
+	}
+
+	/**
+	 * @return the profesion
+	 */
+	public String getProfesion() {
+		return profesion;
+	}
+
+	/**
+	 * @param profesion the profesion to set
+	 */
+	public void setProfesion(String profesion) {
+		this.profesion = profesion;
 	}
 }
