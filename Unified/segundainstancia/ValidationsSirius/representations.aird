@@ -264,7 +264,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irsrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irsrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         </cells>
@@ -273,7 +273,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irtLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irtLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         </cells>
@@ -282,7 +282,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irtrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irtrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         </cells>
@@ -291,7 +291,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-iruLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-iruLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         </cells>
@@ -300,7 +300,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irurd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irurd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         </cells>
@@ -309,7 +309,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irvLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irvLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         </cells>
@@ -318,7 +318,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irvrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irvrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         </cells>
@@ -327,7 +327,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irwLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irwLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         </cells>
@@ -336,7 +336,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irwrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irwrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         </cells>
@@ -345,7 +345,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irxLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irxLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         </cells>
@@ -354,7 +354,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irxrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irxrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         </cells>
@@ -363,7 +363,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-iryLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-iryLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         </cells>
@@ -372,7 +372,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-iryrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-iryrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         </cells>
@@ -381,7 +381,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irzLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irzLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         </cells>
@@ -390,7 +390,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-irzrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-irzrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         </cells>
@@ -399,7 +399,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-ir0Ld3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-ir0Ld3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T5 Beneficiario UPC adicional]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         </cells>
@@ -408,7 +408,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-ir0rd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-ir0rd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         </cells>
@@ -417,7 +417,7 @@
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_A-ir1Ld3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_A-ir1Ld3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         </cells>
@@ -429,169 +429,169 @@
     </ownedRepresentations>
     <ownedRepresentations xmi:type="table:DTable" xmi:id="_FCKSILd3Eea7JejFBEAC3Q" name="pensionPensionado" headerColumnWidth="654">
       <target xmi:type="PaymentsApp:Application" href="Validaciones.paymentsapp#/"/>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSIbd3Eea7JejFBEAC3Q" label="Business Attribute Vejez">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSIbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Vejez">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSIrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSIrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSI7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia riesgo comun">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSI7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia vitalicia riesgo comun">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSJLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSJLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSJbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSJbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia temporal riesgo comun">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSJrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSJrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSJ7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSJ7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSKLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSKLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSKbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia por riesgo laboral">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSKbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia vitalicia por riesgo laboral">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSKrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSKrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSK7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSK7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia temporal por riesgo laboral">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSLLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSLLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSLbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSLbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSLrd3Eea7JejFBEAC3Q" label="[Business Attribute Administración de pensiones, Business Attribute Empleador, Business Attribute Pagador de pensiones, Business Attribute Pensiones de entidades de los regimenes especial y de excepción, Business Attribute Pensionado de régimen de prima media. Sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSLrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSL7d3Eea7JejFBEAC3Q" label="Business Attribute Invalidez riesgo común">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSL7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Invalidez riesgo común">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSMLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSMLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSMbd3Eea7JejFBEAC3Q" label="Business Attribute Invalidez resgo laboral">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSMbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Invalidez resgo laboral">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSMrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSMrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSM7d3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSM7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Jubilacion">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSNLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSNLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSNbd3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion para compartir">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSNbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Jubilacion para compartir">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSNrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSNrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSN7d3Eea7JejFBEAC3Q" label="Business Attribute Sanción">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSN7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Sanción">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSOLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSOLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSObd3Eea7JejFBEAC3Q" label="Business Attribute Convencional">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSObd3Eea7JejFBEAC3Q" label="Business Attribute T7 Convencional">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSOrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSOrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSO7d3Eea7JejFBEAC3Q" label="Business Attribute Convencional para compartir">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSO7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Convencional para compartir">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSPLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSPLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSPbd3Eea7JejFBEAC3Q" label="Business Attribute Gracia">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSPbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Gracia">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSPrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSPrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Pagador de pensiones, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSP7d3Eea7JejFBEAC3Q" label="Business Attribute Por convenio internacional">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSP7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Por convenio internacional">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSQLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSQLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T5 Beneficiario UPC adicional]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSQbd3Eea7JejFBEAC3Q" label="Business Attribute Sentencia Judicial">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSQbd3Eea7JejFBEAC3Q" label="Business Attribute T7 Sentencia Judicial">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSQrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSQrd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Administración de pensiones, Business Attribute T4 Empleador, Business Attribute T4 Pagador de pensiones, Business Attribute T4 Pensiones de entidades de los regimenes especial y de excepción, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
         </cells>
       </lines>
-      <lines xmi:type="table:DLine" xmi:id="_FCKSQ7d3Eea7JejFBEAC3Q" label="Business Attribute Conciliaciones">
+      <lines xmi:type="table:DLine" xmi:id="_FCKSQ7d3Eea7JejFBEAC3Q" label="Business Attribute T7 Conciliaciones">
         <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
-        <cells xmi:type="table:DCell" xmi:id="_FCKSRLd3Eea7JejFBEAC3Q" label="[Business Attribute Empleador]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+        <cells xmi:type="table:DCell" xmi:id="_FCKSRLd3Eea7JejFBEAC3Q" label="[Business Attribute T4 Empleador, Business Attribute T5 Beneficiario UPC adicional, Business Attribute T5 Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv, Business Attribute T5 Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Sin tope máximo de pensión, Business Attribute T5 Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv, Business Attribute T5 Pensionado de riesgos laborales. Tope máximo de 25 smlmv, Business Attribute T5 Pensionado por el empleador sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
           <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
           <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
         </cells>
       </lines>
-      <columns xmi:type="table:DFeatureColumn" xmi:id="_FCKSRbd3Eea7JejFBEAC3Q" cells="_FCKSIrd3Eea7JejFBEAC3Q _FCKSJLd3Eea7JejFBEAC3Q _FCKSJrd3Eea7JejFBEAC3Q _FCKSKLd3Eea7JejFBEAC3Q _FCKSKrd3Eea7JejFBEAC3Q _FCKSLLd3Eea7JejFBEAC3Q _FCKSLrd3Eea7JejFBEAC3Q _FCKSMLd3Eea7JejFBEAC3Q _FCKSMrd3Eea7JejFBEAC3Q _FCKSNLd3Eea7JejFBEAC3Q _FCKSNrd3Eea7JejFBEAC3Q _FCKSOLd3Eea7JejFBEAC3Q _FCKSOrd3Eea7JejFBEAC3Q _FCKSPLd3Eea7JejFBEAC3Q _FCKSPrd3Eea7JejFBEAC3Q _FCKSQLd3Eea7JejFBEAC3Q _FCKSQrd3Eea7JejFBEAC3Q _FCKSRLd3Eea7JejFBEAC3Q" width="1565" featureName="relations">
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_FCKSRbd3Eea7JejFBEAC3Q" cells="_FCKSIrd3Eea7JejFBEAC3Q _FCKSJLd3Eea7JejFBEAC3Q _FCKSJrd3Eea7JejFBEAC3Q _FCKSKLd3Eea7JejFBEAC3Q _FCKSKrd3Eea7JejFBEAC3Q _FCKSLLd3Eea7JejFBEAC3Q _FCKSLrd3Eea7JejFBEAC3Q _FCKSMLd3Eea7JejFBEAC3Q _FCKSMrd3Eea7JejFBEAC3Q _FCKSNLd3Eea7JejFBEAC3Q _FCKSNrd3Eea7JejFBEAC3Q _FCKSOLd3Eea7JejFBEAC3Q _FCKSOrd3Eea7JejFBEAC3Q _FCKSPLd3Eea7JejFBEAC3Q _FCKSPrd3Eea7JejFBEAC3Q _FCKSQLd3Eea7JejFBEAC3Q _FCKSQrd3Eea7JejFBEAC3Q _FCKSRLd3Eea7JejFBEAC3Q" width="322" featureName="relations">
         <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedColumnMappings[name='Tipo%20de%20Pensionado']"/>
       </columns>
       <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']"/>
