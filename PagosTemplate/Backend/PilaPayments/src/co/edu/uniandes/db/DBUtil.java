@@ -35,10 +35,23 @@ public class DBUtil {
 
             //Inserts de riesgo
             st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,1)");
-            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,2)");
-            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,3)");
-            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,4)");
-            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(1,5)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(2,2)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(3,3)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(4,4)");
+            st.executeUpdate("insert into Riesgo (id, claseRiesgo) values(5,5)");
+
+
+            //riesgo actividadeconomica
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (1,1)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (1,2)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (2,3)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (2,4)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (3,5)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (3,6)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (4,7)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (4,8)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (5,9)");
+            st.executeUpdate("insert into riesgo_actividad (riesgo_id, actividadeconomica_id) values (5,10)");
 
 	       //Inserts tabla  Tipo Pensionado;			    
 			
