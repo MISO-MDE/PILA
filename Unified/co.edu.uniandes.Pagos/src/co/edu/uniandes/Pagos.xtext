@@ -216,7 +216,7 @@ terminal THEN:'ENTONCES';
 terminal ELSE: 'SINO';
 terminal RETURN: 'RETORNAR';
 
-terminal TYPE: 'String' | 'Integer' | 'Date' | 'Double';
+terminal TYPE: 'String' | 'Integer' | 'Date' | 'Double' | 'Long';
 
 terminal MULTOP: '*' | '/';
 terminal ADDOP: '+' | '-';

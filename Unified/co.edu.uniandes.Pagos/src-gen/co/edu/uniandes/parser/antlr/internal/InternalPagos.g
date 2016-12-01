@@ -2645,7 +2645,7 @@ RULE_ELSE : 'SINO';
 
 RULE_RETURN : 'RETORNAR';
 
-RULE_TYPE : ('String'|'Integer'|'Date'|'Double');
+RULE_TYPE : ('String'|'Integer'|'Date'|'Double'|'Long');
 
 RULE_MULTOP : ('*'|'/');
 

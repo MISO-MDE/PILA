@@ -22,12 +22,12 @@ intermediary:
 									{superEntityId: Integer := SU.Pagadora#Id}, 
 									{cedula:String}, 
 									{salario:Double}, 
-									{pais:String}, 
-									{grupofamiliar:String}, 
+									{pais:Long}, 
+									{paisGrupoFamiliar:Long}, 
 									{NovedadesMes:Integer := 0}, //Valor calculado con las novedades del mes
 									{DiasNovedad:Integer}, 
 									{AltoRiesgo:String},
-									{RiesgoLaboral:Integer}, //Viene de las tablas de validaciones TABLA 2 
+									{riesgoLaboral:Integer}, //Viene de las tablas de validaciones TABLA 2 
 									{profesion:String}
 						]
 					},
@@ -51,6 +51,7 @@ intermediary:
 							FormAttributes:[
 											{FechaPago:Date}, 
 											{Monto:Double}, 
+											{diasLaborables:Integer :=0},
 											{Status:String}, 
 											{MesPago:Integer},
 											{idEntidad:Integer := PA.Entity#Id}, //Relaciona el Pago o grupo de informacion con el ID del Participante
@@ -65,9 +66,11 @@ intermediary:
 								calculationattributes:
 								[
 									{impuesto:Double := 0.12}, 
-									{pais:Integer := PA.Entity#pais}, 
-									{grupoFamiliar:Integer := PA.Entity#grupofamiliar},
+									{pais:Long := PA.Entity#pais}, 
+									{grupoFamiliar:Long := PA.Entity#paisGrupoFamiliar},
 									{salario:Double := PA.Entity#salario}
+									
+									
 								],
 					
 								/*Condicion y Formula de Pago */
@@ -87,11 +90,9 @@ intermediary:
 								calculationattributes:
 								[	{pensionNormal:Double := 0.16}, 
 									{riesgoLaboral:Integer := 0}, 
-									{TipoNovedad:String := IT.Novedades#TipoNovedad},
-									{diasLaborables:Integer := 20 - DiasNovedad},
 									{salario:Double := PA.Entity#salario},
 									{profesion:String := PA.Entity#profesion},
-									{novedadAbierta:String := IT.Novedades.size()} 
+									{novedadAbierta:Integer := IT.Novedades.size()} 
 								], 
 								calculationrules:
 									SI [riesgoLaboral == 4 || riesgoLaboral == 5] ENTONCES
@@ -145,6 +146,7 @@ intermediary:
 								/*Variables y Constantes Auxiliares del calculo*/
 								calculationattributes:
 								[	// Porcentajes de riesgo. 
+									{salario:Double := PA.Entity#salario},
 									{riesgoLaboral:Integer:=0},
 									{RiesgoI:Double := 0.522/100}, 
 									{RiesgoII:Double := 1.044/100},
@@ -155,23 +157,23 @@ intermediary:
 					
 								/*Condicion y Formula de Pago */
 								calculationrules:
-									SI [RiesgoLaboral == 1] ENTONCES
+									SI [riesgoLaboral == 1] ENTONCES
 									{
 										RETORNAR: salario * RiesgoI
 									}	
-									SI [RiesgoLaboral == 2] ENTONCES
+									SI [riesgoLaboral == 2] ENTONCES
 									{
 										RETORNAR: salario * RiesgoII
 									}	
-									SI [RiesgoLaboral == 3] ENTONCES
+									SI [riesgoLaboral == 3] ENTONCES
 									{
 										RETORNAR: salario * RiesgoIII
 									}	
-									SI [RiesgoLaboral == 4] ENTONCES
+									SI [riesgoLaboral == 4] ENTONCES
 									{
 										RETORNAR: salario * RiesgoIV
 									}
-									SI [RiesgoLaboral == 5] ENTONCES
+									SI [riesgoLaboral == 5] ENTONCES
 									{
 										RETORNAR: salario * RiesgoV
 									}		

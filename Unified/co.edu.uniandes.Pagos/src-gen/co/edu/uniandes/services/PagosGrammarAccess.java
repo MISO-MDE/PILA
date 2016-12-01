@@ -2339,7 +2339,7 @@ public class PagosGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal TYPE:
-	//	'String' | 'Integer' | 'Date' | 'Double';
+	//	'String' | 'Integer' | 'Date' | 'Double' | 'Long';
 	public TerminalRule getTYPERule() {
 		return tTYPE;
 	}

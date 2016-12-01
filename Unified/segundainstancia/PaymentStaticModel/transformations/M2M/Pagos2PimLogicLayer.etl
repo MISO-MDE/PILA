@@ -426,6 +426,7 @@ operation getType(type: String) {
 		case "Number": return PagosPim!DataTypes#double;
 		case "Double": return PagosPim!DataTypes#double;
 		case "Integer": return PagosPim!DataTypes#int;
+		case "Long": return PagosPim!DataTypes#long;
 	}
 }
 

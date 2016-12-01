@@ -14,6 +14,7 @@ import co.edu.uniandes.staticmodel.TipoNovedad;
 public class [%=formulaRoot.name%] {
 	
 	private long entityId;
+	int diasLaborables=0;
 	
 	PilaEntity entity;
 	
@@ -27,25 +28,42 @@ public class [%=formulaRoot.name%] {
 	public void setEntityId(long entityId) {
 		this.entityId = entityId;
 	}
+	
 	[% 
 		for (eachMethod:PagosPim!Operation in formulaRoot->operations) {
 			addMethod(eachMethod);
 		}
 	%]
 
+	//DesarrollarRiesgo tabla 2
+	private int getRiegoTabla2(Long activity) {		
+		return RiesgoLogic.getRiesgoLogic().findByActividadEconomica(activity).getClaseRiesgo();
+	}
 	
+	void processNovedadesSinProcesar(List<Novedad> novedades) {
+		
+		for(Novedad novedad : novedades) {
+			
+			diasLaborables += novedad.getCantidadDiasHabiles();
+			
+			novedad.setEstado(EstadoNovedad.PROCESADA);
+			EventLogic.getEventLogic().update(novedad);
+		}
+		
+	}		
 }
 
 
 [%
 operation addMethod(calcMethod) {
 %]
-	public double [%=calcMethod.name%] {
+	public double [%=calcMethod.name%]() {
 		[%
 			addStaticData(calcMethod.name);		
 			addLocalVars(calcMethod);
 			addStaticDataPostVar(calcMethod.name);
 			addMethodBody(calcMethod->body);
+			addStaticSuffixData(calcMethod.name);	
 		%]
 	}
 [%	
@@ -238,5 +256,14 @@ operation getComplexType(s) {
 	[%
 		}
 	}	
+}
+%]
+
+[% operation addStaticSuffixData(method){
+	if (method = "calculateRiesgosLaborales") {
+	%]
+			return 0;
+	[%
+	}
 }
 %]

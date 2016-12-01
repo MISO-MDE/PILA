@@ -46,10 +46,10 @@
 
     --Riesgo
 	insert into Riesgo (id, claseRiesgo) values(1,1);
-	insert into Riesgo (id, claseRiesgo) values(1,2);
-	insert into Riesgo (id, claseRiesgo) values(1,3);
-	insert into Riesgo (id, claseRiesgo) values(1,4);
-	insert into Riesgo (id, claseRiesgo) values(1,5);
+	insert into Riesgo (id, claseRiesgo) values(2,2);
+	insert into Riesgo (id, claseRiesgo) values(3,3);
+	insert into Riesgo (id, claseRiesgo) values(4,4);
+	insert into Riesgo (id, claseRiesgo) values(5,5);
 
 	--TipoPagador
 	insert into TipoPagador (id, codigo, descripcion) values(1,'01','Empleador');
