@@ -14,11 +14,11 @@ export class PensionerFormComponent implements OnInit {
 
   public countryOptions: Array<any> = [
     {
-      'id': "Colombia",
+      'id': "12",
       'name': "Colombia"
     },
     {
-      'id': "Exterior",
+      'id': "13",
       'name': "Exterior"
     }
   ];

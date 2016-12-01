@@ -799,6 +799,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HysxcLcGEeaA8M1VCeqDrw" description="_Hyn48LcGEeaA8M1VCeqDrw" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HysxcbcGEeaA8M1VCeqDrw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_HysxcrcGEeaA8M1VCeqDrw" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -812,6 +813,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HyxC47cGEeaA8M1VCeqDrw" description="_HyxC4LcGEeaA8M1VCeqDrw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HyxC5LcGEeaA8M1VCeqDrw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_HyxC5bcGEeaA8M1VCeqDrw" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -825,6 +827,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HyyRALcGEeaA8M1VCeqDrw" description="_HyxC4LcGEeaA8M1VCeqDrw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HyyRAbcGEeaA8M1VCeqDrw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_HyyRArcGEeaA8M1VCeqDrw" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -838,6 +841,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Hy0GMLcGEeaA8M1VCeqDrw" description="_HyxC4LcGEeaA8M1VCeqDrw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Hy0GMbcGEeaA8M1VCeqDrw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_Hy0GMrcGEeaA8M1VCeqDrw" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>
@@ -890,6 +894,7 @@
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Hy7a8LcGEeaA8M1VCeqDrw" description="_HyxC4LcGEeaA8M1VCeqDrw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Hy7a8bcGEeaA8M1VCeqDrw" showIcon="false">
             <customFeatures>labelSize</customFeatures>
+            <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_Hy7a8rcGEeaA8M1VCeqDrw" showIcon="false" labelColor="39,76,114">
             <customFeatures>labelSize</customFeatures>

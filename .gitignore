@@ -1,5 +1,6 @@
 .idea/
 .metadata/
+.project
 
 PagosTemplate/Frontend/node_modules
 PagosTemplate/Backend/PilaPayments/bin

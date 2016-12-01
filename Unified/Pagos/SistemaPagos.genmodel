@@ -12,13 +12,20 @@
     <genClasses ecoreClass="SistemaPagos.ecore#//Intermediary">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Intermediary/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/superentities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/businessValue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/intermediaryAttributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//Intermediary/templates"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="SistemaPagos.ecore#//BusinessValue"/>
     <genClasses ecoreClass="SistemaPagos.ecore#//SuperEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//SuperEntity/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//SuperEntity/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/attLists"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/participants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//SuperEntity/businessFields"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//BusinessString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessString/value"/>
     </genClasses>
     <genClasses ecoreClass="SistemaPagos.ecore#//Participant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//Participant/name"/>
@@ -75,6 +82,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessAttribute/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttribute/exp"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttribute/relations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttribute/businessValue"/>
     </genClasses>
     <genClasses ecoreClass="SistemaPagos.ecore#//TerminalValue">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//TerminalValue/variable"/>
@@ -92,7 +100,12 @@
     </genClasses>
     <genClasses ecoreClass="SistemaPagos.ecore#//BusinessAttributeCollection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//BusinessAttributeCollection/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttributeCollection/businessattributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//BusinessAttributeCollection/businessAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="SistemaPagos.ecore#//DataForm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SistemaPagos.ecore#//DataForm/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//DataForm/superEntityAttributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SistemaPagos.ecore#//DataForm/businessFields"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
