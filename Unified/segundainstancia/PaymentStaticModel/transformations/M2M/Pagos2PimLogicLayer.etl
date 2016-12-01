@@ -295,6 +295,9 @@ rule TerminalValue2TerminalValue
 		t.method = s.method;
 		t.attribute = s.variable.equivalent();
 		t.parent = s.parent;
+		if (t.parent.isDefined()) {
+			t.value = t.parent.name; 
+		}
 	}
 
 rule Adicion2Add

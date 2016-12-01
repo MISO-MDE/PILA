@@ -10,10 +10,9 @@ import co.edu.uniandes.staticmodel.TipoNovedad;
 public class CalculationFormula {
 	
 	private long entityId;
-	PilaEntity entity;
+	int diasLaborables=0;
 	
-	private int diasLaborables = 0;
-	private String tipoNovedad = "";
+	PilaEntity entity;
 	
 	public CalculationFormula(PilaEntity entity) {
 		this.entity = entity;
@@ -26,79 +25,125 @@ public class CalculationFormula {
 		this.entityId = entityId;
 	}
 	
-	public double getFormula1() {
-		double impuesto = 0.12;
-		if (entity.getPaisGrupoFamiliar() != 12 && entity.getPais() != 12)
-			return 0;
-		else 
-			return this.entity.getSalario() * impuesto;
-	}
-	
-	public double getFormula2() {
-		double pensionNormal = 0.16;
-		int riesgoLaboral = 0; 
+	public double calculateEPS() {
+		double impuesto=0.12;
+		long pais=entity.getPais();
+		long grupoFamiliar=entity.getPaisGrupoFamiliar();
+		double salario=entity.getSalario();
+				
+		if (pais !=12 &&grupoFamiliar !=12){
 		
+			return 0;
+		}
+		else {
+	
+			return salario*impuesto;
+		}
+	}
+		
+	public double calculatePension() {
 		List<Novedad> novedades = EventLogic.getEventLogic().findByEntityTipo(entityId, TipoNovedad.SLN);
 		processNovedadesSinProcesar(novedades);
-		
+		double pensionNormal=0.16;
+		int riesgoLaboral=0;
+		double salario=entity.getSalario();
+		String profesion=entity.getProfesion();
+		int novedadAbierta=novedades.size();
 		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
-		//Calculo por labor
-		if (riesgoLaboral == 4 && riesgoLaboral == 5) 
-			return this.entity.getSalario() * 0.26;
-		else
-		if (entity.getProfesion().equals("Congresista")) 	
-			return this.entity.getSalario() * 0.255;
-		else
-			if (entity.getProfesion().equals("CTI")) 	
-				return this.entity.getSalario() * 0.35;
-			else
-				if (entity.getProfesion().equals("Aviador")) 	
-					return this.entity.getSalario() * 0.21;
-		//Novedades
-		if (novedades.size() == 0)
-			return this.entity.getSalario() * pensionNormal;
-		else 
-			if (diasLaborables >=3 && diasLaborables < 20 && tipoNovedad.equals("SLN"))
-				return this.entity.getSalario() * 0.12;
-			else
-				return 0;
-	}
+				
+		if (riesgoLaboral ==4 ||riesgoLaboral ==5){
+		
+			return salario*0.26;
+		}
+		else {
+				
+		if (profesion.equals("Congresista")){
+		
+			return salario*0.255;
+		}
+		else {
+				
+		if (profesion.equals("CTI")){
+		
+			return salario*0.35;
+		}
+		else {
+				
+		if (profesion.equals("Aviador")){
+		
+			return salario*0.21;
+		}
+		}
+		}
+		}
+				
+		if (novedadAbierta ==0){
+		
+			return salario*pensionNormal;
+		}
+		else {
+				
+		if (diasLaborables >=7 &&diasLaborables <=20){
+		
+			return salario*pensionNormal;
+		}
+		else {
+				
+		if (diasLaborables >=3 &&diasLaborables <7){
+		
+			return salario*0.12;
+		}
+		else {
 	
-	public double getFormula3() {
-		int riesgoLaboral = 0;
-		riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
-		
-		double calculo = 0;
-		
-		double RiesgoI = 0.522/100; 
-		double RiesgoII = 1.044/100;
-		double RiesgoIII = 2.436/100;
-		double RiesgoIV = 4.350/100;
-		double RiesgoV = 6.960/100;
-		
-		if (riesgoLaboral == 1)
-		{
-			calculo = this.entity.getSalario() * RiesgoI;
+			return 0;
 		}
-		if (riesgoLaboral == 2) 
-		{
-			calculo = this.entity.getSalario() * RiesgoII;
-		}	
-		if (riesgoLaboral == 3) 
-		{
-			calculo = this.entity.getSalario() * RiesgoIII;
-		}	
-		if (riesgoLaboral == 4) 
-		{
-			calculo = this.entity.getSalario() * RiesgoIV;
 		}
-		if (riesgoLaboral == 5) 
-		{
-			calculo = this.entity.getSalario() * RiesgoV;
 		}
-		return calculo;
 	}
+		
+	public double calculateRiesgosLaborales() {
+		double salario=entity.getSalario();
+		int riesgoLaboral=0;
+		double RiesgoI=0.522/100;
+		double RiesgoII=1.044/100;
+		double RiesgoIII=2.436/100;
+		double RiesgoIV=4.350/100;
+		double RiesgoV=6.960/100;
+			riesgoLaboral = getRiegoTabla2(entity.getSuperEntidad().getActividad().getId());
+				
+		if (riesgoLaboral ==1){
+		
+			return salario*RiesgoI;
+		}
+				
+		if (riesgoLaboral ==2){
+		
+			return salario*RiesgoII;
+		}
+				
+		if (riesgoLaboral ==3){
+		
+			return salario*RiesgoIII;
+		}
+				
+		if (riesgoLaboral ==4){
+		
+			return salario*RiesgoIV;
+		}
+				
+		if (riesgoLaboral ==5){
+		
+			return salario*RiesgoV;
+		}
+			return 0;
+	}
+		
+	public double getTotal() {
 	
+			return    calculateEPS()+ calculatePension()+ calculateRiesgosLaborales();
+	}
+		
+
 	//DesarrollarRiesgo tabla 2
 	private int getRiegoTabla2(Long activity) {		
 		return RiesgoLogic.getRiesgoLogic().findByActividadEconomica(activity).getClaseRiesgo();
@@ -114,6 +159,7 @@ public class CalculationFormula {
 			EventLogic.getEventLogic().update(novedad);
 		}
 		
-	}
-	
+	}		
 }
+
+

@@ -5,7 +5,8 @@
 	var fm:Template:= TemplateFactory.load('./Formula/genformula.egl');
 	
 	//t.generate('./generated/index.html');
-	fm.generate('./generated/Formula.java');
+	fm.generate('../../../../PagosTemplate/Backend/PilaPayments/src/co/edu/uniandes/businesslogic/CalculationFormula.java');
 	
 	//generateFrontEnd();
 %]
+

@@ -32,6 +32,9 @@ public class [%=formulaRoot.name%] {
 	[% 
 		for (eachMethod:PagosPim!Operation in formulaRoot->operations) {
 			addMethod(eachMethod);
+		%]
+		
+		[%	
 		}
 	%]
 
@@ -193,8 +196,7 @@ operation getLogicalExp(logExp) {
 					%][%=valueExp.parent.name.firstToLowerCase()%].[%=valueExp.method%][%
 				}
 				else {
-				%]
-					[%=valueExp.parent.name.firstToLowerCase()%][%
+					%] calculate[%=valueExp.parent.name%]()[%
 				}
 			}
 		}

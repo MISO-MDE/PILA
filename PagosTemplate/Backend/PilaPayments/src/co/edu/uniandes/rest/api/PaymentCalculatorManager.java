@@ -57,10 +57,10 @@ public class PaymentCalculatorManager {
  		
 			CalculationFormula formulaCalculation = new CalculationFormula(theEntity);
 			
-			calculo1 = formulaCalculation.getFormula1();
-			calculo2 = formulaCalculation.getFormula2();
-			calculo3 = formulaCalculation.getFormula3();
-			total = calculo1 + calculo2 + calculo3;
+			calculo1 = formulaCalculation.calculateEPS();
+			calculo2 = formulaCalculation.calculatePension();
+			calculo3 = formulaCalculation.calculateRiesgosLaborales();
+			total = formulaCalculation.getTotal();
 		}
 		else {
 			errorCondition = validations;
