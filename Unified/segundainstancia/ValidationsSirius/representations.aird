@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PaymentsApp="http://www.edu.co/uniandes/PaymentsApp" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description" xmi:id="_30Gx4Ld1Eea7JejFBEAC3Q" selectedViews="_DDmJILd2Eea7JejFBEAC3Q" version="11.0.0.201604141600">
+  <semanticResources>Validaciones.paymentsapp</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" xmi:id="_DDmJILd2Eea7JejFBEAC3Q">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']"/>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_DEN0MLd2Eea7JejFBEAC3Q" name="Crear valores Tipo Pension LOV" headerColumnWidth="723">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0"/>
+      <lines xmi:type="table:DLine" xmi:id="_DEObQLd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObQbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de prima media. Sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObQrd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObQ7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de riesgos laborales. Tope máximo de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObRLd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado por el empleador. Con tope maximo de pension de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObRbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado por el empleador sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObRrd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObR7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEObSLd2Eea7JejFBEAC3Q" label="Business Attribute Beneficiario UPC adicional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_DEZaYLd2Eea7JejFBEAC3Q" name="Crear valores Tipo Pension LOV">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1"/>
+      <lines xmi:type="table:DLine" xmi:id="_DEZaYbd2Eea7JejFBEAC3Q" label="Business Attribute Empleador">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEZaYrd2Eea7JejFBEAC3Q" label="Business Attribute Administración de pensiones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEaBcLd2Eea7JejFBEAC3Q" label="Business Attribute Pagador de pensiones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEaBcbd2Eea7JejFBEAC3Q" label="Business Attribute Pensiones de entidades de los regimenes especial y de excepción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_DEdr0Ld2Eea7JejFBEAC3Q" name="Crear valores Tipo Pension LOV">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2"/>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr0bd2Eea7JejFBEAC3Q" label="Business Attribute Vejez">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr0rd2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr07d2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr1Ld2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr1bd2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr1rd2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr17d2Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr2Ld2Eea7JejFBEAC3Q" label="Business Attribute Invalidez riesgo común">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr2bd2Eea7JejFBEAC3Q" label="Business Attribute Invalidez resgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr2rd2Eea7JejFBEAC3Q" label="Business Attribute Jubilacion">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr27d2Eea7JejFBEAC3Q" label="Business Attribute Jubilacion para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr3Ld2Eea7JejFBEAC3Q" label="Business Attribute Sanción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr3bd2Eea7JejFBEAC3Q" label="Business Attribute Convencional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr3rd2Eea7JejFBEAC3Q" label="Business Attribute Convencional para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr37d2Eea7JejFBEAC3Q" label="Business Attribute Gracia">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr4Ld2Eea7JejFBEAC3Q" label="Business Attribute Por convenio internacional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr4bd2Eea7JejFBEAC3Q" label="Business Attribute Sentencia Judicial">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_DEdr4rd2Eea7JejFBEAC3Q" label="Business Attribute Conciliaciones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']/@ownedLineMappings[name='t6atipopension']"/>
+      </lines>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Crear%20valores%20Tipo%20Pension%20LOV']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_YliAkLd2Eea7JejFBEAC3Q" name="pensionadoPagador" headerColumnWidth="723">
+      <target xmi:type="PaymentsApp:Application" href="Validaciones.paymentsapp#/"/>
+      <lines xmi:type="table:DLine" xmi:id="_YliAkbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAkrd2Eea7JejFBEAC3Q" label="[Business Attribute Empleador, Business Attribute Administración de pensiones, Business Attribute Pagador de pensiones]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAk7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de prima media. Sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAlLd2Eea7JejFBEAC3Q" label="[Business Attribute Administración de pensiones, Business Attribute Pagador de pensiones]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAlbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAlrd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAl7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de riesgos laborales. Tope máximo de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAmLd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAmbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado por el empleador. Con tope maximo de pension de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAmrd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAm7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado por el empleador sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAnLd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAnbd2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAnrd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAn7d2Eea7JejFBEAC3Q" label="Business Attribute Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAoLd2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_YliAobd2Eea7JejFBEAC3Q" label="Business Attribute Beneficiario UPC adicional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedLineMappings[name='T3E%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_YliAord2Eea7JejFBEAC3Q" label="[]" column="_YliAo7d2Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        </cells>
+      </lines>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_YliAo7d2Eea7JejFBEAC3Q" cells="_YliAkrd2Eea7JejFBEAC3Q _YliAlLd2Eea7JejFBEAC3Q _YliAlrd2Eea7JejFBEAC3Q _YliAmLd2Eea7JejFBEAC3Q _YliAmrd2Eea7JejFBEAC3Q _YliAnLd2Eea7JejFBEAC3Q _YliAnrd2Eea7JejFBEAC3Q _YliAoLd2Eea7JejFBEAC3Q _YliAord2Eea7JejFBEAC3Q" width="649" featureName="relations">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']/@ownedColumnMappings[name='T3E%20Tipo%20de%20Pagador']"/>
+      </columns>
+      <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203%20Edition']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_A-irsLd3Eea7JejFBEAC3Q" name="pensionPagador" headerColumnWidth="654">
+      <target xmi:type="PaymentsApp:Application" href="Validaciones.paymentsapp#/"/>
+      <lines xmi:type="table:DLine" xmi:id="_A-irsbd3Eea7JejFBEAC3Q" label="Business Attribute Vejez">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irsrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irs7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irtLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irtbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irtrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irt7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-iruLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irubd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irurd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-iru7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irvLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irvbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irvrd3Eea7JejFBEAC3Q" label="[Business Attribute Administración de pensiones, Business Attribute Empleador, Business Attribute Pagador de pensiones, Business Attribute Pensiones de entidades de los regimenes especial y de excepción, Business Attribute Pensionado de régimen de prima media. Sin tope máximo de pensión]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irv7d3Eea7JejFBEAC3Q" label="Business Attribute Invalidez riesgo común">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irwLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irwbd3Eea7JejFBEAC3Q" label="Business Attribute Invalidez resgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irwrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irw7d3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irxLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irxbd3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irxrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irx7d3Eea7JejFBEAC3Q" label="Business Attribute Sanción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-iryLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irybd3Eea7JejFBEAC3Q" label="Business Attribute Convencional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-iryrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-iry7d3Eea7JejFBEAC3Q" label="Business Attribute Convencional para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irzLd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irzbd3Eea7JejFBEAC3Q" label="Business Attribute Gracia">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-irzrd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-irz7d3Eea7JejFBEAC3Q" label="Business Attribute Por convenio internacional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-ir0Ld3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-ir0bd3Eea7JejFBEAC3Q" label="Business Attribute Sentencia Judicial">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-ir0rd3Eea7JejFBEAC3Q" label="[]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_A-ir07d3Eea7JejFBEAC3Q" label="Business Attribute Conciliaciones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedLineMappings[name='T6E%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_A-ir1Ld3Eea7JejFBEAC3Q" label="[Business Attribute Empleador]" column="_A-ir1bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        </cells>
+      </lines>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_A-ir1bd3Eea7JejFBEAC3Q" cells="_A-irsrd3Eea7JejFBEAC3Q _A-irtLd3Eea7JejFBEAC3Q _A-irtrd3Eea7JejFBEAC3Q _A-iruLd3Eea7JejFBEAC3Q _A-irurd3Eea7JejFBEAC3Q _A-irvLd3Eea7JejFBEAC3Q _A-irvrd3Eea7JejFBEAC3Q _A-irwLd3Eea7JejFBEAC3Q _A-irwrd3Eea7JejFBEAC3Q _A-irxLd3Eea7JejFBEAC3Q _A-irxrd3Eea7JejFBEAC3Q _A-iryLd3Eea7JejFBEAC3Q _A-iryrd3Eea7JejFBEAC3Q _A-irzLd3Eea7JejFBEAC3Q _A-irzrd3Eea7JejFBEAC3Q _A-ir0Ld3Eea7JejFBEAC3Q _A-ir0rd3Eea7JejFBEAC3Q _A-ir1Ld3Eea7JejFBEAC3Q" width="1565" featureName="relations">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']/@ownedColumnMappings[name='T6E%20Tipo%20de%20Pagador']"/>
+      </columns>
+      <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206%20Edition']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_FCKSILd3Eea7JejFBEAC3Q" name="pensionPensionado" headerColumnWidth="654">
+      <target xmi:type="PaymentsApp:Application" href="Validaciones.paymentsapp#/"/>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSIbd3Eea7JejFBEAC3Q" label="Business Attribute Vejez">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSIrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSI7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSJLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSJbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSJrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSJ7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSKLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSKbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia vitalicia por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSKrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSK7d3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSLLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSLbd3Eea7JejFBEAC3Q" label="Business Attribute Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSLrd3Eea7JejFBEAC3Q" label="[Business Attribute Administración de pensiones, Business Attribute Empleador, Business Attribute Pagador de pensiones, Business Attribute Pensiones de entidades de los regimenes especial y de excepción, Business Attribute Pensionado de régimen de prima media. Sin tope máximo de pensión]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSL7d3Eea7JejFBEAC3Q" label="Business Attribute Invalidez riesgo común">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSMLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSMbd3Eea7JejFBEAC3Q" label="Business Attribute Invalidez resgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSMrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSM7d3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSNLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSNbd3Eea7JejFBEAC3Q" label="Business Attribute Jubilacion para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSNrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSN7d3Eea7JejFBEAC3Q" label="Business Attribute Sanción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSOLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSObd3Eea7JejFBEAC3Q" label="Business Attribute Convencional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSOrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSO7d3Eea7JejFBEAC3Q" label="Business Attribute Convencional para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSPLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSPbd3Eea7JejFBEAC3Q" label="Business Attribute Gracia">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSPrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSP7d3Eea7JejFBEAC3Q" label="Business Attribute Por convenio internacional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSQLd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSQbd3Eea7JejFBEAC3Q" label="Business Attribute Sentencia Judicial">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSQrd3Eea7JejFBEAC3Q" label="[]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_FCKSQ7d3Eea7JejFBEAC3Q" label="Business Attribute Conciliaciones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_FCKSRLd3Eea7JejFBEAC3Q" label="[Business Attribute Empleador]" column="_FCKSRbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        </cells>
+      </lines>
+      <columns xmi:type="table:DFeatureColumn" xmi:id="_FCKSRbd3Eea7JejFBEAC3Q" cells="_FCKSIrd3Eea7JejFBEAC3Q _FCKSJLd3Eea7JejFBEAC3Q _FCKSJrd3Eea7JejFBEAC3Q _FCKSKLd3Eea7JejFBEAC3Q _FCKSKrd3Eea7JejFBEAC3Q _FCKSLLd3Eea7JejFBEAC3Q _FCKSLrd3Eea7JejFBEAC3Q _FCKSMLd3Eea7JejFBEAC3Q _FCKSMrd3Eea7JejFBEAC3Q _FCKSNLd3Eea7JejFBEAC3Q _FCKSNrd3Eea7JejFBEAC3Q _FCKSOLd3Eea7JejFBEAC3Q _FCKSOrd3Eea7JejFBEAC3Q _FCKSPLd3Eea7JejFBEAC3Q _FCKSPrd3Eea7JejFBEAC3Q _FCKSQLd3Eea7JejFBEAC3Q _FCKSQrd3Eea7JejFBEAC3Q _FCKSRLd3Eea7JejFBEAC3Q" width="1565" featureName="relations">
+        <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']/@ownedColumnMappings[name='Tipo%20de%20Pensionado']"/>
+      </columns>
+      <description xmi:type="description_1:EditionTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208%20Edition']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_OMLKoLd3Eea7JejFBEAC3Q" name="pensionadoPagador" headerColumnWidth="625">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0"/>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKobd3Eea7JejFBEAC3Q" label="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_OMLKord3Eea7JejFBEAC3Q" label="X" column="_OMLKr7d3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_OMLKo7d3Eea7JejFBEAC3Q" label="X" column="_OMLKsLd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_OMLKpLd3Eea7JejFBEAC3Q" label="X" column="_OMLKsbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@intersection.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKpbd3Eea7JejFBEAC3Q" label="Pensionado de régimen de prima media. Sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+        <cells xmi:type="table:DCell" xmi:id="_OMLKprd3Eea7JejFBEAC3Q" label="X" column="_OMLKsLd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_OMLKp7d3Eea7JejFBEAC3Q" label="X" column="_OMLKsbd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@intersection.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKqLd3Eea7JejFBEAC3Q" label="Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKqbd3Eea7JejFBEAC3Q" label="Pensionado de riesgos laborales. Tope máximo de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKqrd3Eea7JejFBEAC3Q" label="Pensionado por el empleador. Con tope maximo de pension de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKq7d3Eea7JejFBEAC3Q" label="Pensionado por el empleador sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKrLd3Eea7JejFBEAC3Q" label="Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKrbd3Eea7JejFBEAC3Q" label="Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_OMLKrrd3Eea7JejFBEAC3Q" label="Beneficiario UPC adicional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedLineMappings[name='T3%20Tipo%20de%20Pensionado']"/>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_OMLKr7d3Eea7JejFBEAC3Q" label="Empleador" cells="_OMLKord3Eea7JejFBEAC3Q" width="100">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_OMLKsLd3Eea7JejFBEAC3Q" label="Administración de pensiones" cells="_OMLKo7d3Eea7JejFBEAC3Q _OMLKprd3Eea7JejFBEAC3Q" width="196">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_OMLKsbd3Eea7JejFBEAC3Q" label="Pagador de pensiones" cells="_OMLKpLd3Eea7JejFBEAC3Q _OMLKp7d3Eea7JejFBEAC3Q" width="159">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_OMLKsrd3Eea7JejFBEAC3Q" label="Pensiones de entidades de los regimenes especial y de excepción" width="384">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']/@ownedColumnMappings.0"/>
+      </columns>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%203']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_WKAj4Ld3Eea7JejFBEAC3Q" name="pensionPagador" headerColumnWidth="556">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2"/>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj4bd3Eea7JejFBEAC3Q" label="Vejez">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj4rd3Eea7JejFBEAC3Q" label="Sobrevivencia vitalicia riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj47d3Eea7JejFBEAC3Q" label="Sobrevivencia temporal riesgo comun">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj5Ld3Eea7JejFBEAC3Q" label="Sobrevivencia temporal riesgo comun, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj5bd3Eea7JejFBEAC3Q" label="Sobrevivencia vitalicia por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj5rd3Eea7JejFBEAC3Q" label="Sobrevivencia temporal por riesgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj57d3Eea7JejFBEAC3Q" label="Sobrevivencia temporal por riesgo laboral, Conyugue o compañera(o) menor de 30 años sin hijos">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_WKAj6Ld3Eea7JejFBEAC3Q" label="X" column="_WKAj-Ld3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_WKAj6bd3Eea7JejFBEAC3Q" label="X" column="_WKAj-bd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_WKAj6rd3Eea7JejFBEAC3Q" label="X" column="_WKAj-rd3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@intersection.0"/>
+        </cells>
+        <cells xmi:type="table:DCell" xmi:id="_WKAj67d3Eea7JejFBEAC3Q" label="X" column="_WKAj-7d3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.6"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@intersection.0"/>
+        </cells>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj7Ld3Eea7JejFBEAC3Q" label="Invalidez riesgo común">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj7bd3Eea7JejFBEAC3Q" label="Invalidez resgo laboral">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj7rd3Eea7JejFBEAC3Q" label="Jubilacion">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.9"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj77d3Eea7JejFBEAC3Q" label="Jubilacion para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.10"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj8Ld3Eea7JejFBEAC3Q" label="Sanción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.11"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj8bd3Eea7JejFBEAC3Q" label="Convencional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.12"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj8rd3Eea7JejFBEAC3Q" label="Convencional para compartir">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.13"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj87d3Eea7JejFBEAC3Q" label="Gracia">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.14"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj9Ld3Eea7JejFBEAC3Q" label="Por convenio internacional">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.15"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj9bd3Eea7JejFBEAC3Q" label="Sentencia Judicial">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.16"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_WKAj9rd3Eea7JejFBEAC3Q" label="Conciliaciones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedLineMappings[name='T6%20Tipo%20de%20Pension']"/>
+        <cells xmi:type="table:DCell" xmi:id="_WKAj97d3Eea7JejFBEAC3Q" label="X" column="_WKAj-Ld3Eea7JejFBEAC3Q">
+          <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+          <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.2/@businessAttributes.17"/>
+          <intersectionMapping xmi:type="description_1:IntersectionMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@intersection.0"/>
+        </cells>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_WKAj-Ld3Eea7JejFBEAC3Q" label="Empleador" cells="_WKAj6Ld3Eea7JejFBEAC3Q _WKAj97d3Eea7JejFBEAC3Q" width="100">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_WKAj-bd3Eea7JejFBEAC3Q" label="Administración de pensiones" cells="_WKAj6bd3Eea7JejFBEAC3Q" width="196">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_WKAj-rd3Eea7JejFBEAC3Q" label="Pagador de pensiones" cells="_WKAj6rd3Eea7JejFBEAC3Q" width="159">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_WKAj-7d3Eea7JejFBEAC3Q" label="Pensiones de entidades de los regimenes especial y de excepción" cells="_WKAj67d3Eea7JejFBEAC3Q" width="384">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']/@ownedColumnMappings.0"/>
+      </columns>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%206']"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="table:DTable" xmi:id="_enrTwLd3Eea7JejFBEAC3Q" name="pensionPensionado" headerColumnWidth="386">
+      <target xmi:type="PaymentsApp:BusinessAttributeCollection" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1"/>
+      <lines xmi:type="table:DLine" xmi:id="_enrTwbd3Eea7JejFBEAC3Q" label="Empleador">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_enrTwrd3Eea7JejFBEAC3Q" label="Administración de pensiones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_enrTw7d3Eea7JejFBEAC3Q" label="Pagador de pensiones">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+      </lines>
+      <lines xmi:type="table:DLine" xmi:id="_enrTxLd3Eea7JejFBEAC3Q" label="Pensiones de entidades de los regimenes especial y de excepción">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.1/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:LineMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedLineMappings[name='Tipo%20de%20Pension']"/>
+      </lines>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTxbd3Eea7JejFBEAC3Q" label="Pensionado de régimen de prima media. Tope máximo de pensión 25 smlmv" width="447">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.0"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTxrd3Eea7JejFBEAC3Q" label="Pensionado de régimen de prima media. Sin tope máximo de pensión" width="410">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.1"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTx7d3Eea7JejFBEAC3Q" label="Pensionado de régimen de ahorro individual. No aplica tope máximo de pensión" width="467">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.2"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTyLd3Eea7JejFBEAC3Q" label="Pensionado de riesgos laborales. Tope máximo de 25 smlmv" width="359">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.3"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTybd3Eea7JejFBEAC3Q" label="Pensionado por el empleador. Con tope maximo de pension de 25 smlmv" width="430">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.4"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTyrd3Eea7JejFBEAC3Q" label="Pensionado por el empleador sin tope máximo de pensión" width="350">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.5"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTy7d3Eea7JejFBEAC3Q" label="Pensionado de entidades de los regimenes especial y de excepción, con tope máximo de pensión de 25 smlmv" width="623">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.6"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTzLd3Eea7JejFBEAC3Q" label="Pensionado de entidades de los regimenes especial y de excepción, sin tope máximo de pensión" width="548">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.7"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <columns xmi:type="table:DTargetColumn" xmi:id="_enrTzbd3Eea7JejFBEAC3Q" label="Beneficiario UPC adicional" width="182">
+        <target xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <semanticElements xmi:type="PaymentsApp:BusinessAttribute" href="Validaciones.paymentsapp#//@intermediary/@intermediaryAttributes.0/@businessAttributes.8"/>
+        <originMapping xmi:type="description_1:ElementColumnMapping" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']/@ownedColumnMappings.0"/>
+      </columns>
+      <description xmi:type="description_1:CrossTableDescription" href="platform:/resource/payments.project.design/description/project.odesign#//@ownedViewpoints[name='payments']/@ownedRepresentations[name='Tabla%208']"/>
+    </ownedRepresentations>
+  </ownedViews>
+</viewpoint:DAnalysis>
